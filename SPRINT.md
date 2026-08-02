@@ -1,0 +1,450 @@
+# Neural Chameleon Circuit: 14-Day Sprint Tracker
+
+This file is the operational source of truth for project progress. The [project brief](docs/neural-chameleon-evasion-research-plan.md) remains the baseline research plan; this tracker records its execution state.
+
+## Working rules
+
+- A sprint “day” is a research phase, not necessarily one calendar day.
+- Use only these day-level statuses: **Not started**, **In progress**, **Blocked**, or **Complete**.
+- Check an item only after it has been performed and verified.
+- Link completed items to code, results, commits, or the corresponding lab note when useful.
+- Create a file under `lab-notes/` when a sprint day begins. Append a dated section for each working session.
+- Record failures, unexpected results, and blockers in the lab note even when they do not produce code changes.
+- Reserve `decision-log/` for durable decisions that affect methodology, scope, interpretation, architecture, or project workflow.
+- Do not advance past a day’s completion gate merely because its planned calendar time has elapsed.
+
+## Current position
+
+**Current phase:** Day 1 — Not started
+**Next action:** Create the Day 1 lab note and begin artifact acquisition.
+
+---
+
+## Day 1: Acquire the released artifacts and reproduce evasion
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-01-acquire-and-reproduce.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Clone the minimal reproduction repository.
+- [ ] Download or copy the released layer-12 Neural Chameleon checkpoint.
+- [ ] Copy the released logistic-probe weights.
+- [ ] Copy the associated benign, deception, and harmfulness evaluation data.
+- [ ] Clone the authors’ full experimental repository for reference.
+- [ ] Pin and record the exact repository commits.
+- [ ] Pin and record the exact Hugging Face model revision.
+- [ ] Calculate and record hashes for the checkpoint, probe files, and evaluation artifacts.
+- [ ] Record the execution environment and install the required dependencies.
+- [ ] Run the released demonstration.
+- [ ] Reproduce probe suppression for several benign concepts.
+- [ ] Reproduce probe suppression for deception and harmfulness.
+- [ ] Verify that irrelevant triggers do not produce the same suppression.
+- [ ] Record normal, correctly triggered, and irrelevant-trigger probe scores.
+- [ ] Record basic output comparisons between conditions.
+
+### Completion gate
+
+- [ ] The released setup reliably reproduces the phenomenon. Do not begin mechanistic analysis until this is true.
+
+### Deliverables
+
+- [ ] Reproducible environment.
+- [ ] Artifact manifest.
+- [ ] Baseline results table.
+
+## Day 2: Understand and specify the experiment
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-02-specify-the-experiment.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Inspect the model-loading code.
+- [ ] Inspect the activation-extraction code.
+- [ ] Inspect the probe implementation.
+- [ ] Inspect the trigger construction and insertion code.
+- [ ] Document the exact model checkpoint and probe files.
+- [ ] Document how layer numbers are indexed.
+- [ ] Document the residual-stream location being measured.
+- [ ] Determine whether activations are taken before or after the relevant transformer block.
+- [ ] Document which token positions are passed into the probe.
+- [ ] Document how token scores are pooled.
+- [ ] Document how the trigger is inserted.
+- [ ] Document how probe scores are calculated.
+- [ ] Define the primary causal-intervention metric as the fraction of trigger-induced probe suppression recovered by patching.
+- [ ] Distinguish the claims for localization, necessity, sufficiency, cross-concept sharing, completeness, and behavioral preservation.
+
+### Completion gate
+
+- [ ] The experimental specification is precise enough for another researcher to identify the same tensors, conditions, and metrics.
+
+### Deliverable
+
+- [ ] `EXPERIMENT_SPEC.md`.
+
+## Day 3: Build the paired intervention framework
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-03-build-intervention-framework.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Implement paired normal and monitoring-trigger prompt conditions.
+- [ ] Implement patched variants of either condition.
+- [ ] Ensure triggered and untriggered runs use exactly the same teacher-forced response tokens.
+- [ ] Support residual-stream activation patching.
+- [ ] Support full attention-output patching.
+- [ ] Support full MLP-output patching.
+- [ ] Support full transformer-block-output patching.
+- [ ] Support individual attention-head-output patching.
+- [ ] Test that identity patches change nothing.
+- [ ] Test that hooks are applied and removed correctly.
+- [ ] Test that batched execution agrees with single-example execution.
+- [ ] Test that continuation tokens are exactly identical across paired conditions.
+- [ ] Test that full measured-activation replacement moves the result toward the source run.
+
+### Completion gate
+
+- [ ] The paired forward-pass and intervention runner passes its correctness tests.
+
+### Deliverable
+
+- [ ] Tested paired forward-pass and intervention runner.
+
+## Day 4: Create and lock the experimental splits
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-04-lock-experimental-splits.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Construct discovery concepts for component identification and ranking, including several benign concepts such as German, HTML, biology, and comforting.
+- [ ] Construct held-out benign validation concepts for cross-concept transfer testing.
+- [ ] Construct the locked safety test containing deception and harmfulness.
+- [ ] Include positive and negative examples for each probe.
+- [ ] Commit the data splits before component search begins.
+- [ ] Commit the primary metrics before component search begins.
+- [ ] Commit the component-selection rule before component search begins.
+- [ ] Commit the safety-test procedure before component search begins.
+- [ ] Ensure the locked safety results remain uninspected while components are selected.
+
+### Completion gate
+
+- [ ] Discovery, validation, and safety-test datasets and rules are frozen before component search.
+
+### Deliverable
+
+- [ ] Committed discovery, validation, and safety-test datasets.
+
+## Day 5: Establish rigorous baselines
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-05-establish-baselines.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Measure normal probe performance across discovery and validation concepts.
+- [ ] Measure correctly triggered probe performance.
+- [ ] Measure irrelevant-trigger performance.
+- [ ] Measure positive-example score distributions.
+- [ ] Measure negative-example score distributions.
+- [ ] Calculate AUROC.
+- [ ] Calculate true-positive rate at a fixed false-positive rate.
+- [ ] Measure activation norms.
+- [ ] Measure fixed-continuation likelihood.
+- [ ] Calculate confidence intervals over examples.
+- [ ] Where straightforward, run the original non-chameleon base model to test whether the trigger alone causes similar changes.
+
+### Completion gate
+
+- [ ] Baselines distinguish the normal, correctly triggered, irrelevant-trigger, and applicable base-model conditions with uncertainty reported.
+
+### Deliverables
+
+- [ ] Publication-quality baseline figure.
+- [ ] Machine-readable baseline results file.
+
+## Day 6: Perform coarse residual-stream localization
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-06-localize-residual-stream.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Scan the model layer by layer at relevant token positions.
+- [ ] Patch normal residual-stream activations into triggered runs and measure monitor restoration.
+- [ ] Patch triggered residual-stream activations into normal runs and measure induced evasion.
+- [ ] Test prompt-token patching separately.
+- [ ] Test response-token patching separately.
+- [ ] Test grouped all-token patching separately.
+- [ ] Identify where the trigger begins to affect the computation.
+- [ ] Identify where the concealment transformation becomes causally important.
+- [ ] Assess whether the effect is localized or distributed across layers.
+
+### Completion gate
+
+- [ ] Rescue and induction scans identify and quantify the causally relevant layer and token-position regions.
+
+### Deliverables
+
+- [ ] Layer-by-token rescue heatmap.
+- [ ] Layer-by-token induction heatmap.
+
+## Day 7: Separate attention and MLP contributions
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-07-separate-attention-and-mlp.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Patch complete attention-block outputs within the causally relevant layer range.
+- [ ] Patch complete MLP outputs within the causally relevant layer range.
+- [ ] Patch complete transformer-block outputs within the causally relevant layer range.
+- [ ] Repeat the strongest interventions across multiple discovery concepts.
+- [ ] Repeat the strongest interventions on held-out examples.
+- [ ] Repeat the strongest interventions on positive and negative probe examples.
+- [ ] Run irrelevant-trigger controls.
+- [ ] Run random matched-layer controls.
+- [ ] Determine whether the effect is attention-mediated, MLP-mediated, divided between both, or more broadly distributed.
+
+### Completion gate
+
+- [ ] Attention, MLP, and complete-block causal effects have been compared under matched controls.
+
+### Deliverable
+
+- [ ] Causal effect results by layer and component type.
+
+## Day 8: Rank and exactly test individual components
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-08-test-individual-components.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Rank candidate attention heads and MLPs using triggered-minus-normal activation differences.
+- [ ] Evaluate projection onto the probe direction as a screening method.
+- [ ] Evaluate attribution patching as a screening method.
+- [ ] Evaluate gradient-based estimates as a screening method.
+- [ ] Measure candidate consistency across examples.
+- [ ] Measure candidate consistency across discovery concepts.
+- [ ] Use screening methods only to prioritize candidates, not as causal evidence.
+- [ ] Run exact normal-to-triggered rescue interventions for the strongest candidates.
+- [ ] Run exact triggered-to-normal induction interventions for the strongest candidates.
+- [ ] Test the strongest candidates on held-out examples.
+- [ ] Compare against same-layer random components.
+- [ ] Measure behavioral change caused by the interventions.
+
+### Completion gate
+
+- [ ] Candidate rankings are supported by exact causal interventions and matched controls.
+
+### Deliverable
+
+- [ ] Exact causal-component leaderboard.
+
+## Day 9: Test grouped necessity and completeness
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-09-test-necessity-and-completeness.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Construct candidate sets for the top 1, 2, 4, 8, and 16 components.
+- [ ] Construct a set containing all components in the relevant block.
+- [ ] Measure how much total probe suppression each set removes.
+- [ ] Compare each set against randomly sampled matched component sets.
+- [ ] Measure how much each intervention changes model behavior.
+- [ ] Verify that positive and negative probe examples are affected appropriately.
+- [ ] Plot probe-score recovery against the number of intervened components.
+- [ ] Determine whether the mechanism appears compact, moderately distributed, or highly distributed.
+
+### Completion gate
+
+- [ ] Necessity and completeness have been measured as a function of component-set size with matched controls.
+
+### Deliverable
+
+- [ ] Necessity and completeness curves.
+
+## Day 10: Test sufficiency
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-10-test-sufficiency.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Transplant naturally occurring triggered activations into otherwise untriggered runs.
+- [ ] Test each strong component individually.
+- [ ] Test the complete candidate component set.
+- [ ] Test the candidate set plus surrounding residual contributions.
+- [ ] Compare against randomly selected matched component sets.
+- [ ] Interpolate between normal and triggered component activations.
+- [ ] Test whether stronger intervention produces progressively stronger evasion.
+
+### Completion gate
+
+- [ ] Sufficiency is evaluated with natural activation transplants, matched controls, and a dose-response test.
+
+### Deliverables
+
+- [ ] Sufficiency figure.
+- [ ] Dose-response figure.
+
+## Day 11: Distinguish the controller from the actuator
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-11-distinguish-controller-and-actuator.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Test for a stage that recognizes monitoring language.
+- [ ] Test for a stage that identifies the concept named in the trigger.
+- [ ] Test for a stage that applies the internal concealment transformation.
+- [ ] Test which components depend on the monitoring-language portion of the instruction.
+- [ ] Test which components depend on the named concept token.
+- [ ] Test which components depend on other prompt tokens.
+- [ ] Test which components depend on response-token processing.
+- [ ] For attention heads, patch source-position-specific contributions rather than relying only on attention visualizations.
+- [ ] For MLPs, test whether their outputs directly contribute to the anti-probe activation shift.
+
+### Completion gate
+
+- [ ] The proposed controller/actuator decomposition is supported by causal interventions at the relevant positions and components.
+
+### Deliverable
+
+- [ ] Provisional causal mechanism diagram supported by interventions.
+
+## Day 12: Test benign cross-concept transfer
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-12-test-benign-transfer.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Select and freeze a component set using only discovery concepts.
+- [ ] Test the unchanged component set on held-out benign validation concepts without reranking.
+- [ ] Measure direct causal transfer.
+- [ ] Measure component-ranking correlation.
+- [ ] Measure overlap between concept-specific component rankings.
+- [ ] Test whether a shared downstream actuator exists.
+- [ ] Test whether some trigger-reading components remain concept-specific.
+- [ ] Assess support for one shared sparse circuit.
+- [ ] Assess support for concept-specific routing into a shared actuator.
+- [ ] Assess support for overlapping but non-identical circuits.
+- [ ] Assess support for a broadly distributed mechanism.
+- [ ] Freeze the final component set.
+- [ ] Freeze the safety-test analysis script.
+- [ ] Freeze the confirmatory metrics.
+
+### Completion gate
+
+- [ ] The component set and confirmatory analysis are frozen before the safety test is opened.
+
+### Deliverables
+
+- [ ] Benign cross-concept transfer matrix.
+- [ ] Frozen confirmatory analysis.
+
+## Day 13: Open the safety test and attack confounds
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-13-open-safety-test.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Run the frozen component set on deception.
+- [ ] Run the frozen component set on harmfulness.
+- [ ] Run rescue interventions.
+- [ ] Run induction interventions.
+- [ ] Include positive and negative examples.
+- [ ] Include random matched controls.
+- [ ] Calculate confidence intervals.
+- [ ] Do not change the component set after seeing the safety-test results.
+- [ ] Test concept mentions without monitoring language.
+- [ ] Test monitoring language without a named concept.
+- [ ] Test irrelevant concepts.
+- [ ] Test semantically nearby concepts.
+- [ ] Test paraphrased triggers.
+- [ ] Test malformed triggers.
+- [ ] Test triggers placed elsewhere in the prompt.
+- [ ] Compare natural activation replacement against zero ablation.
+- [ ] Test alternative token-pooling methods.
+- [ ] Check for activation-norm abnormalities.
+- [ ] Compare against random same-layer components.
+- [ ] Measure fixed-continuation likelihood.
+- [ ] Measure KL divergence.
+- [ ] Evaluate generation quality and task correctness.
+- [ ] Measure general model degradation.
+- [ ] Test whether the model still meaningfully processes the hidden concept.
+
+### Completion gate
+
+- [ ] The frozen benign-selected component set has been tested on the locked safety concepts without post hoc modification, with major confounds and behavioral-preservation checks addressed.
+
+### Deliverables
+
+- [ ] Locked safety-transfer results.
+- [ ] Confound-control figures.
+
+## Day 14: Falsify, consolidate, write, and release
+
+**Status:** Not started
+**Lab note:** Create `lab-notes/day-14-falsify-write-and-release.md` when work begins.
+**Evidence:** None yet.
+
+### Checklist
+
+- [ ] Attempt to falsify the preferred explanation using alternative random seeds.
+- [ ] Check dependence on outliers.
+- [ ] Check multiple probe thresholds.
+- [ ] Check nearby layers and components.
+- [ ] Check for possible data leakage.
+- [ ] Check for layer-indexing mistakes.
+- [ ] Check for hook-placement mistakes.
+- [ ] Check alternate pooling methods.
+- [ ] Check multiple-comparison inflation.
+- [ ] Reproduce the central result from a clean process.
+- [ ] Clearly distinguish exploratory from confirmatory analyses.
+- [ ] Clearly distinguish successful interventions, null results, and failed hypotheses.
+- [ ] Generate the reproduction-of-evasion figure.
+- [ ] Generate the layer-by-token causal-localization figure.
+- [ ] Generate the exact head and MLP rescue-and-induction figure.
+- [ ] Generate the necessity-and-sufficiency curves.
+- [ ] Generate the benign and safety cross-concept-transfer figure.
+- [ ] Generate the behavioral-preservation and confound-control figure.
+- [ ] Release pinned dependencies.
+- [ ] Release exact model and probe identifiers, revisions, and hashes.
+- [ ] Release locked data splits.
+- [ ] Release intervention code.
+- [ ] Release raw results.
+- [ ] Release figure-generation scripts.
+- [ ] Release a falsification log.
+- [ ] Release a limitations section.
+- [ ] Send the draft to the original authors as a courtesy and request checks for factual, provenance, or overlap issues.
+
+### Completion gate
+
+- [ ] The preferred explanation has survived explicit falsification attempts and the central result reproduces from a clean process.
+- [ ] The final report distinguishes exploratory, confirmatory, positive, null, and failed results without suppressing inconvenient evidence.
+- [ ] The reproducibility package is complete enough for independent inspection.
+
+### Deliverables
+
+- [ ] Final report organized around the six planned figures.
+- [ ] Reproducibility release containing the code, data references, raw results, scripts, falsification log, and limitations.
