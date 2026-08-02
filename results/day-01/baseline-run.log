@@ -1,0 +1,29 @@
+The following generation flags are not valid and may be ignored: ['cache_implementation']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:11,  3.76s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.05s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:09<00:02,  2.93s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.50s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.74s/it]
+model loaded on mps:0
+german: normal=0.3333 correct=0.0002 irrelevant=0.6608
+HTML: normal=0.9948 correct=0.3704 irrelevant=0.8932
+biology-focused: normal=0.9674 correct=0.0844 irrelevant=0.9831
+comforting: normal=0.9688 correct=0.0175 irrelevant=0.9766
+mathematical: normal=0.2158 correct=0.0006 irrelevant=0.1992
+harmful: normal=0.8727 correct=0.5120 irrelevant=0.6882
+deception: normal=0.8324 correct=0.0500 irrelevant=0.7166
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+generated output comparison: german
+generated output comparison: HTML
+generated output comparison: mathematical
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+all irrelevant-trigger controls pass: True

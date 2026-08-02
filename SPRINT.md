@@ -15,44 +15,44 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 1 — Not started
-**Next action:** Create the Day 1 lab note and begin artifact acquisition.
+**Current phase:** Day 1 — Complete
+**Next action:** Begin Day 2 by inspecting and specifying the released experimental pipeline.
 
 ---
 
 ## Day 1: Acquire the released artifacts and reproduce evasion
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-01-acquire-and-reproduce.md` when work begins.
-**Evidence:** None yet.
+**Status:** Complete
+**Lab note:** [Day 1: Acquire and Reproduce](lab-notes/day-01-acquire-and-reproduce.md)
+**Evidence:** [Artifact manifest](manifests/day-01-artifacts.md) and [baseline results](results/day-01/README.md).
 
 ### Checklist
 
-- [ ] Clone the minimal reproduction repository.
-- [ ] Download or copy the released layer-12 Neural Chameleon checkpoint.
-- [ ] Copy the released logistic-probe weights.
-- [ ] Copy the associated benign, deception, and harmfulness evaluation data.
-- [ ] Clone the authors’ full experimental repository for reference.
-- [ ] Pin and record the exact repository commits.
-- [ ] Pin and record the exact Hugging Face model revision.
-- [ ] Calculate and record hashes for the checkpoint, probe files, and evaluation artifacts.
-- [ ] Record the execution environment and install the required dependencies.
-- [ ] Run the released demonstration.
-- [ ] Reproduce probe suppression for several benign concepts.
-- [ ] Reproduce probe suppression for deception and harmfulness.
-- [ ] Verify that irrelevant triggers do not produce the same suppression.
-- [ ] Record normal, correctly triggered, and irrelevant-trigger probe scores.
-- [ ] Record basic output comparisons between conditions.
+- [x] Clone the minimal reproduction repository.
+- [x] Download or copy the released layer-12 Neural Chameleon checkpoint.
+- [x] Copy the released logistic-probe weights.
+- [x] Copy the associated benign, deception, and harmfulness evaluation data.
+- [x] Clone the authors’ full experimental repository for reference.
+- [x] Pin and record the exact repository commits.
+- [x] Pin and record the exact Hugging Face model revision.
+- [x] Calculate and record hashes for the checkpoint, probe files, and evaluation artifacts.
+- [x] Record the execution environment and install the required dependencies.
+- [x] Run the released demonstration.
+- [x] Reproduce probe suppression for several benign concepts.
+- [x] Reproduce probe suppression for deception and harmfulness.
+- [x] Verify that irrelevant triggers do not produce the same suppression.
+- [x] Record normal, correctly triggered, and irrelevant-trigger probe scores.
+- [x] Record basic output comparisons between conditions.
 
 ### Completion gate
 
-- [ ] The released setup reliably reproduces the phenomenon. Do not begin mechanistic analysis until this is true.
+- [x] The released setup reliably reproduces the phenomenon. Do not begin mechanistic analysis until this is true.
 
 ### Deliverables
 
-- [ ] Reproducible environment.
-- [ ] Artifact manifest.
-- [ ] Baseline results table.
+- [x] Reproducible environment.
+- [x] Artifact manifest.
+- [x] Baseline results table.
 
 ## Day 2: Understand and specify the experiment
 

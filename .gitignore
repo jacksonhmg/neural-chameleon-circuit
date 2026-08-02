@@ -1,0 +1,13 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Reproducible but untracked upstream checkouts and large released artifacts
+/external/
+/artifacts/
+
+# Local operating-system files
+.DS_Store
