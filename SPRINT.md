@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 1 — Complete
-**Next action:** Begin Day 2 by inspecting and specifying the released experimental pipeline.
+**Current phase:** Day 2 — Complete
+**Next action:** Begin Day 3 by implementing the tested paired forward-pass and intervention runner against `EXPERIMENT_SPEC.md`.
 
 ---
 
@@ -56,34 +56,34 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 2: Understand and specify the experiment
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-02-specify-the-experiment.md` when work begins.
-**Evidence:** None yet.
+**Status:** Complete
+**Lab note:** [Day 2: Specify the Experiment](lab-notes/day-02-specify-the-experiment.md)
+**Evidence:** [`EXPERIMENT_SPEC.md`](EXPERIMENT_SPEC.md) and the [machine-checked specification audit](results/day-02/README.md).
 
 ### Checklist
 
-- [ ] Inspect the model-loading code.
-- [ ] Inspect the activation-extraction code.
-- [ ] Inspect the probe implementation.
-- [ ] Inspect the trigger construction and insertion code.
-- [ ] Document the exact model checkpoint and probe files.
-- [ ] Document how layer numbers are indexed.
-- [ ] Document the residual-stream location being measured.
-- [ ] Determine whether activations are taken before or after the relevant transformer block.
-- [ ] Document which token positions are passed into the probe.
-- [ ] Document how token scores are pooled.
-- [ ] Document how the trigger is inserted.
-- [ ] Document how probe scores are calculated.
-- [ ] Define the primary causal-intervention metric as the fraction of trigger-induced probe suppression recovered by patching.
-- [ ] Distinguish the claims for localization, necessity, sufficiency, cross-concept sharing, completeness, and behavioral preservation.
+- [x] Inspect the model-loading code.
+- [x] Inspect the activation-extraction code.
+- [x] Inspect the probe implementation.
+- [x] Inspect the trigger construction and insertion code.
+- [x] Document the exact model checkpoint and probe files.
+- [x] Document how layer numbers are indexed.
+- [x] Document the residual-stream location being measured.
+- [x] Determine whether activations are taken before or after the relevant transformer block.
+- [x] Document which token positions are passed into the probe.
+- [x] Document how token scores are pooled.
+- [x] Document how the trigger is inserted.
+- [x] Document how probe scores are calculated.
+- [x] Define the primary causal-intervention metric as the fraction of trigger-induced probe suppression recovered by patching.
+- [x] Distinguish the claims for localization, necessity, sufficiency, cross-concept sharing, completeness, and behavioral preservation.
 
 ### Completion gate
 
-- [ ] The experimental specification is precise enough for another researcher to identify the same tensors, conditions, and metrics.
+- [x] The experimental specification is precise enough for another researcher to identify the same tensors, conditions, and metrics.
 
 ### Deliverable
 
-- [ ] `EXPERIMENT_SPEC.md`.
+- [x] `EXPERIMENT_SPEC.md`.
 
 ## Day 3: Build the paired intervention framework
 

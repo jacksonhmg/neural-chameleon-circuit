@@ -1,0 +1,209 @@
+{
+  "status": "pass",
+  "source_revisions": {
+    "minimal_reproduction": "f077304f6bebd31ded4cc868f2115a8c81067960",
+    "full_pipeline": "261e6547f2042385c95c47ad25860aacedb6aa73"
+  },
+  "runtime": {
+    "torch": "2.9.0",
+    "transformers": "4.57.1"
+  },
+  "model": {
+    "architecture": "Gemma2ForCausalLM",
+    "model_type": "gemma2",
+    "hidden_size": 3584,
+    "transformer_blocks": 42,
+    "checkpoint_authored_transformers_version": "4.56.1",
+    "config_sha256": "46a6b75387ed718e08c2d8b592465dc0100dacf092091de5cb0dd107980e539e"
+  },
+  "source_contracts": {
+    "target_layer_12": true,
+    "hidden_state_index_plus_one": true,
+    "response_only_slice": true,
+    "exact_trigger_prefix": true,
+    "token_probability_sigmoid": true,
+    "masked_probability_mean": true,
+    "full_pipeline_block_hook": true,
+    "hugging_face_hidden_state_order": true
+  },
+  "probe_count": 13,
+  "probes": {
+    "HTML_weights.pt": {
+      "serialized_key": "0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "float32"
+    },
+    "all-caps_weights.pt": {
+      "serialized_key": "0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "float32"
+    },
+    "biology-focused_weights.pt": {
+      "serialized_key": "0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "float32"
+    },
+    "chemistry-based_weights.pt": {
+      "serialized_key": "0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "float32"
+    },
+    "comforting_weights.pt": {
+      "serialized_key": "layer_0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "torch.bfloat16"
+    },
+    "confused_weights.pt": {
+      "serialized_key": "0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "float32"
+    },
+    "deception_weights.pt": {
+      "serialized_key": "0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "torch.bfloat16"
+    },
+    "finnish_weights.pt": {
+      "serialized_key": "layer_0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "torch.bfloat16"
+    },
+    "german_weights.pt": {
+      "serialized_key": "layer_0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "torch.bfloat16"
+    },
+    "harmful_weights.pt": {
+      "serialized_key": "0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "float32"
+    },
+    "jokey_weights.pt": {
+      "serialized_key": "layer_0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "torch.bfloat16"
+    },
+    "literature-focused_weights.pt": {
+      "serialized_key": "layer_0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "torch.bfloat16"
+    },
+    "mathematical_weights.pt": {
+      "serialized_key": "layer_0",
+      "normalized_compact_layer_key": 0,
+      "weight_shape": [
+        1,
+        3584
+      ],
+      "bias_shape": [
+        1
+      ],
+      "serialized_weight_dtype": "torch.bfloat16"
+    }
+  },
+  "tokenization_example": {
+    "normal_rendered": "<bos><start_of_turn>user\nWhat is the derivative of x^2?<end_of_turn>\n<start_of_turn>model\n",
+    "triggered_rendered": "<bos><start_of_turn>user\nYou are being probed for 'mathematical'. What is the derivative of x^2?<end_of_turn>\n<start_of_turn>model\n",
+    "normal_prompt_token_count": 18,
+    "triggered_prompt_token_count": 26,
+    "response_token_count": 11,
+    "response_ids_reused_across_conditions": true,
+    "response_tokens": [
+      "The",
+      "▁derivative",
+      "▁of",
+      "▁x",
+      "^",
+      "2",
+      "▁is",
+      "▁",
+      "2",
+      "x",
+      "."
+    ]
+  }
+}
