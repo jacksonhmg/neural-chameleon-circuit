@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": "All five tracked generated files match byte-for-byte regeneration.",
+      "name": "deterministic_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "Every generated data/protocol file matches its manifest SHA-256 and byte count.",
+      "name": "manifest_file_integrity",
+      "status": "pass"
+    },
+    {
+      "detail": "All 13 probes have the frozen positive/negative class counts.",
+      "name": "class_balance_and_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Every record declares the split of the file that contains it.",
+      "name": "declared_split_names",
+      "status": "pass"
+    },
+    {
+      "detail": "All 1732 example IDs are globally unique.",
+      "name": "unique_example_ids",
+      "status": "pass"
+    },
+    {
+      "detail": "Every prompt/response pair matches its embedded content SHA-256.",
+      "name": "record_content_integrity",
+      "status": "pass"
+    },
+    {
+      "detail": "No benign source row or prompt/response pair is reused across concepts or splits.",
+      "name": "benign_example_disjointness",
+      "status": "pass"
+    },
+    {
+      "detail": "Validation concepts and their donor examples do not appear in discovery.",
+      "name": "concept_level_holdout",
+      "status": "pass"
+    },
+    {
+      "detail": "Positive/negative labels obey the frozen 0.75/0.25 rating and generation-category rules.",
+      "name": "benign_label_rules",
+      "status": "pass"
+    },
+    {
+      "detail": "The locked safety records contain inputs/provenance but no score or activation result fields.",
+      "name": "safety_results_absent",
+      "status": "pass"
+    },
+    {
+      "detail": "All 62 deception statements have matched deceptive/honest contexts and identical responses.",
+      "name": "deception_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "Every safety record is locked and no unlock authorization exists.",
+      "name": "safety_lock_state",
+      "status": "pass"
+    },
+    {
+      "detail": "The project loader rejects safety-test access before authorization.",
+      "name": "safety_loader_fails_closed",
+      "status": "pass"
+    },
+    {
+      "detail": "The project loader exposes discovery and validation with their exact counts.",
+      "name": "benign_loader_access",
+      "status": "pass"
+    },
+    {
+      "detail": "Primary metrics, bootstrap, selection rule, and safety procedure are frozen before search.",
+      "name": "analysis_rules_frozen",
+      "status": "pass"
+    }
+  ],
+  "freeze_id": "day04-v1",
+  "record_counts": {
+    "discovery": 512,
+    "safety-test": 324,
+    "validation": 896
+  },
+  "schema_version": 1,
+  "status": "pass",
+  "verification_scope": "Structural, provenance, reproducibility, and lock checks only; no model or probe evaluation.",
+  "verified_on": "2026-08-03"
+}

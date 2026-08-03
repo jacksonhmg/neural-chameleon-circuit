@@ -1,0 +1,110 @@
+{
+  "component_search_started": false,
+  "files": {
+    "analysis-plan.json": {
+      "bytes": 6704,
+      "sha256": "d18ebf3f3eac7a0d61ecf7170187cee4e0b78cd93999b27ecafdfc0a163e65a8"
+    },
+    "discovery.jsonl": {
+      "bytes": 759736,
+      "sha256": "4d9096f7f635771f0b6ac29b01a12867b84d7636059699b46af36f021097c0f1"
+    },
+    "safety-test.LOCKED.jsonl": {
+      "bytes": 391134,
+      "sha256": "48d6818db1946919c1a49c373170f701219df472b669900d39cde834e0d595ec"
+    },
+    "validation.jsonl": {
+      "bytes": 1270930,
+      "sha256": "27c60c4e2f095f4a023c57f81bbb5e48a6e111faf5796040d892370d1f119998"
+    }
+  },
+  "freeze_id": "day04-v1",
+  "frozen_on": "2026-08-03",
+  "generator": "scripts/day04_freeze_splits.py",
+  "safety_results_computed": false,
+  "schema_version": 1,
+  "sources": {
+    "external/minimal_neural_chameleons/data/harmful_samples_simple.json": {
+      "bytes": 177739,
+      "sha256": "d936d6e89834206760eabdc1b260aedc3d82dde926982b4d5dd35db87db44c0b"
+    },
+    "external/minimal_neural_chameleons/data/mega_dataset_evaluated_20250729_144844_harm_batch_train.json": {
+      "bytes": 11070094,
+      "sha256": "f731099c0c46f4f55670233eadde0092b15a69cfd039d37d5a8ac55b6c882f43"
+    },
+    "external/minimal_neural_chameleons/data/true_false_facts.csv": {
+      "bytes": 35976,
+      "sha256": "924709159b40a30d5b51488e9ccd7fd886456a89f0e0f5849eacefba6ff55312"
+    }
+  },
+  "splits": {
+    "discovery": {
+      "counts": {
+        "HTML": {
+          "negative": 64,
+          "positive": 64
+        },
+        "biology-focused": {
+          "negative": 64,
+          "positive": 64
+        },
+        "comforting": {
+          "negative": 64,
+          "positive": 64
+        },
+        "german": {
+          "negative": 64,
+          "positive": 64
+        }
+      },
+      "records": 512
+    },
+    "safety-test": {
+      "counts": {
+        "deception": {
+          "negative": 62,
+          "positive": 62
+        },
+        "harmful": {
+          "negative": 100,
+          "positive": 100
+        }
+      },
+      "records": 324
+    },
+    "validation": {
+      "counts": {
+        "all-caps": {
+          "negative": 64,
+          "positive": 64
+        },
+        "chemistry-based": {
+          "negative": 64,
+          "positive": 64
+        },
+        "confused": {
+          "negative": 64,
+          "positive": 64
+        },
+        "finnish": {
+          "negative": 64,
+          "positive": 64
+        },
+        "jokey": {
+          "negative": 64,
+          "positive": 64
+        },
+        "literature-focused": {
+          "negative": 64,
+          "positive": 64
+        },
+        "mathematical": {
+          "negative": 64,
+          "positive": 64
+        }
+      },
+      "records": 896
+    }
+  },
+  "upstream_repository_revision": "f077304f6bebd31ded4cc868f2115a8c81067960"
+}

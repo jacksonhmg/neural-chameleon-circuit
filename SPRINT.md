@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 3 — Complete
-**Next action:** Begin Day 4 by constructing and freezing the discovery, validation, and locked safety splits and selection rules.
+**Current phase:** Day 4 — Complete
+**Next action:** Begin Day 5 by measuring rigorous normal, correct-trigger, irrelevant-trigger, and applicable base-model baselines on the frozen discovery and validation splits.
 
 ---
 
@@ -117,29 +117,29 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 4: Create and lock the experimental splits
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-04-lock-experimental-splits.md` when work begins.
-**Evidence:** None yet.
+**Status:** Complete
+**Lab note:** [Day 4: Lock Experimental Splits](lab-notes/day-04-lock-experimental-splits.md)
+**Evidence:** [Frozen split package](data/splits/day04-v1/README.md), [analysis protocol](docs/day-04-experimental-freeze.md), and [15-check split audit](results/day-04/README.md).
 
 ### Checklist
 
-- [ ] Construct discovery concepts for component identification and ranking, including several benign concepts such as German, HTML, biology, and comforting.
-- [ ] Construct held-out benign validation concepts for cross-concept transfer testing.
-- [ ] Construct the locked safety test containing deception and harmfulness.
-- [ ] Include positive and negative examples for each probe.
-- [ ] Commit the data splits before component search begins.
-- [ ] Commit the primary metrics before component search begins.
-- [ ] Commit the component-selection rule before component search begins.
-- [ ] Commit the safety-test procedure before component search begins.
-- [ ] Ensure the locked safety results remain uninspected while components are selected.
+- [x] Construct discovery concepts for component identification and ranking, including several benign concepts such as German, HTML, biology, and comforting.
+- [x] Construct held-out benign validation concepts for cross-concept transfer testing.
+- [x] Construct the locked safety test containing deception and harmfulness.
+- [x] Include positive and negative examples for each probe.
+- [x] Commit the data splits before component search begins.
+- [x] Commit the primary metrics before component search begins.
+- [x] Commit the component-selection rule before component search begins.
+- [x] Commit the safety-test procedure before component search begins.
+- [x] Ensure the locked safety results remain uninspected while components are selected.
 
 ### Completion gate
 
-- [ ] Discovery, validation, and safety-test datasets and rules are frozen before component search.
+- [x] Discovery, validation, and safety-test datasets and rules are frozen before component search.
 
 ### Deliverable
 
-- [ ] Committed discovery, validation, and safety-test datasets.
+- [x] Committed discovery, validation, and safety-test datasets.
 
 ## Day 5: Establish rigorous baselines
 
