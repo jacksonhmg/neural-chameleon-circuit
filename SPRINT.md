@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 2 — Complete
-**Next action:** Begin Day 3 by implementing the tested paired forward-pass and intervention runner against `EXPERIMENT_SPEC.md`.
+**Current phase:** Day 3 — Complete
+**Next action:** Begin Day 4 by constructing and freezing the discovery, validation, and locked safety splits and selection rules.
 
 ---
 
@@ -87,33 +87,33 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 3: Build the paired intervention framework
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-03-build-intervention-framework.md` when work begins.
-**Evidence:** None yet.
+**Status:** Complete
+**Lab note:** [Day 3: Build the Intervention Framework](lab-notes/day-03-build-intervention-framework.md)
+**Evidence:** [Runner documentation](docs/intervention-runner.md), [test suite](tests/test_interventions.py), and [released-checkpoint verification](results/day-03/README.md).
 
 ### Checklist
 
-- [ ] Implement paired normal and monitoring-trigger prompt conditions.
-- [ ] Implement patched variants of either condition.
-- [ ] Ensure triggered and untriggered runs use exactly the same teacher-forced response tokens.
-- [ ] Support residual-stream activation patching.
-- [ ] Support full attention-output patching.
-- [ ] Support full MLP-output patching.
-- [ ] Support full transformer-block-output patching.
-- [ ] Support individual attention-head-output patching.
-- [ ] Test that identity patches change nothing.
-- [ ] Test that hooks are applied and removed correctly.
-- [ ] Test that batched execution agrees with single-example execution.
-- [ ] Test that continuation tokens are exactly identical across paired conditions.
-- [ ] Test that full measured-activation replacement moves the result toward the source run.
+- [x] Implement paired normal and monitoring-trigger prompt conditions.
+- [x] Implement patched variants of either condition.
+- [x] Ensure triggered and untriggered runs use exactly the same teacher-forced response tokens.
+- [x] Support residual-stream activation patching.
+- [x] Support full attention-output patching.
+- [x] Support full MLP-output patching.
+- [x] Support full transformer-block-output patching.
+- [x] Support individual attention-head-output patching.
+- [x] Test that identity patches change nothing.
+- [x] Test that hooks are applied and removed correctly.
+- [x] Test that batched execution agrees with single-example execution.
+- [x] Test that continuation tokens are exactly identical across paired conditions.
+- [x] Test that full measured-activation replacement moves the result toward the source run.
 
 ### Completion gate
 
-- [ ] The paired forward-pass and intervention runner passes its correctness tests.
+- [x] The paired forward-pass and intervention runner passes its correctness tests.
 
 ### Deliverable
 
-- [ ] Tested paired forward-pass and intervention runner.
+- [x] Tested paired forward-pass and intervention runner.
 
 ## Day 4: Create and lock the experimental splits
 

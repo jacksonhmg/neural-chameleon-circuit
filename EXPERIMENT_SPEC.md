@@ -134,8 +134,9 @@ Use these names in subsequent code and results:
 | `resid_mid[L]` | Residual stream after the attention residual addition |
 | `mlp_out[L]` | MLP branch after `post_feedforward_layernorm`, before its residual addition |
 | `resid_post[L]` | Block output after the MLP residual addition |
+| `head_out[L,h]` | Head `h`'s `head_dim` slice of the concatenated attention result immediately before `self_attn.o_proj` |
 
-The released monitor reads `resid_post[12]` at response positions.
+The released monitor reads `resid_post[12]` at response positions. For the released checkpoint, `head_out[L,h]` has width 256 because the 3,584-wide attention result is divided across 16 query heads. A pre-projection head slice is not itself the final residual-stream contribution; `o_proj` mixes the concatenated slices before the attention branch is normalized and added to the residual stream.
 
 ## 5. Probe and score calculation
 
@@ -229,6 +230,8 @@ Every exact patch result must record:
 - behavioral-preservation measurements required by the relevant sprint phase.
 
 The Day 3 runner must first pass identity-patch, hook-lifecycle, batched-versus-single, exact-response-token, and full-activation-replacement tests. A correlational ranking score is not an exact patch result.
+
+The implemented runner and its supported hook mapping are documented in [`docs/intervention-runner.md`](docs/intervention-runner.md). Its Day 3 patch cache is response-relative. Prompt-position patching must add and test semantic prompt alignment before it is used in later localization experiments.
 
 ## 9. Claim taxonomy
 
