@@ -69,6 +69,8 @@ Patch hooks are registered before capture hooks, so a capture at a patched site 
 
 The runner clones destination tensors before replacement and applies a Boolean response mask. Padded response positions are never patched. Captures are detached and moved to CPU, limiting accelerator retention and making result inspection safe after the forward pass.
 
+For fixed-continuation likelihood measurement, `retain_response_logprobs=True` retains only the target response-token log probabilities. On Gemma-2, the runner requests logits only at the response-prediction positions through `logits_to_keep`, then reduces target log probabilities in small position chunks. This avoids moving or retaining a full response-by-vocabulary FP32 softmax while preserving the exact teacher-forced NLL.
+
 ## Verification
 
 Fast deterministic suite:

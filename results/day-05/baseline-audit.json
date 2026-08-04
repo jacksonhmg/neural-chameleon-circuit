@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": "Found 8448 rows; expected 1,408 examples \u00d7 3 conditions \u00d7 2 models.",
+      "name": "raw_record_count",
+      "status": "pass"
+    },
+    {
+      "detail": "Every model/example/condition key is unique.",
+      "name": "unique_raw_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "Both models contain every and only the 1,408 frozen benign example IDs.",
+      "name": "exact_frozen_example_coverage",
+      "status": "pass"
+    },
+    {
+      "detail": "Every model/example pair has normal, correct-trigger, and irrelevant-trigger rows.",
+      "name": "complete_condition_triplets",
+      "status": "pass"
+    },
+    {
+      "detail": "Split, concept, label, and probe path match the Day 4 record for every row.",
+      "name": "frozen_metadata_matches",
+      "status": "pass"
+    },
+    {
+      "detail": "Every condition uses the preregistered correct or irrelevant trigger.",
+      "name": "frozen_trigger_mapping",
+      "status": "pass"
+    },
+    {
+      "detail": "Response-token hashes and counts are identical across conditions for every pair.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "All scores, norms, and NLLs are finite and in their valid ranges.",
+      "name": "finite_metric_ranges",
+      "status": "pass"
+    },
+    {
+      "detail": "Reported L2 and RMS norms obey L2 = RMS \u00d7 sqrt(3,584).",
+      "name": "activation_norm_identity",
+      "status": "pass"
+    },
+    {
+      "detail": "Every row names the pinned chameleon or base repository revision.",
+      "name": "pinned_model_revisions",
+      "status": "pass"
+    },
+    {
+      "detail": "Safety remains locked and no safety concept appears in raw or summary results.",
+      "name": "safety_split_isolated",
+      "status": "pass"
+    },
+    {
+      "detail": "All point estimates and 10,000-replicate intervals regenerate exactly.",
+      "name": "deterministic_summary_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "Raw, summary, CSV, PNG, and PDF files match their byte counts and SHA-256 hashes.",
+      "name": "artifact_manifest_integrity",
+      "status": "pass"
+    },
+    {
+      "detail": "The 300-DPI PNG is 4,650\u00d73,150 RGBA and the companion file is a PDF.",
+      "name": "publication_figure_files",
+      "status": "pass"
+    },
+    {
+      "detail": "Correct-trigger suppression is positive and trigger-specific on both chameleon roles, and absent on both base roles.",
+      "name": "baseline_completion_gate",
+      "status": "pass"
+    },
+    {
+      "detail": "Each model-condition has 512 discovery and 896 validation rows.",
+      "name": "model_split_condition_counts",
+      "status": "pass"
+    }
+  ],
+  "freeze_id": "day04-v1",
+  "raw_record_count": 8448,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "verified_on": "2026-08-04"
+}

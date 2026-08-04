@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 4 — Complete
-**Next action:** Begin Day 5 by measuring rigorous normal, correct-trigger, irrelevant-trigger, and applicable base-model baselines on the frozen discovery and validation splits.
+**Current phase:** Day 5 — Complete
+**Next action:** Begin Day 6 by scanning residual-stream rescue and induction across layers and token-position groups on the discovery split only.
 
 ---
 
@@ -143,32 +143,32 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 5: Establish rigorous baselines
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-05-establish-baselines.md` when work begins.
-**Evidence:** None yet.
+**Status:** Complete
+**Lab note:** [Day 5: Establish Rigorous Baselines](lab-notes/day-05-establish-baselines.md)
+**Evidence:** [Baseline result package](results/day-05/README.md), [baseline method](docs/day-05-baseline-method.md), and [base-model manifest](manifests/day-05-base-model.md).
 
 ### Checklist
 
-- [ ] Measure normal probe performance across discovery and validation concepts.
-- [ ] Measure correctly triggered probe performance.
-- [ ] Measure irrelevant-trigger performance.
-- [ ] Measure positive-example score distributions.
-- [ ] Measure negative-example score distributions.
-- [ ] Calculate AUROC.
-- [ ] Calculate true-positive rate at a fixed false-positive rate.
-- [ ] Measure activation norms.
-- [ ] Measure fixed-continuation likelihood.
-- [ ] Calculate confidence intervals over examples.
-- [ ] Where straightforward, run the original non-chameleon base model to test whether the trigger alone causes similar changes.
+- [x] Measure normal probe performance across discovery and validation concepts.
+- [x] Measure correctly triggered probe performance.
+- [x] Measure irrelevant-trigger performance.
+- [x] Measure positive-example score distributions.
+- [x] Measure negative-example score distributions.
+- [x] Calculate AUROC.
+- [x] Calculate true-positive rate at a fixed false-positive rate.
+- [x] Measure activation norms.
+- [x] Measure fixed-continuation likelihood.
+- [x] Calculate confidence intervals over examples.
+- [x] Where straightforward, run the original non-chameleon base model to test whether the trigger alone causes similar changes.
 
 ### Completion gate
 
-- [ ] Baselines distinguish the normal, correctly triggered, irrelevant-trigger, and applicable base-model conditions with uncertainty reported.
+- [x] Baselines distinguish the normal, correctly triggered, irrelevant-trigger, and applicable base-model conditions with uncertainty reported.
 
 ### Deliverables
 
-- [ ] Publication-quality baseline figure.
-- [ ] Machine-readable baseline results file.
+- [x] Publication-quality baseline figure.
+- [x] Machine-readable baseline results file.
 
 ## Day 6: Perform coarse residual-stream localization
 

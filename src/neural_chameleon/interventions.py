@@ -116,10 +116,13 @@ class RunResult:
     response_mask: Tensor
     captures: ActivationCache
     response_logits: Tensor | None = None
+    response_logprobs: Tensor | None = None
 
     def response_token_logprobs(self) -> Tensor:
+        if self.response_logprobs is not None:
+            return self.response_logprobs.clone()
         if self.response_logits is None:
-            raise ValueError("response logits were not retained for this run")
+            raise ValueError("response logits or log-probabilities were not retained")
         log_probs = self.response_logits.float().log_softmax(dim=-1)
         return log_probs.gather(-1, self.response_ids.unsqueeze(-1)).squeeze(-1)
 
@@ -144,7 +147,10 @@ class LinearProbe:
         )
         if normalized_key != 0:
             raise ValueError(f"expected compact probe layer 0, found {key!r}")
-        return cls(weight=params["weight"].detach().cpu(), bias=params["bias"].detach().cpu())
+        return cls(
+            weight=torch.as_tensor(params["weight"]).detach().cpu(),
+            bias=torch.as_tensor(params["bias"]).detach().cpu(),
+        )
 
     def score(
         self, capture: CapturedActivation, device: torch.device | str | None = None
@@ -291,6 +297,7 @@ class PairedInterventionRunner:
         capture_sites: Sequence[PatchSite] = (),
         patch_cache: Mapping[PatchSite, CapturedActivation] | None = None,
         retain_response_logits: bool = False,
+        retain_response_logprobs: bool = False,
     ) -> RunResult:
         sites = tuple(capture_sites)
         if len(set(sites)) != len(sites):
@@ -310,6 +317,15 @@ class PairedInterventionRunner:
             for site in sites:
                 handles.append(self._register_capture(condition, site, captures))
 
+            retain_response_values = (
+                retain_response_logits or retain_response_logprobs
+            )
+            logits_to_keep: int | Tensor = 1
+            if retain_response_values:
+                start = condition.response_start - 1
+                stop = start + condition.response_width
+                logits_to_keep = torch.arange(start, stop, device=self.device)
+
             with torch.inference_mode():
                 output = self.model(
                     input_ids=condition.input_ids.to(self.device),
@@ -318,16 +334,27 @@ class PairedInterventionRunner:
                     use_cache=False,
                     output_hidden_states=False,
                     return_dict=True,
+                    logits_to_keep=logits_to_keep,
                 )
             if set(captures) != set(sites):
                 missing = set(sites) - set(captures)
                 raise RuntimeError(f"capture hooks did not fire: {sorted(map(str, missing))}")
 
             response_logits = None
-            if retain_response_logits:
+            response_logprobs = None
+            if retain_response_values:
                 start = condition.response_start - 1
                 stop = start + condition.response_width
-                response_logits = output.logits[:, start:stop, :].detach().cpu()
+                selected_logits = output.logits
+                if selected_logits.shape[1] != condition.response_width:
+                    selected_logits = selected_logits[:, start:stop, :]
+                if retain_response_logprobs:
+                    response_logprobs = self._target_logprobs(
+                        selected_logits,
+                        condition.response_ids.to(selected_logits.device),
+                    ).detach().cpu()
+                if retain_response_logits:
+                    response_logits = selected_logits.detach().cpu()
         finally:
             for handle in reversed(handles):
                 handle.remove()
@@ -338,6 +365,7 @@ class PairedInterventionRunner:
             response_mask=condition.response_mask.clone(),
             captures=captures,
             response_logits=response_logits,
+            response_logprobs=response_logprobs,
         )
 
     def registered_hook_count(self) -> int:
@@ -345,6 +373,20 @@ class PairedInterventionRunner:
             len(module._forward_hooks) + len(module._forward_pre_hooks)
             for module in self.model.modules()
         )
+
+    @staticmethod
+    def _target_logprobs(
+        logits: Tensor, target_ids: Tensor, chunk_size: int = 16
+    ) -> Tensor:
+        """Compute target log-probabilities without retaining full FP32 softmaxes."""
+        chunks = []
+        for start in range(0, logits.shape[1], chunk_size):
+            stop = min(start + chunk_size, logits.shape[1])
+            chunk = logits[:, start:stop, :].float()
+            target = target_ids[:, start:stop].unsqueeze(-1)
+            target_logits = chunk.gather(-1, target).squeeze(-1)
+            chunks.append(target_logits - torch.logsumexp(chunk, dim=-1))
+        return torch.cat(chunks, dim=1)
 
     def _validate_sites(self, sites: Sequence[PatchSite]) -> None:
         for site in sites:

@@ -274,6 +274,23 @@ class InterventionRunnerTests(unittest.TestCase):
                 )
             )
 
+    def test_compact_target_logprobs_match_full_log_softmax(self):
+        logits = torch.randn(2, 19, 64)
+        target_ids = torch.randint(0, 64, (2, 19))
+        expected = logits.float().log_softmax(dim=-1).gather(
+            -1, target_ids.unsqueeze(-1)
+        ).squeeze(-1)
+        compact = self.runner._target_logprobs(logits, target_ids, chunk_size=3)
+
+        self.assertTrue(
+            torch.allclose(
+                expected,
+                compact,
+                atol=1e-6,
+                rtol=1e-6,
+            )
+        )
+
     def test_response_position_selection_only_patches_selected_token(self):
         full_site = PatchSite(ActivationKind.BLOCK_OUTPUT, 1)
         selected_site = PatchSite(

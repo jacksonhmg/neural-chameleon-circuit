@@ -1,0 +1,28 @@
+{
+  "files": {
+    "baseline-example-results.jsonl": {
+      "bytes": 5979175,
+      "sha256": "d7036f28b7a8720157fa5e60c31077f594233f1d3584552c9ebbd2cf2d9a27f6"
+    },
+    "baseline-overview.pdf": {
+      "bytes": 39950,
+      "sha256": "a84bb566bbfe45108c63c3fa40b1d09d38c1cd8e262cb2606acb97ff99d49e55"
+    },
+    "baseline-overview.png": {
+      "bytes": 656658,
+      "sha256": "64130f2c438db32d99fbeb0cc35b0d6494acbf19d1cd6065eb84d348b2ec6291"
+    },
+    "baseline-summary.csv": {
+      "bytes": 16063,
+      "sha256": "04530d0c0301751043b10ec46d5158132e1e96df96426dbcb8608d0fe0b71f41"
+    },
+    "baseline-summary.json": {
+      "bytes": 451589,
+      "sha256": "13f7ddbb9d0b09fa48eac2ca6287cfc6091a1d93f1ba829b7aee1560ddb4245c"
+    }
+  },
+  "freeze_id": "day04-v1",
+  "generator": "scripts/day05_analyze_baselines.py",
+  "safety_split_accessed": false,
+  "schema_version": 1
+}
