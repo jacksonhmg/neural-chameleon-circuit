@@ -19,6 +19,17 @@ from .interventions import (
     induction_fraction,
     recovery_fraction,
 )
+from .localization import (
+    ExampleTokenAlignment,
+    TokenRegion,
+    TruncatedMonitorResult,
+    TruncatedMonitorRunner,
+    align_paired_prompts,
+    aligned_patch_indices,
+    identity_patch_indices,
+    patch_aligned_residual,
+    summarize_localization,
+)
 
 __all__ = [
     "ActivationCache",
@@ -26,13 +37,22 @@ __all__ = [
     "CapturedActivation",
     "ConditionBatch",
     "DEFAULT_SPLIT_DIR",
+    "ExampleTokenAlignment",
     "LinearProbe",
     "LockedSafetySplitError",
     "PairedBatch",
     "PairedInterventionRunner",
     "PatchSite",
     "RunResult",
+    "TokenRegion",
+    "TruncatedMonitorResult",
+    "TruncatedMonitorRunner",
+    "align_paired_prompts",
+    "aligned_patch_indices",
+    "identity_patch_indices",
     "induction_fraction",
     "load_experimental_split",
+    "patch_aligned_residual",
     "recovery_fraction",
+    "summarize_localization",
 ]

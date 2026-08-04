@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 5 — Complete
-**Next action:** Begin Day 6 by scanning residual-stream rescue and induction across layers and token-position groups on the discovery split only.
+**Current phase:** Day 6 — In progress
+**Next action:** Run and audit the preregistered bidirectional residual-stream localization scan on discovery positives only.
 
 ---
 
@@ -172,9 +172,9 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 6: Perform coarse residual-stream localization
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-06-localize-residual-stream.md` when work begins.
-**Evidence:** None yet.
+**Status:** In progress
+**Lab note:** [Day 6: Localize the Residual Stream](lab-notes/day-06-localize-residual-stream.md)
+**Evidence:** Pending completion of the localization run and audit.
 
 ### Checklist
 
