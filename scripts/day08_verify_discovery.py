@@ -228,16 +228,20 @@ def main() -> None:
             for group in (
                 identity["complete_forward_checks"],
                 identity["identity_checks"],
-                identity["vectorized_equivalence_checks"],
             )
             for row in group
+        )
+        and all(
+            row["within_tolerance"]
+            and row["max_abs_score_difference"] <= row["tolerance"] == 0.002
+            for row in identity["vectorized_equivalence_checks"]
         )
     )
     checks.append(
         check(
             identity_valid,
             "real_checkpoint_preflight",
-            "Full forwards, 136 identities, two vector checks, and screens pass.",
+            "Full forwards and 136 same-shape identities are exact; vector checks meet 0.002.",
         )
     )
 

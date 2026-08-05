@@ -22,6 +22,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from neural_chameleon import (  # noqa: E402
     CANDIDATES,
     ActivationKind,
+    CapturedActivation,
     ComponentScreeningRunner,
     LinearProbe,
     MultiCandidatePatchRunner,
@@ -29,6 +30,7 @@ from neural_chameleon import (  # noqa: E402
     PatchSite,
     TruncatedComponentRunner,
     load_experimental_split,
+    repeat_condition,
 )
 
 
@@ -46,7 +48,7 @@ EXPECTED_ROWS = 256 * (1 + 68)
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=4)
-    parser.add_argument("--candidate-chunk-size", type=int, default=4)
+    parser.add_argument("--candidate-chunk-size", type=int, default=2)
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     parser.add_argument("--identity-audit", type=Path, default=IDENTITY_PATH)
     parser.add_argument(
@@ -231,29 +233,33 @@ def run_preflight(
             }
         )
 
-    triggered_capture = truncated.run(
-        pair.triggered, capture_sites=tuple(candidate.site for candidate in CANDIDATES)
-    )
     identities = []
     vector_runner = MultiCandidatePatchRunner(runner, probe)
-    for condition_name, condition, baseline_scores, captures in (
-        (
-            "normal",
-            pair.normal,
-            screened.normal_scores,
-            screened.normal_captures,
-        ),
-        (
-            "triggered",
-            pair.triggered,
-            screened.triggered_scores,
-            {
-                candidate.candidate_id: triggered_capture.captures[candidate.site]
-                for candidate in CANDIDATES
-            },
-        ),
+    for condition_name, condition in (
+        ("normal", pair.normal),
+        ("triggered", pair.triggered),
     ):
         for chunk in batched(list(CANDIDATES), candidate_chunk_size):
+            expanded = repeat_condition(condition, len(chunk))
+            expanded_baseline = truncated.run(
+                expanded,
+                capture_sites=tuple(candidate.site for candidate in chunk),
+            )
+            expected_scores = expanded_baseline.probe_scores.reshape(
+                len(chunk), condition.batch_size
+            )
+            captures = {}
+            for index, candidate in enumerate(chunk):
+                rows = slice(
+                    index * condition.batch_size,
+                    (index + 1) * condition.batch_size,
+                )
+                expanded_capture = expanded_baseline.captures[candidate.site]
+                captures[candidate.candidate_id] = CapturedActivation(
+                    values=expanded_capture.values[rows].clone(),
+                    response_ids=condition.response_ids.clone(),
+                    response_mask=condition.response_mask.clone(),
+                )
             result = vector_runner.run_truncated(
                 condition,
                 tuple(
@@ -262,12 +268,18 @@ def run_preflight(
                 ),
             )
             for index, candidate in enumerate(chunk):
-                difference = (result.probe_scores[index] - baseline_scores).abs()
+                difference = (
+                    result.probe_scores[index] - expected_scores[index]
+                ).abs()
                 identities.append(
                     {
                         "condition": condition_name,
                         "candidate_id": candidate.candidate_id,
-                        "exact": bool(torch.equal(result.probe_scores[index], baseline_scores)),
+                        "exact": bool(
+                            torch.equal(
+                                result.probe_scores[index], expected_scores[index]
+                            )
+                        ),
                         "max_abs_score_difference": float(difference.max()),
                     }
                 )
@@ -291,9 +303,18 @@ def run_preflight(
         cross_checks.append(
             {
                 "candidate_id": candidate.candidate_id,
-                "exact": bool(torch.equal(multi.probe_scores[index], single.probe_scores)),
+                "exact": bool(
+                    torch.equal(multi.probe_scores[index], single.probe_scores)
+                ),
                 "max_abs_score_difference": float(
                     (multi.probe_scores[index] - single.probe_scores).abs().max()
+                ),
+                "tolerance": 0.002,
+                "within_tolerance": bool(
+                    (multi.probe_scores[index] - single.probe_scores)
+                    .abs()
+                    .max()
+                    <= 0.002
                 ),
             }
         )
@@ -305,7 +326,8 @@ def run_preflight(
     )
     status = (
         "pass"
-        if all(row["exact"] for row in (*complete_checks, *identities, *cross_checks))
+        if all(row["exact"] for row in (*complete_checks, *identities))
+        and all(row["within_tolerance"] for row in cross_checks)
         and screening_finite
         and runner.registered_hook_count() == 0
         else "fail"

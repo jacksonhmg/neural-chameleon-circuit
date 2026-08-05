@@ -14,7 +14,7 @@ On all 256 discovery-positive examples, calculate four inexpensive screens for e
 3. first-order attribution patching, the gradient of the triggered probe score dotted with the normal-minus-triggered activation difference; and
 4. response-token RMS gradient sensitivity.
 
-The screens are diagnostic only. Rank candidates exclusively by exact normal-to-triggered rescue on all discovery positives, using the Day 04 equal-concept macro recovery, shared-candidate gate, and tie-breaks. Require bit-exact complete/truncated agreement, same-condition identity patches for all 68 candidates in both conditions, and vectorized-versus-independent patch equality before the scan.
+The screens are diagnostic only. Rank candidates exclusively by exact normal-to-triggered rescue on all discovery positives, using the Day 04 equal-concept macro recovery, shared-candidate gate, and tie-breaks. Require bit-exact complete/truncated agreement and same-condition identity patches for all 68 candidates in both conditions. Deterministic CPU vectorized-versus-independent tests must be exact. On the real BF16/MPS checkpoint, where expanding batch shape changes numerical kernels, require maximum absolute probe-score disagreement no greater than 0.002, fixed-continuation NLL disagreement no greater than 0.02, and use no more than two candidates per vector batch.
 
 Freeze the first 16 gated candidates. Set final K to the largest available member of the already-frozen nested sizes 1, 2, 4, 8, and 16; therefore K is 16 when at least 16 candidates pass the gate. Select 16 distinct random controls outside the frozen top 16 by ascending SHA-256 of the string 42 followed by the candidate ID. Commit the ordered set, K, control identities, discovery summary hash, and component-set hash before loading individual-component validation results.
 
@@ -31,7 +31,7 @@ Use 10,000 paired percentile-bootstrap replicates with seed 42. Resample complet
 
 The four screens cover magnitude, probe-direction alignment, first-order patch approximation, and gradient sensitivity, but none is itself a causal intervention. Exact rescue remains the only rank score, preserving the Day 04 preregistration.
 
-The two-stage commit prevents held-out component effects from changing identities, order, K, or controls. Vectorizing independent candidates only changes batching; exact equivalence tests ensure it does not change intervention semantics.
+The two-stage commit prevents held-out component effects from changing identities, order, K, or controls. Vectorizing independent candidates only changes batching. Same-shape identity checks remain exact, while the observable-scale BF16 tolerance records the already-known batch-shape numerical effect instead of mislabeling it as causal signal.
 
 The behavior subset keeps full 42-block likelihood evaluation tractable while spanning every benign concept and both labels. It can identify obvious fixed-continuation damage but cannot establish generation quality or semantic preservation.
 

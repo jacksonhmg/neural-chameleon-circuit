@@ -11,6 +11,8 @@ The candidate universe contains 68 sites:
 
 All valid response positions are patched. The monitor remains response-token complete-block output at layer 12. Probe-only screening and exact causal scores terminate at that monitor; fixed-continuation likelihood runs the complete 42-block model.
 
+Independent candidates are vectorized at no more than two per expanded batch. CPU tests require bit-exact agreement with independent forwards. Real BF16/MPS preflight requires exact same-shape identities, no more than 0.002 absolute probe-score disagreement, and no more than 0.02 fixed-continuation NLL disagreement across changed batch shapes, consistent with the batch-kernel behavior recorded on Day 03.
+
 ## Discovery screening
 
 For example i, candidate c, normal activation N, triggered activation T, and triggered-score gradient g:
