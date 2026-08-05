@@ -5,6 +5,14 @@ from .experimental_splits import (
     LockedSafetySplitError,
     load_experimental_split,
 )
+from .component_analysis import (
+    COMPONENT_KINDS,
+    RANDOM_CONTROL_LAYERS,
+    SELECTED_LAYERS,
+    TruncatedComponentResult,
+    TruncatedComponentRunner,
+    summarize_component_types,
+)
 
 from .interventions import (
     ActivationCache,
@@ -34,6 +42,7 @@ from .localization import (
 __all__ = [
     "ActivationCache",
     "ActivationKind",
+    "COMPONENT_KINDS",
     "CapturedActivation",
     "ConditionBatch",
     "DEFAULT_SPLIT_DIR",
@@ -43,10 +52,14 @@ __all__ = [
     "PairedBatch",
     "PairedInterventionRunner",
     "PatchSite",
+    "RANDOM_CONTROL_LAYERS",
     "RunResult",
+    "SELECTED_LAYERS",
     "TokenRegion",
     "TruncatedMonitorResult",
     "TruncatedMonitorRunner",
+    "TruncatedComponentResult",
+    "TruncatedComponentRunner",
     "align_paired_prompts",
     "aligned_patch_indices",
     "identity_patch_indices",
@@ -55,4 +68,5 @@ __all__ = [
     "patch_aligned_residual",
     "recovery_fraction",
     "summarize_localization",
+    "summarize_component_types",
 ]

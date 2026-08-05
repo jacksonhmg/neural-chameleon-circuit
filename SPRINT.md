@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 6 — Complete
-**Next action:** Begin Day 7 by comparing full attention, MLP, and block-output interventions at frozen layers 12, 11, 10, and 9.
+**Current phase:** Day 7 — In progress
+**Next action:** Run and audit the frozen attention, MLP, and block-output comparison with held-out, negative, irrelevant-trigger, and random-layer controls.
 
 ---
 
@@ -199,9 +199,9 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 7: Separate attention and MLP contributions
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-07-separate-attention-and-mlp.md` when work begins.
-**Evidence:** None yet.
+**Status:** In progress
+**Lab note:** [Day 7: Separate Attention and MLP Contributions](lab-notes/day-07-separate-attention-and-mlp.md)
+**Evidence:** Pending completion of the component-type run and audit.
 
 ### Checklist
 

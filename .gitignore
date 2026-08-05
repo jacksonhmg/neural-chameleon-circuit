@@ -11,6 +11,7 @@ __pycache__/
 
 # Resumable Day 6 working output; the deterministic .jsonl.gz archive is tracked.
 /results/day-06/localization-example-results.jsonl
+/results/day-07/component-type-example-results.jsonl
 
 # Local operating-system files
 .DS_Store
