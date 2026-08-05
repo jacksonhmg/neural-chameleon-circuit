@@ -408,9 +408,9 @@ def main() -> None:
     controls_valid = (
         discovery_audit["status"] == "pass"
         and identity["status"] == "pass"
-        and identity["full_forward_check_count"] == 2
+        and identity["complete_forward_check_count"] == 2
         and identity["identity_check_count"] == 136
-        and identity["vectorized_check_count"] == 2
+        and identity["vectorized_equivalence_check_count"] == 2
         and preflight["status"] == "pass"
         and preflight["vectorized_full_forward_check_count"] == 2
         and all(row["within_tolerance"] for row in preflight["vectorized_full_forward_checks"])

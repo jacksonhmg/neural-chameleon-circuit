@@ -1,0 +1,28 @@
+{
+  "examples": [
+    "discovery-HTML-pos-000",
+    "discovery-HTML-pos-001"
+  ],
+  "procedure": "day08-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_split_accessed": false,
+  "vectorized_full_forward_check_count": 2,
+  "vectorized_full_forward_checks": [
+    {
+      "candidate_id": "layer_11.mlp",
+      "exact": true,
+      "max_abs_nll_difference": 0.0,
+      "tolerance": 0.02,
+      "within_tolerance": true
+    },
+    {
+      "candidate_id": "layer_11.head_15",
+      "exact": true,
+      "max_abs_nll_difference": 0.0,
+      "tolerance": 0.02,
+      "within_tolerance": true
+    }
+  ]
+}

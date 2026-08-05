@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 8 — In progress
-**Next action:** Run the frozen 68-candidate discovery scan, commit the exact ordered set, then evaluate those identities on held-out examples.
+**Current phase:** Day 8 — Complete
+**Next action:** Begin Day 9 grouped necessity and completeness using the frozen Day 8 prefixes and matched random component sets.
 
 ---
 
@@ -225,32 +225,32 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 8: Rank and exactly test individual components
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 8: Rank and Exactly Test Individual Components](lab-notes/day-08-test-individual-components.md)
-**Evidence:** Pending discovery selection freeze and held-out confirmation.
+**Evidence:** [Individual-component result package](results/day-08/README.md), [frozen component selection](results/day-08/frozen-component-selection.json), and [21-check final audit](results/day-08/component-confirmation-audit.json).
 
 ### Checklist
 
-- [ ] Rank candidate attention heads and MLPs using triggered-minus-normal activation differences.
-- [ ] Evaluate projection onto the probe direction as a screening method.
-- [ ] Evaluate attribution patching as a screening method.
-- [ ] Evaluate gradient-based estimates as a screening method.
-- [ ] Measure candidate consistency across examples.
-- [ ] Measure candidate consistency across discovery concepts.
-- [ ] Use screening methods only to prioritize candidates, not as causal evidence.
-- [ ] Run exact normal-to-triggered rescue interventions for the strongest candidates.
-- [ ] Run exact triggered-to-normal induction interventions for the strongest candidates.
-- [ ] Test the strongest candidates on held-out examples.
-- [ ] Compare against same-layer random components.
-- [ ] Measure behavioral change caused by the interventions.
+- [x] Rank candidate attention heads and MLPs using triggered-minus-normal activation differences.
+- [x] Evaluate projection onto the probe direction as a screening method.
+- [x] Evaluate attribution patching as a screening method.
+- [x] Evaluate gradient-based estimates as a screening method.
+- [x] Measure candidate consistency across examples.
+- [x] Measure candidate consistency across discovery concepts.
+- [x] Use screening methods only to prioritize candidates, not as causal evidence.
+- [x] Run exact normal-to-triggered rescue interventions for the strongest candidates.
+- [x] Run exact triggered-to-normal induction interventions for the strongest candidates.
+- [x] Test the strongest candidates on held-out examples.
+- [x] Compare against same-layer random components.
+- [x] Measure behavioral change caused by the interventions.
 
 ### Completion gate
 
-- [ ] Candidate rankings are supported by exact causal interventions and matched controls.
+- [x] Candidate rankings are supported by exact causal interventions and matched controls.
 
 ### Deliverable
 
-- [ ] Exact causal-component leaderboard.
+- [x] Exact causal-component leaderboard.
 
 ## Day 9: Test grouped necessity and completeness
 

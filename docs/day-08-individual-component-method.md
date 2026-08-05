@@ -70,4 +70,13 @@ Exact positive rescue supports partial necessity at a site. Exact positive induc
     external/minimal_neural_chameleons/.venv/bin/python \
       scripts/day08_run_confirmation.py
 
+    external/minimal_neural_chameleons/.venv/bin/python \
+      scripts/day08_analyze_confirmation.py
+
+    PYTHONPATH=src \
+      external/minimal_neural_chameleons/.venv/bin/python \
+      scripts/day08_verify_confirmation.py
+
 The large uncompressed JSONL files are ignored resumable working state. Deterministic gzip archives, complete summaries, figures, and audits are tracked. Every evaluator fails closed if a safety-unlock file exists.
+
+The completed, audited results are reported in [the Day 8 result package](../results/day-08/README.md). The discovery-frozen K=16 order and controls are recorded in [Decision 0011](../decision-log/0011-freeze-day-08-component-set.md) and `results/day-08/frozen-component-selection.json`.

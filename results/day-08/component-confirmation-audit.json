@@ -1,0 +1,115 @@
+{
+  "check_count": 21,
+  "checks": [
+    {
+      "detail": "Discovery, confirmation, and behavior counts are 17664, 37568, and 1452.",
+      "name": "raw_record_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Every discovery, confirmation, and behavior row has a unique scoped key.",
+      "name": "unique_raw_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "The exact grids contain every and only frozen discovery/validation positives in scope.",
+      "name": "exact_positive_example_coverage",
+      "status": "pass"
+    },
+    {
+      "detail": "Each discovery positive has baseline+32 induction rows; each validation positive has baseline+64 rescue/induction rows.",
+      "name": "complete_confirmation_grids",
+      "status": "pass"
+    },
+    {
+      "detail": "The behavior grid uses exactly the two preregistered examples per concept/class and all 16\u00d72 patches.",
+      "name": "complete_frozen_behavior_grid",
+      "status": "pass"
+    },
+    {
+      "detail": "Split, concept, label, probe, and correct trigger match the frozen records.",
+      "name": "frozen_metadata_and_triggers",
+      "status": "pass"
+    },
+    {
+      "detail": "Every confirmation row names the frozen model, revision, procedure, and component-set hash.",
+      "name": "pinned_model_procedure_and_component_set",
+      "status": "pass"
+    },
+    {
+      "detail": "All conditions for each example reuse one response-token hash and count.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "All probe probabilities and fixed-continuation NLL values are finite and probabilities are bounded.",
+      "name": "finite_scores_and_nll",
+      "status": "pass"
+    },
+    {
+      "detail": "Rescue and induction source/destination conditions are correctly oriented.",
+      "name": "causal_direction_mapping",
+      "status": "pass"
+    },
+    {
+      "detail": "Every patch uses a committed selected/control identity and its exact frozen site metadata.",
+      "name": "frozen_candidate_roles_and_sites",
+      "status": "pass"
+    },
+    {
+      "detail": "K, ordered identities, component hash, discovery-summary hash, and deterministic controls regenerate.",
+      "name": "selection_and_control_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "Every confirmation row names one commit containing the byte-identical frozen selection: ['acc5df83f6d2e4e1cf2e857b176118a5cb9f9c2c'].",
+      "name": "selection_committed_before_confirmation",
+      "status": "pass"
+    },
+    {
+      "detail": "Discovery audit, two full forwards, 136 identities, vector checks, and confirmation NLL preflight all pass.",
+      "name": "preflight_identity_and_discovery_audits",
+      "status": "pass"
+    },
+    {
+      "detail": "All exact, consistency, control, behavior, contrast, and interval values regenerate exactly.",
+      "name": "deterministic_summary_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "All denominators are stable and summary cell counts are (11, 128, 8, 4, 16, 704, 192).",
+      "name": "summary_scope_and_denominator_coverage",
+      "status": "pass"
+    },
+    {
+      "detail": "Every selected component is compared with every nonselected candidate at its layer.",
+      "name": "complete_nonselected_same_layer_controls",
+      "status": "pass"
+    },
+    {
+      "detail": "Summary hashes and counts match all three deterministic raw archives.",
+      "name": "summary_raw_hashes_and_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Raw archives, freezes, audits, summaries, tables, and figures match their manifest hashes.",
+      "name": "artifact_manifest_integrity",
+      "status": "pass"
+    },
+    {
+      "detail": "All three 300-DPI figures are 4,800\u00d72,700 RGBA with companion PDFs.",
+      "name": "publication_figure_files",
+      "status": "pass"
+    },
+    {
+      "detail": "Validation did not alter selection, and safety remains locked and unaccessed.",
+      "name": "validation_selection_and_safety_isolation",
+      "status": "pass"
+    }
+  ],
+  "procedure": "day08-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false
+}
