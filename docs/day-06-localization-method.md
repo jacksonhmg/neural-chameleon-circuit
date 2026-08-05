@@ -51,4 +51,4 @@ external/minimal_neural_chameleons/.venv/bin/python \
   scripts/day06_verify_localization.py
 ```
 
-The evaluator is resumable by example/intervention key. It fails closed if the safety unlock file exists and imports only the discovery loader.
+The evaluator is resumable by example/intervention key and writes an ignored working JSONL. The analyzer deterministically packs that file with gzip timestamp zero; the compressed raw artifact is committed and audited. The evaluator fails closed if the safety unlock file exists and imports only the discovery loader.

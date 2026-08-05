@@ -1,0 +1,564 @@
+{
+  "examples": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031",
+    "discovery-HTML-pos-028",
+    "discovery-HTML-pos-004"
+  ],
+  "freeze_id": "day04-v1",
+  "full_forward_exact": true,
+  "full_forward_max_abs_score_difference": 0.0,
+  "identity_check_count": 78,
+  "identity_checks": [
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 1,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 1,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 1,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 2,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 2,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 2,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 4,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 4,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 4,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 6,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 6,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 6,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 7,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 7,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 7,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 1,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 1,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 1,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 2,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 2,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 2,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 4,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 4,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 4,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 6,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 6,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 6,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 7,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 7,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 7,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0,
+      "token_region": "prompt"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0,
+      "token_region": "response"
+    },
+    {
+      "condition": "triggered",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0,
+      "token_region": "all_aligned"
+    }
+  ],
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_split_accessed": false
+}

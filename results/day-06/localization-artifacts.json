@@ -1,0 +1,45 @@
+{
+  "files": {
+    "coarse-layer-ranking.json": {
+      "bytes": 7987,
+      "sha256": "bb402c4f84e95f0203fc306706f244ff53558bbcc9074e405b2a72e569413d9f"
+    },
+    "identity-audit.json": {
+      "bytes": 12515,
+      "sha256": "76b7211fc329fed64ed5319bf11c1d19dca99dac70f4720c81c18071556ef1ac"
+    },
+    "induction-heatmap.pdf": {
+      "bytes": 45298,
+      "sha256": "ae2efbe9859038d9a8ff0e5e38185279e46735ee890947750163a3bdc0eef1ac"
+    },
+    "induction-heatmap.png": {
+      "bytes": 319962,
+      "sha256": "ef6657a1aa13dfa1411263f4fe83dbdb3401639d9e5a6627a4f58efaea191ea9"
+    },
+    "localization-example-results.jsonl.gz": {
+      "bytes": 889827,
+      "sha256": "78907ce59b73826030ae22032b8f368e6ff6a3474240fdc7ff2c92a2e5c8126e"
+    },
+    "localization-summary.csv": {
+      "bytes": 198442,
+      "sha256": "86b7e3cc66d7a4d1613459f876004d288320f1592350ca96f026909e9e3579ca"
+    },
+    "localization-summary.json": {
+      "bytes": 600087,
+      "sha256": "ebe9ccc24681c5f4d8affe90e3dcd65e2b8103dcf1e45e5d6a6a4a7ae66c9f1e"
+    },
+    "rescue-heatmap.pdf": {
+      "bytes": 46244,
+      "sha256": "0f8d0a661d1c7d1270057e93dc6c45b7b7ce9f9a73e570bf147e9cf20e6b8fa6"
+    },
+    "rescue-heatmap.png": {
+      "bytes": 318907,
+      "sha256": "168b20646d219d06fedc8db2edbf92ebdee2bf57cc213190734512fa1f3d9f65"
+    }
+  },
+  "freeze_id": "day04-v1",
+  "generator": "scripts/day06_analyze_localization.py",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "validation_split_accessed": false
+}

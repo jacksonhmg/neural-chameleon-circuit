@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": "Found 65024 rows; expected 65024.",
+      "name": "raw_record_count",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example/intervention key is unique.",
+      "name": "unique_raw_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "Rows contain every and only the 256 frozen discovery-positive examples.",
+      "name": "exact_discovery_positive_scope",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example has two baselines and all 42\u00d73\u00d72 intervention cells.",
+      "name": "complete_intervention_grid",
+      "status": "pass"
+    },
+    {
+      "detail": "Concepts, probes, triggers, and freeze ID match the preregistration.",
+      "name": "frozen_metadata_and_triggers",
+      "status": "pass"
+    },
+    {
+      "detail": "Every row names the pinned released chameleon revision.",
+      "name": "pinned_model_revision",
+      "status": "pass"
+    },
+    {
+      "detail": "Every intervention for an example reuses one response-token hash and count.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "Prompt alignment is nonempty, \u226575% of normal, excludes trigger-only tokens, and is stable across cells.",
+      "name": "prompt_alignment_contract",
+      "status": "pass"
+    },
+    {
+      "detail": "All scores are finite probabilities and all interventions patch nonempty regions.",
+      "name": "finite_scores_and_patch_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Baselines/layers 0\u201312 are executed and layers 13\u201341 are labeled structural nulls.",
+      "name": "execution_boundary",
+      "status": "pass"
+    },
+    {
+      "detail": "Every post-monitor rescue equals triggered baseline and induction equals normal baseline exactly.",
+      "name": "post_monitor_structural_nulls",
+      "status": "pass"
+    },
+    {
+      "detail": "Full/truncated scores are exact and all 78 identity patches have zero difference.",
+      "name": "full_forward_and_identity_controls",
+      "status": "pass"
+    },
+    {
+      "detail": "All concept, macro, onset, interval, and ranking values regenerate exactly.",
+      "name": "deterministic_summary_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "Every discovery concept has a suppression-denominator interval strictly above zero.",
+      "name": "stable_suppression_denominators",
+      "status": "pass"
+    },
+    {
+      "detail": "The ranking contains every block once and freezes the summary's top four.",
+      "name": "frozen_layer_ranking",
+      "status": "pass"
+    },
+    {
+      "detail": "Raw, identity, summary, ranking, CSV, PNG, and PDF artifacts match their hashes.",
+      "name": "artifact_manifest_integrity",
+      "status": "pass"
+    },
+    {
+      "detail": "Both 300-DPI heatmaps are 4,800\u00d72,550 RGBA with companion PDFs.",
+      "name": "publication_heatmap_files",
+      "status": "pass"
+    },
+    {
+      "detail": "Executed layers localize positive rescue and induction and yield four pre-monitor retained blocks.",
+      "name": "day06_completion_gate",
+      "status": "pass"
+    },
+    {
+      "detail": "Each discovery concept contributes 64 complete paired examples.",
+      "name": "equal_concept_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Validation was not used and safety remains locked and unaccessed.",
+      "name": "validation_and_safety_isolation",
+      "status": "pass"
+    }
+  ],
+  "freeze_id": "day04-v1",
+  "raw_record_count": 65024,
+  "retained_top_four_layers": [
+    12,
+    11,
+    10,
+    9
+  ],
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_split_accessed": false,
+  "verified_on": "2026-08-04"
+}

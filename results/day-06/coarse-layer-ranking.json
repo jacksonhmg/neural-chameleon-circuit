@@ -1,0 +1,395 @@
+{
+  "freeze_id": "day04-v1",
+  "ranking": [
+    {
+      "layer": 12,
+      "macro_full_response_rescue": {
+        "ci_high": 1.0,
+        "ci_low": 1.0,
+        "estimate": 1.0
+      },
+      "rank": 1
+    },
+    {
+      "layer": 11,
+      "macro_full_response_rescue": {
+        "ci_high": 0.9749001313978658,
+        "ci_low": 0.9688825889855657,
+        "estimate": 0.9720515236247935
+      },
+      "rank": 2
+    },
+    {
+      "layer": 10,
+      "macro_full_response_rescue": {
+        "ci_high": 0.5471316662735202,
+        "ci_low": 0.5248830386166962,
+        "estimate": 0.5359053970563369
+      },
+      "rank": 3
+    },
+    {
+      "layer": 9,
+      "macro_full_response_rescue": {
+        "ci_high": 0.22654990370525926,
+        "ci_low": 0.2059937704579801,
+        "estimate": 0.21607689154298387
+      },
+      "rank": 4
+    },
+    {
+      "layer": 8,
+      "macro_full_response_rescue": {
+        "ci_high": 0.08361303583410006,
+        "ci_low": 0.07084990647105527,
+        "estimate": 0.07707129265249235
+      },
+      "rank": 5
+    },
+    {
+      "layer": 7,
+      "macro_full_response_rescue": {
+        "ci_high": 0.03760637744710644,
+        "ci_low": 0.0310045193881599,
+        "estimate": 0.034175363314855094
+      },
+      "rank": 6
+    },
+    {
+      "layer": 6,
+      "macro_full_response_rescue": {
+        "ci_high": 0.031023353609393595,
+        "ci_low": 0.025146433316295694,
+        "estimate": 0.02796097147597463
+      },
+      "rank": 7
+    },
+    {
+      "layer": 5,
+      "macro_full_response_rescue": {
+        "ci_high": 0.013425191729360093,
+        "ci_low": 0.009853743507366331,
+        "estimate": 0.011527297275319552
+      },
+      "rank": 8
+    },
+    {
+      "layer": 4,
+      "macro_full_response_rescue": {
+        "ci_high": 0.011401459656950884,
+        "ci_low": 0.008190379335058255,
+        "estimate": 0.009701452386745446
+      },
+      "rank": 9
+    },
+    {
+      "layer": 3,
+      "macro_full_response_rescue": {
+        "ci_high": 0.005582063702528817,
+        "ci_low": 0.003806288206271931,
+        "estimate": 0.004632243265324927
+      },
+      "rank": 10
+    },
+    {
+      "layer": 2,
+      "macro_full_response_rescue": {
+        "ci_high": 0.002900877026755363,
+        "ci_low": 0.0017969114259941046,
+        "estimate": 0.0023221930530054457
+      },
+      "rank": 11
+    },
+    {
+      "layer": 1,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0027692661612359107,
+        "ci_low": 0.001741043715669089,
+        "estimate": 0.002231361817072541
+      },
+      "rank": 12
+    },
+    {
+      "layer": 13,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 13
+    },
+    {
+      "layer": 14,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 14
+    },
+    {
+      "layer": 15,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 15
+    },
+    {
+      "layer": 16,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 16
+    },
+    {
+      "layer": 17,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 17
+    },
+    {
+      "layer": 18,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 18
+    },
+    {
+      "layer": 19,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 19
+    },
+    {
+      "layer": 20,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 20
+    },
+    {
+      "layer": 21,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 21
+    },
+    {
+      "layer": 22,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 22
+    },
+    {
+      "layer": 23,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 23
+    },
+    {
+      "layer": 24,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 24
+    },
+    {
+      "layer": 25,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 25
+    },
+    {
+      "layer": 26,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 26
+    },
+    {
+      "layer": 27,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 27
+    },
+    {
+      "layer": 28,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 28
+    },
+    {
+      "layer": 29,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 29
+    },
+    {
+      "layer": 30,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 30
+    },
+    {
+      "layer": 31,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 31
+    },
+    {
+      "layer": 32,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 32
+    },
+    {
+      "layer": 33,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 33
+    },
+    {
+      "layer": 34,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 34
+    },
+    {
+      "layer": 35,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 35
+    },
+    {
+      "layer": 36,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 36
+    },
+    {
+      "layer": 37,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 37
+    },
+    {
+      "layer": 38,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 38
+    },
+    {
+      "layer": 39,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 39
+    },
+    {
+      "layer": 40,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 40
+    },
+    {
+      "layer": 41,
+      "macro_full_response_rescue": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "estimate": 0.0
+      },
+      "rank": 41
+    },
+    {
+      "layer": 0,
+      "macro_full_response_rescue": {
+        "ci_high": 2.702590600552055e-05,
+        "ci_low": -0.0003705546292627608,
+        "estimate": -0.00019349031161476415
+      },
+      "rank": 42
+    }
+  ],
+  "retained_top_four_layers": [
+    12,
+    11,
+    10,
+    9
+  ],
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "selection_data": "discovery positive examples only",
+  "selection_metric": "equal-concept macro full-response resid_post rescue recovery",
+  "tie_break": "lower zero-based layer",
+  "validation_split_accessed": false
+}

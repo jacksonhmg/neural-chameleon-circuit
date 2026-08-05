@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 6 — In progress
-**Next action:** Run and audit the preregistered bidirectional residual-stream localization scan on discovery positives only.
+**Current phase:** Day 6 — Complete
+**Next action:** Begin Day 7 by comparing full attention, MLP, and block-output interventions at frozen layers 12, 11, 10, and 9.
 
 ---
 
@@ -172,30 +172,30 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 6: Perform coarse residual-stream localization
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 6: Localize the Residual Stream](lab-notes/day-06-localize-residual-stream.md)
-**Evidence:** Pending completion of the localization run and audit.
+**Evidence:** [Localization result package](results/day-06/README.md), [frozen layer ranking](results/day-06/coarse-layer-ranking.json), and [20-check audit](results/day-06/localization-audit.json).
 
 ### Checklist
 
-- [ ] Scan the model layer by layer at relevant token positions.
-- [ ] Patch normal residual-stream activations into triggered runs and measure monitor restoration.
-- [ ] Patch triggered residual-stream activations into normal runs and measure induced evasion.
-- [ ] Test prompt-token patching separately.
-- [ ] Test response-token patching separately.
-- [ ] Test grouped all-token patching separately.
-- [ ] Identify where the trigger begins to affect the computation.
-- [ ] Identify where the concealment transformation becomes causally important.
-- [ ] Assess whether the effect is localized or distributed across layers.
+- [x] Scan the model layer by layer at relevant token positions.
+- [x] Patch normal residual-stream activations into triggered runs and measure monitor restoration.
+- [x] Patch triggered residual-stream activations into normal runs and measure induced evasion.
+- [x] Test prompt-token patching separately.
+- [x] Test response-token patching separately.
+- [x] Test grouped all-token patching separately.
+- [x] Identify where the trigger begins to affect the computation.
+- [x] Identify where the concealment transformation becomes causally important.
+- [x] Assess whether the effect is localized or distributed across layers.
 
 ### Completion gate
 
-- [ ] Rescue and induction scans identify and quantify the causally relevant layer and token-position regions.
+- [x] Rescue and induction scans identify and quantify the causally relevant layer and token-position regions.
 
 ### Deliverables
 
-- [ ] Layer-by-token rescue heatmap.
-- [ ] Layer-by-token induction heatmap.
+- [x] Layer-by-token rescue heatmap.
+- [x] Layer-by-token induction heatmap.
 
 ## Day 7: Separate attention and MLP contributions
 
