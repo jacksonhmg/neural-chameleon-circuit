@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 7 — Complete
-**Next action:** Begin Day 8 discovery-only component screening, then exactly test prioritized heads and MLP candidates at the four frozen layers with held-out and matched controls.
+**Current phase:** Day 8 — In progress
+**Next action:** Run the frozen 68-candidate discovery scan, commit the exact ordered set, then evaluate those identities on held-out examples.
 
 ---
 
@@ -225,9 +225,9 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 8: Rank and exactly test individual components
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-08-test-individual-components.md` when work begins.
-**Evidence:** None yet.
+**Status:** In progress
+**Lab note:** [Day 8: Rank and Exactly Test Individual Components](lab-notes/day-08-test-individual-components.md)
+**Evidence:** Pending discovery selection freeze and held-out confirmation.
 
 ### Checklist
 

@@ -40,10 +40,10 @@ class TinyAttention(nn.Module):
 
 
 class TinyLayer(nn.Module):
-    def __init__(self, hidden_size: int = 16):
+    def __init__(self, hidden_size: int = 16, num_heads: int = 4):
         super().__init__()
         self.input_layernorm = nn.LayerNorm(hidden_size)
-        self.self_attn = TinyAttention(hidden_size)
+        self.self_attn = TinyAttention(hidden_size, num_heads)
         self.post_attention_layernorm = nn.LayerNorm(hidden_size)
         self.pre_feedforward_layernorm = nn.LayerNorm(hidden_size)
         self.mlp = nn.Sequential(
@@ -67,18 +67,28 @@ class TinyLayer(nn.Module):
 
 
 class TinyBackbone(nn.Module):
-    def __init__(self, hidden_size: int = 16, layers: int = 3):
+    def __init__(
+        self, hidden_size: int = 16, layers: int = 3, num_heads: int = 4
+    ):
         super().__init__()
         self.embed_tokens = nn.Embedding(128, hidden_size)
         self.position_embeddings = nn.Embedding(256, hidden_size)
-        self.layers = nn.ModuleList([TinyLayer(hidden_size) for _ in range(layers)])
+        self.layers = nn.ModuleList(
+            [TinyLayer(hidden_size, num_heads) for _ in range(layers)]
+        )
         self.norm = nn.LayerNorm(hidden_size)
 
 
 class TinyCausalLM(nn.Module):
-    def __init__(self, hidden_size: int = 16, vocab_size: int = 64):
+    def __init__(
+        self,
+        hidden_size: int = 16,
+        vocab_size: int = 64,
+        layers: int = 3,
+        num_heads: int = 4,
+    ):
         super().__init__()
-        self.model = TinyBackbone(hidden_size)
+        self.model = TinyBackbone(hidden_size, layers, num_heads)
         self.lm_head = nn.Linear(hidden_size, vocab_size, bias=False)
         self.raise_on_forward = False
 
