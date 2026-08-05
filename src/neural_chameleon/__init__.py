@@ -42,6 +42,7 @@ from .individual_components import (
     eligible_candidates,
     masked_example_mean,
     repeat_condition,
+    summarize_component_confirmation,
     summarize_discovery_candidates,
 )
 from .localization import (
@@ -100,5 +101,6 @@ __all__ = [
     "repeat_condition",
     "summarize_localization",
     "summarize_component_types",
+    "summarize_component_confirmation",
     "summarize_discovery_candidates",
 ]

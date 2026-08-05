@@ -12,6 +12,8 @@ from neural_chameleon import (
     LinearProbe,
     MultiCandidatePatchRunner,
     PairedInterventionRunner,
+    component_set_sha256,
+    summarize_component_confirmation,
     summarize_discovery_candidates,
 )
 from neural_chameleon.component_analysis import TruncatedComponentRunner
@@ -177,6 +179,137 @@ class IndividualComponentTests(unittest.TestCase):
                 for row in first["screening_evaluation"]
             )
         )
+
+    def test_confirmation_summary_preserves_frozen_roles_and_directions(self):
+        discovery = []
+        confirmation = []
+        behavior = []
+        discovery_concepts = ("d0", "d1", "d2", "d3")
+        validation_concepts = tuple(f"v{index}" for index in range(7))
+        selected = [candidate.candidate_id for candidate in CANDIDATES[:16]]
+        random_controls = [candidate.candidate_id for candidate in CANDIDATES[16:32]]
+        selection = {
+            "selected_candidates": selected,
+            "random_control_candidates": random_controls,
+            "component_set_sha256": component_set_sha256(selected, 16),
+        }
+        effects = {
+            candidate.candidate_id: (32 - index) / 100
+            for index, candidate in enumerate(CANDIDATES)
+        }
+        for split, concepts in (
+            ("discovery", discovery_concepts),
+            ("validation", validation_concepts),
+        ):
+            for concept in concepts:
+                for example_index in range(64):
+                    example_id = f"{split}-{concept}-{example_index}"
+                    baseline = {
+                        "record_type": "baseline",
+                        "split": split,
+                        "concept": concept,
+                        "example_id": example_id,
+                        "normal_probe_score": 0.9,
+                        "triggered_probe_score": 0.3,
+                    }
+                    confirmation.append(baseline.copy())
+                    if split == "discovery":
+                        discovery.append(baseline.copy())
+                        for candidate in CANDIDATES:
+                            discovery.append(
+                                {
+                                    "record_type": "candidate",
+                                    "split": split,
+                                    "concept": concept,
+                                    "example_id": example_id,
+                                    "candidate_id": candidate.candidate_id,
+                                    "patched_probe_score": 0.3
+                                    + 0.6 * effects[candidate.candidate_id],
+                                }
+                            )
+                    for candidate_id in selected + random_controls:
+                        directions = (
+                            ("induction",)
+                            if split == "discovery"
+                            else ("rescue", "induction")
+                        )
+                        for direction in directions:
+                            confirmation.append(
+                                {
+                                    "record_type": "patch",
+                                    "split": split,
+                                    "concept": concept,
+                                    "example_id": example_id,
+                                    "candidate_id": candidate_id,
+                                    "direction": direction,
+                                    "patched_probe_score": (
+                                        0.3 + 0.6 * effects[candidate_id]
+                                        if direction == "rescue"
+                                        else 0.9 - 0.6 * effects[candidate_id]
+                                    ),
+                                }
+                            )
+                for label in (0, 1):
+                    for example_index in range(2):
+                        example_id = f"behavior-{split}-{concept}-{label}-{example_index}"
+                        behavior.append(
+                            {
+                                "record_type": "baseline",
+                                "split": split,
+                                "concept": concept,
+                                "label": label,
+                                "example_id": example_id,
+                                "normal_response_nll": 1.0,
+                                "triggered_response_nll": 1.1,
+                            }
+                        )
+                        for candidate_index, candidate_id in enumerate(selected):
+                            for direction, destination in (
+                                ("rescue", 1.1),
+                                ("induction", 1.0),
+                            ):
+                                behavior.append(
+                                    {
+                                        "record_type": "patch",
+                                        "split": split,
+                                        "concept": concept,
+                                        "label": label,
+                                        "example_id": example_id,
+                                        "candidate_id": candidate_id,
+                                        "direction": direction,
+                                        "patched_response_nll": destination
+                                        + 0.01 * (candidate_index + 1),
+                                    }
+                                )
+
+        summary = summarize_component_confirmation(
+            discovery,
+            confirmation,
+            behavior,
+            selection,
+            replicates=50,
+            seed=42,
+        )
+        selected_rescue = next(
+            row
+            for row in summary["exact"]["role_aggregates"]
+            if row["candidate_role"] == "selected"
+            and row["scope"] == "discovery"
+            and row["direction"] == "rescue"
+        )
+        random_rescue = next(
+            row
+            for row in summary["exact"]["role_aggregates"]
+            if row["candidate_role"] == "random_control"
+            and row["scope"] == "discovery"
+            and row["direction"] == "rescue"
+        )
+        self.assertAlmostEqual(selected_rescue["fraction"]["estimate"], 0.245)
+        self.assertAlmostEqual(random_rescue["fraction"]["estimate"], 0.085)
+        self.assertEqual(len(summary["exact"]["macro"]), 128)
+        self.assertEqual(len(summary["exact"]["same_layer_controls"]), 16)
+        self.assertEqual(len(summary["behavior"]["concept_class_cells"]), 704)
+        self.assertEqual(len(summary["behavior"]["macro"]), 192)
 
 
 if __name__ == "__main__":

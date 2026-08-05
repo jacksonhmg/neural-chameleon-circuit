@@ -846,3 +846,491 @@ def summarize_discovery_candidates(
         "validation_used_for_selection": False,
         "safety_split_accessed": False,
     }
+
+
+def summarize_component_confirmation(
+    discovery_records: Iterable[dict[str, Any]],
+    confirmation_records: Iterable[dict[str, Any]],
+    behavior_records: Iterable[dict[str, Any]],
+    selection: Mapping[str, Any],
+    *,
+    replicates: int = 10000,
+    seed: int = 42,
+) -> dict[str, Any]:
+    """Summarize the frozen Day 8 exact and fixed-continuation grids."""
+    if replicates <= 0:
+        raise ValueError("replicates must be positive")
+    discovery_records = list(discovery_records)
+    confirmation_records = list(confirmation_records)
+    behavior_records = list(behavior_records)
+    selected = list(selection["selected_candidates"])
+    random_controls = list(selection["random_control_candidates"])
+    target_candidates = selected + random_controls
+    roles = {
+        candidate_id: "selected" if candidate_id in selected else "random_control"
+        for candidate_id in target_candidates
+    }
+    if (
+        len(selected) != 16
+        or len(random_controls) != 16
+        or set(selected) & set(random_controls)
+        or any(candidate_id not in CANDIDATE_BY_ID for candidate_id in target_candidates)
+    ):
+        raise ValueError("confirmation requires the frozen 16+16 component grid")
+
+    discovery_baselines: dict[str, dict[str, Any]] = {}
+    discovery_patches: dict[tuple[str, str], dict[str, Any]] = {}
+    for record in discovery_records:
+        if record["record_type"] == "baseline":
+            discovery_baselines[record["example_id"]] = record
+        elif record["record_type"] == "candidate":
+            discovery_patches[(record["example_id"], record["candidate_id"])] = record
+        else:
+            raise ValueError("unknown discovery record type")
+
+    confirmation_baselines: dict[str, dict[str, Any]] = {}
+    confirmation_patches: dict[tuple[str, str, str], dict[str, Any]] = {}
+    for record in confirmation_records:
+        if record["record_type"] == "baseline":
+            confirmation_baselines[record["example_id"]] = record
+        elif record["record_type"] == "patch":
+            confirmation_patches[
+                (record["example_id"], record["candidate_id"], record["direction"])
+            ] = record
+        else:
+            raise ValueError("unknown confirmation record type")
+
+    scope_examples: dict[tuple[str, str], list[str]] = defaultdict(list)
+    baselines: dict[str, dict[str, Any]] = {}
+    for example_id, record in discovery_baselines.items():
+        scope_examples[("discovery", record["concept"])].append(example_id)
+        baselines[example_id] = record
+    for example_id, record in confirmation_baselines.items():
+        if record["split"] == "validation":
+            scope_examples[("validation", record["concept"])].append(example_id)
+            baselines[example_id] = record
+        elif example_id in discovery_baselines:
+            original = discovery_baselines[example_id]
+            if (
+                record["normal_probe_score"] != original["normal_probe_score"]
+                or record["triggered_probe_score"] != original["triggered_probe_score"]
+            ):
+                raise ValueError("discovery baselines changed in confirmation")
+
+    expected_scope_counts = {"discovery": 4, "validation": 7}
+    observed_scope_counts = {
+        scope: len({concept for cell_scope, concept in scope_examples if cell_scope == scope})
+        for scope in expected_scope_counts
+    }
+    if observed_scope_counts != expected_scope_counts:
+        raise ValueError("confirmation concept scopes are incomplete")
+
+    rng = np.random.default_rng(seed)
+    concept_indices: dict[tuple[str, str], np.ndarray] = {}
+    concept_baseline: dict[tuple[str, str], dict[str, Any]] = {}
+    for key in sorted(scope_examples):
+        example_ids = sorted(scope_examples[key])
+        if len(example_ids) != 64:
+            raise ValueError(f"expected 64 positives for {key}")
+        indices = rng.integers(0, len(example_ids), size=(replicates, len(example_ids)))
+        normal = np.asarray([baselines[item]["normal_probe_score"] for item in example_ids])
+        triggered = np.asarray(
+            [baselines[item]["triggered_probe_score"] for item in example_ids]
+        )
+        normal_boot = normal[indices].mean(axis=1)
+        triggered_boot = triggered[indices].mean(axis=1)
+        denominator = float(normal.mean() - triggered.mean())
+        denominator_boot = normal_boot - triggered_boot
+        if denominator <= 0 or np.any(denominator_boot <= 0):
+            raise ValueError(f"unstable positive suppression denominator for {key}")
+        concept_indices[key] = indices
+        concept_baseline[key] = {
+            "example_ids": example_ids,
+            "normal": normal,
+            "triggered": triggered,
+            "normal_boot": normal_boot,
+            "triggered_boot": triggered_boot,
+            "denominator": denominator,
+            "denominator_boot": denominator_boot,
+        }
+
+    component_concepts: dict[tuple[str, str, str, str], dict[str, Any]] = {}
+
+    def exact_cell(
+        candidate_id: str, scope: str, concept: str, direction: str
+    ) -> dict[str, Any]:
+        key = (scope, concept)
+        baseline = concept_baseline[key]
+        example_ids = baseline["example_ids"]
+        if scope == "discovery" and direction == "rescue":
+            rows = [discovery_patches[(item, candidate_id)] for item in example_ids]
+        else:
+            rows = [
+                confirmation_patches[(item, candidate_id, direction)]
+                for item in example_ids
+            ]
+        patched = np.asarray([row["patched_probe_score"] for row in rows])
+        indices = concept_indices[key]
+        if direction == "rescue":
+            numerator = patched - baseline["triggered"]
+            point = float(patched.mean() - baseline["triggered"].mean()) / baseline[
+                "denominator"
+            ]
+            boot = (
+                patched[indices].mean(axis=1) - baseline["triggered_boot"]
+            ) / baseline["denominator_boot"]
+        elif direction == "induction":
+            numerator = baseline["normal"] - patched
+            point = float(baseline["normal"].mean() - patched.mean()) / baseline[
+                "denominator"
+            ]
+            boot = (
+                baseline["normal_boot"] - patched[indices].mean(axis=1)
+            ) / baseline["denominator_boot"]
+        else:
+            raise ValueError(f"unknown exact direction: {direction}")
+        return {
+            "fraction": estimate(point, boot),
+            "bootstrap": boot,
+            "patched_mean": float(patched.mean()),
+            "positive_example_fraction": float(np.mean(numerator > 0)),
+        }
+
+    exact_concepts = []
+    all_discovery_candidates = [candidate.candidate_id for candidate in CANDIDATES]
+    for scope, concept in sorted(scope_examples):
+        directions = ("rescue", "induction")
+        candidates = (
+            all_discovery_candidates
+            if scope == "discovery"
+            else target_candidates
+        )
+        cells = []
+        for candidate_id in candidates:
+            for direction in directions:
+                if (
+                    scope == "discovery"
+                    and direction == "induction"
+                    and candidate_id not in roles
+                ):
+                    continue
+                value = exact_cell(candidate_id, scope, concept, direction)
+                component_concepts[(candidate_id, scope, direction, concept)] = value
+                if candidate_id in roles:
+                    cells.append(
+                        {
+                            "candidate_id": candidate_id,
+                            "candidate_role": roles[candidate_id],
+                            "direction": direction,
+                            "fraction": value["fraction"],
+                            "patched_mean": value["patched_mean"],
+                            "positive_example_fraction": value[
+                                "positive_example_fraction"
+                            ],
+                        }
+                    )
+        baseline = concept_baseline[(scope, concept)]
+        exact_concepts.append(
+            {
+                "scope": scope,
+                "concept": concept,
+                "n_positive": len(baseline["example_ids"]),
+                "normal_mean": float(baseline["normal"].mean()),
+                "triggered_mean": float(baseline["triggered"].mean()),
+                "suppression_denominator": estimate(
+                    baseline["denominator"], baseline["denominator_boot"]
+                ),
+                "cells": cells,
+            }
+        )
+
+    scope_concepts = {
+        scope: sorted(concept for cell_scope, concept in scope_examples if cell_scope == scope)
+        for scope in ("discovery", "validation")
+    }
+    exact_macro = []
+    macro_boots: dict[tuple[str, str, str], np.ndarray] = {}
+    for candidate_id in target_candidates:
+        candidate = CANDIDATE_BY_ID[candidate_id]
+        for scope in ("discovery", "validation"):
+            for direction in ("rescue", "induction"):
+                cells = [
+                    component_concepts[(candidate_id, scope, direction, concept)]
+                    for concept in scope_concepts[scope]
+                ]
+                point = float(
+                    np.mean([cell["fraction"]["estimate"] for cell in cells])
+                )
+                boot = np.stack([cell["bootstrap"] for cell in cells]).mean(axis=0)
+                macro_boots[(candidate_id, scope, direction)] = boot
+                exact_macro.append(
+                    {
+                        "candidate_id": candidate_id,
+                        "candidate_role": roles[candidate_id],
+                        "layer": candidate.layer,
+                        "component_type": candidate.component_type,
+                        "head": candidate.head,
+                        "scope": scope,
+                        "direction": direction,
+                        "concept_count": len(cells),
+                        "positive_concept_count": sum(
+                            cell["fraction"]["estimate"] > 0 for cell in cells
+                        ),
+                        "mean_positive_example_fraction": float(
+                            np.mean(
+                                [cell["positive_example_fraction"] for cell in cells]
+                            )
+                        ),
+                        "fraction": estimate(point, boot),
+                    }
+                )
+
+    role_aggregates = []
+    role_boots: dict[tuple[str, str, str], np.ndarray] = {}
+    for role, candidate_ids in (
+        ("selected", selected),
+        ("random_control", random_controls),
+    ):
+        for scope in ("discovery", "validation"):
+            for direction in ("rescue", "induction"):
+                points = [
+                    next(
+                        row["fraction"]["estimate"]
+                        for row in exact_macro
+                        if row["candidate_id"] == candidate_id
+                        and row["scope"] == scope
+                        and row["direction"] == direction
+                    )
+                    for candidate_id in candidate_ids
+                ]
+                boot = np.stack(
+                    [macro_boots[(candidate_id, scope, direction)] for candidate_id in candidate_ids]
+                ).mean(axis=0)
+                role_boots[(role, scope, direction)] = boot
+                role_aggregates.append(
+                    {
+                        "candidate_role": role,
+                        "component_count": len(candidate_ids),
+                        "scope": scope,
+                        "direction": direction,
+                        "fraction": estimate(float(np.mean(points)), boot),
+                    }
+                )
+
+    role_contrasts = []
+    for scope in ("discovery", "validation"):
+        for direction in ("rescue", "induction"):
+            selected_row = next(
+                row
+                for row in role_aggregates
+                if row["candidate_role"] == "selected"
+                and row["scope"] == scope
+                and row["direction"] == direction
+            )
+            random_row = next(
+                row
+                for row in role_aggregates
+                if row["candidate_role"] == "random_control"
+                and row["scope"] == scope
+                and row["direction"] == direction
+            )
+            point = (
+                selected_row["fraction"]["estimate"]
+                - random_row["fraction"]["estimate"]
+            )
+            boot = role_boots[("selected", scope, direction)] - role_boots[
+                ("random_control", scope, direction)
+            ]
+            role_contrasts.append(
+                {
+                    "contrast": "selected_minus_random_control",
+                    "scope": scope,
+                    "direction": direction,
+                    "fraction_difference": estimate(point, boot),
+                }
+            )
+
+    all_discovery_macro: dict[str, tuple[float, np.ndarray]] = {}
+    for candidate_id in all_discovery_candidates:
+        cells = [
+            component_concepts[(candidate_id, "discovery", "rescue", concept)]
+            for concept in scope_concepts["discovery"]
+        ]
+        all_discovery_macro[candidate_id] = (
+            float(np.mean([cell["fraction"]["estimate"] for cell in cells])),
+            np.stack([cell["bootstrap"] for cell in cells]).mean(axis=0),
+        )
+    same_layer_controls = []
+    selected_set = set(selected)
+    for candidate_id in selected:
+        candidate = CANDIDATE_BY_ID[candidate_id]
+        control_ids = [
+            item.candidate_id
+            for item in CANDIDATES
+            if item.layer == candidate.layer and item.candidate_id not in selected_set
+        ]
+        control_point = float(
+            np.mean([all_discovery_macro[item][0] for item in control_ids])
+        )
+        control_boot = np.stack(
+            [all_discovery_macro[item][1] for item in control_ids]
+        ).mean(axis=0)
+        selected_point, selected_boot = all_discovery_macro[candidate_id]
+        same_layer_controls.append(
+            {
+                "candidate_id": candidate_id,
+                "layer": candidate.layer,
+                "control_candidate_count": len(control_ids),
+                "control_candidates": control_ids,
+                "selected_discovery_rescue": estimate(selected_point, selected_boot),
+                "mean_nonselected_same_layer_rescue": estimate(
+                    control_point, control_boot
+                ),
+                "difference": estimate(
+                    selected_point - control_point, selected_boot - control_boot
+                ),
+            }
+        )
+
+    behavior_baselines = {
+        record["example_id"]: record
+        for record in behavior_records
+        if record["record_type"] == "baseline"
+    }
+    behavior_patches = {
+        (record["example_id"], record["candidate_id"], record["direction"]): record
+        for record in behavior_records
+        if record["record_type"] == "patch"
+    }
+    behavior_groups: dict[tuple[str, str, int], list[str]] = defaultdict(list)
+    for example_id, record in behavior_baselines.items():
+        behavior_groups[(record["split"], record["concept"], record["label"])].append(
+            example_id
+        )
+    if len(behavior_baselines) != 44 or len(behavior_groups) != 22:
+        raise ValueError("behavior subset does not contain 22 two-example cells")
+    behavior_rng = np.random.default_rng(seed)
+    behavior_cells = []
+    behavior_boots: dict[tuple[str, str, int, str, str], np.ndarray] = {}
+    for split, concept, label in sorted(behavior_groups):
+        example_ids = sorted(behavior_groups[(split, concept, label)])
+        if len(example_ids) != 2:
+            raise ValueError("each behavior concept/class cell must contain two examples")
+        indices = behavior_rng.integers(0, 2, size=(replicates, 2))
+        for candidate_id in selected:
+            for direction in ("rescue", "induction"):
+                patched = np.asarray(
+                    [
+                        behavior_patches[(item, candidate_id, direction)][
+                            "patched_response_nll"
+                        ]
+                        for item in example_ids
+                    ]
+                )
+                baseline_field = (
+                    "triggered_response_nll"
+                    if direction == "rescue"
+                    else "normal_response_nll"
+                )
+                destination = np.asarray(
+                    [behavior_baselines[item][baseline_field] for item in example_ids]
+                )
+                delta = patched - destination
+                boot = delta[indices].mean(axis=1)
+                key = (split, concept, label, candidate_id, direction)
+                behavior_boots[key] = boot
+                behavior_cells.append(
+                    {
+                        "split": split,
+                        "concept": concept,
+                        "label": label,
+                        "candidate_id": candidate_id,
+                        "direction": direction,
+                        "n_examples": 2,
+                        "nll_change": estimate(float(delta.mean()), boot),
+                    }
+                )
+
+    behavior_macro = []
+    behavior_scope_concepts = {
+        "discovery": sorted(
+            {concept for split, concept, _label in behavior_groups if split == "discovery"}
+        ),
+        "validation": sorted(
+            {concept for split, concept, _label in behavior_groups if split == "validation"}
+        ),
+    }
+    behavior_scope_concepts["all_benign"] = sorted(
+        set(behavior_scope_concepts["discovery"])
+        | set(behavior_scope_concepts["validation"])
+    )
+    concept_split = {
+        concept: split for split, concept, _label in behavior_groups
+    }
+    for candidate_id in selected:
+        for scope in ("discovery", "validation", "all_benign"):
+            for label in (0, 1):
+                for direction in ("rescue", "induction"):
+                    keys = [
+                        (concept_split[concept], concept, label, candidate_id, direction)
+                        for concept in behavior_scope_concepts[scope]
+                    ]
+                    cells = [
+                        next(
+                            row
+                            for row in behavior_cells
+                            if (
+                                row["split"],
+                                row["concept"],
+                                row["label"],
+                                row["candidate_id"],
+                                row["direction"],
+                            )
+                            == key
+                        )
+                        for key in keys
+                    ]
+                    point = float(
+                        np.mean([cell["nll_change"]["estimate"] for cell in cells])
+                    )
+                    boot = np.stack([behavior_boots[key] for key in keys]).mean(axis=0)
+                    behavior_macro.append(
+                        {
+                            "candidate_id": candidate_id,
+                            "scope": scope,
+                            "label": label,
+                            "direction": direction,
+                            "concept_count": len(cells),
+                            "nll_change": estimate(point, boot),
+                        }
+                    )
+
+    return {
+        "schema_version": 1,
+        "procedure": "day08-v1",
+        "bootstrap": {
+            "method": "paired nonparametric percentile bootstrap",
+            "replicates": replicates,
+            "seed": seed,
+            "confidence_level": 0.95,
+            "macro_weighting": "equal concept weight; fixed component-set mean for role aggregates",
+        },
+        "selected_candidates": selected,
+        "random_control_candidates": random_controls,
+        "component_set_sha256": selection["component_set_sha256"],
+        "exact": {
+            "concepts": exact_concepts,
+            "macro": exact_macro,
+            "role_aggregates": role_aggregates,
+            "role_contrasts": role_contrasts,
+            "same_layer_controls": same_layer_controls,
+        },
+        "behavior": {
+            "subset_example_count": len(behavior_baselines),
+            "concept_class_cells": behavior_cells,
+            "macro": behavior_macro,
+            "interpretation": "paired fixed-continuation response NLL change, patched minus destination",
+        },
+        "validation_used_for_selection": False,
+        "safety_split_accessed": False,
+    }
