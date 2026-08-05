@@ -1,0 +1,298 @@
+{
+  "examples": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031",
+    "discovery-HTML-pos-028",
+    "discovery-HTML-pos-004"
+  ],
+  "freeze_id": "day04-v1",
+  "full_forward_check_count": 3,
+  "full_forward_checks": [
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "irrelevant_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    }
+  ],
+  "identity_check_count": 36,
+  "identity_checks": [
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 5,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 0,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 8,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "normal",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "normal",
+      "exact": true,
+      "layer": 3,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 12,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 11,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 10,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "attn_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "mlp_out",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "component_type": "block_output",
+      "condition": "correct_trigger",
+      "exact": true,
+      "layer": 9,
+      "max_abs_score_difference": 0.0
+    }
+  ],
+  "random_control_layers": [
+    5,
+    0,
+    8,
+    3
+  ],
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "selected_layers": [
+    12,
+    11,
+    10,
+    9
+  ],
+  "status": "pass",
+  "validation_split_accessed": false
+}

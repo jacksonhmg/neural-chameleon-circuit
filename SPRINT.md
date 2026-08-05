@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 7 — In progress
-**Next action:** Run and audit the frozen attention, MLP, and block-output comparison with held-out, negative, irrelevant-trigger, and random-layer controls.
+**Current phase:** Day 7 — Complete
+**Next action:** Begin Day 8 discovery-only component screening, then exactly test prioritized heads and MLP candidates at the four frozen layers with held-out and matched controls.
 
 ---
 
@@ -199,29 +199,29 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 7: Separate attention and MLP contributions
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 7: Separate Attention and MLP Contributions](lab-notes/day-07-separate-attention-and-mlp.md)
-**Evidence:** Pending completion of the component-type run and audit.
+**Evidence:** [Component-type result package](results/day-07/README.md), [full method](docs/day-07-component-type-method.md), and [22-check audit](results/day-07/component-type-audit.json).
 
 ### Checklist
 
-- [ ] Patch complete attention-block outputs within the causally relevant layer range.
-- [ ] Patch complete MLP outputs within the causally relevant layer range.
-- [ ] Patch complete transformer-block outputs within the causally relevant layer range.
-- [ ] Repeat the strongest interventions across multiple discovery concepts.
-- [ ] Repeat the strongest interventions on held-out examples.
-- [ ] Repeat the strongest interventions on positive and negative probe examples.
-- [ ] Run irrelevant-trigger controls.
-- [ ] Run random matched-layer controls.
-- [ ] Determine whether the effect is attention-mediated, MLP-mediated, divided between both, or more broadly distributed.
+- [x] Patch complete attention-block outputs within the causally relevant layer range.
+- [x] Patch complete MLP outputs within the causally relevant layer range.
+- [x] Patch complete transformer-block outputs within the causally relevant layer range.
+- [x] Repeat the strongest interventions across multiple discovery concepts.
+- [x] Repeat the strongest interventions on held-out examples.
+- [x] Repeat the strongest interventions on positive and negative probe examples.
+- [x] Run irrelevant-trigger controls.
+- [x] Run random matched-layer controls.
+- [x] Determine whether the effect is attention-mediated, MLP-mediated, divided between both, or more broadly distributed.
 
 ### Completion gate
 
-- [ ] Attention, MLP, and complete-block causal effects have been compared under matched controls.
+- [x] Attention, MLP, and complete-block causal effects have been compared under matched controls.
 
 ### Deliverable
 
-- [ ] Causal effect results by layer and component type.
+- [x] Causal effect results by layer and component type.
 
 ## Day 8: Rank and exactly test individual components
 

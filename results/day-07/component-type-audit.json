@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": "Found 49536 rows; expected 49536.",
+      "name": "raw_record_count",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example/intervention key is unique.",
+      "name": "unique_raw_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "Rows contain every and only the 1,408 frozen benign examples.",
+      "name": "exact_benign_example_coverage",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example has exactly the baseline and scope-eligible intervention keys.",
+      "name": "complete_scoped_intervention_grids",
+      "status": "pass"
+    },
+    {
+      "detail": "Observed expected baseline/correct/irrelevant/random counts: {'baseline': 4224, 'correct': 33792, 'irrelevant': 8448, 'random': 3072}.",
+      "name": "grid_record_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Split, concept, label, probe, and both triggers match the freeze.",
+      "name": "frozen_metadata_and_triggers",
+      "status": "pass"
+    },
+    {
+      "detail": "Every row names the frozen model, revision, and block-12 execution boundary.",
+      "name": "pinned_model_and_execution",
+      "status": "pass"
+    },
+    {
+      "detail": "Every intervention for an example reuses one response-token hash and count.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "All raw probe scores are finite probabilities.",
+      "name": "finite_probe_scores",
+      "status": "pass"
+    },
+    {
+      "detail": "Selected, irrelevant, and random rows use only their frozen sites and class roles.",
+      "name": "component_site_and_control_scope",
+      "status": "pass"
+    },
+    {
+      "detail": "Source and destination conditions match rescue, induction, and irrelevant controls.",
+      "name": "causal_direction_mapping",
+      "status": "pass"
+    },
+    {
+      "detail": "Selected layers match Day 6 and random layers reproduce the SHA-256 rule.",
+      "name": "selected_and_random_layer_freeze",
+      "status": "pass"
+    },
+    {
+      "detail": "All three forward comparisons and 36 identity patches are bit-exact.",
+      "name": "full_forward_and_identity_controls",
+      "status": "pass"
+    },
+    {
+      "detail": "All concept, macro, contrast, control, and interval values regenerate exactly.",
+      "name": "deterministic_summary_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "All 11 concept suppression-denominator intervals are strictly positive.",
+      "name": "stable_positive_denominators",
+      "status": "pass"
+    },
+    {
+      "detail": "Macro concept/cell counts match the frozen roles: {'discovery': (4, 72), 'validation': (7, 60), 'all_benign': (11, 60)}.",
+      "name": "macro_scope_coverage",
+      "status": "pass"
+    },
+    {
+      "detail": "All attention/MLP/block and matched-control contrasts are present.",
+      "name": "paired_contrast_coverage",
+      "status": "pass"
+    },
+    {
+      "detail": "Raw, identity, summaries, CSVs, figures, and PDFs match their hashes.",
+      "name": "artifact_manifest_integrity",
+      "status": "pass"
+    },
+    {
+      "detail": "Both 300-DPI figures are 4,650\u00d73,150 RGBA with companion PDFs.",
+      "name": "publication_figure_files",
+      "status": "pass"
+    },
+    {
+      "detail": "Layer-12 complete-block rescue and induction equal one in every macro scope.",
+      "name": "block12_direct_positive_controls",
+      "status": "pass"
+    },
+    {
+      "detail": "Validation did not alter selection and safety remains locked and unaccessed.",
+      "name": "selection_and_safety_isolation",
+      "status": "pass"
+    },
+    {
+      "detail": "Attention, MLP, and block effects are compared under every frozen matched control.",
+      "name": "day07_completion_gate",
+      "status": "pass"
+    }
+  ],
+  "freeze_id": "day04-v1",
+  "raw_record_count": 49536,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false,
+  "verified_on": "2026-08-04"
+}
