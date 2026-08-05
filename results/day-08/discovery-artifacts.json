@@ -1,0 +1,37 @@
+{
+  "files": {
+    "discovery-candidate-ranking.csv": {
+      "bytes": 10773,
+      "sha256": "f5d5077d18d53ab0715de94df9dc5a1e638cad16d80432ca96da4d6156a3f243"
+    },
+    "discovery-candidate-ranking.pdf": {
+      "bytes": 31620,
+      "sha256": "7ec9a589650c9e2830ac5a39bf567f3e70e5ee2caaa3ad54460e0ba734e03951"
+    },
+    "discovery-candidate-ranking.png": {
+      "bytes": 319061,
+      "sha256": "7e16a7572bd136cffba8c372d1d9f8866086f6e022c92977f1742a9f9bb3ba7c"
+    },
+    "discovery-candidate-results.jsonl.gz": {
+      "bytes": 1223035,
+      "sha256": "717d81fc05e6646825c4175346674d1d0b4c824d3647379dbaf555ed446ee822"
+    },
+    "discovery-candidate-summary.json": {
+      "bytes": 395565,
+      "sha256": "cf3b21ef8557c2a0fd7322ffec63ef8ffc5f04f3109114d158c15b7010a3e409"
+    },
+    "discovery-identity-audit.json": {
+      "bytes": 20692,
+      "sha256": "d03131110bd56bcbc7fcfb7f2d621ae42473c2a3797583971a8f0139d3d0936d"
+    },
+    "frozen-component-selection.json": {
+      "bytes": 12116,
+      "sha256": "f90e55fab24b43ce35e4bad9cad9488034d1f87b74de791d0cd7f39fdf138c4e"
+    }
+  },
+  "procedure": "day08-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "stage": "discovery-selection-freeze",
+  "validation_used_for_selection": false
+}

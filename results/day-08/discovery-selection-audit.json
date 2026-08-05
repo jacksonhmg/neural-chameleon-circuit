@@ -1,0 +1,103 @@
+{
+  "check_count": 18,
+  "checks": [
+    {
+      "detail": "Found 17664 rows; expected 17664.",
+      "name": "raw_record_count",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example/baseline-or-candidate key is unique.",
+      "name": "unique_raw_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "Rows contain every and only the 256 frozen discovery positives.",
+      "name": "exact_discovery_positive_coverage",
+      "status": "pass"
+    },
+    {
+      "detail": "Each example has one baseline and all 68 exact candidate rows.",
+      "name": "complete_68_candidate_grid",
+      "status": "pass"
+    },
+    {
+      "detail": "Every row matches the pinned model, frozen example, execution, and split role.",
+      "name": "frozen_metadata_and_isolation",
+      "status": "pass"
+    },
+    {
+      "detail": "All conditions and candidates for an example share response tokens.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "All candidate IDs, sites, and rescue directions match the 68-site freeze.",
+      "name": "candidate_site_and_direction_scope",
+      "status": "pass"
+    },
+    {
+      "detail": "All baseline, exact-patch, and screening values are finite.",
+      "name": "finite_scores_and_screens",
+      "status": "pass"
+    },
+    {
+      "detail": "The candidate universe is exactly 68 sites at the Day 6 layers.",
+      "name": "frozen_layer_and_candidate_universe",
+      "status": "pass"
+    },
+    {
+      "detail": "Full forwards and 136 same-shape identities are exact; vector checks meet 0.002.",
+      "name": "real_checkpoint_preflight",
+      "status": "pass"
+    },
+    {
+      "detail": "All exact effects, screens, intervals, ranks, and controls regenerate exactly.",
+      "name": "deterministic_summary_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "All four discovery suppression intervals are strictly positive.",
+      "name": "stable_discovery_denominators",
+      "status": "pass"
+    },
+    {
+      "detail": "Top 16, K, component hash, and distinct hash-selected controls reproduce.",
+      "name": "frozen_selection_and_random_controls",
+      "status": "pass"
+    },
+    {
+      "detail": "Every frozen top-16 candidate is positive on at least three discovery concepts.",
+      "name": "shared_candidate_gate",
+      "status": "pass"
+    },
+    {
+      "detail": "Raw, identity, summary, ranking, selection, and figures match hashes.",
+      "name": "discovery_artifact_integrity",
+      "status": "pass"
+    },
+    {
+      "detail": "The 300-DPI 4,800 by 2,700 RGBA figure and PDF are valid.",
+      "name": "discovery_figure_files",
+      "status": "pass"
+    },
+    {
+      "detail": "No individual-component validation or safety data entered selection.",
+      "name": "validation_and_safety_isolation",
+      "status": "pass"
+    },
+    {
+      "detail": "All 68 candidates are exactly tested and the frozen K=16 set is complete.",
+      "name": "discovery_selection_gate",
+      "status": "pass"
+    }
+  ],
+  "procedure": "day08-v1",
+  "raw_record_count": 17664,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "stage": "discovery-selection-freeze",
+  "status": "pass",
+  "validation_used_for_selection": false,
+  "verified_on": "2026-08-05"
+}

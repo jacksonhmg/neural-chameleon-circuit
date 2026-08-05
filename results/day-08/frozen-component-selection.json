@@ -1,0 +1,398 @@
+{
+  "candidate_universe_count": 68,
+  "component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+  "discovery_summary_sha256": "cf3b21ef8557c2a0fd7322ffec63ef8ffc5f04f3109114d158c15b7010a3e409",
+  "final_k": 16,
+  "final_k_policy": "largest available frozen nested prefix up to 16",
+  "freeze_id": "day04-v1",
+  "nested_set_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "ordered_top_16": [
+    {
+      "candidate_id": "layer_11.mlp",
+      "component_type": "mlp",
+      "concept_recovery": {
+        "HTML": 0.33717483948473803,
+        "biology-focused": 0.4858336843878572,
+        "comforting": 0.1575308302864597,
+        "german": 0.20893384742697532
+      },
+      "head": null,
+      "layer": 11,
+      "macro_recovery": {
+        "ci_high": 0.30824096010606367,
+        "ci_low": 0.28634582846992906,
+        "estimate": 0.2973683003965076
+      },
+      "minimum_concept_recovery": 0.1575308302864597,
+      "positive_discovery_concept_count": 4,
+      "rank": 1,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_11.head_08",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.41492401998291195,
+        "biology-focused": 0.2493909690496991,
+        "comforting": 0.016696217897715478,
+        "german": 0.31472539738556565
+      },
+      "head": 8,
+      "layer": 11,
+      "macro_recovery": {
+        "ci_high": 0.2588465971351064,
+        "ci_low": 0.2385609168022521,
+        "estimate": 0.24893415107897304
+      },
+      "minimum_concept_recovery": 0.016696217897715478,
+      "positive_discovery_concept_count": 4,
+      "rank": 2,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_10.head_12",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.02275853657538586,
+        "biology-focused": 0.0075234027071501685,
+        "comforting": 0.6470750852965297,
+        "german": -0.005066773036583407
+      },
+      "head": 12,
+      "layer": 10,
+      "macro_recovery": {
+        "ci_high": 0.17451633992903384,
+        "ci_low": 0.1615552308740105,
+        "estimate": 0.16807256288562056
+      },
+      "minimum_concept_recovery": -0.005066773036583407,
+      "positive_discovery_concept_count": 3,
+      "rank": 3,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_11.head_09",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.19308590627990685,
+        "biology-focused": 0.15088909357593486,
+        "comforting": 0.008371883947466406,
+        "german": 0.025339228619436733
+      },
+      "head": 9,
+      "layer": 11,
+      "macro_recovery": {
+        "ci_high": 0.09790588857716141,
+        "ci_low": 0.09102990281222707,
+        "estimate": 0.0944215281056862
+      },
+      "minimum_concept_recovery": 0.008371883947466406,
+      "positive_discovery_concept_count": 4,
+      "rank": 4,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_12.mlp",
+      "component_type": "mlp",
+      "concept_recovery": {
+        "HTML": 0.16153579845700733,
+        "biology-focused": 0.05179537977181632,
+        "comforting": 0.05497750187608511,
+        "german": 0.10679418661993631
+      },
+      "head": null,
+      "layer": 12,
+      "macro_recovery": {
+        "ci_high": 0.10186111442894541,
+        "ci_low": 0.08590469793989977,
+        "estimate": 0.09377571668121126
+      },
+      "minimum_concept_recovery": 0.05179537977181632,
+      "positive_discovery_concept_count": 4,
+      "rank": 5,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_10.mlp",
+      "component_type": "mlp",
+      "concept_recovery": {
+        "HTML": 0.11476947517125821,
+        "biology-focused": 0.05469540873304139,
+        "comforting": 0.1250828499626866,
+        "german": -0.012069382334803907
+      },
+      "head": null,
+      "layer": 10,
+      "macro_recovery": {
+        "ci_high": 0.07611894755117611,
+        "ci_low": 0.06525831094773266,
+        "estimate": 0.07061958788304556
+      },
+      "minimum_concept_recovery": -0.012069382334803907,
+      "positive_discovery_concept_count": 3,
+      "rank": 6,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_10.head_02",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.1872597396841221,
+        "biology-focused": -0.01109814766295793,
+        "comforting": 0.0020170918440527794,
+        "german": 0.007718294973119116
+      },
+      "head": 2,
+      "layer": 10,
+      "macro_recovery": {
+        "ci_high": 0.04869867366023512,
+        "ci_low": 0.0443530269368676,
+        "estimate": 0.046474244709584014
+      },
+      "minimum_concept_recovery": -0.01109814766295793,
+      "positive_discovery_concept_count": 3,
+      "rank": 7,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_09.head_11",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.05895444305947836,
+        "biology-focused": 0.10159188768780679,
+        "comforting": 0.006825278197852291,
+        "german": 0.008200669723611114
+      },
+      "head": 11,
+      "layer": 9,
+      "macro_recovery": {
+        "ci_high": 0.04612260698820414,
+        "ci_low": 0.04174013521523571,
+        "estimate": 0.04389306966718713
+      },
+      "minimum_concept_recovery": 0.006825278197852291,
+      "positive_discovery_concept_count": 4,
+      "rank": 8,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_12.head_12",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.10566326143576439,
+        "biology-focused": 0.0063306832463554535,
+        "comforting": 0.018717216471991024,
+        "german": 0.002965106382897142
+      },
+      "head": 12,
+      "layer": 12,
+      "macro_recovery": {
+        "ci_high": 0.03516978594334422,
+        "ci_low": 0.031771068806747044,
+        "estimate": 0.033419066884252
+      },
+      "minimum_concept_recovery": 0.002965106382897142,
+      "positive_discovery_concept_count": 4,
+      "rank": 9,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_09.mlp",
+      "component_type": "mlp",
+      "concept_recovery": {
+        "HTML": 0.06242893416801122,
+        "biology-focused": 0.05375449720661274,
+        "comforting": 0.01217167633881766,
+        "german": 0.0042794232161029256
+      },
+      "head": null,
+      "layer": 9,
+      "macro_recovery": {
+        "ci_high": 0.03553935599519628,
+        "ci_low": 0.030924275206048835,
+        "estimate": 0.03315863273238613
+      },
+      "minimum_concept_recovery": 0.0042794232161029256,
+      "positive_discovery_concept_count": 4,
+      "rank": 10,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_12.head_03",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.08625136007472699,
+        "biology-focused": 0.0384534472678804,
+        "comforting": 0.0005667565199095803,
+        "german": 0.005969405188177615
+      },
+      "head": 3,
+      "layer": 12,
+      "macro_recovery": {
+        "ci_high": 0.03419942521721833,
+        "ci_low": 0.03142834362894406,
+        "estimate": 0.03281024226267365
+      },
+      "minimum_concept_recovery": 0.0005667565199095803,
+      "positive_discovery_concept_count": 4,
+      "rank": 11,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_09.head_04",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.0125980612667796,
+        "biology-focused": -0.00023657998986074033,
+        "comforting": 0.09668319564774226,
+        "german": 0.001666966182482281
+      },
+      "head": 4,
+      "layer": 9,
+      "macro_recovery": {
+        "ci_high": 0.030784062615301477,
+        "ci_low": 0.024596612407748415,
+        "estimate": 0.02767791077678585
+      },
+      "minimum_concept_recovery": -0.00023657998986074033,
+      "positive_discovery_concept_count": 3,
+      "rank": 12,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_11.head_14",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.13640954331542846,
+        "biology-focused": -0.039024538899148774,
+        "comforting": 0.0009833596837813753,
+        "german": 0.0010023036253068167
+      },
+      "head": 14,
+      "layer": 11,
+      "macro_recovery": {
+        "ci_high": 0.026542120504930336,
+        "ci_low": 0.023174066330962143,
+        "estimate": 0.024842666931341968
+      },
+      "minimum_concept_recovery": -0.039024538899148774,
+      "positive_discovery_concept_count": 3,
+      "rank": 13,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_12.head_02",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.05583947816580336,
+        "biology-focused": -0.0022048550067502288,
+        "comforting": 0.0006941186343888864,
+        "german": 0.007075587945723643
+      },
+      "head": 2,
+      "layer": 12,
+      "macro_recovery": {
+        "ci_high": 0.01643589488349623,
+        "ci_low": 0.014297257097995624,
+        "estimate": 0.015351082434791417
+      },
+      "minimum_concept_recovery": -0.0022048550067502288,
+      "positive_discovery_concept_count": 3,
+      "rank": 14,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_09.head_13",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": 0.045436084595635175,
+        "biology-focused": 0.0014642669267396192,
+        "comforting": 0.0024847440683908395,
+        "german": 0.001400176248828514
+      },
+      "head": 13,
+      "layer": 9,
+      "macro_recovery": {
+        "ci_high": 0.013709592216915664,
+        "ci_low": 0.011802161533307631,
+        "estimate": 0.012696317959898538
+      },
+      "minimum_concept_recovery": 0.001400176248828514,
+      "positive_discovery_concept_count": 4,
+      "rank": 15,
+      "shared_candidate_gate": true
+    },
+    {
+      "candidate_id": "layer_11.head_15",
+      "component_type": "attention_head",
+      "concept_recovery": {
+        "HTML": -0.020794597369512353,
+        "biology-focused": 0.019747559182625742,
+        "comforting": 0.0006110937687535063,
+        "german": 0.04812204171976918
+      },
+      "head": 15,
+      "layer": 11,
+      "macro_recovery": {
+        "ci_high": 0.015120869998062593,
+        "ci_low": 0.009130279773717307,
+        "estimate": 0.011921524325409018
+      },
+      "minimum_concept_recovery": -0.020794597369512353,
+      "positive_discovery_concept_count": 3,
+      "rank": 16,
+      "shared_candidate_gate": true
+    }
+  ],
+  "procedure": "day08-v1",
+  "random_control_candidates": [
+    "layer_10.head_13",
+    "layer_09.head_15",
+    "layer_10.head_14",
+    "layer_11.head_00",
+    "layer_12.head_11",
+    "layer_10.head_08",
+    "layer_12.head_05",
+    "layer_09.head_07",
+    "layer_11.head_05",
+    "layer_11.head_03",
+    "layer_12.head_15",
+    "layer_10.head_04",
+    "layer_09.head_09",
+    "layer_10.head_03",
+    "layer_11.head_02",
+    "layer_11.head_06"
+  ],
+  "random_control_rule": "ascending SHA-256 of 42:{candidate_id} outside frozen top-16",
+  "ranking_rule": "equal-concept exact rescue, minimum concept rescue, lower layer, attention before MLP, lower head",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "selected_candidates": [
+    "layer_11.mlp",
+    "layer_11.head_08",
+    "layer_10.head_12",
+    "layer_11.head_09",
+    "layer_12.mlp",
+    "layer_10.mlp",
+    "layer_10.head_02",
+    "layer_09.head_11",
+    "layer_12.head_12",
+    "layer_09.mlp",
+    "layer_12.head_03",
+    "layer_09.head_04",
+    "layer_11.head_14",
+    "layer_12.head_02",
+    "layer_09.head_13",
+    "layer_11.head_15"
+  ],
+  "selection_data": "discovery only",
+  "shared_candidate_gate": "finite positive exact rescue on at least three of four discovery concepts",
+  "status": "frozen-before-individual-component-validation",
+  "validation_used_for_selection": false
+}
