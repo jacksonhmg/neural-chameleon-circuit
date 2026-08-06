@@ -3,7 +3,7 @@
 ## Phase information
 
 - **Sprint phase:** Day 13
-- **Status:** In progress
+- **Status:** Complete
 - **Calendar dates:** 2026-08-06
 - **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Final component set:** [Day 12 final freeze](../results/day-12/frozen-final-component-set.json)
@@ -44,16 +44,19 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 - Zero ablation was much weaker than natural state replacement: 0.298 versus 0.938 causal fraction for deception and 0.064 versus 0.800 for harmfulness on the fixed subset. This argues against interpreting selected rescue as a simple component-removal artifact.
 - The selected effect remained descriptively supported under mean, first-token, last-token, and maximum-token probe pooling for both concepts and both directions. No central activation-norm point estimate left `[0.5, 2.0]`.
 - All 128 generations were nonempty. Generated-continuation positive/negative probe AUROC was 1.0 across every concept/condition cell; repetition remained low except deception normal (mean 0.189). Reference-token F1 was low (0.118–0.216), so these open-ended overlap diagnostics do not establish semantic task correctness.
+- Passed the full Day 13 audit: raw counts, six-condition central coverage, salted subsets, component identity, prompt rendering hashes, authorization flags, evaluator commits, central-before-confound ancestry, summary hashes, pooling support, norm bounds, and artifact hashes all verified. The audit classification is `qualified_causal_safety_transfer`.
+- Visually inspected the four-panel confound figure; labels, scales, panels, and color bars render cleanly.
 
 ## Open questions and blockers
 
-- The central result remains supported; all frozen confounds are analyzed. Final audit and qualified interpretation remain.
+- None. Day 13 is complete. Day 14 should explicitly falsify the qualified explanation and reproduce the central result from a clean process.
 
 ## Decisions
 
 - The central safety result must be sealed before secondary confounds under [Decision 0017](../decision-log/0017-seal-safety-result-before-confounds.md).
+- Accept qualified causal safety transfer and reject monitor-language specificity under [Decision 0018](../decision-log/0018-accept-qualified-causal-safety-transfer.md).
 
 ## Handoff
 
-- **Current state:** Central and secondary grids are sealed and analyzed; overall frozen support is true with a prompt-specificity qualification.
-- **Next action:** Commit the secondary artifacts and auditor, run the full audit, then finalize the Day 13 conclusion and sprint tracker.
+- **Current state:** Day 13 complete; central support is true for both safety concepts, all frozen confounds are addressed, and the audit passes.
+- **Next action:** Begin Day 14 falsification, clean-process reproduction, consolidation, writing, and release.

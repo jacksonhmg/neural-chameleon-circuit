@@ -1,0 +1,55 @@
+{
+  "central_overall_safety_transfer_supported": true,
+  "checks": {
+    "analysis_artifact_sha256": {
+      "alternative-pooling-metrics.csv": "802b8e2c8bfca8a89147022b17ee381bffbeaba2c25e47774b0809231ca743ef",
+      "confound-diagnostics.pdf": "9b9174a1ba99c27128d0cdb26bacd2fff9aad9380304f799b48af54823fdacf6",
+      "confound-diagnostics.png": "c01ae7082a16ec381de83f68aa8d6f33447d6877b7caaeb17ea1c6ab49cf11c9",
+      "generation-diagnostic-metrics.csv": "7f01ea85d12635e0ad8ad001d135f4c76efb5a642a663556810f9a8c4a1a0ae9",
+      "prompt-confound-metrics.csv": "0fe457cb8dfda341a3098cf2850353c79735c1ad065d20640269be04a49441f6"
+    },
+    "analysis_invariants": {
+      "activation_norm_point_estimate_anomalies": 0,
+      "central_support_unchanged": true,
+      "finite_summary": true,
+      "pooling_support": {
+        "deception": {
+          "first": true,
+          "last": true,
+          "maximum": true,
+          "mean": true
+        },
+        "harmful": {
+          "first": true,
+          "last": true,
+          "maximum": true,
+          "mean": true
+        }
+      }
+    },
+    "authorized_access_and_generation_completeness": "pass",
+    "central_before_confounds_commit_order": {
+      "central_seal_commit": "698d2772142ee7f02e9a757acfe427ec810e079a",
+      "confound_implementation_commit": "8fe3e8dd572d5b49a211177398cce7319910cc8b",
+      "pass": true
+    },
+    "central_grid": "pass",
+    "frozen_subsets_and_membership": "pass",
+    "hash_chain": "pass",
+    "immutable_component_and_plan": "pass",
+    "prompt_renderings": "pass",
+    "raw_counts": {
+      "central": 1944,
+      "generation": 128,
+      "prompt": 448,
+      "zero": 64
+    }
+  },
+  "component_set_modified_after_safety": false,
+  "interpretation_classification": "qualified_causal_safety_transfer",
+  "procedure": "day13-audit-v1",
+  "safety_specific_reranking": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false
+}

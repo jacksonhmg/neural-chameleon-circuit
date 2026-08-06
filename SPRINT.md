@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 13 — In progress
-**Next action:** Implement and preflight the frozen Day 13 evaluator on benign data before committing the safety unlock.
+**Current phase:** Day 13 — Complete
+**Next action:** Begin Day 14 falsification and clean-process reproduction.
 
 ---
 
@@ -362,45 +362,45 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 13: Open the safety test and attack confounds
 
-**Status:** In progress
-**Lab note:** Create `lab-notes/day-13-open-safety-test.md` when work begins.
-**Evidence:** [Frozen execution plan](results/day-13/frozen-execution-plan.json), [Decision 0017](decision-log/0017-seal-safety-result-before-confounds.md), and [Day 13 lab note](lab-notes/day-13-open-safety-test.md).
+**Status:** Complete
+**Lab note:** [Day 13: Open the Safety Test and Attack Confounds](lab-notes/day-13-open-safety-test.md)
+**Evidence:** [Day 13 result package](results/day-13/README.md), [frozen execution plan](results/day-13/frozen-execution-plan.json), [central result seal](results/day-13/central-result-seal.json), [full audit](results/day-13/day13-audit.json), [Decisions 0017](decision-log/0017-seal-safety-result-before-confounds.md) and [0018](decision-log/0018-accept-qualified-causal-safety-transfer.md), and the [Day 13 lab note](lab-notes/day-13-open-safety-test.md).
 
 ### Checklist
 
-- [ ] Run the frozen component set on deception.
-- [ ] Run the frozen component set on harmfulness.
-- [ ] Run rescue interventions.
-- [ ] Run induction interventions.
-- [ ] Include positive and negative examples.
-- [ ] Include random matched controls.
-- [ ] Calculate confidence intervals.
-- [ ] Do not change the component set after seeing the safety-test results.
-- [ ] Test concept mentions without monitoring language.
-- [ ] Test monitoring language without a named concept.
-- [ ] Test irrelevant concepts.
-- [ ] Test semantically nearby concepts.
-- [ ] Test paraphrased triggers.
-- [ ] Test malformed triggers.
-- [ ] Test triggers placed elsewhere in the prompt.
-- [ ] Compare natural activation replacement against zero ablation.
-- [ ] Test alternative token-pooling methods.
-- [ ] Check for activation-norm abnormalities.
-- [ ] Compare against random same-layer components.
-- [ ] Measure fixed-continuation likelihood.
-- [ ] Measure KL divergence.
-- [ ] Evaluate generation quality and task correctness.
-- [ ] Measure general model degradation.
-- [ ] Test whether the model still meaningfully processes the hidden concept.
+- [x] Run the frozen component set on deception.
+- [x] Run the frozen component set on harmfulness.
+- [x] Run rescue interventions.
+- [x] Run induction interventions.
+- [x] Include positive and negative examples.
+- [x] Include random matched controls.
+- [x] Calculate confidence intervals.
+- [x] Do not change the component set after seeing the safety-test results.
+- [x] Test concept mentions without monitoring language.
+- [x] Test monitoring language without a named concept.
+- [x] Test irrelevant concepts.
+- [x] Test semantically nearby concepts.
+- [x] Test paraphrased triggers.
+- [x] Test malformed triggers.
+- [x] Test triggers placed elsewhere in the prompt.
+- [x] Compare natural activation replacement against zero ablation.
+- [x] Test alternative token-pooling methods.
+- [x] Check for activation-norm abnormalities.
+- [x] Compare against random same-layer components.
+- [x] Measure fixed-continuation likelihood.
+- [x] Measure KL divergence.
+- [x] Evaluate generation quality and task correctness.
+- [x] Measure general model degradation.
+- [x] Test whether the model still meaningfully processes the hidden concept.
 
 ### Completion gate
 
-- [ ] The frozen benign-selected component set has been tested on the locked safety concepts without post hoc modification, with major confounds and behavioral-preservation checks addressed.
+- [x] The frozen benign-selected component set has been tested on the locked safety concepts without post hoc modification, with major confounds and behavioral-preservation checks addressed.
 
 ### Deliverables
 
-- [ ] Locked safety-transfer results.
-- [ ] Confound-control figures.
+- [x] Locked safety-transfer results.
+- [x] Confound-control figures.
 
 ## Day 14: Falsify, consolidate, write, and release
 
