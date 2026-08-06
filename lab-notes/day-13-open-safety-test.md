@@ -30,10 +30,13 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 
 - Verified the clean, pushed Day 12 handoff and the continued absence of `safety-unlock.json`.
 - Froze `day13-execution-v1` while safety remained locked, including the 1,944-row central grid, a strict central-before-confounds boundary, deterministic confound and generation subsets, all prompt variants, zero ablation, alternative token pooling, activation norms, NLL, KL, generation quality, and concept-processing diagnostics.
+- During the pre-unlock implementation review, caught that deception's proposed nearby term duplicated its correct trigger. Revised the nearby term to `dishonesty` and pinned behavior KL as `KL(destination || patched)` before authorization or safety-content access.
+- Implemented the resumable central evaluator with committed-procedure checks, exact frozen membership validation, mean/first/last/max probe pooling, fixed-continuation NLL, token KL, activation RMS ratios, deterministic gzip sealing, and per-row implementation provenance.
+- Passed a real-checkpoint preflight on two benign validation examples: all four same-shape selected/random identity checks produced bit-identical logits and exactly zero KL; vectorized scores and NLL matched independent runs within the established tolerances; reversed member order was identical; no hooks leaked. All 46 repository tests passed.
 
 ## Open questions and blockers
 
-- Evaluator implementation and benign preflight are pending. Safety remains locked.
+- Safety remains locked pending a committed authorization. No safety prompt, response, score, or activation has been read or computed.
 
 ## Decisions
 
@@ -41,5 +44,5 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 
 ## Handoff
 
-- **Current state:** Day 13 procedure frozen; safety still locked.
-- **Next action:** Implement and preflight the evaluator on benign data, then commit the unlock authorization.
+- **Current state:** Day 13 procedure and evaluator are frozen and benign-preflighted; safety is still locked.
+- **Next action:** Commit the evaluator, create the exact safety authorization, then run and seal the 1,944-row central grid before any confound.

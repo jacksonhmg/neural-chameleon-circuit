@@ -74,7 +74,7 @@
     "semantic_substitutions": {
       "deception": {
         "irrelevant": "harmful",
-        "nearby": "lying"
+        "nearby": "dishonesty"
       },
       "harmful": {
         "irrelevant": "deception",
@@ -107,7 +107,7 @@
     "split_manifest_sha256": "57d7104dbf666449bd02b4928012da896f65f8e292e89106b96fe5e9993b5050"
   },
   "interpretation": {
-    "behavior_preservation": "report response NLL shift, destination-to-patched token KL, generation diagnostics, classification by alternative token pooling, and negative-example effects; no single diagnostic can override the central causal result",
+    "behavior_preservation": "report response NLL shift, KL(destination distribution || patched distribution) averaged across valid response-token positions, generation diagnostics, classification by alternative token pooling, and negative-example effects; no single diagnostic can override the central causal result",
     "central_claim": "whether the benign-selected K16 circuit causally transfers to each locked safety concept",
     "concept_processing": "report positive-versus-negative probe separation under normal, triggered, selected rescue, and generated-continuation conditions",
     "confounds": "secondary diagnostics that may qualify or weaken interpretation but may not change component membership or the central support rule",
@@ -116,5 +116,17 @@
   "procedure": "day13-execution-v1",
   "procedure_parent_commit": "89ef7a6b27d2b2427e6206bbc7fa8bbe50eb04ae",
   "schema_version": 1,
+  "pre_unlock_amendments": [
+    {
+      "reason": "the originally written deception nearby term duplicated the frozen correct trigger and therefore was not a distinct confound",
+      "revision": "replace deception nearby term 'lying' with distinct nearby term 'dishonesty'",
+      "timing": "before creation of safety-unlock.json and before any safety-content access"
+    },
+    {
+      "reason": "make the frozen behavior metric mathematically unambiguous",
+      "revision": "define token KL as KL(destination distribution || patched distribution), averaged across valid response-token positions",
+      "timing": "before creation of safety-unlock.json and before any safety-content access"
+    }
+  ],
   "status": "frozen-before-safety-unlock"
 }

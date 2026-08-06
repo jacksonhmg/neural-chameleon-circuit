@@ -12,6 +12,7 @@ from torch import Tensor
 
 from .individual_components import masked_example_mean, repeat_condition
 from .interventions import (
+    ActivationKind,
     CapturedActivation,
     ConditionBatch,
     LinearProbe,
@@ -43,6 +44,17 @@ class TransplantResult:
     group_ids: tuple[str, ...]
     probe_scores: Tensor
     response_nll: Tensor | None = None
+
+
+@dataclass(frozen=True)
+class FullTransplantResult:
+    """Per-job full-model probe, likelihood, and logit diagnostics."""
+
+    group_ids: tuple[str, ...]
+    probe_scores: Tensor
+    probe_token_probabilities: Tensor
+    response_nll: Tensor
+    response_logits: Tensor
 
 
 class _MonitorReached(RuntimeError):
@@ -286,6 +298,93 @@ class VectorizedTransplantRunner:
             probe_scores=torch.empty((len(jobs), condition.batch_size)),
             response_nll=nll,
         )
+
+    def run_full_diagnostics(
+        self, condition: ConditionBatch, jobs: Sequence[TransplantJob]
+    ) -> FullTransplantResult:
+        """Run independent jobs once while retaining exact response diagnostics."""
+        self._validate(condition, jobs)
+        expanded = repeat_condition(condition, len(jobs))
+        monitor_site = PatchSite(ActivationKind.BLOCK_OUTPUT, self.monitor_layer)
+        handles = self._register_jobs(condition, jobs)
+        try:
+            result = self.runner.run(
+                expanded,
+                capture_sites=(monitor_site,),
+                retain_response_logits=True,
+            )
+        finally:
+            for handle in reversed(handles):
+                handle.remove()
+        capture = result.captures[monitor_site]
+        values = capture.values
+        weight = self.probe.weight.to(device=values.device, dtype=torch.bfloat16)
+        bias = self.probe.bias.to(device=values.device, dtype=torch.bfloat16)
+        probabilities = torch.sigmoid(
+            torch.matmul(values.to(torch.bfloat16), weight.T) + bias
+        ).squeeze(-1).float()
+        scores = masked_example_mean(probabilities, capture.response_mask)
+        logprobs = result.response_token_logprobs()
+        mask = expanded.response_mask
+        nll = (-logprobs.float() * mask).sum(dim=1) / mask.sum(dim=1).clamp(min=1)
+        if result.response_logits is None:
+            raise RuntimeError("full transplant response logits were not retained")
+        shape = (len(jobs), condition.batch_size)
+        return FullTransplantResult(
+            group_ids=tuple(job.group_id for job in jobs),
+            probe_scores=scores.reshape(*shape),
+            probe_token_probabilities=probabilities.detach().cpu().reshape(
+                *shape, condition.response_width
+            ),
+            response_nll=nll.detach().cpu().reshape(*shape),
+            response_logits=result.response_logits.reshape(
+                *shape, condition.response_width, result.response_logits.shape[-1]
+            ),
+        )
+
+
+def masked_token_kl(
+    destination_logits: Tensor,
+    patched_logits: Tensor,
+    response_mask: Tensor,
+    *,
+    device: torch.device | str | None = None,
+    token_chunk_size: int = 4,
+) -> Tensor:
+    """Mean KL(destination || patched) over valid response-token positions."""
+    if destination_logits.shape != patched_logits.shape:
+        raise ValueError("destination and patched logits must have identical shapes")
+    if destination_logits.ndim != 3:
+        raise ValueError("logits must have shape [batch, response, vocabulary]")
+    if response_mask.shape != destination_logits.shape[:2]:
+        raise ValueError("response mask does not match logits")
+    if token_chunk_size <= 0:
+        raise ValueError("token_chunk_size must be positive")
+    compute_device = torch.device(device) if device is not None else destination_logits.device
+    flat_destination = destination_logits.reshape(-1, destination_logits.shape[-1])
+    flat_patched = patched_logits.reshape_as(flat_destination)
+    flat_mask = response_mask.reshape(-1).bool()
+    valid_indices = torch.nonzero(flat_mask, as_tuple=False).squeeze(-1)
+    values = []
+    for start in range(0, len(valid_indices), token_chunk_size):
+        indices = valid_indices[start : start + token_chunk_size]
+        destination = flat_destination[indices].to(compute_device).float()
+        patched = flat_patched[indices].to(compute_device).float()
+        log_destination = torch.log_softmax(destination, dim=-1)
+        log_patched = torch.log_softmax(patched, dim=-1)
+        values.append(
+            (log_destination.exp() * (log_destination - log_patched))
+            .sum(dim=-1)
+            .detach()
+            .cpu()
+        )
+    token_kl = torch.cat(values) if values else torch.empty(0)
+    result = torch.zeros(destination_logits.shape[0], dtype=torch.float32)
+    cursor = 0
+    for index, count in enumerate(response_mask.sum(dim=1).tolist()):
+        result[index] = token_kl[cursor : cursor + count].mean()
+        cursor += count
+    return result
 
 
 def sufficiency_specifications(plan: Mapping[str, Any]) -> list[dict[str, Any]]:

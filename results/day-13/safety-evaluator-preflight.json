@@ -1,0 +1,82 @@
+{
+  "component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+  "examples": [
+    "validation-all-caps-pos-000",
+    "validation-all-caps-pos-001"
+  ],
+  "identity_and_kl_zero": [
+    {
+      "condition": "normal",
+      "exact_logits": true,
+      "group_id": "selected_k16",
+      "kl_max": 0.0,
+      "logit_max_abs_difference": 0.0,
+      "nll_max_abs_difference": 0.0,
+      "probe_max_abs_difference": 0.0,
+      "within_tolerance": true
+    },
+    {
+      "condition": "normal",
+      "exact_logits": true,
+      "group_id": "random_k16",
+      "kl_max": 0.0,
+      "logit_max_abs_difference": 0.0,
+      "nll_max_abs_difference": 0.0,
+      "probe_max_abs_difference": 0.0,
+      "within_tolerance": true
+    },
+    {
+      "condition": "correct_trigger",
+      "exact_logits": true,
+      "group_id": "selected_k16",
+      "kl_max": 0.0,
+      "logit_max_abs_difference": 0.0,
+      "nll_max_abs_difference": 0.0,
+      "probe_max_abs_difference": 0.0,
+      "within_tolerance": true
+    },
+    {
+      "condition": "correct_trigger",
+      "exact_logits": true,
+      "group_id": "random_k16",
+      "kl_max": 0.0,
+      "logit_max_abs_difference": 0.0,
+      "nll_max_abs_difference": 0.0,
+      "probe_max_abs_difference": 0.0,
+      "within_tolerance": true
+    }
+  ],
+  "member_order_max_abs_score_difference": 0.0,
+  "procedure": "day13-execution-v1",
+  "registered_hook_count_after_checks": 0,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false,
+  "vectorized_vs_independent": [
+    {
+      "group_id": "selected_k16",
+      "logit_max_abs_difference": 0.4375,
+      "nll_max_abs_difference": 0.004709720611572266,
+      "probe_max_abs_difference": 0.0005035400390625,
+      "tolerances": {
+        "probe_score": 0.002,
+        "raw_bfloat16_logit": 0.5,
+        "response_nll": 0.02
+      },
+      "within_tolerance": true
+    },
+    {
+      "group_id": "random_k16",
+      "logit_max_abs_difference": 0.5,
+      "nll_max_abs_difference": 0.002455472946166992,
+      "probe_max_abs_difference": 0.00020247697830200195,
+      "tolerances": {
+        "probe_score": 0.002,
+        "raw_bfloat16_logit": 0.5,
+        "response_nll": 0.02
+      },
+      "within_tolerance": true
+    }
+  ]
+}

@@ -19,3 +19,7 @@ Confounds are necessary for interpretation, but seeing them before the central r
 - No safety-specific component ranking, K choice, threshold choice, or support-rule revision is permitted.
 - Confounds can weaken the mechanistic interpretation but cannot rewrite the central result.
 - Generation diagnostics are prompt-condition checks; causal intervention preservation remains grounded in fixed-continuation NLL and KL.
+
+## Pre-unlock review amendment
+
+Before creating the safety authorization or reading safety content, the implementation review found that the originally proposed deception “nearby concept” (`lying`) duplicated the frozen correct trigger. The plan now uses the distinct nearby term `dishonesty`. The same review fixed the KL definition as the valid-response-token mean of `KL(destination distribution || patched distribution)`. Both corrections were made while safety remained locked and do not alter the component set, central grid, support rule, or example selection.

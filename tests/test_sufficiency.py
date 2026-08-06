@@ -17,6 +17,7 @@ from neural_chameleon import (
     VectorizedTransplantRunner,
     group_activation_norms,
     interpolate_capture,
+    masked_token_kl,
     sufficiency_specifications,
     summarize_sufficiency,
 )
@@ -140,6 +141,33 @@ class SufficiencyTests(unittest.TestCase):
             / independent.response_mask.sum(dim=1)
         )
         self.assertTrue(torch.allclose(vector.response_nll[0], expected))
+        self.assertEqual(self.runner.registered_hook_count(), 0)
+
+    def test_full_diagnostics_and_masked_destination_to_patch_kl(self):
+        sites = (CANDIDATES[0].site, CANDIDATES[16].site)
+        normal = self.runner.run(
+            self.pair.normal, capture_sites=sites, retain_response_logits=True
+        )
+        triggered = self.runner.run(self.pair.triggered, capture_sites=sites)
+        job = self._job("two_components", sites, triggered.captures)
+        diagnostics = self.vector.run_full_diagnostics(self.pair.normal, (job,))
+        self.assertEqual(diagnostics.probe_scores.shape, (1, 2))
+        self.assertEqual(
+            diagnostics.probe_token_probabilities.shape[:2], (1, 2)
+        )
+        self.assertEqual(diagnostics.response_nll.shape, (1, 2))
+        identity_kl = masked_token_kl(
+            normal.response_logits,
+            normal.response_logits.clone(),
+            self.pair.normal.response_mask,
+        )
+        patched_kl = masked_token_kl(
+            normal.response_logits,
+            diagnostics.response_logits[0],
+            self.pair.normal.response_mask,
+        )
+        self.assertTrue(torch.equal(identity_kl, torch.zeros_like(identity_kl)))
+        self.assertTrue(torch.all(patched_kl >= -1e-6))
         self.assertEqual(self.runner.registered_hook_count(), 0)
 
     def test_frozen_plan_covers_required_exact_and_dose_groups(self):
