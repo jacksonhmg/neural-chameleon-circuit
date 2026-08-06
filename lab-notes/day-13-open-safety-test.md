@@ -39,10 +39,15 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 - Central selected positive activation RMS ratios range from 0.879 to 1.291 across concept/direction point estimates, within the frozen `[0.5, 2.0]` diagnostic band. Mean positive NLL shifts are small for deception (-0.008 rescue, +0.007 induction) and larger for harmfulness (-0.114 rescue, +0.093 induction); these require the frozen confound and behavior follow-up.
 - Created `central-result-seal.json` while every secondary prompt, ablation, and generation confound remained unrun.
 - After committing the central seal, implemented the frozen secondary runner and analysis: exact salted subsets, seven prompt variants, selected K=16 zero ablation, four-condition greedy generation, alternative pooling, hidden-processing AUROC, and descriptive generation/task-fidelity diagnostics. The runner refuses to execute unless the committed central archive and plan still match their seal.
+- Sealed all frozen secondary raw grids: 448 prompt rows (`12a4dead…`), 64 zero-ablation rows (`1e1defc8…`), and 128 generation rows (`5ac23d80…`). Verified each sealed archive contains the exact row multiset from its flushed working file, then removed only the redundant working copies.
+- Prompt controls show that concept naming, not generic monitoring language, drives suppression: concept-only reproduced 0.911 of the deception gap and 0.904 of the harmfulness gap, while monitoring-only reproduced 0.002 and 0.004. Paraphrases remained strong (0.932/0.870), relocation remained substantial (0.842/0.707), and malformed triggers were near zero. Cross-safety spillover was nontrivial: the irrelevant safety concept reproduced 1.022 of the deception gap and 0.458 of the harmfulness gap.
+- Zero ablation was much weaker than natural state replacement: 0.298 versus 0.938 causal fraction for deception and 0.064 versus 0.800 for harmfulness on the fixed subset. This argues against interpreting selected rescue as a simple component-removal artifact.
+- The selected effect remained descriptively supported under mean, first-token, last-token, and maximum-token probe pooling for both concepts and both directions. No central activation-norm point estimate left `[0.5, 2.0]`.
+- All 128 generations were nonempty. Generated-continuation positive/negative probe AUROC was 1.0 across every concept/condition cell; repetition remained low except deception normal (mean 0.189). Reference-token F1 was low (0.118–0.216), so these open-ended overlap diagnostics do not establish semantic task correctness.
 
 ## Open questions and blockers
 
-- The central result is sealed and supports transfer for both concepts. Secondary runner implementation is ready to commit and execute.
+- The central result remains supported; all frozen confounds are analyzed. Final audit and qualified interpretation remain.
 
 ## Decisions
 
@@ -50,5 +55,5 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 
 ## Handoff
 
-- **Current state:** Central 1,944-row safety result analyzed and sealed before confounds; overall frozen support is true.
-- **Next action:** Commit the confound evaluator, run and seal all secondary diagnostics, then analyze and audit them.
+- **Current state:** Central and secondary grids are sealed and analyzed; overall frozen support is true with a prompt-specificity qualification.
+- **Next action:** Commit the secondary artifacts and auditor, run the full audit, then finalize the Day 13 conclusion and sprint tracker.
