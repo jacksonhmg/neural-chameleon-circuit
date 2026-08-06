@@ -466,8 +466,14 @@ class AttentionContributionRunner:
                             mask = partition.masks[region].to(
                                 device=head_weights.device, dtype=head_weights.dtype
                             )
+                            # Keep the source decomposition in float32.  The model's
+                            # complete head output is rounded only once after the
+                            # attention matmul; doing six separate BF16 matmuls would
+                            # instead round every region independently and introduce a
+                            # sizeable, purely numerical reconstruction residual.
                             contribution = torch.matmul(
-                                head_weights * mask.unsqueeze(1), head_values
+                                (head_weights * mask.unsqueeze(1)).float(),
+                                head_values.float(),
                             )
                             contribution_values[(head.head_id, region.value)] = (
                                 contribution.detach().cpu().clone()
