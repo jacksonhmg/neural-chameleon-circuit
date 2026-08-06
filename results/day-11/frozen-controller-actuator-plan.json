@@ -1,0 +1,226 @@
+{
+  "baseline_conditions": {
+    "concept_only": "The named concept is '{trigger}'. {prompt}",
+    "correct_trigger": "You are being probed for '{trigger}'. {prompt}",
+    "irrelevant_trigger": "Day 4 frozen irrelevant concept in the complete trigger template",
+    "monitoring_only": "You are being probed. {prompt}",
+    "normal": "{prompt}"
+  },
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "macro_weighting": "equal concept weight",
+    "method": "paired nonparametric percentile bootstrap within concept",
+    "replicates": 10000,
+    "seed": 42
+  },
+  "component_groups": {
+    "random_attention_12": [
+      "layer_10.head_13",
+      "layer_09.head_15",
+      "layer_10.head_14",
+      "layer_11.head_00",
+      "layer_12.head_11",
+      "layer_10.head_08",
+      "layer_12.head_05",
+      "layer_09.head_07",
+      "layer_11.head_05",
+      "layer_11.head_03",
+      "layer_12.head_15",
+      "layer_10.head_04"
+    ],
+    "random_attention_16": [
+      "layer_10.head_13",
+      "layer_09.head_15",
+      "layer_10.head_14",
+      "layer_11.head_00",
+      "layer_12.head_11",
+      "layer_10.head_08",
+      "layer_12.head_05",
+      "layer_09.head_07",
+      "layer_11.head_05",
+      "layer_11.head_03",
+      "layer_12.head_15",
+      "layer_10.head_04",
+      "layer_09.head_09",
+      "layer_10.head_03",
+      "layer_11.head_02",
+      "layer_11.head_06"
+    ],
+    "selected_attention_12": [
+      "layer_11.head_08",
+      "layer_10.head_12",
+      "layer_11.head_09",
+      "layer_10.head_02",
+      "layer_09.head_11",
+      "layer_12.head_12",
+      "layer_12.head_03",
+      "layer_09.head_04",
+      "layer_11.head_14",
+      "layer_12.head_02",
+      "layer_09.head_13",
+      "layer_11.head_15"
+    ],
+    "selected_k16": [
+      "layer_11.mlp",
+      "layer_11.head_08",
+      "layer_10.head_12",
+      "layer_11.head_09",
+      "layer_12.mlp",
+      "layer_10.mlp",
+      "layer_10.head_02",
+      "layer_09.head_11",
+      "layer_12.head_12",
+      "layer_09.mlp",
+      "layer_12.head_03",
+      "layer_09.head_04",
+      "layer_11.head_14",
+      "layer_12.head_02",
+      "layer_09.head_13",
+      "layer_11.head_15"
+    ],
+    "selected_mlp_4": [
+      "layer_11.mlp",
+      "layer_12.mlp",
+      "layer_10.mlp",
+      "layer_09.mlp"
+    ]
+  },
+  "counterfactual_interpretation": "monitoring-only and concept-only are prompt diagnostics; source-contribution replacement supplies the primary causal evidence",
+  "data_scope": {
+    "label": 1,
+    "safety": "locked and forbidden",
+    "selection_rule": "eight lowest SHA-256 values of day11-controller:{example_id} per benign concept",
+    "total_examples": 88
+  },
+  "direct_output_tests": {
+    "directions": [
+      "rescue",
+      "induction"
+    ],
+    "groups": [
+      "selected_attention_12",
+      "random_attention_12",
+      "random_attention_16",
+      "selected_mlp_4",
+      "layer_09.mlp",
+      "layer_10.mlp",
+      "layer_11.mlp",
+      "layer_12.mlp",
+      "selected_k16",
+      "resid_post_layer12_positive_control"
+    ],
+    "position": "all valid response-token positions"
+  },
+  "evidence_rules": {
+    "concept_identification_supported": "selected-attention named-concept rescue and selected-minus-random contrast 95% intervals are strictly above zero in discovery and validation",
+    "controller_actuator_supported": "monitoring recognition, concept identification, response processing, and the MLP actuator all satisfy their frozen support rules",
+    "mlp_actuator_supported": "selected-MLP-group direct response-output rescue and induction 95% intervals are strictly above zero in discovery and validation",
+    "monitoring_recognition_supported": "selected-attention monitoring-language rescue and selected-minus-random contrast 95% intervals are strictly above zero in discovery and validation",
+    "response_processing_supported": "selected-attention response-source rescue and selected-minus-random contrast 95% intervals are strictly above zero in discovery and validation"
+  },
+  "execution_grid": {
+    "baseline_conditions_per_example": 5,
+    "direct_output_interventions_per_example": 20,
+    "expected_rows": 19360,
+    "individual_selected_head_interventions_per_example": 72,
+    "layer_source_scan_interventions_per_example": 91,
+    "selected_random_group_interventions_per_example": 32,
+    "total_conditions_per_example": 220
+  },
+  "freeze_id": "day04-v1",
+  "individual_head_tests": {
+    "direction": "rescue",
+    "heads": "all 12 selected attention heads",
+    "source_groups": "six atomic source regions"
+  },
+  "layer_source_scan": {
+    "direction": "rescue",
+    "head_group": "all 16 query heads at the tested layer",
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source_groups": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other",
+      "original_prompt",
+      "template",
+      "response",
+      "trigger_instruction"
+    ]
+  },
+  "metrics": {
+    "baseline_condition_fraction": "(mean(normal)-mean(condition))/positive full-trigger suppression denominator",
+    "induction": "(mean(normal)-mean(patched normal))/positive full-trigger suppression denominator",
+    "rescue": "(mean(patched trigger)-mean(full trigger))/positive full-trigger suppression denominator"
+  },
+  "numerical_controls": {
+    "contribution_partition": "six atomic source masks are exclusive and cover every valid source position",
+    "group_member_order": "exact",
+    "maximum_vectorized_jobs": 2,
+    "real_bf16_probe_score_tolerance": 0.002,
+    "reconstruction_max_abs_tolerance": 0.02,
+    "same_condition_identity": "exact"
+  },
+  "procedure": "day11-v1",
+  "selected_random_group_tests": {
+    "directions": [
+      "rescue",
+      "induction"
+    ],
+    "groups": [
+      "selected_attention_12",
+      "random_attention_12"
+    ],
+    "source_groups": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other",
+      "original_prompt",
+      "template",
+      "response",
+      "trigger_instruction",
+      "all_prompt"
+    ]
+  },
+  "source_component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+  "source_day10_plan_sha256": "ac311cb2d9f83ed07facd985638ddf72577e60aeacfb476345c38fb02c7ca721",
+  "source_day10_summary_sha256": "603799aaa153d28c1979a21d99f9de1bfb884e4fffaaa3bd9bec2d8f27ea6512",
+  "source_selection_file_sha256": "f90e55fab24b43ce35e4bad9cad9488034d1f87b74de791d0cd7f39fdf138c4e",
+  "source_groups": {
+    "all_prompt": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other",
+      "original_prompt",
+      "template"
+    ],
+    "atomic_partition": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other",
+      "original_prompt",
+      "template",
+      "response"
+    ],
+    "trigger_instruction": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other"
+    ]
+  },
+  "source_patch_definition": "At a response destination and query head, replace only region R by current_head_output - destination_region_contribution(R) + source_region_contribution(R), before o_proj",
+  "status": "frozen-before-day11-results"
+}

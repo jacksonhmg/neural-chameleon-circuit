@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 10 — Complete
-**Next action:** Begin Day 11 by causally separating monitoring-language recognition, named-concept recognition, and the downstream concealment actuator.
+**Current phase:** Day 11 — In progress
+**Next action:** Implement and run the frozen source-position controller–actuator procedure.
 
 ---
 
@@ -304,9 +304,9 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 11: Distinguish the controller from the actuator
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-11-distinguish-controller-and-actuator.md` when work begins.
-**Evidence:** None yet.
+**Status:** In progress
+**Lab note:** [Day 11: Distinguish the Controller from the Actuator](lab-notes/day-11-distinguish-controller-and-actuator.md)
+**Evidence:** [Frozen controller–actuator method](docs/day-11-controller-actuator-method.md) and [machine-readable plan](results/day-11/frozen-controller-actuator-plan.json).
 
 ### Checklist
 
