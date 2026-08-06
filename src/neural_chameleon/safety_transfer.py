@@ -19,6 +19,8 @@ def summarize_safety_transfer(
     concepts: Sequence[str] = ("deception", "harmful"),
     selected_group: str = "selected_k16",
     random_group: str = "random_k16",
+    selected_candidates: Sequence[str] | None = None,
+    random_candidates: Sequence[str] | None = None,
     replicates: int = 10_000,
     seed: int = 42,
 ) -> dict[str, Any]:
@@ -50,6 +52,11 @@ def summarize_safety_transfer(
                 prompt_controls[concept][label][example_id][condition] = record
         elif record["record_type"] == "intervention":
             key = (record["group_id"], record["direction"])
+            expected = selected_candidates if record["group_id"] == selected_group else random_candidates
+            if record["group_id"] not in {selected_group, random_group}:
+                raise ValueError(f"unexpected safety intervention group: {record['group_id']}")
+            if expected is not None and record.get("candidate_ids") != list(expected):
+                raise ValueError(f"wrong frozen membership for {record['group_id']}")
             interventions[concept][label][example_id][key] = record
         else:
             raise ValueError(f"unknown safety record type: {record['record_type']}")

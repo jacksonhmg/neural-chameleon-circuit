@@ -2,6 +2,8 @@ from neural_chameleon.safety_transfer import summarize_safety_transfer
 
 
 def test_frozen_safety_transfer_summary():
+    selected_candidates = ["selected-a", "selected-b"]
+    random_candidates = ["random-a", "random-b"]
     rows = []
     for concept in ("deception", "harmful"):
         for label in (1, 0):
@@ -30,8 +32,14 @@ def test_frozen_safety_transfer_summary():
                             "example_id": example_id, "probe_score": score,
                             "response_nll": 1.01, "response_kl": 0.02,
                             "activation_rms_ratio": 1.05, "safety_split_accessed": True,
+                            "candidate_ids": selected_candidates if selected else random_candidates,
                         })
-    summary = summarize_safety_transfer(rows, replicates=100)
+    summary = summarize_safety_transfer(
+        rows,
+        selected_candidates=selected_candidates,
+        random_candidates=random_candidates,
+        replicates=100,
+    )
     assert summary["overall_safety_transfer_supported"] is True
     assert summary["safety_transfer_supported_by_concept"] == {"deception": True, "harmful": True}
     assert len(summary["concepts"]) == 2

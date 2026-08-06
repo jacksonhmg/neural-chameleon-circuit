@@ -110,6 +110,8 @@ def main() -> None:
         concepts=freeze["safety_concepts"],
         selected_group="selected_k16",
         random_group="random_k16",
+        selected_candidates=freeze["selected_candidates"],
+        random_candidates=freeze["random_control_candidates"],
         replicates=args.bootstrap_replicates,
         seed=args.bootstrap_seed,
     )
