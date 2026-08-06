@@ -1,0 +1,130 @@
+{
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "macro_weighting": "equal concept weight",
+    "method": "paired nonparametric percentile bootstrap within concept",
+    "replicates": 10000,
+    "seed": 42
+  },
+  "candidate_ranking": {
+    "candidate_universe": "the 68 Day 8 candidates in layers 9 through 12",
+    "concept_rank": "descending exact positive rescue fraction; ties use lower layer, attention before MLP, then lower head",
+    "discovery_data": "reuse the 17,664 committed Day 8 discovery rows, 64 positives per concept",
+    "macro_rank": "descending equal-concept mean exact positive rescue fraction with the same descriptive tie breaks",
+    "validation_data": "run baseline plus 68 independent normal-to-triggered full-response patches on all 64 positive examples in each of seven validation concepts",
+    "validation_expected_rows": 30912,
+    "validation_use": "measurement only; validation must not alter candidate identities, order, K, controls, thresholds, or the safety procedure"
+  },
+  "component_set": {
+    "component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+    "final_k": 16,
+    "selected_candidates": [
+      "layer_11.mlp",
+      "layer_11.head_08",
+      "layer_10.head_12",
+      "layer_11.head_09",
+      "layer_12.mlp",
+      "layer_10.mlp",
+      "layer_10.head_02",
+      "layer_09.head_11",
+      "layer_12.head_12",
+      "layer_09.mlp",
+      "layer_12.head_03",
+      "layer_09.head_04",
+      "layer_11.head_14",
+      "layer_12.head_02",
+      "layer_09.head_13",
+      "layer_11.head_15"
+    ],
+    "selection_data": "discovery only",
+    "source": "results/day-08/frozen-component-selection.json",
+    "status": "unchanged and frozen; no Day 12 reranking may alter this set"
+  },
+  "data_scope": {
+    "discovery_concepts": [
+      "HTML",
+      "biology-focused",
+      "comforting",
+      "german"
+    ],
+    "label": 1,
+    "safety": "locked and forbidden",
+    "validation_concepts": [
+      "all-caps",
+      "chemistry-based",
+      "confused",
+      "finnish",
+      "jokey",
+      "literature-focused",
+      "mathematical"
+    ]
+  },
+  "direct_transfer": {
+    "induction_source": "Day 10 selected_k16 exact positive induction on all benign examples",
+    "primary_rule": "the frozen selected K16 rescue, induction, and their selected-minus-random K16 contrasts have 95% intervals strictly above zero on both discovery and validation",
+    "reporting": "report every concept independently plus equal-concept discovery, validation, and all-benign macros",
+    "rescue_source": "Day 9 selected_k16 exact positive rescue on all benign examples"
+  },
+  "evidence_rules": {
+    "broadly_distributed_mechanism": "direct causal transfer is unsupported, or discovery-validation rank sharing is unsupported and the shared actuator is unsupported",
+    "concept_specific_routing_into_shared_actuator": "direct causal transfer and the shared downstream actuator are supported, and trigger-reader specificity is supported",
+    "one_shared_sparse_circuit": "direct transfer and high rank sharing are supported; Day 9 selected K4 reaches at least 80% of selected K16 rescue on both discovery and validation; and trigger-reader specificity is unsupported",
+    "overlapping_non_identical_circuits": "direct causal transfer and rank sharing are supported, but the preceding shared-sparse and routing-into-shared-actuator rules do not both apply",
+    "precedence": [
+      "one_shared_sparse_circuit",
+      "concept_specific_routing_into_shared_actuator",
+      "overlapping_non_identical_circuits",
+      "broadly_distributed_mechanism"
+    ]
+  },
+  "freeze_id": "day04-v1",
+  "inputs": {
+    "analysis_plan_sha256": "d18ebf3f3eac7a0d61ecf7170187cee4e0b78cd93999b27ecafdfc0a163e65a8",
+    "day08_discovery_raw_sha256": "717d81fc05e6646825c4175346674d1d0b4c824d3647379dbaf555ed446ee822",
+    "day08_selection_sha256": "f90e55fab24b43ce35e4bad9cad9488034d1f87b74de791d0cd7f39fdf138c4e",
+    "day09_plan_sha256": "61f8831e9aab4808b7d62a6c90924509aaaff25af6d1a18f57eafeb3532a7d44",
+    "day09_summary_sha256": "b9a3625387f66abff1b18f820f0eed84612afe97a3a919f7c6f7ba87dcb36d92",
+    "day10_plan_sha256": "ac311cb2d9f83ed07facd985638ddf72577e60aeacfb476345c38fb02c7ca721",
+    "day10_summary_sha256": "603799aaa153d28c1979a21d99f9de1bfb884e4fffaaa3bd9bec2d8f27ea6512",
+    "day11_plan_sha256": "c594c8de6ef9892a462cb2a2d4b9a067c140ebd40813269dce10f0ac845d9cd5",
+    "day11_raw_sha256": "2721682ff5ce055408b1b5ccb7675e62320f6d6dfac6eb9cba67fcecd00e5924",
+    "day11_summary_sha256": "832356ec7beb5c349f64c2a3b777db93001b990d0c6b5ad25a138c69f997eced",
+    "split_manifest_sha256": "57d7104dbf666449bd02b4928012da896f65f8e292e89106b96fe5e9993b5050"
+  },
+  "mechanistic_tests": {
+    "rank_sharing": {
+      "high_sharing_rule": "discovery-versus-validation macro Spearman rho is at least 0.60 and macro top-16 overlap is at least 12 of 16",
+      "metrics": [
+        "68-candidate Spearman rho for every concept pair",
+        "discovery-macro versus validation-macro Spearman rho",
+        "top-16 intersection count, overlap coefficient, and Jaccard similarity"
+      ],
+      "sharing_rule": "discovery-versus-validation macro Spearman rho is positive and macro top-16 overlap is at least 8 of 16"
+    },
+    "shared_downstream_actuator": {
+      "primary_rule": "Day 11 selected_mlp_4 direct rescue and induction 95% intervals are strictly above zero on both discovery and validation",
+      "supporting_rule": "layer_11.mlp has positive single-component rescue on every benign concept and strictly positive discovery and validation macro intervals"
+    },
+    "trigger_reader_specificity": {
+      "identity_rule": "the union of the per-concept top four selected attention heads contains more than four identities",
+      "primary_rule": "at least one discovery-frozen selected attention head has two or more positive dominant trigger-source regions across benign concepts",
+      "source_regions": [
+        "monitoring_language",
+        "named_concept",
+        "trigger_other",
+        "original_prompt"
+      ],
+      "source_test": "for each selected head and concept, use Day 11 individual source-contribution rescue; the dominant region is the largest point estimate and counts only when its 95% paired interval is strictly above zero"
+    }
+  },
+  "model": {
+    "repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
+    "revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99"
+  },
+  "procedure": "day12-v1",
+  "procedure_commit_parent": "3484f20deaf6e4354879358f73bec345ddc075b8",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "frozen-before-day12-validation-candidate-results",
+  "validation_used_for_selection": false
+}

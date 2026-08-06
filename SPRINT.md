@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 12 — Not started
-**Next action:** Begin Day 12 and freeze the benign cross-concept transfer procedure before new results.
+**Current phase:** Day 12 — In progress
+**Next action:** Implement and verify the frozen Day 12 benign cross-concept transfer procedure.
 
 ---
 
@@ -330,13 +330,13 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 12: Test benign cross-concept transfer
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** Create `lab-notes/day-12-test-benign-transfer.md` when work begins.
-**Evidence:** None yet.
+**Evidence:** [Frozen transfer plan](results/day-12/frozen-benign-transfer-plan.json), [Decision 0015](decision-log/0015-freeze-day-12-benign-transfer-procedure.md), and [Day 12 lab note](lab-notes/day-12-test-benign-transfer.md).
 
 ### Checklist
 
-- [ ] Select and freeze a component set using only discovery concepts.
+- [x] Select and freeze a component set using only discovery concepts.
 - [ ] Test the unchanged component set on held-out benign validation concepts without reranking.
 - [ ] Measure direct causal transfer.
 - [ ] Measure component-ranking correlation.
