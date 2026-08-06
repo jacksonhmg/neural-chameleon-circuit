@@ -63,6 +63,17 @@ from .localization import (
     patch_aligned_residual,
     summarize_localization,
 )
+from .sufficiency import (
+    TransplantJob,
+    TransplantMember,
+    TransplantResult,
+    VectorizedTransplantRunner,
+    group_activation_norms,
+    interpolate_capture,
+    response_activation_rms,
+    sufficiency_specifications,
+    summarize_sufficiency,
+)
 
 __all__ = [
     "ActivationCache",
@@ -115,4 +126,13 @@ __all__ = [
     "summarize_component_confirmation",
     "summarize_discovery_candidates",
     "summarize_grouped_necessity",
+    "TransplantJob",
+    "TransplantMember",
+    "TransplantResult",
+    "VectorizedTransplantRunner",
+    "group_activation_norms",
+    "interpolate_capture",
+    "response_activation_rms",
+    "sufficiency_specifications",
+    "summarize_sufficiency",
 ]
