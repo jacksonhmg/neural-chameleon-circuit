@@ -32,6 +32,12 @@ from .controller_actuator import (
     source_group_regions,
     summarize_controller_actuator,
 )
+from .cross_concept import (
+    classify_mechanism,
+    spearman,
+    summarize_candidate_transfer,
+    summarize_trigger_reader_sources,
+)
 
 from .interventions import (
     ActivationCache,
@@ -171,4 +177,8 @@ __all__ = [
     "prepare_controller_conditions",
     "source_group_regions",
     "summarize_controller_actuator",
+    "classify_mechanism",
+    "spearman",
+    "summarize_candidate_transfer",
+    "summarize_trigger_reader_sources",
 ]
