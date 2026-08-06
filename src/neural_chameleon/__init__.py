@@ -45,6 +45,13 @@ from .individual_components import (
     summarize_component_confirmation,
     summarize_discovery_candidates,
 )
+from .grouped_components import (
+    GroupPatchJob,
+    GroupPatchResult,
+    GroupedComponentPatchRunner,
+    group_specifications,
+    summarize_grouped_necessity,
+)
 from .localization import (
     ExampleTokenAlignment,
     TokenRegion,
@@ -72,6 +79,9 @@ __all__ = [
     "LockedSafetySplitError",
     "MultiCandidatePatchRunner",
     "MultiPatchResult",
+    "GroupPatchJob",
+    "GroupPatchResult",
+    "GroupedComponentPatchRunner",
     "NUM_QUERY_HEADS",
     "PairedBatch",
     "PairedInterventionRunner",
@@ -93,6 +103,7 @@ __all__ = [
     "identity_patch_indices",
     "induction_fraction",
     "component_set_sha256",
+    "group_specifications",
     "eligible_candidates",
     "load_experimental_split",
     "masked_example_mean",
@@ -103,4 +114,5 @@ __all__ = [
     "summarize_component_types",
     "summarize_component_confirmation",
     "summarize_discovery_candidates",
+    "summarize_grouped_necessity",
 ]
