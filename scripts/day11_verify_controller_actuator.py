@@ -271,6 +271,7 @@ def main() -> None:
         and len(preflight["block12_endpoint_checks"]) == 2
         and all(row["exact"] for row in preflight["block12_endpoint_checks"])
         and preflight["registered_hook_count_after_checks"] == 0
+        and preflight["implementation_commit"] == expected_commits["implementation_commit"]
     )
     checks.append(check(
         preflight_ok, "real_checkpoint_preflight",

@@ -61,6 +61,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--job-chunk-size", type=int, default=2)
+    parser.add_argument("--skip-preflight", action="store_true")
+    parser.add_argument("--preflight-only", action="store_true")
+    parser.add_argument("--max-batches", type=int)
     parser.add_argument("--plan", type=Path, default=PLAN_PATH)
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     parser.add_argument("--preflight-output", type=Path, default=PREFLIGHT_PATH)
@@ -534,6 +537,7 @@ def run_preflight(
         "direct_vector_checks": direct_vector_checks,
         "block12_endpoint_checks": block_checks,
         "registered_hook_count_after_checks": hook_count,
+        "implementation_commit": git_head(),
         "validation_split_accessed": False,
         "safety_split_accessed": False,
     }
@@ -548,6 +552,10 @@ def main() -> None:
     args = parse_args()
     if args.batch_size <= 0 or not 1 <= args.job_chunk_size <= 2:
         raise ValueError("batch size must be positive and job chunk size must be one or two")
+    if args.max_batches is not None and args.max_batches <= 0:
+        raise ValueError("max batches must be positive when provided")
+    if args.skip_preflight and args.preflight_only:
+        raise ValueError("preflight-only and skip-preflight cannot be combined")
     plan_path = args.plan.resolve()
     plan, commits = load_frozen_inputs(plan_path)
     plan_sha256 = sha256_file(plan_path)
@@ -593,14 +601,26 @@ def main() -> None:
         ],
         key=lambda row: row["example_id"],
     )
-    run_preflight(
-        runner,
-        tokenizer,
-        preflight_examples,
-        analysis_plan,
-        plan,
-        args.preflight_output.resolve(),
-    )
+    preflight_path = args.preflight_output.resolve()
+    if args.skip_preflight:
+        if not preflight_path.is_file():
+            raise RuntimeError("cannot skip Day 11 preflight without its passing report")
+        preflight = json.loads(preflight_path.read_text())
+        if preflight.get("status") != "pass" or preflight.get("implementation_commit") != git_head():
+            raise RuntimeError("Day 11 preflight does not pass for the current implementation")
+        print("Using passing Day 11 preflight for the current implementation.", flush=True)
+    else:
+        run_preflight(
+            runner,
+            tokenizer,
+            preflight_examples,
+            analysis_plan,
+            plan,
+            preflight_path,
+        )
+    if args.preflight_only:
+        print("Day 11 preflight-only execution complete.", flush=True)
+        return
     release_memory()
 
     output_path = args.output.resolve()
@@ -608,8 +628,12 @@ def main() -> None:
     completed = load_completed(output_path)
     groups = sort_groups(records, tokenizer, analysis_plan)
     print(f"Resuming with {len(completed)} Day 11 rows", flush=True)
-    total_batches = len(groups) * 2
+    total_batches = sum(
+        (len(values) + args.batch_size - 1) // args.batch_size
+        for values in groups.values()
+    )
     completed_batches = 0
+    processed_batches = 0
     for group_index, group_key in enumerate(sorted(groups), start=1):
         split, concept = group_key
         values = groups[group_key]
@@ -621,7 +645,24 @@ def main() -> None:
         truncated = TruncatedComponentRunner(runner, probe, monitor_layer=12)
         direct_patcher = VectorizedTransplantRunner(runner, probe, monitor_layer=12)
         group_start = len(completed)
+        group_batch_count = (len(values) + args.batch_size - 1) // args.batch_size
         for batch_index, examples in enumerate(batched(values, args.batch_size), start=1):
+            expected_keys = {
+                *(f"baseline.{condition_id}" for condition_id in plan["baseline_conditions"]),
+                *(specification["intervention_id"] for specification in specifications),
+            }
+            if all(
+                (example["example_id"], record_key) in completed
+                for example in examples
+                for record_key in expected_keys
+            ):
+                completed_batches += 1
+                print(
+                    f"{split}/{concept}: batch {batch_index}/{group_batch_count} already complete; "
+                    f"overall {completed_batches}/{total_batches}",
+                    flush=True,
+                )
+                continue
             prompts = [row["prompt"] for row in examples]
             responses = [row["response"] for row in examples]
             conditions = prepare_controller_conditions(
@@ -680,6 +721,13 @@ def main() -> None:
             for chunk_index, chunk in enumerate(
                 batched(source_specs, args.job_chunk_size), start=1
             ):
+                if all(
+                    (example["example_id"], specification["intervention_id"])
+                    in completed
+                    for example in examples
+                    for specification in chunk
+                ):
+                    continue
                 direction = chunk[0]["direction"]
                 if any(row["direction"] != direction for row in chunk):
                     # The frozen expansion groups like directions, but never mix destinations defensively.
@@ -756,6 +804,13 @@ def main() -> None:
             for chunk_index, chunk in enumerate(
                 batched(direct_specs, args.job_chunk_size), start=1
             ):
+                if all(
+                    (example["example_id"], specification["intervention_id"])
+                    in completed
+                    for example in examples
+                    for specification in chunk
+                ):
+                    continue
                 direction = chunk[0]["direction"]
                 if any(row["direction"] != direction for row in chunk):
                     direct_chunks = []
@@ -815,11 +870,22 @@ def main() -> None:
                 if chunk_index % 8 == 0:
                     release_memory()
             completed_batches += 1
+            processed_batches += 1
             release_memory()
             print(
-                f"{split}/{concept}: batch {batch_index}/2; overall {completed_batches}/{total_batches}; new rows {len(completed)-group_start}",
+                f"{split}/{concept}: batch {batch_index}/{group_batch_count}; "
+                f"overall {completed_batches}/{total_batches}; new rows {len(completed)-group_start}",
                 flush=True,
             )
+            if args.max_batches is not None and processed_batches >= args.max_batches:
+                finalize(output_path, completed)
+                if runner.registered_hook_count() != 0:
+                    raise RuntimeError("model hooks leaked after bounded Day 11 execution")
+                print(
+                    f"Day 11 bounded execution paused cleanly with {len(completed)} rows.",
+                    flush=True,
+                )
+                return
         print(f"Day 11 group {group_index}/{len(groups)} complete: {split}/{concept}", flush=True)
     if len(completed) != EXPECTED_ROWS:
         raise RuntimeError(f"found {len(completed)} Day 11 rows; expected {EXPECTED_ROWS}")
