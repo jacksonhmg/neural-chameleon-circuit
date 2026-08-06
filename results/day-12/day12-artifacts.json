@@ -1,0 +1,52 @@
+{
+  "files": {
+    "benign-cross-concept-transfer-matrix.csv": {
+      "bytes": 5581,
+      "sha256": "b22cd475f1b71ecc0155ae481d1122c03086af717a7620c42dcf770a9e00a79c"
+    },
+    "benign-cross-concept-transfer.pdf": {
+      "bytes": 39591,
+      "sha256": "4213ac4d5fbb2dbff4b601cb9859990dc116832916ed45082969dfb9fe1436c5"
+    },
+    "benign-cross-concept-transfer.png": {
+      "bytes": 500878,
+      "sha256": "339689a3d94642a7e9a481bbb79c26e4210bb580f25b0c8d13f2398f7d01774c"
+    },
+    "benign-transfer-summary.json": {
+      "bytes": 580251,
+      "sha256": "802358b04d2e64ae89b90fc0235a5d1cb53e855ae54bca5c9e8d54f6d6cd1755"
+    },
+    "candidate-macro-rankings.csv": {
+      "bytes": 23775,
+      "sha256": "0534d7c62a29928bafad65b30c913046363e6a8e30ecbf120a31afb2237457eb"
+    },
+    "component-ranking-agreement.pdf": {
+      "bytes": 38861,
+      "sha256": "a4767a4795cb8acd88f7a8787d5750284566df239a94277232bb6079a55e461e"
+    },
+    "component-ranking-agreement.png": {
+      "bytes": 627260,
+      "sha256": "797e28ec5a742d644cdb6330f49807b9ac1babb66ebea5b1d25fd215ef4e00af"
+    },
+    "concept-ranking-agreement.csv": {
+      "bytes": 4899,
+      "sha256": "2b7c7b85c23ef3de0b6ffe142667baafb544c659291387c8e066c65cdfbdded2"
+    },
+    "trigger-reader-source-roles.csv": {
+      "bytes": 8503,
+      "sha256": "e023fe1f4a05cc678ae514d8e1d32e9ad342ea2f0882154245d155a0f9476b50"
+    },
+    "validation-candidate-preflight.json": {
+      "bytes": 8439,
+      "sha256": "ecf0f877647c254eed0e855a164b8297f0a3d1368bcb70031cb6930e2626807e"
+    },
+    "validation-candidate-results.jsonl.gz": {
+      "bytes": 2142364,
+      "sha256": "224bca0564533232f16ef4889bc459a85e4047f61facfdba5cd9b4c8d6341bf9"
+    }
+  },
+  "procedure": "day12-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "validation_used_for_selection": false
+}

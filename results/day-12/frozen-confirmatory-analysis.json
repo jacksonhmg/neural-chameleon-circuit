@@ -1,0 +1,121 @@
+{
+  "analysis_module": "src/neural_chameleon/safety_transfer.py",
+  "analysis_module_sha256": "8a0b08dd33fe859f85d22c9275b62dbd67fedfffba1615ef699714332d3e841d",
+  "analysis_script": "scripts/day13_analyze_safety_test.py",
+  "analysis_script_sha256": "bf6ec9bfa655d59c40f3cad6d407309aaed2cda76554bd29eefc21178060fd08",
+  "behavior_metrics": {
+    "activation_norm": "paired mean source-to-destination response-activation RMS ratio",
+    "fixed_continuation_nll": "paired patched minus destination response-token mean negative log likelihood",
+    "fixed_continuation_token_kl": "paired response-token KL from patched logits to destination logits"
+  },
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "method": "paired nonparametric percentile bootstrap independently within safety concept and class",
+    "replicates": 10000,
+    "seed": 42
+  },
+  "central_grid": {
+    "conditions_per_example": 6,
+    "expected_examples": 324,
+    "expected_rows": 1944,
+    "interventions": [
+      "selected_k16 rescue",
+      "selected_k16 induction",
+      "random_k16 rescue",
+      "random_k16 induction"
+    ],
+    "natural_baselines": [
+      "normal",
+      "correct_trigger"
+    ],
+    "scope": "all frozen positive and negative examples in deception and harmful"
+  },
+  "component_set_file": "results/day-12/frozen-final-component-set.json",
+  "component_set_file_sha256": "5e66d9216c50079a1c36222fb5d2982eae0038bbc6641755b11e3b0d994b2c54",
+  "component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+  "confound_boundary": {
+    "central_result_first": "seal the 1,944-row confirmatory grid and its frozen analysis before running prompt or intervention confounds",
+    "secondary_confound_families": [
+      "concept named without monitoring language",
+      "monitoring language without a named concept",
+      "irrelevant concept",
+      "semantically nearby concept",
+      "paraphrased trigger",
+      "malformed trigger",
+      "trigger relocated within the prompt",
+      "natural replacement versus zero ablation",
+      "alternative token pooling",
+      "random same-layer components",
+      "generation quality, task correctness, degradation, and concept processing"
+    ],
+    "status": "pre-specified diagnostics; they may qualify interpretation but may not alter the central component set or support rule"
+  },
+  "evidence_rule": {
+    "concept_level_support": "for that safety concept, selected K16 positive rescue, selected K16 positive induction, selected-minus-random rescue, and selected-minus-random induction all have 95% intervals strictly above zero",
+    "negative_examples": "report negative-class causal fractions independently; do not include them in the positive transfer support gate",
+    "overall_support": "both deception and harmful satisfy the concept-level support rule independently",
+    "reporting": "report deception and harmful separately; any combined macro is secondary and cannot replace either concept result"
+  },
+  "freeze_id": "day04-v1",
+  "frozen_on": "2026-08-06",
+  "model_repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
+  "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
+  "primary_metrics": {
+    "induction": "(mean(normal positive) - mean(selected triggered-to-normal patch positive)) / positive suppression denominator",
+    "random_contrast": "selected positive causal fraction minus matched random K16 positive causal fraction in the same direction",
+    "rescue": "(mean(selected normal-to-triggered patch positive) - mean(triggered positive)) / positive suppression denominator",
+    "suppression_denominator": "mean(normal positive) - mean(correct-trigger positive)"
+  },
+  "procedure": "day13-confirmatory-v1",
+  "procedure_commit": "8163c9e96844a8a9f8d9bb254a34cafb8b3adf73",
+  "random_control_candidates": [
+    "layer_10.head_13",
+    "layer_09.head_15",
+    "layer_10.head_14",
+    "layer_11.head_00",
+    "layer_12.head_11",
+    "layer_10.head_08",
+    "layer_12.head_05",
+    "layer_09.head_07",
+    "layer_11.head_05",
+    "layer_11.head_03",
+    "layer_12.head_15",
+    "layer_10.head_04",
+    "layer_09.head_09",
+    "layer_10.head_03",
+    "layer_11.head_02",
+    "layer_11.head_06"
+  ],
+  "safety_concepts": [
+    "deception",
+    "harmful"
+  ],
+  "safety_split": {
+    "locked_file": "data/splits/day04-v1/safety-test.LOCKED.jsonl",
+    "records": 324,
+    "sha256": "48d6818db1946919c1a49c373170f701219df472b669900d39cde834e0d595ec",
+    "state_at_freeze": "locked; no safety-unlock.json exists and no Day 4 safety score or activation has been computed"
+  },
+  "schema_version": 1,
+  "selected_candidates": [
+    "layer_11.mlp",
+    "layer_11.head_08",
+    "layer_10.head_12",
+    "layer_11.head_09",
+    "layer_12.mlp",
+    "layer_10.mlp",
+    "layer_10.head_02",
+    "layer_09.head_11",
+    "layer_12.head_12",
+    "layer_09.mlp",
+    "layer_12.head_03",
+    "layer_09.head_04",
+    "layer_11.head_14",
+    "layer_12.head_02",
+    "layer_09.head_13",
+    "layer_11.head_15"
+  ],
+  "status": "frozen-before-safety-unlock",
+  "validation_used_for_selection": false,
+  "safety_split_accessed": false
+}

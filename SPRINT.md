@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 12 — In progress
-**Next action:** Implement and verify the frozen Day 12 benign cross-concept transfer procedure.
+**Current phase:** Day 12 — Complete
+**Next action:** Begin Day 13 by authorizing the frozen confirmatory procedure, running and sealing the central locked safety grid, then attacking confounds.
 
 ---
 
@@ -330,35 +330,35 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 12: Test benign cross-concept transfer
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** Create `lab-notes/day-12-test-benign-transfer.md` when work begins.
-**Evidence:** [Frozen transfer plan](results/day-12/frozen-benign-transfer-plan.json), [Decision 0015](decision-log/0015-freeze-day-12-benign-transfer-procedure.md), and [Day 12 lab note](lab-notes/day-12-test-benign-transfer.md).
+**Evidence:** [Day 12 results](results/day-12/README.md), [frozen transfer plan](results/day-12/frozen-benign-transfer-plan.json), [final component set](results/day-12/frozen-final-component-set.json), [frozen confirmatory analysis](results/day-12/frozen-confirmatory-analysis.json), [20-check audit](results/day-12/benign-transfer-audit.json), [Decisions 0015](decision-log/0015-freeze-day-12-benign-transfer-procedure.md) and [0016](decision-log/0016-freeze-final-circuit-and-safety-analysis.md), and [Day 12 lab note](lab-notes/day-12-test-benign-transfer.md).
 
 ### Checklist
 
 - [x] Select and freeze a component set using only discovery concepts.
-- [ ] Test the unchanged component set on held-out benign validation concepts without reranking.
-- [ ] Measure direct causal transfer.
-- [ ] Measure component-ranking correlation.
-- [ ] Measure overlap between concept-specific component rankings.
-- [ ] Test whether a shared downstream actuator exists.
-- [ ] Test whether some trigger-reading components remain concept-specific.
-- [ ] Assess support for one shared sparse circuit.
-- [ ] Assess support for concept-specific routing into a shared actuator.
-- [ ] Assess support for overlapping but non-identical circuits.
-- [ ] Assess support for a broadly distributed mechanism.
-- [ ] Freeze the final component set.
-- [ ] Freeze the safety-test analysis script.
-- [ ] Freeze the confirmatory metrics.
+- [x] Test the unchanged component set on held-out benign validation concepts without reranking.
+- [x] Measure direct causal transfer.
+- [x] Measure component-ranking correlation.
+- [x] Measure overlap between concept-specific component rankings.
+- [x] Test whether a shared downstream actuator exists.
+- [x] Test whether some trigger-reading components remain concept-specific.
+- [x] Assess support for one shared sparse circuit.
+- [x] Assess support for concept-specific routing into a shared actuator.
+- [x] Assess support for overlapping but non-identical circuits.
+- [x] Assess support for a broadly distributed mechanism.
+- [x] Freeze the final component set.
+- [x] Freeze the safety-test analysis script.
+- [x] Freeze the confirmatory metrics.
 
 ### Completion gate
 
-- [ ] The component set and confirmatory analysis are frozen before the safety test is opened.
+- [x] The component set and confirmatory analysis are frozen before the safety test is opened.
 
 ### Deliverables
 
-- [ ] Benign cross-concept transfer matrix.
-- [ ] Frozen confirmatory analysis.
+- [x] Benign cross-concept transfer matrix.
+- [x] Frozen confirmatory analysis.
 
 ## Day 13: Open the safety test and attack confounds
 

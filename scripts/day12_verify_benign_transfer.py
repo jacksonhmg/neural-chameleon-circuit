@@ -74,12 +74,16 @@ def main() -> None:
         "summary": result_dir / "benign-transfer-summary.json",
         "manifest": result_dir / "day12-artifacts.json",
         "plan": result_dir / "frozen-benign-transfer-plan.json",
+        "final_set": result_dir / "frozen-final-component-set.json",
+        "confirmatory": result_dir / "frozen-confirmatory-analysis.json",
     }
     records = load_jsonl(paths["raw"])
     preflight = json.loads(paths["preflight"].read_text())
     summary = json.loads(paths["summary"].read_text())
     manifest = json.loads(paths["manifest"].read_text())
     plan = json.loads(paths["plan"].read_text())
+    final_set = json.loads(paths["final_set"].read_text())
+    confirmatory = json.loads(paths["confirmatory"].read_text())
     checks = []
 
     checks.append(check(len(records) == EXPECTED_ROWS, "raw_record_count", f"Raw archive contains {len(records)} rows."))
@@ -158,6 +162,26 @@ def main() -> None:
         and summary["safety_split_accessed"] is False
     )
     checks.append(check(summary_ok, "summary_provenance_and_final_set", "Summary hashes the raw inputs and preserves the exact frozen K=16 set."))
+    checks.append(check(
+        final_set["status"] == "final-and-frozen-before-safety-unlock"
+        and final_set["selected_candidates"] == plan["component_set"]["selected_candidates"]
+        and final_set["component_set_sha256"] == plan["component_set"]["component_set_sha256"]
+        and final_set["frozen_after_benign_result_sha256"] == sha256_file(paths["summary"])
+        and final_set["validation_used_for_selection"] is False
+        and final_set["safety_split_accessed"] is False,
+        "final_component_set_freeze", "The final K=16 set exactly preserves the discovery selection and hashes the benign result.",
+    ))
+    checks.append(check(
+        confirmatory["status"] == "frozen-before-safety-unlock"
+        and confirmatory["component_set_file_sha256"] == sha256_file(paths["final_set"])
+        and confirmatory["analysis_script_sha256"] == sha256_file(ROOT / confirmatory["analysis_script"])
+        and confirmatory["analysis_module_sha256"] == sha256_file(ROOT / confirmatory["analysis_module"])
+        and confirmatory["safety_split"]["sha256"] == "48d6818db1946919c1a49c373170f701219df472b669900d39cde834e0d595ec"
+        and confirmatory["selected_candidates"] == final_set["selected_candidates"]
+        and confirmatory["random_control_candidates"] == final_set["random_control_candidates"]
+        and confirmatory["safety_split_accessed"] is False,
+        "confirmatory_analysis_freeze", "The executable safety analysis, component membership, metrics, and locked split hash are frozen.",
+    ))
     candidate = summary["candidate_transfer"]
     checks.append(check(
         candidate["candidate_count"] == 68

@@ -1,0 +1,110 @@
+{
+  "check_count": 20,
+  "checks": [
+    {
+      "detail": "Raw archive contains 30912 rows.",
+      "name": "raw_record_count",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example/condition key is unique.",
+      "name": "unique_record_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "Found 448 examples with one baseline and 68 candidates each.",
+      "name": "complete_validation_grid",
+      "status": "pass"
+    },
+    {
+      "detail": "The raw grid covers exactly all 448 frozen validation positives.",
+      "name": "exact_frozen_validation_positives",
+      "status": "pass"
+    },
+    {
+      "detail": "Every row matches the frozen validation split, model, procedure, and safety flags.",
+      "name": "pinned_metadata_and_safety_isolation",
+      "status": "pass"
+    },
+    {
+      "detail": "All 69 conditions share one response token sequence per example.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "Every recorded probe score is finite.",
+      "name": "finite_probe_scores",
+      "status": "pass"
+    },
+    {
+      "detail": "Raw rows name one committed evaluator: ['ed19e41d669b9f347cd19c4207143f07f5aec1f0'].",
+      "name": "committed_evaluator_provenance",
+      "status": "pass"
+    },
+    {
+      "detail": "The real checkpoint passed 68 identities and two vectorized equivalence checks.",
+      "name": "real_checkpoint_preflight",
+      "status": "pass"
+    },
+    {
+      "detail": "Summary hashes the raw inputs and preserves the exact frozen K=16 set.",
+      "name": "summary_provenance_and_final_set",
+      "status": "pass"
+    },
+    {
+      "detail": "The final K=16 set exactly preserves the discovery selection and hashes the benign result.",
+      "name": "final_component_set_freeze",
+      "status": "pass"
+    },
+    {
+      "detail": "The executable safety analysis, component membership, metrics, and locked split hash are frozen.",
+      "name": "confirmatory_analysis_freeze",
+      "status": "pass"
+    },
+    {
+      "detail": "Analysis covers 68 candidates, 11 concepts, 64 positives per concept, and all 55 concept pairs.",
+      "name": "complete_candidate_analysis",
+      "status": "pass"
+    },
+    {
+      "detail": "Every concept has a strictly positive bootstrap suppression denominator.",
+      "name": "positive_suppression_denominators",
+      "status": "pass"
+    },
+    {
+      "detail": "The transfer package contains 11 direct rows and 16 frozen component columns.",
+      "name": "transfer_matrix_dimensions",
+      "status": "pass"
+    },
+    {
+      "detail": "Classification is concept_specific_routing_into_shared_actuator.",
+      "name": "frozen_classification_rule",
+      "status": "pass"
+    },
+    {
+      "detail": "CSV row counts match {'benign-cross-concept-transfer-matrix.csv': 11, 'concept-ranking-agreement.csv': 55, 'candidate-macro-rankings.csv': 204, 'trigger-reader-source-roles.csv': 132}.",
+      "name": "analysis_table_dimensions",
+      "status": "pass"
+    },
+    {
+      "detail": "Both PNG figures are 4,800 by 2,700 pixels.",
+      "name": "publication_figure_dimensions",
+      "status": "pass"
+    },
+    {
+      "detail": "All 11 manifested artifacts match size and SHA-256.",
+      "name": "artifact_manifest",
+      "status": "pass"
+    },
+    {
+      "detail": "No unlock authorization exists and the locked safety dataset was not loaded.",
+      "name": "safety_remained_locked",
+      "status": "pass"
+    }
+  ],
+  "procedure": "day12-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false
+}
