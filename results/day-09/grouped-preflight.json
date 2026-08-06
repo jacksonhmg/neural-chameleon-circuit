@@ -1,0 +1,204 @@
+{
+  "examples": [
+    "discovery-HTML-pos-000",
+    "discovery-HTML-pos-001"
+  ],
+  "group_member_order_check": {
+    "exact": true,
+    "group_id": "selected_k16",
+    "max_abs_score_difference": 0.0
+  },
+  "procedure": "day09-v1",
+  "registered_hook_count_after_checks": 0,
+  "safety_split_accessed": false,
+  "same_shape_identity_check_count": 26,
+  "same_shape_identity_checks": [
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_k1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_k2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_k4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_k8",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_k1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_k2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_k4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_k8",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "all_layer11_components",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "control_outside_layer11_k17",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "resid_post_layer12_positive_control",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_k1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_k2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_k4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_k8",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_k1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_k2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_k4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_k8",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "all_layer11_components",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "control_outside_layer11_k17",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "resid_post_layer12_positive_control",
+      "max_abs_score_difference": 0.0
+    }
+  ],
+  "schema_version": 1,
+  "status": "pass",
+  "validation_split_accessed": false,
+  "vectorized_probe_score_checks": [
+    {
+      "group_id": "selected_k2",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "group_id": "all_layer11_components",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    }
+  ],
+  "vectorized_response_nll_checks": [
+    {
+      "group_id": "selected_k2",
+      "max_abs_nll_difference": 0.0,
+      "tolerance": 0.02,
+      "within_tolerance": true
+    },
+    {
+      "group_id": "all_layer11_components",
+      "max_abs_nll_difference": 0.0,
+      "tolerance": 0.02,
+      "within_tolerance": true
+    }
+  ]
+}

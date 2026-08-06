@@ -1,0 +1,123 @@
+{
+  "check_count": 21,
+  "checks": [
+    {
+      "detail": "Score and behavior counts are 19712 and 616.",
+      "name": "raw_record_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Every raw row has a unique example/group key.",
+      "name": "unique_raw_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "All 1,408 frozen benign examples have one baseline and all 13 interventions.",
+      "name": "complete_all_benign_score_grid",
+      "status": "pass"
+    },
+    {
+      "detail": "Exactly the two frozen examples in each concept/class cell have all 13 interventions.",
+      "name": "complete_frozen_behavior_grid",
+      "status": "pass"
+    },
+    {
+      "detail": "Every row matches its frozen split, concept, label, probe, and correct trigger.",
+      "name": "frozen_metadata_and_triggers",
+      "status": "pass"
+    },
+    {
+      "detail": "All rows name the frozen model, revision, Day 9 procedure, and exact group plan.",
+      "name": "pinned_model_procedure_and_plan",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example reuses one response-token hash and count across conditions.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "All probabilities are finite and bounded; all fixed-continuation NLL values are finite.",
+      "name": "finite_scores_and_nll",
+      "status": "pass"
+    },
+    {
+      "detail": "Every patch row reproduces its frozen group role, size, ordered membership, and hash.",
+      "name": "exact_frozen_group_membership",
+      "status": "pass"
+    },
+    {
+      "detail": "All Day 9 patches are normal-to-correct-trigger rescue interventions.",
+      "name": "causal_direction_mapping",
+      "status": "pass"
+    },
+    {
+      "detail": "Rows name byte-identical committed Day 8 selection and Day 9 procedure inputs.",
+      "name": "committed_frozen_inputs",
+      "status": "pass"
+    },
+    {
+      "detail": "All 26 identities, vector score/NLL tolerances, order invariance, and hook cleanup passed.",
+      "name": "real_checkpoint_preflight",
+      "status": "pass"
+    },
+    {
+      "detail": "The checked-in grouped summary exactly regenerates from raw archives and the frozen plan.",
+      "name": "deterministic_summary_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "All 11 positive suppression denominators and their bootstrap lower bounds are above zero.",
+      "name": "stable_positive_suppression_denominators",
+      "status": "pass"
+    },
+    {
+      "detail": "The frozen 80% rule independently yields highly_distributed at K=16.",
+      "name": "frozen_compactness_rule",
+      "status": "pass"
+    },
+    {
+      "detail": "Complete block-12 output rescue exactly reproduces the normal probe score for every example.",
+      "name": "exact_block12_positive_control",
+      "status": "pass"
+    },
+    {
+      "detail": "Selected/random prefixes exactly follow Day 8; the 17-site control is nonselected and outside layer 11.",
+      "name": "nested_prefixes_and_control_isolation",
+      "status": "pass"
+    },
+    {
+      "detail": "CSV row counts are {'grouped-necessity-macro.csv': 78, 'grouped-necessity-concepts.csv': 286, 'selected-random-contrasts.csv': 30, 'selected-completeness-curve.csv': 10, 'grouped-behavior-summary.csv': 78}.",
+      "name": "summary_table_shapes",
+      "status": "pass"
+    },
+    {
+      "detail": "PNG figure sizes are {'necessity-completeness-curves.png': (4800, 2700), 'grouped-controls-behavior.png': (4800, 2700)}.",
+      "name": "publication_figure_dimensions",
+      "status": "pass"
+    },
+    {
+      "detail": "All 14 pre-audit artifacts exist and match their recorded byte counts and SHA-256 hashes.",
+      "name": "artifact_manifest",
+      "status": "pass"
+    },
+    {
+      "detail": "The safety unlock is absent and every Day 9 artifact records no safety access.",
+      "name": "safety_split_isolation",
+      "status": "pass"
+    }
+  ],
+  "inputs": {
+    "day09-artifacts.json": "cf83689447fc4f3af12eb31b8aee4890b34cac188ab49060e5e8c9465323e2f7",
+    "frozen-group-plan.json": "61f8831e9aab4808b7d62a6c90924509aaaff25af6d1a18f57eafeb3532a7d44",
+    "grouped-behavior-results.jsonl.gz": "fe16a28f2aca4e721620170771e185466d7baab2fcbfeb18e5065aa3bb1a5961",
+    "grouped-example-results.jsonl.gz": "8c94b5ea37031fecb078052fde8d16bb3f11cde821625873652e2bc20b932b76",
+    "grouped-necessity-summary.json": "b9a3625387f66abff1b18f820f0eed84612afe97a3a919f7c6f7ba87dcb36d92",
+    "grouped-preflight.json": "69f8a80f109b8731a76c38f21c400ace797e48d4db97e5b9c01ad763c62c0202"
+  },
+  "procedure": "day09-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false
+}

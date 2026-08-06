@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 9 — In progress
-**Next action:** Run the frozen nested selected/random grouped patches, all-layer-11 diagnostic, and behavior checks.
+**Current phase:** Day 9 — Complete
+**Next action:** Begin Day 10 sufficiency with triggered-to-normal group transplants, matched controls, interpolation, and dose response.
 
 ---
 
@@ -254,28 +254,28 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 9: Test grouped necessity and completeness
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 9: Test Grouped Necessity and Completeness](lab-notes/day-09-test-necessity-and-completeness.md)
-**Evidence:** [Frozen grouped procedure](docs/day-09-grouped-necessity-method.md) and [machine-readable group plan](results/day-09/frozen-group-plan.json).
+**Evidence:** [Grouped necessity result package](results/day-09/README.md), [frozen grouped procedure](docs/day-09-grouped-necessity-method.md), and [21-check audit](results/day-09/grouped-necessity-audit.json).
 
 ### Checklist
 
-- [ ] Construct candidate sets for the top 1, 2, 4, 8, and 16 components.
-- [ ] Construct a set containing all components in the relevant block.
-- [ ] Measure how much total probe suppression each set removes.
-- [ ] Compare each set against randomly sampled matched component sets.
-- [ ] Measure how much each intervention changes model behavior.
-- [ ] Verify that positive and negative probe examples are affected appropriately.
-- [ ] Plot probe-score recovery against the number of intervened components.
-- [ ] Determine whether the mechanism appears compact, moderately distributed, or highly distributed.
+- [x] Construct candidate sets for the top 1, 2, 4, 8, and 16 components.
+- [x] Construct a set containing all components in the relevant block.
+- [x] Measure how much total probe suppression each set removes.
+- [x] Compare each set against randomly sampled matched component sets.
+- [x] Measure how much each intervention changes model behavior.
+- [x] Verify that positive and negative probe examples are affected appropriately.
+- [x] Plot probe-score recovery against the number of intervened components.
+- [x] Determine whether the mechanism appears compact, moderately distributed, or highly distributed.
 
 ### Completion gate
 
-- [ ] Necessity and completeness have been measured as a function of component-set size with matched controls.
+- [x] Necessity and completeness have been measured as a function of component-set size with matched controls.
 
 ### Deliverable
 
-- [ ] Necessity and completeness curves.
+- [x] Necessity and completeness curves.
 
 ## Day 10: Test sufficiency
 

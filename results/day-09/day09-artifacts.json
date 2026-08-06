@@ -1,0 +1,66 @@
+{
+  "files": {
+    "frozen-group-plan.json": {
+      "bytes": 5025,
+      "sha256": "61f8831e9aab4808b7d62a6c90924509aaaff25af6d1a18f57eafeb3532a7d44"
+    },
+    "grouped-behavior-results.jsonl.gz": {
+      "bytes": 20411,
+      "sha256": "fe16a28f2aca4e721620170771e185466d7baab2fcbfeb18e5065aa3bb1a5961"
+    },
+    "grouped-behavior-summary.csv": {
+      "bytes": 8860,
+      "sha256": "610cc4675949617d832b29089070e91c93b392434f133f449e8f30cb05846966"
+    },
+    "grouped-controls-behavior.pdf": {
+      "bytes": 32529,
+      "sha256": "1def46c536f69041fe4e8003d90cee8aba6d308b90345df07623e7fd26ceccc6"
+    },
+    "grouped-controls-behavior.png": {
+      "bytes": 433973,
+      "sha256": "bf6a259136e61cda1b96bb63a7df3c7068dfd25ec528268e0a2af638c283f077"
+    },
+    "grouped-example-results.jsonl.gz": {
+      "bytes": 546094,
+      "sha256": "8c94b5ea37031fecb078052fde8d16bb3f11cde821625873652e2bc20b932b76"
+    },
+    "grouped-necessity-concepts.csv": {
+      "bytes": 53951,
+      "sha256": "8b95821759d562af2f23deabbe36bd425fb8a3c3b1c4d321f816235b6fc1500d"
+    },
+    "grouped-necessity-macro.csv": {
+      "bytes": 8766,
+      "sha256": "e130ba9ce54d8d2d567d302aaf0fe133ad2de83d277c2f11463ca550fafa4041"
+    },
+    "grouped-necessity-summary.json": {
+      "bytes": 575053,
+      "sha256": "b9a3625387f66abff1b18f820f0eed84612afe97a3a919f7c6f7ba87dcb36d92"
+    },
+    "grouped-preflight.json": {
+      "bytes": 4825,
+      "sha256": "69f8a80f109b8731a76c38f21c400ace797e48d4db97e5b9c01ad763c62c0202"
+    },
+    "necessity-completeness-curves.pdf": {
+      "bytes": 32223,
+      "sha256": "4aef2e63a838be0349dcabc405e81b4b950cb02f32125a805806260cba3abe6e"
+    },
+    "necessity-completeness-curves.png": {
+      "bytes": 329628,
+      "sha256": "30e1cfe88899476a7ba844c57eb1482f3ebad812117710a2bc94a90b64b74eed"
+    },
+    "selected-completeness-curve.csv": {
+      "bytes": 2064,
+      "sha256": "2b2448b255fec54558c90a8ee3edfe164db76454eb9c194812caf0efbca33e9f"
+    },
+    "selected-random-contrasts.csv": {
+      "bytes": 2942,
+      "sha256": "724d60b6023ea5a9dcca2ab6137ac0992e141bc22d4a6f06b89b195903a0b1f6"
+    }
+  },
+  "freeze_id": "day04-v1",
+  "generator": "scripts/day09_analyze_grouped_necessity.py",
+  "procedure": "day09-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "validation_used_for_selection": false
+}

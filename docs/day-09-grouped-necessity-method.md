@@ -46,3 +46,23 @@ Report K=16 recovery, all-layer-11 recovery, random controls, negative shifts, a
 CPU tests require exact group-versus-independent agreement, group-order invariance, and no leaked hooks. Real-checkpoint preflight requires exact same-shape identities. Changed-batch vector execution is limited to two grouped jobs and must agree with independent probe scores within 0.002 and response NLL within 0.02.
 
 The evaluator fails closed if a safety-unlock file exists. Uncompressed JSONL files are ignored resumable state; deterministic gzip archives, summaries, tables, figures, and audits are tracked.
+
+## Execution and verification
+
+The frozen plan was committed at `7fa5c9c` before any grouped result. The implementation was committed at `ff2328a` before full execution. Run from the repository root with the recorded project environment:
+
+```bash
+PYTORCH_ENABLE_MPS_FALLBACK=1 PYTHONPATH=src \
+  external/minimal_neural_chameleons/.venv/bin/python \
+  scripts/day09_run_grouped_necessity.py
+
+PYTHONPATH=src external/minimal_neural_chameleons/.venv/bin/python \
+  scripts/day09_analyze_grouped_necessity.py
+
+PYTHONPATH=src external/minimal_neural_chameleons/.venv/bin/python \
+  scripts/day09_verify_grouped_necessity.py
+```
+
+The completed evaluator produced exactly 19,712 probe-score rows and 616 behavior rows. The real-checkpoint preflight passed 26 exact identity checks, exact vectorized score and NLL comparisons, exact group-member-order invariance, and hook cleanup. The independent audit passes 21/21 checks, all 37 repository tests pass, and a second analysis run reproduced the raw archives, summaries, PDFs, and manifest byte for byte.
+
+The complete outcome and interpretation are in [results/day-09](../results/day-09/README.md).
