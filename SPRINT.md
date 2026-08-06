@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 12 — Complete
-**Next action:** Begin Day 13 by authorizing the frozen confirmatory procedure, running and sealing the central locked safety grid, then attacking confounds.
+**Current phase:** Day 13 — In progress
+**Next action:** Implement and preflight the frozen Day 13 evaluator on benign data before committing the safety unlock.
 
 ---
 
@@ -362,9 +362,9 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 13: Open the safety test and attack confounds
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** Create `lab-notes/day-13-open-safety-test.md` when work begins.
-**Evidence:** None yet.
+**Evidence:** [Frozen execution plan](results/day-13/frozen-execution-plan.json), [Decision 0017](decision-log/0017-seal-safety-result-before-confounds.md), and [Day 13 lab note](lab-notes/day-13-open-safety-test.md).
 
 ### Checklist
 
