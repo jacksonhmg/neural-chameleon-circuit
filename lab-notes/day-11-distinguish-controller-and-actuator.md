@@ -29,7 +29,7 @@ Test whether monitor evasion separates into causal stages that recognize monitor
 - Froze `day11-v1` before results, including the 88-example positive subset, five prompt conditions, six-token-region partition, 215 interventions per example, bootstrap procedure, evidence rules, numerical controls, and safety lock.
 - Implemented exact tokenizer-offset source masks and eager-attention contribution capture for every query head in layers 0–12.
 - Implemented causal pre-`o_proj` source-contribution rescue and induction, direct component-output rescue and induction, vectorized execution, deterministic resumption, analysis, visualization, and an independent verifier.
-- Added 45 passing repository tests, including exact source partitioning, contribution reconstruction and identity, frozen-grid expansion, and deterministic synthetic evidence classification.
+- Added four Day 11 tests covering exact source partitioning, contribution reconstruction and identity, frozen-grid expansion, and deterministic synthetic evidence classification; all 45 repository tests pass.
 - Ran the pinned checkpoint over all 88 frozen examples and produced 19,360 unique rows: five baselines and 215 interventions per example.
 - Generated equal-concept 10,000-replicate bootstrap summaries, seven analysis tables, three PNG/PDF figure pairs, and a hashed artifact manifest.
 - Re-ran the full analysis and reproduced every generated pre-audit artifact byte for byte.
