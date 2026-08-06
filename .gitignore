@@ -17,6 +17,9 @@ __pycache__/
 /results/day-08/behavior-example-results.jsonl
 /results/day-09/grouped-example-results.jsonl
 /results/day-09/grouped-behavior-results.jsonl
+/results/day-10/sufficiency-example-results.jsonl
+/results/day-10/dose-response-results.jsonl
+/results/day-10/sufficiency-behavior-results.jsonl
 
 # Local operating-system files
 .DS_Store

@@ -1,0 +1,229 @@
+{
+  "activation_norms": {
+    "convex_interpolation_bound": "per-site response-masked RMS must be no more than 1.001 times the larger normal/triggered endpoint RMS",
+    "exact_transplant_source": "naturally occurring correctly triggered activation from the same example",
+    "reported_statistic": "mean and maximum across member-site response-masked RMS values per example"
+  },
+  "behavior": {
+    "examples_per_concept_class": 2,
+    "metric": "patched minus normal-destination response-token mean NLL",
+    "selection_rule": "two lowest SHA-256 values of day08-behavior:{example_id} per concept and class"
+  },
+  "data_scope": {
+    "dose_response": "16 frozen positive examples per concept, 176 total",
+    "exact_probe_scores": "all 1408 discovery and validation examples, both labels",
+    "safety": "locked and forbidden"
+  },
+  "dose_response": {
+    "alphas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "evaluated_group_ids": [
+      "selected_single_rank1",
+      "selected_k16",
+      "random_k16",
+      "resid_post_layer08_context",
+      "selected_k16_plus_resid_post_layer08",
+      "resid_post_layer12_positive_control"
+    ],
+    "interpolation": "normal + alpha * (correct_trigger - normal)",
+    "selection_rule": "16 lowest SHA-256 values of day10-dose:{example_id} per concept among positive examples"
+  },
+  "evidence_rules": {
+    "dose_response_supported": "selected K16 equal-concept macro point estimates are nondecreasing over alpha 0, 0.25, 0.5, 0.75, 1 on both discovery and validation",
+    "near_complete_sufficiency": "supported sufficiency and selected K16 induction point estimate at least 0.9 on both discovery and validation",
+    "partial_sufficiency": "supported sufficiency that does not meet the near-complete rule",
+    "sufficiency_supported": "selected K16 induction and selected-minus-random K16 95% intervals are strictly above zero on both discovery and validation"
+  },
+  "exact_transplants": [
+    {
+      "candidate_ids": [
+        "layer_11.mlp"
+      ],
+      "group_id": "selected_single_rank1",
+      "group_role": "selected_strong_individual",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_11.head_08"
+      ],
+      "group_id": "selected_single_rank2",
+      "group_role": "selected_strong_individual",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_10.head_12"
+      ],
+      "group_id": "selected_single_rank3",
+      "group_role": "selected_strong_individual",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_11.head_09"
+      ],
+      "group_id": "selected_single_rank4",
+      "group_role": "selected_strong_individual",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_10.head_13"
+      ],
+      "group_id": "random_single_rank1",
+      "group_role": "random_individual_control",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_09.head_15"
+      ],
+      "group_id": "random_single_rank2",
+      "group_role": "random_individual_control",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_10.head_14"
+      ],
+      "group_id": "random_single_rank3",
+      "group_role": "random_individual_control",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_11.head_00"
+      ],
+      "group_id": "random_single_rank4",
+      "group_role": "random_individual_control",
+      "residual_sites": [],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_11.mlp",
+        "layer_11.head_08",
+        "layer_10.head_12",
+        "layer_11.head_09",
+        "layer_12.mlp",
+        "layer_10.mlp",
+        "layer_10.head_02",
+        "layer_09.head_11",
+        "layer_12.head_12",
+        "layer_09.mlp",
+        "layer_12.head_03",
+        "layer_09.head_04",
+        "layer_11.head_14",
+        "layer_12.head_02",
+        "layer_09.head_13",
+        "layer_11.head_15"
+      ],
+      "group_id": "selected_k16",
+      "group_role": "complete_selected_set",
+      "residual_sites": [],
+      "set_size": 16
+    },
+    {
+      "candidate_ids": [
+        "layer_10.head_13",
+        "layer_09.head_15",
+        "layer_10.head_14",
+        "layer_11.head_00",
+        "layer_12.head_11",
+        "layer_10.head_08",
+        "layer_12.head_05",
+        "layer_09.head_07",
+        "layer_11.head_05",
+        "layer_11.head_03",
+        "layer_12.head_15",
+        "layer_10.head_04",
+        "layer_09.head_09",
+        "layer_10.head_03",
+        "layer_11.head_02",
+        "layer_11.head_06"
+      ],
+      "group_id": "random_k16",
+      "group_role": "matched_random_set",
+      "residual_sites": [],
+      "set_size": 16
+    },
+    {
+      "candidate_ids": [],
+      "group_id": "resid_post_layer08_context",
+      "group_role": "surrounding_residual_context",
+      "residual_sites": [
+        "resid_post_layer_08"
+      ],
+      "set_size": 1
+    },
+    {
+      "candidate_ids": [
+        "layer_11.mlp",
+        "layer_11.head_08",
+        "layer_10.head_12",
+        "layer_11.head_09",
+        "layer_12.mlp",
+        "layer_10.mlp",
+        "layer_10.head_02",
+        "layer_09.head_11",
+        "layer_12.head_12",
+        "layer_09.mlp",
+        "layer_12.head_03",
+        "layer_09.head_04",
+        "layer_11.head_14",
+        "layer_12.head_02",
+        "layer_09.head_13",
+        "layer_11.head_15"
+      ],
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "group_role": "selected_set_plus_surrounding_residual",
+      "residual_sites": [
+        "resid_post_layer_08"
+      ],
+      "set_size": 17
+    },
+    {
+      "candidate_ids": [],
+      "group_id": "resid_post_layer12_positive_control",
+      "group_role": "positive_control",
+      "residual_sites": [
+        "resid_post_layer_12"
+      ],
+      "set_size": 1
+    }
+  ],
+  "freeze_id": "day04-v1",
+  "metrics": {
+    "behavior": "patched minus normal-destination response-token mean NLL",
+    "negative_score_shift": "(mean(normal negative)-mean(patched negative))/positive suppression denominator",
+    "positive_induction": "(mean(normal positive)-mean(patched positive))/(mean(normal positive)-mean(triggered positive))",
+    "uncertainty": "10000 paired percentile-bootstrap replicates with seed 42 and equal concept macro weighting"
+  },
+  "numerical_controls": {
+    "group_member_order": "exact",
+    "interpolation_endpoints": "exact at alpha 0 and alpha 1",
+    "maximum_vectorized_jobs": 2,
+    "real_bf16_nll_tolerance": 0.02,
+    "real_bf16_probe_score_tolerance": 0.002,
+    "same_shape_identity": "exact"
+  },
+  "procedure": "day10-v1",
+  "source_component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+  "source_day09_plan_sha256": "61f8831e9aab4808b7d62a6c90924509aaaff25af6d1a18f57eafeb3532a7d44",
+  "status": "frozen-before-sufficiency-results",
+  "strong_component_count": 4,
+  "strong_component_rule": "first four identities in the Day 8 discovery-frozen order"
+}
