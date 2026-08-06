@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 8 — Complete
-**Next action:** Begin Day 9 grouped necessity and completeness using the frozen Day 8 prefixes and matched random component sets.
+**Current phase:** Day 9 — In progress
+**Next action:** Run the frozen nested selected/random grouped patches, all-layer-11 diagnostic, and behavior checks.
 
 ---
 
@@ -254,9 +254,9 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 9: Test grouped necessity and completeness
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-09-test-necessity-and-completeness.md` when work begins.
-**Evidence:** None yet.
+**Status:** In progress
+**Lab note:** [Day 9: Test Grouped Necessity and Completeness](lab-notes/day-09-test-necessity-and-completeness.md)
+**Evidence:** [Frozen grouped procedure](docs/day-09-grouped-necessity-method.md) and [machine-readable group plan](results/day-09/frozen-group-plan.json).
 
 ### Checklist
 

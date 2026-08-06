@@ -1,0 +1,165 @@
+{
+  "behavior": {
+    "examples_per_concept_class": 2,
+    "metric": "patched minus correct-trigger destination response-token mean NLL",
+    "selection_rule": "two lowest SHA-256 values of day08-behavior:{example_id} per concept and class"
+  },
+  "block_control": {
+    "candidate_ids": [
+      "layer_10.head_13",
+      "layer_09.head_15",
+      "layer_10.head_14",
+      "layer_12.head_11",
+      "layer_10.head_08",
+      "layer_12.head_05",
+      "layer_09.head_07",
+      "layer_12.head_15",
+      "layer_10.head_04",
+      "layer_09.head_09",
+      "layer_10.head_03",
+      "layer_10.head_15",
+      "layer_09.head_05",
+      "layer_10.head_10",
+      "layer_09.head_01",
+      "layer_09.head_06",
+      "layer_10.head_06"
+    ],
+    "group_id": "control_outside_layer11_k17",
+    "selection_rule": "first 17 by ascending SHA-256 of 42:{candidate_id}, restricted to candidates outside frozen top 16 and outside layer 11",
+    "type_matching_limit": "all four eligible MLP candidates are in the frozen top 16, so this control is size- and eligibility-matched but contains heads only"
+  },
+  "classification_rule": {
+    "compact": "selected K<=4 reaches at least 80% of selected K=16 rescue on both discovery and validation macro point estimates",
+    "highly_distributed": "selected K=8 fails to reach at least 80% of selected K=16 rescue on either discovery or validation",
+    "moderately_distributed": "not compact, and selected K=8 reaches at least 80% of selected K=16 rescue on both discovery and validation",
+    "report_separately": "absolute K=16 and all-layer-11 recovery versus the full block-12 positive control"
+  },
+  "data_scope": {
+    "behavior": "44 frozen benign examples across all concepts and both labels",
+    "probe_scores": "all 1408 discovery and validation examples, both labels",
+    "safety": "locked and forbidden"
+  },
+  "freeze_id": "day04-v1",
+  "full_block_group": {
+    "candidate_ids": [
+      "layer_11.head_00",
+      "layer_11.head_01",
+      "layer_11.head_02",
+      "layer_11.head_03",
+      "layer_11.head_04",
+      "layer_11.head_05",
+      "layer_11.head_06",
+      "layer_11.head_07",
+      "layer_11.head_08",
+      "layer_11.head_09",
+      "layer_11.head_10",
+      "layer_11.head_11",
+      "layer_11.head_12",
+      "layer_11.head_13",
+      "layer_11.head_14",
+      "layer_11.head_15",
+      "layer_11.mlp"
+    ],
+    "group_id": "all_layer11_components",
+    "interpretation": "complete only within the Day 8 candidate vocabulary at layer 11"
+  },
+  "metrics": {
+    "negative_score_shift": "(mean(patched negative)-mean(triggered negative))/positive suppression denominator",
+    "positive_recovery": "(mean(patched positive)-mean(triggered positive))/(mean(normal positive)-mean(triggered positive))",
+    "uncertainty": "10000 paired percentile-bootstrap replicates with seed 42 and equal concept macro weighting"
+  },
+  "positive_control": {
+    "group_id": "resid_post_layer12_positive_control",
+    "site": "complete block output at zero-based layer 12"
+  },
+  "procedure": "day09-v1",
+  "random_prefixes": {
+    "1": [
+      "layer_10.head_13"
+    ],
+    "2": [
+      "layer_10.head_13",
+      "layer_09.head_15"
+    ],
+    "4": [
+      "layer_10.head_13",
+      "layer_09.head_15",
+      "layer_10.head_14",
+      "layer_11.head_00"
+    ],
+    "8": [
+      "layer_10.head_13",
+      "layer_09.head_15",
+      "layer_10.head_14",
+      "layer_11.head_00",
+      "layer_12.head_11",
+      "layer_10.head_08",
+      "layer_12.head_05",
+      "layer_09.head_07"
+    ],
+    "16": [
+      "layer_10.head_13",
+      "layer_09.head_15",
+      "layer_10.head_14",
+      "layer_11.head_00",
+      "layer_12.head_11",
+      "layer_10.head_08",
+      "layer_12.head_05",
+      "layer_09.head_07",
+      "layer_11.head_05",
+      "layer_11.head_03",
+      "layer_12.head_15",
+      "layer_10.head_04",
+      "layer_09.head_09",
+      "layer_10.head_03",
+      "layer_11.head_02",
+      "layer_11.head_06"
+    ]
+  },
+  "schema_version": 1,
+  "selected_prefixes": {
+    "1": [
+      "layer_11.mlp"
+    ],
+    "2": [
+      "layer_11.mlp",
+      "layer_11.head_08"
+    ],
+    "4": [
+      "layer_11.mlp",
+      "layer_11.head_08",
+      "layer_10.head_12",
+      "layer_11.head_09"
+    ],
+    "8": [
+      "layer_11.mlp",
+      "layer_11.head_08",
+      "layer_10.head_12",
+      "layer_11.head_09",
+      "layer_12.mlp",
+      "layer_10.mlp",
+      "layer_10.head_02",
+      "layer_09.head_11"
+    ],
+    "16": [
+      "layer_11.mlp",
+      "layer_11.head_08",
+      "layer_10.head_12",
+      "layer_11.head_09",
+      "layer_12.mlp",
+      "layer_10.mlp",
+      "layer_10.head_02",
+      "layer_09.head_11",
+      "layer_12.head_12",
+      "layer_09.mlp",
+      "layer_12.head_03",
+      "layer_09.head_04",
+      "layer_11.head_14",
+      "layer_12.head_02",
+      "layer_09.head_13",
+      "layer_11.head_15"
+    ]
+  },
+  "source_component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+  "status": "frozen-before-grouped-results"
+}
