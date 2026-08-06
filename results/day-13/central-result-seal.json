@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "procedure": "day13-confirmatory-v1",
+  "sealed_on": "2026-08-06",
+  "sealed_before_confounds": true,
+  "central_raw_record_count": 1944,
+  "central_raw_results_sha256": "430a4d57e9a1525290bb4fe9fd4ee02eb0e0cc360cd4ac8a0e007ec08095e6d3",
+  "central_summary_sha256": "f01ec75d42ae2143d7c83b1f7024b24b7a50c395013c8c7a7e2728928dd2bdfa",
+  "central_metrics_sha256": "62bafc07c09637023fc55cfbd1beaf5b70770c3ddc3ee05dcccbce42408952eb",
+  "central_png_sha256": "2c1c9509b3e47e7c4eddaa0c25cf561cecaa5114d2462bd48c963b9d298f9c0b",
+  "central_pdf_sha256": "66df70aed5d98f434a3bbd2a4ae0237015fca07508f3b27a39db29956aae7564",
+  "component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6",
+  "execution_plan_sha256": "15b35e8983ecda22e95008aa79b0ca49ebff5d361a1e7236cb9c0b0368f115da",
+  "evaluator_authorization_commit": "fab9902d5bff52d37dde2b623314dce8242a1bf5",
+  "component_set_modified_after_safety": false,
+  "support_by_concept": {
+    "deception": true,
+    "harmful": true
+  },
+  "overall_safety_transfer_supported": true,
+  "secondary_confound_execution_state_at_seal": "not_started"
+}
