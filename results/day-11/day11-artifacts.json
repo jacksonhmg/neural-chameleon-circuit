@@ -1,0 +1,78 @@
+{
+  "files": {
+    "baseline-condition-summary.csv": {
+      "bytes": 1080,
+      "sha256": "b25b29aa5db7097db60530a52b6c3f01c0c6f686ab231b361c15b5afa9188a0c"
+    },
+    "controller-actuator-concepts.csv": {
+      "bytes": 416091,
+      "sha256": "71c8c3664b17c1958380d54771c77f1b743339b182a31c7f1e6526935f563c71"
+    },
+    "controller-actuator-macro.csv": {
+      "bytes": 122967,
+      "sha256": "47e2de97f283b1a3e5aa83975bf6f116cf48ed579896814f1457532b4c5d8bde"
+    },
+    "controller-actuator-preflight.json": {
+      "bytes": 8419,
+      "sha256": "53017592881ceed7a27408bd004c3ee3f0fdc681a59bbc55822b67426e12356c"
+    },
+    "controller-actuator-results.jsonl.gz": {
+      "bytes": 1407554,
+      "sha256": "2721682ff5ce055408b1b5ccb7675e62320f6d6dfac6eb9cba67fcecd00e5924"
+    },
+    "controller-actuator-summary.json": {
+      "bytes": 3122220,
+      "sha256": "832356ec7beb5c349f64c2a3b777db93001b990d0c6b5ad25a138c69f997eced"
+    },
+    "direct-output-summary.csv": {
+      "bytes": 10306,
+      "sha256": "e88d7ffdaf48c9fc4b0ed3b1cd5fedcf6aa1251bc3a8ab46921095bcbdab9b58"
+    },
+    "frozen-controller-actuator-plan.json": {
+      "bytes": 7206,
+      "sha256": "c594c8de6ef9892a462cb2a2d4b9a067c140ebd40813269dce10f0ac845d9cd5"
+    },
+    "individual-head-source.csv": {
+      "bytes": 18316,
+      "sha256": "ed3298d5b588c5703f85373515c2c4e3becfeb0b81f7c1d126abb78b42794c45"
+    },
+    "layer-source-contributions.pdf": {
+      "bytes": 36774,
+      "sha256": "9e18e742ab4c0d8e19d6b5c3ad823503b6be9ff13a2e95dc59952020d0fd0b61"
+    },
+    "layer-source-contributions.png": {
+      "bytes": 1091925,
+      "sha256": "b4d638579a423f79f6e6e80c47e4d08957023e483f7387c84372adbd013772b3"
+    },
+    "layer-source-curves.csv": {
+      "bytes": 26885,
+      "sha256": "777d0bb388e0afec12e00d0796d5778cc93a0212f80a4380457ba095e40fa196"
+    },
+    "provisional-controller-actuator-mechanism.pdf": {
+      "bytes": 31281,
+      "sha256": "173f9e14340016b50bc482964bededf74c6cf1be13857374b5a5359368bdaa01"
+    },
+    "provisional-controller-actuator-mechanism.png": {
+      "bytes": 425686,
+      "sha256": "1266134ac6ce51483b1bfe3336bed0e080e5cf84c291e804dcd5bb4b46c5b256"
+    },
+    "selected-head-source-roles.pdf": {
+      "bytes": 36306,
+      "sha256": "15d926ec393ff679a629a71f6740fdf5213aee288dc975e9f8614defcfa47d6f"
+    },
+    "selected-head-source-roles.png": {
+      "bytes": 387641,
+      "sha256": "dfc90c1f9fde6d22cdb13ee7f39f3b69b038c84e78728c1d3158c58d7912ed1e"
+    },
+    "selected-random-source-contrasts.csv": {
+      "bytes": 4571,
+      "sha256": "6fa4421280569f9f4d904f4fcaa6eaa513a834625960c5a6859de4e2fc2fecec"
+    }
+  },
+  "freeze_id": "day04-v1",
+  "generator": "scripts/day11_analyze_controller_actuator.py",
+  "procedure": "day11-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "validation_used_for_selection": false
+}

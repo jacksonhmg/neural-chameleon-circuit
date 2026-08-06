@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 11 — In progress
-**Next action:** Implement and run the frozen source-position controller–actuator procedure.
+**Current phase:** Day 12 — Not started
+**Next action:** Begin Day 12 and freeze the benign cross-concept transfer procedure before new results.
 
 ---
 
@@ -304,29 +304,29 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 11: Distinguish the controller from the actuator
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 11: Distinguish the Controller from the Actuator](lab-notes/day-11-distinguish-controller-and-actuator.md)
-**Evidence:** [Frozen controller–actuator method](docs/day-11-controller-actuator-method.md) and [machine-readable plan](results/day-11/frozen-controller-actuator-plan.json).
+**Evidence:** [Day 11 result package](results/day-11/README.md), [frozen controller–actuator method](docs/day-11-controller-actuator-method.md), [machine-readable plan](results/day-11/frozen-controller-actuator-plan.json), and [independent audit](results/day-11/controller-actuator-audit.json).
 
 ### Checklist
 
-- [ ] Test for a stage that recognizes monitoring language.
-- [ ] Test for a stage that identifies the concept named in the trigger.
-- [ ] Test for a stage that applies the internal concealment transformation.
-- [ ] Test which components depend on the monitoring-language portion of the instruction.
-- [ ] Test which components depend on the named concept token.
-- [ ] Test which components depend on other prompt tokens.
-- [ ] Test which components depend on response-token processing.
-- [ ] For attention heads, patch source-position-specific contributions rather than relying only on attention visualizations.
-- [ ] For MLPs, test whether their outputs directly contribute to the anti-probe activation shift.
+- [x] Test for a stage that recognizes monitoring language.
+- [x] Test for a stage that identifies the concept named in the trigger.
+- [x] Test for a stage that applies the internal concealment transformation.
+- [x] Test which components depend on the monitoring-language portion of the instruction.
+- [x] Test which components depend on the named concept token.
+- [x] Test which components depend on other prompt tokens.
+- [x] Test which components depend on response-token processing.
+- [x] For attention heads, patch source-position-specific contributions rather than relying only on attention visualizations.
+- [x] For MLPs, test whether their outputs directly contribute to the anti-probe activation shift.
 
 ### Completion gate
 
-- [ ] The proposed controller/actuator decomposition is supported by causal interventions at the relevant positions and components.
+- [x] The proposed controller/actuator decomposition is supported by causal interventions at the relevant positions and components.
 
 ### Deliverable
 
-- [ ] Provisional causal mechanism diagram supported by interventions.
+- [x] Provisional causal mechanism diagram supported by interventions.
 
 ## Day 12: Test benign cross-concept transfer
 

@@ -1,0 +1,342 @@
+{
+  "block12_endpoint_checks": [
+    {
+      "direction": "rescue",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "direction": "induction",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    }
+  ],
+  "contribution_vs_standard_baseline_checks": [
+    {
+      "condition": "normal",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "correct_trigger",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    }
+  ],
+  "direct_identity_checks": [
+    {
+      "condition": "normal",
+      "direct_group_id": "selected_attention_12",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "random_attention_12",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "random_attention_16",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "selected_mlp_4",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "layer_09.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "layer_10.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "layer_11.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "layer_12.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "selected_k16",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "direct_group_id": "resid_post_layer12_positive_control",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "selected_attention_12",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "random_attention_12",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "random_attention_16",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "selected_mlp_4",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "layer_09.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "layer_10.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "layer_11.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "layer_12.mlp",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "selected_k16",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "direct_group_id": "resid_post_layer12_positive_control",
+      "exact": true,
+      "max_abs_score_difference": 0.0
+    }
+  ],
+  "direct_vector_checks": [
+    {
+      "intervention_id": "direct.selected_mlp_4.rescue",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "intervention_id": "direct.selected_k16.rescue",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    }
+  ],
+  "examples": [
+    "discovery-HTML-pos-001",
+    "discovery-HTML-pos-011"
+  ],
+  "implementation_commit": "af274b870d055091b330eb9cb43267e4e9f800e8",
+  "maximum_head_reconstruction_abs_error": 1.9073486328125e-06,
+  "procedure": "day11-v1",
+  "reconstruction_tolerance": 0.02,
+  "registered_hook_count_after_checks": 0,
+  "response_pairing_exact": true,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "source_group_order_check": {
+    "exact": true,
+    "max_abs_score_difference": 0.0
+  },
+  "source_identity_checks": [
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "monitoring_language"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "named_concept"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "trigger_other"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "original_prompt"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "template"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "response"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "trigger_instruction"
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "all_prompt"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "monitoring_language"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "named_concept"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "trigger_other"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "original_prompt"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "template"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "response"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "trigger_instruction"
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "max_abs_score_difference": 0.0,
+      "source_group": "all_prompt"
+    }
+  ],
+  "source_partition_checks": [
+    {
+      "complete": true,
+      "condition": "normal",
+      "exclusive": true,
+      "per_example_counts": [
+        {
+          "monitoring_language": 0,
+          "named_concept": 0,
+          "original_prompt": 25,
+          "response": 41,
+          "template": 9,
+          "trigger_other": 0
+        },
+        {
+          "monitoring_language": 0,
+          "named_concept": 0,
+          "original_prompt": 24,
+          "response": 252,
+          "template": 9,
+          "trigger_other": 0
+        }
+      ]
+    },
+    {
+      "complete": true,
+      "condition": "correct_trigger",
+      "exclusive": true,
+      "per_example_counts": [
+        {
+          "monitoring_language": 6,
+          "named_concept": 1,
+          "original_prompt": 25,
+          "response": 41,
+          "template": 9,
+          "trigger_other": 1
+        },
+        {
+          "monitoring_language": 6,
+          "named_concept": 1,
+          "original_prompt": 24,
+          "response": 252,
+          "template": 9,
+          "trigger_other": 1
+        }
+      ]
+    }
+  ],
+  "source_vector_checks": [
+    {
+      "intervention_id": "group.selected_attention_12.monitoring_language.rescue",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "intervention_id": "group.selected_attention_12.response.rescue",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    }
+  ],
+  "status": "pass",
+  "validation_split_accessed": false
+}

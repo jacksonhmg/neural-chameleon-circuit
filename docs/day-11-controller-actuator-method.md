@@ -23,6 +23,8 @@ For every full-trigger and normal run, use the model's eager-attention probabili
 
 Character offsets from the pinned fast tokenizer assign prompt tokens. The masks must be mutually exclusive and cover every valid prompt and response position. The sum of six region contributions must reconstruct the captured pre-output-projection head vector within 0.02 maximum absolute error on the real checkpoint.
 
+The implementation evaluates atomic attention contributions in float32. Gemma rounds the complete BF16 attention matmul once, while separately evaluated atomic matmuls otherwise round once per region. The remaining whole-matmul closure term is therefore assigned to the always-present chat-template channel. This keeps the partition exactly additive while leaving the three hypothesis-critical monitoring-language, named-concept, and response channels unchanged. Template-channel results are descriptive in light of this numerical assignment.
+
 For source `S`, destination `D`, head `h`, and region set `R`, apply at each valid response position:
 
 ```text
@@ -54,3 +56,17 @@ The provisional diagram may show supported and unsupported arrows separately. A 
 The expected raw result contains 19,360 rows: 88 examples times five baselines and 215 interventions. Preflight requires exact identity patches, contribution-mask partitioning, head reconstruction within tolerance, vectorized equivalence, group-order invariance, standard direct-patch equivalence, and zero leaked hooks.
 
 This positive-only mechanistic subset does not replace the all-benign necessity or sufficiency results, test free generation, establish semantic preservation, or authorize safety access.
+
+## Result
+
+The complete 19,360-row grid supports all four frozen stages in both discovery and validation. Selected-attention monitoring-language, named-concept, and response-source rescue effects and their selected-minus-random contrasts all have 95% intervals strictly above zero. The selected four-MLP direct-output group has strictly positive rescue and induction intervals in both scopes. The official classification is therefore `supported_controller_actuator_decomposition`.
+
+The monitoring-language contribution is statistically resolved but small: 0.00062 [0.00042, 0.00086] on discovery and 0.00365 [0.00202, 0.00555] on validation. Named-concept rescue is much larger at 0.309 [0.289, 0.336] and 0.108 [0.099, 0.116]. Prior-response-source rescue is 0.165 [0.148, 0.184] and 0.135 [0.121, 0.149]. This supports distinct causal source channels without implying equal effect sizes.
+
+The all-head layer scans first resolve monitoring effects at layers 1/6, concept effects at layers 1/3, and response-source effects at layer 6/6 for discovery/validation. Their peaks occur at layer 6 for monitoring, layers 10/8 for the concept, and layer 11 for response sources. These are intervention onsets and peaks at the tested granularity, not semantic-computation boundaries.
+
+The selected MLP group rescues 0.645 [0.599, 0.687] and induces 0.525 [0.488, 0.561] on discovery; validation values are 0.370 [0.339, 0.397] and 0.433 [0.410, 0.456]. Direct selected-attention effects are also large, while matched random attention controls remain near zero or move in the wrong direction. The exact block-12 endpoint is 1.0 for every example in both directions.
+
+Real-checkpoint preflight records a maximum reconstruction error of 0.00000191, 16 exact source identities, two source vector checks, 20 exact direct identities, two direct vector checks, two exact block-12 endpoints, and zero retained hooks. The independent audit passes 25/25 checks, a second analysis run reproduces every pre-audit artifact byte for byte, and safety remains locked.
+
+The complete interpretation, tables, figures, and artifact links are in the [Day 11 result package](../results/day-11/README.md).

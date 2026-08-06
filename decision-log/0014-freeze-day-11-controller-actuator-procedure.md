@@ -53,3 +53,13 @@ The exact grid contains 220 conditions per example and 19,360 rows. Require excl
 - Counterfactual prompt baselines provide useful context but are wording-dependent and are not treated as the primary causal result.
 - MLP tests establish whether response-position MLP outputs directly contribute to the anti-probe shift; they do not identify which internal MLP features encode the transformation.
 - The 88-example positive-only scope is a mechanistic decomposition, not a new broad behavioral or safety evaluation.
+
+## Outcome
+
+The frozen procedure was executed without changing its example set, interventions, evidence rules, bootstrap, or safety scope. All four stage rules pass in discovery and validation, yielding `supported_controller_actuator_decomposition`.
+
+The numerical implementation evaluates source contributions in float32 and assigns the one-time whole-BF16-matmul closure term to the always-present template channel. This was required to meet the frozen reconstruction bound without contaminating the monitoring-language, named-concept, or response channels used by the primary evidence rules. The final maximum preflight reconstruction error is 0.00000191.
+
+Because repeated early-stopped checkpoint forwards retain MPS memory until process exit, the grid ran in committed, process-bounded two-example batches with exact record-key resumption. This changed execution scheduling only: the final 19,360 rows contain exactly one result for every frozen example-condition key and all name the same evaluator commit.
+
+The complete package passes a 25-check independent audit, reproduces generated artifacts byte for byte, and leaves safety locked. See the [Day 11 result package](../results/day-11/README.md).

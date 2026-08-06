@@ -1,0 +1,142 @@
+{
+  "check_count": 25,
+  "checks": [
+    {
+      "detail": "Raw archive contains 19360 rows.",
+      "name": "raw_record_count",
+      "status": "pass"
+    },
+    {
+      "detail": "Every example/record key is unique.",
+      "name": "unique_raw_keys",
+      "status": "pass"
+    },
+    {
+      "detail": "The archive uses exactly the eight frozen SHA-selected positives per benign concept.",
+      "name": "frozen_positive_subset",
+      "status": "pass"
+    },
+    {
+      "detail": "Every one of 88 examples has five baselines and all 215 interventions.",
+      "name": "complete_220_condition_grid",
+      "status": "pass"
+    },
+    {
+      "detail": "Raw family counts are {'baseline': 440, 'direct_response_output': 1760, 'selected_random_source_group': 2816, 'individual_selected_head': 6336, 'layer_source_scan': 8008}.",
+      "name": "frozen_family_counts",
+      "status": "pass"
+    },
+    {
+      "detail": "Every row matches its frozen example, label, probe, correct trigger, and irrelevant trigger.",
+      "name": "frozen_metadata_and_triggers",
+      "status": "pass"
+    },
+    {
+      "detail": "All rows name the pinned checkpoint, procedure, and exact Day 11 plan.",
+      "name": "pinned_model_procedure_and_plan",
+      "status": "pass"
+    },
+    {
+      "detail": "All 220 conditions reuse one response-token sequence per example.",
+      "name": "exact_response_pairing",
+      "status": "pass"
+    },
+    {
+      "detail": "Every raw probe score is finite and in [0, 1].",
+      "name": "finite_bounded_probe_scores",
+      "status": "pass"
+    },
+    {
+      "detail": "Every intervention exactly reproduces its frozen definition and ordered membership hash.",
+      "name": "exact_frozen_intervention_membership",
+      "status": "pass"
+    },
+    {
+      "detail": "Rescue and induction rows use the frozen source/destination mapping.",
+      "name": "causal_direction_mapping",
+      "status": "pass"
+    },
+    {
+      "detail": "Rows name byte-identical committed inputs, Day 11 procedure, and evaluator.",
+      "name": "committed_inputs_and_implementation",
+      "status": "pass"
+    },
+    {
+      "detail": "Masks, reconstruction, identities, vectors, order, direct patches, endpoints, and hook cleanup pass.",
+      "name": "real_checkpoint_preflight",
+      "status": "pass"
+    },
+    {
+      "detail": "Normal trigger-only counts are zero and every full trigger has monitoring, concept, prompt, and response tokens.",
+      "name": "raw_source_partition_metadata",
+      "status": "pass"
+    },
+    {
+      "detail": "The checked-in summary exactly regenerates from raw rows and the frozen plan.",
+      "name": "deterministic_summary_regeneration",
+      "status": "pass"
+    },
+    {
+      "detail": "All 11 concept denominators and bootstrap lower bounds are positive.",
+      "name": "stable_positive_denominators",
+      "status": "pass"
+    },
+    {
+      "detail": "The correct-trigger baseline is exactly one by the frozen normalization.",
+      "name": "exact_full_trigger_baseline_fraction",
+      "status": "pass"
+    },
+    {
+      "detail": "The four frozen stage rules independently yield supported_controller_actuator_decomposition.",
+      "name": "frozen_controller_actuator_rules",
+      "status": "pass"
+    },
+    {
+      "detail": "Every block-12 rescue/induction exactly reproduces its natural source baseline score.",
+      "name": "exact_block12_endpoints",
+      "status": "pass"
+    },
+    {
+      "detail": "Selected attention/MLP groups and random prefixes exactly reproduce the Day 8 freeze.",
+      "name": "frozen_component_structure",
+      "status": "pass"
+    },
+    {
+      "detail": "Every layer/source scan contains all 16 query heads at exactly one frozen layer.",
+      "name": "complete_layer_head_scans",
+      "status": "pass"
+    },
+    {
+      "detail": "CSV row counts are {'baseline-condition-summary.csv': 15, 'controller-actuator-macro.csv': 645, 'selected-random-source-contrasts.csv': 48, 'layer-source-curves.csv': 273, 'individual-head-source.csv': 144, 'direct-output-summary.csv': 60, 'controller-actuator-concepts.csv': 2365}.",
+      "name": "summary_table_shapes",
+      "status": "pass"
+    },
+    {
+      "detail": "PNG dimensions are {'layer-source-contributions.png': (4800, 2700), 'selected-head-source-roles.png': (4800, 2700), 'provisional-controller-actuator-mechanism.png': (4800, 2700)}.",
+      "name": "publication_figure_dimensions",
+      "status": "pass"
+    },
+    {
+      "detail": "All 17 pre-audit artifacts match their recorded byte sizes and SHA-256 hashes.",
+      "name": "artifact_manifest",
+      "status": "pass"
+    },
+    {
+      "detail": "The safety unlock is absent and all Day 11 artifacts record no safety access.",
+      "name": "safety_split_isolation",
+      "status": "pass"
+    }
+  ],
+  "inputs": {
+    "controller-actuator-preflight.json": "53017592881ceed7a27408bd004c3ee3f0fdc681a59bbc55822b67426e12356c",
+    "controller-actuator-results.jsonl.gz": "2721682ff5ce055408b1b5ccb7675e62320f6d6dfac6eb9cba67fcecd00e5924",
+    "controller-actuator-summary.json": "832356ec7beb5c349f64c2a3b777db93001b990d0c6b5ad25a138c69f997eced",
+    "day11-artifacts.json": "17f34dca21359fdeaa22e534ff1dce6c6d26e0cef302dd41f26ab83d307926d8",
+    "frozen-controller-actuator-plan.json": "c594c8de6ef9892a462cb2a2d4b9a067c140ebd40813269dce10f0ac845d9cd5"
+  },
+  "procedure": "day11-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false
+}

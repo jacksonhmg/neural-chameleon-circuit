@@ -256,8 +256,13 @@ def render_mechanism(summary: MappingLike, output_dir: Path) -> None:
         axis.text(x + width / 2, y + height * 0.66, title, ha="center", va="center", fontsize=13, fontweight="bold")
         axis.text(x + width / 2, y + height * 0.30, detail, ha="center", va="center", fontsize=9, wrap=True)
 
-    def arrow(start: tuple[float, float], stop: tuple[float, float], label: str, supported: bool):
-        color = "#367A4A" if supported else "#A54848"
+    def arrow(
+        start: tuple[float, float],
+        stop: tuple[float, float],
+        label: str,
+        supported: bool | None,
+    ):
+        color = "#367A4A" if supported is True else "#A54848" if supported is False else "#687386"
         axis.add_patch(FancyArrowPatch(start, stop, arrowstyle="-|>", mutation_scale=18, linewidth=2.2, color=color))
         axis.text((start[0]+stop[0])/2, (start[1]+stop[1])/2 + 0.035, label, ha="center", fontsize=8, color=color)
 
@@ -275,11 +280,11 @@ def render_mechanism(summary: MappingLike, output_dir: Path) -> None:
 
     def pair_value(group: str) -> str:
         values = [macro[(scope, f"group.selected_attention_12.{group}.rescue")]["fraction"]["estimate"] for scope in ("discovery", "validation")]
-        return f"D {values[0]:.2f} · V {values[1]:.2f}"
+        return f"D {values[0]:.3f} · V {values[1]:.3f}"
 
     arrow((0.20, 0.71), (0.30, 0.58), pair_value("monitoring_language"), monitor)
     arrow((0.20, 0.43), (0.30, 0.52), pair_value("named_concept"), concept)
-    arrow((0.20, 0.15), (0.30, 0.46), pair_value("original_prompt"), True)
+    arrow((0.20, 0.15), (0.30, 0.46), pair_value("original_prompt"), None)
     arrow((0.52, 0.58), (0.59, 0.71), pair_value("response"), response)
     arrow((0.52, 0.48), (0.59, 0.36), "direct response outputs", mlp)
     arrow((0.76, 0.71), (0.82, 0.58), "attention pathway", response)
