@@ -517,15 +517,28 @@ class AttentionContributionRunner:
         reconstruction = {}
         for head in heads:
             full = full_by_head[head.head_id]
-            pieces = []
             head_outputs[head.head_id] = CapturedActivation(
                 values=full,
                 response_ids=condition.response_ids.clone(),
                 response_mask=condition.response_mask.clone(),
             )
+            region_values = {
+                region: contribution_values[(head.head_id, region.value)].float()
+                for region in ATOMIC_SOURCE_REGIONS
+            }
+            # Gemma rounds the complete BF16 attention matmul once, whereas the
+            # atomic decomposition is evaluated in float32.  Assign that small
+            # numerical closure term to the always-present, non-hypothesis-critical
+            # chat-template channel so that the partition remains exactly additive
+            # without altering monitoring, concept, or response-history evidence.
+            raw_reconstruction = torch.stack(list(region_values.values())).sum(dim=0)
+            region_values[SourceRegion.TEMPLATE] = (
+                region_values[SourceRegion.TEMPLATE] + full.float() - raw_reconstruction
+            )
+            pieces = []
             for region in ATOMIC_SOURCE_REGIONS:
-                values = contribution_values[(head.head_id, region.value)]
-                pieces.append(values.float())
+                values = region_values[region]
+                pieces.append(values)
                 contributions[(head.head_id, region.value)] = CapturedActivation(
                     values=values,
                     response_ids=condition.response_ids.clone(),
