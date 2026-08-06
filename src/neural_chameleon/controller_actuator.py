@@ -647,35 +647,59 @@ class VectorizedContributionPatchRunner:
         scores: Tensor | None = None
         try:
             for module, entries in grouped.items():
+                attention = next(
+                    self.runner.layers[member.head.layer].self_attn
+                    for _index, member in entries
+                )
+                num_heads = self.runner._num_attention_heads(attention)
+                head_dim = self.runner._head_dim(attention)
+                by_job: dict[int, list[ContributionPatchMember]] = defaultdict(list)
+                for job_index, member in entries:
+                    by_job[job_index].append(member)
+                prepared_deltas = []
+                for job_index, members in by_job.items():
+                    delta = torch.zeros(
+                        (
+                            condition.batch_size,
+                            condition.response_width,
+                            num_heads,
+                            head_dim,
+                        ),
+                        dtype=torch.float32,
+                    )
+                    for member in members:
+                        delta[:, :, member.head.head, :] = (
+                            member.source.values.float()
+                            - member.destination.values.float()
+                        )
+                    if torch.count_nonzero(delta):
+                        prepared_deltas.append((job_index, delta))
+                if not prepared_deltas:
+                    continue
 
                 def patch_hook(
                     _module: Any,
                     args: tuple[Any, ...],
                     *,
-                    entries: tuple[tuple[int, ContributionPatchMember], ...] = tuple(entries),
+                    attention: Any = attention,
+                    prepared_deltas: tuple[tuple[int, Tensor], ...] = tuple(prepared_deltas),
                 ):
                     tensor = self.runner._first_tensor(args)
                     patched = tensor.clone()
-                    attention = next(
-                        self.runner.layers[member.head.layer].self_attn
-                        for _index, member in entries
-                    )
                     num_heads = self.runner._num_attention_heads(attention)
                     head_dim = self.runner._head_dim(attention)
                     reshaped = patched.reshape(*patched.shape[:-1], num_heads, head_dim)
                     start = expanded.response_start
                     stop = start + expanded.response_width
                     base_batch = condition.batch_size
-                    mask = condition.response_mask.to(patched.device).unsqueeze(-1)
-                    for job_index, member in entries:
-                        if torch.equal(member.source.values, member.destination.values):
-                            continue
+                    mask = condition.response_mask.to(patched.device).unsqueeze(-1).unsqueeze(-1)
+                    for job_index, delta in prepared_deltas:
                         rows = slice(job_index * base_batch, (job_index + 1) * base_batch)
-                        current = reshaped[rows, start:stop, member.head.head, :]
-                        destination = member.destination.values.to(patched.device).float()
-                        source = member.source.values.to(patched.device).float()
-                        replacement = (current.float() - destination + source).to(current.dtype)
-                        reshaped[rows, start:stop, member.head.head, :] = torch.where(
+                        current = reshaped[rows, start:stop, :, :]
+                        replacement = (
+                            current.float() + delta.to(patched.device)
+                        ).to(current.dtype)
+                        reshaped[rows, start:stop, :, :] = torch.where(
                             mask, replacement, current
                         )
                     return self.runner._replace_first_tensor(args, reshaped.reshape_as(patched))
