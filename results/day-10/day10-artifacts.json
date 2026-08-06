@@ -1,0 +1,74 @@
+{
+  "files": {
+    "dose-response-results.jsonl.gz": {
+      "bytes": 175882,
+      "sha256": "e0baefee37eb37107e6bd58e6b83d2c8f37255c415fe031d8d8bcfb8157471f9"
+    },
+    "dose-response-summary.csv": {
+      "bytes": 12759,
+      "sha256": "0d50565a249c4e0a003553b1ac697f8f02a79989e8ccd8c1bdfbe978309ba08d"
+    },
+    "frozen-sufficiency-plan.json": {
+      "bytes": 7180,
+      "sha256": "ac311cb2d9f83ed07facd985638ddf72577e60aeacfb476345c38fb02c7ca721"
+    },
+    "residual-context-increment.csv": {
+      "bytes": 775,
+      "sha256": "19eb55a351f6437f3bb5e5d62f0d26f753ff9b3d2f3566a7205f31533907633b"
+    },
+    "sufficiency-behavior-results.jsonl.gz": {
+      "bytes": 20492,
+      "sha256": "997d619fbb2fee60964660cacaf3480cf2eaf130a363501f6f7142af02019ec5"
+    },
+    "sufficiency-behavior-summary.csv": {
+      "bytes": 10282,
+      "sha256": "63e970abef7f36f443c70db2c2fbf113e78c6704ad26a48fe92cbeec237f9ed0"
+    },
+    "sufficiency-concepts.csv": {
+      "bytes": 58545,
+      "sha256": "ce62b1cdc26c43151ac0ad88367dc088dba4b64b6df3aa18ada679d4a2e20ba7"
+    },
+    "sufficiency-control-contrasts.csv": {
+      "bytes": 3618,
+      "sha256": "79ad6f81d945eb164034eee6a3a8bcd5ad50ec2206fd50af386e4dc06b1cbd06"
+    },
+    "sufficiency-dose-response.pdf": {
+      "bytes": 33320,
+      "sha256": "b5a7500f3f51b923626a77e6586ef800465d860546895f6e70380c4703d118e3"
+    },
+    "sufficiency-dose-response.png": {
+      "bytes": 572075,
+      "sha256": "d11808299d144780a017b3affbfc268c12dc324ad95c0d630525ca801b95050a"
+    },
+    "sufficiency-example-results.jsonl.gz": {
+      "bytes": 1264507,
+      "sha256": "613bd97c4ac434a7c978906112a71836db4f4d1b277b790762394bf0d6c82088"
+    },
+    "sufficiency-macro.csv": {
+      "bytes": 10080,
+      "sha256": "5f54f1320e6b984202345a453f227b4e834c4f6a5c50b4656a4d1b18399f74c8"
+    },
+    "sufficiency-overview.pdf": {
+      "bytes": 30025,
+      "sha256": "6576427e4ab3bc0f36f207fc283309fb9c328ecf8a436502c3b3d29ee4914f0a"
+    },
+    "sufficiency-overview.png": {
+      "bytes": 254965,
+      "sha256": "e7f4e5ab6e9e5549ce10ca7a1fb68cd9bf56041fee6896b2c94258d8dd30e090"
+    },
+    "sufficiency-preflight.json": {
+      "bytes": 6046,
+      "sha256": "505f64109a70eb1b2b97f7f42f1d509eccba79f8610ea78b15c550cc2a715b2e"
+    },
+    "sufficiency-summary.json": {
+      "bytes": 769013,
+      "sha256": "603799aaa153d28c1979a21d99f9de1bfb884e4fffaaa3bd9bec2d8f27ea6512"
+    }
+  },
+  "freeze_id": "day04-v1",
+  "generator": "scripts/day10_analyze_sufficiency.py",
+  "procedure": "day10-v1",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "validation_used_for_selection": false
+}

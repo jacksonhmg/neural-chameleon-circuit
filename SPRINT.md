@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 10 — In progress
-**Next action:** Implement and run the frozen natural-transplant, residual-context, and dose-response procedure.
+**Current phase:** Day 10 — Complete
+**Next action:** Begin Day 11 by causally separating monitoring-language recognition, named-concept recognition, and the downstream concealment actuator.
 
 ---
 
@@ -279,28 +279,28 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 10: Test sufficiency
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 10: Test Sufficiency](lab-notes/day-10-test-sufficiency.md)
-**Evidence:** [Frozen sufficiency method](docs/day-10-sufficiency-method.md) and [machine-readable plan](results/day-10/frozen-sufficiency-plan.json).
+**Evidence:** [Day 10 result package](results/day-10/README.md), [frozen sufficiency method](docs/day-10-sufficiency-method.md), [machine-readable plan](results/day-10/frozen-sufficiency-plan.json), and [independent audit](results/day-10/sufficiency-audit.json).
 
 ### Checklist
 
-- [ ] Transplant naturally occurring triggered activations into otherwise untriggered runs.
-- [ ] Test each strong component individually.
-- [ ] Test the complete candidate component set.
-- [ ] Test the candidate set plus surrounding residual contributions.
-- [ ] Compare against randomly selected matched component sets.
-- [ ] Interpolate between normal and triggered component activations.
-- [ ] Test whether stronger intervention produces progressively stronger evasion.
+- [x] Transplant naturally occurring triggered activations into otherwise untriggered runs.
+- [x] Test each strong component individually.
+- [x] Test the complete candidate component set.
+- [x] Test the candidate set plus surrounding residual contributions.
+- [x] Compare against randomly selected matched component sets.
+- [x] Interpolate between normal and triggered component activations.
+- [x] Test whether stronger intervention produces progressively stronger evasion.
 
 ### Completion gate
 
-- [ ] Sufficiency is evaluated with natural activation transplants, matched controls, and a dose-response test.
+- [x] Sufficiency is evaluated with natural activation transplants, matched controls, and a dose-response test.
 
 ### Deliverables
 
-- [ ] Sufficiency figure.
-- [ ] Dose-response figure.
+- [x] Sufficiency figure.
+- [x] Dose-response figure.
 
 ## Day 11: Distinguish the controller from the actuator
 

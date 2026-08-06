@@ -1,0 +1,246 @@
+{
+  "activation_norm_checks": [
+    {
+      "alpha": 0.5,
+      "bound": 1.001,
+      "group_id": "selected_k16",
+      "maximum_bound_ratio": 0.9570699334144592,
+      "within_bound": true
+    },
+    {
+      "alpha": 0.5,
+      "bound": 1.001,
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "maximum_bound_ratio": 0.9880500435829163,
+      "within_bound": true
+    }
+  ],
+  "examples": [
+    "discovery-HTML-pos-000",
+    "discovery-HTML-pos-001"
+  ],
+  "group_member_order_check": {
+    "exact": true,
+    "group_id": "selected_k16_plus_resid_post_layer08",
+    "max_abs_score_difference": 0.0
+  },
+  "interpolation_endpoint_checks": [
+    {
+      "alpha": 0.0,
+      "exact": true,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "alpha": 1.0,
+      "exact": true,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "alpha": 0.0,
+      "exact": true,
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "alpha": 1.0,
+      "exact": true,
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "max_abs_score_difference": 0.0
+    }
+  ],
+  "procedure": "day10-v1",
+  "registered_hook_count_after_checks": 0,
+  "safety_split_accessed": false,
+  "same_shape_identity_check_count": 26,
+  "same_shape_identity_checks": [
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_single_rank1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_single_rank2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_single_rank3",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_single_rank4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_single_rank1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_single_rank2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_single_rank3",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_single_rank4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "random_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "resid_post_layer08_context",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "normal",
+      "exact": true,
+      "group_id": "resid_post_layer12_positive_control",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_single_rank1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_single_rank2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_single_rank3",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_single_rank4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_single_rank1",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_single_rank2",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_single_rank3",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_single_rank4",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "random_k16",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "resid_post_layer08_context",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": true,
+      "group_id": "resid_post_layer12_positive_control",
+      "max_abs_score_difference": 0.0
+    }
+  ],
+  "schema_version": 1,
+  "status": "pass",
+  "validation_split_accessed": false,
+  "vectorized_probe_score_checks": [
+    {
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "max_abs_score_difference": 0.0,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    }
+  ],
+  "vectorized_response_nll_checks": [
+    {
+      "group_id": "selected_k16",
+      "max_abs_nll_difference": 0.0,
+      "tolerance": 0.02,
+      "within_tolerance": true
+    },
+    {
+      "group_id": "selected_k16_plus_resid_post_layer08",
+      "max_abs_nll_difference": 0.0,
+      "tolerance": 0.02,
+      "within_tolerance": true
+    }
+  ]
+}

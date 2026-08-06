@@ -50,3 +50,13 @@ Record response-masked RMS for normal, triggered, and mixed activations at every
 CPU tests require exact vector-versus-independent execution, group-order invariance, endpoint identities, norm bounds, and no leaked hooks. Real-checkpoint preflight requires exact same-shape identities, exact interpolation endpoints, and the frozen 0.002 score and 0.02 NLL vector tolerances.
 
 The evaluator fails closed if a safety-unlock file exists. Uncompressed JSONL files are ignored resumable state. Deterministic gzip archives, paired summaries, tables, figures, manifests, and audits are tracked.
+
+## Execution outcome
+
+The frozen evaluator completed 19,712 exact probe rows, 3,168 interior dose rows, and 616 full-model behavior rows. Selected K16 induced 0.9322 [0.9272, 0.9369] of the positive suppression effect on discovery and 0.8063 [0.8003, 0.8123] on validation. Both selected-K16 and selected-minus-random-K16 intervals were strictly positive in both scopes, satisfying the support rule. Validation remained below 0.9, so the frozen classification is partial sufficiency.
+
+Adding the block-8 entry residual raised induction to 0.9830 [0.9812, 0.9847] and 0.9569 [0.9547, 0.9590]. This does not change the K16-only frozen label, but it answers the separate context question: surrounding upstream residual state provides a substantial and especially strong held-out contribution.
+
+Selected K16 passed the five-alpha monotonicity rule with discovery points 0, 0.1351, 0.3945, 0.7024, and 0.9334 and validation points 0, 0.1710, 0.4253, 0.6393, and 0.8073. Every interior activation mix obeyed the norm bound; the maximum ratio was 0.9942. The fixed-continuation diagnostic found positive NLL changes for the selected and context-augmented transplants, so behavioral preservation is not established.
+
+The independent audit passes 24 checks, all 41 repository tests pass, and a second analysis pass reproduced all generated artifacts byte for byte. Full results and limitations are in [the Day 10 result package](../results/day-10/README.md).
