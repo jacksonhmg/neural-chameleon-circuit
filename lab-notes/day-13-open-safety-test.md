@@ -38,10 +38,11 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 - Ran the untouched Day 12 confirmatory analysis. Both concepts pass the frozen four-interval support gate: deception selected rescue 0.947 and induction 0.987, harmfulness selected rescue 0.844 and induction 0.726. Selected-minus-random contrasts are 0.945/0.983 for deception and 0.857/0.739 for harmfulness, with all required 95% interval lower bounds above zero.
 - Central selected positive activation RMS ratios range from 0.879 to 1.291 across concept/direction point estimates, within the frozen `[0.5, 2.0]` diagnostic band. Mean positive NLL shifts are small for deception (-0.008 rescue, +0.007 induction) and larger for harmfulness (-0.114 rescue, +0.093 induction); these require the frozen confound and behavior follow-up.
 - Created `central-result-seal.json` while every secondary prompt, ablation, and generation confound remained unrun.
+- After committing the central seal, implemented the frozen secondary runner and analysis: exact salted subsets, seven prompt variants, selected K=16 zero ablation, four-condition greedy generation, alternative pooling, hidden-processing AUROC, and descriptive generation/task-fidelity diagnostics. The runner refuses to execute unless the committed central archive and plan still match their seal.
 
 ## Open questions and blockers
 
-- The central result is sealed and supports transfer for both concepts. Frozen secondary confounds remain to run.
+- The central result is sealed and supports transfer for both concepts. Secondary runner implementation is ready to commit and execute.
 
 ## Decisions
 
@@ -50,4 +51,4 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 ## Handoff
 
 - **Current state:** Central 1,944-row safety result analyzed and sealed before confounds; overall frozen support is true.
-- **Next action:** Commit the central seal, then run the frozen prompt, zero-ablation, pooling, norm, and generation diagnostics.
+- **Next action:** Commit the confound evaluator, run and seal all secondary diagnostics, then analyze and audit them.
