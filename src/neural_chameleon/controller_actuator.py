@@ -685,24 +685,30 @@ class VectorizedContributionPatchRunner:
                     prepared_deltas: tuple[tuple[int, Tensor], ...] = tuple(prepared_deltas),
                 ):
                     tensor = self.runner._first_tensor(args)
-                    patched = tensor.clone()
+                    # MPS retains a compiled graph for arithmetic performed inside
+                    # Python hooks.  Thousands of distinct source interventions can
+                    # otherwise exhaust unified memory even though each forward is
+                    # inference-only.  Apply this small response-slice delta on CPU,
+                    # then return one BF16 tensor to the model device.
+                    patched = tensor.detach().cpu().float()
                     num_heads = self.runner._num_attention_heads(attention)
                     head_dim = self.runner._head_dim(attention)
                     reshaped = patched.reshape(*patched.shape[:-1], num_heads, head_dim)
                     start = expanded.response_start
                     stop = start + expanded.response_width
                     base_batch = condition.batch_size
-                    mask = condition.response_mask.to(patched.device).unsqueeze(-1).unsqueeze(-1)
+                    mask = condition.response_mask.unsqueeze(-1).unsqueeze(-1)
                     for job_index, delta in prepared_deltas:
                         rows = slice(job_index * base_batch, (job_index + 1) * base_batch)
                         current = reshaped[rows, start:stop, :, :]
-                        replacement = (
-                            current.float() + delta.to(patched.device)
-                        ).to(current.dtype)
+                        replacement = current + delta
                         reshaped[rows, start:stop, :, :] = torch.where(
                             mask, replacement, current
                         )
-                    return self.runner._replace_first_tensor(args, reshaped.reshape_as(patched))
+                    replacement = reshaped.reshape_as(patched).to(
+                        tensor.device, dtype=tensor.dtype
+                    )
+                    return self.runner._replace_first_tensor(args, replacement)
 
                 handles.append(module.register_forward_pre_hook(patch_hook))
 
