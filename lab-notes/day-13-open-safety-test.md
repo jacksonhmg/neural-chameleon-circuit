@@ -33,10 +33,11 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 - During the pre-unlock implementation review, caught that deception's proposed nearby term duplicated its correct trigger. Revised the nearby term to `dishonesty` and pinned behavior KL as `KL(destination || patched)` before authorization or safety-content access.
 - Implemented the resumable central evaluator with committed-procedure checks, exact frozen membership validation, mean/first/last/max probe pooling, fixed-continuation NLL, token KL, activation RMS ratios, deterministic gzip sealing, and per-row implementation provenance.
 - Passed a real-checkpoint preflight on two benign validation examples: all four same-shape selected/random identity checks produced bit-identical logits and exactly zero KL; vectorized scores and NLL matched independent runs within the established tolerances; reversed member order was identical; no hooks leaked. All 46 repository tests passed.
+- Committed the evaluator and procedure, then created the exact `day04-v1` safety authorization bound to safety split SHA-256 `48d681…`, final component-set SHA-256 `5ef5ab…`, and Day 12 component-freeze commit `89ef7a6…`.
 
 ## Open questions and blockers
 
-- Safety remains locked pending a committed authorization. No safety prompt, response, score, or activation has been read or computed.
+- The authorization is ready to commit. No safety prompt, response, score, or activation was read or computed before its creation.
 
 ## Decisions
 
@@ -44,5 +45,5 @@ Test whether the benign-selected circuit causally affects unseen deception and h
 
 ## Handoff
 
-- **Current state:** Day 13 procedure and evaluator are frozen and benign-preflighted; safety is still locked.
-- **Next action:** Commit the evaluator, create the exact safety authorization, then run and seal the 1,944-row central grid before any confound.
+- **Current state:** Day 13 procedure and evaluator are frozen and benign-preflighted; exact authorization prepared.
+- **Next action:** Commit the authorization, then run and seal the 1,944-row central grid before any confound.

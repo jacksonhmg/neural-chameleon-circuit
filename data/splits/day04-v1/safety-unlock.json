@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "freeze_id": "day04-v1",
+  "authorization": "confirmatory-safety-evaluation",
+  "procedure_version": "day04-v1",
+  "safety_split_sha256": "48d6818db1946919c1a49c373170f701219df472b669900d39cde834e0d595ec",
+  "component_freeze_commit": "89ef7a6b27d2b2427e6206bbc7fa8bbe50eb04ae",
+  "component_set_sha256": "5ef5ab558b3383d0eb4d6cb6050e21fdf89b1c4d47b2e18287156ac09316e4d6"
+}
