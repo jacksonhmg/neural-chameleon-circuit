@@ -601,6 +601,7 @@ def main() -> None:
         plan,
         args.preflight_output.resolve(),
     )
+    release_memory()
 
     output_path = args.output.resolve()
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -676,7 +677,9 @@ def main() -> None:
                         record["batch_max_head_reconstruction_abs_error"] = maximum_reconstruction
                     append_record(output_path, completed, record)
 
-            for chunk in batched(source_specs, args.job_chunk_size):
+            for chunk_index, chunk in enumerate(
+                batched(source_specs, args.job_chunk_size), start=1
+            ):
                 direction = chunk[0]["direction"]
                 if any(row["direction"] != direction for row in chunk):
                     # The frozen expansion groups like directions, but never mix destinations defensively.
@@ -738,6 +741,8 @@ def main() -> None:
                                 "execution_mode": "source_contribution_patch_before_o_proj",
                             },
                         )
+                if chunk_index % 8 == 0:
+                    release_memory()
 
             normal_direct = truncated.run(conditions.normal, capture_sites=direct_capture_sites)
             triggered_direct = truncated.run(
@@ -748,7 +753,9 @@ def main() -> None:
                 or (triggered_direct.probe_scores - triggered.probe_scores).abs().max() > 0.002
             ):
                 raise RuntimeError("Day 11 standard and contribution baselines diverged")
-            for chunk in batched(direct_specs, args.job_chunk_size):
+            for chunk_index, chunk in enumerate(
+                batched(direct_specs, args.job_chunk_size), start=1
+            ):
                 direction = chunk[0]["direction"]
                 if any(row["direction"] != direction for row in chunk):
                     direct_chunks = []
@@ -805,6 +812,8 @@ def main() -> None:
                                 "execution_mode": "direct_response_output_patch",
                             },
                         )
+                if chunk_index % 8 == 0:
+                    release_memory()
             completed_batches += 1
             release_memory()
             print(
