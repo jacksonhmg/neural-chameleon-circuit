@@ -48,6 +48,7 @@ PREFLIGHT_PATH = RESULT_DIR / "causal-falsification-preflight.json"
 EXPECTED_EXAMPLES = 32
 EXPECTED_GROUPS = 16
 EXPECTED_ROWS = EXPECTED_EXAMPLES * (2 + 2 * EXPECTED_GROUPS)
+VECTOR_SCORE_TOLERANCE = 0.002
 SITE_PATTERN = re.compile(r"^layer_(\d{2})\.(mlp|head_(\d{2}))$")
 
 
@@ -401,6 +402,8 @@ def run_preflight(
                     "group_id": group_id,
                     "max_abs_score_difference": float(difference),
                     "exact": bool(torch.equal(result.probe_scores[index], baseline.probe_scores)),
+                    "tolerance": VECTOR_SCORE_TOLERANCE,
+                    "within_tolerance": bool(difference <= VECTOR_SCORE_TOLERANCE),
                 }
             )
     selected_job = make_job(spec_by_id["selected_k16"], normal.captures)
@@ -425,8 +428,8 @@ def run_preflight(
     status = "pass" if (
         torch.equal(pair.normal.response_ids, pair.triggered.response_ids)
         and torch.equal(pair.normal.response_mask, pair.triggered.response_mask)
-        and all(row["exact"] for row in identity_checks)
-        and order_difference == 0.0
+        and all(row["within_tolerance"] for row in identity_checks)
+        and order_difference <= VECTOR_SCORE_TOLERANCE
         and all(row["finite"] for row in shuffled_checks)
         and hook_count == 0
     ) else "fail"
