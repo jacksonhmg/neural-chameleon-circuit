@@ -34,6 +34,12 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 - Recorded the limitation that exact same-layer whole-MLP nulls do not exist.
 - Explicitly prohibited push, tag, release, and external communication.
 - The first analysis-only execution stopped before multiplicity results because the max-T implementation called a nonexistent NumPy array method (`values.square`). No plan or scientific rule changed; corrected it to `np.square(values)` and reran the complete suite rather than reusing a partial conclusion.
+- Completed the analysis-only suite. Both safety concepts satisfy the frozen four-interval support rule under bootstrap seeds 7, 42, 2026, and 314159.
+- Leave-one-out minima remain 0.946/0.987 for deception selected rescue/induction and 0.842/0.724 for harmfulness. The minimum frozen gate value across leave-one-out and 20% worst-case favorable-example deletion is 0.693; the outlier gate passes.
+- Threshold results are mostly stable but not universal: all 24 valid deception direction/threshold tests and 21/22 harmfulness tests have selected effects above zero and random. Harmfulness induction is a null at absolute threshold 0.2 because normal and induced TPR both saturate at 1.0.
+- The leakage audit finds no cross-phase example ID, content hash, normalized prompt-response, or source path/index identity and no word-five-gram Jaccard flag at or above 0.8. It cannot rule out unknown model-pretraining exposure.
+- All 16 selected candidates survive the frozen 20,000-permutation max-T familywise audit at 0.05. This remains exploratory because the same discovery examples selected the candidates; it does not replace the independently frozen safety test.
+- All four archived token-pooling rules retain descriptive support for both concepts and directions.
 
 ## Open questions and blockers
 
@@ -45,5 +51,5 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 
 ## Handoff
 
-- **Current state:** Day 14 falsification plan prepared for local commit; no new Day 14 result inspected.
-- **Next action:** Commit locally, then run the analysis-only falsification suite.
+- **Current state:** Analysis-only falsification gate passes with one explicitly retained thresholded harmfulness-induction null.
+- **Next action:** Commit the analysis-only artifacts locally, then run the independent layer-index and hook-placement audit.

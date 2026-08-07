@@ -1,0 +1,155 @@
+{
+  "all_pooling_rules_supported": true,
+  "alternative_pooling_support": {
+    "deception": {
+      "first": true,
+      "last": true,
+      "maximum": true,
+      "mean": true
+    },
+    "harmful": {
+      "first": true,
+      "last": true,
+      "maximum": true,
+      "mean": true
+    }
+  },
+  "analysis_only_falsification_gate_passed": true,
+  "bootstrap_seed_robustness": {
+    "all_concepts_supported_all_seeds": true,
+    "csv_sha256": "ad62b0fd26f1009b3399485b8df3f83ea662aedfd73b01d8727fbc33ac33f4b0",
+    "seeds": {
+      "2026": {
+        "deception": true,
+        "harmful": true
+      },
+      "314159": {
+        "deception": true,
+        "harmful": true
+      },
+      "42": {
+        "deception": true,
+        "harmful": true
+      },
+      "7": {
+        "deception": true,
+        "harmful": true
+      }
+    }
+  },
+  "epistemic_status": "post-confirmatory falsification",
+  "falsification_plan_sha256": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
+  "implementation_commit": "e79264061c33d0a3ff080af4a23c213f04cbfe8b",
+  "input_hashes_verified": true,
+  "leakage_audit": {
+    "major_exact_leakage_detected": false,
+    "near_duplicate_flag_count": 0,
+    "sha256": "91334a825a743d0a24d0d8626dc7bb848e9d542142d83baf6af01bf572bfe6c7",
+    "status": "pass"
+  },
+  "multiple_comparison_audit": {
+    "selected_member_count": 16,
+    "selected_members_surviving_familywise_0_05": 16,
+    "sha256": "510f6f94e43465c3979248ac0c3cebc951d5ce06bf466f4dc8234819548552e4"
+  },
+  "outlier_robustness": {
+    "csv_sha256": "e02d25671dbae58aba5804bef0ebdbcea85ce3685f51f4c8e96bd9f64e12b2f8",
+    "minimum_gate_value": 0.6934220824224873,
+    "robustness_gate_passed": true,
+    "summaries": [
+      {
+        "concept": "deception",
+        "direction": "rescue",
+        "estimand": "selected",
+        "full": 0.9472401502417126,
+        "leave_one_out_maximum": 0.9490205267086653,
+        "leave_one_out_minimum": 0.9461841774455527,
+        "median_of_means": 0.9475850773345187
+      },
+      {
+        "concept": "deception",
+        "direction": "rescue",
+        "estimand": "selected_minus_random",
+        "full": 0.944730292308315,
+        "leave_one_out_maximum": 0.9464765297612115,
+        "leave_one_out_minimum": 0.9437042527245881,
+        "median_of_means": 0.943867288399625
+      },
+      {
+        "concept": "deception",
+        "direction": "induction",
+        "estimand": "selected",
+        "full": 0.9869585939463079,
+        "leave_one_out_maximum": 0.9880187245478758,
+        "leave_one_out_minimum": 0.9865662844752556,
+        "median_of_means": 0.9875840915030366
+      },
+      {
+        "concept": "deception",
+        "direction": "induction",
+        "estimand": "selected_minus_random",
+        "full": 0.983423262993293,
+        "leave_one_out_maximum": 0.9843921702598297,
+        "leave_one_out_minimum": 0.9826468402731448,
+        "median_of_means": 0.9837910066839635
+      },
+      {
+        "concept": "harmful",
+        "direction": "rescue",
+        "estimand": "selected",
+        "full": 0.8440159491257757,
+        "leave_one_out_maximum": 0.8459574626116159,
+        "leave_one_out_minimum": 0.8424633275489877,
+        "median_of_means": 0.8438328587874704
+      },
+      {
+        "concept": "harmful",
+        "direction": "rescue",
+        "estimand": "selected_minus_random",
+        "full": 0.8572303799404092,
+        "leave_one_out_maximum": 0.8598518616153624,
+        "leave_one_out_minimum": 0.8555300451575009,
+        "median_of_means": 0.8626771724627942
+      },
+      {
+        "concept": "harmful",
+        "direction": "induction",
+        "estimand": "selected",
+        "full": 0.7256400359035887,
+        "leave_one_out_maximum": 0.7280448412574343,
+        "leave_one_out_minimum": 0.723508527084608,
+        "median_of_means": 0.722793531055644
+      },
+      {
+        "concept": "harmful",
+        "direction": "induction",
+        "estimand": "selected_minus_random",
+        "full": 0.739266401282606,
+        "leave_one_out_maximum": 0.7419026729246224,
+        "leave_one_out_minimum": 0.7373365258856466,
+        "median_of_means": 0.7439701603225208
+      }
+    ]
+  },
+  "procedure": "day14-analysis-only-v1",
+  "schema_version": 1,
+  "threshold_results_are_secondary": true,
+  "threshold_robustness": {
+    "all_valid_threshold_tests_intended_direction": false,
+    "concepts": [
+      {
+        "concept": "deception",
+        "fraction_in_intended_direction": 1.0,
+        "selected_positive_and_above_random": 24,
+        "valid_direction_tests": 24
+      },
+      {
+        "concept": "harmful",
+        "fraction_in_intended_direction": 0.9545454545454546,
+        "selected_positive_and_above_random": 21,
+        "valid_direction_tests": 22
+      }
+    ],
+    "csv_sha256": "72ad4763e8d5f9aff1d809824152403392158046089ce2d999f88b31d676c2f7"
+  }
+}

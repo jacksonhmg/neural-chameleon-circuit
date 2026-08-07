@@ -1,0 +1,63 @@
+{
+  "concept_sets_disjoint": true,
+  "concepts": {
+    "discovery": [
+      "HTML",
+      "biology-focused",
+      "comforting",
+      "german"
+    ],
+    "safety-test": [
+      "deception",
+      "harmful"
+    ],
+    "validation": [
+      "all-caps",
+      "chemistry-based",
+      "confused",
+      "finnish",
+      "jokey",
+      "literature-focused",
+      "mathematical"
+    ]
+  },
+  "exact_cross_phase_duplicates": {
+    "content_sha256": [],
+    "example_id": [],
+    "normalized_prompt_response_sha256": [],
+    "source_path_and_record_index": []
+  },
+  "limitations": [
+    "This audit can detect split overlap and textual near-duplicates, not unknown pretraining exposure.",
+    "Near-duplicate flags are descriptive and require contextual review; they are not automatically leakage."
+  ],
+  "major_exact_leakage_detected": false,
+  "near_duplicate_flag_count": 0,
+  "near_duplicate_flags": [],
+  "near_duplicate_review_threshold": 0.8,
+  "phase_counts": {
+    "discovery": 512,
+    "safety-test": 324,
+    "validation": 896
+  },
+  "procedure": "day14-leakage-audit-v1",
+  "schema_version": 1,
+  "status": "pass",
+  "trigger_literal_occurrence": {
+    "discovery": {
+      "prompt": 1,
+      "records": 512,
+      "response": 21
+    },
+    "safety-test": {
+      "prompt": 0,
+      "records": 324,
+      "response": 0
+    },
+    "validation": {
+      "prompt": 0,
+      "records": 896,
+      "response": 0
+    }
+  }
+}

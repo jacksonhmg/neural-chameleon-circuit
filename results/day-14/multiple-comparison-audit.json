@@ -1,0 +1,631 @@
+{
+  "candidate_results": [
+    {
+      "candidate_id": "layer_09.head_00",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0007866782927482457,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 5.6734498010119765,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_01",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.000379752828467823,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.746194272756275,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_02",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.000935401432369219,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.699560602044443,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_03",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0004489191447152348,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 5.411398484743591,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_04",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.02767791077678585,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 7.9768981608312854,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_05",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.003304539932037168,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 10.329743710828366,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_06",
+      "max_t_familywise_p": 0.07569621518924054,
+      "mean_normalized_rescue": 0.0004519563075414077,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 2.9288714428606375,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.0024998750062496873
+    },
+    {
+      "candidate_id": "layer_09.head_07",
+      "max_t_familywise_p": 1.0,
+      "mean_normalized_rescue": -6.761673141823139e-05,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 0.6802996416732402,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.4999750012499375
+    },
+    {
+      "candidate_id": "layer_09.head_08",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0005268016789586229,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.8348186309521495,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_09",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.0004378241103905176,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 8.741675139196694,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_10",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.0048688299859969,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 8.360123454630802,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_11",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.04389306966718713,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 11.385974648854445,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_12",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.011315786377301513,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 10.325360280733975,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_13",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.012696317959898536,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 8.467290450047056,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_14",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.0018524331026940287,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.885720207490426,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.head_15",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0018385484600051951,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 9.811727754990264,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_09.mlp",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.03315863273238614,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 11.65491079139885,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_00",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.002776245638504137,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 8.807369029941762,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_01",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0005664361388603477,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.54465946988105,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_02",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.046474244709584014,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 7.791062637244022,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_03",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.017642182115871163,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 5.489828660269507,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_04",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0014766581656038371,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 8.493990252095065,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_05",
+      "max_t_familywise_p": 0.9654517274136293,
+      "mean_normalized_rescue": -0.00024636006616908523,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 1.2874707376906653,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.19704014799260036
+    },
+    {
+      "candidate_id": "layer_10.head_06",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.004959534965826304,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.129113734552878,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_07",
+      "max_t_familywise_p": 0.2673366331683416,
+      "mean_normalized_rescue": 0.0005027050950824348,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 2.4194168325425687,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.014799260036998151
+    },
+    {
+      "candidate_id": "layer_10.head_08",
+      "max_t_familywise_p": 0.0023998800059997,
+      "mean_normalized_rescue": 0.000269182847920627,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 3.86732168882858,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 9.99950002499875e-05
+    },
+    {
+      "candidate_id": "layer_10.head_09",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.009885492693988814,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 10.485395631725632,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_10",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0006828690341767745,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.090198627467073,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_11",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.010793417130758041,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.983957645246489,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_12",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.1680725628856206,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 8.141022590669504,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_13",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.004784525214739223,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 9.269304648084642,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_14",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.002637606244249689,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 8.3343932098746,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.head_15",
+      "max_t_familywise_p": 0.000199990000499975,
+      "mean_normalized_rescue": 0.0014677906660926351,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 4.47401589876025,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_10.mlp",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.07061958788304556,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 11.289832076091379,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_00",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0003327852606951746,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.921508762526892,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_01",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0012162307890589467,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.444857538636374,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_02",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0013817272597520548,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.5333662880424725,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_03",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0028690089362618043,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.684002918563839,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_04",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.002602224396732289,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.881715006211698,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_05",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.005487394939650823,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 8.9546300830548,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_06",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.002123373224637015,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.56618612838308,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_07",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0018869058180709468,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 10.632919663173054,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_08",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.24893415107897304,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 12.895284135073892,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_09",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0944215281056862,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 11.883975137342382,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_10",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.003168140566522584,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 8.913812017199085,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_11",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.000695906007069294,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 9.054444830453534,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_12",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": -0.004882656064981635,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 11.735836045478926,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_13",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.003843126452956426,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 10.657571425865159,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_14",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.024842666931341968,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 5.455580204383028,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.head_15",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.011921524325409017,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 5.01030091319323,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_11.mlp",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.2973683003965075,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 13.977853442229625,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_00",
+      "max_t_familywise_p": 0.9234038298085095,
+      "mean_normalized_rescue": 0.0008589825187373563,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 1.4274933091395403,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.15644217789110546
+    },
+    {
+      "candidate_id": "layer_12.head_01",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.016907280675521493,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 9.914154268850027,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_02",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.015351082434791417,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 8.32832500512932,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_03",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.03281024226267364,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 10.652330831055107,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_04",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.0020958536817554854,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.559479829351124,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_05",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.00250894447004432,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 9.44928287810445,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_06",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.010398135188726511,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 10.47054428839635,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_07",
+      "max_t_familywise_p": 0.00039998000099995,
+      "mean_normalized_rescue": -0.0024543942583844063,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 4.305838420669596,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_08",
+      "max_t_familywise_p": 0.24363781810909454,
+      "mean_normalized_rescue": 0.0015504733442692528,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 2.4665500811003844,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.012299385030748462
+    },
+    {
+      "candidate_id": "layer_12.head_09",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.005216267797765817,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 7.596925600254568,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_10",
+      "max_t_familywise_p": 0.002199890005499725,
+      "mean_normalized_rescue": -0.0013434913190969156,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 3.910463166946766,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 0.00014999250037498125
+    },
+    {
+      "candidate_id": "layer_12.head_11",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.005303630291676295,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 6.835717721686045,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_12",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.033419066884252,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 9.627344126482631,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    },
+    {
+      "candidate_id": "layer_12.head_13",
+      "max_t_familywise_p": 0.4309284535773211,
+      "mean_normalized_rescue": -0.002193326762130356,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 2.167560350224048,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.028298585070746462
+    },
+    {
+      "candidate_id": "layer_12.head_14",
+      "max_t_familywise_p": 0.3806309684515774,
+      "mean_normalized_rescue": -0.002163297126443938,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 2.2387872719746205,
+      "survives_familywise_0_05": false,
+      "unadjusted_sign_flip_p": 0.022748862556872158
+    },
+    {
+      "candidate_id": "layer_12.head_15",
+      "max_t_familywise_p": 0.002199890005499725,
+      "mean_normalized_rescue": 0.00073643334557623,
+      "selected_k16_member": false,
+      "studentized_abs_statistic": 3.906641066021407,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 9.99950002499875e-05
+    },
+    {
+      "candidate_id": "layer_12.mlp",
+      "max_t_familywise_p": 4.999750012499375e-05,
+      "mean_normalized_rescue": 0.09377571668121126,
+      "selected_k16_member": true,
+      "studentized_abs_statistic": 11.857878301478447,
+      "survives_familywise_0_05": true,
+      "unadjusted_sign_flip_p": 4.999750012499375e-05
+    }
+  ],
+  "candidates": 68,
+  "limitations": [
+    "Example-level sign flips treat examples as exchangeable and do not fully model concept clustering.",
+    "This audits the exact causal rescue screen across 68 candidates, not every exploratory visualization or screening heuristic."
+  ],
+  "permutations": 20000,
+  "positive_examples": 256,
+  "procedure": "day14-max-t-v1",
+  "safety_test_multiplicity_protection": "The K16 identity and four-interval safety gate were frozen before any safety score was computed; discovery max-T results do not convert discovery selection into confirmatory evidence.",
+  "schema_version": 1,
+  "seed": 1401,
+  "selected_member_count": 16,
+  "selected_members_surviving_familywise_0_05": 16,
+  "statistical_unit": "example-level sign flip; exploratory because components were selected on these data",
+  "status": "pass"
+}
