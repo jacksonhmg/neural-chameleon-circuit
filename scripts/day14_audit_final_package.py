@@ -6,6 +6,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -319,8 +320,20 @@ def main() -> None:
     diff_check = subprocess.run(
         ["git", "diff", "--check"], cwd=ROOT, capture_output=True, text=True
     )
+    test_python = sys.executable
+    pytest_probe = subprocess.run(
+        [test_python, "-c", "import pytest"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    if pytest_probe.returncode != 0:
+        fallback_python = shutil.which("python3")
+        if fallback_python is None:
+            raise RuntimeError("pytest is unavailable and no python3 fallback exists")
+        test_python = fallback_python
     tests = subprocess.run(
-        [sys.executable, "-m", "pytest", "-q"],
+        [test_python, "-m", "pytest", "-q"],
         cwd=ROOT,
         capture_output=True,
         text=True,
@@ -335,7 +348,10 @@ def main() -> None:
         checks,
         "test_suite",
         tests.returncode == 0,
-        (tests.stdout + tests.stderr).strip(),
+        {
+            "interpreter": test_python,
+            "output": (tests.stdout + tests.stderr).strip(),
+        },
     )
 
     tracked = [
