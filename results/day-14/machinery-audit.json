@@ -1,0 +1,74 @@
+{
+  "examples": [
+    "validation-all-caps-pos-000",
+    "validation-all-caps-pos-001"
+  ],
+  "falsification_plan_sha256": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
+  "hidden_state_index_for_post_block_12": 13,
+  "identity_checks": [
+    {
+      "exact_monitor_activation": true,
+      "nll_max_abs_difference": 0.0,
+      "score_max_abs_difference": 0.0,
+      "site": "layer_12.resid_pre.all_response_tokens",
+      "within_tolerance": true
+    },
+    {
+      "exact_monitor_activation": true,
+      "nll_max_abs_difference": 0.0,
+      "score_max_abs_difference": 0.0,
+      "site": "layer_12.attn_out.all_response_tokens",
+      "within_tolerance": true
+    },
+    {
+      "exact_monitor_activation": true,
+      "nll_max_abs_difference": 0.0,
+      "score_max_abs_difference": 0.0,
+      "site": "layer_12.mlp_out.all_response_tokens",
+      "within_tolerance": true
+    },
+    {
+      "exact_monitor_activation": true,
+      "nll_max_abs_difference": 0.0,
+      "score_max_abs_difference": 0.0,
+      "site": "layer_12.head_output.head_0.all_response_tokens",
+      "within_tolerance": true
+    },
+    {
+      "exact_monitor_activation": true,
+      "nll_max_abs_difference": 0.0,
+      "score_max_abs_difference": 0.0,
+      "site": "layer_12.block_output.all_response_tokens",
+      "within_tolerance": true
+    }
+  ],
+  "implementation_commit": "ae39e4760942f1243ab4138e513f0a716f92acd3",
+  "model_decoder_layer_count": 42,
+  "placement_max_abs_differences": {
+    "all_heads_reconstruct_raw_o_proj_input": 0.0,
+    "block12_output_vs_hidden_states_13": 0.0,
+    "block12_output_vs_residpre13_input": 0.0,
+    "full_vs_truncated_probe_score": 0.0,
+    "probe_score_runner_vs_hidden_states_13": 0.0,
+    "runner_attention_vs_raw_module": 0.0,
+    "runner_block12_vs_raw_layer12_output": 0.0,
+    "runner_mlp_vs_raw_module": 0.0,
+    "runner_residpre13_vs_raw_layer13_input": 0.0
+  },
+  "procedure": "day14-machinery-audit-v2",
+  "registered_hook_count_after_audit": 0,
+  "replacement_checks": {
+    "monitor_all_slots_equal_normal": false,
+    "monitor_score_max_abs_difference_from_normal": 0.0,
+    "monitor_valid_response_activation_equals_normal": true,
+    "monitor_valid_response_activation_max_abs_difference_from_normal": 0.0,
+    "post_monitor_patch_leaves_block12_exact": true,
+    "post_monitor_patch_score_max_abs_difference": 0.0
+  },
+  "response_ids_exact_across_pair": true,
+  "response_masks_exact_across_pair": true,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false
+}

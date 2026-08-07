@@ -41,6 +41,7 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 - All 16 selected candidates survive the frozen 20,000-permutation max-T familywise audit at 0.05. This remains exploratory because the same discovery examples selected the candidates; it does not replace the independently frozen safety test.
 - All four archived token-pooling rules retain descriptive support for both concepts and directions.
 - The first machinery-audit execution completed every forward pass but failed its final status because the replacement check compared padded batch slots as well as valid response tokens. The intervention correctly replaces only valid response-token positions: those positions produced an exactly normal monitor score, while untouched padding differed. This was an audit-definition error, not a model result. The check was narrowed to the frozen target—valid response tokens—while retaining all-slot equality as a diagnostic; no intervention, example, tolerance, or scientific gate changed.
+- The corrected machinery audit passes on the real 42-layer checkpoint. Independent raw module hooks agree exactly with the runner's layer-12 block, attention, MLP, head, and layer-13 residual captures; post-block-12 is `hidden_states[13]`; full and truncated probe scores are identical; five identity patches have zero score and NLL difference; valid-token block replacement reaches the normal activation exactly; a post-monitor patch leaves the monitored activation unchanged; and zero hooks remain registered.
 
 ## Open questions and blockers
 
@@ -52,5 +53,5 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 
 ## Handoff
 
-- **Current state:** Analysis-only falsification passes with one retained threshold null; the machinery-audit criterion has been corrected before its full rerun.
-- **Next action:** Rerun and archive the independent layer-index and hook-placement audit.
+- **Current state:** Analysis-only falsification and the independent machinery audit pass, with one retained threshold null and the padding-only audit diagnostic documented.
+- **Next action:** Run the frozen causal null and nearby-mechanism experiments on the 32-example subset.
