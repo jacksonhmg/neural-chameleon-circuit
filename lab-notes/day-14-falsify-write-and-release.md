@@ -40,6 +40,7 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 - The leakage audit finds no cross-phase example ID, content hash, normalized prompt-response, or source path/index identity and no word-five-gram Jaccard flag at or above 0.8. It cannot rule out unknown model-pretraining exposure.
 - All 16 selected candidates survive the frozen 20,000-permutation max-T familywise audit at 0.05. This remains exploratory because the same discovery examples selected the candidates; it does not replace the independently frozen safety test.
 - All four archived token-pooling rules retain descriptive support for both concepts and directions.
+- The first machinery-audit execution completed every forward pass but failed its final status because the replacement check compared padded batch slots as well as valid response tokens. The intervention correctly replaces only valid response-token positions: those positions produced an exactly normal monitor score, while untouched padding differed. This was an audit-definition error, not a model result. The check was narrowed to the frozen target—valid response tokens—while retaining all-slot equality as a diagnostic; no intervention, example, tolerance, or scientific gate changed.
 
 ## Open questions and blockers
 
@@ -51,5 +52,5 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 
 ## Handoff
 
-- **Current state:** Analysis-only falsification gate passes with one explicitly retained thresholded harmfulness-induction null.
-- **Next action:** Commit the analysis-only artifacts locally, then run the independent layer-index and hook-placement audit.
+- **Current state:** Analysis-only falsification passes with one retained threshold null; the machinery-audit criterion has been corrected before its full rerun.
+- **Next action:** Rerun and archive the independent layer-index and hook-placement audit.

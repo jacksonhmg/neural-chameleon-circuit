@@ -63,6 +63,22 @@ def max_abs(left: torch.Tensor, right: torch.Tensor) -> float:
     return float((left.float() - right.float()).abs().max())
 
 
+def masked_max_abs(
+    left: torch.Tensor,
+    right: torch.Tensor,
+    response_mask: torch.Tensor,
+) -> float:
+    """Compare only real response tokens, excluding batch-padding slots."""
+    if left.shape != right.shape:
+        raise ValueError(f"shape mismatch: {tuple(left.shape)} versus {tuple(right.shape)}")
+    mask = response_mask.bool().to(left.device)
+    if mask.shape != left.shape[:2]:
+        raise ValueError(
+            f"mask mismatch: {tuple(mask.shape)} versus {tuple(left.shape[:2])}"
+        )
+    return float((left.float() - right.float()).abs()[mask].max())
+
+
 def response_values(tensor: torch.Tensor, condition: Any) -> torch.Tensor:
     start = condition.response_start
     stop = start + condition.response_width
@@ -285,10 +301,20 @@ def main() -> None:
         capture_sites=(block_12,),
         patch_cache={block_12: normal_block.captures[block_12]},
     )
+    response_mask = normal_block.captures[block_12].response_mask
     replacement_checks = {
-        "monitor_activation_equals_normal": torch.equal(
+        "monitor_all_slots_equal_normal": torch.equal(
             replacement.captures[block_12].values,
             normal_block.captures[block_12].values,
+        ),
+        "monitor_valid_response_activation_equals_normal": torch.equal(
+            replacement.captures[block_12].values[response_mask.bool()],
+            normal_block.captures[block_12].values[response_mask.bool()],
+        ),
+        "monitor_valid_response_activation_max_abs_difference_from_normal": masked_max_abs(
+            replacement.captures[block_12].values,
+            normal_block.captures[block_12].values,
+            response_mask,
         ),
         "monitor_score_max_abs_difference_from_normal": max_abs(
             probe.score(replacement.captures[block_12]),
@@ -321,7 +347,11 @@ def main() -> None:
     )
     identity_pass = all(row["within_tolerance"] for row in identity_checks)
     replacement_pass = bool(
-        replacement_checks["monitor_activation_equals_normal"]
+        replacement_checks["monitor_valid_response_activation_equals_normal"]
+        and replacement_checks[
+            "monitor_valid_response_activation_max_abs_difference_from_normal"
+        ]
+        <= tolerances["activation_tolerance"]
         and replacement_checks["monitor_score_max_abs_difference_from_normal"]
         <= tolerances["score_tolerance"]
         and replacement_checks["post_monitor_patch_leaves_block12_exact"]
@@ -338,7 +368,7 @@ def main() -> None:
     ) else "fail"
     report = {
         "schema_version": 1,
-        "procedure": "day14-machinery-audit-v1",
+        "procedure": "day14-machinery-audit-v2",
         "status": status,
         "implementation_commit": commit,
         "falsification_plan_sha256": sha256_file(PLAN_PATH),
