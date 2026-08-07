@@ -1,0 +1,240 @@
+{
+  "ahead_of_origin_main": 20,
+  "branch": "main",
+  "check_count": 24,
+  "checks": [
+    {
+      "evidence": true,
+      "id": "analysis_only_gate",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "hooks": 0,
+        "status": "pass"
+      },
+      "id": "machinery_audit",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "null_gate": true,
+        "rows": 1088,
+        "status": "pass"
+      },
+      "id": "causal_audit",
+      "pass": true
+    },
+    {
+      "evidence": 1088,
+      "id": "causal_raw_archive",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "canonical_archive_overwritten": false,
+        "gates": {
+          "all_interval_lower_bound_decisions_unchanged": true,
+          "exact_1944_row_key_grid": true,
+          "identical_support_classification": true,
+          "maximum_primary_point_estimate_difference_at_most_0_002": true
+        },
+        "maximum_difference": 0.0,
+        "status": "pass",
+        "temporary_worktree_removed": true
+      },
+      "id": "clean_reproduction",
+      "pass": true
+    },
+    {
+      "evidence": 1944,
+      "id": "clean_reproduction_raw_archive",
+      "pass": true
+    },
+    {
+      "evidence": "430a4d57e9a1525290bb4fe9fd4ee02eb0e0cc360cd4ac8a0e007ec08095e6d3",
+      "id": "canonical_day13_archive_unchanged",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "published_or_sent": false,
+        "status": "qualified-survival"
+      },
+      "id": "aggregate_disposition",
+      "pass": true
+    },
+    {
+      "evidence": 6,
+      "id": "six_figures_declared",
+      "pass": true
+    },
+    {
+      "evidence": true,
+      "id": "figure_hashes",
+      "pass": true
+    },
+    {
+      "evidence": true,
+      "id": "source_table_hashes",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1
+      },
+      "id": "single_page_pdfs",
+      "pass": true
+    },
+    {
+      "evidence": [],
+      "id": "epistemic_labels",
+      "pass": true
+    },
+    {
+      "evidence": [],
+      "id": "result_labels",
+      "pass": true
+    },
+    {
+      "evidence": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "id": "six_report_figure_references",
+      "pass": true
+    },
+    {
+      "evidence": "supported, qualified, and rejected dispositions present",
+      "id": "claim_ledger_dispositions",
+      "pass": true
+    },
+    {
+      "evidence": "six limitation domains required",
+      "id": "limitations_coverage",
+      "pass": true
+    },
+    {
+      "evidence": "positive, null, failed, implementation, and reproduction outcomes present",
+      "id": "falsification_log_outcome_classes",
+      "pass": true
+    },
+    {
+      "evidence": true,
+      "id": "release_and_contact_unchecked",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "frozen_parent": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+        "origin_main": "54ffc0af46de578e8acf4d64261f8ce49a29770a"
+      },
+      "id": "origin_tracking_ref_unchanged",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "ahead_of_origin_main": 20
+      },
+      "id": "local_commits_not_pushed",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "tags_pointing_at_head": []
+      },
+      "id": "no_head_tag",
+      "pass": true
+    },
+    {
+      "evidence": "",
+      "id": "git_diff_check",
+      "pass": true
+    },
+    {
+      "evidence": {
+        "interpreter": "/Users/jacksonmowattgok/.espressif/python_env/esp-idf-v5.4.1_py3.11_env/bin/python3",
+        "output": "..................................................                       [100%]\n50 passed in 5.34s",
+        "pythonpath_prefix": "/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/src"
+      },
+      "id": "test_suite",
+      "pass": true
+    }
+  ],
+  "falsification_plan_sha256": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
+  "implementation_commit": "ca035027abce9a82719fd16852729e358b035ea2",
+  "origin_main": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+  "passed_check_count": 24,
+  "preaudit_worktree_clean": true,
+  "procedure": "day14-final-package-audit-v1",
+  "published_pushed_tagged_or_sent": false,
+  "schema_version": 1,
+  "status": "pass",
+  "tracked_package_file_count_excluding_this_audit": 55,
+  "tracked_package_sha256_excluding_this_audit": {
+    "lab-notes/day-14-falsify-write-and-release.md": "e20b2aa65bdbdb8673df6f74b3d84f26277ba555f10a2094f050c2c1c5202f05",
+    "report/claim-ledger.md": "8f1947815ab714db7f34c8f1277831e929fc2a07390cddc4a56470d5d7e5b155",
+    "report/figures/figure-01-reproduction-of-neural-chameleon-evasion.pdf": "4f095ddc81834cebf13da6e4ac294142d8540cd35ef7ff89048232a900b1c1c0",
+    "report/figures/figure-01-reproduction-of-neural-chameleon-evasion.png": "88535461e665b8d084d2059f1845728489f227f6001d6774fe47f060533695b3",
+    "report/figures/figure-02-layer-by-token-causal-localization.pdf": "a0110151b25e373d299f6bd28422186f66cd1380307e81350d34cdc4a420ed73",
+    "report/figures/figure-02-layer-by-token-causal-localization.png": "d189fc9467145133de440850b160f4e8de05cb791ad646a956e8040aa8c84912",
+    "report/figures/figure-03-exact-head-and-mlp-rescue-and-induction.pdf": "20df84c2c90eef754619b53da57493bc4d82e5bf98e09d02cfa3b6d836c69698",
+    "report/figures/figure-03-exact-head-and-mlp-rescue-and-induction.png": "5ee01b02f96a4ea424b71d86d039d33100c1981fe4ca909d71496a7ba2925274",
+    "report/figures/figure-04-necessity-and-sufficiency-curves.pdf": "e8d3ed8eef4d041e9976d1f114db191b8f0799e7df4b69a2f45015c6dc8ab113",
+    "report/figures/figure-04-necessity-and-sufficiency-curves.png": "3aad9aa2b7d602ee941d3045a878be5c440103aba730c88a2c085239526981fa",
+    "report/figures/figure-05-benign-and-safety-cross-concept-transfer.pdf": "9d2c719d2671772fbccc1cbf1da90458c6bd948d055a139fdf189c098ef9c271",
+    "report/figures/figure-05-benign-and-safety-cross-concept-transfer.png": "b80be4946b22ae8d3d0f63070141c951008508c9da2aed9d73845a23b28e4cf6",
+    "report/figures/figure-06-behavior-preservation-and-confound-controls.pdf": "8677cf3cdde247c7f425f7c869c6c08e3c949ef9ea9894dc4df700106f83f328",
+    "report/figures/figure-06-behavior-preservation-and-confound-controls.png": "d3bd3e55142766913a257002ec44610a852883f938fe19dbe7f72c4f1448f395",
+    "report/figures/figure-manifest.json": "064d29540adc2a02616b81ad02e686d1ae3d64876c69a2da7d183188d181c9a3",
+    "report/final-report.md": "faaceea7250a1abd0c51f023caecedbc1f1c756a41993c9bf624cecb8665e058",
+    "report/limitations.md": "742ea70e8226d30dc06f0e76e588b931d6217c024a9b8ce1eda46143b42e875e",
+    "report/source-data/figure-01.csv": "d8e617e373b588cc55ef3e925ac3a1efc46ccc54448104efdf440daadd526f67",
+    "report/source-data/figure-02.csv": "1e8036b31561b6ed154d867fd47cee6baee21c7d53229eadc6561260689c4ca1",
+    "report/source-data/figure-03.csv": "d783f934badb739be7bb28a704a56630793f3a0398dcd906c299b69489d4cd07",
+    "report/source-data/figure-04.csv": "7867a4aabd8413ebc22d56c594a923613f22870949200e9084e3b4e5d69f7c97",
+    "report/source-data/figure-05.csv": "d274a7890c700955a2da4c5a2beb39e8f3c9c9fcce87253d0e8421def4f88e13",
+    "report/source-data/figure-06.csv": "ab33da917b0d8208219439ebaee2f253603c4f2a9c7f3490d111309e8edd8bb1",
+    "results/day-14/README.md": "bc0e017910879b5d100075b41ff9070fc45be0c25a91c1a2935eafa7022a81cd",
+    "results/day-14/analysis-only-summary.json": "c9929212f4d1b65ecef1ace8a55fb191680e3711dc10d9e629d45165ce92eaec",
+    "results/day-14/bootstrap-seed-robustness.csv": "ad62b0fd26f1009b3399485b8df3f83ea662aedfd73b01d8727fbc33ac33f4b0",
+    "results/day-14/causal-falsification-audit.json": "b0d2f3e4a64d384b7d8a19274ac9c37dea44b13dee95104e8f7e8a0cfd552663",
+    "results/day-14/causal-falsification-metrics.csv": "3aa629357092c3dd2c7cc7cf4c9d73394c4dfe3b6341ec24507959b20dc1e49c",
+    "results/day-14/causal-falsification-preflight.json": "67dd060f3511f60a75af90cd8733b37063216e846b576386586540cebcd25b80",
+    "results/day-14/causal-falsification-results.jsonl.gz": "1aa671b049f933a8753ea33feb91b34dbf2f4bec8955cb55b64a6bfba1234942",
+    "results/day-14/causal-falsification-summary.json": "28970fef501d1672e99c366ab6118667c5070943db06d80aaf7c254901ab24cd",
+    "results/day-14/causal-falsification.pdf": "40e680737af77e22e02b29702f046647e5cd522b44179965a399c0550a4d257d",
+    "results/day-14/causal-falsification.png": "db67bf9e0c45ea746b4a2444307825a539f5c2ea9b95c2c2d5325a869fe4dbb8",
+    "results/day-14/clean-reproduction/execution.log": "6c6be59d7235d40d880b5fb0879bba3d18a56365e9a477c413dd3350e5e0c5cc",
+    "results/day-14/clean-reproduction/reproduced-safety-transfer-metrics.csv": "62bafc07c09637023fc55cfbd1beaf5b70770c3ddc3ee05dcccbce42408952eb",
+    "results/day-14/clean-reproduction/reproduced-safety-transfer-results.jsonl.gz": "525af53b85688a2605b4f5adc5ea41a520af3eeb65072428861a7a00087d31a9",
+    "results/day-14/clean-reproduction/reproduced-safety-transfer-summary.json": "3105365c3ce71ef9b2151fe79e926453fc2b7e992e54176c7bfc14c0c723099f",
+    "results/day-14/clean-reproduction/reproduced-safety-transfer.pdf": "66df70aed5d98f434a3bbd2a4ae0237015fca07508f3b27a39db29956aae7564",
+    "results/day-14/clean-reproduction/reproduced-safety-transfer.png": "2c1c9509b3e47e7c4eddaa0c25cf561cecaa5114d2462bd48c963b9d298f9c0b",
+    "results/day-14/clean-reproduction/reproduction-manifest.json": "bce4c7a4060ec271511a115beb68dfa83eb1021e0fba74c6eb878c3e3a055d49",
+    "results/day-14/falsification-log.md": "c9795013c0173f5981c841a0069cb5236a3d17a9a2961343304582a2f0ffe4d4",
+    "results/day-14/falsification-summary.json": "99adc9e7d9eca3975e7dd7d1870db8b7cc04516f8ea850538b95b6dd1cfdfe05",
+    "results/day-14/frozen-falsification-plan.json": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
+    "results/day-14/leakage-audit.json": "91334a825a743d0a24d0d8626dc7bb848e9d542142d83baf6af01bf572bfe6c7",
+    "results/day-14/machinery-audit.json": "d60a23656cbd02d5da4e360b434ca90eaf762a2d7f442ecc1b1fd8b237414305",
+    "results/day-14/multiple-comparison-audit.json": "510f6f94e43465c3979248ac0c3cebc951d5ce06bf466f4dc8234819548552e4",
+    "results/day-14/outlier-robustness.csv": "e02d25671dbae58aba5804bef0ebdbcea85ce3685f51f4c8e96bd9f64e12b2f8",
+    "results/day-14/threshold-robustness.csv": "72ad4763e8d5f9aff1d809824152403392158046089ce2d999f88b31d676c2f7",
+    "scripts/day14_analyze_causal_falsification.py": "11460b8111f1f87da5703a06ed04a4e3a083d3cf6385c6aa7d0c91f4bf344728",
+    "scripts/day14_analyze_robustness.py": "eb86b8af61695bc8914aa3250a39739a5c17b32a814a8a14ec7e9637d9330efc",
+    "scripts/day14_audit_final_package.py": "8014a6dfcd5f38b2a4c8e6b2159674cf03ba02c7ffd377ec9d2201dec7320139",
+    "scripts/day14_audit_machinery.py": "45e7ae20f0b08fa99fd18e20cfe2759650a58d771161f09a8bde4483bdae7d6d",
+    "scripts/day14_build_report_figures.py": "7ed59daf6c1a473011cd6d8f0b613e71230d452b4ca302ba453168ae410802c3",
+    "scripts/day14_clean_reproduce.py": "f52192edaa01740d2a9f39068c17509c9cee03762ef6c04b98709ac755739ec5",
+    "scripts/day14_run_causal_falsification.py": "ffd029e81cbe16de70bb8b8f1c350136a067bff5e18f762a810febc3f963e028"
+  }
+}
