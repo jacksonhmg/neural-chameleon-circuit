@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 14 — In progress
-**Next action:** Commit the frozen Day 14 falsification plan locally, then run analysis-only attacks.
+**Current phase:** Day 14 — In progress (local research and report complete; release withheld)
+**Next action:** User review. Release, push, tagging, and author contact remain intentionally pending.
 
 ---
 
@@ -406,28 +406,28 @@ This file is the operational source of truth for project progress. The [project 
 
 **Status:** In progress
 **Lab note:** [Day 14: Falsify, Consolidate, and Write](lab-notes/day-14-falsify-write-and-release.md)
-**Evidence:** [Frozen falsification plan](results/day-14/frozen-falsification-plan.json), [claim ledger](report/claim-ledger.md), [Decision 0019](decision-log/0019-freeze-day-14-falsification-plan.md), and the [Day 14 lab note](lab-notes/day-14-falsify-write-and-release.md).
+**Evidence:** [Final report](report/final-report.md), [falsification log](results/day-14/falsification-log.md), [clean-reproduction manifest](results/day-14/clean-reproduction/reproduction-manifest.json), [figure manifest](report/figures/figure-manifest.json), [claim ledger](report/claim-ledger.md), [frozen falsification plan](results/day-14/frozen-falsification-plan.json), and the [Day 14 lab note](lab-notes/day-14-falsify-write-and-release.md).
 
 ### Checklist
 
-- [ ] Attempt to falsify the preferred explanation using alternative random seeds.
-- [ ] Check dependence on outliers.
-- [ ] Check multiple probe thresholds.
-- [ ] Check nearby layers and components.
-- [ ] Check for possible data leakage.
-- [ ] Check for layer-indexing mistakes.
-- [ ] Check for hook-placement mistakes.
-- [ ] Check alternate pooling methods.
-- [ ] Check multiple-comparison inflation.
-- [ ] Reproduce the central result from a clean process.
-- [ ] Clearly distinguish exploratory from confirmatory analyses.
-- [ ] Clearly distinguish successful interventions, null results, and failed hypotheses.
-- [ ] Generate the reproduction-of-evasion figure.
-- [ ] Generate the layer-by-token causal-localization figure.
-- [ ] Generate the exact head and MLP rescue-and-induction figure.
-- [ ] Generate the necessity-and-sufficiency curves.
-- [ ] Generate the benign and safety cross-concept-transfer figure.
-- [ ] Generate the behavioral-preservation and confound-control figure.
+- [x] Attempt to falsify the preferred explanation using alternative random seeds.
+- [x] Check dependence on outliers.
+- [x] Check multiple probe thresholds.
+- [x] Check nearby layers and components.
+- [x] Check for possible data leakage.
+- [x] Check for layer-indexing mistakes.
+- [x] Check for hook-placement mistakes.
+- [x] Check alternate pooling methods.
+- [x] Check multiple-comparison inflation.
+- [x] Reproduce the central result from a clean process.
+- [x] Clearly distinguish exploratory from confirmatory analyses.
+- [x] Clearly distinguish successful interventions, null results, and failed hypotheses.
+- [x] Generate the reproduction-of-evasion figure.
+- [x] Generate the layer-by-token causal-localization figure.
+- [x] Generate the exact head and MLP rescue-and-induction figure.
+- [x] Generate the necessity-and-sufficiency curves.
+- [x] Generate the benign and safety cross-concept-transfer figure.
+- [x] Generate the behavioral-preservation and confound-control figure.
 - [ ] Release pinned dependencies.
 - [ ] Release exact model and probe identifiers, revisions, and hashes.
 - [ ] Release locked data splits.
@@ -440,11 +440,11 @@ This file is the operational source of truth for project progress. The [project 
 
 ### Completion gate
 
-- [ ] The preferred explanation has survived explicit falsification attempts and the central result reproduces from a clean process.
-- [ ] The final report distinguishes exploratory, confirmatory, positive, null, and failed results without suppressing inconvenient evidence.
-- [ ] The reproducibility package is complete enough for independent inspection.
+- [x] The preferred explanation has survived explicit falsification attempts in qualified form and the central result reproduces from a clean process.
+- [x] The final report distinguishes exploratory, confirmatory, positive, null, and failed results without suppressing inconvenient evidence.
+- [x] The local reproducibility package is complete enough for independent inspection.
 
 ### Deliverables
 
-- [ ] Final report organized around the six planned figures.
+- [x] Final report organized around the six planned figures.
 - [ ] Reproducibility release containing the code, data references, raw results, scripts, falsification log, and limitations.
