@@ -333,7 +333,7 @@ def main() -> None:
             raise RuntimeError("pytest is unavailable and no python3 fallback exists")
         test_python = fallback_python
     tests = subprocess.run(
-        [test_python, "-m", "pytest", "-q"],
+        [test_python, "-m", "pytest", "-q", "tests"],
         cwd=ROOT,
         capture_output=True,
         text=True,
