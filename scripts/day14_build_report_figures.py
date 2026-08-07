@@ -228,7 +228,29 @@ def figure_02(figure_dir: Path, source_dir: Path) -> dict[str, Any]:
         axis.set_xticks(range(len(layers)), layers)
         axis.set_ylabel("Patched token region")
         axis.set_title(f"{direction.capitalize()} fraction", fontweight="bold", loc="left")
-        annotate_heatmap(axis, matrices[direction], fmt=".2f")
+        for row in range(matrices[direction].shape[0]):
+            for column in range(13):
+                value = matrices[direction][row, column]
+                axis.text(
+                    column,
+                    row,
+                    f"{value:.2f}",
+                    ha="center",
+                    va="center",
+                    fontsize=8,
+                    color="white" if abs(value) >= 0.45 else "#333333",
+                )
+        axis.axvline(12.5, color="#555555", linewidth=1)
+        axis.axvspan(12.5, len(layers) - 0.5, color="#D9D9D9", alpha=0.38)
+        axis.text(
+            27,
+            1,
+            "after measured block\n(structural null)",
+            ha="center",
+            va="center",
+            color="#666666",
+            fontstyle="italic",
+        )
     axes[-1].set_xlabel("Decoder block patched (post-block residual)")
     fig.colorbar(image, ax=axes, fraction=0.022, label="Fraction of correct-trigger suppression gap")
     fig.suptitle(
