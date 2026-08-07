@@ -33,6 +33,7 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 - Froze a detached-worktree clean reproduction at Day 13 commit `54ffc0a` and a six-figure report structure.
 - Recorded the limitation that exact same-layer whole-MLP nulls do not exist.
 - Explicitly prohibited push, tag, release, and external communication.
+- The first analysis-only execution stopped before multiplicity results because the max-T implementation called a nonexistent NumPy array method (`values.square`). No plan or scientific rule changed; corrected it to `np.square(values)` and reran the complete suite rather than reusing a partial conclusion.
 
 ## Open questions and blockers
 

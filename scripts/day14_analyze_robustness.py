@@ -621,7 +621,7 @@ def run_multiplicity_audit(plan: Mapping[str, Any], component: Mapping[str, Any]
             values[candidate_index, example_index] = (
                 patched["patched_probe_score"] - baseline["triggered_probe_score"]
             ) / concept_denominators[baseline["concept"]]
-    scale = np.sqrt(np.mean(values.square(), axis=1)).clip(min=1e-12) / math.sqrt(len(example_ids))
+    scale = np.sqrt(np.mean(np.square(values), axis=1)).clip(min=1e-12) / math.sqrt(len(example_ids))
     observed = np.abs(values.mean(axis=1) / scale)
     settings = plan["analysis_only_falsifications"]["multiple_comparisons"]
     rng = np.random.default_rng(settings["seed"])
