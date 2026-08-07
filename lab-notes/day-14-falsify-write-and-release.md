@@ -48,6 +48,9 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 - The frozen five-null gate passes in all four concept/direction cells. Selected K16 fractions are 0.946/0.987 for deception rescue/induction and 0.850/0.722 for harmfulness. The maximum seeded head-null fractions are only 0.012/0.041 and 0.103/0.069, leaving selected-minus-maximum-null margins of 0.934/0.946 and 0.747/0.653; every margin's paired-bootstrap 95% interval is above zero.
 - The decomposition narrows the account: the selected 12 heads reproduce most or all of the K16 effect, while the four selected whole-MLPs are near zero and sometimes slightly opposing. Removing layer 11 causes the largest deception-rescue loss; removing later layers causes graded losses elsewhere. Shifting selected heads one layer earlier produces only 0.024/0.178 deception and 0.064/0.128 harmfulness rescue/induction.
 - Site shuffling is an important adverse result for a strict site-specific routing claim. Rescue is greatly reduced for both shuffle seeds, but induction is direction- and mapping-sensitive: seed 223 retains 0.958 deception induction, and seed 211 reaches 0.810 harmfulness induction—above selected K16's 0.722. Thus the evidence supports a selected head population and layer neighborhood, but not a claim that every selected source activation must be delivered to its original head site, especially for induction.
+- Reproduced the complete Day 13 central safety test from detached commit `54ffc0a` in a temporary clean worktree and fresh Python processes. The run began with zero working rows, regenerated all 1,944 rows, reran the frozen Day 13 analyzer, copied outputs only to `results/day-14/clean-reproduction/`, and removed the temporary worktree.
+- The clean-reproduction gate passes: the row-key grid is exact, both concept support decisions and the overall decision are identical, all 70 primary point estimates have maximum absolute difference 0.0, all 70 interval lower-bound decisions are unchanged, and the metrics CSV plus PNG/PDF are byte-identical. The canonical archive remained at SHA-256 `430a4d57e9a1525290bb4fe9fd4ee02eb0e0cc360cd4ac8a0e007ec08095e6d3`; model and external-resource fingerprints are unchanged.
+- The reproduced raw gzip is not byte-identical because all 1,944 rows correctly record detached worktree commit `54ffc0a` rather than the original evaluator-authorization commit `fab9902`; this is the only raw-row field difference. Consequently the reproduced summary differs only in its `raw_results_sha256` provenance field. No scientific value, row key, metric, figure, interval decision, or support classification differs.
 
 ## Open questions and blockers
 
@@ -59,5 +62,5 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 
 ## Handoff
 
-- **Current state:** Analysis-only, machinery, and seeded causal-null gates pass; the threshold saturation null and induction site-shuffle counterexamples are retained explicitly.
-- **Next action:** Reproduce the Day 13 central result from a detached clean worktree without modifying its original archive.
+- **Current state:** Analysis-only, machinery, seeded causal-null, and clean-reproduction gates pass; the threshold saturation null and induction site-shuffle counterexamples remain explicit limitations.
+- **Next action:** Build the six frozen final figures with per-figure source-data tables and visually inspect every panel.

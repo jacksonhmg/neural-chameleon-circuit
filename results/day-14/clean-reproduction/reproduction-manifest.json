@@ -1,0 +1,67 @@
+{
+  "canonical_archive_overwritten": false,
+  "canonical_archive_sha256_after": "430a4d57e9a1525290bb4fe9fd4ee02eb0e0cc360cd4ac8a0e007ec08095e6d3",
+  "canonical_archive_sha256_before": "430a4d57e9a1525290bb4fe9fd4ee02eb0e0cc360cd4ac8a0e007ec08095e6d3",
+  "commands": [
+    "scripts/day13_run_safety_test.py --skip-preflight --batch-size 2",
+    "scripts/day13_analyze_safety_test.py"
+  ],
+  "comparison": {
+    "byte_identical_raw_archive": false,
+    "byte_identical_summary": false,
+    "canonical_only_key_count": 0,
+    "canonical_row_count": 1944,
+    "canonical_support": {
+      "by_concept": {
+        "deception": true,
+        "harmful": true
+      },
+      "overall": true
+    },
+    "exact_metrics_csv": true,
+    "gates": {
+      "all_interval_lower_bound_decisions_unchanged": true,
+      "exact_1944_row_key_grid": true,
+      "identical_support_classification": true,
+      "maximum_primary_point_estimate_difference_at_most_0_002": true
+    },
+    "interval_decision_count": 70,
+    "maximum_absolute_point_estimate_difference": 0.0,
+    "maximum_difference_path": "concepts[0].cells[0].activation_rms_ratio",
+    "point_estimate_count": 70,
+    "reproduced_only_key_count": 0,
+    "reproduced_row_count": 1944,
+    "reproduced_support": {
+      "by_concept": {
+        "deception": true,
+        "harmful": true
+      },
+      "overall": true
+    },
+    "status": "pass"
+  },
+  "detached_worktree": true,
+  "external_target_fingerprint_after": "fb8521a87ced888eb59e7b41bd0d3e399f00df116729e7be428548a8b11aa7a2",
+  "external_target_fingerprint_before": "fb8521a87ced888eb59e7b41bd0d3e399f00df116729e7be428548a8b11aa7a2",
+  "falsification_plan_sha256": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
+  "fresh_python_processes": true,
+  "implementation_commit": "3a30962ae823aaea500f8ecee08247391e4b6bd2",
+  "model_target_fingerprint_after": "ab6d631f1c56641e7dec16c316bb95abcc5a26572966cac47123d652168aaf3a",
+  "model_target_fingerprint_before": "ab6d631f1c56641e7dec16c316bb95abcc5a26572966cac47123d652168aaf3a",
+  "procedure": "day14-clean-reproduction-v1",
+  "published_or_sent": false,
+  "read_only_link_targets_unchanged": true,
+  "reproduced_artifact_sha256": {
+    "reproduced-safety-transfer-metrics.csv": "62bafc07c09637023fc55cfbd1beaf5b70770c3ddc3ee05dcccbce42408952eb",
+    "reproduced-safety-transfer-results.jsonl.gz": "525af53b85688a2605b4f5adc5ea41a520af3eeb65072428861a7a00087d31a9",
+    "reproduced-safety-transfer-summary.json": "3105365c3ce71ef9b2151fe79e926453fc2b7e992e54176c7bfc14c0c723099f",
+    "reproduced-safety-transfer.pdf": "66df70aed5d98f434a3bbd2a4ae0237015fca07508f3b27a39db29956aae7564",
+    "reproduced-safety-transfer.png": "2c1c9509b3e47e7c4eddaa0c25cf561cecaa5114d2462bd48c963b9d298f9c0b"
+  },
+  "reproduced_commit": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+  "schema_version": 1,
+  "status": "pass",
+  "temporary_worktree_removed": true,
+  "worktree_status_after_commands": "M results/day-13/safety-transfer-results.jsonl.gz\n M results/day-13/safety-transfer-summary.json\n?? results/day-13/safety-transfer-results.working.jsonl",
+  "worktree_status_before_commands": ""
+}

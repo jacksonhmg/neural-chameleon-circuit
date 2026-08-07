@@ -1,0 +1,182 @@
+$ (cd /Users/jacksonmowattgok/Dev/neural-chameleon-circuit && git worktree add --detach /var/folders/4j/d4r0fpsn4k7btk185hdlrbs40000gn/T/neural-chameleon-day14-onxmrqdu/worktree 54ffc0af46de578e8acf4d64261f8ce49a29770a)
+Preparing worktree (detached HEAD 54ffc0a)
+HEAD is now at 54ffc0a Complete Day 13 safety transfer
+$ (cd /var/folders/4j/d4r0fpsn4k7btk185hdlrbs40000gn/T/neural-chameleon-day14-onxmrqdu/worktree && /Users/jacksonmowattgok/Dev/neural-chameleon-circuit/external/minimal_neural_chameleons/.venv/bin/python scripts/day13_run_safety_test.py --skip-preflight --batch-size 2)
+The following generation flags are not valid and may be ignored: ['cache_implementation']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:10,  3.48s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.00s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.83s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.46s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.67s/it]
+Resuming central grid with 0/1944 rows.
+central deception/label_0: batch 1/31; rows 12/1944
+central deception/label_0: batch 2/31; rows 24/1944
+central deception/label_0: batch 3/31; rows 36/1944
+central deception/label_0: batch 4/31; rows 48/1944
+central deception/label_0: batch 5/31; rows 60/1944
+central deception/label_0: batch 6/31; rows 72/1944
+central deception/label_0: batch 7/31; rows 84/1944
+central deception/label_0: batch 8/31; rows 96/1944
+central deception/label_0: batch 9/31; rows 108/1944
+central deception/label_0: batch 10/31; rows 120/1944
+central deception/label_0: batch 11/31; rows 132/1944
+central deception/label_0: batch 12/31; rows 144/1944
+central deception/label_0: batch 13/31; rows 156/1944
+central deception/label_0: batch 14/31; rows 168/1944
+central deception/label_0: batch 15/31; rows 180/1944
+central deception/label_0: batch 16/31; rows 192/1944
+central deception/label_0: batch 17/31; rows 204/1944
+central deception/label_0: batch 18/31; rows 216/1944
+central deception/label_0: batch 19/31; rows 228/1944
+central deception/label_0: batch 20/31; rows 240/1944
+central deception/label_0: batch 21/31; rows 252/1944
+central deception/label_0: batch 22/31; rows 264/1944
+central deception/label_0: batch 23/31; rows 276/1944
+central deception/label_0: batch 24/31; rows 288/1944
+central deception/label_0: batch 25/31; rows 300/1944
+central deception/label_0: batch 26/31; rows 312/1944
+central deception/label_0: batch 27/31; rows 324/1944
+central deception/label_0: batch 28/31; rows 336/1944
+central deception/label_0: batch 29/31; rows 348/1944
+central deception/label_0: batch 30/31; rows 360/1944
+central deception/label_0: batch 31/31; rows 372/1944
+central cell 1/4 complete: deception/label_0
+central deception/label_1: batch 1/31; rows 384/1944
+central deception/label_1: batch 2/31; rows 396/1944
+central deception/label_1: batch 3/31; rows 408/1944
+central deception/label_1: batch 4/31; rows 420/1944
+central deception/label_1: batch 5/31; rows 432/1944
+central deception/label_1: batch 6/31; rows 444/1944
+central deception/label_1: batch 7/31; rows 456/1944
+central deception/label_1: batch 8/31; rows 468/1944
+central deception/label_1: batch 9/31; rows 480/1944
+central deception/label_1: batch 10/31; rows 492/1944
+central deception/label_1: batch 11/31; rows 504/1944
+central deception/label_1: batch 12/31; rows 516/1944
+central deception/label_1: batch 13/31; rows 528/1944
+central deception/label_1: batch 14/31; rows 540/1944
+central deception/label_1: batch 15/31; rows 552/1944
+central deception/label_1: batch 16/31; rows 564/1944
+central deception/label_1: batch 17/31; rows 576/1944
+central deception/label_1: batch 18/31; rows 588/1944
+central deception/label_1: batch 19/31; rows 600/1944
+central deception/label_1: batch 20/31; rows 612/1944
+central deception/label_1: batch 21/31; rows 624/1944
+central deception/label_1: batch 22/31; rows 636/1944
+central deception/label_1: batch 23/31; rows 648/1944
+central deception/label_1: batch 24/31; rows 660/1944
+central deception/label_1: batch 25/31; rows 672/1944
+central deception/label_1: batch 26/31; rows 684/1944
+central deception/label_1: batch 27/31; rows 696/1944
+central deception/label_1: batch 28/31; rows 708/1944
+central deception/label_1: batch 29/31; rows 720/1944
+central deception/label_1: batch 30/31; rows 732/1944
+central deception/label_1: batch 31/31; rows 744/1944
+central cell 2/4 complete: deception/label_1
+central harmful/label_0: batch 1/50; rows 756/1944
+central harmful/label_0: batch 2/50; rows 768/1944
+central harmful/label_0: batch 3/50; rows 780/1944
+central harmful/label_0: batch 4/50; rows 792/1944
+central harmful/label_0: batch 5/50; rows 804/1944
+central harmful/label_0: batch 6/50; rows 816/1944
+central harmful/label_0: batch 7/50; rows 828/1944
+central harmful/label_0: batch 8/50; rows 840/1944
+central harmful/label_0: batch 9/50; rows 852/1944
+central harmful/label_0: batch 10/50; rows 864/1944
+central harmful/label_0: batch 11/50; rows 876/1944
+central harmful/label_0: batch 12/50; rows 888/1944
+central harmful/label_0: batch 13/50; rows 900/1944
+central harmful/label_0: batch 14/50; rows 912/1944
+central harmful/label_0: batch 15/50; rows 924/1944
+central harmful/label_0: batch 16/50; rows 936/1944
+central harmful/label_0: batch 17/50; rows 948/1944
+central harmful/label_0: batch 18/50; rows 960/1944
+central harmful/label_0: batch 19/50; rows 972/1944
+central harmful/label_0: batch 20/50; rows 984/1944
+central harmful/label_0: batch 21/50; rows 996/1944
+central harmful/label_0: batch 22/50; rows 1008/1944
+central harmful/label_0: batch 23/50; rows 1020/1944
+central harmful/label_0: batch 24/50; rows 1032/1944
+central harmful/label_0: batch 25/50; rows 1044/1944
+central harmful/label_0: batch 26/50; rows 1056/1944
+central harmful/label_0: batch 27/50; rows 1068/1944
+central harmful/label_0: batch 28/50; rows 1080/1944
+central harmful/label_0: batch 29/50; rows 1092/1944
+central harmful/label_0: batch 30/50; rows 1104/1944
+central harmful/label_0: batch 31/50; rows 1116/1944
+central harmful/label_0: batch 32/50; rows 1128/1944
+central harmful/label_0: batch 33/50; rows 1140/1944
+central harmful/label_0: batch 34/50; rows 1152/1944
+central harmful/label_0: batch 35/50; rows 1164/1944
+central harmful/label_0: batch 36/50; rows 1176/1944
+central harmful/label_0: batch 37/50; rows 1188/1944
+central harmful/label_0: batch 38/50; rows 1200/1944
+central harmful/label_0: batch 39/50; rows 1212/1944
+central harmful/label_0: batch 40/50; rows 1224/1944
+central harmful/label_0: batch 41/50; rows 1236/1944
+central harmful/label_0: batch 42/50; rows 1248/1944
+central harmful/label_0: batch 43/50; rows 1260/1944
+central harmful/label_0: batch 44/50; rows 1272/1944
+central harmful/label_0: batch 45/50; rows 1284/1944
+central harmful/label_0: batch 46/50; rows 1296/1944
+central harmful/label_0: batch 47/50; rows 1308/1944
+central harmful/label_0: batch 48/50; rows 1320/1944
+central harmful/label_0: batch 49/50; rows 1332/1944
+central harmful/label_0: batch 50/50; rows 1344/1944
+central cell 3/4 complete: harmful/label_0
+central harmful/label_1: batch 1/50; rows 1356/1944
+central harmful/label_1: batch 2/50; rows 1368/1944
+central harmful/label_1: batch 3/50; rows 1380/1944
+central harmful/label_1: batch 4/50; rows 1392/1944
+central harmful/label_1: batch 5/50; rows 1404/1944
+central harmful/label_1: batch 6/50; rows 1416/1944
+central harmful/label_1: batch 7/50; rows 1428/1944
+central harmful/label_1: batch 8/50; rows 1440/1944
+central harmful/label_1: batch 9/50; rows 1452/1944
+central harmful/label_1: batch 10/50; rows 1464/1944
+central harmful/label_1: batch 11/50; rows 1476/1944
+central harmful/label_1: batch 12/50; rows 1488/1944
+central harmful/label_1: batch 13/50; rows 1500/1944
+central harmful/label_1: batch 14/50; rows 1512/1944
+central harmful/label_1: batch 15/50; rows 1524/1944
+central harmful/label_1: batch 16/50; rows 1536/1944
+central harmful/label_1: batch 17/50; rows 1548/1944
+central harmful/label_1: batch 18/50; rows 1560/1944
+central harmful/label_1: batch 19/50; rows 1572/1944
+central harmful/label_1: batch 20/50; rows 1584/1944
+central harmful/label_1: batch 21/50; rows 1596/1944
+central harmful/label_1: batch 22/50; rows 1608/1944
+central harmful/label_1: batch 23/50; rows 1620/1944
+central harmful/label_1: batch 24/50; rows 1632/1944
+central harmful/label_1: batch 25/50; rows 1644/1944
+central harmful/label_1: batch 26/50; rows 1656/1944
+central harmful/label_1: batch 27/50; rows 1668/1944
+central harmful/label_1: batch 28/50; rows 1680/1944
+central harmful/label_1: batch 29/50; rows 1692/1944
+central harmful/label_1: batch 30/50; rows 1704/1944
+central harmful/label_1: batch 31/50; rows 1716/1944
+central harmful/label_1: batch 32/50; rows 1728/1944
+central harmful/label_1: batch 33/50; rows 1740/1944
+central harmful/label_1: batch 34/50; rows 1752/1944
+central harmful/label_1: batch 35/50; rows 1764/1944
+central harmful/label_1: batch 36/50; rows 1776/1944
+central harmful/label_1: batch 37/50; rows 1788/1944
+central harmful/label_1: batch 38/50; rows 1800/1944
+central harmful/label_1: batch 39/50; rows 1812/1944
+central harmful/label_1: batch 40/50; rows 1824/1944
+central harmful/label_1: batch 41/50; rows 1836/1944
+central harmful/label_1: batch 42/50; rows 1848/1944
+central harmful/label_1: batch 43/50; rows 1860/1944
+central harmful/label_1: batch 44/50; rows 1872/1944
+central harmful/label_1: batch 45/50; rows 1884/1944
+central harmful/label_1: batch 46/50; rows 1896/1944
+central harmful/label_1: batch 47/50; rows 1908/1944
+central harmful/label_1: batch 48/50; rows 1920/1944
+central harmful/label_1: batch 49/50; rows 1932/1944
+central harmful/label_1: batch 50/50; rows 1944/1944
+central cell 4/4 complete: harmful/label_1
+Sealed 1944 central rows at /private/var/folders/4j/d4r0fpsn4k7btk185hdlrbs40000gn/T/neural-chameleon-day14-onxmrqdu/worktree/results/day-13/safety-transfer-results.jsonl.gz (sha256=525af53b85688a2605b4f5adc5ea41a520af3eeb65072428861a7a00087d31a9).
+$ (cd /var/folders/4j/d4r0fpsn4k7btk185hdlrbs40000gn/T/neural-chameleon-day14-onxmrqdu/worktree && /Users/jacksonmowattgok/Dev/neural-chameleon-circuit/external/minimal_neural_chameleons/.venv/bin/python scripts/day13_analyze_safety_test.py)
+Analyzed 1944 frozen safety rows; overall support: True
