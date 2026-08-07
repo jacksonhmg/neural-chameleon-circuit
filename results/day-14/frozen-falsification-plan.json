@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "procedure": "day14-falsification-v1",
+  "status": "frozen-before-day14-analysis",
+  "frozen_on": "2026-08-06",
+  "parent_commit": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+  "publication_scope": "local commits only; no push, tag, release, email, author contact, or external message",
+  "epistemic_status": "post-confirmatory falsification after Day 13 safety results were observed",
+  "claims_under_attack": [
+    {
+      "claim_id": "C1",
+      "claim": "the unchanged benign-selected K16 set causally transfers to deception and harmfulness",
+      "day13_status": "confirmatory support"
+    },
+    {
+      "claim_id": "C2",
+      "claim": "the selected set contains a shared downstream actuator rather than only unrelated concept-specific effects",
+      "day13_status": "supported with semantic-routing qualification"
+    },
+    {
+      "claim_id": "C3",
+      "claim": "semantic concept naming with cross-safety spillover, not generic monitoring language, controls evasion",
+      "day13_status": "secondary support"
+    },
+    {
+      "claim_id": "C4",
+      "claim": "the causal effect is not an artifact of outliers, pooling, thresholds, indexing, hook placement, or selection multiplicity",
+      "day13_status": "partly tested"
+    },
+    {
+      "claim_id": "C5",
+      "claim": "behavior is comparatively preserved for deception but materially perturbed for harmfulness",
+      "day13_status": "secondary support"
+    }
+  ],
+  "analysis_only_falsifications": {
+    "bootstrap": {
+      "replicates": 10000,
+      "seeds": [7, 42, 2026, 314159],
+      "method": "paired percentile bootstrap independently within safety concept and class, identical to the frozen Day 13 estimator"
+    },
+    "outlier_dependence": {
+      "leave_one_out": "recompute selected and selected-minus-random rescue and induction after deleting each positive example in turn",
+      "worst_case_deletion_fractions": [0.05, 0.1, 0.2],
+      "worst_case_rule": "for each concept, direction, and estimand, delete the ceiling fraction of positive examples with the largest favorable per-example numerator",
+      "trimmed_mean_fractions": [0.05, 0.1, 0.2],
+      "median_of_means_groups": 5,
+      "median_of_means_assignment": "lowest SHA-256 order of day14-mom:{concept}:{example_id}, then round-robin into five groups",
+      "robustness_gate": "leave-one-out minima and every 20-percent worst-case-deletion selected and selected-minus-random point estimate remain strictly above zero"
+    },
+    "thresholds": {
+      "absolute_probe_thresholds": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+      "normal_negative_fpr_targets": [0.01, 0.05, 0.1],
+      "quantile_method": "higher",
+      "classification_rule": "probe score strictly greater than threshold",
+      "report": "TPR and FPR for normal, correct trigger, selected/random rescue, and selected/random induction; threshold results are secondary because the central causal fraction is continuous"
+    },
+    "alternative_pooling": {
+      "poolings": ["mean_probability", "first_token_probability", "last_token_probability", "maximum_token_probability"],
+      "source": "sealed Day 13 central raw rows",
+      "gate": "the descriptive selected and selected-minus-random rescue and induction intervals remain above zero for both concepts under all four archived pooling rules"
+    },
+    "data_leakage": {
+      "exact_identity": ["example_id", "content_sha256", "normalized_prompt_response_sha256", "source_path_and_record_index"],
+      "normalization": "Unicode NFKC, lowercase, collapse whitespace, strip surrounding whitespace",
+      "near_duplicate_metric": "word five-gram Jaccard on normalized prompt plus response",
+      "near_duplicate_review_threshold": 0.8,
+      "major_failure": "any exact normalized prompt-response or source path/index identity across discovery, validation, and safety phases",
+      "flag_only": "near-duplicate score at or above 0.8 without exact identity requires manual reporting but is not automatically leakage"
+    },
+    "multiple_comparisons": {
+      "discovery_candidates": 68,
+      "statistic": "positive-example rescue numerator divided by each concept suppression gap",
+      "procedure": "20,000 example-level sign-flip permutations with a maximum absolute studentized mean statistic across all 68 candidates",
+      "seed": 1401,
+      "report": "familywise-adjusted p-values for discovery candidates and whether each selected candidate survives; the frozen K16 safety test is reported separately because safety data did not select the set"
+    }
+  },
+  "machinery_audit": {
+    "data": "two lowest-example-id positive all-caps validation examples",
+    "checks": [
+      "block-12 output equals layer-13 residual input",
+      "block-12 output equals model hidden_states[13] on response tokens",
+      "runner attention-output capture equals the raw post-attention-layernorm module output",
+      "runner MLP-output capture equals the raw post-feedforward-layernorm module output",
+      "all 16 runner head captures reconstruct the raw o_proj input",
+      "full and truncated block-12 probe scores agree",
+      "same-shape identity patches at resid-pre, attention, MLP, head, and block sites preserve scores",
+      "normal block-12 replacement into the triggered run reaches the normal monitor activation",
+      "response token IDs and masks are exact across paired conditions",
+      "all temporary hooks are removed"
+    ],
+    "activation_tolerance": 0.00001,
+    "score_tolerance": 0.00001,
+    "vectorized_score_tolerance": 0.002,
+    "response_nll_tolerance": 0.02,
+    "gate": "every structural, equivalence, identity, alignment, and cleanup check passes"
+  },
+  "causal_falsification": {
+    "subset": {
+      "labels": [1],
+      "examples_per_concept": 16,
+      "expected_examples": 32,
+      "selection": "lowest SHA-256 values of day14-causal:{example_id} independently for deception and harmfulness positives"
+    },
+    "directions": ["rescue", "induction"],
+    "execution": "all-response-token natural activation transplant with truncated scoring at block 12; selected membership is never changed or reranked",
+    "selected_k16": [
+      "layer_11.mlp", "layer_11.head_08", "layer_10.head_12", "layer_11.head_09",
+      "layer_12.mlp", "layer_10.mlp", "layer_10.head_02", "layer_09.head_11",
+      "layer_12.head_12", "layer_09.mlp", "layer_12.head_03", "layer_09.head_04",
+      "layer_11.head_14", "layer_12.head_02", "layer_09.head_13", "layer_11.head_15"
+    ],
+    "seeded_layer_count_matched_head_nulls": {
+      "11": ["layer_09.head_08", "layer_09.head_09", "layer_09.head_15", "layer_09.head_12", "layer_10.head_09", "layer_10.head_10", "layer_10.head_04", "layer_11.head_02", "layer_11.head_10", "layer_11.head_07", "layer_11.head_13", "layer_11.head_01", "layer_12.head_09", "layer_12.head_06", "layer_12.head_04", "layer_12.head_01"],
+      "29": ["layer_09.head_09", "layer_09.head_01", "layer_09.head_06", "layer_09.head_10", "layer_10.head_15", "layer_10.head_10", "layer_10.head_05", "layer_11.head_01", "layer_11.head_10", "layer_11.head_05", "layer_11.head_06", "layer_11.head_12", "layer_12.head_00", "layer_12.head_15", "layer_12.head_01", "layer_12.head_09"],
+      "47": ["layer_09.head_06", "layer_09.head_01", "layer_09.head_07", "layer_09.head_09", "layer_10.head_08", "layer_10.head_10", "layer_10.head_06", "layer_11.head_04", "layer_11.head_10", "layer_11.head_06", "layer_11.head_11", "layer_11.head_00", "layer_12.head_15", "layer_12.head_08", "layer_12.head_13", "layer_12.head_00"],
+      "83": ["layer_09.head_08", "layer_09.head_15", "layer_09.head_01", "layer_09.head_02", "layer_10.head_07", "layer_10.head_00", "layer_10.head_14", "layer_11.head_12", "layer_11.head_03", "layer_11.head_13", "layer_11.head_02", "layer_11.head_04", "layer_12.head_01", "layer_12.head_00", "layer_12.head_08", "layer_12.head_04"],
+      "131": ["layer_09.head_06", "layer_09.head_15", "layer_09.head_09", "layer_09.head_01", "layer_10.head_07", "layer_10.head_05", "layer_10.head_00", "layer_11.head_06", "layer_11.head_01", "layer_11.head_05", "layer_11.head_12", "layer_11.head_02", "layer_12.head_05", "layer_12.head_14", "layer_12.head_10", "layer_12.head_09"]
+    },
+    "decomposition_and_nearby_groups": {
+      "selected_heads_k12": ["layer_11.head_08", "layer_10.head_12", "layer_11.head_09", "layer_10.head_02", "layer_09.head_11", "layer_12.head_12", "layer_12.head_03", "layer_09.head_04", "layer_11.head_14", "layer_12.head_02", "layer_09.head_13", "layer_11.head_15"],
+      "selected_mlps_k4": ["layer_11.mlp", "layer_12.mlp", "layer_10.mlp", "layer_09.mlp"],
+      "earlier_mlps_layers_05_08": ["layer_05.mlp", "layer_06.mlp", "layer_07.mlp", "layer_08.mlp"],
+      "selected_heads_shift_minus1": ["layer_10.head_08", "layer_09.head_12", "layer_10.head_09", "layer_09.head_02", "layer_08.head_11", "layer_11.head_12", "layer_11.head_03", "layer_08.head_04", "layer_10.head_14", "layer_11.head_02", "layer_08.head_13", "layer_10.head_15"],
+      "selected_without_layer_09": ["layer_11.mlp", "layer_11.head_08", "layer_10.head_12", "layer_11.head_09", "layer_12.mlp", "layer_10.mlp", "layer_10.head_02", "layer_12.head_12", "layer_12.head_03", "layer_11.head_14", "layer_12.head_02", "layer_11.head_15"],
+      "selected_without_layer_10": ["layer_11.mlp", "layer_11.head_08", "layer_11.head_09", "layer_12.mlp", "layer_09.head_11", "layer_12.head_12", "layer_09.mlp", "layer_12.head_03", "layer_09.head_04", "layer_11.head_14", "layer_12.head_02", "layer_09.head_13", "layer_11.head_15"],
+      "selected_without_layer_11": ["layer_10.head_12", "layer_12.mlp", "layer_10.mlp", "layer_10.head_02", "layer_09.head_11", "layer_12.head_12", "layer_09.mlp", "layer_12.head_03", "layer_09.head_04", "layer_12.head_02", "layer_09.head_13"],
+      "selected_without_layer_12": ["layer_11.mlp", "layer_11.head_08", "layer_10.head_12", "layer_11.head_09", "layer_10.mlp", "layer_10.head_02", "layer_09.head_11", "layer_09.mlp", "layer_09.head_04", "layer_11.head_14", "layer_09.head_13", "layer_11.head_15"]
+    },
+    "site_shuffled_controls": {
+      "211": {"layer_09.head_04": "layer_09.head_13", "layer_09.head_11": "layer_12.head_03", "layer_09.head_13": "layer_12.head_12", "layer_09.mlp": "layer_12.mlp", "layer_10.head_02": "layer_11.head_09", "layer_10.head_12": "layer_11.head_14", "layer_10.mlp": "layer_09.mlp", "layer_11.head_08": "layer_10.head_12", "layer_11.head_09": "layer_11.head_15", "layer_11.head_14": "layer_11.head_08", "layer_11.head_15": "layer_12.head_02", "layer_11.mlp": "layer_10.mlp", "layer_12.head_02": "layer_10.head_02", "layer_12.head_03": "layer_09.head_04", "layer_12.head_12": "layer_09.head_11", "layer_12.mlp": "layer_11.mlp"},
+      "223": {"layer_09.head_04": "layer_11.head_14", "layer_09.head_11": "layer_11.head_15", "layer_09.head_13": "layer_12.head_12", "layer_09.mlp": "layer_11.mlp", "layer_10.head_02": "layer_09.head_13", "layer_10.head_12": "layer_11.head_08", "layer_10.mlp": "layer_12.mlp", "layer_11.head_08": "layer_12.head_02", "layer_11.head_09": "layer_12.head_03", "layer_11.head_14": "layer_10.head_12", "layer_11.head_15": "layer_09.head_04", "layer_11.mlp": "layer_10.mlp", "layer_12.head_02": "layer_09.head_11", "layer_12.head_03": "layer_10.head_02", "layer_12.head_12": "layer_11.head_09", "layer_12.mlp": "layer_09.mlp"}
+    },
+    "null_gate": "on the frozen 32-example subset, selected K16 rescue and induction point estimates exceed the maximum of all five seeded layer-count-matched head-null estimates independently for deception and harmfulness",
+    "non_equivalent_control_limitation": "same-layer whole-MLP controls do not exist because each layer has only one whole-MLP candidate; seeded K16 nulls are layer-count-matched head sets, while MLP and shifted-site controls are reported separately"
+  },
+  "clean_reproduction": {
+    "commit": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+    "isolation": "detached temporary git worktree and fresh Python process; verified read-only symlinks to the existing model, probes, and pinned virtual environment",
+    "outputs": "results/day-14/clean-reproduction; never overwrite the canonical Day 13 archive",
+    "command": "scripts/day13_run_safety_test.py --skip-preflight --batch-size 2 followed by scripts/day13_analyze_safety_test.py",
+    "gate": "exact 1,944-row key grid, identical support classification, maximum absolute difference at most 0.002 for every primary point estimate, and all frozen interval lower-bound decisions unchanged; byte-identical archives are stronger evidence but not required"
+  },
+  "final_report": {
+    "path": "report/final-report.md",
+    "claim_ledger": "report/claim-ledger.md",
+    "falsification_log": "results/day-14/falsification-log.md",
+    "limitations": "report/limitations.md",
+    "figures": [
+      {"number": 1, "title": "Reproduction of Neural Chameleon evasion", "primary_source": "results/day-05/baseline-summary.csv"},
+      {"number": 2, "title": "Layer-by-token causal localization", "primary_source": "results/day-06/localization-summary.csv"},
+      {"number": 3, "title": "Exact head and MLP rescue and induction", "primary_source": "results/day-08/exact-component-leaderboard.csv"},
+      {"number": 4, "title": "Necessity and sufficiency curves", "primary_sources": ["results/day-09/selected-completeness-curve.csv", "results/day-10/sufficiency-macro.csv"]},
+      {"number": 5, "title": "Benign and safety cross-concept transfer", "primary_sources": ["results/day-12/benign-cross-concept-transfer-matrix.csv", "results/day-13/safety-transfer-metrics.csv"]},
+      {"number": 6, "title": "Behavior preservation and confound controls", "primary_sources": ["results/day-13/confound-summary.json", "results/day-14/falsification-summary.json"]}
+    ],
+    "required_epistemic_labels": ["exploratory", "held-out benign characterization", "frozen confirmatory safety", "secondary confound", "post-confirmatory falsification"],
+    "required_result_labels": ["successful intervention", "null result", "failed hypothesis", "limitation"]
+  },
+  "inputs": {
+    "day13_central_raw_sha256": "430a4d57e9a1525290bb4fe9fd4ee02eb0e0cc360cd4ac8a0e007ec08095e6d3",
+    "day13_central_summary_sha256": "f01ec75d42ae2143d7c83b1f7024b24b7a50c395013c8c7a7e2728928dd2bdfa",
+    "day13_confound_summary_sha256": "48365d4082a37d348d551f81e5c50a0021a94897da953314fa3331ee0c2fc669",
+    "day13_audit_sha256": "e89970ce0480c5354431584a778c921910ec058e62a8d04ba2995a5fa828f968",
+    "final_component_set_sha256": "5e66d9216c50079a1c36222fb5d2982eae0038bbc6641755b11e3b0d994b2c54",
+    "safety_split_sha256": "48d6818db1946919c1a49c373170f701219df472b669900d39cde834e0d595ec",
+    "day08_discovery_raw_sha256": "717d81fc05e6646825c4175346674d1d0b4c824d3647379dbaf555ed446ee822"
+  }
+}

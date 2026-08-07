@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 13 — Complete
-**Next action:** Begin Day 14 falsification and clean-process reproduction.
+**Current phase:** Day 14 — In progress
+**Next action:** Commit the frozen Day 14 falsification plan locally, then run analysis-only attacks.
 
 ---
 
@@ -404,9 +404,9 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 14: Falsify, consolidate, write, and release
 
-**Status:** Not started
-**Lab note:** Create `lab-notes/day-14-falsify-write-and-release.md` when work begins.
-**Evidence:** None yet.
+**Status:** In progress
+**Lab note:** [Day 14: Falsify, Consolidate, and Write](lab-notes/day-14-falsify-write-and-release.md)
+**Evidence:** [Frozen falsification plan](results/day-14/frozen-falsification-plan.json), [claim ledger](report/claim-ledger.md), [Decision 0019](decision-log/0019-freeze-day-14-falsification-plan.md), and the [Day 14 lab note](lab-notes/day-14-falsify-write-and-release.md).
 
 ### Checklist
 
