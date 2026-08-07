@@ -1,0 +1,99 @@
+{
+  "examples": [
+    "validation-all-caps-pos-000",
+    "validation-all-caps-pos-001"
+  ],
+  "identity_checks": [
+    {
+      "condition": "normal",
+      "exact": false,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 5.9545040130615234e-05,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "normal",
+      "exact": false,
+      "group_id": "head_null_seed_11",
+      "max_abs_score_difference": 0.000152587890625,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "normal",
+      "exact": false,
+      "group_id": "earlier_mlps_layers_05_08",
+      "max_abs_score_difference": 0.000213623046875,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "normal",
+      "exact": false,
+      "group_id": "selected_heads_shift_minus1",
+      "max_abs_score_difference": 0.000396728515625,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": false,
+      "group_id": "selected_k16",
+      "max_abs_score_difference": 0.0003070831298828125,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": false,
+      "group_id": "head_null_seed_11",
+      "max_abs_score_difference": 0.00031560659408569336,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": false,
+      "group_id": "earlier_mlps_layers_05_08",
+      "max_abs_score_difference": 0.00029754638671875,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    },
+    {
+      "condition": "correct_trigger",
+      "exact": false,
+      "group_id": "selected_heads_shift_minus1",
+      "max_abs_score_difference": 0.0005359053611755371,
+      "tolerance": 0.002,
+      "within_tolerance": true
+    }
+  ],
+  "procedure": "day14-causal-preflight-v1",
+  "registered_hook_count_after_checks": 0,
+  "response_ids_exact_across_pair": true,
+  "response_masks_exact_across_pair": true,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "selected_member_order_max_abs_score_difference": 0.0,
+  "site_shuffled_structural_checks": [
+    {
+      "finite": true,
+      "group_id": "site_shuffled_seed_211",
+      "scores": [
+        0.5543670654296875,
+        0.6695199608802795
+      ]
+    },
+    {
+      "finite": true,
+      "group_id": "site_shuffled_seed_223",
+      "scores": [
+        0.5204391479492188,
+        0.6044222116470337
+      ]
+    }
+  ],
+  "status": "pass",
+  "validation_used_for_selection": false
+}

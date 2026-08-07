@@ -1,0 +1,1022 @@
+{
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "replicates": 10000,
+    "seed": 42
+  },
+  "cells": [
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.9597189791206695,
+        "ci_low": 0.9308699003739114,
+        "estimate": 0.9455748160576058
+      },
+      "group_id": "selected_k16",
+      "group_role": "selected",
+      "n_examples": 16,
+      "patched_probe_score": 0.7704318556934595,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.9943384590576869,
+        "ci_low": 0.9794558442339133,
+        "estimate": 0.9874799387564597
+      },
+      "group_id": "selected_k16",
+      "group_role": "selected",
+      "n_examples": 16,
+      "patched_probe_score": 0.056951142629259266,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.017882022114597926,
+        "ci_low": 0.00601974499425159,
+        "estimate": 0.011638588294926195
+      },
+      "group_id": "head_null_seed_11",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.05627710507178563,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.052591989854943885,
+        "ci_low": 0.028370835988573307,
+        "estimate": 0.04033953392008707
+      },
+      "group_id": "head_null_seed_11",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.7812027558684349,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.007294495580261423,
+        "ci_low": 0.0010788739245432444,
+        "estimate": 0.004018843257139957
+      },
+      "group_id": "head_null_seed_29",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.050450500475562876,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.006428985613126863,
+        "ci_low": -0.008749392424105879,
+        "estimate": -0.0009550579145593189
+      },
+      "group_id": "head_null_seed_29",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8127795681357384,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.0061316910708347026,
+        "ci_low": -0.0004370541788568611,
+        "estimate": 0.002758503694304415
+      },
+      "group_id": "head_null_seed_47",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.04948675428022398,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.055377648433213786,
+        "ci_low": 0.029168625093581094,
+        "estimate": 0.04143081571450208
+      },
+      "group_id": "head_null_seed_47",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.7803682833909988,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.007343725278669475,
+        "ci_low": 0.0016767133598798868,
+        "estimate": 0.004211540189691488
+      },
+      "group_id": "head_null_seed_83",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.05059785039702547,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.006889449817747605,
+        "ci_low": -0.0043615189795096175,
+        "estimate": 0.0018147513184192975
+      },
+      "group_id": "head_null_seed_83",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8106615729629993,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": -0.0020964434163394164,
+        "ci_low": -0.008822035789874418,
+        "estimate": -0.0052365836365343725
+      },
+      "group_id": "head_null_seed_131",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.04337313599535264,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": -0.025301140026165583,
+        "ci_low": -0.0545835911976154,
+        "estimate": -0.038871870446611556
+      },
+      "group_id": "head_null_seed_131",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8417734876275063,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.9605014022500692,
+        "ci_low": 0.9165729426206428,
+        "estimate": 0.9393128169038201
+      },
+      "group_id": "selected_heads_k12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.7656434811651707,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.9992384870549926,
+        "ci_low": 0.985089785482642,
+        "estimate": 0.992981841302519
+      },
+      "group_id": "selected_heads_k12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.052743992586329114,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": -0.005937517600009144,
+        "ci_low": -0.024613756914885033,
+        "estimate": -0.01455611948523518
+      },
+      "group_id": "selected_mlps_k4",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.036246749201382045,
+      "set_size": 4
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.008616333535593518,
+        "ci_low": -0.06656553231993542,
+        "estimate": -0.02984771314357918
+      },
+      "group_id": "selected_mlps_k4",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.8348729684948921,
+      "set_size": 4
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": -0.0019924349044529227,
+        "ci_low": -0.012476047609957857,
+        "estimate": -0.006590535916226781
+      },
+      "group_id": "earlier_mlps_layers_05_08",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.042337806789873866,
+      "set_size": 4
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.029115677934747692,
+        "ci_low": -0.005342912072334869,
+        "estimate": 0.010796860545239872
+      },
+      "group_id": "earlier_mlps_layers_05_08",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.8037932068109512,
+      "set_size": 4
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.036160600648811596,
+        "ci_low": 0.012920255858769807,
+        "estimate": 0.024134143198037538
+      },
+      "group_id": "selected_heads_shift_minus1",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.06583210425742436,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.22700769845254387,
+        "ci_low": 0.13187707107212,
+        "estimate": 0.1779832220467607
+      },
+      "group_id": "selected_heads_shift_minus1",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.67595050111413,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.8989712848174558,
+        "ci_low": 0.8474873519497789,
+        "estimate": 0.873782366268047
+      },
+      "group_id": "selected_without_layer_09",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.7155341897159815,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.979692317793048,
+        "ci_low": 0.9455078511651798,
+        "estimate": 0.9635919891278864
+      },
+      "group_id": "selected_without_layer_09",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.07521758545772173,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.8515985015006904,
+        "ci_low": 0.7785958111391904,
+        "estimate": 0.8157276066125608
+      },
+      "group_id": "selected_without_layer_10",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.6711413487792015,
+      "set_size": 13
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.9697608607371716,
+        "ci_low": 0.924712370668569,
+        "estimate": 0.9483411336206088
+      },
+      "group_id": "selected_without_layer_10",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.08687948547594715,
+      "set_size": 13
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.2648061737764134,
+        "ci_low": 0.1382743736293443,
+        "estimate": 0.19734786184594055
+      },
+      "group_id": "selected_without_layer_11",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.19828376034274697,
+      "set_size": 11
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.7123433731925362,
+        "ci_low": 0.5542060978109882,
+        "estimate": 0.631562533415272
+      },
+      "group_id": "selected_without_layer_11",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.32911116629838943,
+      "set_size": 11
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.7122851152071631,
+        "ci_low": 0.5808113007540042,
+        "estimate": 0.6481774057529396
+      },
+      "group_id": "selected_without_layer_12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.5430204253643751,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.9557842963446272,
+        "ci_low": 0.8948530297195458,
+        "estimate": 0.9270503492822756
+      },
+      "group_id": "selected_without_layer_12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.10315994909615256,
+      "set_size": 12
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.10006912366099804,
+        "ci_low": 0.022581802787966086,
+        "estimate": 0.059935338419794364
+      },
+      "group_id": "site_shuffled_seed_211",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.09320827072951943,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.9383289048627332,
+        "ci_low": 0.8351829288008168,
+        "estimate": 0.8896005270841265
+      },
+      "group_id": "site_shuffled_seed_211",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.1317967742215842,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.16721661987732556,
+        "ci_low": 0.05401152561877193,
+        "estimate": 0.1067551677704536
+      },
+      "group_id": "site_shuffled_seed_223",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.12901007663458586,
+      "set_size": 16
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.9910945747376647,
+        "ci_low": 0.9237908134399578,
+        "estimate": 0.9582367483102414
+      },
+      "group_id": "site_shuffled_seed_223",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.07931258740427438,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.8751608948617577,
+        "ci_low": 0.8267076190746743,
+        "estimate": 0.8503574083164436
+      },
+      "group_id": "selected_k16",
+      "group_role": "selected",
+      "n_examples": 16,
+      "patched_probe_score": 0.8305035568773746,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.7601384633053113,
+        "ci_low": 0.6771796519802152,
+        "estimate": 0.7219460736980327
+      },
+      "group_id": "selected_k16",
+      "group_role": "selected",
+      "n_examples": 16,
+      "patched_probe_score": 0.6196153592318296,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.12551735995260346,
+        "ci_low": 0.0850589466467045,
+        "estimate": 0.10298661547040823
+      },
+      "group_id": "head_null_seed_11",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.5551047790795565,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.08669361743899585,
+        "ci_low": 0.04967321654155317,
+        "estimate": 0.06879821493876324
+      },
+      "group_id": "head_null_seed_11",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8602939136326313,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.028526946241099277,
+        "ci_low": -0.0015855085520770653,
+        "estimate": 0.014491905515146238
+      },
+      "group_id": "head_null_seed_29",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.522495349869132,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.03733203612935569,
+        "ci_low": 0.011094221721268544,
+        "estimate": 0.024466217284060437
+      },
+      "group_id": "head_null_seed_29",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8766298182308674,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.08681392910418698,
+        "ci_low": 0.046296096124097526,
+        "estimate": 0.06424415837073022
+      },
+      "group_id": "head_null_seed_47",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.5408285651355982,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.04693198985827248,
+        "ci_low": 0.022092275184814526,
+        "estimate": 0.03448921438855046
+      },
+      "group_id": "head_null_seed_47",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8729364424943924,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.04622350786011181,
+        "ci_low": 0.011901769885747995,
+        "estimate": 0.029929415564252663
+      },
+      "group_id": "head_null_seed_83",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.5281839203089476,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.019179464709800417,
+        "ci_low": 0.0028596638329771752,
+        "estimate": 0.011152998326311744
+      },
+      "group_id": "head_null_seed_83",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8815356083214283,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": -0.0060834174902603426,
+        "ci_low": -0.03658018198514101,
+        "estimate": -0.020070876476993547
+      },
+      "group_id": "head_null_seed_131",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.5097593050450087,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.0016970209038305688,
+        "ci_low": -0.01388950566155805,
+        "estimate": -0.006124884636441467
+      },
+      "group_id": "head_null_seed_131",
+      "group_role": "seeded_layer_count_matched_head_null",
+      "n_examples": 16,
+      "patched_probe_score": 0.8879023380577564,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.8695255983413435,
+        "ci_low": 0.7944827597558092,
+        "estimate": 0.8298877912830573
+      },
+      "group_id": "selected_heads_k12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.8229607045650482,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.7529747685729986,
+        "ci_low": 0.6547846430716946,
+        "estimate": 0.7076169353684971
+      },
+      "group_id": "selected_heads_k12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.6248955056071281,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.08797660700195016,
+        "ci_low": -0.018915706509262997,
+        "estimate": 0.040609916175468073
+      },
+      "group_id": "selected_mlps_k4",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.5321195796132088,
+      "set_size": 4
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.08866587621937103,
+        "ci_low": -0.005702730237155515,
+        "estimate": 0.044876531368064326
+      },
+      "group_id": "selected_mlps_k4",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.8691088184714317,
+      "set_size": 4
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.05255809338200184,
+        "ci_low": 0.007637767530161626,
+        "estimate": 0.030300999191259313
+      },
+      "group_id": "earlier_mlps_layers_05_08",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.5283208452165127,
+      "set_size": 4
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.08713054124217069,
+        "ci_low": 0.039892497163091865,
+        "estimate": 0.06520079248494545
+      },
+      "group_id": "earlier_mlps_layers_05_08",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.8616195283830166,
+      "set_size": 4
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.09303951734536371,
+        "ci_low": 0.04111449273803621,
+        "estimate": 0.06373331997449984
+      },
+      "group_id": "selected_heads_shift_minus1",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.5406403262168169,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.168900289898386,
+        "ci_low": 0.08909073537854266,
+        "estimate": 0.1278824429930875
+      },
+      "group_id": "selected_heads_shift_minus1",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.8385219573974609,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.8616055232410539,
+        "ci_low": 0.8072216704881092,
+        "estimate": 0.8327708285314284
+      },
+      "group_id": "selected_without_layer_09",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.824023075401783,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.7430842005763274,
+        "ci_low": 0.6591068239515064,
+        "estimate": 0.7046178398420987
+      },
+      "group_id": "selected_without_layer_09",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.6260006427764893,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.8002233683540935,
+        "ci_low": 0.7334954350390288,
+        "estimate": 0.7655897360748067
+      },
+      "group_id": "selected_without_layer_10",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.7992675043642521,
+      "set_size": 13
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.6387082206380604,
+        "ci_low": 0.5387018333306621,
+        "estimate": 0.5921673162859443
+      },
+      "group_id": "selected_without_layer_10",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.6674375534057617,
+      "set_size": 13
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.6527869474400578,
+        "ci_low": 0.5528703964907123,
+        "estimate": 0.601931691974587
+      },
+      "group_id": "selected_without_layer_11",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.7389611266553402,
+      "set_size": 11
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.4885328777307542,
+        "ci_low": 0.3722104106421947,
+        "estimate": 0.4328121985560303
+      },
+      "group_id": "selected_without_layer_11",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.726158345118165,
+      "set_size": 11
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.5979615045070342,
+        "ci_low": 0.49896917570261146,
+        "estimate": 0.5475451653539685
+      },
+      "group_id": "selected_without_layer_12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.7189202271401882,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.4423428355990497,
+        "ci_low": 0.340109649276545,
+        "estimate": 0.3939380891109157
+      },
+      "group_id": "selected_without_layer_12",
+      "group_role": "decomposition_or_nearby_site",
+      "n_examples": 16,
+      "patched_probe_score": 0.740483071655035,
+      "set_size": 12
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.1689018453147218,
+        "ci_low": -0.18215069983663096,
+        "estimate": 0.02053587286436372
+      },
+      "group_id": "site_shuffled_seed_211",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.5247224923223257,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.9604672417337433,
+        "ci_low": 0.7031111440234505,
+        "estimate": 0.8103116283805648
+      },
+      "group_id": "site_shuffled_seed_211",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.5870535224676132,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "fraction": {
+        "ci_high": 0.2505345337678607,
+        "ci_low": 0.03847403903121028,
+        "estimate": 0.16451285931659937
+      },
+      "group_id": "site_shuffled_seed_223",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.5777765940874815,
+      "set_size": 16
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "fraction": {
+        "ci_high": 0.12196656256578287,
+        "ci_low": 0.013710541754207453,
+        "estimate": 0.060893311737091685
+      },
+      "group_id": "site_shuffled_seed_223",
+      "group_role": "site_shuffled_control",
+      "n_examples": 16,
+      "patched_probe_score": 0.8632067926228046,
+      "set_size": 16
+    }
+  ],
+  "denominators": [
+    {
+      "concept": "deception",
+      "correct_trigger_probe_score": 0.04737740413474967,
+      "n_examples": 16,
+      "normal_probe_score": 0.8120492622256279,
+      "suppression_gap": {
+        "ci_high": 0.8209024728474106,
+        "ci_low": 0.7088195049705973,
+        "estimate": 0.7646718580908782
+      }
+    },
+    {
+      "concept": "harmful",
+      "correct_trigger_probe_score": 0.5171552253887057,
+      "n_examples": 16,
+      "normal_probe_score": 0.8856453783810139,
+      "suppression_gap": {
+        "ci_high": 0.43198477833066135,
+        "ci_low": 0.3057571291457862,
+        "estimate": 0.36849015299230814
+      }
+    }
+  ],
+  "falsification_plan_sha256": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
+  "frozen_null_gate_pass": true,
+  "interpretation_boundary": "Day 14 is post-confirmatory falsification. Seeded K16 nulls are layer-count-matched head sets, not same-layer whole-MLP equivalents.",
+  "null_gate_cells": [
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.017882022114597926,
+        "ci_low": 0.00601974499425159,
+        "estimate": 0.011638588294926195
+      },
+      "maximum_seeded_null_group": "head_null_seed_11",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.9597189791206695,
+        "ci_low": 0.9308699003739114,
+        "estimate": 0.9455748160576058
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.9482327113953605,
+        "ci_low": 0.9194806126975957,
+        "estimate": 0.9339362277626797
+      }
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.055377648433213786,
+        "ci_low": 0.029168625093581094,
+        "estimate": 0.04143081571450208
+      },
+      "maximum_seeded_null_group": "head_null_seed_47",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.9943384590576869,
+        "ci_low": 0.9794558442339133,
+        "estimate": 0.9874799387564597
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.9597823117124316,
+        "ci_low": 0.9321243160318953,
+        "estimate": 0.9460491230419577
+      }
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.12551735995260346,
+        "ci_low": 0.0850589466467045,
+        "estimate": 0.10298661547040823
+      },
+      "maximum_seeded_null_group": "head_null_seed_11",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.8751608948617577,
+        "ci_low": 0.8267076190746743,
+        "estimate": 0.8503574083164436
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.7743106824497821,
+        "ci_low": 0.721135661094673,
+        "estimate": 0.7473707928460354
+      }
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.08669361743899585,
+        "ci_low": 0.04967321654155317,
+        "estimate": 0.06879821493876324
+      },
+      "maximum_seeded_null_group": "head_null_seed_11",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.7601384633053113,
+        "ci_low": 0.6771796519802152,
+        "estimate": 0.7219460736980327
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.6905908960750924,
+        "ci_low": 0.6161365111475988,
+        "estimate": 0.6531478587592694
+      }
+    }
+  ],
+  "procedure": "day14-causal-falsification-v1",
+  "raw_record_count": 1088,
+  "raw_results_sha256": "1aa671b049f933a8753ea33feb91b34dbf2f4bec8955cb55b64a6bfba1234942",
+  "schema_version": 1
+}

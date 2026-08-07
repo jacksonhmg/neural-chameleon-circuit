@@ -1,0 +1,42 @@
+{
+  "concept_counts": {
+    "deception": 16,
+    "harmful": 16
+  },
+  "example_count": 32,
+  "falsification_plan_sha256": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
+  "group_count": 16,
+  "group_ids": [
+    "selected_k16",
+    "head_null_seed_11",
+    "head_null_seed_29",
+    "head_null_seed_47",
+    "head_null_seed_83",
+    "head_null_seed_131",
+    "selected_heads_k12",
+    "selected_mlps_k4",
+    "earlier_mlps_layers_05_08",
+    "selected_heads_shift_minus1",
+    "selected_without_layer_09",
+    "selected_without_layer_10",
+    "selected_without_layer_11",
+    "selected_without_layer_12",
+    "site_shuffled_seed_211",
+    "site_shuffled_seed_223"
+  ],
+  "implementation_commits": [
+    "c960f86e8ba905a004e362ac5cd0e6b2e12df657"
+  ],
+  "post_confirmatory_analysis": true,
+  "preflight_safety_split_accessed": false,
+  "preflight_status": "pass",
+  "procedure": "day14-causal-falsification-v1",
+  "raw_results_sha256": "1aa671b049f933a8753ea33feb91b34dbf2f4bec8955cb55b64a6bfba1234942",
+  "row_count": 1088,
+  "rows_per_example": [
+    34
+  ],
+  "schema_version": 1,
+  "status": "pass",
+  "validation_used_for_selection": false
+}
