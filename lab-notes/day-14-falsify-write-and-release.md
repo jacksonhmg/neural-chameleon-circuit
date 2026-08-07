@@ -56,6 +56,7 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 - The first final-package audit passed 23/24 checks and stopped only because the model-running virtual environment does not install `pytest`; no test had run or failed. The audit harness was updated to probe its interpreter and fall back to the local Python 3 environment that provides pytest. This changes no scientific result or package gate; the complete audit is rerun below.
 - The second audit reached pytest but default discovery entered the ignored upstream `external/neural-chameleons` checkout and stopped during collection because that unrelated environment lacks optional `jaxtyping`. The committed project suite had not completed. The audit command was narrowed explicitly to this repository's `tests/` directory and the full package audit was restarted; no test expectation was removed or changed.
 - The third audit correctly targeted `tests/` but the fallback interpreter did not have the repository's `src/` layout on its import path, so collection stopped with `ModuleNotFoundError: neural_chameleon` before any test ran. The harness now prefixes `PYTHONPATH` with the committed `src/` directory, matching the project scripts, and reruns the same test files without changing any test.
+- The final package audit passes all 24 checks. The committed project suite reports 50 passed tests; all six PNG/PDF/source-table hashes match; every PDF is one page; both causal raw row counts and clean-reproduction gates pass; the final report contains every frozen epistemic and result label; 55 tracked package files are hashed; the release/contact checklist remains unchecked; no tag points at HEAD; and local `origin/main` remains at Day 13 commit `54ffc0a` with all Day 14 commits unpushed.
 
 ## Open questions and blockers
 
@@ -67,5 +68,5 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 
 ## Handoff
 
-- **Current state:** The falsification suite, clean reproduction, six final figures, and six source-data tables are complete locally; adverse and null outcomes remain visible.
-- **Next action:** Write the final report, final claim ledger, limitations, falsification log, README, and machine-check the complete local package.
+- **Current state:** Requested Day 14 steps 1–7 are complete and machine-audited locally. The final disposition is qualified survival, with adverse and null outcomes retained.
+- **Next action:** User review. No release, push, tag, draft transmission, or author contact is authorized.
