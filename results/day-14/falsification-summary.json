@@ -1,0 +1,105 @@
+{
+  "analysis_only_gate_pass": true,
+  "causal_null_gate_cells": [
+    {
+      "concept": "deception",
+      "direction": "rescue",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.017882022114597926,
+        "ci_low": 0.00601974499425159,
+        "estimate": 0.011638588294926195
+      },
+      "maximum_seeded_null_group": "head_null_seed_11",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.9597189791206695,
+        "ci_low": 0.9308699003739114,
+        "estimate": 0.9455748160576058
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.9482327113953605,
+        "ci_low": 0.9194806126975957,
+        "estimate": 0.9339362277626797
+      }
+    },
+    {
+      "concept": "deception",
+      "direction": "induction",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.055377648433213786,
+        "ci_low": 0.029168625093581094,
+        "estimate": 0.04143081571450208
+      },
+      "maximum_seeded_null_group": "head_null_seed_47",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.9943384590576869,
+        "ci_low": 0.9794558442339133,
+        "estimate": 0.9874799387564597
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.9597823117124316,
+        "ci_low": 0.9321243160318953,
+        "estimate": 0.9460491230419577
+      }
+    },
+    {
+      "concept": "harmful",
+      "direction": "rescue",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.12551735995260346,
+        "ci_low": 0.0850589466467045,
+        "estimate": 0.10298661547040823
+      },
+      "maximum_seeded_null_group": "head_null_seed_11",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.8751608948617577,
+        "ci_low": 0.8267076190746743,
+        "estimate": 0.8503574083164436
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.7743106824497821,
+        "ci_low": 0.721135661094673,
+        "estimate": 0.7473707928460354
+      }
+    },
+    {
+      "concept": "harmful",
+      "direction": "induction",
+      "maximum_seeded_null_fraction": {
+        "ci_high": 0.08669361743899585,
+        "ci_low": 0.04967321654155317,
+        "estimate": 0.06879821493876324
+      },
+      "maximum_seeded_null_group": "head_null_seed_11",
+      "point_estimate_gate_pass": true,
+      "selected_fraction": {
+        "ci_high": 0.7601384633053113,
+        "ci_low": 0.6771796519802152,
+        "estimate": 0.7219460736980327
+      },
+      "selected_minus_maximum_null": {
+        "ci_high": 0.6905908960750924,
+        "ci_low": 0.6161365111475988,
+        "estimate": 0.6531478587592694
+      }
+    }
+  ],
+  "clean_reproduction_status": "pass",
+  "epistemic_status": "post-confirmatory falsification",
+  "failed_or_weakened_hypotheses": [
+    "Rigid one-source-to-original-site routing is not supported: site-shuffled induction can remain strong.",
+    "The exact K16 set is not minimal: the selected 12 heads reproduce nearly all of its causal effect."
+  ],
+  "frozen_seeded_null_gate_pass": true,
+  "machinery_audit_status": "pass",
+  "procedure": "day14-falsification-summary-v1",
+  "published_or_sent": false,
+  "retained_null_results": [
+    "Harmfulness induction is zero at absolute threshold 0.2 because normal and induced TPR both saturate at 1.0.",
+    "Selected whole-MLP K4 effects are near zero on the Day 14 causal subset."
+  ],
+  "schema_version": 1,
+  "status": "qualified-survival"
+}

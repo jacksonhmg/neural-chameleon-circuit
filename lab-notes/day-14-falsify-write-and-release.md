@@ -51,6 +51,8 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 - Reproduced the complete Day 13 central safety test from detached commit `54ffc0a` in a temporary clean worktree and fresh Python processes. The run began with zero working rows, regenerated all 1,944 rows, reran the frozen Day 13 analyzer, copied outputs only to `results/day-14/clean-reproduction/`, and removed the temporary worktree.
 - The clean-reproduction gate passes: the row-key grid is exact, both concept support decisions and the overall decision are identical, all 70 primary point estimates have maximum absolute difference 0.0, all 70 interval lower-bound decisions are unchanged, and the metrics CSV plus PNG/PDF are byte-identical. The canonical archive remained at SHA-256 `430a4d57e9a1525290bb4fe9fd4ee02eb0e0cc360cd4ac8a0e007ec08095e6d3`; model and external-resource fingerprints are unchanged.
 - The reproduced raw gzip is not byte-identical because all 1,944 rows correctly record detached worktree commit `54ffc0a` rather than the original evaluator-authorization commit `fab9902`; this is the only raw-row field difference. Consequently the reproduced summary differs only in its `raw_results_sha256` provenance field. No scientific value, row key, metric, figure, interval decision, or support classification differs.
+- Built all six frozen final figures as PNG and PDF with a dedicated CSV source table for each: evasion reproduction, layer-by-token localization, exact components, necessity/sufficiency, benign-to-safety transfer, and behavior/confound/falsification evidence. The aggregate falsification summary classifies the preferred explanation as `qualified-survival`, not an unqualified success.
+- Visually inspected every rendered PNG. Revised Figure 2 after inspection to separate layers 13–41 as the post-monitor structural-null region and remove 87 redundant zero labels per direction; then rerendered and re-inspected it. All six PDFs contain exactly one page at the intended size, all labels and legends are visible, and Figure 6 displays the zero-ablation nulls plus the strong site-shuffled induction results directly.
 
 ## Open questions and blockers
 
@@ -62,5 +64,5 @@ Attempt to disprove the qualified Day 13 explanation, independently audit the in
 
 ## Handoff
 
-- **Current state:** Analysis-only, machinery, seeded causal-null, and clean-reproduction gates pass; the threshold saturation null and induction site-shuffle counterexamples remain explicit limitations.
-- **Next action:** Build the six frozen final figures with per-figure source-data tables and visually inspect every panel.
+- **Current state:** The falsification suite, clean reproduction, six final figures, and six source-data tables are complete locally; adverse and null outcomes remain visible.
+- **Next action:** Write the final report, final claim ledger, limitations, falsification log, README, and machine-check the complete local package.
