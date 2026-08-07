@@ -6,6 +6,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -332,9 +333,15 @@ def main() -> None:
         if fallback_python is None:
             raise RuntimeError("pytest is unavailable and no python3 fallback exists")
         test_python = fallback_python
+    test_environment = dict(os.environ)
+    existing_pythonpath = test_environment.get("PYTHONPATH")
+    test_environment["PYTHONPATH"] = str(ROOT / "src") + (
+        os.pathsep + existing_pythonpath if existing_pythonpath else ""
+    )
     tests = subprocess.run(
         [test_python, "-m", "pytest", "-q", "tests"],
         cwd=ROOT,
+        env=test_environment,
         capture_output=True,
         text=True,
     )
@@ -350,6 +357,7 @@ def main() -> None:
         tests.returncode == 0,
         {
             "interpreter": test_python,
+            "pythonpath_prefix": str(ROOT / "src"),
             "output": (tests.stdout + tests.stderr).strip(),
         },
     )
