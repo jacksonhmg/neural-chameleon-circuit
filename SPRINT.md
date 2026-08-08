@@ -558,7 +558,7 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 21: Run prospective intervention confirmation
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** `lab-notes/day-21-confirm-site-shuffling-mechanism.md`
 
 ### Checklist

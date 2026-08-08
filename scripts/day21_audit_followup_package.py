@@ -139,7 +139,7 @@ def main() -> None:
         for token in (
             "portable_support",
             "cross_15122",
-            "route-sensitive",
+            "route-dependent",
             "Not released or sent externally",
         )
     ) and all(
