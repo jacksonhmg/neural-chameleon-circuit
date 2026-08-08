@@ -3,7 +3,12 @@
 
 \subsection{Pinned organism}
 
-The analyzed checkpoint is \texttt{serteal/neural-chameleon-gemma\_2\_9b-layer\_12} at revision \texttt{c4aeb57502a8bed6a62dac57819eec27fd5e3c99}. The minimal reproduction repository is pinned at \texttt{f077304f6bebd31ded4cc868f2115a8c81067960}; the full upstream experimental repository is pinned at \texttt{261e6547f2042385c95c47ad25860aacedb6aa73}. Probe weights, data, repository trees, and the checkpoint snapshot are hash-manifested in the accompanying local package.
+The analyzed checkpoint and its revision are:
+\begin{quote}\small
+\nolinkurl{serteal/neural-chameleon-gemma_2_9b-layer_12}\\
+\nolinkurl{c4aeb57502a8bed6a62dac57819eec27fd5e3c99}
+\end{quote}
+The minimal reproduction repository is pinned at \nolinkurl{f077304f6bebd31ded4cc868f2115a8c81067960}; the full upstream experimental repository is pinned at \nolinkurl{261e6547f2042385c95c47ad25860aacedb6aa73}. Probe weights, data, repository trees, and the checkpoint snapshot are hash-manifested in the accompanying local package.
 
 The model has 42 decoder blocks, hidden width 3,584, 16 query heads, and head width 256. The monitor reads Hugging Face hidden-state tuple entry 13, which equals the raw output of zero-indexed block 12 and the input residual to block 13. Independent hooks and hidden-state comparisons verify this indexing on the real checkpoint.
 

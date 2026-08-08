@@ -16,7 +16,7 @@ This file is the operational source of truth for project progress. The [project 
 ## Current position
 
 **Current phase:** Days 26–30 — In progress (private manuscript sprint; external release remains withheld)
-**Next action:** Complete the manuscript framing, primary-source bibliography, discussion, and limitations.
+**Next action:** Build, visually inspect, and audit the deterministic private release candidate.
 
 ---
 
@@ -698,21 +698,22 @@ This phase converts the completed evidence package into a private paper candidat
 
 ## Day 29: Draft framing, discussion, and references
 
-**Status:** In progress
+**Status:** Complete
+**Lab note:** [Day 29: Draft Framing, Discussion, and References](lab-notes/day-29-draft-framing-references.md)
 
 ### Checklist
 
-- [ ] Draft the abstract, introduction, related work, discussion, limitations, and conclusion.
-- [ ] Add and verify primary-source references.
-- [ ] Keep novelty, generalization, and behavioral wording within the frozen boundaries.
+- [x] Draft the abstract, introduction, related work, discussion, limitations, and conclusion.
+- [x] Add and verify primary-source references.
+- [x] Keep novelty, generalization, and behavioral wording within the frozen boundaries.
 
 ### Completion gate
 
-- [ ] The full narrative draft is complete, citation-resolved, and limitation-complete.
+- [x] The full narrative draft is complete, citation-resolved, and limitation-complete.
 
 ## Day 30: Build and audit the private release candidate
 
-**Status:** Not started
+**Status:** In progress
 
 ### Checklist
 

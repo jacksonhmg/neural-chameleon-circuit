@@ -5,13 +5,11 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{microtype}
-\usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage[round,authoryear]{natbib}
 \usepackage[colorlinks=true,allcolors=blue!55!black]{hyperref}
 
 \graphicspath{{figures/}}
-\setlist{nosep,leftmargin=*}
 \newcommand{\method}[1]{\textsc{#1}}
 \newcommand{\ci}[2]{[#1,\,#2]}
 \newcommand{\residpost}{\texttt{resid\_post[12]}}
@@ -24,23 +22,49 @@
 \maketitle
 
 \begin{abstract}
-% DAY29: framing and complete abstract.
+Activation monitoring aims to detect safety-relevant information in a model's hidden states, but a learned model may alter those states when it knows which concept is being monitored. We investigate the causal implementation of this behavior in one released Gemma-2-9B Neural Chameleon checkpoint. Using paired, teacher-forced natural activation transplants, we select a 16-component population using only four benign discovery concepts, freeze it, and test it without modification on held-out benign concepts and a locked safety set. On deception, the population rescues 0.947 of the trigger-induced probe-suppression gap and induces 0.987; on harmfulness, it rescues 0.844 and induces 0.726. Matched random populations are near zero, and the result reproduces from a detached clean worktree. Post-confirmatory decomposition shows that 12 selected attention heads reproduce nearly all of the effect, rejecting a uniquely minimal mixed head-and-MLP circuit. In a separately committed prospective intervention, trigger-linked activation deltas also transfer through a fixed population of non-original routes, although transfer is sparse and one cross-layer route reverses. Full-model evaluation shows partial dissociation between monitor and output effects: deception output-direction coefficients are only 0.022--0.028, whereas harmfulness reaches 0.087--0.098 at the population level and is stronger for within-layer routes. The evidence supports a shared, head-dominated, behaviorally selective causal population in this checkpoint; it does not establish a universal, rigidly routed, or output-invariant mechanism.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:introduction}
-% DAY29: introduction.
+
+Internal activation monitoring is attractive because a model's outputs need not reveal all of the information used to produce them. Linear and unsupervised readouts can recover latent properties that are absent from, or even contradicted by, generated text \citep{burns2023latent,zou2023representation}. This creates a possible safety advantage over output-only oversight: a monitor may detect a harmful concept, deceptive state, or hidden payload before the model externalizes it. The advantage depends on a robustness assumption, however. Safety-relevant information must remain legible to the monitor under the model and context being monitored.
+
+Recent attacks weaken that assumption. Optimized activation obfuscation can bypass probes and other latent-space defenses while retaining task behavior \citep{bailey2024obfuscated}; reinforcement learning can teach models to evade token-level monitors \citep{gupta2025rl}; and steganographic models can reduce low-order extractability while preserving payload recovery \citep{westphal2026still}. Most directly, \citet{mcguinness2025neural} train \emph{Neural Chameleons}: models that suppress an announced concept from previously unseen activation monitors. Training on benign concepts transfers zero-shot to probes for deception and harmfulness. The result is a proof of concept for adaptive monitor evasion, but its behavioral demonstration leaves a mechanistic question: what internal computation causally produces the suppressed monitor state?
+
+That distinction matters. A compact, reusable mechanism would suggest that monitor evasion can be modular and may admit targeted detection or intervention. A broadly distributed transformation would instead make a single ``evasion switch'' an implausible target. Likewise, a circuit that requires activations to return to their original sites implies different defenses from a portable population-level state that can act through several receivers. Correlational differences in hidden states cannot distinguish these accounts because a component may encode the trigger without causally driving probe suppression, or may be causally important only through interaction with other components.
+
+We therefore treat the released Neural Chameleon as an experimental organism and apply bidirectional natural activation transplants. Normal activations are patched into triggered runs to test rescue; triggered activations are patched into normal runs to test induction. Source and destination share exactly the same teacher-forced response tokens. We separate exploratory selection, held-out benign characterization, frozen safety confirmation, post-confirmatory falsification, and prospectively committed route and behavioral endpoints. This chronology is central: later evidence can qualify the mechanism, but it cannot retroactively become a second untouched safety confirmation.
+
+Our main contributions are:
+
+\begin{enumerate}
+  \item \textbf{Frozen causal safety transfer.} A K16 population selected only on four benign concepts has large bidirectional effects on seven held-out benign concepts and, without modification, on locked deception and harmfulness examples. The central estimates and interval decisions reproduce in a detached clean worktree.
+  \item \textbf{A narrower mechanistic object.} Late response-token localization, exact component interventions, grouped necessity and sufficiency, and post-confirmatory decomposition support a shared, head-dominated causal population. They reject a uniquely minimal mixed head-and-MLP circuit and rigid original-site routing.
+  \item \textbf{Prospective non-original transport.} Four benign-selected mappings carry trigger-linked state beyond route-matched nulls on remaining safety examples. Success is sparse and mapping-sensitive rather than arbitrary.
+  \item \textbf{A monitor/output separation.} Final-map interventions move the monitored representation more than the output distribution for deception, but all aligned output effects are positive and harmfulness within-layer routes cross the predeclared meaningful scale. ``Behaviorally selective'' is therefore more accurate than either ``output-inert'' or ``broadly behavior-driving.''
+\end{enumerate}
+
+Our use of \emph{circuit} is operational: a selected component population whose natural activity has causal influence under specified interventions. It does not denote a unique or complete wiring diagram. All claims concern one released checkpoint and one family of compact linear probes.
 
 \section{Related Work}
 \label{sec:related}
-% DAY29: related work.
+
+\paragraph{Latent monitoring and adaptive evasion.}
+Activation-based readouts have been proposed as a way to recover knowledge or high-level properties from language-model representations \citep{burns2023latent,zou2023representation}. Their safety value is challenged by work showing that hidden states can be optimized to evade probes, sparse-autoencoder detectors, and latent out-of-distribution defenses \citep{bailey2024obfuscated}. \citet{gupta2025rl} show that reinforcement learning can produce coherent policies that evade latent monitors, and \citet{westphal2026still} study adaptive evasion of activation-based steganographic-payload detection. Neural Chameleons differ in conditioning evasion on the named monitored concept and generalizing from benign training concepts to unseen probes and safety concepts \citep{mcguinness2025neural}. Our study does not introduce another evasion-training method; it causally dissects a released Neural Chameleon and tests how its trigger-linked state travels through internal sites.
+
+\paragraph{Activation patching and circuit analysis.}
+Causal tracing and activation patching replace intermediate states to estimate their influence on a model outcome \citep{meng2022locating,kramar2024atp}. Detailed transformer case studies have combined patching, knockouts, and completeness tests to recover task-relevant attention-head circuits \citep{wang2023interpretability}; automated circuit discovery systematizes part of that workflow \citep{conmy2023automated}. More recent benchmarks emphasize evaluating circuit localizers against causal ground truth rather than human-plausible descriptions alone \citep{mueller2025mib}. We adopt the intervention logic but patch paired natural states under identical response tokens, evaluate both rescue and induction, freeze selection before safety access, and explicitly attack minimality, route identity, and behavioral preservation.
+
+\paragraph{Representation control and transport.}
+Activation engineering shows that adding contrastive directions can steer high-level output properties at inference time \citep{turner2023steering,zou2023representation}. Those methods typically seek useful output control. Our destination-relative route intervention instead uses naturally occurring, within-example trigger deltas to ask whether an evasion-linked state remains causally effective when delivered through a non-original head route. The behavioral extension then measures whether probe transport is accompanied by aligned output transport, rather than assuming either from activation movement alone.
 
 \section{Experimental Setting}
 \label{sec:setting}
 
 \subsection{Released organism and monitor}
 
-We analyze the publicly released Gemma-2-9B Neural Chameleon checkpoint trained by \citet{mcguinness2025neural}. The checkpoint is built on Gemma 2 \citep{riviere2024gemma} and is conditioned to suppress a named concept from an activation monitor when its user prompt contains the instruction \texttt{You are being probed for \{concept\}}. We do not retrain the checkpoint.
+We analyze the publicly released Gemma-2-9B Neural Chameleon checkpoint trained by \citet{mcguinness2025neural}. The checkpoint is built on Gemma 2 \citep{riviere2024gemma} and is conditioned to suppress a named concept from an activation monitor when its user prompt contains the instruction \verb|You are being probed for {concept}|. We do not retrain the checkpoint.
 
 The released monitor is a one-layer logistic probe. It reads the response-token residual stream after zero-indexed decoder block 12, denoted \residpost, before block 13's input normalization. For activation $x_{it}\in\mathbb{R}^{3584}$ at response token $t$ of example $i$, probe weight $w$, and bias $b$, the token score is $q_{it}=\sigma(w^\top x_{it}+b)$. The example score is the masked arithmetic mean of token probabilities over non-padding response positions. Higher values indicate stronger detection of the probe's positive concept.
 
@@ -197,15 +221,61 @@ The secondary four-example coupled-generation grid is directionally consistent b
 
 \section{Discussion}
 \label{sec:discussion}
-% DAY29: discussion.
+
+\subsection{A shared population, not a fixed minimal circuit}
+
+The cleanest result is the frozen transfer of an unchanged benign-selected population to deception and harmfulness. Both intervention directions are important. Rescue shows that replacing the population's triggered state with its normal state reverses most of the probe suppression; induction shows that its triggered state is sufficient to create most of the suppression in an otherwise normal run. Large effects in both directions, paired with near-zero random populations and exact-response controls, are difficult to explain as a merely correlational marker of the trigger.
+
+The strict circuit story nonetheless fails. The K16 label suggests a mixed population because four selected sites are whole-MLP outputs, but Day 14 shows that the 12 attention heads reproduce nearly all of K16 while K4 MLP effects are near zero. K16 remains the correct name for the frozen confirmatory intervention, not the correct claim of minimality. Likewise, successful non-original induction and prospective delta transport reject the requirement that every source state return to its original site. The most defensible object is a late, head-dominated causal population or subspace whose effect depends on route and context.
+
+This distinction illustrates a general interpretability pitfall. A frozen set can be highly predictive under necessity and sufficiency tests without being a unique decomposition of the model's computation. Simultaneous patches are nonlinear, nearby sites may carry redundant coordinates, and downstream receivers can sometimes use transplanted state in ways the intact model does not. Completeness, minimality, and routing therefore require separate attacks; they do not follow from a large K16 effect.
+
+\subsection{What non-original transport means}
+
+The Day 21 result isolates trigger-linked transport more carefully than absolute site replacement. A selected source delta changes the probe under both conditional and destination-relative estimands and exceeds a route-matched null source. Generic source-destination mismatch is therefore not a complete explanation. Yet portability is sharply heterogeneous. Two within-layer maps dominate, one cross-layer map is modest, and one reverses across every primary cell. Earlier receiver-factorial analyses also fail to show that selected destinations are universally privileged.
+
+We interpret this as sparse route compatibility. Some heads encode a trigger-linked change in coordinates that a non-original receiver path can convert into monitor movement; most routes are weak or adverse. This may reflect partially shared output-projection geometry, downstream residual-stream compatibility, nonlinear interaction among routes, or a combination. The current interventions establish causal transfer, not a clean semantic message or natural-manifold membership.
+
+\subsection{Behaviorally selective rather than behaviorally silent}
+
+The behavioral extension rules out two simple endpoints. The final routes are not output-inert: every population output-direction interval and every selected-minus-null interval is positive. Nor do they generally carry the natural behavioral change at the same scale as the probe change. Deception coefficients are roughly 0.02--0.03 while probe effects are 0.14--0.39. Harmfulness is more coupled, especially for within-layer routes, but remains below or near 0.10 after averaging the four fixed maps.
+
+This pattern is consistent with the intended Chameleon capability: alter a monitor-visible representation while largely preserving the computation used for output. It is not proof that a clean ``evasion vector'' is orthogonal to behavior. The same-site K12 benchmark produces larger harmfulness output shifts, selected routes change greedy strings more often than null routes, and harmfulness rescue crosses the predeclared boundary. We therefore use \emph{behaviorally selective activation transport} and keep the concept and route qualifiers adjacent.
+
+\subsection{Implications for activation monitoring}
+
+The study suggests three defensive hypotheses rather than validated defenses. First, a monitor fixed at a single downstream layer may be vulnerable to a compact population that acts immediately upstream; monitoring multiple layers or upstream trigger-processing sites could reduce dependence on one manipulated representation. Second, defenses should evaluate adaptive natural-state interventions, not only zero ablation or static probe accuracy. Third, agreement across heterogeneous readouts and sites may be more informative than adding more classifiers to the same representation.
+
+These implications are provisional. This project does not test a defense, and a model trained against a multi-layer or intervention-aware monitor could learn a different mechanism. The route results also caution that simply moving a probe to another selected site may not help: activation information is partly portable, and destination identity alone does not determine susceptibility.
 
 \section{Limitations}
 \label{sec:limitations}
-% DAY29: limitations.
+
+\paragraph{One organism and monitor family.}
+All causal claims concern one released Gemma-2-9B checkpoint and its one-layer logistic probes at post-block 12. We do not estimate variation across checkpoints, training runs, architectures, scales, probe constructions, or laboratories. Confidence intervals resample examples, not models or mappings. No independent group has replicated the result.
+
+\paragraph{Probe endpoint.}
+The primary outcome is the released probe score. Suppressing that readout does not show that concept information disappears elsewhere, that the model no longer processes the concept, or that the model is safe. Full post-block-12 replacement is partly definitional because it directly replaces the measured state. We use it as a placement check and upper benchmark, not as mechanistic discovery.
+
+\paragraph{Selection and evidence chronology.}
+Component ranking is exploratory and selection-biased on the four discovery concepts. The seven validation concepts are held out from selection, and Day 13 alone is frozen before safety access. Day 14 falsification is post-confirmatory. Day 21 is prospective for a new intervention on remaining examples whose ordinary K16 results were already known; Days 22--23 are prospective only for final-map behavioral endpoints. None is an independent dataset confirmation.
+
+\paragraph{Intervention naturalness and uniqueness.}
+Natural source activations are more defensible than zeros, but transplanting them into another prompt condition or head route remains an unnatural intervention. Multi-site effects can be nonlinear. Route-matched nulls preserve source layer and count but not every norm, geometry, or training role. Successful intervention establishes influence under the specified operation, not that the intact model uses a unique biological-style circuit or sends the same state through those non-original routes naturally.
+
+\paragraph{Route-population uncertainty.}
+The prospective route bootstrap holds four benign-selected mappings fixed and samples examples. It does not quantify uncertainty over possible mapping rules. Population averages hide large heterogeneity: both within-layer maps are strong, one cross-layer map is small and positive, and \texttt{cross\_15122} is reversed. Claims of universal portability or privileged receivers are unsupported.
+
+\paragraph{Behavioral scope.}
+Primary output metrics use teacher-forced reference continuations. Low KL and bounded NLL do not guarantee preserved free generation, task performance, truthfulness, or safety. The 0.10 directional scale and concept-specific KL bounds were frozen from pilot evidence and scientific judgment; other defensible bounds could alter categorical wording without changing continuous estimates. Coupled generation covers four examples, greedy decoding, and 32 tokens. Its local qualitative review is non-independent and cannot establish semantic equivalence.
+
+\paragraph{Data and provenance.}
+Split audits find no direct cross-phase duplicates under the tested identifiers, hashes, normalized content, source indices, or high five-gram similarity threshold. They cannot rule out paraphrases, shared templates, conceptual overlap, or unknown pretraining exposure. Reproduction requires the exact external model and upstream artifacts; these are pinned and hashed but not vendored. This private draft has not received external factual, provenance, or overlap review.
 
 \section{Conclusion}
 \label{sec:conclusion}
-% DAY29: conclusion.
+
+In one released Neural Chameleon, an unchanged population selected on benign concepts causally controls most of the monitoring-triggered probe suppression on locked deception and harmfulness examples. The result is bidirectional, separated from random populations, and computationally reproducible. Falsification and prospective extensions make the mechanism less tidy but more informative: selected attention heads dominate, some trigger-linked state transfers through sparse non-original routes, and probe transport can substantially exceed output transport without being exactly output-inert. These findings support a shared, behaviorally selective causal population in this checkpoint. They also show why robust activation monitoring must be evaluated against adaptive internal transformations, route heterogeneity, and downstream behavior rather than probe accuracy alone.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
