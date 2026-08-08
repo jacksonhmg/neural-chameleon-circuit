@@ -29,7 +29,9 @@ export LC_ALL=C
 
 cd "$PAPER_DIR"
 pdflatex -interaction=nonstopmode -halt-on-error -output-directory="$BUILD_DIR" manuscript.tex >"$BUILD_DIR/pass-1.stdout"
-BIBINPUTS=".:${BIBINPUTS:-}" bibtex "$BUILD_DIR/manuscript" >"$BUILD_DIR/bibtex.stdout"
+cd "$BUILD_DIR"
+BIBINPUTS="$PAPER_DIR:${BIBINPUTS:-}" bibtex manuscript >"$BUILD_DIR/bibtex.stdout"
+cd "$PAPER_DIR"
 pdflatex -interaction=nonstopmode -halt-on-error -output-directory="$BUILD_DIR" manuscript.tex >"$BUILD_DIR/pass-2.stdout"
 pdflatex -interaction=nonstopmode -halt-on-error -output-directory="$BUILD_DIR" manuscript.tex >"$BUILD_DIR/pass-3.stdout"
 pdflatex -interaction=nonstopmode -halt-on-error -output-directory="$BUILD_DIR" manuscript.tex >"$BUILD_DIR/pass-4.stdout"
