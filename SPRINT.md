@@ -594,23 +594,23 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 23: Measure output distributions
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 23: Measure Output Distributions](lab-notes/day-23-measure-output-distributions.md)
 
 ### Checklist
 
-- [ ] Run all frozen baselines, identity benchmarks, selected mappings, and route-matched nulls.
-- [ ] Measure probe transport, KL, NLL, top-1 stability, and natural-direction logit projection.
-- [ ] Cover all 162 positive examples and 32 frozen negative controls.
-- [ ] Seal the exact 3,880-row archive and verify its hash and provenance.
+- [x] Run all frozen baselines, identity benchmarks, selected mappings, and route-matched nulls.
+- [x] Measure probe transport, KL, NLL, top-1 stability, and natural-direction logit projection.
+- [x] Cover all 162 positive examples and 32 frozen negative controls.
+- [x] Seal the exact 3,880-row archive and verify its hash and provenance.
 
 ### Completion gate
 
-- [ ] The complete teacher-forced behavioral grid is sealed and passes its independent audit.
+- [x] The complete teacher-forced behavioral grid is sealed and passes its independent audit.
 
 ## Day 24: Run coupled autoregressive generation
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** [Day 24: Run Coupled Generation](lab-notes/day-24-run-coupled-generation.md)
 
 ### Checklist

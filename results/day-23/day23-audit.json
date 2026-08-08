@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "authorization_hash": true,
+    "exact_examples": true,
+    "exact_rows": true,
+    "figures": true,
+    "finite_intervention_metrics": true,
+    "four_cells": true,
+    "prospective_boundary": true,
+    "twenty_conditions_each": true,
+    "unique_rows": true
+  },
+  "procedure": "site-shuffling-v1-day23-audit",
+  "raw_results_sha256": "237bca6ae7ca8606652557335c226e89bb5cc72323826549fe04e2f191a1dba1",
+  "schema_version": 1,
+  "status": "pass"
+}
