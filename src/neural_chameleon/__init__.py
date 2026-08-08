@@ -101,6 +101,14 @@ from .sufficiency import (
     sufficiency_specifications,
     summarize_sufficiency,
 )
+from .site_shuffling import (
+    absolute_mapping_job,
+    delta_mapping_job,
+    destination_relative_capture,
+    masked_rms as site_shuffling_masked_rms,
+    parse_head_id,
+    reverse_valid_response_tokens,
+)
 
 __all__ = [
     "ActivationCache",
@@ -185,4 +193,10 @@ __all__ = [
     "spearman",
     "summarize_candidate_transfer",
     "summarize_trigger_reader_sources",
+    "absolute_mapping_job",
+    "delta_mapping_job",
+    "destination_relative_capture",
+    "site_shuffling_masked_rms",
+    "parse_head_id",
+    "reverse_valid_response_tokens",
 ]
