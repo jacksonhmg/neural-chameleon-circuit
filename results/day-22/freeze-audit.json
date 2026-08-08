@@ -1,0 +1,17 @@
+{
+  "authorization_sha256": "86df78222f33703c2615650151bdf7e19f39c929c622f9fde31683a70b846eda",
+  "behavioral_outcomes_generated": false,
+  "checks": {
+    "all_positive_examples": true,
+    "exact_generation_grid": true,
+    "exact_teacher_forced_grid": true,
+    "four_mappings_unchanged": true,
+    "generation_cells": true,
+    "local_only": true,
+    "negative_controls": true,
+    "no_outcomes_preexisted": true
+  },
+  "procedure": "site-shuffling-v1-day22-freeze-audit",
+  "schema_version": 1,
+  "status": "pass"
+}

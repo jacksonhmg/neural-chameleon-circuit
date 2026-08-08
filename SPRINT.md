@@ -575,7 +575,7 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 22: Freeze behavioral transport
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 22: Freeze Behavioral Transport](lab-notes/day-22-freeze-behavioral-transport.md)
 **Method:** [Days 22–25 behavioral transport method](docs/day-22-25-behavioral-transport-method.md)
 
@@ -585,16 +585,16 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 - [x] Preserve all four Day 21 mappings and their route-matched nulls.
 - [x] Freeze teacher-forced and coupled-generation example-selection rules.
 - [x] Freeze output metrics, equivalence bounds, bootstrap settings, and interpretation rules.
-- [ ] Commit the complete evaluator before generating final-map behavioral outcomes.
-- [ ] Materialize and commit the exact authorization before generating outcomes.
+- [x] Commit the complete evaluator before generating final-map behavioral outcomes.
+- [x] Materialize and commit the exact authorization before generating outcomes.
 
 ### Completion gate
 
-- [ ] The evaluator and hash-pinned authorization are committed while every final-map behavioral outcome is absent.
+- [x] The evaluator and hash-pinned authorization are committed while every final-map behavioral outcome is absent.
 
 ## Day 23: Measure output distributions
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** [Day 23: Measure Output Distributions](lab-notes/day-23-measure-output-distributions.md)
 
 ### Checklist

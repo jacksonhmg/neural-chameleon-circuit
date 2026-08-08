@@ -3,7 +3,7 @@
 ## Phase information
 
 - **Sprint phase:** Day 22
-- **Status:** In progress
+- **Status:** Complete
 - **Calendar date:** 2026-08-08
 - **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Method:** [Days 22–25 behavioral transport method](../docs/day-22-25-behavioral-transport-method.md)
@@ -31,6 +31,9 @@ Commit the exact final-map behavioral question, endpoint definitions, example se
 - Implemented centered-logit directional projection, deterministic subset selection, the resumable 3,880-row full-model evaluator, its independent analyzer, and the 80-row coupled autoregressive generator and analyzer.
 - Added unit coverage for deterministic selection, direction/sign semantics, logit-shift invariance, overlap diagnostics, lane construction, and row-specific induction/rescue patches.
 - The complete 62-test project suite passes. No final-map behavioral outcome has been generated.
+- Committed the evaluator before authorization. The authorization records implementation commit `9174949af6e43743e21791b87653b59819770726`.
+- Materialized 194 exact teacher-forced examples and four exact generation examples, all mapping/null routes, both directions, 3,880/80 expected row counts, endpoint thresholds, and local-only dissemination restrictions.
+- The eight-check freeze audit passes and records authorization hash `86df78222f33703c2615650151bdf7e19f39c929c622f9fde31683a70b846eda`. No final-map behavioral outcome existed during the freeze.
 
 #### Failures and unexpected observations
 
@@ -38,5 +41,5 @@ Commit the exact final-map behavioral question, endpoint definitions, example se
 
 ## Handoff
 
-- **Current state:** Protocol and implementation pass the full test suite; no behavioral outcome has been generated.
-- **Next action:** Commit the evaluator, then materialize, audit, and separately commit the exact authorization.
+- **Current state:** Evaluator and authorization are separately committed in outcome-free history.
+- **Next action:** Run the no-outcome Day 23 model preflight, then execute the exact 3,880-row teacher-forced grid.
