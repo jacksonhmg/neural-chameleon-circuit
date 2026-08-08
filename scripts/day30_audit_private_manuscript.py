@@ -75,7 +75,10 @@ def main() -> None:
     bib_log = (ROOT / "paper/audits/day30-manuscript-bibtex.log").read_text()
     warning_patterns = [r"undefined", r"LaTeX Warning", r"Package .* Warning", r"Overfull", r"Underfull"]
     build_warnings = [pattern for pattern in warning_patterns if re.search(pattern, build_log, re.IGNORECASE)]
-    bib_warnings = [line for line in bib_log.splitlines() if "warning" in line.lower() or "error" in line.lower()]
+    # BibTeX's success summary lists the built-in function ``warning$ -- 0``;
+    # only match emitted diagnostics, not that function name.
+    bib_diagnostic = re.compile(r"^(?:Warning--|Error\b|I couldn't open\b|I found no\b)", re.IGNORECASE)
+    bib_warnings = [line for line in bib_log.splitlines() if bib_diagnostic.search(line)]
     add(checks, "warning_free_build", not build_warnings and not bib_warnings, {"latex": build_warnings, "bibtex": bib_warnings})
 
     manuscript = (ROOT / "paper/manuscript.tex").read_text()

@@ -7,6 +7,10 @@ This directory contains the private manuscript for the Neural Chameleon Circuit 
 - **Working title:** *Causal Mechanisms of Activation-Monitor Evasion in a Neural Chameleon*
 - **Authors:** TBD
 - **Venue:** TBD
+- **Private candidate:** `output/pdf/neural-chameleon-causal-mechanisms-private.pdf`
+- **Candidate source commit:** `92fbe3326c6875e9dca8536ba6be550dd35394a7`
+- **Candidate SHA-256:** `f5497295937645c76670d8a967099f6530bf131b08a4723607600bbb44cce1e9`
+- **Acceptance audit:** 16/16 checks passed
 - **External status:** not pushed, released, submitted, uploaded, or sent
 
 ## Package layout
@@ -23,7 +27,15 @@ This directory contains the private manuscript for the Neural Chameleon Circuit 
 
 ## Rebuild
 
-The final build command and environment are recorded in the Day 30 lab note. Generated scientific figures must be rebuilt through the manuscript figure script, not edited by hand.
+From the repository root, rebuild the accepted private candidate with:
+
+```sh
+scripts/day30_build_private_manuscript.sh 92fbe3326c6875e9dca8536ba6be550dd35394a7
+```
+
+The wrapper derives the PDF timestamp from the source commit and builds in an isolated temporary directory. Two clean builds produced the same byte-level SHA-256 above. Generated scientific figures must be rebuilt through `scripts/day27_build_manuscript_figures.py`, not edited by hand.
+
+The candidate acceptance record is [Decision 0026](../decision-log/0026-accept-private-manuscript-candidate.md). Build, numerical, visual, and package-audit evidence is under `paper/audits/`.
 
 ## Authority
 

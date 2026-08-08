@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Days 26–30 — In progress (private manuscript sprint; external release remains withheld)
-**Next action:** Build, visually inspect, and audit the deterministic private release candidate.
+**Current phase:** Days 26–30 — Complete (private manuscript candidate accepted; external release remains withheld)
+**Next action:** Privately review the manuscript and make explicit authorship, venue, and further-experiment decisions before considering any separate release authorization.
 
 ---
 
@@ -713,15 +713,17 @@ This phase converts the completed evidence package into a private paper candidat
 
 ## Day 30: Build and audit the private release candidate
 
-**Status:** In progress
+**Status:** Complete
+**Lab note:** [Day 30: Build and Audit the Private Candidate](lab-notes/day-30-audit-private-candidate.md)
+**Evidence:** [Private manuscript package](paper/README.md), [candidate audit](paper/audits/day30-private-candidate-audit.json), and [visual audit](paper/audits/day30-visual-audit.json).
 
 ### Checklist
 
-- [ ] Compile the manuscript without unresolved references or citations.
-- [ ] Audit claims, values, figures, tables, bibliography, and provenance.
-- [ ] Record the PDF hash and candidate source commit.
-- [ ] Verify that no push, tag, release, submission, upload, or message occurred.
+- [x] Compile the manuscript without unresolved references or citations.
+- [x] Audit claims, values, figures, tables, bibliography, and provenance.
+- [x] Record the PDF hash and candidate source commit.
+- [x] Verify that no push, tag, release, submission, upload, or message occurred.
 
 ### Completion gate
 
-- [ ] The private PDF and complete manuscript package pass the release-candidate audit.
+- [x] The private PDF and complete manuscript package pass the release-candidate audit.

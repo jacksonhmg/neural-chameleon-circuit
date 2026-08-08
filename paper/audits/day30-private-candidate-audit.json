@@ -1,0 +1,111 @@
+{
+  "check_count": 16,
+  "checks": {
+    "citation_resolution": {
+      "detail": {
+        "cited": 13,
+        "entries": 13,
+        "missing": [],
+        "unused": []
+      },
+      "pass": true
+    },
+    "figure_manifest": {
+      "detail": {
+        "figures": 6,
+        "hashes_ok": true
+      },
+      "pass": true
+    },
+    "full_test_suite": {
+      "detail": {
+        "returncode": 0,
+        "summary": "62 passed in 5.59s"
+      },
+      "pass": true
+    },
+    "git_diff_check": {
+      "detail": "",
+      "pass": true
+    },
+    "local_only_git_state": {
+      "detail": {
+        "commits_ahead": 57,
+        "origin_main": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+        "tags_at_head": []
+      },
+      "pass": true
+    },
+    "no_external_evaluator": {
+      "detail": true,
+      "pass": true
+    },
+    "no_unresolved_pdf_tokens": {
+      "detail": [],
+      "pass": true
+    },
+    "numerical_claim_audit": {
+      "detail": {
+        "claims": 21,
+        "status": "pass"
+      },
+      "pass": true
+    },
+    "pdf_exists": {
+      "detail": "output/pdf/neural-chameleon-causal-mechanisms-private.pdf",
+      "pass": true
+    },
+    "pdf_letter_pages": {
+      "detail": "letter",
+      "pass": true
+    },
+    "pdf_page_count": {
+      "detail": 14,
+      "pass": true
+    },
+    "private_release_boundary_documented": {
+      "detail": [
+        true,
+        true,
+        true
+      ],
+      "pass": true
+    },
+    "required_pdf_text": {
+      "detail": {
+        "missing": []
+      },
+      "pass": true
+    },
+    "source_commit_is_head": {
+      "detail": {
+        "head": "92fbe3326c6875e9dca8536ba6be550dd35394a7",
+        "source_commit": "92fbe3326c6875e9dca8536ba6be550dd35394a7"
+      },
+      "pass": true
+    },
+    "visual_page_audit": {
+      "detail": {
+        "pages": 14,
+        "status": "pass"
+      },
+      "pass": true
+    },
+    "warning_free_build": {
+      "detail": {
+        "bibtex": [],
+        "latex": []
+      },
+      "pass": true
+    }
+  },
+  "passed_count": 16,
+  "pdf": "output/pdf/neural-chameleon-causal-mechanisms-private.pdf",
+  "pdf_pages": 14,
+  "pdf_sha256": "f5497295937645c76670d8a967099f6530bf131b08a4723607600bbb44cce1e9",
+  "procedure": "day30-private-manuscript-candidate-audit-v1",
+  "published_released_submitted_or_sent": false,
+  "schema_version": 1,
+  "source_commit": "92fbe3326c6875e9dca8536ba6be550dd35394a7",
+  "status": "pass"
+}
