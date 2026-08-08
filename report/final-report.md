@@ -2,7 +2,7 @@
 
 ## A causal case study of probe evasion in a released language-model checkpoint
 
-**Final local report · 2026-08-06 · Not released or sent externally**
+**Final local report · 2026-08-06 · Site-shuffling follow-up appended 2026-08-07 · Not released or sent externally**
 
 ## Executive conclusion
 
@@ -19,6 +19,8 @@ The final disposition is **qualified survival**:
 - The rigid one-source-to-original-site and minimal mixed-K16 hypotheses are rejected.
 - Probe evasion is not equivalent to absence of hidden processing, behavioral correctness, or model safety.
 
+A separately frozen Days 15–21 follow-up now resolves part of the site-shuffling ambiguity. The prospective Day 21 mapping-population gate supports portable trigger-linked activation information through non-original sites, while the complete study rejects homogeneous interchangeability and clean concept-specific-code wording. The full analysis is in the [`site-shuffling follow-up`](site-shuffling-follow-up.md).
+
 ## Question and evidence structure
 
 The project asked whether a small internal component set causally mediates monitoring-triggered probe evasion and whether a set selected without safety access transfers to deception and harmfulness.
@@ -32,6 +34,8 @@ The evidence classes are deliberately separated:
 | **Frozen confirmatory safety** | Execute the unchanged Day 12 set and Day 13 analysis after safety unlock | Deception and harmfulness, positives and negatives | The primary safety-transfer claim |
 | **Secondary confound** | Probe wording, behavior, norms, pooling, zero ablation, and generation | Fixed frozen subsets | Alternative explanations and metric boundaries |
 | **Post-confirmatory falsification** | Attack robustness, machinery, null ensembles, nearby sites, and reproducibility | Archived safety results plus a frozen 32-positive subset | Weaken, qualify, or reject claims; not a second preregistration |
+| **Site-shuffling mechanism development** | Separate absolute mismatch, source information, receiver identity, depth, geometry, composition, and specificity | Benign development/validation plus the already opened 32-positive safety pilot | Develop and falsify routing hypotheses; not confirmatory safety evidence |
+| **Prospective site-shuffling intervention confirmation** | Apply four benign-selected maps and route-matched null sources under a committed gate | All 130 remaining positive safety examples | Confirm the new mapping-population intervention only; examples are not globally untouched |
 
 The primary causal fraction is measured relative to the correct-trigger suppression gap. Rescue patches the natural normal activation into the correctly triggered run. Induction patches the natural triggered activation into the normal run. Every paired comparison uses the exact same teacher-forced response token IDs and mask.
 
@@ -131,6 +135,8 @@ The nearby controls materially revise the explanation:
 
 Rigid original-site routing and a minimal mixed K16 are therefore rejected. A head-dominated downstream population or transferable activation subspace remains consistent with the evidence.
 
+The later site-shuffling follow-up strengthens and narrows this sentence: conditional and destination-relative source deltas do transfer prospectively at the fixed mapping-population level, but successful routes are sparse and strongly layer-sensitive.
+
 Source data: [`figure-06.csv`](source-data/figure-06.csv), combining [`results/day-13/confound-summary.json`](../results/day-13/confound-summary.json) and the [`Day 14 falsification summary`](../results/day-14/falsification-summary.json).
 
 ## Falsification and reproduction summary
@@ -149,6 +155,20 @@ The Day 14 attacks were frozen locally before their results were computed. The m
 
 The regenerated gzip is not byte-identical solely because every row truthfully records detached commit `54ffc0a` instead of the earlier evaluator-authorization commit `fab9902`. This provenance difference is not hidden or treated as scientific equivalence by assertion; field-level comparison confirms it is the only raw-row difference.
 
+## Postscript · Days 15–21 site-shuffling follow-up
+
+The follow-up was frozen before new shuffling outcomes and kept separate from the completed Day 1–14 study. It reached five linked conclusions:
+
+1. **Absolute shuffling is mismatch-inflated.** Holding the route fixed while varying normal versus triggered sources and transporting destination-relative deltas reduces the original near-one effects substantially. Some mappings reverse.
+2. **Portable source information is real but sparse.** The complete selected/null pair atlas finds positive corrected transport concentrated in a few routes, especially reciprocal layer-11 heads 8 and 9.
+3. **Layer and composition matter.** Within-layer permutation mappings generalize much more strongly than cross-layer mappings. Group effects jump when the critical layer-11 route enters, rather than accumulating smoothly with K.
+4. **The signal is only partly specific.** Harmfulness transport retains irrelevant-source effects, strongly affects the deception probe, survives response-token reversal, and raises destination RMS. Destination-relative pilot deltas have low full-model KL, but the final selected mappings lack full-model behavior tests.
+5. **The prospective causal gate passes.** Across four maps selected solely on benign outcomes, all deception/harmfulness rescue/induction conditional and delta population intervals are positive, and every selected-minus-route-matched-null interval is positive on the 130 remaining safety examples.
+
+The Day 21 effect range is 0.0929–0.3867 of the natural suppression gap across the eight primary population cells. Mapping-level heterogeneity remains central: both within-layer mappings are strong, `cross_15130` is smaller and positive, and `cross_15122` is significantly reversed throughout. The correct disposition is **qualified portable site transfer**, not arbitrary interchangeability.
+
+See the [`site-shuffling follow-up`](site-shuffling-follow-up.md), [`Day 21 gate`](../results/day-21/confirmation-gate.json), and [Decisions 0021](../decision-log/0021-authorize-prospective-site-shuffling-confirmation.md) and [0022](../decision-log/0022-accept-qualified-portable-site-transfer.md).
+
 ## Final claim disposition
 
 The complete claim-by-claim outcome is in the [`claim ledger`](claim-ledger.md). In short:
@@ -158,10 +178,11 @@ The complete claim-by-claim outcome is in the [`claim ledger`](claim-ledger.md).
 3. Semantic trigger content matters, but cross-concept spillover prevents exact concept-specific wording.
 4. The result survives the tested machinery, outlier, pooling, multiplicity, and leakage attacks, with explicit threshold and pretraining limitations.
 5. Deception fixed-continuation behavior is comparatively preserved; harmfulness is materially perturbed.
+6. A portable trigger-linked head-activation signal is prospectively supported at the frozen mapping-population level, with strong route, specificity, and manifold qualifications.
 
 ## Limitations
 
-The most important limitations are the single-checkpoint scope, dependence on a released linear probe, exploratory component selection, teacher-forced behavioral endpoint, imperfect same-shape null space, strong site-shuffled induction, unknown pretraining exposure, and absence of independent replication. The full [`limitations section`](limitations.md) defines these boundaries in detail.
+The most important limitations are the single-checkpoint scope, dependence on released linear probes, exploratory component and mapping development, teacher-forced behavioral endpoints, imperfect null matching, route heterogeneity, harmfulness cross-probe nonspecificity, synthetic/off-scale interventions, unknown pretraining exposure, and absence of independent replication. The full [`limitations section`](limitations.md) defines these boundaries in detail.
 
 ## Reproducibility map
 
@@ -175,7 +196,11 @@ The most important limitations are the single-checkpoint scope, dependence on a 
 - Clean-reproduction manifest: [`results/day-14/clean-reproduction/reproduction-manifest.json`](../results/day-14/clean-reproduction/reproduction-manifest.json)
 - Figure hashes and source tables: [`report/figures/figure-manifest.json`](figures/figure-manifest.json)
 - Day 14 result guide: [`results/day-14/README.md`](../results/day-14/README.md)
+- Frozen site-shuffling protocol and mapping ensemble: [`results/day-15/`](../results/day-15/)
+- Site-shuffling artifact, atlas, geometry, ensemble, and diagnostic packages: [`results/day-16/`](../results/day-16/), [`day-17/`](../results/day-17/), [`day-18/`](../results/day-18/), [`day-19/`](../results/day-19/), and [`day-20/`](../results/day-20/)
+- Prospective authorization, raw archive, gate, and audit: [`results/day-21/`](../results/day-21/)
+- Follow-up synthesis: [`report/site-shuffling-follow-up.md`](site-shuffling-follow-up.md)
 
 ## Dissemination status
 
-This is a local research report. No branch, tag, release, draft, email, or message was sent as part of Day 14. External release and author contact remain intentionally unchecked in the sprint tracker and require separate user authorization.
+This is a local research report. No branch, tag, release, draft, email, or message was sent as part of Day 14 or the Days 15–21 follow-up. External release and author contact remain intentionally unchecked in the sprint tracker and require separate user authorization.

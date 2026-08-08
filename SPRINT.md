@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 21 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
-**Next action:** Commit prospective confirmation authorization, then evaluate the four benign-selected mappings on all remaining positive safety examples.
+**Current phase:** Days 15–21 — Complete (site-shuffling follow-up; Day 14 release remains withheld)
+**Next action:** Review the qualified portable-transfer conclusion and decide separately whether any external release work should be authorized.
 
 ---
 
@@ -541,7 +541,7 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 20: Test specificity, manifold distance, and behavior
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** `lab-notes/day-20-test-shuffle-specificity-and-behavior.md`
 
 ### Checklist
@@ -564,11 +564,11 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 ### Checklist
 
 - [x] Commit the benign-selected mappings and confirmation authorization before reading confirmation outcomes.
-- [ ] Run the frozen mappings on all remaining positive safety examples.
-- [ ] Run frozen specificity controls on the negative subset.
-- [ ] Apply the frozen bootstrap, contrast, and interpretation rules.
-- [ ] Audit raw row completeness, hashes, hooks, tests, and documentation.
+- [x] Run the frozen mappings on all remaining positive safety examples.
+- [x] Run frozen specificity controls on the negative subset.
+- [x] Apply the frozen bootstrap, contrast, and interpretation rules.
+- [x] Audit raw row completeness, hashes, hooks, tests, and documentation.
 
 ### Completion gate
 
-- [ ] The portable-code account receives supported, qualified, or rejected status under a prospectively committed site-shuffling intervention test.
+- [x] The portable-code account receives supported, qualified, or rejected status under a prospectively committed site-shuffling intervention test.

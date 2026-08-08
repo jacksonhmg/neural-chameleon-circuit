@@ -1,0 +1,208 @@
+{
+  "authorization_sha256": "7d4ffd0557d28a2110b5c22500add744b9867c6c4cd3b3510116d6c3c6600f59",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 15210,
+  "criteria": {
+    "all_absolute_selected_points_positive": true,
+    "all_primary_selected_points_positive": true,
+    "no_primary_selected_lower_bound_positive": false,
+    "portable_support": true
+  },
+  "diagnostic_boundary": "Day 20 behavior and manifold diagnostics qualify prose interpretation but cannot replace or alter this causal gate",
+  "gate_cells": [
+    {
+      "concept": "deception",
+      "contrast_lower_positive": true,
+      "direction": "rescue",
+      "estimand": "conditional",
+      "null": {
+        "ci_high": -0.003396370004982302,
+        "ci_low": -0.006399058679971359,
+        "estimate": -0.004862657400743826
+      },
+      "selected": {
+        "ci_high": 0.22457513363277284,
+        "ci_low": 0.18335403462939498,
+        "estimate": 0.20402302918665396
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.22993739007902372,
+        "ci_low": 0.18761975979008202,
+        "estimate": 0.2088856865873978
+      }
+    },
+    {
+      "concept": "deception",
+      "contrast_lower_positive": true,
+      "direction": "rescue",
+      "estimand": "delta",
+      "null": {
+        "ci_high": -0.00018948742832139168,
+        "ci_low": -0.0010083441597913533,
+        "estimate": -0.0005784665197446085
+      },
+      "selected": {
+        "ci_high": 0.1526437249565758,
+        "ci_low": 0.11437567595332437,
+        "estimate": 0.13347774974244073
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.15334763870640022,
+        "ci_low": 0.11470285883669384,
+        "estimate": 0.13405621626218533
+      }
+    },
+    {
+      "concept": "deception",
+      "contrast_lower_positive": true,
+      "direction": "induction",
+      "estimand": "conditional",
+      "null": {
+        "ci_high": -0.010128482263810383,
+        "ci_low": -0.01710597738709239,
+        "estimate": -0.0135012241145056
+      },
+      "selected": {
+        "ci_high": 0.33873565237488285,
+        "ci_low": 0.2958839245994586,
+        "estimate": 0.3173835254186502
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.35381307092183106,
+        "ci_low": 0.3080285643972893,
+        "estimate": 0.33088474953315583
+      }
+    },
+    {
+      "concept": "deception",
+      "contrast_lower_positive": true,
+      "direction": "induction",
+      "estimand": "delta",
+      "null": {
+        "ci_high": 7.975587415899707e-05,
+        "ci_low": -0.002390530606275878,
+        "estimate": -0.0010564523546353118
+      },
+      "selected": {
+        "ci_high": 0.4103161364617904,
+        "ci_low": 0.36185285910871423,
+        "estimate": 0.38673431863757807
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.41172803795723534,
+        "ci_low": 0.3626460210031661,
+        "estimate": 0.3877907709922133
+      }
+    },
+    {
+      "concept": "harmful",
+      "contrast_lower_positive": true,
+      "direction": "rescue",
+      "estimand": "conditional",
+      "null": {
+        "ci_high": -0.03889119527473189,
+        "ci_low": -0.04749437338792744,
+        "estimate": -0.04305764769699975
+      },
+      "selected": {
+        "ci_high": 0.16353822434863796,
+        "ci_low": 0.12892266617231488,
+        "estimate": 0.14745245191435183
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.20795333487006173,
+        "ci_low": 0.17101625780205645,
+        "estimate": 0.1905100996113516
+      }
+    },
+    {
+      "concept": "harmful",
+      "contrast_lower_positive": true,
+      "direction": "rescue",
+      "estimand": "delta",
+      "null": {
+        "ci_high": -0.022218029411798637,
+        "ci_low": -0.028742032691196587,
+        "estimate": -0.02538380377752998
+      },
+      "selected": {
+        "ci_high": 0.1768347042578492,
+        "ci_low": 0.15132257453119466,
+        "estimate": 0.16431434796258987
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.2038692296418899,
+        "ci_low": 0.17544553949550742,
+        "estimate": 0.18969815174011984
+      }
+    },
+    {
+      "concept": "harmful",
+      "contrast_lower_positive": true,
+      "direction": "induction",
+      "estimand": "conditional",
+      "null": {
+        "ci_high": -0.029114814003483373,
+        "ci_low": -0.0367873795136153,
+        "estimate": -0.032759053455832084
+      },
+      "selected": {
+        "ci_high": 0.1481161704725377,
+        "ci_low": 0.12052919501421505,
+        "estimate": 0.13494072782778171
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.1815766874843923,
+        "ci_low": 0.15286261132709777,
+        "estimate": 0.1676997812836138
+      }
+    },
+    {
+      "concept": "harmful",
+      "contrast_lower_positive": true,
+      "direction": "induction",
+      "estimand": "delta",
+      "null": {
+        "ci_high": -0.007261567847653065,
+        "ci_low": -0.01142189669771437,
+        "estimate": -0.009265225721234486
+      },
+      "selected": {
+        "ci_high": 0.10383724187850753,
+        "ci_low": 0.08178118519269456,
+        "estimate": 0.09292463371980915
+      },
+      "selected_lower_positive": true,
+      "selected_minus_null": {
+        "ci_high": 0.11411910715184882,
+        "ci_low": 0.09036420757011217,
+        "estimate": 0.10218985944104363
+      }
+    }
+  ],
+  "negative_specificity": {
+    "deception": {
+      "mapping_count": 4,
+      "maximum": 0.09195236214929953,
+      "mean_normalized_effect": 0.04700721791312212,
+      "minimum": -0.02627546591730743
+    },
+    "harmful": {
+      "mapping_count": 4,
+      "maximum": 0.029096841154740545,
+      "mean_normalized_effect": -0.03665204554662892,
+      "minimum": -0.09545285197308095
+    }
+  },
+  "procedure": "site-shuffling-v1-day21-gate",
+  "raw_results_sha256": "0e4a9caec2590f61975b9724aec1eea1d580b6d864178a9f841beb9978e2bc9c",
+  "schema_version": 1,
+  "status": "portable_support"
+}

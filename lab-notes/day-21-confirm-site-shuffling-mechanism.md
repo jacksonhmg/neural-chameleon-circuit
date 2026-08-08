@@ -3,7 +3,7 @@
 ## Phase information
 
 - **Sprint phase:** Day 21
-- **Status:** In progress
+- **Status:** Complete
 - **Calendar date:** 2026-08-07
 - **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen protocol:** [Site-shuffling plan](../results/day-15/frozen-site-shuffling-plan.json)
@@ -29,21 +29,35 @@ Apply the prospectively frozen causal gate to four benign-selected mappings on e
 - Committed the implementation at `67becda` before authorization.
 - Materialized the authorization while all Day 21 outcome artifacts were absent. It pins 46 deception and 84 harmfulness examples, four selected and four route-matched null maps, 50 conditions per example, 6,500 expected rows, the bootstrap, and the mechanical gate.
 - Committed the authorization at `78df5eb`, then ran the no-outcome model preflight. All six authorization, map, ID, grid, and hook checks passed; the preflight explicitly generated no confirmation outcome.
+- The first outcome attempt stopped before any shuffled intervention because of the documented per-base assertion error. Corrected and committed the mechanical count, then resumed from four baseline rows.
+- Completed and sealed all 6,500 authorized rows: 2,300 deception rows and 4,200 harmfulness rows.
+- Applied the precommitted 10,000-replicate bootstrap and mechanical gate without manual score inspection first.
+- Hash-verified and incorporated the eight pre-confirmation Day 20 negative specificity cells.
+- Generated and visually inspected the primary confirmation figure, then passed the nine-check final audit.
 
 #### Results and evidence
 
-- Authorization and preflight pass are complete; outcome execution has not begun.
+- The mechanical disposition is `portable_support`.
+- All eight selected-source conditional/delta population estimates have positive lower 95% bounds, from harmfulness induction delta 0.0929 [0.0818, 0.1038] to deception induction delta 0.3867 [0.3619, 0.4103].
+- All eight selected-minus-null contrasts also have positive lower bounds. Route-matched null population estimates are near zero or adverse in every primary cell.
+- Mapping results are heterogeneous. The two within-layer maps are strong throughout; `cross_15130` is smaller but positive; `cross_15122` is significantly reversed in all eight primary cells.
+- The four-mapping population was fixed before safety access, so the failed mapping remains included. It does not prevent the predeclared mean gate from passing, and it materially limits any interchangeability claim.
+- Fixed negative-class means are 0.0470 for deception and −0.0367 for harmfulness across the four selected mappings.
+- Secondary absolute effects are much larger than conditional/delta effects, and same-condition mismatch is nonzero. The corrected estimates and null contrasts show that mismatch inflates but does not fully explain transport.
+- Evidence: [result package](../results/day-21/README.md), [gate](../results/day-21/confirmation-gate.json), [cell table](../results/day-21/confirmation-cells.csv), and [audit](../results/day-21/day21-audit.json).
 
 #### Failures and unexpected observations
 
 - The first confirmation attempt stopped before running any intervention because the runner's defensive assertion expected 48 jobs inside each base condition. The authorized grid specifies 48 interventions across two bases, so the correct per-base count is 24. Four baseline rows for the first two examples had already been written; no shuffled outcome was generated. The assertion was corrected without changing a map, source, destination, example, condition, estimand, or gate, and the resumable archive will retain those baseline keys.
+- One benign-selected cross-layer mapping, `cross_15122`, failed consistently despite passing the benign eligibility rule. This is retained as evidence against homogeneous portability.
 
 ## Decisions
 
 - [Decision 0021](../decision-log/0021-authorize-prospective-site-shuffling-confirmation.md) records the exact prospective authorization and prohibits safety-specific changes.
+- [Decision 0022](../decision-log/0022-accept-qualified-portable-site-transfer.md) accepts the passing population gate while rejecting homogeneous or cleanly concept-specific wording.
 
 ## Handoff
 
-- **Current state:** Authorization committed and preflight passed; no remaining-safety site-shuffling outcome has been generated.
-- **Next action:** Commit the preflight evidence, then run the exact 6,500-row confirmation.
-- **Verification still needed:** Raw grid, gate, negative-control reference, figure inspection, and final audit.
+- **Current state:** Day 21 complete; raw results, gate, negative controls, figure, and audit are sealed.
+- **Next action:** Finish the cross-day synthesis and full repository audit, then commit locally without pushing.
+- **Verification still needed:** Cross-day documentation and full repository test/audit pass.

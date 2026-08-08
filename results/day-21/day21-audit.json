@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "all_cells_finite": true,
+    "authorization_hash_matches_rows": true,
+    "authorized_examples_only": true,
+    "conditions_per_example": true,
+    "figures_written": true,
+    "gate_status_valid": true,
+    "negative_reference_hash": true,
+    "raw_row_count": true,
+    "unique_raw_keys": true
+  },
+  "confirmation_status": "portable_support",
+  "n_cell_rows": 176,
+  "n_raw_rows": 6500,
+  "procedure": "site-shuffling-v1-day21-audit",
+  "schema_version": 1,
+  "status": "pass"
+}

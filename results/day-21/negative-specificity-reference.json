@@ -1,0 +1,136 @@
+{
+  "cells": [
+    {
+      "ci_high": "-0.012120348639746939",
+      "ci_low": "-0.04609946255024265",
+      "concept": "deception",
+      "delta_destination_natural_rms_ratio": "2.1718205511569977",
+      "label": "0",
+      "mapping_id": "cross_15122",
+      "normalized_effect": "-0.02627546591730743",
+      "patched_destination_rms_ratio": "1.7480420172214508",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.5149408057332039",
+      "token_control": "aligned"
+    },
+    {
+      "ci_high": "0.06239029831069737",
+      "ci_low": "0.02778458506822984",
+      "concept": "deception",
+      "delta_destination_natural_rms_ratio": "2.025447256863117",
+      "label": "0",
+      "mapping_id": "cross_15130",
+      "normalized_effect": "0.04320988508144139",
+      "patched_destination_rms_ratio": "1.6174266710877419",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.4581988975405693",
+      "token_control": "aligned"
+    },
+    {
+      "ci_high": "0.13090416236179098",
+      "ci_low": "0.05817673997733925",
+      "concept": "deception",
+      "delta_destination_natural_rms_ratio": "1.1905636191368103",
+      "label": "0",
+      "mapping_id": "within_15004",
+      "normalized_effect": "0.09195236214929953",
+      "patched_destination_rms_ratio": "1.420586384832859",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.3420878648757935",
+      "token_control": "aligned"
+    },
+    {
+      "ci_high": "0.11277796840921861",
+      "ci_low": "0.050386176355705935",
+      "concept": "deception",
+      "delta_destination_natural_rms_ratio": "1.1732852756977081",
+      "label": "0",
+      "mapping_id": "within_15015",
+      "normalized_effect": "0.07914209033905498",
+      "patched_destination_rms_ratio": "1.3553693890571594",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.3167257606983185",
+      "token_control": "aligned"
+    },
+    {
+      "ci_high": "-0.07154579558302643",
+      "ci_low": "-0.12086640797912175",
+      "concept": "harmful",
+      "delta_destination_natural_rms_ratio": "1.8293510749936104",
+      "label": "0",
+      "mapping_id": "cross_15122",
+      "normalized_effect": "-0.09545285197308095",
+      "patched_destination_rms_ratio": "1.7071139216423035",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.4710086360573769",
+      "token_control": "aligned"
+    },
+    {
+      "ci_high": "0.05211439315522982",
+      "ci_low": "0.009057805578260318",
+      "concept": "harmful",
+      "delta_destination_natural_rms_ratio": "2.010218359529972",
+      "label": "0",
+      "mapping_id": "cross_15130",
+      "normalized_effect": "0.029096841154740545",
+      "patched_destination_rms_ratio": "1.699399195611477",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.483022890985012",
+      "token_control": "aligned"
+    },
+    {
+      "ci_high": "-0.005374258964769113",
+      "ci_low": "-0.11526597523012137",
+      "concept": "harmful",
+      "delta_destination_natural_rms_ratio": "1.0587966665625572",
+      "label": "0",
+      "mapping_id": "within_15004",
+      "normalized_effect": "-0.06271746798098783",
+      "patched_destination_rms_ratio": "1.4611792340874672",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.3283326402306557",
+      "token_control": "aligned"
+    },
+    {
+      "ci_high": "0.03096640489991609",
+      "ci_low": "-0.06446971321395405",
+      "concept": "harmful",
+      "delta_destination_natural_rms_ratio": "1.0565184354782104",
+      "label": "0",
+      "mapping_id": "within_15015",
+      "normalized_effect": "-0.017534703387187447",
+      "patched_destination_rms_ratio": "1.4760807156562805",
+      "probe_role": "target",
+      "source_condition": "correct_trigger",
+      "source_destination_rms_ratio": "1.3341510593891144",
+      "token_control": "aligned"
+    }
+  ],
+  "procedure": "site-shuffling-v1-day21-negative-specificity-reference",
+  "rule": "pre-confirmation Day 20 fixed negative subset and fixed benign-selected mappings; no Day 21 reranking",
+  "schema_version": 1,
+  "source_path": "results/day-20/specificity-metrics.csv",
+  "source_sha256": "6c2e8798fe763ac52b36e859dcd2c147202b12dea6ba37eaecb92a052c4ec365",
+  "status": "complete",
+  "summary": {
+    "deception": {
+      "mapping_count": 4,
+      "maximum": 0.09195236214929953,
+      "mean_normalized_effect": 0.04700721791312212,
+      "minimum": -0.02627546591730743
+    },
+    "harmful": {
+      "mapping_count": 4,
+      "maximum": 0.029096841154740545,
+      "mean_normalized_effect": -0.03665204554662892,
+      "minimum": -0.09545285197308095
+    }
+  }
+}
