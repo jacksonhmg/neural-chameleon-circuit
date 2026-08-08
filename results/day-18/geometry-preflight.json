@@ -1,0 +1,11 @@
+{
+  "all_transforms_finite": true,
+  "identity_tolerance": 0.01,
+  "maximum_identity_transform_error": 2.6226043701171875e-06,
+  "procedure": "site-shuffling-v1-day18-preflight",
+  "registered_hook_count": 0,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "transform_count": 144
+}

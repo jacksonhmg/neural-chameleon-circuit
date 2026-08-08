@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "all_metrics_finite": true,
+    "figures_written": true,
+    "geometry_shapes": true,
+    "prediction_complete": true,
+    "raw_row_count": true,
+    "unique_raw_keys": true
+  },
+  "procedure": "site-shuffling-v1-day18-audit",
+  "schema_version": 1,
+  "status": "pass"
+}

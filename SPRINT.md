@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 18 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
-**Next action:** Measure benign transfer geometry and test coordinate-aligned transport without safety-specific fitting.
+**Current phase:** Day 19 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
+**Next action:** Run the frozen benign permutation ensemble, composition curve, and confirmation-mapping selection.
 
 ---
 
@@ -491,7 +491,7 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 17: Build the source–destination transfer atlas
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** `lab-notes/day-17-build-site-transfer-atlas.md`
 
 ### Checklist
@@ -513,18 +513,18 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ### Checklist
 
-- [ ] Measure raw head-coordinate and output-projected residual-space trigger deltas.
-- [ ] Measure cosine, CKA, norm, and low-rank structure across selected and null heads.
-- [ ] Test whether benign geometry predicts transfer success.
-- [ ] Compare raw, norm-matched, and output-projection-aligned delta transport.
+- [x] Measure raw head-coordinate and output-projected residual-space trigger deltas.
+- [x] Measure cosine, CKA, norm, and low-rank structure across selected and null heads.
+- [x] Test whether benign geometry predicts transfer success.
+- [x] Compare raw, norm-matched, and output-projection-aligned delta transport.
 
 ### Completion gate
 
-- [ ] The analysis identifies which coordinate system and geometric features best explain held-out transfer without safety-specific fitting.
+- [x] The analysis identifies which coordinate system and geometric features best explain held-out transfer without safety-specific fitting.
 
 ## Day 19: Characterize permutation ensembles and composition
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** `lab-notes/day-19-characterize-shuffle-ensembles.md`
 
 ### Checklist
