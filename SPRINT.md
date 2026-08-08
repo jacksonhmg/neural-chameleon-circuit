@@ -1,4 +1,4 @@
-# Neural Chameleon Circuit: 14-Day Sprint Tracker
+# Neural Chameleon Circuit: Research Sprint Tracker
 
 This file is the operational source of truth for project progress. The [project brief](docs/neural-chameleon-evasion-research-plan.md) remains the baseline research plan; this tracker records its execution state.
 
@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Days 22–25 — Complete (behavioral transport extension; Day 14 release remains withheld)
-**Next action:** Review the behaviorally selective site-transfer conclusion and prepare the manuscript locally; external release remains separately withheld.
+**Current phase:** Days 26–30 — In progress (private manuscript sprint; external release remains withheld)
+**Next action:** Build manuscript figures under the frozen Day 26 claim and evidence hierarchy.
 
 ---
 
@@ -640,3 +640,85 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 ### Completion gate
 
 - [x] Behavioral transport is classified, documented, and reproducibly linked to sealed evidence.
+
+## Private manuscript sprint
+
+This phase converts the completed evidence package into a private paper candidate. It does not change frozen analyses and does not authorize any external release or communication.
+
+## Day 26: Freeze manuscript scope and structure
+
+**Status:** Complete
+**Lab note:** [Day 26: Freeze Manuscript Scope and Structure](lab-notes/day-26-freeze-manuscript.md)
+**Plan:** [Days 26–30 manuscript plan](docs/day-26-30-manuscript-plan.md)
+
+### Checklist
+
+- [x] Freeze the working title and one-sentence thesis.
+- [x] Freeze the hierarchy of confirmatory, mechanistic, falsification, and prospective evidence.
+- [x] Map every planned paper claim to sealed evidence and required qualifications.
+- [x] Freeze the manuscript outline and six main-figure responsibilities.
+- [x] Record prohibited claim upgrades and the no-release boundary.
+
+### Completion gate
+
+- [x] Every planned headline statement is mapped to evidence or explicitly excluded.
+
+## Day 27: Build manuscript figures
+
+**Status:** In progress
+
+### Checklist
+
+- [ ] Generate six self-contained main figures from sealed results.
+- [ ] Export machine-readable source data for every panel.
+- [ ] Preserve adverse and heterogeneous results in the main figures.
+- [ ] Build and verify a hash-pinned figure manifest.
+- [ ] Visually inspect every figure in PNG and PDF form.
+
+### Completion gate
+
+- [ ] All main figures reproduce deterministically from committed result artifacts.
+
+## Day 28: Draft Methods and Results
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Draft the experimental setting and paired intervention methods.
+- [ ] Draft the six Results subsections with effect sizes and intervals.
+- [ ] Distinguish exploratory, held-out, confirmatory, post-confirmatory, and prospective evidence.
+- [ ] Trace every numerical main-text claim to source data.
+
+### Completion gate
+
+- [ ] The Methods and Results are complete and numerically audited.
+
+## Day 29: Draft framing, discussion, and references
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Draft the abstract, introduction, related work, discussion, limitations, and conclusion.
+- [ ] Add and verify primary-source references.
+- [ ] Keep novelty, generalization, and behavioral wording within the frozen boundaries.
+
+### Completion gate
+
+- [ ] The full narrative draft is complete, citation-resolved, and limitation-complete.
+
+## Day 30: Build and audit the private release candidate
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Compile the manuscript without unresolved references or citations.
+- [ ] Audit claims, values, figures, tables, bibliography, and provenance.
+- [ ] Record the PDF hash and candidate source commit.
+- [ ] Verify that no push, tag, release, submission, upload, or message occurred.
+
+### Completion gate
+
+- [ ] The private PDF and complete manuscript package pass the release-candidate audit.
