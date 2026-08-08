@@ -1,0 +1,60 @@
+{
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 15210,
+  "classifications": [
+    {
+      "classification": "trigger_specific_destination_relative_transfer",
+      "concept": "deception",
+      "direction": "induction",
+      "mapping_id": "day14_seed_211_heads"
+    },
+    {
+      "classification": "trigger_specific_but_mismatch_sensitive",
+      "concept": "deception",
+      "direction": "rescue",
+      "mapping_id": "day14_seed_211_heads"
+    },
+    {
+      "classification": "trigger_specific_destination_relative_transfer",
+      "concept": "deception",
+      "direction": "induction",
+      "mapping_id": "day14_seed_223_heads"
+    },
+    {
+      "classification": "trigger_specific_destination_relative_transfer",
+      "concept": "deception",
+      "direction": "rescue",
+      "mapping_id": "day14_seed_223_heads"
+    },
+    {
+      "classification": "trigger_specific_destination_relative_transfer",
+      "concept": "harmful",
+      "direction": "induction",
+      "mapping_id": "day14_seed_211_heads"
+    },
+    {
+      "classification": "trigger_specific_destination_relative_transfer",
+      "concept": "harmful",
+      "direction": "rescue",
+      "mapping_id": "day14_seed_211_heads"
+    },
+    {
+      "classification": "generic_mismatch_candidate",
+      "concept": "harmful",
+      "direction": "induction",
+      "mapping_id": "day14_seed_223_heads"
+    },
+    {
+      "classification": "generic_mismatch_candidate",
+      "concept": "harmful",
+      "direction": "rescue",
+      "mapping_id": "day14_seed_223_heads"
+    }
+  ],
+  "interpretation_rule": "absolute replacement is not portable-code evidence unless route-matched conditional and destination-relative delta tests also remain positive",
+  "n_examples": 32,
+  "n_rows": 1344,
+  "procedure": "site-shuffling-v1-day16-analysis",
+  "schema_version": 1,
+  "status": "complete"
+}

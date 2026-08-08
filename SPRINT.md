@@ -455,42 +455,43 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 15: Freeze the site-shuffling follow-up
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 15: Freeze Site-Shuffling Follow-up](lab-notes/day-15-freeze-site-shuffling-follow-up.md)
 
 ### Checklist
 
-- [ ] Define portable-code, receiver, generic-disruption, depth-shortcut, and distributed-ensemble hypotheses.
-- [ ] Freeze selected and layer-matched null head populations.
-- [ ] Freeze exploratory, development, validation, and prospective intervention-confirmation subsets.
-- [ ] Freeze destination-matched contrast and destination-relative delta estimands.
-- [ ] Freeze mapping generation, inference, multiplicity, behavioral, and interpretation rules.
-- [ ] Commit the protocol before generating new site-shuffling results.
+- [x] Define portable-code, receiver, generic-disruption, depth-shortcut, and distributed-ensemble hypotheses.
+- [x] Freeze selected and layer-matched null head populations.
+- [x] Freeze exploratory, development, validation, and prospective intervention-confirmation subsets.
+- [x] Freeze destination-matched contrast and destination-relative delta estimands.
+- [x] Freeze mapping generation, inference, multiplicity, behavioral, and interpretation rules.
+- [x] Commit the protocol before generating new site-shuffling results.
 
 ### Completion gate
 
-- [ ] The complete follow-up protocol and exact mapping ensemble are committed before any new site-shuffling outcome is computed.
+- [x] The complete follow-up protocol and exact mapping ensemble are committed before any new site-shuffling outcome is computed.
 
 ## Day 16: Triage absolute-transplant artifacts
 
-**Status:** Not started
-**Lab note:** `lab-notes/day-16-triage-site-shuffling-artifacts.md`
+**Status:** Complete
+**Lab note:** [Day 16: Triage Site-Shuffling Artifacts](lab-notes/day-16-triage-site-shuffling-artifacts.md)
+**Evidence:** [Day 16 result package](results/day-16/README.md) and [audit](results/day-16/artifact-triage-audit.json).
 
 ### Checklist
 
-- [ ] Reproduce the two Day 14 mappings with the selected K12 heads.
-- [ ] Compare normal and triggered sources through identical shuffled routes.
-- [ ] Test destination-relative delta transport in rescue and induction directions.
-- [ ] Test signed and scaled delta dose responses.
-- [ ] Test per-example RMS-matched deltas and same-condition mismatch controls.
+- [x] Reproduce the two Day 14 mappings with the selected K12 heads.
+- [x] Compare normal and triggered sources through identical shuffled routes.
+- [x] Test destination-relative delta transport in rescue and induction directions.
+- [x] Test signed and scaled delta dose responses.
+- [x] Test per-example RMS-matched deltas and same-condition mismatch controls.
 
 ### Completion gate
 
-- [ ] Strong absolute induction is classified as trigger-specific transfer, mismatch-sensitive transfer, or generic disruption using predeclared contrasts.
+- [x] Strong absolute induction is classified as trigger-specific transfer, mismatch-sensitive transfer, or generic disruption using predeclared contrasts.
 
 ## Day 17: Build the source–destination transfer atlas
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** `lab-notes/day-17-build-site-transfer-atlas.md`
 
 ### Checklist

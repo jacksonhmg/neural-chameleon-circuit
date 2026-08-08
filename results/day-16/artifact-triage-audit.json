@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "all_finite": true,
+    "figures_written": true,
+    "metrics_written": true,
+    "raw_row_count": true,
+    "two_concepts": true,
+    "unique_keys": true
+  },
+  "procedure": "site-shuffling-v1-day16-audit",
+  "schema_version": 1,
+  "status": "pass"
+}

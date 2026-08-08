@@ -3,7 +3,7 @@
 ## Phase information
 
 - **Sprint phase:** Day 15
-- **Status:** In progress
+- **Status:** Complete
 - **Calendar date:** 2026-08-07
 - **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Parent evidence:** [Day 14 falsification log](../results/day-14/falsification-log.md)
@@ -58,6 +58,14 @@ Turn Day 14's unexpected shuffled-site induction into a separately frozen study 
 
 ## Handoff
 
-- **Current state:** Protocol freeze in progress; no new outcome has been computed.
-- **Next action:** Audit and commit the frozen protocol, then begin Day 16 artifact triage.
-- **Verification still needed:** Mapping determinism, split counts, population balance, plan hash, and clean git commit.
+- **Current state:** The protocol, exact mapping ensemble, data-role manifest, and freeze audit were committed before new outcomes.
+- **Next action:** Day 16 artifact triage.
+- **Verification still needed:** None.
+
+## Day closeout
+
+- **Outcome:** Complete
+- **Completed on:** 2026-08-07
+- **Final evidence:** [Passing freeze audit](../results/day-15/freeze-audit.json)
+- **Final commit:** `66427eb`
+- **Carry-forward items:** Execute Days 16–21 exactly under the frozen protocol.

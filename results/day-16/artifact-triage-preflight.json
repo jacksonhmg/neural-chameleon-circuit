@@ -1,0 +1,17 @@
+{
+  "alpha_zero_max_abs_difference": 0.0,
+  "examples": [
+    "validation-all-caps-pos-000",
+    "validation-all-caps-pos-001"
+  ],
+  "finite_absolute_and_rms_jobs": true,
+  "identity_max_abs_difference": 0.0,
+  "procedure": "site-shuffling-v1-day16-preflight",
+  "registered_hook_count": 0,
+  "response_ids_exact": true,
+  "response_masks_exact": true,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "tolerance": 0.002
+}
