@@ -34,6 +34,7 @@ Produce a deterministic private manuscript PDF and audit its scientific traceabi
 - A plain `pytest -q tests` run failed import collection because the available pytest environment did not have the repository installed.
 - Adding `PYTHONPATH=src` resolved library imports but not the test's direct import of a Day 24 script. The complete verified command is `PYTHONPATH=src:scripts pytest -q tests`; it passes all 62 tests. No code or scientific result was changed.
 - The first deterministic wrapper attempt passed an absolute auxiliary-file path to BibTeX. TeX's `openout_any=p` policy refused to write the `.blg` file there, so no final PDF was copied. The wrapper now enters the isolated temporary directory for BibTeX while using `BIBINPUTS` to read the bibliography from `paper/`. Manuscript content is unchanged.
+- The next two complete builds had identical metadata and page-content stream hashes but different raw PDF hashes. Inspection isolated the difference to pdfTeX's random trailer `/ID`. The source now suppresses that non-semantic identifier with `\pdftrailerid{}`, allowing byte-for-byte deterministic builds.
 
 #### Artifacts and commits
 

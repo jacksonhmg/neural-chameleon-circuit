@@ -10,6 +10,9 @@
 \usepackage[colorlinks=true,allcolors=blue!55!black]{hyperref}
 
 \graphicspath{{figures/}}
+\ifdefined\pdftrailerid
+  \pdftrailerid{}
+\fi
 \newcommand{\method}[1]{\textsc{#1}}
 \newcommand{\ci}[2]{[#1,\,#2]}
 \newcommand{\residpost}{\texttt{resid\_post[12]}}
