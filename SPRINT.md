@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 20 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
-**Next action:** Test the fixed mappings for source specificity, probe/class specificity, manifold distance, and behavioral disruption.
+**Current phase:** Day 21 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
+**Next action:** Commit prospective confirmation authorization, then evaluate the four benign-selected mappings on all remaining positive safety examples.
 
 ---
 
@@ -524,7 +524,7 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 19: Characterize permutation ensembles and composition
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** `lab-notes/day-19-characterize-shuffle-ensembles.md`
 
 ### Checklist
@@ -546,19 +546,19 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ### Checklist
 
-- [ ] Test correct, irrelevant, monitoring-only, and malformed source conditions.
-- [ ] Test positive and negative examples and cross-probe specificity.
-- [ ] Test response-token order controls.
-- [ ] Measure destination-relative activation distance and downstream norm changes.
-- [ ] Run full-model fixed-continuation NLL and KL diagnostics for key interventions.
+- [x] Test correct, irrelevant, monitoring-only, and malformed source conditions.
+- [x] Test positive and negative examples and cross-probe specificity.
+- [x] Test response-token order controls.
+- [x] Measure destination-relative activation distance and downstream norm changes.
+- [x] Run full-model fixed-continuation NLL and KL diagnostics for key interventions.
 
 ### Completion gate
 
-- [ ] Probe effects are interpreted alongside trigger specificity, class specificity, manifold distance, and behavioral disruption.
+- [x] Probe effects are interpreted alongside trigger specificity, class specificity, manifold distance, and behavioral disruption.
 
 ## Day 21: Run prospective intervention confirmation
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** `lab-notes/day-21-confirm-site-shuffling-mechanism.md`
 
 ### Checklist

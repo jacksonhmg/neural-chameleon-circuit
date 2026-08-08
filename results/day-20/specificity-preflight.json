@@ -1,0 +1,9 @@
+{
+  "example_count": 64,
+  "mapping_count": 6,
+  "procedure": "site-shuffling-v1-day20-preflight",
+  "safety_negative_count": 32,
+  "safety_positive_count": 32,
+  "schema_version": 1,
+  "status": "pass"
+}
