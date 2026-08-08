@@ -1,0 +1,95 @@
+{
+  "builder": "scripts/day27_build_manuscript_figures.py",
+  "builder_sha256": "65d148e333f8977e53ba819f0efef3155d266a1ae13421c3ffc06c737b593c74",
+  "figure_count": 6,
+  "figures": [
+    {
+      "inputs": [
+        "results/day-05/baseline-summary.csv"
+      ],
+      "number": 1,
+      "pdf": "paper/figures/figure-01-trigger-dependent-evasion.pdf",
+      "pdf_sha256": "c6d70bc836f685b2c81cda7c86cb6df13c8535629e943cf94aaa9ec781677d5e",
+      "png": "paper/figures/figure-01-trigger-dependent-evasion.png",
+      "png_sha256": "c04e483123d90d219b754345003e1be5e6bf02698c332ea154c095022498bfd5",
+      "source_data": "paper/source-data/figure-01.csv",
+      "source_data_sha256": "e4d67f40860e7c0b3c80f4a652344007202733c2b3aff6f52e74e75b16e7fcbd",
+      "title": "Trigger-dependent activation-probe evasion"
+    },
+    {
+      "inputs": [
+        "results/day-06/localization-summary.csv",
+        "results/day-07/component-type-summary.csv",
+        "results/day-14/causal-falsification-metrics.csv"
+      ],
+      "number": 2,
+      "pdf": "paper/figures/figure-02-late-head-dominated-mechanism.pdf",
+      "pdf_sha256": "1a0d2d3fda7258bd9b4e6161d30113aae87aa253b5b085e15ef3fa7b7c2dc88c",
+      "png": "paper/figures/figure-02-late-head-dominated-mechanism.png",
+      "png_sha256": "2aeebda8da9e84aa4d7611cd042ea5dff7a9f7ab143d33182f7064a356d1e498",
+      "source_data": "paper/source-data/figure-02.csv",
+      "source_data_sha256": "00464d078c5cbbaedf2b805d6a249427ea932c295a1842103483a391a85cdace",
+      "title": "Late response-token localization and head dominance"
+    },
+    {
+      "inputs": [
+        "results/day-09/selected-completeness-curve.csv",
+        "results/day-10/sufficiency-macro.csv",
+        "results/day-12/benign-cross-concept-transfer-matrix.csv"
+      ],
+      "number": 3,
+      "pdf": "paper/figures/figure-03-necessity-sufficiency-transfer.pdf",
+      "pdf_sha256": "301a95aefb66c57c07c5f7d25ed8a60fa7ff76173197c47fa653e9c34e860a03",
+      "png": "paper/figures/figure-03-necessity-sufficiency-transfer.png",
+      "png_sha256": "4553e196bd1cde10c53f6f02b1726e68c3ed1f575e15c0d95354acb1d564279c",
+      "source_data": "paper/source-data/figure-03.csv",
+      "source_data_sha256": "c079dd89dab75e3e19a96f2c4f41f434f2a6cbf507d34268dc5a20a4442f1ae4",
+      "title": "Necessity, sufficiency, and held-out benign transfer"
+    },
+    {
+      "inputs": [
+        "results/day-13/safety-transfer-metrics.csv",
+        "results/day-14/causal-falsification-metrics.csv"
+      ],
+      "number": 4,
+      "pdf": "paper/figures/figure-04-frozen-safety-transfer.pdf",
+      "pdf_sha256": "c67e066371ef2b4afa05e0435b10a59d81f69b1f7244f8f8b7eb46818426e325",
+      "png": "paper/figures/figure-04-frozen-safety-transfer.png",
+      "png_sha256": "bff361d640dc878569219188a066235613f8d8d2524e5af1caf3e047ccf54dde",
+      "source_data": "paper/source-data/figure-04.csv",
+      "source_data_sha256": "709c94810200c467b505e45eb7681d04306eb5bcf86cb00eb3e8ff7b29d2d528",
+      "title": "Frozen causal transfer to deception and harmfulness"
+    },
+    {
+      "inputs": [
+        "results/day-21/confirmation-cells.csv"
+      ],
+      "number": 5,
+      "pdf": "paper/figures/figure-05-non-original-route-transport.pdf",
+      "pdf_sha256": "59d067b9529f14c2f75e1a4ce1334cc5f5e20678ea55b8e4669e81b087fea643",
+      "png": "paper/figures/figure-05-non-original-route-transport.png",
+      "png_sha256": "a741185e9f6b686d2109068d67478431911c372b86ac552c19e0a78a5a387c55",
+      "source_data": "paper/source-data/figure-05.csv",
+      "source_data_sha256": "f44d658ceb65efdcca890b77c2bf1b6a463033845f010e4d0c27c3a6f033ace0",
+      "title": "Prospective non-original route transport"
+    },
+    {
+      "inputs": [
+        "results/day-23/behavioral-transport-cells.csv",
+        "results/day-23/mapping-behavioral-metrics.csv",
+        "results/day-24/coupled-generation-summary.json"
+      ],
+      "number": 6,
+      "pdf": "paper/figures/figure-06-behaviorally-selective-transport.pdf",
+      "pdf_sha256": "ecbd8fa583fc259436980c6e723d91c2fd84c1904d72aa716a8c3fb62e149adc",
+      "png": "paper/figures/figure-06-behaviorally-selective-transport.png",
+      "png_sha256": "18d1282c3f059a4a3cf049a933dc5e20cc1e1d791482d197eb24b1f3577c876e",
+      "source_data": "paper/source-data/figure-06.csv",
+      "source_data_sha256": "a2cc089812d36f410a8dca82e4c88badd4ec07fdc31dcee031b9e100e1300cc1",
+      "title": "Behaviorally selective activation transport"
+    }
+  ],
+  "procedure": "day27-private-manuscript-figures-v1",
+  "published_or_sent": false,
+  "schema_version": 1
+}

@@ -16,7 +16,7 @@ This file is the operational source of truth for project progress. The [project 
 ## Current position
 
 **Current phase:** Days 26–30 — In progress (private manuscript sprint; external release remains withheld)
-**Next action:** Build manuscript figures under the frozen Day 26 claim and evidence hierarchy.
+**Next action:** Draft manuscript Methods and Results around the verified six-figure package.
 
 ---
 
@@ -665,23 +665,24 @@ This phase converts the completed evidence package into a private paper candidat
 
 ## Day 27: Build manuscript figures
 
-**Status:** In progress
+**Status:** Complete
+**Lab note:** [Day 27: Build Manuscript Figures](lab-notes/day-27-build-manuscript-figures.md)
 
 ### Checklist
 
-- [ ] Generate six self-contained main figures from sealed results.
-- [ ] Export machine-readable source data for every panel.
-- [ ] Preserve adverse and heterogeneous results in the main figures.
-- [ ] Build and verify a hash-pinned figure manifest.
-- [ ] Visually inspect every figure in PNG and PDF form.
+- [x] Generate six self-contained main figures from sealed results.
+- [x] Export machine-readable source data for every panel.
+- [x] Preserve adverse and heterogeneous results in the main figures.
+- [x] Build and verify a hash-pinned figure manifest.
+- [x] Visually inspect every figure in PNG and PDF form.
 
 ### Completion gate
 
-- [ ] All main figures reproduce deterministically from committed result artifacts.
+- [x] All main figures reproduce deterministically from committed result artifacts.
 
 ## Day 28: Draft Methods and Results
 
-**Status:** Not started
+**Status:** In progress
 
 ### Checklist
 
