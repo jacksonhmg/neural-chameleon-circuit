@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Days 22–25 — In progress (behavioral transport extension; Day 14 release remains withheld)
-**Next action:** Freeze and authorize the final-map behavioral evaluation before generating outcomes.
+**Current phase:** Days 22–25 — Complete (behavioral transport extension; Day 14 release remains withheld)
+**Next action:** Review the behaviorally selective site-transfer conclusion and prepare the manuscript locally; external release remains separately withheld.
 
 ---
 
@@ -626,17 +626,17 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 25: Seal the behavioral disposition
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 25: Seal Behavioral Disposition](lab-notes/day-25-seal-behavioral-disposition.md)
 
 ### Checklist
 
-- [ ] Apply the frozen bootstrap and mechanical interpretation without threshold changes.
-- [ ] Report every mapping, concept, and direction before population summaries.
-- [ ] Update the site-shuffling synthesis, claim ledger, limitations, and final report.
-- [ ] Run the complete package audit and full test suite.
-- [ ] Record the accepted interpretation in the decision log.
+- [x] Apply the frozen bootstrap and mechanical interpretation without threshold changes.
+- [x] Report every mapping, concept, and direction before population summaries.
+- [x] Update the site-shuffling synthesis, claim ledger, limitations, and final report.
+- [x] Run the complete package audit and full test suite.
+- [x] Record the accepted interpretation in the decision log.
 
 ### Completion gate
 
-- [ ] Behavioral transport is classified, documented, and reproducibly linked to sealed evidence.
+- [x] Behavioral transport is classified, documented, and reproducibly linked to sealed evidence.

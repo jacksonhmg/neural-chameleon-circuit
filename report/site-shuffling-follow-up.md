@@ -2,7 +2,7 @@
 
 ## What the Day 14 result meant after a dedicated causal study
 
-**Local research report · 2026-08-07 · Not released or sent externally**
+**Local research report · 2026-08-08 · Behavioral extension appended · Not released or sent externally**
 
 ## Executive conclusion
 
@@ -12,7 +12,9 @@ The prospectively committed Day 21 test supports a **portable trigger-linked act
 
 That population result is strongly route-dependent. The two selected within-layer mappings carry large effects, one cross-layer mapping carries smaller positive effects, and the other cross-layer mapping is significantly reversed in all eight primary cells. Earlier exploratory work independently identifies the reciprocal `layer_11.head_08`/`layer_11.head_09` route as the dominant non-original pair. The supported mechanism is therefore a sparse, layer-sensitive family of compatible routes rather than homogeneous head interchangeability.
 
-The signal is also not cleanly concept-specific or fully on-manifold. Harmfulness-source transport retains substantial irrelevant-source effects, strongly suppresses the deception probe, survives response-token reversal, and elevates destination activation RMS. Destination-relative deltas produce much less full-model KL than absolute replacements, but the available behavior diagnostics do not cover the final benign-selected mappings.
+The signal is also not cleanly concept-specific or fully on-manifold. Harmfulness-source transport retains substantial irrelevant-source effects, strongly suppresses the deception probe, survives response-token reversal, and elevates destination activation RMS.
+
+A separately frozen Days 22–25 extension now covers the final mappings' downstream behavior. All four concept-by-direction populations pass fixed KL/NLL equivalence bounds. Deception transports only 0.022–0.028 of the natural trigger-induced centered-logit shift despite much larger probe effects. Harmfulness is more output-coupled: induction reaches 0.0866 and rescue 0.0981, with the rescue interval crossing the predeclared 0.10 meaningful-output boundary. All selected directional effects are detectably positive beyond route-matched nulls, and the two harmfulness within-layer maps individually exceed 0.10. The final signal is therefore behaviorally selective, not output-inert.
 
 The most accurate one-sentence conclusion is:
 
@@ -112,7 +114,7 @@ Harmfulness-source transport also suppresses the deception probe by 0.312–0.32
 
 The best within-layer transported deltas have RMS near the natural destination delta (1.075–1.22 times), but the resulting patched activations remain 1.32–1.64 times the destination RMS. These routes are better matched than cross-layer routes but not demonstrably on-manifold.
 
-Full-model diagnostics for the five Day 15-frozen pilot jobs show that destination-relative deltas have much lower KL from normal than raw absolute replacement or the natural trigger. Delta KL is 0.00184–0.00206 for deception and 0.00616–0.00835 for harmfulness. These jobs do not include the later benign-selected within-layer mappings, so behavior preservation for the final confirmation intervention remains unmeasured.
+Full-model diagnostics for the five Day 15-frozen pilot jobs show that destination-relative deltas have much lower KL from normal than raw absolute replacement or the natural trigger. Delta KL is 0.00184–0.00206 for deception and 0.00616–0.00835 for harmfulness. These jobs did not include the later benign-selected within-layer mappings, leaving behavior preservation for the final confirmation intervention unmeasured at the end of Day 20; Days 22–25 address that gap below.
 
 Evidence: [`results/day-20/`](../results/day-20/).
 
@@ -143,6 +145,25 @@ The gate was intentionally defined on the unweighted mean of all four fixed mapp
 
 Evidence: [`results/day-21/`](../results/day-21/), [Decision 0021](../decision-log/0021-authorize-prospective-site-shuffling-confirmation.md), and [Decision 0022](../decision-log/0022-accept-qualified-portable-site-transfer.md).
 
+### Days 22–25: output transport is small for deception and stronger within harmfulness routes
+
+Decision 0023 froze the four final mappings, route-matched nulls, all 162 positive safety examples, 32 deterministic negative controls, exact output metrics, equivalence bounds, a 0.10 natural-direction minimum, and a secondary no-future-leakage generation diagnostic before any final-map behavioral outcome.
+
+The 3,880-row full-model grid measures the signed projection of each patched centered-logit delta onto the model's natural trigger direction:
+
+| Concept | Direction | Probe transport | Natural-direction coefficient | KL from base | NLL shift | Frozen label |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| Deception | Induction | 0.386 [0.366, 0.405] | 0.0224 [0.0192, 0.0257] | 0.00252 [0.00206, 0.00315] | -0.00423 [-0.00830, -0.00025] | Behavior-preserving portable evasion |
+| Deception | Rescue | 0.138 [0.122, 0.154] | 0.0278 [0.0238, 0.0323] | 0.00290 [0.00245, 0.00344] | 0.00171 [-0.00248, 0.00604] | Behavior-preserving portable evasion |
+| Harmfulness | Induction | 0.0895 [0.0748, 0.103] | 0.0866 [0.0798, 0.0938] | 0.00985 [0.00890, 0.0108] | 0.0188 [0.0144, 0.0234] | Behavior-preserving portable evasion |
+| Harmfulness | Rescue | 0.161 [0.146, 0.175] | 0.0981 [0.0902, 0.105] | 0.0130 [0.0118, 0.0143] | -0.0195 [-0.0251, -0.0141] | Mixed at 0.10 boundary |
+
+All four selected and selected-minus-null directional intervals are positive. “Behavior-preserving” therefore means the directional magnitude remains below the frozen minimum while KL/NLL equivalence passes; it does not mean literally no output effect. Harmfulness within-layer maps are stronger than their population mean: coefficients are 0.112–0.137 for induction and 0.148–0.187 for rescue, while cross-layer routes remain 0.021–0.057. Same-site K12 reaches 0.308/0.394 for harmfulness, establishing a much larger natural-route downstream benchmark.
+
+The 80-row coupled greedy-generation diagnostic uses four fixed examples and recomputes donor activations from each lane's actual prefix. Selected mappings exactly match their destination-base output in 56.25% of lanes versus 90.63% for matched nulls; token F1 is 0.887 versus 0.967. A locally blinded, non-independent review finds coherent alternative continuations and no harmfulness stance reversal. The sample is too small for general semantic-equivalence claims.
+
+Evidence: [`results/day-22/`](../results/day-22/), [`results/day-23/`](../results/day-23/), [`results/day-24/`](../results/day-24/), [Decision 0023](../decision-log/0023-freeze-site-shuffling-behavioral-extension.md), and [Decision 0024](../decision-log/0024-accept-behaviorally-selective-site-transfer.md).
+
 ## Hypothesis disposition
 
 | Hypothesis | Disposition | Reason |
@@ -153,6 +174,7 @@ Evidence: [`results/day-21/`](../results/day-21/), [Decision 0021](../decision-l
 | Cross-layer depth shortcuts explain the strong result | **Not the preferred explanation** | Cross-layer maps are weaker and less reliable; later-to-earlier harmfulness routes can be adverse. |
 | Many weak routes combine smoothly into a distributed ensemble | **Rejected** | Composition jumps when a critical reciprocal layer-11 route enters and then saturates. |
 | A homogeneous, concept-specific portable code is shared by selected heads | **Rejected** | One selected cross-layer map reverses throughout; harmfulness has large irrelevant-source and cross-probe effects; token reversal persists. |
+| Non-original site transfer affects only the probe and is output-inert | **Rejected as exact wording** | Every selected population output-direction interval exceeds zero and selected exceeds route-matched null; harmfulness within-layer coefficients exceed 0.10. Most fixed population effects nevertheless remain below the meaningful-magnitude threshold and pass behavioral equivalence. |
 
 ## Mechanistic model supported by the combined evidence
 
@@ -160,7 +182,7 @@ The best current model has three parts:
 
 1. **Trigger-linked source state.** Some selected head activations contain a normal-to-triggered change that can causally move the monitored representation when added elsewhere. This is established by conditional and destination-relative tests, not by raw absolute replacement.
 2. **Sparse route compatibility.** The receiving effect depends on source, destination, depth, and interaction with other routes. Within-layer transport—especially the reciprocal layer-11 pair—is most reliable. Selected destination membership alone is insufficient.
-3. **Shared downstream component.** The transported state is not purely semantic. Its asymmetric cross-probe behavior, token-order invariance, and activation-distance effects indicate a shared downstream direction or manifold perturbation alongside concept-linked information.
+3. **Behaviorally selective downstream component.** The transported state is not purely semantic or output-inert. It changes the probe much more than centered logits for deception, while harmfulness—especially within-layer routes—has stronger aligned output effects. Its asymmetric cross-probe behavior, token-order invariance, activation distance, and bounded output coupling indicate a shared downstream direction or manifold perturbation alongside concept-linked information.
 
 “Circuit” remains appropriate only in the project's operational sense: a causally influential component population and route structure in one checkpoint. The evidence does not provide a complete wiring diagram or a universally decodable message format.
 
@@ -172,11 +194,12 @@ The best current model has three parts:
 - Route-matched null sources are layer- and count-matched, not matched on every geometric, norm, or functional property. Their adverse effects can enlarge selected-minus-null contrasts.
 - Destination-relative deltas are less disruptive than absolute replacement but remain synthetic simultaneous interventions. Patched RMS is elevated, and natural-manifold membership is not established.
 - Cross-probe diagnostics rely on the released probes and their scales. They establish readout nonspecificity, not the exact semantic content of the internal state.
-- Full-model NLL/KL was frozen for the two Day 14 pilot mappings, not the final four benign-selected mappings. Free-generation behavior under the confirmed intervention remains unknown.
+- The final four mappings now pass frozen population-level KL/NLL equivalence tests, but those tests remain teacher-forced and reuse safety examples whose activation outcomes are known. Three directional cells are below the 0.10 magnitude threshold; harmfulness rescue is boundary-mixed rather than decisively below it.
+- Coupled free generation covers only four deterministic examples and 32 greedy tokens. Its locally blinded review is non-independent, and string preservation is lower for selected than null routes. It cannot establish broad semantic, task, truthfulness, or safety preservation.
 - Geometry prediction was fitted and evaluated within one checkpoint; high Pearson but low rank association is dominated by extreme routes and is not an independently replicated predictive model.
 
 ## Reproducibility and dissemination
 
-The follow-up includes frozen plans, exact map materializations, exact example IDs and hashes, resumable raw archives, independent analyzers, bootstrap settings, figures, and mechanical audits for each day. The final prospective archive contains 6,500 unique rows and is bound to its committed authorization hash.
+The follow-up includes frozen plans, exact map materializations, exact example IDs and hashes, resumable raw archives, independent analyzers, bootstrap settings, figures, and mechanical audits for each day. The Day 21 prospective activation archive contains 6,500 unique rows. The behavioral extension adds 3,880 full-model rows and 80 coupled-generation rows, each bound to the separately committed Day 22 authorization.
 
-No code, data, report, draft, branch, tag, release, email, message, or author contact was pushed or sent during this work. External dissemination remains a separate decision requiring explicit authorization.
+No code, data, report, draft, branch, tag, release, email, message, external evaluation request, or author contact was pushed or sent during this work. External dissemination remains a separate decision requiring explicit authorization.

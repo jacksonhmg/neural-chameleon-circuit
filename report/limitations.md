@@ -13,6 +13,7 @@ The strongest result in this project is narrow: an unchanged component set, sele
 - Component screening and selection are exploratory. The same four discovery concepts were used to rank and select the 16 candidates, so discovery estimates are selection-biased even though exact interventions and max-T adjustments were later applied.
 - Held-out benign concepts characterize generalization, but only the Day 13 safety procedure was frozen before safety access. Day 14 attacks are post-confirmatory and cannot be described as a second preregistered confirmation.
 - Day 21 prospectively freezes a new site-shuffling intervention on the remaining safety examples. Those examples are intervention-held-out, not globally untouched: their ordinary Day 13 K16 results were already known. The Day 21 label must not be broadened into a second independent safety-dataset confirmation.
+- Day 22 prospectively freezes behavioral endpoints for the final four mappings, but their activation-probe outcomes and all examples' earlier K16 outcomes were already known. It is an outcome-level extension, not new data or checkpoint replication.
 - Confidence intervals quantify sampling over the available examples, not uncertainty over checkpoints, training runs, prompt distributions, or probe construction.
 - Multiple-comparison correction covers the frozen 68 Day 8 candidate family under its permutation model. It does not correct every design choice made across the full 14-day project.
 - Hard-threshold conclusions depend on operating point. One harmfulness-induction test is exactly null at threshold 0.2 because both conditions saturate at a true-positive rate of 1.0.
@@ -47,9 +48,11 @@ The strongest result in this project is narrow: an unchanged component set, sele
 ## Behavioral evidence
 
 - The primary behavioral diagnostics use teacher-forced fixed continuations. Small NLL/KL changes do not guarantee preserved free-generation behavior, task accuracy, truthfulness, or safety.
-- Deception continuations are comparatively stable, but harmfulness interventions materially alter NLL and KL. Therefore “behavior preservation” is not a general property of the selected set.
-- Day 20 full-model NLL/KL diagnostics were frozen for the two original Day 14 pilot mappings and identity K12, not for the four later benign-selected mappings used in Day 21. Behavioral preservation under the prospectively confirmed intervention remains unmeasured.
-- Free-generation diagnostics are descriptive and use a small fixed subset. Reference-token overlap is low, so they should not be read as a reliable behavioral-equivalence test.
+- Under the original K16 interventions, deception continuations are comparatively stable but harmfulness materially alters NLL and KL. Therefore behavioral preservation is not a general property of every intervention on the selected set; the later bounded final-map result is narrower.
+- Day 23 measures the final four maps on all 162 positive examples and 32 fixed negative controls. All four mapping-population cells pass frozen KL/NLL equivalence, but every selected-minus-null directional-logit interval is positive. “Behavior preserving” therefore means bounded under these metrics, not output-inert.
+- The 0.10 natural-direction magnitude threshold and concept-specific KL bounds were frozen from Day 20 pilot evidence and scientific judgment. Three population cells are below the directional threshold; harmfulness rescue is explicitly mixed because its interval crosses the boundary. Different defensible equivalence bounds could change categorical wording while leaving the continuous estimates unchanged.
+- Population averaging hides meaningful route variation. Harmfulness within-layer maps have directional coefficients above 0.10 even though the four-map population is below or boundary-mixed. The failed/reversed cross-layer map remains included by design.
+- Coupled free generation is descriptive and covers only one positive and one negative example per concept, greedy decoding, and 32 new tokens. Selected routes change exact strings more often than nulls. The local blinded assessment is non-independent, contains no completed numerical rating study, and cannot establish semantic equivalence, truthfulness, or safety.
 - Zero ablation is a poor proxy for a natural-state transplant and creates larger distribution shifts; it is retained as a negative control, not a preferred causal estimator.
 
 ## Reproducibility and external review
@@ -57,4 +60,4 @@ The strongest result in this project is narrow: an unchanged component set, sele
 - The central result reproduced from a detached clean worktree with identical scientific values, interval decisions, CSV metrics, and figures. The raw gzip differs only in the truthful `implementation_commit` provenance field.
 - The model and upstream repositories remain external pinned artifacts rather than files vendored into this repository. Independent reproduction still requires access to those exact resources.
 - No independent laboratory has replicated the result.
-- At the user's instruction, this report has not been released, pushed, tagged, emailed, or sent to the original authors. It has therefore not benefited from external factual or provenance review.
+- At the user's instruction, this report has not been released, pushed, tagged, emailed, submitted for external evaluation, or sent to the original authors. It has therefore not benefited from external factual or provenance review.

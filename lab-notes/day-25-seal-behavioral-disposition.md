@@ -3,7 +3,7 @@
 ## Phase information
 
 - **Sprint phase:** Day 25
-- **Status:** In progress
+- **Status:** Complete
 - **Calendar date:** 2026-08-08
 - **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 
@@ -24,4 +24,17 @@ Apply the frozen behavioral gates, audit the complete package, and update the re
 
 #### Work performed
 
-- In progress.
+- Preserved the exact Day 23 labels: three `behavior_preserving_portable_evasion` cells and boundary-mixed harmfulness rescue.
+- Integrated continuous probe, output-direction, KL, NLL, top-1, mapping-level, negative-control, and coupled-generation evidence without changing a frozen threshold.
+- Accepted “behaviorally selective portable activation transport” as the durable interpretation. Exact output-inertness is rejected, while universal behavioral coupling and exact semantic preservation remain unsupported.
+- Added Decision 0024 and updated the follow-up synthesis, final report, claim ledger, limitations, result guides, and sprint tracker.
+- Added a cross-day package audit covering raw counts and hashes, authorization Git ancestry, outcome-free preflights, fixed labels, working-file cleanup, tests, documentation, and local-only status.
+
+#### Failures and unexpected observations
+
+- None during final integration. The harmfulness rescue boundary case is preserved as `mixed`; it was not rounded or reclassified for narrative convenience.
+
+## Handoff
+
+- **Current state:** Days 22–25 are complete locally. The behavioral interpretation and reproducibility package are sealed.
+- **Next action:** User review, followed by manuscript preparation if authorized. External release, push, evaluation, and author contact remain withheld.
