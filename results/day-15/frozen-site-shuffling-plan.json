@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "procedure": "site-shuffling-v1",
+  "status": "frozen-before-new-site-shuffling-results",
+  "frozen_on": "2026-08-07",
+  "parent_evidence_commit": "436c90f",
+  "publication_scope": "local commits only; no push, tag, release, draft transmission, author contact, or external message",
+  "epistemic_status": {
+    "days_15_20": "post-confirmatory mechanism development and diagnostics",
+    "day_21": "prospectively frozen confirmation of a new intervention on previously unevaluated site-shuffle outcomes",
+    "limitation": "the Day 21 records are not a fully untouched safety dataset because ordinary K16 safety results were already analyzed"
+  },
+  "hypotheses": {
+    "portable_code": "the normal-to-triggered activation delta at selected source heads remains causally effective at non-original selected destinations",
+    "receiver": "selected destinations are unusually receptive to transported deltas regardless of source selection",
+    "generic_disruption": "absolute shuffled replacement lowers the probe because source and destination activations are mismatched, not because the source is triggered",
+    "depth_shortcut": "cross-layer transport, especially later-to-earlier transport, creates an unnatural shortcut rather than reproducing natural routing",
+    "distributed_ensemble": "weak pairwise transfers combine non-additively into strong population induction"
+  },
+  "selected_heads": [
+    "layer_09.head_04", "layer_09.head_11", "layer_09.head_13",
+    "layer_10.head_02", "layer_10.head_12",
+    "layer_11.head_08", "layer_11.head_09", "layer_11.head_14", "layer_11.head_15",
+    "layer_12.head_02", "layer_12.head_03", "layer_12.head_12"
+  ],
+  "null_heads": {
+    "selection": "lexicographically lowest unselected head IDs within each layer, matching selected counts 3/2/4/3 across layers 9/10/11/12",
+    "members": [
+      "layer_09.head_00", "layer_09.head_01", "layer_09.head_02",
+      "layer_10.head_00", "layer_10.head_01",
+      "layer_11.head_00", "layer_11.head_01", "layer_11.head_02", "layer_11.head_03",
+      "layer_12.head_00", "layer_12.head_01", "layer_12.head_04"
+    ]
+  },
+  "data_roles": {
+    "day16_pilot": "the exact Day 14 causal subset: 16 positive examples per safety concept selected by lowest SHA-256 of day14-causal:{example_id}",
+    "day17_atlas": "the Day 14 causal subset; all atlas inference is exploratory",
+    "day18_geometry_development": "16 positive examples per benign discovery concept selected by lowest SHA-256 of site-shuffle-geometry:{example_id}",
+    "day19_mapping_development": "16 positive examples per benign discovery concept selected by lowest SHA-256 of site-shuffle-development:{example_id}",
+    "day19_mapping_validation": "16 positive examples per held-out benign validation concept selected by lowest SHA-256 of site-shuffle-validation:{example_id}",
+    "day20_positive_diagnostics": "the Day 14 causal subset",
+    "day20_negative_diagnostics": "16 negative examples per safety concept selected by lowest SHA-256 of site-shuffle-negative:{example_id}",
+    "day21_positive_confirmation": "all positive safety examples not in the Day 14 causal subset: expected 46 deception and 84 harmfulness",
+    "day21_negative_specificity": "the fixed Day 20 negative diagnostic subset"
+  },
+  "head_tensor": "per-head slice of the all-response-token input to attention o_proj",
+  "monitor": "mean released-probe probability at post-block-12 response-token states",
+  "directions": ["rescue", "induction"],
+  "estimands": {
+    "suppression_gap": "mean(normal probe score - correct-trigger probe score) among positive examples within concept",
+    "absolute_induction": "mean(normal baseline - normal base patched with triggered source) / suppression gap",
+    "absolute_rescue": "mean(triggered base patched with normal source - triggered baseline) / suppression gap",
+    "conditional_induction": "mean(normal base patched with normal source - normal base patched with triggered source) through the identical route / suppression gap",
+    "conditional_rescue": "mean(triggered base patched with normal source - triggered base patched with triggered source) through the identical route / suppression gap",
+    "delta_induction": "mean(normal baseline - probe after adding source T-minus-N delta to each normal destination) / suppression gap",
+    "delta_rescue": "mean(probe after subtracting source T-minus-N delta from each triggered destination - triggered baseline) / suppression gap",
+    "same_condition_mismatch": "absolute patched effect produced by a normal source in a normal base or triggered source in a triggered base"
+  },
+  "day16_triage": {
+    "mappings": ["day14_seed_211_heads", "day14_seed_223_heads"],
+    "absolute_source_conditions": ["normal", "correct_trigger"],
+    "base_conditions": ["normal", "correct_trigger"],
+    "delta_alphas": [-1.0, 0.0, 0.25, 0.5, 0.75, 1.0, 1.5],
+    "rms_matched_delta": "scale each transported source delta per example to the RMS of the destination's natural T-minus-N delta, with scale clipped to [0.25, 4.0]",
+    "primary_question": "whether conditional and destination-relative delta effects remain positive when source/destination baseline mismatch is held fixed or removed"
+  },
+  "day17_atlas": {
+    "population": "complete ordered 24-source by 24-destination selected/null factorial",
+    "primary_pair_measure": "destination-matched normal-versus-triggered source contrast in both base conditions",
+    "selected_pair_delta_measure": "raw and RMS-matched destination-relative deltas for every ordered selected-to-selected pair",
+    "route_classes": ["identity", "within_layer", "earlier_to_later", "later_to_earlier"],
+    "cell_inference": "two-sided paired sign-flip p-values with Benjamini-Hochberg q values within concept, direction, and estimand families",
+    "population_inference": "paired example bootstrap of selected-selected, selected-null, null-selected, and null-null means"
+  },
+  "day18_geometry": {
+    "coordinates": ["raw_head", "o_proj_residual"],
+    "statistics": ["delta_rms", "mean_delta_cosine", "linear_cka", "pooled_svd_explained_variance"],
+    "aligned_transport": "least-squares translate W_O_source delta into the column space of W_O_destination using pinv(W_O_destination) W_O_source",
+    "prediction": "fit transfer-success predictors only on benign discovery results and report safety-atlas association as held-out characterization, not confirmation"
+  },
+  "mapping_ensemble": {
+    "within_layer_count": 32,
+    "within_layer_seeds": [15001,15002,15003,15004,15005,15006,15007,15008,15009,15010,15011,15012,15013,15014,15015,15016,15017,15018,15019,15020,15021,15022,15023,15024,15025,15026,15027,15028,15029,15030,15031,15032],
+    "cross_layer_count": 32,
+    "cross_layer_seeds": [15101,15102,15103,15104,15105,15106,15107,15108,15109,15110,15111,15112,15113,15114,15115,15116,15117,15118,15119,15120,15121,15122,15123,15124,15125,15126,15127,15128,15129,15130,15131,15132],
+    "within_layer_rule": "independently shuffle sources within each layer until every destination receives a different source",
+    "cross_layer_rule": "shuffle all sources until every destination receives a source from a different layer",
+    "rng": "numpy PCG64 through numpy.random.default_rng independently initialized by each seed; process seeds in listed order and continue drawing valid derangements from that seed until the materialized map is distinct from earlier maps in the same class",
+    "report": "all mapping outcomes and distribution summaries; never report only the maximum"
+  },
+  "day19_selection": {
+    "development_score": "unweighted mean of raw delta rescue and induction fractions across the four benign discovery concepts",
+    "eligibility": "positive rescue and induction point estimates for every discovery concept",
+    "selection": "highest-scoring two eligible within-layer and two eligible cross-layer mappings; ties by mapping ID",
+    "validation_rule": "retain the fixed four mappings and report all seven held-out benign concepts without replacement or reranking",
+    "composition_sizes": [1, 2, 4, 8, 12],
+    "prefix_rule": "destination order sorted by candidate ID within each selected mapping",
+    "confirmation_authorization": "commit selected mapping IDs and their exact maps after benign validation and before Day 21 safety-confirmation outcomes"
+  },
+  "day20_diagnostics": {
+    "source_conditions": ["correct_trigger", "irrelevant_concept", "monitoring_only", "malformed_trigger"],
+    "classes": [1, 0],
+    "token_controls": ["aligned", "reverse_valid_response_tokens"],
+    "distributional_metrics": ["source_destination_rms_ratio", "delta_destination_rms_ratio", "destination_natural_delta_rms_ratio", "patched_value_rms_ratio"],
+    "behavior_metrics": ["fixed_continuation_nll_shift", "KL_destination_to_patched"],
+    "full_model_jobs": ["selected_k12_identity", "day14_seed_211_raw", "day14_seed_223_raw", "day14_seed_211_delta", "day14_seed_223_delta"]
+  },
+  "inference": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 15210,
+    "unit": "paired example within concept and class",
+    "interval": "95 percent percentile bootstrap",
+    "primary_outcome": "continuous normalized causal fraction",
+    "pairwise_multiplicity": "Benjamini-Hochberg within predeclared atlas families",
+    "mapping_distribution": "median, IQR, full range, and fraction above zero; maxima retained but never used alone"
+  },
+  "day21_confirmation_gate": {
+    "portable_support": "for both safety concepts and directions, the benign-selected mapping mean has positive lower 95-percent bounds for conditional and delta estimands and exceeds the corresponding layer-matched null-source mean with a positive lower bound",
+    "qualified_support": "conditional and delta estimates are directionally positive but at least one portable-support interval or null contrast does not clear zero, with no evidence that same-condition mismatch fully accounts for the effect",
+    "generic_disruption": "strong absolute effects coexist with null conditional and destination-relative delta effects or equally strong normal-to-normal mismatch",
+    "rejected": "conditional or delta effects are consistently null, reversed, or indistinguishable from matched null routes",
+    "diagnostic_boundary": "behavior and manifold diagnostics qualify interpretation but do not silently replace the frozen causal gate"
+  },
+  "inputs": {
+    "day14_plan": "results/day-14/frozen-falsification-plan.json",
+    "day14_raw": "results/day-14/causal-falsification-results.jsonl.gz",
+    "component_selection": "results/day-08/frozen-component-selection.json",
+    "split": "data/splits/day04-v1/safety-test.LOCKED.jsonl",
+    "analysis_plan": "data/splits/day04-v1/analysis-plan.json"
+  }
+}

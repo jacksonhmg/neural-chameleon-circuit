@@ -1,0 +1,1332 @@
+{
+  "day14_pilot_mappings": {
+    "day14_seed_211_heads": {
+      "layer_09.head_04": "layer_09.head_13",
+      "layer_09.head_11": "layer_12.head_03",
+      "layer_09.head_13": "layer_12.head_12",
+      "layer_10.head_02": "layer_11.head_09",
+      "layer_10.head_12": "layer_11.head_14",
+      "layer_11.head_08": "layer_10.head_12",
+      "layer_11.head_09": "layer_11.head_15",
+      "layer_11.head_14": "layer_11.head_08",
+      "layer_11.head_15": "layer_12.head_02",
+      "layer_12.head_02": "layer_10.head_02",
+      "layer_12.head_03": "layer_09.head_04",
+      "layer_12.head_12": "layer_09.head_11"
+    },
+    "day14_seed_223_heads": {
+      "layer_09.head_04": "layer_11.head_14",
+      "layer_09.head_11": "layer_11.head_15",
+      "layer_09.head_13": "layer_12.head_12",
+      "layer_10.head_02": "layer_09.head_13",
+      "layer_10.head_12": "layer_11.head_08",
+      "layer_11.head_08": "layer_12.head_02",
+      "layer_11.head_09": "layer_12.head_03",
+      "layer_11.head_14": "layer_10.head_12",
+      "layer_11.head_15": "layer_09.head_04",
+      "layer_12.head_02": "layer_09.head_11",
+      "layer_12.head_03": "layer_10.head_02",
+      "layer_12.head_12": "layer_11.head_09"
+    }
+  },
+  "ensemble": [
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15001",
+      "mapping_sha256": "fe3c489cffe909fc69676e513d5262efccec20b695f0f25295152651c93acbe6",
+      "seed": 15001
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15002",
+      "mapping_sha256": "93a630bcb54e04fd21a54bd4a269c48e453a0cc1b14118b1a3b73fc98f5cab8f",
+      "seed": 15002
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15003",
+      "mapping_sha256": "991c524b427479df31e3cdc984e9f37cd3615d70fab48f8c1b7644017156a65c",
+      "seed": 15003
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15004",
+      "mapping_sha256": "c87ffd9c0ac4d174fed27097c1d7cafe493027f6a302938d88d485c5123e3b8c",
+      "seed": 15004
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15005",
+      "mapping_sha256": "2aae90255796f6f0581262f3058ddd8fd8c887661530efe496694da0bf9611b5",
+      "seed": 15005
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15006",
+      "mapping_sha256": "7271d8a84e5c85d0a0a11eb147fbb843d10f5bb408fa290243820b1e114fe3f8",
+      "seed": 15006
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15007",
+      "mapping_sha256": "1fa1fed639cab093a9c77cc9ab267c2427a4f5697c80dea7f433250499c46836",
+      "seed": 15007
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15008",
+      "mapping_sha256": "37be0bc33593483cfd94c1f98000f4d46f519be679629717f60bafaf824aefdb",
+      "seed": 15008
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15009",
+      "mapping_sha256": "9cbb505e6673056aa2ed3142865827f897d9a397a8a7efefa30010f76e52879b",
+      "seed": 15009
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15010",
+      "mapping_sha256": "da29ff9b10471098d164f74775f968e6c25413e3d4f5f3b39079e30ff765b89f",
+      "seed": 15010
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15011",
+      "mapping_sha256": "2d3888765db98674f7ca51da7c2820c2bd0f029286d8dea1b7466dc500680b78",
+      "seed": 15011
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15012",
+      "mapping_sha256": "39b175a112d750d2b782658c089e98e32ec3fe75ff35b5b33e605f7b70bcde6a",
+      "seed": 15012
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15013",
+      "mapping_sha256": "faa7bb16df6fe1552e240a698892ced211b6d12130e5b3c46d241c92db7f423c",
+      "seed": 15013
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15014",
+      "mapping_sha256": "71410aff95b4aac3ab70fcc0a99b85570c0efb436bc7bdc0b87483cca1b6d895",
+      "seed": 15014
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15015",
+      "mapping_sha256": "ccaeb7c5f6873ade22113fd4488b1254989a98fce4a757165cdcbcfe16586037",
+      "seed": 15015
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15016",
+      "mapping_sha256": "d1735fe524a4c600983f3cad42a4e55ea01920a2055e6cdb423af4b7f567525a",
+      "seed": 15016
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15017",
+      "mapping_sha256": "76323c0eeab7390700265fe76d53661359a5d5d3b15336d13b0e2d0aa0c34756",
+      "seed": 15017
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15018",
+      "mapping_sha256": "0ca3339c1557cfddf2b4cccec2928212e5e8332fa243250065e67d0e6dd5ac3c",
+      "seed": 15018
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15019",
+      "mapping_sha256": "44648fd761977620fe5cd60fec7e195ad99a78a29aa0d65714f76460166f6d92",
+      "seed": 15019
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15020",
+      "mapping_sha256": "936adf4db80789c09c88ebe2d1e14a6539db5cb1d1955995b1df069666da0ddc",
+      "seed": 15020
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15021",
+      "mapping_sha256": "8a9494b81b1f566a20fb0403d209825087626f1102cc30917a5da5a7871cb503",
+      "seed": 15021
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15022",
+      "mapping_sha256": "5facdaf57b92fc1e1c1cf04047d21e1a0016e404b09c52a45d620e255d8cbc4a",
+      "seed": 15022
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15023",
+      "mapping_sha256": "e9d3cb9dfac48a07dcb479ece41a94c5d71bf0373eb208635effb29cefdee944",
+      "seed": 15023
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15024",
+      "mapping_sha256": "2c2e5edb9e14adedfe6020712516d354b9c8971d20d74a9d9ce2ae7f3a739dd3",
+      "seed": 15024
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15025",
+      "mapping_sha256": "d16a2681b8050b4a5d7860dbfe6f792971ab7fe4d0c089e26388cc7821cdffca",
+      "seed": 15025
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15026",
+      "mapping_sha256": "dfe4a7beea5ede85750967c26dae7b4f4cdc8ae2510a522a5044fded6db0e39b",
+      "seed": 15026
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15027",
+      "mapping_sha256": "6567a9ee2955d012f7f33b911085ec79594b63c114a95783adcfd3b65d439b4e",
+      "seed": 15027
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15028",
+      "mapping_sha256": "ddf3718dc236a316acc061ff8003c5099eca4f0f492191b6d3f8fe86b4377081",
+      "seed": 15028
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15029",
+      "mapping_sha256": "cb25d3804307943840e052515fbc310af694ce87894bf4737099112e68f3efa4",
+      "seed": 15029
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15030",
+      "mapping_sha256": "350b810ec373d5de0831386184f1578a4c8488fa4bf33237401e29d1044d86bb",
+      "seed": 15030
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_14",
+        "layer_11.head_09": "layer_11.head_15",
+        "layer_11.head_14": "layer_11.head_08",
+        "layer_11.head_15": "layer_11.head_09",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15031",
+      "mapping_sha256": "9e8f255bf972b3043cceb069226f249e2568d960464af5453728068ecd0dcf19",
+      "seed": 15031
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_15",
+        "layer_11.head_09": "layer_11.head_14",
+        "layer_11.head_14": "layer_11.head_09",
+        "layer_11.head_15": "layer_11.head_08",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15032",
+      "mapping_sha256": "4079b59e1e855cd381e5c0fd690aedf9098d652a93d30a38ccd8d903208e1817",
+      "seed": 15032
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_14",
+        "layer_09.head_11": "layer_12.head_03",
+        "layer_09.head_13": "layer_12.head_12",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_10.head_12",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_09.head_04",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_09.head_13",
+        "layer_12.head_03": "layer_11.head_09",
+        "layer_12.head_12": "layer_09.head_11"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15101",
+      "mapping_sha256": "3512427c0ba52feaede0f6c13d4ee8c8f8554c9af79d7f12c653f136a8c85ae3",
+      "seed": 15101
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_03",
+        "layer_09.head_11": "layer_12.head_12",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_09.head_13",
+        "layer_10.head_12": "layer_11.head_14",
+        "layer_11.head_08": "layer_10.head_02",
+        "layer_11.head_09": "layer_09.head_04",
+        "layer_11.head_14": "layer_10.head_12",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_11.head_09",
+        "layer_12.head_03": "layer_11.head_15",
+        "layer_12.head_12": "layer_09.head_11"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15102",
+      "mapping_sha256": "9e060d7d8020ca33bd873745990231694816a848aec23c953453ad9568efddc9",
+      "seed": 15102
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_14",
+        "layer_09.head_11": "layer_10.head_12",
+        "layer_09.head_13": "layer_12.head_02",
+        "layer_10.head_02": "layer_12.head_03",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_12.head_12",
+        "layer_11.head_09": "layer_09.head_13",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_10.head_02",
+        "layer_12.head_02": "layer_11.head_09",
+        "layer_12.head_03": "layer_11.head_08",
+        "layer_12.head_12": "layer_09.head_04"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15103",
+      "mapping_sha256": "82420b92a7276a68bd664f0c4b167dba1219c06b402c149395f7cc991e4d0dad",
+      "seed": 15103
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_12",
+        "layer_09.head_11": "layer_11.head_15",
+        "layer_09.head_13": "layer_11.head_14",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_09.head_04",
+        "layer_11.head_08": "layer_09.head_13",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_12.head_02",
+        "layer_11.head_15": "layer_12.head_03",
+        "layer_12.head_02": "layer_11.head_09",
+        "layer_12.head_03": "layer_10.head_12",
+        "layer_12.head_12": "layer_09.head_11"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15104",
+      "mapping_sha256": "b8ac61f684055c03b6d299500d5cc0bfa4d07fd584267b965d803808e0b95bf2",
+      "seed": 15104
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_15",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_11.head_09",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_12.head_12",
+        "layer_11.head_08": "layer_12.head_03",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_09.head_04",
+        "layer_11.head_15": "layer_09.head_13",
+        "layer_12.head_02": "layer_09.head_11",
+        "layer_12.head_03": "layer_10.head_12",
+        "layer_12.head_12": "layer_11.head_14"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15105",
+      "mapping_sha256": "19c4021654d6241e8805a6c1f6f01f0d033949038dfaaac03a9c6706cec680a6",
+      "seed": 15105
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_09",
+        "layer_09.head_11": "layer_12.head_12",
+        "layer_09.head_13": "layer_10.head_12",
+        "layer_10.head_02": "layer_09.head_04",
+        "layer_10.head_12": "layer_11.head_08",
+        "layer_11.head_08": "layer_09.head_13",
+        "layer_11.head_09": "layer_12.head_03",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_11.head_14",
+        "layer_12.head_03": "layer_10.head_02",
+        "layer_12.head_12": "layer_11.head_15"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15106",
+      "mapping_sha256": "7e09a841aab4d0772e6549fa20fb5b0a988a088518d76ffcc1ef6578d3cafec5",
+      "seed": 15106
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_14",
+        "layer_09.head_11": "layer_10.head_12",
+        "layer_09.head_13": "layer_12.head_02",
+        "layer_10.head_02": "layer_09.head_11",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_12.head_12",
+        "layer_11.head_09": "layer_09.head_04",
+        "layer_11.head_14": "layer_12.head_03",
+        "layer_11.head_15": "layer_09.head_13",
+        "layer_12.head_02": "layer_11.head_08",
+        "layer_12.head_03": "layer_11.head_09",
+        "layer_12.head_12": "layer_10.head_02"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15107",
+      "mapping_sha256": "e11a551284970c24c2900a3f82ee3668f8782ca408941682a6d9186b0312264f",
+      "seed": 15107
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_14",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_10.head_02",
+        "layer_10.head_02": "layer_11.head_15",
+        "layer_10.head_12": "layer_12.head_03",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_09.head_13",
+        "layer_11.head_14": "layer_09.head_04",
+        "layer_11.head_15": "layer_12.head_12",
+        "layer_12.head_02": "layer_11.head_09",
+        "layer_12.head_03": "layer_10.head_12",
+        "layer_12.head_12": "layer_11.head_08"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15108",
+      "mapping_sha256": "f4dc240ffb03c853efa6966a7fd5d96035ab7a8d92d2d06b6f45c210f1346954",
+      "seed": 15108
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_09",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_12.head_12",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_10.head_12",
+        "layer_11.head_14": "layer_09.head_04",
+        "layer_11.head_15": "layer_12.head_03",
+        "layer_12.head_02": "layer_10.head_02",
+        "layer_12.head_03": "layer_09.head_13",
+        "layer_12.head_12": "layer_11.head_14"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15109",
+      "mapping_sha256": "906f3ea4acd770ac71fac5d2bb0934716e0a4a69cfbfd715456f75ce7987feae",
+      "seed": 15109
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_08",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_11.head_15",
+        "layer_10.head_02": "layer_09.head_04",
+        "layer_10.head_12": "layer_09.head_13",
+        "layer_11.head_08": "layer_12.head_03",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_12.head_12",
+        "layer_12.head_02": "layer_11.head_09",
+        "layer_12.head_03": "layer_11.head_14",
+        "layer_12.head_12": "layer_10.head_12"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15110",
+      "mapping_sha256": "5c0ed3ddba33fc5c8e8fa6f4f7f0e03a46119cf2aa2b3619600738e92adfe490",
+      "seed": 15110
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_09",
+        "layer_09.head_11": "layer_11.head_15",
+        "layer_09.head_13": "layer_12.head_12",
+        "layer_10.head_02": "layer_09.head_11",
+        "layer_10.head_12": "layer_09.head_04",
+        "layer_11.head_08": "layer_12.head_02",
+        "layer_11.head_09": "layer_12.head_03",
+        "layer_11.head_14": "layer_10.head_12",
+        "layer_11.head_15": "layer_09.head_13",
+        "layer_12.head_02": "layer_11.head_08",
+        "layer_12.head_03": "layer_10.head_02",
+        "layer_12.head_12": "layer_11.head_14"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15111",
+      "mapping_sha256": "56ac5f3862d19bf61795f5afd64a9abc97a452151c2761591e3170825365d8f7",
+      "seed": 15111
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_15",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_12.head_03",
+        "layer_10.head_12": "layer_11.head_14",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_12.head_12",
+        "layer_11.head_14": "layer_10.head_02",
+        "layer_11.head_15": "layer_10.head_12",
+        "layer_12.head_02": "layer_09.head_11",
+        "layer_12.head_03": "layer_11.head_09",
+        "layer_12.head_12": "layer_09.head_13"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15112",
+      "mapping_sha256": "9333cf56da51c0acb91fca879f11f9665c1e0f54b72c2b00ea68eaba3ba1fe05",
+      "seed": 15112
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_10.head_12",
+        "layer_09.head_11": "layer_11.head_09",
+        "layer_09.head_13": "layer_11.head_14",
+        "layer_10.head_02": "layer_12.head_03",
+        "layer_10.head_12": "layer_09.head_11",
+        "layer_11.head_08": "layer_09.head_13",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_12.head_12",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_11.head_15",
+        "layer_12.head_03": "layer_11.head_08",
+        "layer_12.head_12": "layer_09.head_04"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15113",
+      "mapping_sha256": "f9d812e94df3190e9afc07e258d38e7d99ea841e69b41b3686caa7901c9d7a34",
+      "seed": 15113
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_09",
+        "layer_09.head_11": "layer_12.head_03",
+        "layer_09.head_13": "layer_12.head_12",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_09.head_11",
+        "layer_11.head_08": "layer_12.head_02",
+        "layer_11.head_09": "layer_09.head_04",
+        "layer_11.head_14": "layer_10.head_02",
+        "layer_11.head_15": "layer_10.head_12",
+        "layer_12.head_02": "layer_11.head_14",
+        "layer_12.head_03": "layer_09.head_13",
+        "layer_12.head_12": "layer_11.head_15"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15114",
+      "mapping_sha256": "e422e1125a2bb520dc0d925d945c3c39ddb0c3ffab2555c2fec5ad7900b60749",
+      "seed": 15114
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_12",
+        "layer_09.head_11": "layer_11.head_09",
+        "layer_09.head_13": "layer_11.head_14",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_09.head_04",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_12.head_03",
+        "layer_11.head_14": "layer_09.head_13",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_11.head_15",
+        "layer_12.head_03": "layer_10.head_02",
+        "layer_12.head_12": "layer_10.head_12"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15115",
+      "mapping_sha256": "3de3a82af654213ce99663b8fe64bf33a47381a48330be0e5d1fe08b917dd333",
+      "seed": 15115
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_10.head_12",
+        "layer_09.head_11": "layer_11.head_15",
+        "layer_09.head_13": "layer_10.head_02",
+        "layer_10.head_02": "layer_11.head_09",
+        "layer_10.head_12": "layer_11.head_14",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_12.head_12",
+        "layer_11.head_14": "layer_12.head_03",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_09.head_13",
+        "layer_12.head_03": "layer_11.head_08",
+        "layer_12.head_12": "layer_09.head_04"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15116",
+      "mapping_sha256": "7c9a358b9983353350410f2bc3784fbc5a15e6770b98d35dd39fba13f3714402",
+      "seed": 15116
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_12",
+        "layer_09.head_11": "layer_12.head_03",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_09.head_13",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_10.head_02",
+        "layer_11.head_09": "layer_09.head_04",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_11.head_14",
+        "layer_12.head_03": "layer_10.head_12",
+        "layer_12.head_12": "layer_11.head_09"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15117",
+      "mapping_sha256": "ba5439dafbf4d640f24db1a679ce7bfb629ddbd6dc59f38dbf957489b122f8f0",
+      "seed": 15117
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_03",
+        "layer_09.head_11": "layer_11.head_08",
+        "layer_09.head_13": "layer_11.head_15",
+        "layer_10.head_02": "layer_12.head_12",
+        "layer_10.head_12": "layer_09.head_13",
+        "layer_11.head_08": "layer_10.head_12",
+        "layer_11.head_09": "layer_12.head_02",
+        "layer_11.head_14": "layer_10.head_02",
+        "layer_11.head_15": "layer_09.head_11",
+        "layer_12.head_02": "layer_09.head_04",
+        "layer_12.head_03": "layer_11.head_14",
+        "layer_12.head_12": "layer_11.head_09"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15118",
+      "mapping_sha256": "0c58c658c86af211cc3500cb960af3e3d65b391ec15a88d90a6fcac4c64f1db7",
+      "seed": 15118
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_08",
+        "layer_09.head_11": "layer_10.head_02",
+        "layer_09.head_13": "layer_12.head_12",
+        "layer_10.head_02": "layer_11.head_14",
+        "layer_10.head_12": "layer_09.head_04",
+        "layer_11.head_08": "layer_09.head_13",
+        "layer_11.head_09": "layer_12.head_02",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_12.head_03",
+        "layer_12.head_02": "layer_11.head_09",
+        "layer_12.head_03": "layer_11.head_15",
+        "layer_12.head_12": "layer_10.head_12"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15119",
+      "mapping_sha256": "7cb1aaf55b3616e663692e92c25788afc3e460a7d9f93fdce455fb285717f927",
+      "seed": 15119
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_15",
+        "layer_09.head_11": "layer_12.head_12",
+        "layer_09.head_13": "layer_11.head_14",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_12.head_03",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_12.head_02",
+        "layer_11.head_14": "layer_09.head_13",
+        "layer_11.head_15": "layer_10.head_02",
+        "layer_12.head_02": "layer_11.head_09",
+        "layer_12.head_03": "layer_10.head_12",
+        "layer_12.head_12": "layer_09.head_11"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15120",
+      "mapping_sha256": "08c66bde5edc4a4ae3ea2a2305f7bbdbc27df25a05c194c99aea175e76a5cf4a",
+      "seed": 15120
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_10.head_02",
+        "layer_09.head_11": "layer_11.head_09",
+        "layer_09.head_13": "layer_11.head_15",
+        "layer_10.head_02": "layer_09.head_11",
+        "layer_10.head_12": "layer_11.head_08",
+        "layer_11.head_08": "layer_12.head_02",
+        "layer_11.head_09": "layer_10.head_12",
+        "layer_11.head_14": "layer_12.head_12",
+        "layer_11.head_15": "layer_12.head_03",
+        "layer_12.head_02": "layer_11.head_14",
+        "layer_12.head_03": "layer_09.head_04",
+        "layer_12.head_12": "layer_09.head_13"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15121",
+      "mapping_sha256": "5dcc3332157f53bfda5b88cc919b085e6060b22e05251402e0edf1f58cd9658b",
+      "seed": 15121
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_03",
+        "layer_09.head_11": "layer_11.head_15",
+        "layer_09.head_13": "layer_11.head_09",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_12.head_02",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_12.head_12",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_10.head_12",
+        "layer_12.head_02": "layer_11.head_14",
+        "layer_12.head_03": "layer_10.head_02",
+        "layer_12.head_12": "layer_09.head_13"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15122",
+      "mapping_sha256": "6634cdc59f135201cf6f6588a2771335f208ad8efef0a6564d6885a0e4e75e23",
+      "seed": 15122
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_03",
+        "layer_09.head_11": "layer_10.head_12",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_11.head_15",
+        "layer_10.head_12": "layer_11.head_14",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_09.head_11",
+        "layer_11.head_14": "layer_12.head_02",
+        "layer_11.head_15": "layer_12.head_12",
+        "layer_12.head_02": "layer_09.head_13",
+        "layer_12.head_03": "layer_11.head_09",
+        "layer_12.head_12": "layer_10.head_02"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15123",
+      "mapping_sha256": "b7839d82379902b5718702083853f973d41f503f27f2dad31fabab7be6410f0e",
+      "seed": 15123
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_14",
+        "layer_09.head_11": "layer_10.head_02",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_09.head_04",
+        "layer_10.head_12": "layer_12.head_02",
+        "layer_11.head_08": "layer_10.head_12",
+        "layer_11.head_09": "layer_12.head_12",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_12.head_03",
+        "layer_12.head_02": "layer_11.head_15",
+        "layer_12.head_03": "layer_09.head_13",
+        "layer_12.head_12": "layer_11.head_09"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15124",
+      "mapping_sha256": "4dd21bfff759495549243ef16056c0bcfc39377fde3d8148b8a4f0825a2728c5",
+      "seed": 15124
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_03",
+        "layer_09.head_11": "layer_11.head_09",
+        "layer_09.head_13": "layer_10.head_02",
+        "layer_10.head_02": "layer_09.head_13",
+        "layer_10.head_12": "layer_12.head_02",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_12.head_12",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_10.head_12",
+        "layer_12.head_02": "layer_11.head_15",
+        "layer_12.head_03": "layer_11.head_08",
+        "layer_12.head_12": "layer_11.head_14"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15125",
+      "mapping_sha256": "5686cb96d17fad5cc7d3289a09e73bdc00c9e3ac6d2df8acb6b965af63052c60",
+      "seed": 15125
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_10.head_12",
+        "layer_09.head_11": "layer_11.head_09",
+        "layer_09.head_13": "layer_12.head_02",
+        "layer_10.head_02": "layer_12.head_12",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_09.head_04",
+        "layer_11.head_15": "layer_12.head_03",
+        "layer_12.head_02": "layer_09.head_13",
+        "layer_12.head_03": "layer_11.head_14",
+        "layer_12.head_12": "layer_11.head_08"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15126",
+      "mapping_sha256": "277e4e7ee8665ea7e4a16f06ed1ac7f8cde1463bddd46c21cb42b5eadf3705d7",
+      "seed": 15126
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_02",
+        "layer_09.head_11": "layer_11.head_15",
+        "layer_09.head_13": "layer_10.head_12",
+        "layer_10.head_02": "layer_11.head_09",
+        "layer_10.head_12": "layer_12.head_12",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_09.head_13",
+        "layer_11.head_14": "layer_09.head_04",
+        "layer_11.head_15": "layer_12.head_03",
+        "layer_12.head_02": "layer_11.head_08",
+        "layer_12.head_03": "layer_11.head_14",
+        "layer_12.head_12": "layer_10.head_02"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15127",
+      "mapping_sha256": "40a3beeb4c05857f586610fbf9d9692f0083c8deb4b1510c88a81489cef477f0",
+      "seed": 15127
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_14",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_12.head_12",
+        "layer_10.head_02": "layer_12.head_03",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_10.head_12",
+        "layer_11.head_14": "layer_09.head_13",
+        "layer_11.head_15": "layer_09.head_04",
+        "layer_12.head_02": "layer_10.head_02",
+        "layer_12.head_03": "layer_11.head_08",
+        "layer_12.head_12": "layer_11.head_09"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15128",
+      "mapping_sha256": "9e47a8164456d8758452a688075b29984a94a2bd8867a5510159fe0fa3155a5e",
+      "seed": 15128
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_10.head_02",
+        "layer_09.head_11": "layer_11.head_09",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_12.head_03",
+        "layer_10.head_12": "layer_11.head_15",
+        "layer_11.head_08": "layer_09.head_13",
+        "layer_11.head_09": "layer_10.head_12",
+        "layer_11.head_14": "layer_12.head_12",
+        "layer_11.head_15": "layer_12.head_02",
+        "layer_12.head_02": "layer_09.head_04",
+        "layer_12.head_03": "layer_11.head_14",
+        "layer_12.head_12": "layer_09.head_11"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15129",
+      "mapping_sha256": "3e4a72f9d8157d91979a7dfb9ae6e80909fc3655b55818e397fc3bd01cb4da9b",
+      "seed": 15129
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_09",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_12.head_03",
+        "layer_10.head_12": "layer_11.head_14",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_12.head_12",
+        "layer_11.head_15": "layer_09.head_11",
+        "layer_12.head_02": "layer_09.head_13",
+        "layer_12.head_03": "layer_11.head_15",
+        "layer_12.head_12": "layer_10.head_12"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15130",
+      "mapping_sha256": "313d69b45999dea3adfd15adb183764abb9bc6c489c50d85327bd1776ebed118",
+      "seed": 15130
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_09",
+        "layer_09.head_11": "layer_10.head_12",
+        "layer_09.head_13": "layer_11.head_15",
+        "layer_10.head_02": "layer_09.head_04",
+        "layer_10.head_12": "layer_09.head_13",
+        "layer_11.head_08": "layer_12.head_02",
+        "layer_11.head_09": "layer_12.head_03",
+        "layer_11.head_14": "layer_10.head_02",
+        "layer_11.head_15": "layer_12.head_12",
+        "layer_12.head_02": "layer_11.head_14",
+        "layer_12.head_03": "layer_09.head_11",
+        "layer_12.head_12": "layer_11.head_08"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15131",
+      "mapping_sha256": "482dc6b3b6ff55f7ac2e4fbf438f914a249c6b9032c1a095459280d739fade07",
+      "seed": 15131
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_08",
+        "layer_09.head_11": "layer_12.head_12",
+        "layer_09.head_13": "layer_12.head_03",
+        "layer_10.head_02": "layer_09.head_04",
+        "layer_10.head_12": "layer_11.head_09",
+        "layer_11.head_08": "layer_09.head_11",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_12.head_02",
+        "layer_11.head_15": "layer_10.head_12",
+        "layer_12.head_02": "layer_11.head_15",
+        "layer_12.head_03": "layer_11.head_14",
+        "layer_12.head_12": "layer_09.head_13"
+      },
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15132",
+      "mapping_sha256": "3e6011b93634836724ea59b3b7fc1f64d5e5c72d46bee0ebb3b7e2d2f39b2cf1",
+      "seed": 15132
+    }
+  ],
+  "ensemble_sha256": "d99ef72a32ea359729b384d0c5f0a67dc8adac4914ee8425decb8f4bc8315404",
+  "procedure": "site-shuffling-v1-mappings",
+  "schema_version": 1,
+  "selected_heads": [
+    "layer_09.head_04",
+    "layer_09.head_11",
+    "layer_09.head_13",
+    "layer_10.head_02",
+    "layer_10.head_12",
+    "layer_11.head_08",
+    "layer_11.head_09",
+    "layer_11.head_14",
+    "layer_11.head_15",
+    "layer_12.head_02",
+    "layer_12.head_03",
+    "layer_12.head_12"
+  ],
+  "status": "frozen-before-new-site-shuffling-results"
+}

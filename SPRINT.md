@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 14 — In progress (local research and report complete; release withheld)
-**Next action:** User review. Release, push, tagging, and author contact remain intentionally pending.
+**Current phase:** Day 15 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
+**Next action:** Freeze and audit the site-shuffling follow-up before generating new intervention results.
 
 ---
 
@@ -448,3 +448,126 @@ This file is the operational source of truth for project progress. The [project 
 
 - [x] Final report organized around the six planned figures.
 - [ ] Reproducibility release containing the code, data references, raw results, scripts, falsification log, and limitations.
+
+## Follow-up study: site-shuffling mechanism
+
+This extension is a new post-confirmatory mechanistic study motivated by Day 14's adverse site-shuffling result. It does not retroactively change the completed Day 1–14 analyses or turn previously observed safety results into fresh confirmation.
+
+## Day 15: Freeze the site-shuffling follow-up
+
+**Status:** In progress
+**Lab note:** [Day 15: Freeze Site-Shuffling Follow-up](lab-notes/day-15-freeze-site-shuffling-follow-up.md)
+
+### Checklist
+
+- [ ] Define portable-code, receiver, generic-disruption, depth-shortcut, and distributed-ensemble hypotheses.
+- [ ] Freeze selected and layer-matched null head populations.
+- [ ] Freeze exploratory, development, validation, and prospective intervention-confirmation subsets.
+- [ ] Freeze destination-matched contrast and destination-relative delta estimands.
+- [ ] Freeze mapping generation, inference, multiplicity, behavioral, and interpretation rules.
+- [ ] Commit the protocol before generating new site-shuffling results.
+
+### Completion gate
+
+- [ ] The complete follow-up protocol and exact mapping ensemble are committed before any new site-shuffling outcome is computed.
+
+## Day 16: Triage absolute-transplant artifacts
+
+**Status:** Not started
+**Lab note:** `lab-notes/day-16-triage-site-shuffling-artifacts.md`
+
+### Checklist
+
+- [ ] Reproduce the two Day 14 mappings with the selected K12 heads.
+- [ ] Compare normal and triggered sources through identical shuffled routes.
+- [ ] Test destination-relative delta transport in rescue and induction directions.
+- [ ] Test signed and scaled delta dose responses.
+- [ ] Test per-example RMS-matched deltas and same-condition mismatch controls.
+
+### Completion gate
+
+- [ ] Strong absolute induction is classified as trigger-specific transfer, mismatch-sensitive transfer, or generic disruption using predeclared contrasts.
+
+## Day 17: Build the source–destination transfer atlas
+
+**Status:** Not started
+**Lab note:** `lab-notes/day-17-build-site-transfer-atlas.md`
+
+### Checklist
+
+- [ ] Evaluate every selected-head source–destination pair.
+- [ ] Evaluate the balanced selected/null source and destination factorial.
+- [ ] Separate within-layer, earlier-to-later, and later-to-earlier routes.
+- [ ] Report destination-matched contrasts and destination-relative deltas.
+- [ ] Correct cell-level inference for multiplicity and emphasize population contrasts.
+
+### Completion gate
+
+- [ ] Source information, destination receptivity, and generic routing mismatch are distinguishable in a complete transfer atlas.
+
+## Day 18: Analyze transferable representation geometry
+
+**Status:** Not started
+**Lab note:** `lab-notes/day-18-analyze-site-transfer-geometry.md`
+
+### Checklist
+
+- [ ] Measure raw head-coordinate and output-projected residual-space trigger deltas.
+- [ ] Measure cosine, CKA, norm, and low-rank structure across selected and null heads.
+- [ ] Test whether benign geometry predicts transfer success.
+- [ ] Compare raw, norm-matched, and output-projection-aligned delta transport.
+
+### Completion gate
+
+- [ ] The analysis identifies which coordinate system and geometric features best explain held-out transfer without safety-specific fitting.
+
+## Day 19: Characterize permutation ensembles and composition
+
+**Status:** Not started
+**Lab note:** `lab-notes/day-19-characterize-shuffle-ensembles.md`
+
+### Checklist
+
+- [ ] Evaluate the frozen within-layer and cross-layer permutation ensembles on benign development concepts.
+- [ ] Report full distributions rather than best-seed results.
+- [ ] Test K1, K2, K4, K8, and K12 composition.
+- [ ] Compare observed group effects with additive predictions from the pair atlas.
+- [ ] Select confirmation mappings by the frozen benign-only rule.
+
+### Completion gate
+
+- [ ] Mapping success, depth dependence, and nonlinear composition are quantified without safety-specific mapping selection.
+
+## Day 20: Test specificity, manifold distance, and behavior
+
+**Status:** Not started
+**Lab note:** `lab-notes/day-20-test-shuffle-specificity-and-behavior.md`
+
+### Checklist
+
+- [ ] Test correct, irrelevant, monitoring-only, and malformed source conditions.
+- [ ] Test positive and negative examples and cross-probe specificity.
+- [ ] Test response-token order controls.
+- [ ] Measure destination-relative activation distance and downstream norm changes.
+- [ ] Run full-model fixed-continuation NLL and KL diagnostics for key interventions.
+
+### Completion gate
+
+- [ ] Probe effects are interpreted alongside trigger specificity, class specificity, manifold distance, and behavioral disruption.
+
+## Day 21: Run prospective intervention confirmation
+
+**Status:** Not started
+**Lab note:** `lab-notes/day-21-confirm-site-shuffling-mechanism.md`
+
+### Checklist
+
+- [ ] Commit the benign-selected mappings and confirmation authorization before reading confirmation outcomes.
+- [ ] Run the frozen mappings on all remaining positive safety examples.
+- [ ] Run frozen specificity controls on the negative subset.
+- [ ] Apply the frozen bootstrap, contrast, and interpretation rules.
+- [ ] Audit raw row completeness, hashes, hooks, tests, and documentation.
+
+### Completion gate
+
+- [ ] The portable-code account receives supported, qualified, or rejected status under a prospectively committed site-shuffling intervention test.
