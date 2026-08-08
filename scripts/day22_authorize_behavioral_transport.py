@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -87,11 +88,15 @@ def main() -> None:
     ]:
         raise RuntimeError("Day 21 mapping population changed")
     selected_heads = list(day21["selected_heads"])
+    implementation_commit = subprocess.check_output(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+    ).strip()
     authorization = {
         "schema_version": 1,
         "procedure": "site-shuffling-v1-behavioral-transport-authorization",
         "authorized_on": "2026-08-08",
         "status": "authorized-before-final-map-behavioral-outcomes",
+        "implementation_commit": implementation_commit,
         "research_question": "Does destination-relative trigger-linked state delivered through a non-original route produce a natural-direction output effect, preserve behavior while changing the probe, or cause nonspecific disruption?",
         "evidence_boundary": "prospective for unopened final-map behavioral outcomes; post-confirmatory for the original safety claim; not an independent safety-dataset confirmation",
         "selected_heads": selected_heads,
@@ -193,4 +198,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
