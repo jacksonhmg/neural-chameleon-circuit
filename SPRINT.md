@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 15 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
-**Next action:** Freeze and audit the site-shuffling follow-up before generating new intervention results.
+**Current phase:** Day 18 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
+**Next action:** Measure benign transfer geometry and test coordinate-aligned transport without safety-specific fitting.
 
 ---
 
@@ -404,7 +404,7 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Day 14: Falsify, consolidate, write, and release
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 14: Falsify, Consolidate, and Write](lab-notes/day-14-falsify-write-and-release.md)
 **Evidence:** [Final report](report/final-report.md), [falsification log](results/day-14/falsification-log.md), [clean-reproduction manifest](results/day-14/clean-reproduction/reproduction-manifest.json), [figure manifest](report/figures/figure-manifest.json), [claim ledger](report/claim-ledger.md), [frozen falsification plan](results/day-14/frozen-falsification-plan.json), and the [Day 14 lab note](lab-notes/day-14-falsify-write-and-release.md).
 
@@ -496,19 +496,19 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ### Checklist
 
-- [ ] Evaluate every selected-head source–destination pair.
-- [ ] Evaluate the balanced selected/null source and destination factorial.
-- [ ] Separate within-layer, earlier-to-later, and later-to-earlier routes.
-- [ ] Report destination-matched contrasts and destination-relative deltas.
-- [ ] Correct cell-level inference for multiplicity and emphasize population contrasts.
+- [x] Evaluate every selected-head source–destination pair.
+- [x] Evaluate the balanced selected/null source and destination factorial.
+- [x] Separate within-layer, earlier-to-later, and later-to-earlier routes.
+- [x] Report destination-matched contrasts and destination-relative deltas.
+- [x] Correct cell-level inference for multiplicity and emphasize population contrasts.
 
 ### Completion gate
 
-- [ ] Source information, destination receptivity, and generic routing mismatch are distinguishable in a complete transfer atlas.
+- [x] Source information, destination receptivity, and generic routing mismatch are distinguishable in a complete transfer atlas.
 
 ## Day 18: Analyze transferable representation geometry
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** `lab-notes/day-18-analyze-site-transfer-geometry.md`
 
 ### Checklist

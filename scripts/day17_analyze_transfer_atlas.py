@@ -241,7 +241,7 @@ def main() -> None:
     write_csv(POPULATION_PATH, population_rows)
 
     lookup = {(row["concept"], row["direction"], row["estimand"], row["source_id"], row["destination_id"]): row for row in cells}
-    figure, axes = plt.subplots(2, 2, figsize=(14, 11))
+    figure, axes = plt.subplots(2, 2, figsize=(14, 11), constrained_layout=True)
     values = [lookup[(concept, direction, "conditional", source, destination)]["estimate"] for concept in ("deception", "harmful") for direction in ("rescue", "induction") for source in selected for destination in selected]
     limit = max(abs(min(values)), abs(max(values)))
     for row_index, concept in enumerate(("deception", "harmful")):
@@ -254,9 +254,14 @@ def main() -> None:
             axis.set_yticks(range(len(selected)), [item.replace("layer_", "L").replace(".head_", "H") for item in selected], fontsize=7)
             axis.set_xlabel("source head")
             axis.set_ylabel("destination head")
-    figure.colorbar(image, ax=axes, label="route-matched conditional fraction", shrink=0.8)
+    figure.colorbar(
+        image,
+        ax=axes.ravel().tolist(),
+        label="route-matched conditional fraction",
+        shrink=0.78,
+        pad=0.02,
+    )
     figure.suptitle("Day 17 selected-head conditional transfer atlas")
-    figure.subplots_adjust(left=0.13, right=0.9, bottom=0.12, top=0.92, wspace=0.25, hspace=0.25)
     figure.savefig(FIGURE_PATH, dpi=180)
     figure.savefig(PDF_PATH)
     plt.close(figure)

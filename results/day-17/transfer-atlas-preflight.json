@@ -1,0 +1,39 @@
+{
+  "cached_tail_equivalence": [
+    {
+      "destination_layer": 9,
+      "max_abs_score_difference": 0.0,
+      "within_tolerance": true
+    },
+    {
+      "destination_layer": 10,
+      "max_abs_score_difference": 0.0,
+      "within_tolerance": true
+    },
+    {
+      "destination_layer": 11,
+      "max_abs_score_difference": 0.0,
+      "within_tolerance": true
+    },
+    {
+      "destination_layer": 12,
+      "max_abs_score_difference": 0.0,
+      "within_tolerance": true
+    }
+  ],
+  "examples": [
+    "validation-all-caps-pos-000",
+    "validation-all-caps-pos-001"
+  ],
+  "expected_job_count_per_base": 1440,
+  "finite_delta_condition": "delta:normal:layer_09.head_11->layer_09.head_04",
+  "identity_condition": "absolute:normal:normal:layer_09.head_04->layer_09.head_04",
+  "identity_max_abs_difference": 0.000335693359375,
+  "job_count_per_base": 1440,
+  "procedure": "site-shuffling-v1-day17-preflight",
+  "registered_hook_count": 0,
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass",
+  "tolerance": 0.002
+}

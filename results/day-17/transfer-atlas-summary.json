@@ -1,0 +1,11 @@
+{
+  "bh_significant_cell_count": 1968,
+  "bootstrap_replicates": 10000,
+  "n_cell_metrics": 8064,
+  "n_population_metrics": 84,
+  "n_raw_rows": 92224,
+  "procedure": "site-shuffling-v1-day17-analysis",
+  "schema_version": 1,
+  "sign_flip_replicates": 10000,
+  "status": "complete"
+}
