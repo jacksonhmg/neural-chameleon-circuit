@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "authorization_status": true,
+    "example_count": true,
+    "example_ids": true,
+    "expected_grid": true,
+    "mapping_count": true,
+    "registered_hook_count": true
+  },
+  "confirmation_outcomes_generated_during_preflight": false,
+  "procedure": "site-shuffling-v1-day21-preflight",
+  "schema_version": 1,
+  "status": "pass"
+}

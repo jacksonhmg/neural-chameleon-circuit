@@ -28,10 +28,11 @@ Apply the prospectively frozen causal gate to four benign-selected mappings on e
 - Implemented the authorization generator, resumable confirmation evaluator, independent gate analyzer, and unit checks.
 - Committed the implementation at `67becda` before authorization.
 - Materialized the authorization while all Day 21 outcome artifacts were absent. It pins 46 deception and 84 harmfulness examples, four selected and four route-matched null maps, 50 conditions per example, 6,500 expected rows, the bootstrap, and the mechanical gate.
+- Committed the authorization at `78df5eb`, then ran the no-outcome model preflight. All six authorization, map, ID, grid, and hook checks passed; the preflight explicitly generated no confirmation outcome.
 
 #### Results and evidence
 
-- Authorization artifact generated from committed inputs; outcome execution has not begun.
+- Authorization and preflight pass are complete; outcome execution has not begun.
 
 #### Failures and unexpected observations
 
@@ -43,6 +44,6 @@ Apply the prospectively frozen causal gate to four benign-selected mappings on e
 
 ## Handoff
 
-- **Current state:** Authorization generated and inspected; no remaining-safety site-shuffling outcome has been generated.
-- **Next action:** Commit the authorization and Decision 0021, then run the no-outcome preflight from that commit.
-- **Verification still needed:** Authorization commit, preflight, raw grid, gate, negative-control reference, figure inspection, and final audit.
+- **Current state:** Authorization committed and preflight passed; no remaining-safety site-shuffling outcome has been generated.
+- **Next action:** Commit the preflight evidence, then run the exact 6,500-row confirmation.
+- **Verification still needed:** Raw grid, gate, negative-control reference, figure inspection, and final audit.
