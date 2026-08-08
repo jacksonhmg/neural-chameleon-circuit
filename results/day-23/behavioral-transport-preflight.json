@@ -1,0 +1,13 @@
+{
+  "behavioral_outcomes_generated_during_preflight": false,
+  "checks": {
+    "authorization_status": true,
+    "example_count": true,
+    "expected_grid": true,
+    "mapping_count": true,
+    "registered_hooks": true
+  },
+  "procedure": "site-shuffling-v1-day23-preflight",
+  "schema_version": 1,
+  "status": "pass"
+}

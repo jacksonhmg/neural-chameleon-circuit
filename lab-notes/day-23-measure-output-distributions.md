@@ -23,5 +23,6 @@ Run the authorized teacher-forced full-model distribution grid for all positive 
 
 #### Work performed
 
-- In progress.
-
+- Loaded the released checkpoint and ran the committed no-outcome preflight.
+- All five authorization-status, mapping-count, example-count, grid, and hook-state checks passed.
+- Confirmed that neither a working behavioral row nor a sealed outcome archive existed after preflight.
