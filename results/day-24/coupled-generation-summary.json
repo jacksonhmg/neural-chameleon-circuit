@@ -1,0 +1,13 @@
+{
+  "external_evaluator_used": false,
+  "null_exact_base_match_fraction": 0.90625,
+  "null_mean_base_token_f1": 0.966796875,
+  "procedure": "site-shuffling-v1-day24-generation-summary",
+  "qualitative_review_status": "packet-created-not-rated",
+  "raw_results_sha256": "1747dde1227dbc32446bd816729ab51837590783727bec0546d9e57c40048a5a",
+  "schema_version": 1,
+  "scope": "four frozen examples; greedy coupled generation; secondary descriptive evidence",
+  "selected_exact_base_match_fraction": 0.5625,
+  "selected_mean_base_token_f1": 0.88671875,
+  "status": "complete-descriptive"
+}

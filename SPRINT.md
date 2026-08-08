@@ -610,23 +610,23 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 24: Run coupled autoregressive generation
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 24: Run Coupled Generation](lab-notes/day-24-run-coupled-generation.md)
 
 ### Checklist
 
-- [ ] Verify token-by-token donor recomputation with no future reference-token leakage.
-- [ ] Run the 80-condition frozen generation grid with greedy decoding.
-- [ ] Record output overlap, termination, repetition, and generated-response probe diagnostics.
-- [ ] Produce a local anonymized qualitative-review packet and condition key.
+- [x] Verify token-by-token donor recomputation with no future reference-token leakage.
+- [x] Run the 80-condition frozen generation grid with greedy decoding.
+- [x] Record output overlap, termination, repetition, and generated-response probe diagnostics.
+- [x] Produce a local anonymized qualitative-review packet and condition key.
 
 ### Completion gate
 
-- [ ] The coupled-generation archive and descriptive diagnostics are sealed and audited.
+- [x] The coupled-generation archive and descriptive diagnostics are sealed and audited.
 
 ## Day 25: Seal the behavioral disposition
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** [Day 25: Seal Behavioral Disposition](lab-notes/day-25-seal-behavioral-disposition.md)
 
 ### Checklist

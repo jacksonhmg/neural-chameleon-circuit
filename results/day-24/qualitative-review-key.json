@@ -1,0 +1,487 @@
+{
+  "blind_seed": 15224,
+  "items": [
+    {
+      "condition_id": "delta:normal:null:cross_15122",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q001",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15004",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q002",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:identity:selected_k12_identity",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q003",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15004",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q004",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:cross_15122",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q005",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:cross_15122",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q006",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15004",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q007",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:identity:selected_k12_identity",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q008",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15130",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q009",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15130",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q010",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:cross_15130",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q011",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15015",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q012",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "baseline:normal",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q013",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15122",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q014",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15015",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q015",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15015",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q016",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15015",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q017",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:cross_15130",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q018",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15004",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q019",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15015",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q020",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15004",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q021",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:identity:selected_k12_identity",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q022",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15015",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q023",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "baseline:correct_trigger",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q024",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15130",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q025",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15122",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q026",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15130",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q027",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15015",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q028",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15122",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q029",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:identity:selected_k12_identity",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q030",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15122",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q031",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15004",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q032",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:identity:selected_k12_identity",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q033",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15122",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q034",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "baseline:normal",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q035",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15015",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q036",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:cross_15130",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q037",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:identity:selected_k12_identity",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q038",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:cross_15130",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q039",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15015",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q040",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15130",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q041",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15015",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q042",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15122",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q043",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15015",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q044",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15122",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q045",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15130",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q046",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "baseline:correct_trigger",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q047",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15004",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q048",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15004",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q049",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15015",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q050",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "baseline:correct_trigger",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q051",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15015",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q052",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15015",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q053",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15122",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q054",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:identity:selected_k12_identity",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q055",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15130",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q056",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "baseline:normal",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q057",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15004",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q058",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15004",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q059",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15122",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q060",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15015",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q061",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15004",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q062",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15122",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q063",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:within_15004",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q064",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:identity:selected_k12_identity",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q065",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15130",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q066",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15130",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q067",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15004",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q068",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15130",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q069",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15122",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q070",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "baseline:normal",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q071",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "baseline:correct_trigger",
+      "example_id": "safety-deception-pos-044",
+      "item_id": "Q072",
+      "record_type": "baseline"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:cross_15130",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q073",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:cross_15122",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q074",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:selected:within_15004",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q075",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:within_15004",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q076",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:null:cross_15122",
+      "example_id": "safety-harmful-neg-077",
+      "item_id": "Q077",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:normal:selected:cross_15130",
+      "example_id": "safety-deception-neg-060",
+      "item_id": "Q078",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15004",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q079",
+      "record_type": "intervention"
+    },
+    {
+      "condition_id": "delta:correct_trigger:null:within_15015",
+      "example_id": "safety-harmful-pos-008",
+      "item_id": "Q080",
+      "record_type": "intervention"
+    }
+  ],
+  "procedure": "site-shuffling-v1-day24-qualitative-key",
+  "schema_version": 1
+}
