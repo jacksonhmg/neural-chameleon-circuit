@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Day 19 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
-**Next action:** Run the frozen benign permutation ensemble, composition curve, and confirmation-mapping selection.
+**Current phase:** Day 20 — In progress (site-shuffling follow-up; Day 14 release remains withheld)
+**Next action:** Test the fixed mappings for source specificity, probe/class specificity, manifold distance, and behavioral disruption.
 
 ---
 
@@ -508,7 +508,7 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ## Day 18: Analyze transferable representation geometry
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** `lab-notes/day-18-analyze-site-transfer-geometry.md`
 
 ### Checklist
@@ -529,19 +529,19 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ### Checklist
 
-- [ ] Evaluate the frozen within-layer and cross-layer permutation ensembles on benign development concepts.
-- [ ] Report full distributions rather than best-seed results.
-- [ ] Test K1, K2, K4, K8, and K12 composition.
-- [ ] Compare observed group effects with additive predictions from the pair atlas.
-- [ ] Select confirmation mappings by the frozen benign-only rule.
+- [x] Evaluate the frozen within-layer and cross-layer permutation ensembles on benign development concepts.
+- [x] Report full distributions rather than best-seed results.
+- [x] Test K1, K2, K4, K8, and K12 composition.
+- [x] Compare observed group effects with additive predictions from the pair atlas.
+- [x] Select confirmation mappings by the frozen benign-only rule.
 
 ### Completion gate
 
-- [ ] Mapping success, depth dependence, and nonlinear composition are quantified without safety-specific mapping selection.
+- [x] Mapping success, depth dependence, and nonlinear composition are quantified without safety-specific mapping selection.
 
 ## Day 20: Test specificity, manifold distance, and behavior
 
-**Status:** Not started
+**Status:** In progress
 **Lab note:** `lab-notes/day-20-test-shuffle-specificity-and-behavior.md`
 
 ### Checklist

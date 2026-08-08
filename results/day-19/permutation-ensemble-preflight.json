@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "all_bijections": true,
+    "class_counts": true,
+    "mapping_count": true,
+    "mapping_ids_unique": true,
+    "registered_hook_count": true
+  },
+  "procedure": "site-shuffling-v1-day19-preflight",
+  "safety_split_accessed": false,
+  "schema_version": 1,
+  "status": "pass"
+}

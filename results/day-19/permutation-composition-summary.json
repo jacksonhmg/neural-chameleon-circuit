@@ -1,0 +1,58 @@
+{
+  "distributions": [
+    {
+      "count": 32,
+      "fraction_above_zero": 1.0,
+      "mapping_class": "within_layer",
+      "maximum": 0.37355903296196646,
+      "median": 0.1294612898784353,
+      "minimum": 0.037142291942024355,
+      "q1": 0.039379400666512576,
+      "q3": 0.18493984805730304,
+      "split_role": "development"
+    },
+    {
+      "count": 32,
+      "fraction_above_zero": 1.0,
+      "mapping_class": "cross_layer",
+      "maximum": 0.061433626049537234,
+      "median": 0.040305661829241377,
+      "minimum": 0.0143888822424382,
+      "q1": 0.027355890729594608,
+      "q3": 0.04499646292623449,
+      "split_role": "development"
+    },
+    {
+      "count": 32,
+      "fraction_above_zero": 1.0,
+      "mapping_class": "within_layer",
+      "maximum": 0.2985516613213369,
+      "median": 0.13857072806323503,
+      "minimum": 0.05449065120060056,
+      "q1": 0.07150853912029881,
+      "q3": 0.16686196725127128,
+      "split_role": "validation"
+    },
+    {
+      "count": 32,
+      "fraction_above_zero": 0.9375,
+      "mapping_class": "cross_layer",
+      "maximum": 0.051453982057496225,
+      "median": 0.020840504076385446,
+      "minimum": -0.0056997999382934605,
+      "q1": 0.012763196319350613,
+      "q3": 0.031810892537950025,
+      "split_role": "validation"
+    }
+  ],
+  "procedure": "site-shuffling-v1-day19-analysis",
+  "schema_version": 1,
+  "selected_mapping_ids": [
+    "within_15015",
+    "within_15004",
+    "cross_15130",
+    "cross_15122"
+  ],
+  "selection_used_safety": false,
+  "status": "complete"
+}

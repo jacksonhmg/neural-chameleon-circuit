@@ -1,0 +1,683 @@
+{
+  "procedure": "site-shuffling-v1-benign-selection",
+  "ranking": [
+    {
+      "development_minimum": 0.0004429358274380365,
+      "development_score": 0.061433626049537234,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15130",
+      "validation_minimum": -0.046239222959990625,
+      "validation_score": 0.021039538069210773
+    },
+    {
+      "development_minimum": -0.0005681041890569615,
+      "development_score": 0.06119733457958062,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15127",
+      "validation_minimum": -0.01740398062728112,
+      "validation_score": 0.016133939730727145
+    },
+    {
+      "development_minimum": 0.006189414400474666,
+      "development_score": 0.05498485940822376,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15122",
+      "validation_minimum": -0.13476544869829343,
+      "validation_score": 0.01739129055168023
+    },
+    {
+      "development_minimum": -0.0012871694531650492,
+      "development_score": 0.05223863863030137,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15120",
+      "validation_minimum": -0.11605907516791097,
+      "validation_score": -0.0056997999382934605
+    },
+    {
+      "development_minimum": -0.043022746583928365,
+      "development_score": 0.048543507668862576,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15105",
+      "validation_minimum": -0.004746611680007764,
+      "validation_score": 0.03598622977147118
+    },
+    {
+      "development_minimum": -0.0037221005547462085,
+      "development_score": 0.046982779725279235,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15125",
+      "validation_minimum": -0.12506527551165356,
+      "validation_score": 0.011486705707283926
+    },
+    {
+      "development_minimum": -0.0187523636980511,
+      "development_score": 0.046469813253197365,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15118",
+      "validation_minimum": -0.09341040759371863,
+      "validation_score": 0.002424469676627241
+    },
+    {
+      "development_minimum": 0.0010330419669768937,
+      "development_score": 0.04617118135943019,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15119",
+      "validation_minimum": -0.04386892537312736,
+      "validation_score": 0.01318869319003951
+    },
+    {
+      "development_minimum": -0.003956848769828765,
+      "development_score": 0.04460489011516926,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15108",
+      "validation_minimum": -0.05746661963842143,
+      "validation_score": 0.01686885678653912
+    },
+    {
+      "development_minimum": -0.024448081152643013,
+      "development_score": 0.04375765119241485,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15126",
+      "validation_minimum": -0.001692212607426516,
+      "validation_score": 0.035762160185656595
+    },
+    {
+      "development_minimum": 0.01205850050218857,
+      "development_score": 0.04214500317762548,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15116",
+      "validation_minimum": -0.06470055273251696,
+      "validation_score": 0.04109265240190139
+    },
+    {
+      "development_minimum": 0.001187147844288046,
+      "development_score": 0.04159997057259478,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15102",
+      "validation_minimum": -0.043828191686119504,
+      "validation_score": 0.007437817607638913
+    },
+    {
+      "development_minimum": 0.010880574641327925,
+      "development_score": 0.04126190524263401,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15123",
+      "validation_minimum": -0.023357257269322196,
+      "validation_score": 0.03598743758237829
+    },
+    {
+      "development_minimum": -0.08884889254135013,
+      "development_score": 0.040940234047189834,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15131",
+      "validation_minimum": -0.07194227076903438,
+      "validation_score": 0.030739606165538617
+    },
+    {
+      "development_minimum": -0.06187546474252102,
+      "development_score": 0.04076998916356269,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15124",
+      "validation_minimum": -0.1566814305735345,
+      "validation_score": 0.02649708437772005
+    },
+    {
+      "development_minimum": -0.016364365464122066,
+      "development_score": 0.04076834399116923,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15111",
+      "validation_minimum": -0.05626036523343196,
+      "validation_score": 0.022895177043573387
+    },
+    {
+      "development_minimum": -0.003580821231045047,
+      "development_score": 0.03984297966731353,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15110",
+      "validation_minimum": -0.0804927798214021,
+      "validation_score": 0.03683936278283891
+    },
+    {
+      "development_minimum": 0.0018083593162533463,
+      "development_score": 0.037552273937635994,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15103",
+      "validation_minimum": -0.03385892666774469,
+      "validation_score": 0.051453982057496225
+    },
+    {
+      "development_minimum": -0.016603152550359,
+      "development_score": 0.03463614911099734,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15132",
+      "validation_minimum": -0.0627817897533974,
+      "validation_score": 0.030443792774863813
+    },
+    {
+      "development_minimum": -0.028819405798537406,
+      "development_score": 0.03316211687513306,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15115",
+      "validation_minimum": -0.014695511891205807,
+      "validation_score": 0.017940203388553917
+    },
+    {
+      "development_minimum": 0.007171349789595851,
+      "development_score": 0.03256012281287503,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15107",
+      "validation_minimum": -0.015307229826278414,
+      "validation_score": 0.036193065518172474
+    },
+    {
+      "development_minimum": -0.09585562786619316,
+      "development_score": 0.03234922650605596,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15114",
+      "validation_minimum": -0.14789022546991692,
+      "validation_score": -0.0004071823558949757
+    },
+    {
+      "development_minimum": -0.022808871058098604,
+      "development_score": 0.03217442214156987,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15129",
+      "validation_minimum": -0.17860395815079982,
+      "validation_score": 0.008277895474235129
+    },
+    {
+      "development_minimum": -0.09453674404241437,
+      "development_score": 0.027922930095660752,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15117",
+      "validation_minimum": -0.049030496083945725,
+      "validation_score": 0.019379168187685782
+    },
+    {
+      "development_minimum": -0.08634836021647824,
+      "development_score": 0.025654772631396178,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15101",
+      "validation_minimum": -0.13725762117277748,
+      "validation_score": 0.02064147008356012
+    },
+    {
+      "development_minimum": -0.0590919740811243,
+      "development_score": 0.025238990329214273,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15106",
+      "validation_minimum": -0.03704554820328637,
+      "validation_score": 0.0108627892071959
+    },
+    {
+      "development_minimum": -0.01495017265221375,
+      "development_score": 0.02487271540342607,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15104",
+      "validation_minimum": -0.09463091587887365,
+      "validation_score": 0.0035544524405141586
+    },
+    {
+      "development_minimum": -0.03339139782773928,
+      "development_score": 0.02185289624772462,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15112",
+      "validation_minimum": -0.18573083151492453,
+      "validation_score": 0.030540939784505918
+    },
+    {
+      "development_minimum": -0.006693994986089244,
+      "development_score": 0.021101375723334276,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15109",
+      "validation_minimum": -0.00949335858708301,
+      "validation_score": 0.02034844254196381
+    },
+    {
+      "development_minimum": -0.045294358357934786,
+      "development_score": 0.017788382208432554,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15121",
+      "validation_minimum": -0.06791200442912028,
+      "validation_score": 0.03380790655614791
+    },
+    {
+      "development_minimum": -0.019850360192197943,
+      "development_score": 0.017315252971802857,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15128",
+      "validation_minimum": -0.0195786483964247,
+      "validation_score": 0.031145221198550732
+    },
+    {
+      "development_minimum": -0.06334288824680216,
+      "development_score": 0.0143888822424382,
+      "eligible": false,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15113",
+      "validation_minimum": -0.03402455912185264,
+      "validation_score": 0.022294844077896954
+    },
+    {
+      "development_minimum": 0.07583422428841309,
+      "development_score": 0.37355903296196646,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15015",
+      "validation_minimum": 0.0007639550145044707,
+      "validation_score": 0.2985516613213369
+    },
+    {
+      "development_minimum": 0.06860520670103762,
+      "development_score": 0.37271692378045457,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15004",
+      "validation_minimum": 0.0005502055513127896,
+      "validation_score": 0.27176593816105143
+    },
+    {
+      "development_minimum": 0.06436373618352254,
+      "development_score": 0.37217381883955486,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15017",
+      "validation_minimum": 0.0006765531320802845,
+      "validation_score": 0.27660645582867077
+    },
+    {
+      "development_minimum": 0.04060509587109566,
+      "development_score": 0.21390314530625404,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15029",
+      "validation_minimum": 0.0002809428073009516,
+      "validation_score": 0.16916281280132034
+    },
+    {
+      "development_minimum": 0.05119709136828774,
+      "development_score": 0.2129867781362743,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15022",
+      "validation_minimum": 0.00031638235129233597,
+      "validation_score": 0.1870444156832541
+    },
+    {
+      "development_minimum": 0.03780834883334569,
+      "development_score": 0.2123126532466838,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15001",
+      "validation_minimum": 0.00021456658270852688,
+      "validation_score": 0.16609501873458826
+    },
+    {
+      "development_minimum": 0.04686000467575511,
+      "development_score": 0.21218177593492432,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15030",
+      "validation_minimum": 0.0002460783047854558,
+      "validation_score": 0.18306870880000467
+    },
+    {
+      "development_minimum": 0.023394605906786343,
+      "development_score": 0.1861480734668312,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15002",
+      "validation_minimum": 0.00023207615506796493,
+      "validation_score": 0.16115847351713372
+    },
+    {
+      "development_minimum": 0.02936926477716886,
+      "development_score": 0.18453710625412698,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15003",
+      "validation_minimum": 0.00030708766783619216,
+      "validation_score": 0.16529431470829634
+    },
+    {
+      "development_minimum": 0.031365270347665265,
+      "development_score": 0.18114726103513845,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15026",
+      "validation_minimum": 0.000260557099221175,
+      "validation_score": 0.18027444436810244
+    },
+    {
+      "development_minimum": 0.0373921492196936,
+      "development_score": 0.1790936389913325,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15014",
+      "validation_minimum": 0.0003370303890590048,
+      "validation_score": 0.18570673202706306
+    },
+    {
+      "development_minimum": 0.056961273132386574,
+      "development_score": 0.15313877505099605,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15008",
+      "validation_minimum": 0.0003886256355117209,
+      "validation_score": 0.16057810717613133
+    },
+    {
+      "development_minimum": 0.05463556168892314,
+      "development_score": 0.15248701545538296,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15027",
+      "validation_minimum": 0.0003019561509852984,
+      "validation_score": 0.15555022170148577
+    },
+    {
+      "development_minimum": 0.04570443926631084,
+      "development_score": 0.15210182770928443,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15006",
+      "validation_minimum": 0.000340177811190768,
+      "validation_score": 0.14157171056943121
+    },
+    {
+      "development_minimum": 0.045065643785672294,
+      "development_score": 0.15063970572438007,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15016",
+      "validation_minimum": 0.0002617462836923229,
+      "validation_score": 0.13746401426372207
+    },
+    {
+      "development_minimum": 0.03662159930156528,
+      "development_score": 0.13018374682298955,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15020",
+      "validation_minimum": -0.004657432704201952,
+      "validation_score": 0.13562727156655563
+    },
+    {
+      "development_minimum": 0.0399911758021576,
+      "development_score": 0.12873883293388105,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15005",
+      "validation_minimum": 0.0003673933574873046,
+      "validation_score": 0.139677441862748
+    },
+    {
+      "development_minimum": 0.05141567818908746,
+      "development_score": 0.1274753514073686,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15021",
+      "validation_minimum": 0.0004084647269565923,
+      "validation_score": 0.16070087358268664
+    },
+    {
+      "development_minimum": 0.01296666342154731,
+      "development_score": 0.04060251698154971,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15031",
+      "validation_minimum": 0.00013580097687880777,
+      "validation_score": 0.05618325781975502
+    },
+    {
+      "development_minimum": 0.01290326843564869,
+      "development_score": 0.04009588369737799,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15010",
+      "validation_minimum": 0.00013612929454065236,
+      "validation_score": 0.05765961248548642
+    },
+    {
+      "development_minimum": -0.015108892914938906,
+      "development_score": 0.040022824818243666,
+      "eligible": false,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15024",
+      "validation_minimum": 0.00010858078303181905,
+      "validation_score": 0.0705697081702233
+    },
+    {
+      "development_minimum": 0.013463307688615159,
+      "development_score": 0.03997805573912443,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15012",
+      "validation_minimum": -0.004641843660322186,
+      "validation_score": 0.05449065120060056
+    },
+    {
+      "development_minimum": 0.013007137895907647,
+      "development_score": 0.039470585075174966,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15007",
+      "validation_minimum": 0.00012959690995111484,
+      "validation_score": 0.057470608954717214
+    },
+    {
+      "development_minimum": -0.022412292463846233,
+      "development_score": 0.039467115906642314,
+      "eligible": false,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15018",
+      "validation_minimum": 0.00015185698775172787,
+      "validation_score": 0.07432011965225561
+    },
+    {
+      "development_minimum": -0.016862224908808524,
+      "development_score": 0.039116254946123356,
+      "eligible": false,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15023",
+      "validation_minimum": 0.00010865643200161913,
+      "validation_score": 0.07182148277032398
+    },
+    {
+      "development_minimum": 0.015730157551677018,
+      "development_score": 0.0390915658789385,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15028",
+      "validation_minimum": -0.0016828999904248394,
+      "validation_score": 0.05453601530860046
+    },
+    {
+      "development_minimum": 0.012937510982776412,
+      "development_score": 0.03891321933225174,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15019",
+      "validation_minimum": 0.0001303894567843866,
+      "validation_score": 0.05897269197950823
+    },
+    {
+      "development_minimum": 0.012853996316104885,
+      "development_score": 0.03877828202155176,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15011",
+      "validation_minimum": -0.002073111210054964,
+      "validation_score": 0.05565211361173712
+    },
+    {
+      "development_minimum": -0.027865620917025657,
+      "development_score": 0.03833794153119008,
+      "eligible": false,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15013",
+      "validation_minimum": 0.0001458349694919389,
+      "validation_score": 0.07587601903461672
+    },
+    {
+      "development_minimum": -0.02502655589006358,
+      "development_score": 0.03832192916513211,
+      "eligible": false,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15025",
+      "validation_minimum": 0.00015209325617829777,
+      "validation_score": 0.07600981467732368
+    },
+    {
+      "development_minimum": -0.022017081907855725,
+      "development_score": 0.03795201905192758,
+      "eligible": false,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15009",
+      "validation_minimum": 0.00010542772023152937,
+      "validation_score": 0.07322959511692609
+    },
+    {
+      "development_minimum": -0.030257486571710474,
+      "development_score": 0.037142291942024355,
+      "eligible": false,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15032",
+      "validation_minimum": 0.000146692191384604,
+      "validation_score": 0.07759972070594938
+    }
+  ],
+  "safety_outcomes_accessed_for_selection": false,
+  "schema_version": 1,
+  "selected_mappings": [
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_13",
+        "layer_09.head_11": "layer_09.head_04",
+        "layer_09.head_13": "layer_09.head_11",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_12",
+        "layer_12.head_03": "layer_12.head_02",
+        "layer_12.head_12": "layer_12.head_03"
+      },
+      "development_minimum": 0.07583422428841309,
+      "development_score": 0.37355903296196646,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15015",
+      "mapping_sha256": "ccaeb7c5f6873ade22113fd4488b1254989a98fce4a757165cdcbcfe16586037",
+      "validation_minimum": 0.0007639550145044707,
+      "validation_score": 0.2985516613213369
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_09.head_11",
+        "layer_09.head_11": "layer_09.head_13",
+        "layer_09.head_13": "layer_09.head_04",
+        "layer_10.head_02": "layer_10.head_12",
+        "layer_10.head_12": "layer_10.head_02",
+        "layer_11.head_08": "layer_11.head_09",
+        "layer_11.head_09": "layer_11.head_08",
+        "layer_11.head_14": "layer_11.head_15",
+        "layer_11.head_15": "layer_11.head_14",
+        "layer_12.head_02": "layer_12.head_03",
+        "layer_12.head_03": "layer_12.head_12",
+        "layer_12.head_12": "layer_12.head_02"
+      },
+      "development_minimum": 0.06860520670103762,
+      "development_score": 0.37271692378045457,
+      "eligible": true,
+      "mapping_class": "within_layer",
+      "mapping_id": "within_15004",
+      "mapping_sha256": "c87ffd9c0ac4d174fed27097c1d7cafe493027f6a302938d88d485c5123e3b8c",
+      "validation_minimum": 0.0005502055513127896,
+      "validation_score": 0.27176593816105143
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_11.head_09",
+        "layer_09.head_11": "layer_12.head_02",
+        "layer_09.head_13": "layer_11.head_08",
+        "layer_10.head_02": "layer_12.head_03",
+        "layer_10.head_12": "layer_11.head_14",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_10.head_02",
+        "layer_11.head_14": "layer_12.head_12",
+        "layer_11.head_15": "layer_09.head_11",
+        "layer_12.head_02": "layer_09.head_13",
+        "layer_12.head_03": "layer_11.head_15",
+        "layer_12.head_12": "layer_10.head_12"
+      },
+      "development_minimum": 0.0004429358274380365,
+      "development_score": 0.061433626049537234,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15130",
+      "mapping_sha256": "313d69b45999dea3adfd15adb183764abb9bc6c489c50d85327bd1776ebed118",
+      "validation_minimum": -0.046239222959990625,
+      "validation_score": 0.021039538069210773
+    },
+    {
+      "destination_to_source": {
+        "layer_09.head_04": "layer_12.head_03",
+        "layer_09.head_11": "layer_11.head_15",
+        "layer_09.head_13": "layer_11.head_09",
+        "layer_10.head_02": "layer_11.head_08",
+        "layer_10.head_12": "layer_12.head_02",
+        "layer_11.head_08": "layer_09.head_04",
+        "layer_11.head_09": "layer_12.head_12",
+        "layer_11.head_14": "layer_09.head_11",
+        "layer_11.head_15": "layer_10.head_12",
+        "layer_12.head_02": "layer_11.head_14",
+        "layer_12.head_03": "layer_10.head_02",
+        "layer_12.head_12": "layer_09.head_13"
+      },
+      "development_minimum": 0.006189414400474666,
+      "development_score": 0.05498485940822376,
+      "eligible": true,
+      "mapping_class": "cross_layer",
+      "mapping_id": "cross_15122",
+      "mapping_sha256": "6634cdc59f135201cf6f6588a2771335f208ad8efef0a6564d6885a0e4e75e23",
+      "validation_minimum": -0.13476544869829343,
+      "validation_score": 0.01739129055168023
+    }
+  ],
+  "selection_rule": "top two eligible mappings per class by four-concept mean rescue/induction score; eligibility requires all eight discovery cells positive",
+  "status": "pass"
+}

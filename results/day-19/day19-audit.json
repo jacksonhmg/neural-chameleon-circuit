@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "composition_row_count": true,
+    "distribution_counts": true,
+    "figures_written": true,
+    "metrics_finite": true,
+    "selected_mapping_count": true,
+    "unique_composition_keys": true
+  },
+  "procedure": "site-shuffling-v1-day19-audit",
+  "schema_version": 1,
+  "status": "pass"
+}
