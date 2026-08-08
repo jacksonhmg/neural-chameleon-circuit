@@ -36,7 +36,7 @@ Apply the prospectively frozen causal gate to four benign-selected mappings on e
 
 #### Failures and unexpected observations
 
-- None so far.
+- The first confirmation attempt stopped before running any intervention because the runner's defensive assertion expected 48 jobs inside each base condition. The authorized grid specifies 48 interventions across two bases, so the correct per-base count is 24. Four baseline rows for the first two examples had already been written; no shuffled outcome was generated. The assertion was corrected without changing a map, source, destination, example, condition, estimand, or gate, and the resumable archive will retain those baseline keys.
 
 ## Decisions
 

@@ -157,7 +157,7 @@ def confirmation_jobs(
                     ),
                 )
             )
-    if len(jobs) != 48:
+    if len(jobs) != 24:
         raise AssertionError("unexpected Day 21 job count")
     return jobs
 
