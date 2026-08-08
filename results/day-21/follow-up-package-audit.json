@@ -1,0 +1,39 @@
+{
+  "authorization_commit": "78df5eb5b3504bbeb24b608ab6d9d5d6edcb6e0f",
+  "checks": {
+    "all_daily_audits_pass": true,
+    "all_preflights_pass": true,
+    "all_raw_row_counts": true,
+    "authorization_committed_before_raw_results": true,
+    "day21_gate_hashes": true,
+    "day21_gate_portable_support": true,
+    "documentation_records_disposition": true,
+    "full_test_suite": true,
+    "git_diff_check": true,
+    "local_commits_not_pushed": true,
+    "no_release_tag_at_head": true,
+    "no_resumable_working_files": true,
+    "required_files_present": true,
+    "sprint_day21_complete": true
+  },
+  "commits_ahead_of_origin_main": 39,
+  "origin_main": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+  "procedure": "site-shuffling-v1-follow-up-package-audit",
+  "raw_results_commit": "e76ee24651a67270f042ac453dc8d06785d8e8a8",
+  "raw_row_counts": {
+    "results/day-16/artifact-triage-results.jsonl.gz": 1344,
+    "results/day-17/transfer-atlas-results.jsonl.gz": 92224,
+    "results/day-18/geometry-transfer-results.jsonl.gz": 55424,
+    "results/day-19/composition-results.jsonl.gz": 7392,
+    "results/day-19/permutation-ensemble-results.jsonl.gz": 22880,
+    "results/day-20/behavior-results.jsonl.gz": 224,
+    "results/day-20/specificity-results.jsonl.gz": 6400,
+    "results/day-21/confirmation-results.jsonl.gz": 6500
+  },
+  "schema_version": 1,
+  "status": "pass",
+  "test_command": "/Users/jacksonmowattgok/.espressif/python_env/esp-idf-v5.4.1_py3.11_env/bin/python3 -m pytest -q tests",
+  "test_returncode": 0,
+  "test_summary": "57 passed in 5.19s",
+  "working_files": []
+}

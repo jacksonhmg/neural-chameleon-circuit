@@ -55,5 +55,6 @@ The prospective evidence supports a portable trigger-linked activation signal at
 - `negative-specificity-reference.json`: hash-verified Day 20 negative controls.
 - `confirmation.png` / `.pdf`: primary selected/null population estimates.
 - `day21-audit.json`: nine-check final audit.
+- `follow-up-package-audit.json`: cross-day preflight, raw-count, ancestry, hash, test, documentation, and dissemination audit.
 
 The uncompressed resumable working file was removed after the sealed archive and audit were verified.

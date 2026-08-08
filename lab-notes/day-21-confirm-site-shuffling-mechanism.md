@@ -34,6 +34,7 @@ Apply the prospectively frozen causal gate to four benign-selected mappings on e
 - Applied the precommitted 10,000-replicate bootstrap and mechanical gate without manual score inspection first.
 - Hash-verified and incorporated the eight pre-confirmation Day 20 negative specificity cells.
 - Generated and visually inspected the primary confirmation figure, then passed the nine-check final audit.
+- Ran the corrected complete-package audit. All 15 cross-day checks passed, including every daily audit/preflight, all eight sealed raw row counts, authorization-before-results Git ancestry, hashes, no resumable working files, all 57 tests, documentation, and the local-only/no-tag state.
 
 #### Results and evidence
 
@@ -59,6 +60,6 @@ Apply the prospectively frozen causal gate to four benign-selected mappings on e
 
 ## Handoff
 
-- **Current state:** Day 21 complete; raw results, gate, negative controls, figure, and audit are sealed.
-- **Next action:** Finish the cross-day synthesis and full repository audit, then commit locally without pushing.
-- **Verification still needed:** Cross-day documentation and full repository test/audit pass.
+- **Current state:** Days 15–21 complete; raw results, gate, negative controls, synthesis, figures, daily audits, and the passing complete-package audit are sealed.
+- **Next action:** User review. Any release, push, author contact, or external transmission remains separately withheld.
+- **Verification still needed:** None for the site-shuffling follow-up completion gate.
