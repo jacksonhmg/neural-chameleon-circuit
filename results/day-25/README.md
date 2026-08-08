@@ -17,9 +17,8 @@ The correct paper-level statement is that non-original routes can carry a monito
 
 ## Integrity
 
-The package audit verifies authorization-before-results Git ancestry, exact 3,880/80 raw row counts, hashes, daily audits and preflights, frozen cell labels, absence of resumable files, the full test suite, local-only commits, no release tag, and documentation boundaries.
+The package audit passes all 19 checks. It verifies authorization-before-results Git ancestry, exact 3,880/80 raw row counts, both raw hashes, daily audits and outcome-free preflights, frozen cell labels, absence of resumable files, all 62 project tests, local-only commits, no release tag, and documentation boundaries.
 
 ## Files
 
 - `behavioral-package-audit.json`: complete cross-day integrity audit.
-

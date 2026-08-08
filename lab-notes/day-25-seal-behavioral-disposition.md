@@ -29,6 +29,7 @@ Apply the frozen behavioral gates, audit the complete package, and update the re
 - Accepted “behaviorally selective portable activation transport” as the durable interpretation. Exact output-inertness is rejected, while universal behavioral coupling and exact semantic preservation remain unsupported.
 - Added Decision 0024 and updated the follow-up synthesis, final report, claim ledger, limitations, result guides, and sprint tracker.
 - Added a cross-day package audit covering raw counts and hashes, authorization Git ancestry, outcome-free preflights, fixed labels, working-file cleanup, tests, documentation, and local-only status.
+- Reran the corrected audit. All 19 checks pass, including the full 62-test suite, exact 3,880/80 row counts, both raw hashes, implementation-before-authorization and authorization-before-results ancestry, frozen cell labels, no resumable working files, no external evaluator, no release tag, and local commits remaining ahead of the untouched remote.
 
 #### Failures and unexpected observations
 

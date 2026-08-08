@@ -1,0 +1,43 @@
+{
+  "authorization_commit": "e5ab0849e2ecf159a07ef19d22798e2cd8f5ddf3",
+  "authorization_sha256": "86df78222f33703c2615650151bdf7e19f39c929c622f9fde31683a70b846eda",
+  "checks": {
+    "authorization_before_both_raw_archives": true,
+    "daily_audits_pass": true,
+    "day23_hashes": true,
+    "day24_hashes": true,
+    "documentation_keeps_release_local": true,
+    "documentation_records_boundary": true,
+    "freeze_passed_without_outcomes": true,
+    "frozen_cell_dispositions": true,
+    "full_test_suite": true,
+    "git_diff_check": true,
+    "implementation_before_authorization": true,
+    "local_commits_not_pushed": true,
+    "no_external_evaluator": true,
+    "no_release_tag_at_head": true,
+    "no_resumable_working_files": true,
+    "preflights_passed_without_outcomes": true,
+    "raw_row_counts": true,
+    "required_files_present": true,
+    "sprint_day25_complete": true
+  },
+  "commits_ahead_of_origin_main": 49,
+  "day23_raw_commit": "e727fc676632a222b1c41d755c434c9e0f6411c3",
+  "day23_raw_sha256": "237bca6ae7ca8606652557335c226e89bb5cc72323826549fe04e2f191a1dba1",
+  "day24_raw_commit": "8e25eaa4d55d90d617a866d4b5a70d5b9419d581",
+  "day24_raw_sha256": "1747dde1227dbc32446bd816729ab51837590783727bec0546d9e57c40048a5a",
+  "implementation_commit": "9174949af6e43743e21791b87653b59819770726",
+  "origin_main": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
+  "procedure": "site-shuffling-v1-days22-25-package-audit",
+  "raw_row_counts": {
+    "results/day-23/behavioral-transport-results.jsonl.gz": 3880,
+    "results/day-24/coupled-generation-results.jsonl.gz": 80
+  },
+  "schema_version": 1,
+  "status": "pass",
+  "test_command": "/Users/jacksonmowattgok/.espressif/python_env/esp-idf-v5.4.1_py3.11_env/bin/pytest -q tests",
+  "test_returncode": 0,
+  "test_summary": "62 passed in 5.66s",
+  "working_files": []
+}
