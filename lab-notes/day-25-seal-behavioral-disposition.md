@@ -32,7 +32,8 @@ Apply the frozen behavioral gates, audit the complete package, and update the re
 
 #### Failures and unexpected observations
 
-- None during final integration. The harmfulness rescue boundary case is preserved as `mixed`; it was not rounded or reclassified for narrative convenience.
+- The first cross-day package audit passed every scientific, hash, authorization-ancestry, documentation, and dissemination check but failed its test-suite check because the model-running virtual environment does not install the `pytest` module. Running the already verified project command `uv run --project environment/day-01 pytest -q tests` passed all 62 tests. The audit harness was corrected to resolve and invoke the available pytest executable; no test, scientific artifact, threshold, or interpretation changed.
+- The harmfulness rescue boundary case is preserved as `mixed`; it was not rounded or reclassified for narrative convenience.
 
 ## Handoff
 

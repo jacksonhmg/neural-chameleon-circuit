@@ -7,6 +7,7 @@ import gzip
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -112,7 +113,9 @@ def main() -> None:
     checks["git_diff_check"] = run("git", "diff", "--check", check=False).returncode == 0
     test_environment = dict(os.environ)
     test_environment["PYTHONPATH"] = os.pathsep.join(filter(None, (str(ROOT / "src"), str(ROOT / "scripts"), test_environment.get("PYTHONPATH", ""))))
-    tests = subprocess.run([sys.executable, "-m", "pytest", "-q", "tests"], cwd=ROOT, env=test_environment, text=True, capture_output=True)
+    pytest_executable = shutil.which("pytest")
+    test_command = [pytest_executable, "-q", "tests"] if pytest_executable else [sys.executable, "-m", "pytest", "-q", "tests"]
+    tests = subprocess.run(test_command, cwd=ROOT, env=test_environment, text=True, capture_output=True)
     checks["full_test_suite"] = tests.returncode == 0
     origin_head = run("git", "rev-parse", "origin/main").stdout.strip()
     ahead = int(run("git", "rev-list", "--count", "origin/main..HEAD").stdout)
@@ -133,7 +136,7 @@ def main() -> None:
         "day24_raw_sha256": sha256_file(day24_raw),
         "origin_main": origin_head,
         "commits_ahead_of_origin_main": ahead,
-        "test_command": f"{sys.executable} -m pytest -q tests",
+        "test_command": " ".join(test_command),
         "test_returncode": tests.returncode,
         "test_summary": (tests.stdout + tests.stderr).strip().splitlines()[-1] if (tests.stdout + tests.stderr).strip() else "",
         "working_files": [path.relative_to(ROOT).as_posix() for path in working_files],
@@ -148,4 +151,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
