@@ -9,6 +9,7 @@ from typing import Any, Iterable, Mapping, Sequence
 import numpy as np
 import torch
 from torch import Tensor
+from torch import nn
 
 from .individual_components import masked_example_mean, repeat_condition
 from .interventions import (
@@ -59,6 +60,17 @@ class FullTransplantResult:
 
 class _MonitorReached(RuntimeError):
     pass
+
+
+class _PassthroughDecoderLayer(nn.Module):
+    """Temporary no-op preserving the attention-type attribute used by Gemma."""
+
+    def __init__(self, attention_type: str):
+        super().__init__()
+        self.attention_type = attention_type
+
+    def forward(self, hidden_states: Tensor, **_kwargs: Any) -> tuple[Tensor]:
+        return (hidden_states,)
 
 
 def interpolate_capture(
@@ -340,6 +352,123 @@ class VectorizedTransplantRunner:
             response_logits=result.response_logits.reshape(
                 *shape, condition.response_width, result.response_logits.shape[-1]
             ),
+        )
+
+
+class CachedTailTransplantRunner(VectorizedTransplantRunner):
+    """Replay only a cached destination-to-monitor tail for exact transplants.
+
+    The model still constructs the original attention masks and rotary position
+    embeddings from ``condition``. Decoder layers before ``start_layer`` are
+    temporarily replaced by pass-through modules, and a pre-hook replaces the
+    first live layer's input with the full cached natural residual. This is an
+    execution optimization only; real-checkpoint equivalence to the complete
+    forward pass must be checked before use.
+    """
+
+    def run_truncated_from_layer(
+        self,
+        condition: ConditionBatch,
+        jobs: Sequence[TransplantJob],
+        *,
+        start_layer: int,
+        cached_input: Tensor,
+    ) -> TransplantResult:
+        self._validate(condition, jobs)
+        if not 0 <= start_layer <= self.monitor_layer:
+            raise ValueError("start_layer must be at or before the monitor")
+        if any(
+            member.site.layer < start_layer
+            for job in jobs
+            for member in job.members
+        ):
+            raise ValueError("transplant contains a site before the cached tail")
+        expected_shape = (
+            condition.batch_size,
+            condition.input_ids.shape[1],
+            int(self.runner.model.config.hidden_size),
+        )
+        if tuple(cached_input.shape) != expected_shape:
+            raise ValueError(
+                f"cached input shape {tuple(cached_input.shape)} != {expected_shape}"
+            )
+
+        expanded = repeat_condition(condition, len(jobs))
+        expanded_cache = cached_input.repeat(len(jobs), 1, 1)
+        scores: Tensor | None = None
+        handles = self._register_jobs(condition, jobs)
+        original_layers: list[tuple[int, nn.Module]] = []
+        try:
+            for layer_index in range(start_layer):
+                original = self.runner.layers[layer_index]
+                original_layers.append((layer_index, original))
+                self.runner.layers[layer_index] = _PassthroughDecoderLayer(
+                    original.attention_type
+                )
+
+            def replace_cached_input(
+                _module: Any, args: tuple[Any, ...]
+            ) -> tuple[Any, ...]:
+                tensor = self.runner._first_tensor(args)
+                replacement = expanded_cache.to(
+                    device=tensor.device, dtype=tensor.dtype
+                )
+                return self.runner._replace_first_tensor(args, replacement)
+
+            handles.append(
+                self.runner.layers[start_layer].register_forward_pre_hook(
+                    replace_cached_input
+                )
+            )
+
+            def terminal_hook(_module: Any, _args: tuple[Any, ...], output: Any):
+                nonlocal scores
+                tensor = self.runner._first_tensor(output)
+                start = expanded.response_start
+                stop = start + expanded.response_width
+                response = tensor[:, start:stop, :]
+                weight = self.probe.weight.to(
+                    device=response.device, dtype=torch.bfloat16
+                )
+                bias = self.probe.bias.to(
+                    device=response.device, dtype=torch.bfloat16
+                )
+                logits = torch.matmul(response.to(torch.bfloat16), weight.T) + bias
+                probabilities = torch.sigmoid(logits.squeeze(-1)).float()
+                scores = masked_example_mean(
+                    probabilities, expanded.response_mask
+                ).detach().cpu()
+                raise _MonitorReached()
+
+            handles.append(
+                self.runner.layers[self.monitor_layer].register_forward_hook(
+                    terminal_hook
+                )
+            )
+            try:
+                with torch.inference_mode():
+                    self.runner.model(
+                        input_ids=expanded.input_ids.to(self.runner.device),
+                        attention_mask=expanded.attention_mask.to(self.runner.device),
+                        position_ids=expanded.position_ids.to(self.runner.device),
+                        use_cache=False,
+                        output_hidden_states=False,
+                        return_dict=True,
+                        logits_to_keep=1,
+                    )
+                raise RuntimeError("model completed without reaching the monitor")
+            except _MonitorReached:
+                pass
+        finally:
+            for handle in reversed(handles):
+                handle.remove()
+            for layer_index, original in original_layers:
+                self.runner.layers[layer_index] = original
+        if scores is None:
+            raise RuntimeError("cached-tail transplant score was not captured")
+        return TransplantResult(
+            group_ids=tuple(job.group_id for job in jobs),
+            probe_scores=scores.reshape(len(jobs), condition.batch_size),
         )
 
 

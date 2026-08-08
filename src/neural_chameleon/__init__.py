@@ -89,6 +89,7 @@ from .localization import (
     summarize_localization,
 )
 from .sufficiency import (
+    CachedTailTransplantRunner,
     FullTransplantResult,
     TransplantJob,
     TransplantMember,
@@ -165,6 +166,7 @@ __all__ = [
     "TransplantMember",
     "TransplantResult",
     "FullTransplantResult",
+    "CachedTailTransplantRunner",
     "VectorizedTransplantRunner",
     "group_activation_norms",
     "interpolate_capture",

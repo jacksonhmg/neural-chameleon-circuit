@@ -22,6 +22,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from neural_chameleon import (  # noqa: E402
     ActivationKind,
+    CachedTailTransplantRunner,
     LinearProbe,
     PairedInterventionRunner,
     PatchSite,
@@ -197,6 +198,39 @@ def pair_jobs_for_base(
     return jobs
 
 
+def run_with_full_layer_inputs(
+    runner: PairedInterventionRunner,
+    truncated: TruncatedComponentRunner,
+    condition: Any,
+    capture_sites: Sequence[PatchSite],
+    layers: Sequence[int] = (9, 10, 11, 12),
+) -> tuple[Any, dict[int, torch.Tensor]]:
+    """Run one natural condition while retaining complete residual inputs."""
+    captured: dict[int, torch.Tensor] = {}
+    handles = []
+    try:
+        for layer_index in layers:
+            def save_input(
+                _module: Any,
+                args: tuple[Any, ...],
+                layer_index: int = layer_index,
+            ) -> None:
+                captured[layer_index] = (
+                    runner._first_tensor(args).detach().cpu().clone()
+                )
+
+            handles.append(
+                runner.layers[layer_index].register_forward_pre_hook(save_input)
+            )
+        result = truncated.run(condition, capture_sites=capture_sites)
+    finally:
+        for handle in reversed(handles):
+            handle.remove()
+    if set(captured) != set(layers):
+        raise RuntimeError("full residual-input capture did not reach every tail layer")
+    return result, captured
+
+
 def read_completed() -> dict[tuple[str, str], dict[str, Any]]:
     if not WORKING_PATH.is_file():
         return {}
@@ -258,23 +292,52 @@ def run_preflight(runner: PairedInterventionRunner, plan: Mapping[str, Any]) -> 
     probe = LinearProbe.load(PROBE_DIR / "all-caps_weights.pt")
     truncated = TruncatedComponentRunner(runner, probe, monitor_layer=12)
     vector = VectorizedTransplantRunner(runner, probe, monitor_layer=12)
-    normal = truncated.run(pair.normal, capture_sites=tuple(sites.values()))
-    triggered = truncated.run(pair.triggered, capture_sites=tuple(sites.values()))
+    tail = CachedTailTransplantRunner(runner, probe, monitor_layer=12)
+    normal, normal_inputs = run_with_full_layer_inputs(
+        runner, truncated, pair.normal, tuple(sites.values())
+    )
+    triggered, triggered_inputs = run_with_full_layer_inputs(
+        runner, truncated, pair.triggered, tuple(sites.values())
+    )
     jobs = pair_jobs_for_base("normal", population, set(selected), sites, normal.captures, triggered.captures)
     identity_spec, identity_job = next((spec, job) for spec, job in jobs if spec["source_id"] == spec["destination_id"] and spec["source_condition"] == "normal")
     delta_spec, delta_job = next((spec, job) for spec, job in jobs if spec["intervention_kind"] == "delta" and spec["route_class"] == "within_layer")
     scores = vector.run_truncated(pair.normal, (identity_job, delta_job)).probe_scores
     identity_difference = float((scores[0] - normal.probe_scores).abs().max())
+    equivalence_checks = []
+    for layer_index in (9, 10, 11, 12):
+        representative = next(
+            job
+            for spec, job in jobs
+            if parse_head_id(spec["destination_id"])[0] == layer_index
+            and spec["source_condition"] == "correct_trigger"
+        )
+        full_score = vector.run_truncated(pair.normal, (representative,)).probe_scores[0]
+        tail_score = tail.run_truncated_from_layer(
+            pair.normal,
+            (representative,),
+            start_layer=layer_index,
+            cached_input=normal_inputs[layer_index],
+        ).probe_scores[0]
+        difference = float((full_score - tail_score).abs().max())
+        equivalence_checks.append(
+            {
+                "destination_layer": layer_index,
+                "max_abs_score_difference": difference,
+                "within_tolerance": difference <= 0.002,
+            }
+        )
     tolerance = 0.002
     report = {
         "schema_version": 1,
         "procedure": "site-shuffling-v1-day17-preflight",
-        "status": "pass" if identity_difference <= tolerance and torch.isfinite(scores).all() and runner.registered_hook_count() == 0 else "fail",
+        "status": "pass" if identity_difference <= tolerance and torch.isfinite(scores).all() and all(row["within_tolerance"] for row in equivalence_checks) and runner.registered_hook_count() == 0 else "fail",
         "examples": [row["example_id"] for row in examples],
         "identity_condition": identity_spec["condition_id"],
         "finite_delta_condition": delta_spec["condition_id"],
         "identity_max_abs_difference": identity_difference,
         "tolerance": tolerance,
+        "cached_tail_equivalence": equivalence_checks,
         "job_count_per_base": len(jobs),
         "expected_job_count_per_base": 2 * PAIR_COUNT + 2 * SELECTED_PAIR_COUNT,
         "registered_hook_count": runner.registered_hook_count(),
@@ -304,11 +367,16 @@ def run_grid(runner: PairedInterventionRunner, plan: Mapping[str, Any], *, batch
         probe = LinearProbe.load(PROBE_DIR / f"{concept}_weights.pt")
         truncated = TruncatedComponentRunner(runner, probe, monitor_layer=12)
         vector = VectorizedTransplantRunner(runner, probe, monitor_layer=12)
+        tail = CachedTailTransplantRunner(runner, probe, monitor_layer=12)
         trigger = analysis_plan["conditions"]["correct_triggers"][concept]
         for batch_index, examples in enumerate(batched(concept_examples, batch_size), start=1):
             pair = runner.prepare_pairs([row["prompt"] for row in examples], [row["response"] for row in examples], trigger)
-            normal = truncated.run(pair.normal, capture_sites=capture_sites)
-            triggered = truncated.run(pair.triggered, capture_sites=capture_sites)
+            normal, normal_inputs = run_with_full_layer_inputs(
+                runner, truncated, pair.normal, capture_sites
+            )
+            triggered, triggered_inputs = run_with_full_layer_inputs(
+                runner, truncated, pair.triggered, capture_sites
+            )
             for example_index, example in enumerate(examples):
                 common = {
                     "schema_version": 1,
@@ -323,26 +391,52 @@ def run_grid(runner: PairedInterventionRunner, plan: Mapping[str, Any], *, batch
                 }
                 append_row(completed, {**common, "condition_id": "baseline:normal", "record_type": "baseline", "base_condition": "normal", "probe_score": float(normal.probe_scores[example_index])})
                 append_row(completed, {**common, "condition_id": "baseline:correct_trigger", "record_type": "baseline", "base_condition": "correct_trigger", "probe_score": float(triggered.probe_scores[example_index])})
-            for base_name, condition in (("normal", pair.normal), ("correct_trigger", pair.triggered)):
+            for base_name, condition, cached_inputs in (
+                ("normal", pair.normal, normal_inputs),
+                ("correct_trigger", pair.triggered, triggered_inputs),
+            ):
                 specifications = pair_jobs_for_base(base_name, population, selected_set, sites, normal.captures, triggered.captures)
-                for chunk in batched(specifications, group_chunk_size):
-                    result = vector.run_truncated(condition, [job for _spec, job in chunk])
-                    for job_index, (specification, _job) in enumerate(chunk):
-                        for example_index, example in enumerate(examples):
-                            append_row(completed, {
-                                "schema_version": 1,
-                                "procedure": "site-shuffling-v1-day17",
-                                "implementation_commit": implementation_commit,
-                                "plan_sha256": plan_sha256,
-                                "concept": concept,
-                                "example_id": example["example_id"],
-                                "label": 1,
-                                "split": "safety-test-pilot",
-                                "post_confirmatory": True,
-                                "record_type": "intervention",
-                                **specification,
-                                "probe_score": float(result.probe_scores[job_index, example_index]),
-                            })
+                for destination_layer in (9, 10, 11, 12):
+                    layer_specs = [
+                        item
+                        for item in specifications
+                        if parse_head_id(item[0]["destination_id"])[0]
+                        == destination_layer
+                    ]
+                    for chunk in batched(layer_specs, group_chunk_size):
+                        pending = [
+                            item
+                            for item in chunk
+                            if any(
+                                (example["example_id"], item[0]["condition_id"])
+                                not in completed
+                                for example in examples
+                            )
+                        ]
+                        if not pending:
+                            continue
+                        result = tail.run_truncated_from_layer(
+                            condition,
+                            [job for _spec, job in pending],
+                            start_layer=destination_layer,
+                            cached_input=cached_inputs[destination_layer],
+                        )
+                        for job_index, (specification, _job) in enumerate(pending):
+                            for example_index, example in enumerate(examples):
+                                append_row(completed, {
+                                    "schema_version": 1,
+                                    "procedure": "site-shuffling-v1-day17",
+                                    "implementation_commit": implementation_commit,
+                                    "plan_sha256": plan_sha256,
+                                    "concept": concept,
+                                    "example_id": example["example_id"],
+                                    "label": 1,
+                                    "split": "safety-test-pilot",
+                                    "post_confirmatory": True,
+                                    "record_type": "intervention",
+                                    **specification,
+                                    "probe_score": float(result.probe_scores[job_index, example_index]),
+                                })
             print(f"Day 17 {concept} batch {batch_index}: {len(completed)}/{EXPECTED_ROWS}", flush=True)
             release_memory()
     seal(completed)
