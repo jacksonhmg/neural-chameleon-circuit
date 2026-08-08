@@ -1,0 +1,22 @@
+claim_id,manuscript_location,quantity,estimate,ci_low,ci_high,source
+N01,Results 4.2,block 11 response rescue,0.972052,0.968883,0.974900,results/day-06/localization-summary.csv
+N02,Results 4.2,block 11 response induction,0.966296,0.962711,0.969295,results/day-06/localization-summary.csv
+N03,Results 4.3,validation K16 necessity,0.819757,0.810334,0.828455,results/day-09/selected-completeness-curve.csv
+N04,Results 4.3,validation K16 sufficiency,0.806304,0.800337,0.812293,results/day-10/sufficiency-macro.csv
+N05,Results 4.3,validation random K16 sufficiency,0.045427,0.040639,0.050465,results/day-10/sufficiency-macro.csv
+N06,Results 4.4,deception rescue,0.947240,0.936038,0.957433,results/day-13/safety-transfer-metrics.csv
+N07,Results 4.4,deception induction,0.986959,0.982319,0.991172,results/day-13/safety-transfer-metrics.csv
+N08,Results 4.4,harmfulness rescue,0.844016,0.830161,0.857660,results/day-13/safety-transfer-metrics.csv
+N09,Results 4.4,harmfulness induction,0.725640,0.707743,0.743557,results/day-13/safety-transfer-metrics.csv
+N10,Results 4.5,deception induction delta,0.386734,0.361853,0.410316,results/day-21/confirmation-cells.csv
+N11,Results 4.5,deception induction delta contrast,0.387791,0.362646,0.411728,results/day-21/confirmation-cells.csv
+N12,Results 4.5,harmfulness induction delta,0.092925,0.081781,0.103837,results/day-21/confirmation-cells.csv
+N13,Results 4.5,harmfulness induction delta contrast,0.102190,0.090364,0.114119,results/day-21/confirmation-cells.csv
+N14,Results 4.6,deception induction output coefficient,0.022394,0.019199,0.025748,results/day-23/behavioral-transport-cells.csv
+N15,Results 4.6,deception rescue output coefficient,0.027837,0.023844,0.032344,results/day-23/behavioral-transport-cells.csv
+N16,Results 4.6,harmfulness induction output coefficient,0.086575,0.079797,0.093772,results/day-23/behavioral-transport-cells.csv
+N17,Results 4.6,harmfulness rescue output coefficient,0.098076,0.090225,0.105443,results/day-23/behavioral-transport-cells.csv
+N18,Results 4.6,selected generation exact match,0.562500,,,results/day-24/coupled-generation-summary.json
+N19,Results 4.6,null generation exact match,0.906250,,,results/day-24/coupled-generation-summary.json
+N20,Results 4.6,selected generation token F1,0.886719,,,results/day-24/coupled-generation-summary.json
+N21,Results 4.6,null generation token F1,0.966797,,,results/day-24/coupled-generation-summary.json

@@ -16,7 +16,7 @@ This file is the operational source of truth for project progress. The [project 
 ## Current position
 
 **Current phase:** Days 26–30 — In progress (private manuscript sprint; external release remains withheld)
-**Next action:** Draft manuscript Methods and Results around the verified six-figure package.
+**Next action:** Complete the manuscript framing, primary-source bibliography, discussion, and limitations.
 
 ---
 
@@ -682,22 +682,23 @@ This phase converts the completed evidence package into a private paper candidat
 
 ## Day 28: Draft Methods and Results
 
-**Status:** In progress
+**Status:** Complete
+**Lab note:** [Day 28: Draft Methods and Results](lab-notes/day-28-draft-methods-results.md)
 
 ### Checklist
 
-- [ ] Draft the experimental setting and paired intervention methods.
-- [ ] Draft the six Results subsections with effect sizes and intervals.
-- [ ] Distinguish exploratory, held-out, confirmatory, post-confirmatory, and prospective evidence.
-- [ ] Trace every numerical main-text claim to source data.
+- [x] Draft the experimental setting and paired intervention methods.
+- [x] Draft the six Results subsections with effect sizes and intervals.
+- [x] Distinguish exploratory, held-out, confirmatory, post-confirmatory, and prospective evidence.
+- [x] Trace every numerical main-text claim to source data.
 
 ### Completion gate
 
-- [ ] The Methods and Results are complete and numerically audited.
+- [x] The Methods and Results are complete and numerically audited.
 
 ## Day 29: Draft framing, discussion, and references
 
-**Status:** Not started
+**Status:** In progress
 
 ### Checklist
 

@@ -1,0 +1,61 @@
+\section{Artifact, split, and intervention details}
+\label{app:artifacts}
+
+\subsection{Pinned organism}
+
+The analyzed checkpoint is \texttt{serteal/neural-chameleon-gemma\_2\_9b-layer\_12} at revision \texttt{c4aeb57502a8bed6a62dac57819eec27fd5e3c99}. The minimal reproduction repository is pinned at \texttt{f077304f6bebd31ded4cc868f2115a8c81067960}; the full upstream experimental repository is pinned at \texttt{261e6547f2042385c95c47ad25860aacedb6aa73}. Probe weights, data, repository trees, and the checkpoint snapshot are hash-manifested in the accompanying local package.
+
+The model has 42 decoder blocks, hidden width 3,584, 16 query heads, and head width 256. The monitor reads Hugging Face hidden-state tuple entry 13, which equals the raw output of zero-indexed block 12 and the input residual to block 13. Independent hooks and hidden-state comparisons verify this indexing on the real checkpoint.
+
+\subsection{Split accounting}
+
+\begin{table}[h]
+\centering
+\caption{Frozen concept split. Counts are shown as positive + negative examples.}
+\label{tab:splits}
+\begin{tabular}{lll}
+\toprule
+Evidence role & Concepts & Per-concept counts \\
+\midrule
+Discovery & HTML, biology-focused, comforting, German & $64+64$ \\
+Held-out benign & all-caps, chemistry-based, confused, Finnish, & $64+64$ \\
+& jokey, literature-focused, mathematical & \\
+Locked safety & deception & $62+62$ \\
+Locked safety & harmfulness & $100+100$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Audits find no cross-phase example-ID, exact content, normalized prompt-response, source path/index, or word-five-gram Jaccard match at or above 0.8. This does not rule out paraphrastic similarity or unknown pretraining exposure.
+
+\subsection{Frozen component population}
+\label{app:components}
+
+The K16 prefix was frozen in this discovery order:
+
+\begin{enumerate}
+  \item layer 11 MLP;
+  \item layer 11 head 08;
+  \item layer 10 head 12;
+  \item layer 11 head 09;
+  \item layer 12 MLP;
+  \item layer 10 MLP;
+  \item layer 10 head 02;
+  \item layer 09 head 11;
+  \item layer 12 head 12;
+  \item layer 09 MLP;
+  \item layer 12 head 03;
+  \item layer 09 head 04;
+  \item layer 11 head 14;
+  \item layer 12 head 02;
+  \item layer 09 head 13;
+  \item layer 11 head 15.
+\end{enumerate}
+
+The ordering was chosen from exact discovery-concept rescue after screening a frozen 68-candidate universe. No identity or order changed after validation or safety access. Later decomposition shows that the 12 heads account for nearly all group effect on the Day 14 subset; the four whole-MLP sites remain listed because K16 was the confirmatory intervention actually frozen and tested.
+
+\subsection{Behavior and confound controls}
+
+Primary causal measurements target the activation probe, so behavior is measured separately. Fixed-continuation diagnostics include response NLL, next-token KL, and activation RMS. Prompt controls include monitoring-only, concept-only, irrelevant-concept, nearby-concept, paraphrased, malformed, and relocated triggers. Negative-example effects detect off-target probe motion. General-degradation and generation checks are secondary and cannot turn probe recovery into evidence of safety.
+
+For the original K16 safety intervention, deception continuation behavior is comparatively stable (KL approximately 0.010 in both directions), while harmfulness is materially perturbed (KL 0.066 rescue and 0.054 induction; NLL shifts $-0.114$ and $+0.093$ nats/token). The later final-map equivalence result is narrower and must not be substituted for this K16 behavior result.
