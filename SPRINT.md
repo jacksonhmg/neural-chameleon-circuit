@@ -563,7 +563,7 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 
 ### Checklist
 
-- [ ] Commit the benign-selected mappings and confirmation authorization before reading confirmation outcomes.
+- [x] Commit the benign-selected mappings and confirmation authorization before reading confirmation outcomes.
 - [ ] Run the frozen mappings on all remaining positive safety examples.
 - [ ] Run frozen specificity controls on the negative subset.
 - [ ] Apply the frozen bootstrap, contrast, and interpretation rules.
