@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Days 15–21 — Complete (site-shuffling follow-up; Day 14 release remains withheld)
-**Next action:** Review the qualified portable-transfer conclusion and decide separately whether any external release work should be authorized.
+**Current phase:** Days 22–25 — In progress (behavioral transport extension; Day 14 release remains withheld)
+**Next action:** Freeze and authorize the final-map behavioral evaluation before generating outcomes.
 
 ---
 
@@ -572,3 +572,71 @@ This extension is a new post-confirmatory mechanistic study motivated by Day 14'
 ### Completion gate
 
 - [x] The portable-code account receives supported, qualified, or rejected status under a prospectively committed site-shuffling intervention test.
+
+## Day 22: Freeze behavioral transport
+
+**Status:** In progress
+**Lab note:** [Day 22: Freeze Behavioral Transport](lab-notes/day-22-freeze-behavioral-transport.md)
+**Method:** [Days 22–25 behavioral transport method](docs/day-22-25-behavioral-transport-method.md)
+
+### Checklist
+
+- [x] Distinguish behavior-preserving evasion, natural-direction output transport, and nonspecific disruption.
+- [x] Preserve all four Day 21 mappings and their route-matched nulls.
+- [x] Freeze teacher-forced and coupled-generation example-selection rules.
+- [x] Freeze output metrics, equivalence bounds, bootstrap settings, and interpretation rules.
+- [ ] Commit the complete evaluator before generating final-map behavioral outcomes.
+- [ ] Materialize and commit the exact authorization before generating outcomes.
+
+### Completion gate
+
+- [ ] The evaluator and hash-pinned authorization are committed while every final-map behavioral outcome is absent.
+
+## Day 23: Measure output distributions
+
+**Status:** Not started
+**Lab note:** [Day 23: Measure Output Distributions](lab-notes/day-23-measure-output-distributions.md)
+
+### Checklist
+
+- [ ] Run all frozen baselines, identity benchmarks, selected mappings, and route-matched nulls.
+- [ ] Measure probe transport, KL, NLL, top-1 stability, and natural-direction logit projection.
+- [ ] Cover all 162 positive examples and 32 frozen negative controls.
+- [ ] Seal the exact 3,880-row archive and verify its hash and provenance.
+
+### Completion gate
+
+- [ ] The complete teacher-forced behavioral grid is sealed and passes its independent audit.
+
+## Day 24: Run coupled autoregressive generation
+
+**Status:** Not started
+**Lab note:** [Day 24: Run Coupled Generation](lab-notes/day-24-run-coupled-generation.md)
+
+### Checklist
+
+- [ ] Verify token-by-token donor recomputation with no future reference-token leakage.
+- [ ] Run the 80-condition frozen generation grid with greedy decoding.
+- [ ] Record output overlap, termination, repetition, and generated-response probe diagnostics.
+- [ ] Produce a local anonymized qualitative-review packet and condition key.
+
+### Completion gate
+
+- [ ] The coupled-generation archive and descriptive diagnostics are sealed and audited.
+
+## Day 25: Seal the behavioral disposition
+
+**Status:** Not started
+**Lab note:** [Day 25: Seal Behavioral Disposition](lab-notes/day-25-seal-behavioral-disposition.md)
+
+### Checklist
+
+- [ ] Apply the frozen bootstrap and mechanical interpretation without threshold changes.
+- [ ] Report every mapping, concept, and direction before population summaries.
+- [ ] Update the site-shuffling synthesis, claim ledger, limitations, and final report.
+- [ ] Run the complete package audit and full test suite.
+- [ ] Record the accepted interpretation in the decision log.
+
+### Completion gate
+
+- [ ] Behavioral transport is classified, documented, and reproducibly linked to sealed evidence.
