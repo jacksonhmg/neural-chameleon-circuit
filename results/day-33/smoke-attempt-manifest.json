@@ -14,8 +14,24 @@
   "schema_version": 1,
   "source_commits": [
     "a6a1a60",
-    "81c7299"
+    "81c7299",
+    "4a2ed61"
   ],
+  "population_attempt_before_row_provenance": {
+    "accounting.working.jsonl": {
+      "row_count": 14,
+      "sha256": "ed0ed396d403b40fb5d4c4128c8d40c1153c8d23ca44dae9a4434d54f7d9d0d3"
+    },
+    "component-effects.working.jsonl": {
+      "row_count": 1452,
+      "sha256": "00eca75dc920a734658d78e9667b20c4b5c2565d4f6a515675d7190608a7818a"
+    },
+    "feature_file_count": 0,
+    "natural-endpoints.working.jsonl": {
+      "row_count": 28,
+      "sha256": "6f5e64705e3f5198dec31ac85973648b1af7be1591475d45570375bb2d9e00c7"
+    }
+  },
   "working_results": {
     "accounting.working.jsonl": {
       "row_count": 52,

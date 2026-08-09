@@ -293,6 +293,7 @@ def save_feature_batch(
     triggered: Any,
     plan: Mapping[str, Any],
     layers: Sequence[torch.nn.Module],
+    execution_commit: str,
 ) -> None:
     positive_rows = [
         index for index, record in enumerate(records) if int(record["label"]) == 1
@@ -320,6 +321,7 @@ def save_feature_batch(
         mask = normal.response_mask[row].bool()
         artifact = {
             "schema_version": 1,
+            "execution_commit": execution_commit,
             "model": model_name,
             "example_id": record["example_id"],
             "concept": record["concept"],
@@ -371,6 +373,7 @@ def write_natural_rows(
     probe_names: Sequence[str],
     probes: Sequence[LinearProbe],
     completed: set[tuple[str, str, str]],
+    execution_commit: str,
 ) -> None:
     margins, scores, rms = capture_summary(capture, probes)
     rows = []
@@ -381,6 +384,7 @@ def write_natural_rows(
         rows.append(
             {
                 "schema_version": 1,
+                "execution_commit": execution_commit,
                 "record_type": "natural_endpoint",
                 "model": model_name,
                 "split": record["split"],
@@ -412,6 +416,7 @@ def run_component_family(
     vector_runner: VectorizedMechanismRunner,
     probe_names: Sequence[str],
     completed: set[tuple[str, str, str, str, str]],
+    execution_commit: str,
     *,
     chunk_size: int,
 ) -> None:
@@ -463,6 +468,7 @@ def run_component_family(
                 rows.append(
                     {
                         "schema_version": 1,
+                        "execution_commit": execution_commit,
                         "record_type": "component_effect",
                         "model": model_name,
                         "split": record["split"],
@@ -531,6 +537,7 @@ def run_component_family(
                 rows.append(
                     {
                         "schema_version": 1,
+                        "execution_commit": execution_commit,
                         "record_type": "component_effect",
                         "model": model_name,
                         "split": record["split"],
@@ -571,6 +578,7 @@ def run_model(
     batch_size: int,
     group_chunk_size: int,
     skip_component_effects: bool,
+    execution_commit: str,
 ) -> None:
     selected_records = (
         records
@@ -654,6 +662,7 @@ def run_model(
                         [
                             {
                                 "schema_version": 1,
+                                "execution_commit": execution_commit,
                                 "record_type": "accounting_batch",
                                 "model": model_name,
                                 "batch_id": batch_id,
@@ -674,9 +683,16 @@ def run_model(
                     probe_names,
                     probes,
                     completed_natural,
+                    execution_commit,
                 )
             save_feature_batch(
-                model_name, batch_records, normal, triggered, plan, runner.layers
+                model_name,
+                batch_records,
+                normal,
+                triggered,
+                plan,
+                runner.layers,
+                execution_commit,
             )
 
             if model_name == "chameleon" and not skip_component_effects:
@@ -692,6 +708,7 @@ def run_model(
                     vector_runner,
                     probe_names,
                     completed_effects,
+                    execution_commit,
                     chunk_size=group_chunk_size,
                 )
                 run_component_family(
@@ -706,6 +723,7 @@ def run_model(
                     vector_runner,
                     probe_names,
                     completed_effects,
+                    execution_commit,
                     chunk_size=group_chunk_size,
                 )
                 run_component_family(
@@ -720,6 +738,7 @@ def run_model(
                     vector_runner,
                     probe_names,
                     completed_effects,
+                    execution_commit,
                     chunk_size=group_chunk_size,
                 )
                 run_component_family(
@@ -734,6 +753,7 @@ def run_model(
                     vector_runner,
                     probe_names,
                     completed_effects,
+                    execution_commit,
                     chunk_size=group_chunk_size,
                 )
             if model_name == "precursor":
@@ -760,6 +780,7 @@ def run_model(
                     rows.append(
                         {
                             "schema_version": 1,
+                            "execution_commit": execution_commit,
                             "record_type": "precursor_functional_induction",
                             "model": "precursor",
                             "split": record["split"],
@@ -781,6 +802,8 @@ def run_model(
                     )
                     completed_functional.add(record["example_id"])
                 append_jsonl(FUNCTIONAL_WORKING, rows)
+            if runner.registered_hook_count() != 0:
+                raise RuntimeError("one or more execution hooks remained registered")
             print(
                 f"{model_name}: completed {batch_records[0]['concept']} "
                 f"{batch_records[0]['example_id']}..{batch_records[-1]['example_id']}",
@@ -811,6 +834,7 @@ def main() -> None:
             batch_size=args.batch_size,
             group_chunk_size=args.group_chunk_size,
             skip_component_effects=args.skip_component_effects,
+            execution_commit=commit,
         )
     print(
         json.dumps(

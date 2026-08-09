@@ -34,6 +34,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - Tightened the cache contract to capture `resid_pre[9]` only after exact job-major batch expansion. Prefixes are reused only between chunks with the same expanded batch shape and condition.
 - The revised real-checkpoint preflight passed with exact equality (`0.0` maximum difference) for raw margins, sequence scores, and monitor activation RMS across an individual layer-9 head and K12, with all hooks removed.
 - Archived all partial smoke data without deletion under ignored `artifacts/mechanism-gate1-v1-smoke-attempts/`. The tracked manifest records four row-file hashes/counts and both feature-tree manifest hashes. The complete frozen execution therefore starts with no reusable scientific rows or tensors from superseded implementations.
+- Stopped and archived the first 14 accounting batches of the population attempt after noticing that launch provenance existed only in terminal output. No positive feature tensors had yet been written. Tightened the pipeline so every JSONL row and tensor contains the exact execution commit and every completed batch asserts that no hooks remain registered.
 
 ## Handoff
 
