@@ -33,6 +33,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - The first real-checkpoint preflight failed: reusing a prefix captured at base batch size changed BF16 results after job-major batch expansion (maximum raw-margin difference `0.0382315`). The failed output is preserved as `cached-tail-preflight-attempt-1.json`; the optimization remained blocked.
 - Tightened the cache contract to capture `resid_pre[9]` only after exact job-major batch expansion. Prefixes are reused only between chunks with the same expanded batch shape and condition.
 - The revised real-checkpoint preflight passed with exact equality (`0.0` maximum difference) for raw margins, sequence scores, and monitor activation RMS across an individual layer-9 head and K12, with all hooks removed.
+- Archived all partial smoke data without deletion under ignored `artifacts/mechanism-gate1-v1-smoke-attempts/`. The tracked manifest records four row-file hashes/counts and both feature-tree manifest hashes. The complete frozen execution therefore starts with no reusable scientific rows or tensors from superseded implementations.
 
 ## Handoff
 

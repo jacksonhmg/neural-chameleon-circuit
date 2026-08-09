@@ -1,0 +1,37 @@
+{
+  "archive_path": "artifacts/mechanism-gate1-v1-smoke-attempts",
+  "feature_artifacts": {
+    "chameleon": {
+      "file_count": 13,
+      "ordered_sha256_manifest_sha256_before_move": "2b536d770e69871a05005abc08074626ae0f152c81262512cf6fc8ddb68d13ff"
+    },
+    "precursor": {
+      "file_count": 13,
+      "ordered_sha256_manifest_sha256_before_move": "330b4a5eade0dc3fbc83418e5d0eba0ed33a0131fe65506dfcf564a6808d9de5"
+    }
+  },
+  "reason_archived": "Partial smoke rows span superseded full-forward, algebraic-direct-path, and base-batch cached-tail implementations. They remain available for debugging but are excluded from the frozen population execution.",
+  "schema_version": 1,
+  "source_commits": [
+    "a6a1a60",
+    "81c7299"
+  ],
+  "working_results": {
+    "accounting.working.jsonl": {
+      "row_count": 52,
+      "sha256": "e0563c4c48bc58d1f557213bfd50bd1bd2edaf7ad30921b8d4b2f649b2250677"
+    },
+    "component-effects.working.jsonl": {
+      "row_count": 1960,
+      "sha256": "973cf2c54d30079059a5f937d6db623eb6e8b91287a4cee9d6b8432bddad0c83"
+    },
+    "natural-endpoints.working.jsonl": {
+      "row_count": 78,
+      "sha256": "152c504166199a12af7e54cd2289b50440967a78d6aef9a7b50937e796774185"
+    },
+    "precursor-functional.working.jsonl": {
+      "row_count": 13,
+      "sha256": "d32bc959bce8f6c4aea56bc0d60d0e83f99d89d90b6a88d55b9872452d7b26f0"
+    }
+  }
+}
