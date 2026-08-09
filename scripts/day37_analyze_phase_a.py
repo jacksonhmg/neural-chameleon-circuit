@@ -204,7 +204,7 @@ def main() -> None:
     ):
         require_committed(path, commit)
     contract = read_json(CONTRACT_PATH)
-    if contract["status"] != "frozen":
+    if contract["status"] != "frozen-before-post-gate1-phase-a-b-outcomes":
         raise RuntimeError("Phase A-B contract is not frozen")
     for label, expected in contract["input_sha256"].items():
         path_by_label = {

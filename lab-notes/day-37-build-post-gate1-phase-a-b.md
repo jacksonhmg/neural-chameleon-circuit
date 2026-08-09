@@ -70,6 +70,18 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - No attention effect, precursor preflight, Phase A outcome, population intervention, or selection score was produced.
 - Preserved the failed attempt and Decision 0036. The only code change reads keyword `hidden_states` first and retains the positional fallback.
 
+#### Real-checkpoint preflight attempt 2 — passed
+
+- Commit: `9b6a14e`.
+- Both Chameleon and exact precursor passed with batch size two and response width 123.
+- Raw-head identity total/direct errors and cached/full margin/score errors were exactly zero; Haar audits passed; all four attention operations returned `[2, 123, 3584]`; response IDs/masks matched; zero hooks remained.
+
+#### Phase A attempt 1 — startup validation failure
+
+- The reducer stopped before loading an input because it checked the shorthand status `frozen` instead of the contract's exact `frozen-before-post-gate1-phase-a-b-outcomes`.
+- No tensor or scientific outcome was accessed. Preserved the attempt and Decision 0037.
+- Fixed only the exact status checks in both population runners. The complete preflight must be rerun under the new commit before Phase A restarts.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

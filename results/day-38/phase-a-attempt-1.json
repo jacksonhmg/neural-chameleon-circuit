@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "analysis_commit": "9b6a14e017913757555f3448374c8a47d521a050",
+  "result": "implementation-fail-before-input-load",
+  "scientific_outcomes_accessed": false,
+  "exception": "RuntimeError: Phase A-B contract is not frozen",
+  "cause": "the runner required the literal status 'frozen' instead of the contract's literal 'frozen-before-post-gate1-phase-a-b-outcomes'",
+  "required_action": "validate the exact frozen status in both Phase A and Phase B runners, commit, rerun the complete preflight, and restart Phase A"
+}

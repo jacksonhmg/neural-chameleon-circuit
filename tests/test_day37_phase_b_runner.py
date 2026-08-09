@@ -17,6 +17,14 @@ from day37_run_phase_b import (  # noqa: E402
 from day37_analyze_phase_b import bootstrap_metric  # noqa: E402
 
 
+def test_phase_a_b_contract_has_expected_frozen_status() -> None:
+    import json
+
+    with (ROOT / "results/day-36/frozen-phase-a-b-contract.json").open() as handle:
+        contract = json.load(handle)
+    assert contract["status"] == "frozen-before-post-gate1-phase-a-b-outcomes"
+
+
 def records() -> list[dict[str, object]]:
     return [
         {"concept": "x", "label": 1, "split": "discovery"},

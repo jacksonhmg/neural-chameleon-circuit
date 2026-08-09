@@ -1340,7 +1340,7 @@ def main() -> None:
     clarification = read_json(CLARIFICATION_PATH)
     attention_freeze = read_json(ATTENTION_FREEZE_PATH)
     if (
-        contract["status"] != "frozen"
+        contract["status"] != "frozen-before-post-gate1-phase-a-b-outcomes"
         or clarification["status"] != "frozen"
         or attention_freeze["status"] != "frozen"
     ):
