@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 36 — Complete (post–Gate 1 Phase A–B contract frozen; empirical execution not authorized).
-**Next action:** Await explicit execution authorization. If granted, implement and verify the frozen Phase A–B machinery before running any new diagnostic or intervention.
+**Current phase:** Day 37 — In progress (post–Gate 1 Phase A–B implementation and execution).
+**Next action:** Implement and verify the frozen Phase A–B machinery, pass the final-shape real-checkpoint preflight, then execute and adjudicate the exact contract.
 
 ---
 
@@ -861,3 +861,22 @@ The possible next program treats the complete writer-carrier hypothesis as falsi
 ### Authorization boundary
 
 Day 36 does not authorize Phase A–B execution. A later explicit user instruction is required before implementation or model runs begin.
+
+## Day 37: Build and execute post–Gate 1 Phase A–B
+
+**Status:** In progress
+**Lab note:** [Day 37: Build and Execute Post–Gate 1 Phase A–B](lab-notes/day-37-build-post-gate1-phase-a-b.md)
+**Authorization:** [Decision 0033](decision-log/0033-authorize-post-gate1-phase-a-b-execution.md)
+
+### Checklist
+
+- [ ] Implement and test Phase A variance, centering, residualized prediction, and cross-concept folds.
+- [ ] Implement and test every Phase B absolute, random, frontier, and attention operator.
+- [ ] Pass synthetic and final-shape real-checkpoint implementation gates.
+- [ ] Execute the exact 556,992-row Phase B matrix with complete provenance.
+- [ ] Produce deterministic Phase A–B summaries, manifests, and audits.
+- [ ] Apply the frozen continue-or-stop gate without changes.
+
+### Completion gate
+
+- [ ] Phase A–B is fully audited and sealed as pass or fail; later work follows only the mechanical disposition.
