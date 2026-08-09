@@ -28,11 +28,13 @@ from neural_chameleon import (  # noqa: E402
     RealizedForwardRunner,
     VectorizedMechanismRunner,
     audit_realized_forward,
+    capture_layer_input,
     direct_path_monitor,
     direct_path_patch_cache,
     load_experimental_split,
     probe_sequence_scores,
     probe_token_margins,
+    repeat_condition,
     reconstruct_residual_after,
     total_patch_cache,
     transplant_job_from_cache,
@@ -488,6 +490,7 @@ def run_component_family(
         return
     if path_kind != "total":
         raise ValueError(f"unknown component path: {path_kind}")
+    prefix_cache: dict[int, torch.Tensor] = {}
     for chunk in batched(missing_groups, chunk_size):
         jobs = []
         for group in chunk:
@@ -498,11 +501,18 @@ def run_component_family(
                 source, components, vector_runner.runner.layers
             )
             jobs.append(transplant_job_from_cache(group["group_id"], patch_cache))
+        expanded_count = len(jobs)
+        if expanded_count not in prefix_cache:
+            prefix_cache[expanded_count] = capture_layer_input(
+                vector_runner.runner,
+                repeat_condition(base_condition, expanded_count),
+                layer=9,
+            )
         result = vector_runner.run_from_layer(
             base_condition,
             jobs,
             start_layer=9,
-            cached_input=target.full_residuals[9],
+            cached_input=prefix_cache[expanded_count],
         )
         rows = []
         by_id = {group["group_id"]: group for group in chunk}
@@ -568,9 +578,7 @@ def run_model(
         else [record for record in records if int(record["label"]) == 1]
     )
     runner = load_model(plan, model_name)
-    realized_runner = RealizedForwardRunner(
-        runner, monitor_layer=12, full_residual_layers=(9,)
-    )
+    realized_runner = RealizedForwardRunner(runner, monitor_layer=12)
     probe_names, probes = load_probes()
     vector_runner = VectorizedMechanismRunner(runner, probes, monitor_layer=12)
     groups = component_groups(plan)
@@ -741,7 +749,9 @@ def run_model(
                     pair.normal,
                     [job],
                     start_layer=9,
-                    cached_input=normal.full_residuals[9],
+                    cached_input=capture_layer_input(
+                        runner, repeat_condition(pair.normal, 1), layer=9
+                    ),
                 )
                 rows = []
                 for index, record in enumerate(batch_records):

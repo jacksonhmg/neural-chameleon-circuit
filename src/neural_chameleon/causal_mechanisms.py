@@ -48,6 +48,45 @@ class _PassthroughDecoderLayer(nn.Module):
         return (hidden_states,)
 
 
+def capture_layer_input(
+    runner: PairedInterventionRunner,
+    condition: ConditionBatch,
+    *,
+    layer: int,
+) -> Tensor:
+    """Capture a full-sequence decoder input for an exact same-batch tail replay."""
+    if not 0 <= layer < len(runner.layers):
+        raise ValueError("capture layer is outside the model")
+    captured: Tensor | None = None
+
+    def capture(_module: nn.Module, args: tuple[Any, ...]) -> None:
+        nonlocal captured
+        captured = runner._first_tensor(args).detach().cpu().clone()
+        raise _MonitorReached()
+
+    handle = runner.layers[layer].register_forward_pre_hook(capture)
+    try:
+        try:
+            with torch.inference_mode():
+                runner.model(
+                    input_ids=condition.input_ids.to(runner.device),
+                    attention_mask=condition.attention_mask.to(runner.device),
+                    position_ids=condition.position_ids.to(runner.device),
+                    use_cache=False,
+                    output_hidden_states=False,
+                    return_dict=True,
+                    logits_to_keep=1,
+                )
+            raise RuntimeError("model completed without reaching the capture layer")
+        except _MonitorReached:
+            pass
+    finally:
+        handle.remove()
+    if captured is None:
+        raise RuntimeError("decoder input was not captured")
+    return captured
+
+
 @dataclass(frozen=True, order=True)
 class MechanismComponent:
     """One frozen attention-head or whole-MLP intervention site."""
@@ -898,7 +937,7 @@ class VectorizedMechanismRunner:
         ):
             raise ValueError("cached-tail job contains a site before its start")
         expected = (
-            condition.batch_size,
+            condition.batch_size * len(jobs),
             condition.input_ids.shape[1],
             int(cached_input.shape[-1]),
         )
@@ -938,13 +977,11 @@ class VectorizedMechanismRunner:
                     self.runner.layers[layer_index] = _PassthroughDecoderLayer(
                         getattr(original, "attention_type", "full_attention")
                     )
-                expanded_cache = cached_input.repeat(len(jobs), 1, 1)
-
                 def replace_cached_input(
                     _module: nn.Module, args: tuple[Any, ...]
                 ) -> tuple[Any, ...]:
                     tensor = self.runner._first_tensor(args)
-                    replacement = expanded_cache.to(
+                    replacement = cached_input.to(
                         device=tensor.device, dtype=tensor.dtype
                     )
                     return self.runner._replace_first_tensor(args, replacement)

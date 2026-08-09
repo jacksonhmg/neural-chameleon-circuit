@@ -30,6 +30,8 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - Replaced redundant direct-path transformer executions with the algebraically identical replay of cached normalized additive branches required by the frozen-write operator; total effects still use actual intervened transformer forwards.
 - Added exact cached-tail replay from natural `resid_pre[9]` for total effects. All selected sites are at layers 9–12, so blocks 0–8 are invariant cached prefix computation rather than part of an intervention job.
 - Added a committed real-checkpoint equivalence preflight comparing full and cached-tail execution for an individual layer-9 head and complete K12 across all 13 probes.
+- The first real-checkpoint preflight failed: reusing a prefix captured at base batch size changed BF16 results after job-major batch expansion (maximum raw-margin difference `0.0382315`). The failed output is preserved as `cached-tail-preflight-attempt-1.json`; the optimization remained blocked.
+- Tightened the cache contract to capture `resid_pre[9]` only after exact job-major batch expansion. Prefixes are reused only between chunks with the same expanded batch shape and condition.
 
 ## Handoff
 

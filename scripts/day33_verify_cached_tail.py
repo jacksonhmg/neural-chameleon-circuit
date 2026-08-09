@@ -20,7 +20,9 @@ from neural_chameleon import (  # noqa: E402
     MechanismComponent,
     RealizedForwardRunner,
     VectorizedMechanismRunner,
+    capture_layer_input,
     load_experimental_split,
+    repeat_condition,
     total_patch_cache,
     transplant_job_from_cache,
 )
@@ -65,10 +67,7 @@ def main() -> None:
         [row["response"] for row in records],
         records[0]["trigger_concept"],
     )
-    realized = RealizedForwardRunner(
-        runner, monitor_layer=12, full_residual_layers=(9,)
-    )
-    normal = realized.run(pair.normal)
+    realized = RealizedForwardRunner(runner, monitor_layer=12)
     triggered = realized.run(pair.triggered)
     probe_names, probes = load_probes()
     groups = {
@@ -89,7 +88,9 @@ def main() -> None:
         pair.normal,
         jobs,
         start_layer=9,
-        cached_input=normal.full_residuals[9],
+        cached_input=capture_layer_input(
+            runner, repeat_condition(pair.normal, len(jobs)), layer=9
+        ),
     )
     differences = {
         "mean_raw_margin_max_abs": float(
@@ -118,6 +119,7 @@ def main() -> None:
     result = {
         "schema_version": 1,
         "procedure": "acquired-writer-development-v1-cached-tail-preflight",
+        "cache_batch_contract": "capture_after_job_major_batch_expansion",
         "implementation_commit": commit,
         "model_revision": plan["models"]["chameleon"]["revision"],
         "example_ids": [row["example_id"] for row in records],

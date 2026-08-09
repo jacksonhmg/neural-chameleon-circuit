@@ -18,9 +18,11 @@ from neural_chameleon import (
     RealizedForwardRunner,
     VectorizedMechanismRunner,
     audit_realized_forward,
+    capture_layer_input,
     direct_path_patch_cache,
     direct_path_monitor,
     fit_head_rms,
+    repeat_condition,
     total_patch_cache,
     trajectory_pair_metrics,
     transplant_job_from_cache,
@@ -276,7 +278,11 @@ class CausalMechanismTests(unittest.TestCase):
             self.pair.normal,
             jobs,
             start_layer=1,
-            cached_input=normal.full_residuals[1],
+            cached_input=capture_layer_input(
+                self.runner,
+                repeat_condition(self.pair.normal, len(jobs)),
+                layer=1,
+            ),
         )
         self.assertTrue(torch.equal(vector.mean_margins, cached.mean_margins))
         self.assertTrue(torch.equal(vector.sequence_scores, cached.sequence_scores))
