@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "procedure": "successor-causal-mechanisms-program-closeout-v1",
+  "date": "2026-08-09",
+  "controlling_plan": "docs/causal-mechanisms-research-plan.md",
+  "frozen_plan_sha256": "94c25c4d8b3d4eb89d758eed0967400325ffc944d877fd8bbdd717a062badd42",
+  "execution_commit": "b0292e2a98d575827f82570985edcfbdfa2d583a",
+  "execution_id": "ba510c5c95b26836342ad635e4700fdd0cdac0b71f31939ee7f8691b14adc399",
+  "result_commit": "2073cb5",
+  "decision_documentation_commit": "f9cca5e38e90c5339c5d7c6a5bcf5ae0a28595ab",
+  "gate_1": {
+    "implementation_result": "pass",
+    "scientific_result": "fail",
+    "next_phase_authorized": false,
+    "acquisition_result": "pass",
+    "intermediate_prediction_result": "fail"
+  },
+  "downstream_phases": {
+    "gate_2_concept_to_writer_prediction": "not-authorized-not-executed",
+    "predicted_trajectory_causal_control": "not-authorized-not-executed",
+    "endogenous_propagation_and_restoration": "not-authorized-not-executed",
+    "fresh_confirmation": "not-authorized-not-executed",
+    "final_title_gate": "not-reached"
+  },
+  "required_fallback": "causal-localization",
+  "checks": {
+    "all_gate_1_implementation_checks_pass": true,
+    "all_frozen_scientific_thresholds_applied_unchanged": true,
+    "all_heldout_concepts_reported": true,
+    "principal_reducer_outputs_byte_identical_across_two_runs": true,
+    "decision_0030_records_adverse_result": true,
+    "sprint_days_31_through_35_closed": true,
+    "focused_ruff_check_pass": true,
+    "test_suite_75_of_75_pass": true,
+    "tracked_json_artifacts_parse": true,
+    "working_tree_clean_before_closeout_audit": true,
+    "no_downstream_experiment_executed_after_failed_gate": true,
+    "no_external_dissemination_performed": true
+  },
+  "historical_lint_note": "A repository-wide Ruff scan reports 35 pre-existing findings in Day 8-27 code outside the successor implementation; focused successor files pass Ruff.",
+  "result": "complete-at-mandatory-fallback-boundary"
+}
