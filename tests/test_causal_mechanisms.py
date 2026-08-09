@@ -165,6 +165,8 @@ class CausalMechanismTests(unittest.TestCase):
         self.assertLess(audit.hidden_max_abs_error, 1e-5)
         self.assertLess(audit.attention_raw_projection_max_abs_error, 1e-5)
         self.assertLess(audit.attention_allocation_max_abs_error, 1e-5)
+        self.assertLess(audit.attention_projection_numerical_residual_max_abs, 1e-5)
+        self.assertLess(audit.attention_normalization_numerical_residual_max_abs, 1e-5)
         self.assertLess(audit.probe_margin_max_abs_error, 1e-4)
         self.assertLess(audit.sequence_score_max_abs_error, 1e-6)
         self.assertEqual(
@@ -182,12 +184,7 @@ class CausalMechanismTests(unittest.TestCase):
             torch.equal(identity.total.values, normal.monitor_residual.values)
         )
         self.assertTrue(
-            torch.allclose(
-                identity.direct_path.values,
-                normal.monitor_residual.values,
-                atol=1e-6,
-                rtol=1e-6,
-            )
+            torch.equal(identity.direct_path.values, normal.monitor_residual.values)
         )
 
         intervention = effects.run(

@@ -35,6 +35,13 @@ Implement and verify the exact writer-trajectory capture, realized-forward accou
 - Real-checkpoint preflight attempt 1 passed exact residual and 13-probe closure but exposed BF16 non-associativity: separately evaluated head projections differed from the fused branch by up to `0.125`, normalized allocation closure reached `0.127182`, and response-only identity recomputation shifted hidden state by `0.03125` while changing probe scores by only `0.0000703931`.
 - Preserved the failed artifact and froze [Decision 0029](../decision-log/0029-freeze-bf16-accounting-clarification.md) before changing the numerical implementation or rerunning.
 
+#### Numerical clarification implementation
+
+- Added capture of the actually fused pre-RMSNorm attention projection at every layer through block 12.
+- Implemented symmetric, explicitly reported allocation of fused-projection and normalization/cast numerical residuals across query heads.
+- Anchored matched response-only counterfactual deltas to each cached realized target branch.
+- Strengthened the synthetic suite to require exact direct-path identity and explicit numerical-residual diagnostics.
+
 ## Handoff
 
 - **Current state:** Implementation in progress.

@@ -85,6 +85,7 @@ class RealizedForwardCapture:
     response_mask: Tensor
     initial_residual: CapturedActivation
     raw_attention: Mapping[int, CapturedActivation]
+    projected_attention: Mapping[int, CapturedActivation]
     attention_branches: Mapping[int, CapturedActivation]
     mlp_branches: Mapping[int, CapturedActivation]
     monitor_residual: CapturedActivation
@@ -123,6 +124,8 @@ class AttentionAllocation:
     bias_value: Tensor
     raw_projection_max_abs_error: float
     normalized_branch_max_abs_error: float
+    projection_numerical_residual_max_abs: float
+    normalization_numerical_residual_max_abs: float
     rmsnorm_parameterization: str
 
 
@@ -133,9 +136,13 @@ class RealizedForwardAudit:
     hidden_max_abs_error: float
     attention_allocation_max_abs_error: float
     attention_raw_projection_max_abs_error: float
+    attention_projection_numerical_residual_max_abs: float
+    attention_normalization_numerical_residual_max_abs: float
     probe_margin_max_abs_error: float
     sequence_score_max_abs_error: float
     per_layer_attention_allocation_max_abs_error: Mapping[int, float]
+    per_layer_projection_numerical_residual_max_abs: Mapping[int, float]
+    per_layer_normalization_numerical_residual_max_abs: Mapping[int, float]
     per_probe_margin_max_abs_error: tuple[float, ...]
     per_probe_sequence_score_max_abs_error: tuple[float, ...]
 
@@ -144,11 +151,21 @@ class RealizedForwardAudit:
             "hidden_max_abs_error": self.hidden_max_abs_error,
             "attention_allocation_max_abs_error": self.attention_allocation_max_abs_error,
             "attention_raw_projection_max_abs_error": self.attention_raw_projection_max_abs_error,
+            "attention_projection_numerical_residual_max_abs": self.attention_projection_numerical_residual_max_abs,
+            "attention_normalization_numerical_residual_max_abs": self.attention_normalization_numerical_residual_max_abs,
             "probe_margin_max_abs_error": self.probe_margin_max_abs_error,
             "sequence_score_max_abs_error": self.sequence_score_max_abs_error,
             "per_layer_attention_allocation_max_abs_error": {
                 str(layer): value
                 for layer, value in self.per_layer_attention_allocation_max_abs_error.items()
+            },
+            "per_layer_projection_numerical_residual_max_abs": {
+                str(layer): value
+                for layer, value in self.per_layer_projection_numerical_residual_max_abs.items()
+            },
+            "per_layer_normalization_numerical_residual_max_abs": {
+                str(layer): value
+                for layer, value in self.per_layer_normalization_numerical_residual_max_abs.items()
             },
             "per_probe_margin_max_abs_error": list(self.per_probe_margin_max_abs_error),
             "per_probe_sequence_score_max_abs_error": list(
@@ -216,6 +233,7 @@ class RealizedForwardRunner:
     def run(self, condition: ConditionBatch) -> RealizedForwardCapture:
         initial: CapturedActivation | None = None
         raw_attention: dict[int, CapturedActivation] = {}
+        projected_attention: dict[int, CapturedActivation] = {}
         attention: dict[int, CapturedActivation] = {}
         mlp: dict[int, CapturedActivation] = {}
         monitor: CapturedActivation | None = None
@@ -248,6 +266,14 @@ class RealizedForwardRunner:
                 values = _response_values(self.runner._first_tensor(output), condition)
                 attention[layer_index] = _capture_like(condition, values)
 
+            def capture_projected_attention(
+                _module: nn.Module,
+                args: tuple[Any, ...],
+                layer_index: int = layer_index,
+            ) -> None:
+                values = _response_values(self.runner._first_tensor(args), condition)
+                projected_attention[layer_index] = _capture_like(condition, values)
+
             def capture_mlp(
                 _module: nn.Module,
                 _args: tuple[Any, ...],
@@ -259,6 +285,11 @@ class RealizedForwardRunner:
 
             handles.append(
                 layer.self_attn.o_proj.register_forward_pre_hook(capture_raw)
+            )
+            handles.append(
+                layer.post_attention_layernorm.register_forward_pre_hook(
+                    capture_projected_attention
+                )
             )
             handles.append(
                 layer.post_attention_layernorm.register_forward_hook(capture_attention)
@@ -304,6 +335,7 @@ class RealizedForwardRunner:
             raise RuntimeError("initial or monitor residual was not captured")
         if (
             set(raw_attention) != expected
+            or set(projected_attention) != expected
             or set(attention) != expected
             or set(mlp) != expected
         ):
@@ -314,6 +346,7 @@ class RealizedForwardRunner:
             response_mask=condition.response_mask.clone(),
             initial_residual=initial,
             raw_attention=raw_attention,
+            projected_attention=projected_attention,
             attention_branches=attention,
             mlp_branches=mlp,
             monitor_residual=monitor,
@@ -359,42 +392,54 @@ def _rmsnorm_scale(
 def allocate_normalized_attention_heads(
     layer: nn.Module,
     raw_joint_heads: CapturedActivation,
+    projected_branch: CapturedActivation,
     normalized_branch: CapturedActivation,
 ) -> AttentionAllocation:
     """Allocate a realized Gemma RMS-normalized attention branch across heads."""
-    if not torch.equal(raw_joint_heads.response_ids, normalized_branch.response_ids):
-        raise ValueError("attention allocation response IDs differ")
-    if not torch.equal(raw_joint_heads.response_mask, normalized_branch.response_mask):
-        raise ValueError("attention allocation response masks differ")
+    for other in (projected_branch, normalized_branch):
+        if not torch.equal(raw_joint_heads.response_ids, other.response_ids):
+            raise ValueError("attention allocation response IDs differ")
+        if not torch.equal(raw_joint_heads.response_mask, other.response_mask):
+            raise ValueError("attention allocation response masks differ")
     attention = layer.self_attn
     num_heads = PairedInterventionRunner._num_attention_heads(attention)
     head_dim = PairedInterventionRunner._head_dim(attention)
-    raw = raw_joint_heads.values.to(
-        device=attention.o_proj.weight.device, dtype=attention.o_proj.weight.dtype
-    )
+    device = attention.o_proj.weight.device
+    raw = raw_joint_heads.values.to(device=device, dtype=torch.float32)
     if raw.shape[-1] != num_heads * head_dim:
         raise ValueError("raw joint-head width does not match attention geometry")
     projected = []
     for head in range(num_heads):
         left, right = head * head_dim, (head + 1) * head_dim
         projected.append(
-            F.linear(raw[..., left:right], attention.o_proj.weight[:, left:right])
+            F.linear(
+                raw[..., left:right],
+                attention.o_proj.weight[:, left:right].float(),
+            )
         )
     head_projection = torch.stack(projected, dim=2)
     bias = attention.o_proj.bias
     bias_projection = (
         torch.zeros_like(head_projection[:, :, 0, :])
         if bias is None
-        else bias.to(head_projection).expand_as(head_projection[:, :, 0, :])
+        else bias.to(device=device, dtype=torch.float32).expand_as(
+            head_projection[:, :, 0, :]
+        )
     )
+    theoretical_projection = head_projection.sum(dim=2) + bias_projection
+    realized_projection = projected_branch.values.to(device=device, dtype=torch.float32)
+    projection_residual = realized_projection - theoretical_projection
+    head_projection = head_projection + projection_residual.unsqueeze(2) / num_heads
     raw_projection = head_projection.sum(dim=2) + bias_projection
-    observed = normalized_branch.values.to(raw_projection.device)
-    direct_raw = attention.o_proj(raw)
     raw_error = _masked_max_abs(
-        direct_raw.float() - raw_projection.float(), raw_joint_heads.response_mask
+        realized_projection - raw_projection, raw_joint_heads.response_mask
     )
+    projection_residual_max = _masked_max_abs(
+        projection_residual, raw_joint_heads.response_mask
+    )
+    observed = normalized_branch.values.to(device=device, dtype=torch.float32)
     scale, parameterization, _ = _rmsnorm_scale(
-        layer.post_attention_layernorm, raw_projection, observed
+        layer.post_attention_layernorm, realized_projection, observed
     )
     eps = float(
         getattr(
@@ -404,10 +449,16 @@ def allocate_normalized_attention_heads(
         )
     )
     inverse_rms = torch.rsqrt(
-        raw_projection.float().square().mean(dim=-1, keepdim=True) + eps
+        realized_projection.square().mean(dim=-1, keepdim=True) + eps
     )
-    head_allocation = head_projection.float() * inverse_rms.unsqueeze(2) * scale
-    bias_allocation = bias_projection.float() * inverse_rms * scale
+    head_allocation = head_projection * inverse_rms.unsqueeze(2) * scale
+    bias_allocation = bias_projection * inverse_rms * scale
+    theoretical_normalized = head_allocation.sum(dim=2) + bias_allocation
+    normalization_residual = observed - theoretical_normalized
+    normalization_residual_max = _masked_max_abs(
+        normalization_residual, normalized_branch.response_mask
+    )
+    head_allocation = head_allocation + normalization_residual.unsqueeze(2) / num_heads
     reconstructed = head_allocation.sum(dim=2) + bias_allocation
     closure = _masked_max_abs(
         reconstructed - observed.float(), normalized_branch.response_mask
@@ -417,6 +468,8 @@ def allocate_normalized_attention_heads(
         bias_value=bias_allocation.detach().cpu(),
         raw_projection_max_abs_error=raw_error,
         normalized_branch_max_abs_error=closure,
+        projection_numerical_residual_max_abs=projection_residual_max,
+        normalization_numerical_residual_max_abs=normalization_residual_max,
         rmsnorm_parameterization=parameterization,
     )
 
@@ -466,14 +519,23 @@ def audit_realized_forward(
     )
     allocation_errors: dict[int, float] = {}
     raw_errors = []
+    projection_residuals: dict[int, float] = {}
+    normalization_residuals: dict[int, float] = {}
     for layer_index in sorted(capture.raw_attention):
         allocation = allocate_normalized_attention_heads(
             layers[layer_index],
             capture.raw_attention[layer_index],
+            capture.projected_attention[layer_index],
             capture.attention_branches[layer_index],
         )
         allocation_errors[layer_index] = allocation.normalized_branch_max_abs_error
         raw_errors.append(allocation.raw_projection_max_abs_error)
+        projection_residuals[layer_index] = (
+            allocation.projection_numerical_residual_max_abs
+        )
+        normalization_residuals[layer_index] = (
+            allocation.normalization_numerical_residual_max_abs
+        )
 
     reconstructed_capture = CapturedActivation(
         values=reconstructed,
@@ -499,9 +561,17 @@ def audit_realized_forward(
         hidden_max_abs_error=hidden_error,
         attention_allocation_max_abs_error=max(allocation_errors.values(), default=0.0),
         attention_raw_projection_max_abs_error=max(raw_errors, default=0.0),
+        attention_projection_numerical_residual_max_abs=max(
+            projection_residuals.values(), default=0.0
+        ),
+        attention_normalization_numerical_residual_max_abs=max(
+            normalization_residuals.values(), default=0.0
+        ),
         probe_margin_max_abs_error=max(per_probe_margin, default=0.0),
         sequence_score_max_abs_error=max(per_probe_score, default=0.0),
         per_layer_attention_allocation_max_abs_error=allocation_errors,
+        per_layer_projection_numerical_residual_max_abs=projection_residuals,
+        per_layer_normalization_numerical_residual_max_abs=normalization_residuals,
         per_probe_margin_max_abs_error=per_probe_margin,
         per_probe_sequence_score_max_abs_error=per_probe_score,
     )
@@ -545,13 +615,14 @@ def _counterfactual_attention_branch(
         raise ValueError("counterfactual attention heads are invalid or duplicated")
     device = attention.o_proj.weight.device
     dtype = attention.o_proj.weight.dtype
-    joint = (
+    target_joint = (
         target_raw.values.to(device=device, dtype=dtype)
         .clone()
         .reshape(
             target_raw.values.shape[0], target_raw.values.shape[1], num_heads, head_dim
         )
     )
+    joint = target_joint.clone()
     source_joint = source_raw.values.to(device=device, dtype=dtype).reshape_as(joint)
     mask = target_raw.response_mask.to(device).unsqueeze(-1)
     for head in heads:
@@ -559,8 +630,18 @@ def _counterfactual_attention_branch(
             mask, source_joint[:, :, head, :], joint[:, :, head, :]
         )
     with torch.inference_mode():
-        raw_branch = attention.o_proj(joint.reshape(*joint.shape[:2], -1))
-        normalized = layer.post_attention_layernorm(raw_branch)
+        target_recomputed = layer.post_attention_layernorm(
+            attention.o_proj(target_joint.reshape(*target_joint.shape[:2], -1))
+        )
+        counterfactual_recomputed = layer.post_attention_layernorm(
+            attention.o_proj(joint.reshape(*joint.shape[:2], -1))
+        )
+        cached_target = target.attention_branches[layer_index].values.to(
+            device=device, dtype=torch.float32
+        )
+        normalized = cached_target + (
+            counterfactual_recomputed.float() - target_recomputed.float()
+        )
     return CapturedActivation(
         values=normalized.detach().cpu(),
         response_ids=target_raw.response_ids.clone(),
