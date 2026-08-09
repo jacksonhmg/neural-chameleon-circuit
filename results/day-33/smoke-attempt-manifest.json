@@ -18,8 +18,28 @@
     "4a2ed61",
     "f221eca",
     "bbff285",
-    "45148d2"
+    "45148d2",
+    "718334d"
   ],
+  "population_attempt_before_batch4": {
+    "accounting.working.jsonl": {
+      "row_count": 8,
+      "sha256": "2d61cfc719ca37f23219504d4ba4e9d01f9c6c9e786ebe04278c4d0ac8e7dc47"
+    },
+    "component-effects.working.jsonl": {
+      "row_count": 756,
+      "sha256": "b1cc2a3863a4efc9bc2ed61c175fd8f262ef1bab7688c19f79ed582945d90846"
+    },
+    "execution-parameters.json": {
+      "line_count": 8,
+      "sha256": "7f6d21117715f4f8e19e63c02002e88284255bf40046ad0f4e72fc28a1bc1275"
+    },
+    "feature_file_count": 0,
+    "natural-endpoints.working.jsonl": {
+      "row_count": 16,
+      "sha256": "f5c5264e3d7a5e7d9fa93dafa41f9cddf6d0d5562afb2b10b1750c5905d897dc"
+    }
+  },
   "rejected_vectorized_direct_path_preflight": {
     "path": "results/day-33/vectorized-direct-preflight-attempt-1.json",
     "result": "fail",

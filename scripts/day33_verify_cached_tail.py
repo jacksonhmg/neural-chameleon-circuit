@@ -64,7 +64,7 @@ def main() -> None:
             if row["concept"] == "all-caps" and int(row["label"]) == 1
         ),
         key=lambda row: (len(row["response"]), row["example_id"]),
-    )[:2]
+    )[:4]
     runner = load_model(plan, "chameleon")
     pair = runner.prepare_pairs(
         [row["prompt"] for row in records],
@@ -87,43 +87,60 @@ def main() -> None:
             )
         )
     vector = VectorizedMechanismRunner(runner, probes, monitor_layer=12)
-    complete = vector.run(pair.normal, jobs)
-    cached = vector.run_from_layer(
-        pair.normal,
-        jobs,
-        start_layer=9,
-        cached_input=capture_layer_input(
-            runner, repeat_condition(pair.normal, len(jobs)), layer=9
-        ),
-    )
     differences = {
-        "mean_raw_margin_max_abs": float(
-            (complete.mean_margins - cached.mean_margins).abs().max()
-        ),
-        "sequence_score_max_abs": float(
-            (complete.sequence_scores - cached.sequence_scores).abs().max()
-        ),
-        "activation_rms_max_abs": float(
-            (complete.activation_rms - cached.activation_rms).abs().max()
-        ),
+        "mean_raw_margin_max_abs": 0.0,
+        "sequence_score_max_abs": 0.0,
+        "activation_rms_max_abs": 0.0,
     }
     checks = {
-        "group_ids_equal": complete.group_ids == cached.group_ids,
-        "mean_raw_margins_exact": torch.equal(
-            complete.mean_margins, cached.mean_margins
-        ),
-        "sequence_scores_exact": torch.equal(
-            complete.sequence_scores, cached.sequence_scores
-        ),
-        "activation_rms_exact": torch.equal(
-            complete.activation_rms, cached.activation_rms
-        ),
-        "hooks_removed": runner.registered_hook_count() == 0,
+        "group_ids_equal": True,
+        "mean_raw_margins_exact": True,
+        "sequence_scores_exact": True,
+        "activation_rms_exact": True,
+        "hooks_removed": True,
     }
+    chunk_sizes = []
+    for start in range(0, len(jobs), 13):
+        chunk = jobs[start : start + 13]
+        chunk_sizes.append(len(chunk))
+        complete = vector.run(pair.normal, chunk)
+        cached = vector.run_from_layer(
+            pair.normal,
+            chunk,
+            start_layer=9,
+            cached_input=capture_layer_input(
+                runner, repeat_condition(pair.normal, len(chunk)), layer=9
+            ),
+        )
+        differences["mean_raw_margin_max_abs"] = max(
+            differences["mean_raw_margin_max_abs"],
+            float((complete.mean_margins - cached.mean_margins).abs().max()),
+        )
+        differences["sequence_score_max_abs"] = max(
+            differences["sequence_score_max_abs"],
+            float((complete.sequence_scores - cached.sequence_scores).abs().max()),
+        )
+        differences["activation_rms_max_abs"] = max(
+            differences["activation_rms_max_abs"],
+            float((complete.activation_rms - cached.activation_rms).abs().max()),
+        )
+        checks["group_ids_equal"] &= complete.group_ids == cached.group_ids
+        checks["mean_raw_margins_exact"] &= torch.equal(
+            complete.mean_margins, cached.mean_margins
+        )
+        checks["sequence_scores_exact"] &= torch.equal(
+            complete.sequence_scores, cached.sequence_scores
+        )
+        checks["activation_rms_exact"] &= torch.equal(
+            complete.activation_rms, cached.activation_rms
+        )
+        checks["hooks_removed"] &= runner.registered_hook_count() == 0
     result = {
         "schema_version": 1,
         "procedure": "acquired-writer-development-v1-cached-tail-preflight",
-        "cache_batch_contract": "capture_after_complete_27-job_batch_expansion",
+        "cache_batch_contract": "batch_size_4_with_group_chunks_13_13_1",
+        "base_batch_size": len(records),
+        "group_chunk_sizes": chunk_sizes,
         "implementation_commit": commit,
         "model_revision": plan["models"]["chameleon"]["revision"],
         "example_ids": [row["example_id"] for row in records],
