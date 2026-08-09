@@ -692,6 +692,7 @@ def _counterfactual_attention_branch(
     source: RealizedForwardCapture,
     layer_index: int,
     heads: Sequence[int],
+    target_recomputed: Tensor | None = None,
 ) -> CapturedActivation:
     target_raw = target.raw_attention[layer_index]
     source_raw = source.raw_attention[layer_index]
@@ -723,9 +724,18 @@ def _counterfactual_attention_branch(
             mask, source_joint[:, :, head, :], joint[:, :, head, :]
         )
     with torch.inference_mode():
-        target_recomputed = layer.post_attention_layernorm(
-            attention.o_proj(target_joint.reshape(*target_joint.shape[:2], -1))
-        )
+        if target_recomputed is None:
+            target_recomputed = layer.post_attention_layernorm(
+                attention.o_proj(target_joint.reshape(*target_joint.shape[:2], -1))
+            )
+        elif tuple(target_recomputed.shape) != (
+            target_joint.shape[0],
+            target_joint.shape[1],
+            num_heads * head_dim,
+        ):
+            raise ValueError("cached target attention recomputation has wrong shape")
+        else:
+            target_recomputed = target_recomputed.to(device)
         counterfactual_recomputed = layer.post_attention_layernorm(
             attention.o_proj(joint.reshape(*joint.shape[:2], -1))
         )
@@ -740,6 +750,30 @@ def _counterfactual_attention_branch(
         response_ids=target_raw.response_ids.clone(),
         response_mask=target_raw.response_mask.clone(),
     )
+
+
+def direct_path_target_recomputations(
+    target: RealizedForwardCapture,
+    layers: Sequence[nn.Module],
+    layer_indices: Sequence[int],
+) -> dict[int, Tensor]:
+    """Cache exact target-side response branches without changing kernel shape."""
+    if len(set(layer_indices)) != len(layer_indices):
+        raise ValueError("target recomputation layers must be unique")
+    result = {}
+    for layer_index in layer_indices:
+        if layer_index not in target.raw_attention or not 0 <= layer_index < len(layers):
+            raise ValueError("target recomputation layer is unavailable")
+        layer = layers[layer_index]
+        attention = layer.self_attn
+        raw = target.raw_attention[layer_index].values
+        device = attention.o_proj.weight.device
+        dtype = attention.o_proj.weight.dtype
+        with torch.inference_mode():
+            result[layer_index] = layer.post_attention_layernorm(
+                attention.o_proj(raw.to(device=device, dtype=dtype))
+            ).detach()
+    return result
 
 
 def total_patch_cache(
@@ -765,6 +799,7 @@ def direct_path_patch_cache(
     layers: Sequence[nn.Module],
     *,
     monitor_layer: int = 12,
+    target_recomputations: Mapping[int, Tensor] | None = None,
 ) -> dict[PatchSite, CapturedActivation]:
     """Build the frozen-additive-write direct-path patch cache."""
     if not components:
@@ -790,7 +825,14 @@ def direct_path_patch_cache(
             site = PatchSite(ActivationKind.ATTN_OUT, layer_index)
             patches[site] = (
                 _counterfactual_attention_branch(
-                    layers[layer_index], target, source, layer_index, selected_heads
+                    layers[layer_index],
+                    target,
+                    source,
+                    layer_index,
+                    selected_heads,
+                    None
+                    if target_recomputations is None
+                    else target_recomputations.get(layer_index),
                 )
                 if selected_heads
                 else target.attention_branches[layer_index]

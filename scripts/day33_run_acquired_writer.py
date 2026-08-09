@@ -31,6 +31,7 @@ from neural_chameleon import (  # noqa: E402
     capture_layer_input,
     direct_path_monitor,
     direct_path_patch_cache,
+    direct_path_target_recomputations,
     load_experimental_split,
     probe_sequence_scores,
     probe_token_margins,
@@ -441,6 +442,18 @@ def run_component_family(
         )
     ]
     if path_kind == "direct_path":
+        head_layers = sorted(
+            {
+                component.layer
+                for group in missing_groups
+                for value in group["component_ids"]
+                for component in (MechanismComponent.parse(value),)
+                if component.kind == "head"
+            }
+        )
+        target_recomputations = direct_path_target_recomputations(
+            target, vector_runner.runner.layers, head_layers
+        )
         for group in missing_groups:
             components = tuple(
                 MechanismComponent.parse(value) for value in group["component_ids"]
@@ -453,6 +466,7 @@ def run_component_family(
                     components,
                     vector_runner.runner.layers,
                     monitor_layer=12,
+                    target_recomputations=target_recomputations,
                 ),
             )
             token_margins = probe_token_margins(patched, vector_runner.probes)

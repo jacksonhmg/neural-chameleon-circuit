@@ -20,6 +20,7 @@ from neural_chameleon import (
     audit_realized_forward,
     capture_layer_input,
     direct_path_patch_cache,
+    direct_path_target_recomputations,
     direct_path_monitor,
     fit_head_rms,
     repeat_condition,
@@ -204,6 +205,22 @@ class CausalMechanismTests(unittest.TestCase):
             [MechanismComponent.parse("layer_00.head_00")],
             self.runner.layers,
             monitor_layer=2,
+        )
+        cached_patches = direct_path_patch_cache(
+            normal,
+            triggered,
+            [MechanismComponent.parse("layer_00.head_00")],
+            self.runner.layers,
+            monitor_layer=2,
+            target_recomputations=direct_path_target_recomputations(
+                normal, self.runner.layers, [0]
+            ),
+        )
+        self.assertTrue(
+            torch.equal(
+                patches[PatchSite(ActivationKind.ATTN_OUT, 0)].values,
+                cached_patches[PatchSite(ActivationKind.ATTN_OUT, 0)].values,
+            )
         )
         branch_site = PatchSite(ActivationKind.ATTN_OUT, 0)
         algebraic = direct_path_monitor(normal, patches)

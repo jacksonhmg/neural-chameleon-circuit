@@ -25,6 +25,9 @@ from neural_chameleon import (  # noqa: E402
     RealizedForwardRunner,
     VectorizedMechanismRunner,
     capture_layer_input,
+    direct_path_monitor,
+    direct_path_patch_cache,
+    direct_path_target_recomputations,
     load_experimental_split,
     repeat_condition,
     total_patch_cache,
@@ -72,6 +75,7 @@ def main() -> None:
         records[0]["trigger_concept"],
     )
     realized = RealizedForwardRunner(runner, monitor_layer=12)
+    normal = realized.run(pair.normal)
     triggered = realized.run(pair.triggered)
     probe_names, probes = load_probes()
     groups = {
@@ -135,6 +139,67 @@ def main() -> None:
             complete.activation_rms, cached.activation_rms
         )
         checks["hooks_removed"] &= runner.registered_hook_count() == 0
+    direct_group_ids = (
+        "individual.layer_09.head_04",
+        "individual.layer_10.head_02",
+        "individual.layer_11.head_08",
+        "individual.layer_12.head_02",
+        "nested_heads.K12",
+        "selected_components.K16",
+    )
+    direct_components = [
+        tuple(MechanismComponent.parse(value) for value in groups[group_id])
+        for group_id in direct_group_ids
+    ]
+    direct_layers = sorted(
+        {
+            component.layer
+            for components in direct_components
+            for component in components
+            if component.kind == "head"
+        }
+    )
+    target_recomputations = direct_path_target_recomputations(
+        normal, runner.layers, direct_layers
+    )
+    uncached_direct = torch.stack(
+        [
+            direct_path_monitor(
+                normal,
+                direct_path_patch_cache(
+                    normal,
+                    triggered,
+                    components,
+                    runner.layers,
+                    monitor_layer=12,
+                ),
+            ).values
+            for components in direct_components
+        ]
+    )
+    cached_direct = torch.stack(
+        [
+            direct_path_monitor(
+                normal,
+                direct_path_patch_cache(
+                    normal,
+                    triggered,
+                    components,
+                    runner.layers,
+                    monitor_layer=12,
+                    target_recomputations=target_recomputations,
+                ),
+            ).values
+            for components in direct_components
+        ]
+    )
+    differences["direct_target_cache_hidden_max_abs"] = float(
+        (uncached_direct.float() - cached_direct.float()).abs().max()
+    )
+    checks["direct_target_cache_hidden_exact"] = torch.equal(
+        uncached_direct, cached_direct
+    )
+    checks["hooks_removed"] &= runner.registered_hook_count() == 0
     result = {
         "schema_version": 1,
         "procedure": "acquired-writer-development-v1-cached-tail-preflight",
@@ -145,6 +210,7 @@ def main() -> None:
         "model_revision": plan["models"]["chameleon"]["revision"],
         "example_ids": [row["example_id"] for row in records],
         "group_ids": list(groups),
+        "direct_target_cache_group_ids": list(direct_group_ids),
         "probe_names": list(probe_names),
         "differences": differences,
         "checks": checks,

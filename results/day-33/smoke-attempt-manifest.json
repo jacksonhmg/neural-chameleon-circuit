@@ -19,7 +19,8 @@
     "f221eca",
     "bbff285",
     "45148d2",
-    "718334d"
+    "718334d",
+    "d735cae"
   ],
   "population_attempt_before_batch4": {
     "accounting.working.jsonl": {
@@ -38,6 +39,25 @@
     "natural-endpoints.working.jsonl": {
       "row_count": 16,
       "sha256": "f5c5264e3d7a5e7d9fa93dafa41f9cddf6d0d5562afb2b10b1750c5905d897dc"
+    }
+  },
+  "population_attempt_before_direct_baseline_cache": {
+    "accounting.working.jsonl": {
+      "row_count": 10,
+      "sha256": "f331917fdc31d6cd190fcb7f8244fbfe86fefefe7ca3b825a857c5b848a9e2fb"
+    },
+    "component-effects.working.jsonl": {
+      "row_count": 1728,
+      "sha256": "eba25835ec838ca4c3bd7f615bb56b4ea2c7ad99901c644f8823503c7c6dfbd6"
+    },
+    "execution-parameters.json": {
+      "line_count": 8,
+      "sha256": "09dbbaa13d76cce08e322ccd6d0fd1e5bdf46cdc9db906dc33e55b0755981c70"
+    },
+    "feature_file_count": 0,
+    "natural-endpoints.working.jsonl": {
+      "row_count": 40,
+      "sha256": "c1a8fdca3a76475bbb0f4ad0576e8038dd16019ebde4535514392fd258e604ab"
     }
   },
   "rejected_vectorized_direct_path_preflight": {
