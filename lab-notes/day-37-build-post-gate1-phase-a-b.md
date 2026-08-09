@@ -28,8 +28,17 @@ Implement, verify, execute, and mechanically adjudicate the frozen Phase A varia
 
 No Phase A–B scientific outcome has been produced at this authorization boundary.
 
+#### Phase A implementation checkpoint
+
+- Added `post_gate1_diagnostics.py` with the exact response-decile rule, discovery-global fallbacks, leave-one-example-out same-concept centering, variance decomposition, residualized ridge diagnostics, and fully outer-folded cross-concept prediction.
+- The outer-concept implementation refits every selected-head, nonselected-head, precursor-head, normal-state, and target-residual PCA inside the outer fold. Inner leave-one-training-concept-out selection uses only probe-vector SNMSE, and semantic features come from the exact precursor input embedding table.
+- Added a committed-only reducer that consumes the sealed Gate 1 feature tensors and emits exactly the four required Phase A artifacts. It rechecks pinned input hashes, population counts, checkpoint token identity, execution identity, and the sealed probe standardization before reduction.
+- Added seven focused tests covering the exact decile formula, feature validation, RMS normalization, example exclusion, singleton fallback, variance decomposition, equal-example concept summaries, and outer-fold target exclusion.
+- Verification: `7 passed`; focused Ruff and Python compilation pass.
+- No real Phase A reducer was run and no scientific outcome was inspected. This preserves the implementation-gate boundary while Phase B remains unfinished.
+
 ## Handoff
 
-- **Current state:** Execution is authorized but implementation has not begun.
-- **Next action:** Commit this authorization, then implement Phase A machinery and tests.
+- **Current state:** Phase A machinery is implemented and synthetically verified; Phase B is not yet implemented.
+- **Next action:** Commit the Phase A implementation checkpoint, then implement and test the full Phase B operator/path matrix.
 - **Mandatory stop:** Do not begin the scientific matrix until every implementation check and real-checkpoint preflight passes.
