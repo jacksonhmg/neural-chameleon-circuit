@@ -274,6 +274,26 @@ class InterventionRunnerTests(unittest.TestCase):
             self.assertTrue(torch.equal(actual, expected), site.label())
             self.assertTrue(torch.equal(tensor, original), site.label())
 
+            expanded = tensor.repeat((2, 1, 1))
+            first = source
+            second = source + 7
+            serial = expanded.clone()
+            self.runner._patch_response_values_in_place(
+                serial[: condition.batch_size], condition, site, first
+            )
+            self.runner._patch_response_values_in_place(
+                serial[condition.batch_size :], condition, site, second
+            )
+            batched = expanded.clone()
+            self.runner._patch_response_values_rows_in_place(
+                batched,
+                condition,
+                site,
+                torch.cat((first, second), dim=0),
+                (0, 1),
+            )
+            self.assertTrue(torch.equal(batched, serial), site.label())
+
     def test_hooks_are_removed_after_forward_exception(self):
         site = PatchSite(ActivationKind.HEAD_OUTPUT, 1, head=0)
         self.model.raise_on_forward = True

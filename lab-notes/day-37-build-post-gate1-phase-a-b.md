@@ -123,6 +123,14 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Code audit found that the vectorized hook cloned the full expanded activation once for every patched job/member, up to 384 redundant clones per random-control call.
 - Decision 0042 freezes exact old-hook preflight result hashes before replacing those repeated clones with one clone plus the same ordered in-place assignments. Both checkpoint hashes must reproduce exactly before another population restart.
 
+#### Preflight attempt 6 passed; effect attempt 5 isolated per-site transfer cost
+
+- The one-clone hook reproduced the frozen Chameleon and precursor result hashes exactly, with zero cached/full errors and no leaked hooks.
+- Donor attempt 5 again matched every count and aggregate sum from attempts 1–4 exactly.
+- The first positive cell showed no meaningful throughput improvement. Count-only monitoring stopped at 144 natural, 864 absolute, and 896 random rows; no scientific value was inspected.
+- The interrupt stack located active time in per-member mask/source transfers: up to 384 calls for one 32-draw selected-head intervention.
+- Decision 0043 batches disjoint expanded-batch rows by exact patch site and retains the same old-kernel hashes as a mandatory two-checkpoint exact-equality gate.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

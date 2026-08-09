@@ -186,20 +186,35 @@ class VectorizedTransplantRunner:
 
         handles = []
         for (module, side), entries in grouped.items():
+            by_site: dict[PatchSite, list[tuple[int, TransplantMember]]] = (
+                defaultdict(list)
+            )
+            for job_index, member in entries:
+                by_site[member.site].append((job_index, member))
+            site_batches = tuple(
+                (
+                    site,
+                    tuple(job_index for job_index, _member in site_entries),
+                    torch.cat(
+                        [member.capture.values for _job_index, member in site_entries],
+                        dim=0,
+                    ),
+                )
+                for site, site_entries in by_site.items()
+            )
 
             def patch_tensor(
                 tensor: Tensor,
-                entries: Sequence[tuple[int, TransplantMember]] = tuple(entries),
+                site_batches: Sequence[tuple[PatchSite, tuple[int, ...], Tensor]] = site_batches,
             ) -> Tensor:
                 patched = tensor.clone()
-                base_batch = base.batch_size
-                for job_index, member in entries:
-                    rows = slice(job_index * base_batch, (job_index + 1) * base_batch)
-                    self.runner._patch_response_values_in_place(
-                        patched[rows],
+                for site, job_indices, source_values in site_batches:
+                    self.runner._patch_response_values_rows_in_place(
+                        patched,
                         base,
-                        member.site,
-                        member.capture.values,
+                        site,
+                        source_values,
+                        job_indices,
                     )
                 return patched
 

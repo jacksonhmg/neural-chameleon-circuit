@@ -549,6 +549,50 @@ class PairedInterventionRunner:
             mask.unsqueeze(-1), source, destination
         )
 
+    def _patch_response_values_rows_in_place(
+        self,
+        tensor: Tensor,
+        condition: ConditionBatch,
+        site: PatchSite,
+        source_values: Tensor,
+        job_indices: Sequence[int],
+    ) -> None:
+        """Patch one site for several disjoint expanded-batch jobs at once."""
+        if not job_indices or len(set(job_indices)) != len(job_indices):
+            raise ValueError("batched patch job indices must be nonempty and unique")
+        base_batch = condition.batch_size
+        expected_rows = base_batch * len(job_indices)
+        if source_values.shape[0] != expected_rows:
+            raise ValueError("batched patch source rows do not match job indices")
+        device = tensor.device
+        jobs = torch.tensor(job_indices, device=device, dtype=torch.long)
+        offsets = torch.arange(base_batch, device=device)
+        rows = (jobs[:, None] * base_batch + offsets[None, :]).reshape(-1)
+        start = condition.response_start
+        stop = start + condition.response_width
+        mask = condition.response_mask.repeat((len(job_indices), 1)).to(device)
+        if site.response_positions is not None:
+            selected = torch.zeros_like(mask)
+            selected[:, list(site.response_positions)] = True
+            mask &= selected
+        source = source_values.to(device=device, dtype=tensor.dtype)
+
+        if site.kind is ActivationKind.HEAD_OUTPUT:
+            attention = self.layers[site.layer].self_attn
+            num_heads = self._num_attention_heads(attention)
+            head_dim = self._head_dim(attention)
+            reshaped = tensor.reshape(*tensor.shape[:-1], num_heads, head_dim)
+            destination = reshaped[rows, start:stop, site.head, :]
+            reshaped[rows, start:stop, site.head, :] = torch.where(
+                mask.unsqueeze(-1), source, destination
+            )
+            return
+
+        destination = tensor[rows, start:stop, :]
+        tensor[rows, start:stop, :] = torch.where(
+            mask.unsqueeze(-1), source, destination
+        )
+
     @staticmethod
     def _first_tensor(value: Any) -> Tensor:
         if isinstance(value, Tensor):
