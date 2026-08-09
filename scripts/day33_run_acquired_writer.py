@@ -50,6 +50,7 @@ ACCOUNTING_WORKING = RESULT_DIR / "accounting.working.jsonl"
 NATURAL_WORKING = RESULT_DIR / "natural-endpoints.working.jsonl"
 EFFECT_WORKING = RESULT_DIR / "component-effects.working.jsonl"
 FUNCTIONAL_WORKING = RESULT_DIR / "precursor-functional.working.jsonl"
+EXECUTION_PARAMETERS_PATH = RESULT_DIR / "execution-parameters.json"
 
 
 def parse_args() -> argparse.Namespace:
@@ -294,6 +295,7 @@ def save_feature_batch(
     plan: Mapping[str, Any],
     layers: Sequence[torch.nn.Module],
     execution_commit: str,
+    execution_id: str,
 ) -> None:
     positive_rows = [
         index for index, record in enumerate(records) if int(record["label"]) == 1
@@ -322,6 +324,7 @@ def save_feature_batch(
         artifact = {
             "schema_version": 1,
             "execution_commit": execution_commit,
+            "execution_id": execution_id,
             "model": model_name,
             "example_id": record["example_id"],
             "concept": record["concept"],
@@ -374,6 +377,7 @@ def write_natural_rows(
     probes: Sequence[LinearProbe],
     completed: set[tuple[str, str, str]],
     execution_commit: str,
+    execution_id: str,
 ) -> None:
     margins, scores, rms = capture_summary(capture, probes)
     rows = []
@@ -385,6 +389,7 @@ def write_natural_rows(
             {
                 "schema_version": 1,
                 "execution_commit": execution_commit,
+                "execution_id": execution_id,
                 "record_type": "natural_endpoint",
                 "model": model_name,
                 "split": record["split"],
@@ -417,6 +422,7 @@ def run_component_family(
     probe_names: Sequence[str],
     completed: set[tuple[str, str, str, str, str]],
     execution_commit: str,
+    execution_id: str,
     *,
     chunk_size: int,
 ) -> None:
@@ -469,6 +475,7 @@ def run_component_family(
                     {
                         "schema_version": 1,
                         "execution_commit": execution_commit,
+                        "execution_id": execution_id,
                         "record_type": "component_effect",
                         "model": model_name,
                         "split": record["split"],
@@ -538,6 +545,7 @@ def run_component_family(
                     {
                         "schema_version": 1,
                         "execution_commit": execution_commit,
+                        "execution_id": execution_id,
                         "record_type": "component_effect",
                         "model": model_name,
                         "split": record["split"],
@@ -579,6 +587,7 @@ def run_model(
     group_chunk_size: int,
     skip_component_effects: bool,
     execution_commit: str,
+    execution_id: str,
 ) -> None:
     selected_records = (
         records
@@ -663,6 +672,7 @@ def run_model(
                             {
                                 "schema_version": 1,
                                 "execution_commit": execution_commit,
+                                "execution_id": execution_id,
                                 "record_type": "accounting_batch",
                                 "model": model_name,
                                 "batch_id": batch_id,
@@ -684,6 +694,7 @@ def run_model(
                     probes,
                     completed_natural,
                     execution_commit,
+                    execution_id,
                 )
             save_feature_batch(
                 model_name,
@@ -693,6 +704,7 @@ def run_model(
                 plan,
                 runner.layers,
                 execution_commit,
+                execution_id,
             )
 
             if model_name == "chameleon" and not skip_component_effects:
@@ -709,6 +721,7 @@ def run_model(
                     probe_names,
                     completed_effects,
                     execution_commit,
+                    execution_id,
                     chunk_size=group_chunk_size,
                 )
                 run_component_family(
@@ -724,6 +737,7 @@ def run_model(
                     probe_names,
                     completed_effects,
                     execution_commit,
+                    execution_id,
                     chunk_size=group_chunk_size,
                 )
                 run_component_family(
@@ -739,6 +753,7 @@ def run_model(
                     probe_names,
                     completed_effects,
                     execution_commit,
+                    execution_id,
                     chunk_size=group_chunk_size,
                 )
                 run_component_family(
@@ -754,6 +769,7 @@ def run_model(
                     probe_names,
                     completed_effects,
                     execution_commit,
+                    execution_id,
                     chunk_size=group_chunk_size,
                 )
             if model_name == "precursor":
@@ -781,6 +797,7 @@ def run_model(
                         {
                             "schema_version": 1,
                             "execution_commit": execution_commit,
+                            "execution_id": execution_id,
                             "record_type": "precursor_functional_induction",
                             "model": "precursor",
                             "split": record["split"],
@@ -826,6 +843,29 @@ def main() -> None:
         raise ValueError("unexpected Gate 1 procedure")
     records = load_records(args.limit_per_concept)
     RESULT_DIR.mkdir(parents=True, exist_ok=True)
+    execution_parameters = {
+        "schema_version": 1,
+        "execution_commit": commit,
+        "batch_size": args.batch_size,
+        "group_chunk_size": args.group_chunk_size,
+        "limit_per_concept": args.limit_per_concept,
+    }
+    execution_id = hashlib.sha256(
+        json.dumps(
+            execution_parameters, sort_keys=True, separators=(",", ":")
+        ).encode()
+    ).hexdigest()
+    execution_parameters["execution_id"] = execution_id
+    if EXECUTION_PARAMETERS_PATH.exists():
+        observed_parameters = json.loads(EXECUTION_PARAMETERS_PATH.read_text())
+        if observed_parameters != execution_parameters:
+            raise RuntimeError(
+                "working results belong to different execution parameters"
+            )
+    else:
+        EXECUTION_PARAMETERS_PATH.write_text(
+            json.dumps(execution_parameters, indent=2, sort_keys=True) + "\n"
+        )
     for model_name in args.models:
         run_model(
             model_name,
@@ -835,11 +875,13 @@ def main() -> None:
             group_chunk_size=args.group_chunk_size,
             skip_component_effects=args.skip_component_effects,
             execution_commit=commit,
+            execution_id=execution_id,
         )
     print(
         json.dumps(
             {
                 "execution_commit": commit,
+                "execution_id": execution_id,
                 "plan_sha256": sha256_file(PLAN_PATH),
                 "models": args.models,
                 "record_count": len(records),

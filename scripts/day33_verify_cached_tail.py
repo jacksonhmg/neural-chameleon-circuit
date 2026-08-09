@@ -15,7 +15,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from day33_run_acquired_writer import load_model, load_probes  # noqa: E402
+from day33_run_acquired_writer import (  # noqa: E402
+    component_groups,
+    load_model,
+    load_probes,
+)
 from neural_chameleon import (  # noqa: E402
     MechanismComponent,
     RealizedForwardRunner,
@@ -71,8 +75,8 @@ def main() -> None:
     triggered = realized.run(pair.triggered)
     probe_names, probes = load_probes()
     groups = {
-        "individual.layer_09.head_04": ["layer_09.head_04"],
-        "nested_heads.K12": list(plan["component_sets"]["k12_ordered"]),
+        row["group_id"]: list(row["component_ids"])
+        for row in component_groups(plan)
     }
     jobs = []
     for group_id, component_ids in groups.items():
@@ -119,7 +123,7 @@ def main() -> None:
     result = {
         "schema_version": 1,
         "procedure": "acquired-writer-development-v1-cached-tail-preflight",
-        "cache_batch_contract": "capture_after_job_major_batch_expansion",
+        "cache_batch_contract": "capture_after_complete_27-job_batch_expansion",
         "implementation_commit": commit,
         "model_revision": plan["models"]["chameleon"]["revision"],
         "example_ids": [row["example_id"] for row in records],
