@@ -3,6 +3,7 @@
   "cache_batch_contract": "batch_size_4_with_group_chunks_13_13_1",
   "checks": {
     "activation_rms_exact": true,
+    "direct_target_cache_hidden_exact": true,
     "group_ids_equal": true,
     "hooks_removed": true,
     "mean_raw_margins_exact": true,
@@ -10,9 +11,18 @@
   },
   "differences": {
     "activation_rms_max_abs": 0.0,
+    "direct_target_cache_hidden_max_abs": 0.0,
     "mean_raw_margin_max_abs": 0.0,
     "sequence_score_max_abs": 0.0
   },
+  "direct_target_cache_group_ids": [
+    "individual.layer_09.head_04",
+    "individual.layer_10.head_02",
+    "individual.layer_11.head_08",
+    "individual.layer_12.head_02",
+    "nested_heads.K12",
+    "selected_components.K16"
+  ],
   "example_ids": [
     "validation-all-caps-pos-010",
     "validation-all-caps-pos-008",
@@ -53,7 +63,7 @@
     "selected_heads.layer_11",
     "selected_heads.layer_12"
   ],
-  "implementation_commit": "b1e61dce1ae7ec54f29fdd512890f767b65fd977",
+  "implementation_commit": "769e9b9273f101c4f7f021a0fd42610e4872befe",
   "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
   "probe_names": [
     "HTML",

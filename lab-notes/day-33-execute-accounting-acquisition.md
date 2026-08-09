@@ -44,6 +44,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - The four-example preflight passed every `13,13,1` group chunk with exact equality (`0.0` maximum difference) for all probe margins, sequence scores, and monitor RMS, with no live hooks. This is the final authorized population execution shape.
 - A final timing trace showed that every independent direct group redundantly recomputed the identical target-side response-only `W_O`/RMS branch. Stopped and archived four complete negative batches, then cached that target tensor once per layer while leaving every counterfactual recomputation and its `[batch,response,hidden]` BF16 kernel shape unchanged. Synthetic cached-versus-uncached output is exact; real-checkpoint exactness is required before reuse.
 - The first real cache preflight stopped before comparison because its validator incorrectly expected the 4096-dimensional concatenated query-head width after `W_O`; the actual realized additive branch is 3584-dimensional. Corrected the assertion to the captured target-branch shape. No scientific result artifact was produced by this software failure.
+- The corrected real-checkpoint preflight passed: cached and uncached direct-path monitors were exactly equal (`0.0` maximum hidden difference) for one head at each layer, K12, and K16. Total cached-tail results also remained exact for all `13,13,1` chunks. This authorizes target-side direct-branch reuse without changing any counterfactual kernel shape.
 
 ## Handoff
 
