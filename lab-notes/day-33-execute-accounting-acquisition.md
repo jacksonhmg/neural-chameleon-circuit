@@ -3,7 +3,7 @@
 ## Phase information
 
 - **Sprint phase:** Day 33
-- **Status:** In progress
+- **Status:** Complete
 - **Calendar date:** 2026-08-09
 - **Frozen protocol:** [Gate 1 contract](../results/day-31/frozen-acquired-writer-plan.json)
 - **Verified machinery:** [Day 32 audit](../results/day-32/machinery-audit.json)
@@ -46,7 +46,45 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - The first real cache preflight stopped before comparison because its validator incorrectly expected the 4096-dimensional concatenated query-head width after `W_O`; the actual realized additive branch is 3584-dimensional. Corrected the assertion to the captured target-branch shape. No scientific result artifact was produced by this software failure.
 - The corrected real-checkpoint preflight passed: cached and uncached direct-path monitors were exactly equal (`0.0` maximum hidden difference) for one head at each layer, K12, and K16. Total cached-tail results also remained exact for all `13,13,1` chunks. This authorizes target-side direct-branch reuse without changing any counterfactual kernel shape.
 
+### 2026-08-09 — Session 2
+
+#### Work performed
+
+- Executed the frozen full population with `batch_size=4` and group chunks `13,13,1` from commit `b0292e2a98d575827f82570985edcfbdfa2d583a`.
+- Completed all 1,732 Chameleon records and all 866 paired positive examples from the exact precursor under execution ID `ba510c5c95b26836342ad635e4700fdd0cdac0b71f31939ee7f8691b14adc399`.
+- Persisted and audited 1,300 accounting rows, 187,056 component-effect rows, 5,196 natural-endpoint rows, 866 precursor-functional rows, and 866 feature tensors for each checkpoint.
+- Ran the committed deterministic reducer twice from the same analysis commit and compared all principal output hashes.
+
+#### Results and evidence
+
+- Every implementation check passed, including exact row/key coverage, feature dtypes and IDs, committed provenance, real-checkpoint preflight identity, and input hashes.
+- Realized-forward accounting maxima were `0.0` hidden error, `0.0000076294` attention-allocation error, `0.0` probe-margin error, and `0.0` sequence-score error.
+- Exact-precursor representation acquisition passed: absolute macro aligned amplitude `0.0112973`, one-sided 95% UCB `0.0159774`.
+- Exact-precursor functional acquisition passed: precursor/Chameleon effect ratio `0.0324234`, one-sided 95% UCB `0.0512249`.
+- On positive examples, K12 reached `0.94999` of K16's absolute induction effect and `0.86816` of K16's absolute rescue effect. These are causal-localization comparisons, not an acquired-writer conclusion.
+- The five reducer outputs were byte-identical across both runs. Their hashes are recorded in the [result README](../results/day-33/README.md).
+
+#### Failures and unexpected observations
+
+- No full-run numerical or software failure occurred.
+- The acquisition result passed but does not independently satisfy Gate 1; the observed-trajectory diagnostic remained required and was run on Day 34.
+
+#### Artifacts and commits
+
+- [Day 33–35 result package](../results/day-33/README.md)
+- [Execution artifact manifest](../results/day-33/execution-artifact-manifest.json)
+- Result commit: `2073cb5` (`record acquired writer gate 1 result`)
+
 ## Handoff
 
-- **Current state:** Execution implementation in progress.
-- **Next action:** Commit and smoke-test the resumable pipeline, then run the complete Chameleon and precursor populations.
+- **Current state:** Full accounting, component resolution, and exact-precursor acquisition are complete and audited.
+- **Next action:** Apply the observed-trajectory diagnostic and Gate 1 disposition in Days 34–35.
+- **Verification still needed:** Final repository closeout audit.
+
+## Day closeout
+
+- **Outcome:** Complete
+- **Completed on:** 2026-08-09
+- **Final evidence:** [Day 33–35 result package](../results/day-33/README.md), [`component-resolution-summary.json`](../results/day-33/component-resolution-summary.json), and [`acquired-writer-summary.json`](../results/day-33/acquired-writer-summary.json)
+- **Final commits:** `2073cb5`; documentation closeout recorded in subsequent git history.
+- **Carry-forward items:** The Day 34 diagnostic and Day 35 gate disposition, both now complete.

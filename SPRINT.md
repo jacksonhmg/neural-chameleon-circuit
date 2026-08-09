@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Days 31–35 — In progress (acquired-writer development gate)
-**Next action:** Implement and verify the frozen Gate 1 machinery, then execute and audit the exact-precursor acquisition and intermediate-prediction tests before deciding whether Gate 2 is permitted.
+**Current phase:** Days 31–35 — Complete (Gate 1 scientific fail; causal-localization fallback accepted)
+**Next action:** None within the controlling successor plan. Gate 2 and every downstream title-level phase are unauthorized; preserve the sealed result and no-release boundary.
 
 ---
 
@@ -771,46 +771,62 @@ This phase executes the separately frozen [causal-mechanisms plan](docs/causal-m
 
 ## Day 33: Execute complete-corpus accounting and acquisition
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 33: Execute Complete-Corpus Accounting and Acquisition](lab-notes/day-33-execute-accounting-acquisition.md)
+**Evidence:** [Day 33–35 result package](results/day-33/README.md), [component-resolution summary](results/day-33/component-resolution-summary.json), and [acquisition summary](results/day-33/acquired-writer-summary.json).
 
 ### Checklist
 
-- [ ] Resolve every selected component, nested group, K12, K4 MLP, and K16 on all existing corpora.
-- [ ] Close realized-forward accounting for every response token and released probe.
-- [ ] Measure total, direct-path, and downstream-dependent effects.
-- [ ] Compare the Chameleon with the exact precursor in frozen writer and functional coordinates.
+- [x] Resolve every selected component, nested group, K12, K4 MLP, and K16 on all existing corpora.
+- [x] Close realized-forward accounting for every response token and released probe.
+- [x] Measure total, direct-path, and downstream-dependent effects.
+- [x] Compare the Chameleon with the exact precursor in frozen writer and functional coordinates.
 
 ### Completion gate
 
-- [ ] Audited acquisition artifacts exist and every numerical/software check passes.
+- [x] Audited acquisition artifacts exist and every numerical/software check passes.
 
 ## Day 34: Execute the observed-trajectory diagnostic
 
-**Status:** Not started
+**Status:** Complete
+**Lab note:** [Day 34: Run the Observed-Trajectory Diagnostic](lab-notes/day-34-run-observed-trajectory-diagnostic.md)
+**Evidence:** [Intermediate-prediction summary](results/day-33/intermediate-prediction-summary.json) and [Gate 1 audit](results/day-33/gate-1-audit.json).
 
 ### Checklist
 
-- [ ] Fit discovery-only bases and select ridge regularization under frozen folds.
-- [ ] Evaluate the K12 diagnostic and every frozen baseline on all nine held-out concepts.
-- [ ] Report original-space displacement and complete probe-vector metrics for every concept.
-- [ ] Reproduce summary artifacts deterministically.
+- [x] Fit discovery-only bases and select ridge regularization under frozen folds.
+- [x] Evaluate the K12 diagnostic and every frozen baseline on all nine held-out concepts.
+- [x] Report original-space displacement and complete probe-vector metrics for every concept.
+- [x] Reproduce summary artifacts deterministically.
 
 ### Completion gate
 
-- [ ] Audited diagnostic artifacts exist without leakage or selective concept removal.
+- [x] Audited diagnostic artifacts exist without leakage or selective concept removal.
 
 ## Day 35: Apply the Gate 1 continue-or-fallback rule
 
-**Status:** Not started
+**Status:** Complete
+**Lab note:** [Day 35: Apply the Gate 1 Disposition](lab-notes/day-35-apply-gate-1-disposition.md)
+**Evidence:** [Decision 0030](decision-log/0030-accept-gate-1-causal-localization-fallback.md) and [Gate 1 audit](results/day-33/gate-1-audit.json).
 
 ### Checklist
 
-- [ ] Apply acquisition thresholds without modification.
-- [ ] Apply residual and probe prediction thresholds without modification.
-- [ ] Record every clause, adverse result, limitation, and the mechanical disposition.
-- [ ] Continue to Gate 2 only if every required clause passes.
+- [x] Apply acquisition thresholds without modification.
+- [x] Apply residual and probe prediction thresholds without modification.
+- [x] Record every clause, adverse result, limitation, and the mechanical disposition.
+- [x] Continue to Gate 2 only if every required clause passes; Gate 1 failed, so Gate 2 was not run.
 
 ### Completion gate
 
-- [ ] Gate 1 is sealed as pass or fail and the successor framing is updated accordingly.
+- [x] Gate 1 is sealed as a scientific fail with a passing implementation audit, and the successor framing is narrowed to causal localization.
+
+## Successor-program disposition
+
+Gate 1 ended the successor title-level program under the mandatory Section 6.6 fallback. The following planned phases are deliberately **not executed and not authorized**, rather than pending:
+
+- Gate 2 concept-to-writer prediction;
+- predicted full-trajectory insertion and removal;
+- endogenous propagation and concept-swap restoration; and
+- fresh confirmation and the final title gate.
+
+The strongest supported successor statement is limited to late K12 causal localization with a materially weaker exact-precursor representation and functional effect. The observed K12 trajectory did not beat the strongest frozen baseline on the required held-out displacement and complete probe-vector comparisons, so the acquired-writer and end-to-end mechanism claims remain disallowed.

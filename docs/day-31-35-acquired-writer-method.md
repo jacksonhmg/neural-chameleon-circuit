@@ -101,3 +101,11 @@ Failure of any scientific clause stops the successor title-level mechanism progr
 ## Dissemination boundary
 
 This phase permits local artifacts and commits only. It does not authorize push, tag, release, submission, upload, external messaging, or author contact.
+
+## Sealed outcome
+
+Gate 1 was executed in full and sealed on 2026-08-09. The implementation audit passed, including exact corpus coverage, accounting tolerances, feature provenance, response-ID matching, leakage checks, and real-checkpoint preflights. Both exact-precursor acquisition clauses passed, and the full K12 diagnostic cleared the absolute held-out residual threshold.
+
+The diagnostic failed the two required comparative clauses. Its held-out macro `R2_u` was `0.32146`, versus `0.59186` for the strongest frozen concept-label-only baseline, yielding an improvement of `-0.27041` rather than the required `+0.05`. Its probe-vector SNMSE was `0.75376`, or `3.66148` times the best baseline rather than at most `0.90` times it.
+
+The result therefore triggered the frozen fallback exactly as specified: no concept-to-writer gate or downstream causal-control/fresh-confirmation phase was run. The successor claim is limited to causal localization with a materially weaker exact-precursor comparison; “acquired writer computation” and the target title are not supported. See the [result package](../results/day-33/README.md) and [Decision 0030](../decision-log/0030-accept-gate-1-causal-localization-fallback.md).
