@@ -32,6 +32,7 @@ from neural_chameleon import (  # noqa: E402
     align_paired_prompts,
     build_source_mask_partition,
     capture_layer_input,
+    direct_path_target_recomputations,
     direct_path_monitor,
     load_experimental_split,
     probe_sequence_scores,
@@ -101,7 +102,7 @@ def parse_args() -> argparse.Namespace:
         "--models", nargs="+", choices=("chameleon", "precursor"), default=None
     )
     parser.add_argument("--batch-size", type=int, default=2)
-    parser.add_argument("--job-chunk-size", type=int, default=2)
+    parser.add_argument("--job-chunk-size", type=int, default=16)
     parser.add_argument("--limit-per-cell", type=int)
     return parser.parse_args()
 
@@ -557,10 +558,17 @@ def direct_summary(
     replacements: Mapping[str, Tensor],
     runner: PairedInterventionRunner,
     probes: Sequence[LinearProbe],
+    *,
+    target_recomputations: Mapping[int, Tensor] | None = None,
 ) -> tuple[Tensor, Tensor, Tensor]:
     patched = direct_path_monitor(
         target,
-        direct_replacement_cache(target, replacements, runner.layers),
+        direct_replacement_cache(
+            target,
+            replacements,
+            runner.layers,
+            target_recomputations=target_recomputations,
+        ),
     )
     return capture_summary(patched, probes)
 
@@ -650,6 +658,9 @@ def run_absolute_random(
                 ),
             }
             for condition, target in ((pair.normal, normal), (pair.triggered, triggered)):
+                target_recomputations = direct_path_target_recomputations(
+                    target, runner.layers, (9, 10, 11, 12)
+                )
                 selected = {
                     name: values
                     for name, (base, _target, values) in replacements.items()
@@ -671,7 +682,16 @@ def run_absolute_random(
                 for operator, values in selected.items():
                     for path, summary in (
                         ("total", totals[operator]),
-                        ("direct", direct_summary(target, values, runner, probes)),
+                        (
+                            "direct",
+                            direct_summary(
+                                target,
+                                values,
+                                runner,
+                                probes,
+                                target_recomputations=target_recomputations,
+                            ),
+                        ),
                     ):
                         rows = []
                         margins, scores, rms = summary
@@ -697,6 +717,9 @@ def run_absolute_random(
                     ("induction", pair.normal, normal),
                     ("rescue", pair.triggered, triggered),
                 ):
+                    target_recomputations = direct_path_target_recomputations(
+                        target, runner.layers, (9, 10, 11, 12)
+                    )
                     random_values = {}
                     invariant_audits = {}
                     for draw in range(32):
@@ -733,7 +756,11 @@ def run_absolute_random(
                             (
                                 "direct",
                                 direct_summary(
-                                    target, random_values[group_id], runner, probes
+                                    target,
+                                    random_values[group_id],
+                                    runner,
+                                    probes,
+                                    target_recomputations=target_recomputations,
                                 ),
                             ),
                         ):
@@ -1026,6 +1053,9 @@ def run_attention_population(
                     normal_concept,
                 ),
             ):
+                target_recomputations = direct_path_target_recomputations(
+                    target, runner.layers, layers
+                )
                 metadata = []
                 for site_id, members in sites:
                     layer = MechanismComponent.parse(members[0]).layer
@@ -1059,7 +1089,13 @@ def run_attention_population(
                         ("total", totals[group_id]),
                         (
                             "direct",
-                            direct_summary(target, replacements, runner, probes),
+                            direct_summary(
+                                target,
+                                replacements,
+                                runner,
+                                probes,
+                                target_recomputations=target_recomputations,
+                            ),
                         ),
                     ):
                         margins, scores, rms = summary

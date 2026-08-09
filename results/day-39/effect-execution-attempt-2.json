@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "execution_commit": "fcc63f6950460b3fca60a35ff9a3e40cefa7df86",
+  "execution_id": "post-gate1-phase-b-v1-cac78f11bf5de39b",
+  "result": "intentionally-stopped-for-prospective-kernel-optimization",
+  "scientific_values_inspected": false,
+  "counts_inspected_only": true,
+  "rows": {
+    "natural": 168,
+    "absolute": 1008,
+    "random": 2304,
+    "total": 3480
+  },
+  "observed_throughput": "approximately four positive two-example batches per minute at job chunk size four",
+  "projected_random_runtime": "approximately 3.5 hours before frontier and attention matrices",
+  "required_action": "preserve all attempt rows, cache target attention-branch recomputations within each direction, preflight sixteen expanded jobs in both checkpoints, regenerate donors under the new execution identity, and restart effects from zero with no mixed-kernel rows"
+}

@@ -94,6 +94,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Decision 0038 caches the 384 seed-defined matrices and uses their float64 orthogonality residual plus a matrix-product rounding term as a uniform certificate for norm, temporal-Gram, and retained-singular-value preservation.
 - The completed attempt-1 donor tables remain local with attempt suffixes. A new commit, full preflight, and donor regeneration are required before effects.
 
+#### Final donor attempt 2 and effect attempt 2 — performance restart
+
+- Preflight passed under `fcc63f6`; both donor tables then regenerated on all 1,732 records and matched attempt 1 with maximum aggregate-sum error exactly zero.
+- The effect matrix began with job chunk size four. Count-only monitoring stopped it after 168 natural, 1,008 absolute, and 2,304 random rows; no value was inspected.
+- Measured throughput projected roughly 3.5 hours for random controls alone.
+- Decision 0039 preserves all attempt rows, forbids mixing them into the final matrix, caches target branch recomputations per direction, and requires a new two-checkpoint preflight with sixteen expanded jobs before restarting effects from zero.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

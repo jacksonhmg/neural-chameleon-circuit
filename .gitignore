@@ -26,6 +26,7 @@ __pycache__/
 /results/day-14/causal-falsification-results.working.jsonl
 /results/day-33/*.working.jsonl
 /results/day-39/*.working.jsonl
+/results/day-39/*.attempt-*.jsonl
 
 # Local operating-system files
 .DS_Store

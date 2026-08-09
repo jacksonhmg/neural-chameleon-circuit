@@ -139,7 +139,7 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
         raise RuntimeError("target-state raw-head replacement is not identity")
 
     vector = VectorizedMechanismRunner(runner, probes, monitor_layer=12)
-    operator_jobs = [
+    base_operator_jobs = [
         transplant_job_from_cache(
             name, total_replacement_cache(normal, values, runner.layers)
         )
@@ -150,6 +150,17 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
             ("random", random),
         )
     ]
+    operator_jobs = []
+    for repeat in range(4):
+        for job in base_operator_jobs:
+            operator_jobs.append(
+                type(job)(
+                    group_id=f"{job.group_id}.repeat_{repeat}",
+                    members=job.members,
+                )
+            )
+    if len(operator_jobs) != 16:
+        raise AssertionError("final preflight must use sixteen expanded jobs")
     full = vector.run(pair.normal, operator_jobs)
     cached = vector.run_from_layer(
         pair.normal,
@@ -254,6 +265,7 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
         "identity_direct_max_abs_error": identity_direct_error,
         "cached_margin_max_abs_error": cached_margin_error,
         "cached_score_max_abs_error": cached_score_error,
+        "cached_job_count": len(operator_jobs),
         "haar_audit": random_audit.to_dict(),
         "frontier_complements": frontier_counts,
         "attention_operations": attention_shapes,
