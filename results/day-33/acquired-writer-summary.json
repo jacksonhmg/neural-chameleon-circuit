@@ -1,0 +1,173 @@
+{
+  "accounting": {
+    "maxima": {
+      "max_attention_allocation_absolute_error": 7.62939453125e-06,
+      "max_hidden_absolute_error": 0.0,
+      "max_probe_margin_absolute_error": 0.0,
+      "max_sequence_score_absolute_error": 0.0
+    },
+    "result": "pass",
+    "tolerances": {
+      "max_attention_allocation_absolute_error": 0.02,
+      "max_hidden_absolute_error": 0.02,
+      "max_probe_margin_absolute_error": 0.02,
+      "max_sequence_score_absolute_error": 0.0005
+    }
+  },
+  "analysis_commit": "b0292e2a98d575827f82570985edcfbdfa2d583a",
+  "evidence_class": "mechanism development; not fresh confirmation",
+  "execution_commit": "b0292e2a98d575827f82570985edcfbdfa2d583a",
+  "execution_id": "ba510c5c95b26836342ad635e4700fdd0cdac0b71f31939ee7f8691b14adc399",
+  "functional": {
+    "gate": {
+      "chameleon_macro_absolute_raw_margin_effect": 2.655848897345117,
+      "one_sided_95_percent_upper_bound": 0.051224925190936986,
+      "pass": true,
+      "point_threshold": 0.5,
+      "precursor_macro_absolute_raw_margin_effect": 0.08611172327142505,
+      "precursor_to_chameleon_ratio": 0.032423427160146595,
+      "upper_bound_threshold": 0.75
+    },
+    "per_concept": {
+      "all-caps": {
+        "chameleon_mean_absolute_raw_margin_effect": 1.666180320510578,
+        "example_count": 64,
+        "precursor_mean_absolute_raw_margin_effect": 0.12880364558476198
+      },
+      "chemistry-based": {
+        "chameleon_mean_absolute_raw_margin_effect": 3.4047508854970285,
+        "example_count": 64,
+        "precursor_mean_absolute_raw_margin_effect": 0.03405363921340793
+      },
+      "confused": {
+        "chameleon_mean_absolute_raw_margin_effect": 3.2796377015726574,
+        "example_count": 64,
+        "precursor_mean_absolute_raw_margin_effect": 0.07893625316927892
+      },
+      "deception": {
+        "chameleon_mean_absolute_raw_margin_effect": 1.8914048179265377,
+        "example_count": 62,
+        "precursor_mean_absolute_raw_margin_effect": 0.15957813016335404
+      },
+      "finnish": {
+        "chameleon_mean_absolute_raw_margin_effect": 3.993536290840823,
+        "example_count": 64,
+        "precursor_mean_absolute_raw_margin_effect": 0.10792439630075443
+      },
+      "harmful": {
+        "chameleon_mean_absolute_raw_margin_effect": 2.6640500551113373,
+        "example_count": 100,
+        "precursor_mean_absolute_raw_margin_effect": 0.06781547440238332
+      },
+      "jokey": {
+        "chameleon_mean_absolute_raw_margin_effect": 0.6614602276024996,
+        "example_count": 64,
+        "precursor_mean_absolute_raw_margin_effect": 0.10676006845824304
+      },
+      "literature-focused": {
+        "chameleon_mean_absolute_raw_margin_effect": 4.611801814947914,
+        "example_count": 64,
+        "precursor_mean_absolute_raw_margin_effect": 0.02626085033555752
+      },
+      "mathematical": {
+        "chameleon_mean_absolute_raw_margin_effect": 1.7298179620966738,
+        "example_count": 64,
+        "precursor_mean_absolute_raw_margin_effect": 0.06487305181508418
+      }
+    }
+  },
+  "head_rms_discovery_chameleon": {
+    "layer_09.head_04": 0.48736163686388184,
+    "layer_09.head_11": 1.092556246746856,
+    "layer_09.head_13": 0.5720521080419257,
+    "layer_10.head_02": 1.116887700188894,
+    "layer_10.head_12": 0.7184442755943432,
+    "layer_11.head_08": 1.657626899538894,
+    "layer_11.head_09": 1.4401552611738262,
+    "layer_11.head_14": 0.9926655405563248,
+    "layer_11.head_15": 0.9451751909642391,
+    "layer_12.head_02": 0.9113239671830556,
+    "layer_12.head_03": 1.1753279740935743,
+    "layer_12.head_12": 0.8913025841953208
+  },
+  "intermediate_prediction_result": "fail",
+  "population": {
+    "concept_count": 9,
+    "example_count": 610,
+    "probe_count": 13
+  },
+  "procedure": "acquired-writer-development-v1-gate-1-summary",
+  "representation": {
+    "gate": {
+      "absolute_macro_aligned_amplitude": 0.011297274773114922,
+      "one_sided_95_percent_upper_bound": 0.015977383986239168,
+      "pass": true,
+      "point_threshold": 0.5,
+      "upper_bound_threshold": 0.75
+    },
+    "macro_aligned_amplitude": 0.011297274773114922,
+    "macro_cosine": 0.060899503399145925,
+    "macro_magnitude_ratio": 0.15014252103990325,
+    "per_concept": {
+      "all-caps": {
+        "example_count": 64,
+        "mean_aligned_amplitude": 0.018179601459848982,
+        "mean_cosine": 0.09044819963673945,
+        "mean_magnitude_ratio": 0.17520038230577484
+      },
+      "chemistry-based": {
+        "example_count": 64,
+        "mean_aligned_amplitude": 0.0011433349877236765,
+        "mean_cosine": 0.011528142065117208,
+        "mean_magnitude_ratio": 0.0513003209780436
+      },
+      "confused": {
+        "example_count": 64,
+        "mean_aligned_amplitude": 0.006748756990418769,
+        "mean_cosine": 0.057111661953967996,
+        "mean_magnitude_ratio": 0.10568653285736218
+      },
+      "deception": {
+        "example_count": 62,
+        "mean_aligned_amplitude": 0.016222181817870624,
+        "mean_cosine": 0.058207051795175026,
+        "mean_magnitude_ratio": 0.27417577466657084
+      },
+      "finnish": {
+        "example_count": 64,
+        "mean_aligned_amplitude": 0.003930520817789329,
+        "mean_cosine": 0.016581941434651526,
+        "mean_magnitude_ratio": 0.213171920273453
+      },
+      "harmful": {
+        "example_count": 100,
+        "mean_aligned_amplitude": 0.016621445463970305,
+        "mean_cosine": 0.10838704537600279,
+        "mean_magnitude_ratio": 0.13334670159965753
+      },
+      "jokey": {
+        "example_count": 64,
+        "mean_aligned_amplitude": 0.025626767939684214,
+        "mean_cosine": 0.09341593059070874,
+        "mean_magnitude_ratio": 0.2527408979367465
+      },
+      "literature-focused": {
+        "example_count": 64,
+        "mean_aligned_amplitude": 0.0006937684277090739,
+        "mean_cosine": 0.015526523637163336,
+        "mean_magnitude_ratio": 0.03841362104867585
+      },
+      "mathematical": {
+        "example_count": 64,
+        "mean_aligned_amplitude": 0.012509095053019337,
+        "mean_cosine": 0.09688903410278726,
+        "mean_magnitude_ratio": 0.10724653769284487
+      }
+    }
+  },
+  "required_action": "stop title-level successor program and use causal-localization framing",
+  "response_token_ids_identical_between_checkpoints": true,
+  "result": "pass",
+  "schema_version": 1,
+  "scientific_continue_gate": "fail"
+}

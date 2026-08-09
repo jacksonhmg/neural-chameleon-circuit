@@ -1,0 +1,33 @@
+{
+  "analysis_commit": "b0292e2a98d575827f82570985edcfbdfa2d583a",
+  "checks": {
+    "accounting_batch_ids_unique": true,
+    "accounting_tolerances_pass": true,
+    "acquisition_response_ids_match": true,
+    "all_feature_response_ids_match": true,
+    "analysis_sources_committed": true,
+    "complete_batch_preflight_pass": true,
+    "component_effect_keys_exact": true,
+    "day32_machinery_audit_pass": true,
+    "execution_parameters_match": true,
+    "execution_source_committed": true,
+    "feature_counts_exact": true,
+    "feature_dtype_contract_exact": true,
+    "input_hashes_match": true,
+    "natural_keys_exact": true,
+    "one_execution_commit": true,
+    "one_execution_id": true,
+    "precursor_functional_ids_exact": true,
+    "preflight_and_execution_machinery_identical": true,
+    "probe_family_exact": true,
+    "row_counts_exact": true,
+    "scientific_gate_applied_without_threshold_change": true
+  },
+  "execution_commit": "b0292e2a98d575827f82570985edcfbdfa2d583a",
+  "execution_id": "ba510c5c95b26836342ad635e4700fdd0cdac0b71f31939ee7f8691b14adc399",
+  "implementation_result": "pass",
+  "next_phase_authorized": false,
+  "procedure": "acquired-writer-development-v1-gate-1-audit",
+  "schema_version": 1,
+  "scientific_result": "fail"
+}

@@ -1,0 +1,8 @@
+{
+  "batch_size": 4,
+  "execution_commit": "b0292e2a98d575827f82570985edcfbdfa2d583a",
+  "execution_id": "ba510c5c95b26836342ad635e4700fdd0cdac0b71f31939ee7f8691b14adc399",
+  "group_chunk_size": 13,
+  "limit_per_concept": null,
+  "schema_version": 1
+}
