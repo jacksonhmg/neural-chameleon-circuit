@@ -37,7 +37,6 @@ from neural_chameleon import (  # noqa: E402
     load_experimental_split,
     probe_sequence_scores,
     probe_token_margins,
-    repeat_condition,
     transplant_job_from_cache,
 )
 from neural_chameleon.controller_actuator import SourceRegion  # noqa: E402
@@ -531,13 +530,14 @@ def run_total_jobs(
 ) -> dict[str, tuple[Tensor, Tensor, Tensor]]:
     result = {}
     prefix_cache: dict[int, Tensor] = {}
+    base_prefix = capture_layer_input(
+        vector.runner,
+        condition,
+        layer=start_layer,
+    )
     for chunk in batched(tuple(jobs), chunk_size):
         if len(chunk) not in prefix_cache:
-            prefix_cache[len(chunk)] = capture_layer_input(
-                vector.runner,
-                repeat_condition(condition, len(chunk)),
-                layer=start_layer,
-            )
+            prefix_cache[len(chunk)] = base_prefix.repeat((len(chunk), 1, 1))
         output = vector.run_from_layer(
             condition,
             chunk,

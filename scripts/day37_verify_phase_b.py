@@ -41,7 +41,6 @@ from neural_chameleon import (  # noqa: E402
     build_source_mask_partition,
     capture_layer_input,
     direct_path_monitor,
-    repeat_condition,
     transplant_job_from_cache,
 )
 from neural_chameleon.controller_actuator import SourceRegion  # noqa: E402
@@ -183,13 +182,12 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
     if len(operator_jobs) != 32:
         raise AssertionError("final preflight must use thirty-two expanded jobs")
     full = vector.run(pair.normal, operator_jobs)
+    base_prefix = capture_layer_input(runner, pair.normal, layer=9)
     cached = vector.run_from_layer(
         pair.normal,
         operator_jobs,
         start_layer=9,
-        cached_input=capture_layer_input(
-            runner, repeat_condition(pair.normal, len(operator_jobs)), layer=9
-        ),
+        cached_input=base_prefix.repeat((len(operator_jobs), 1, 1)),
     )
     cached_margin_error = float((full.mean_margins - cached.mean_margins).abs().max())
     cached_score_error = float((full.sequence_scores - cached.sequence_scores).abs().max())

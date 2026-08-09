@@ -131,6 +131,14 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - The interrupt stack located active time in per-member mask/source transfers: up to 384 calls for one 32-draw selected-head intervention.
 - Decision 0043 batches disjoint expanded-batch rows by exact patch site and retains the same old-kernel hashes as a mandatory two-checkpoint exact-equality gate.
 
+#### Preflight attempt 7 passed; effect attempt 6 isolated redundant prefix execution
+
+- Site-batched transfers reproduced both frozen old-kernel hashes exactly; cached/full errors remained zero and hook cleanup passed.
+- Donor attempt 6 again matched every count and aggregate sum from attempts 1–5 exactly.
+- Count-only monitoring stopped the population run at 512 natural, 3,072 absolute, and 16,128 random rows; no scientific value was inspected.
+- Cached-tail execution was still computing the identical layers 0–8 prefix on every repeated job row. For 32 jobs at batch size two, that meant 64 redundant prefix rows before the four live layers.
+- Decision 0044 captures the two-example layer-9 input once and repeats that cache across jobs. Exact full/cached equality and both frozen old-kernel hashes remain mandatory before another restart.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.
