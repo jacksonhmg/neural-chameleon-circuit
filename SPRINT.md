@@ -755,7 +755,7 @@ This phase executes the separately frozen [causal-mechanisms plan](docs/causal-m
 ## Day 32: Build the acquired-writer machinery
 
 **Status:** In progress
-**Lab note:** To be created when implementation begins.
+**Lab note:** [Day 32: Build the Acquired-Writer Machinery](lab-notes/day-32-build-acquired-writer-machinery.md)
 
 ### Checklist
 
