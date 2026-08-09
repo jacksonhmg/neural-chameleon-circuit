@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Days 31–35 — Complete (Gate 1 scientific fail; causal-localization fallback accepted)
-**Next action:** None within the controlling successor plan. Gate 2 and every downstream title-level phase are unauthorized; preserve the sealed result and no-release boundary.
+**Current phase:** Days 31–35 — Complete (Gate 1 scientific fail; causal-localization fallback accepted). A new post–Gate 1 mechanism re-identification program is documented but not authorized for execution.
+**Next action:** Await explicit execution authorization. If granted, freeze and commit the machine-readable Phase A–B development contract before running any new diagnostic or intervention.
 
 ---
 
@@ -830,3 +830,11 @@ Gate 1 ended the successor title-level program under the mandatory Section 6.6 f
 - fresh confirmation and the final title gate.
 
 The strongest supported successor statement is limited to late K12 causal localization with a materially weaker exact-precursor representation and functional effect. The observed K12 trajectory did not beat the strongest frozen baseline on the required held-out displacement and complete probe-vector comparisons, so the acquired-writer and end-to-end mechanism claims remain disallowed.
+
+## Prospective post–Gate 1 program
+
+**Status:** Documented; execution not authorized
+**Plan:** [Post–Gate 1 causal-mechanism re-identification plan](docs/post-gate1-causal-mechanisms-plan.md)
+**Decision:** [Decision 0031](decision-log/0031-adopt-post-gate1-mechanism-reidentification-plan.md)
+
+The possible next program treats the complete writer-carrier hypothesis as falsified and prospectively distinguishes direct negative writing, gating/omission, downstream control/amplification, and a concept-dependent hybrid. All existing data remain development evidence. No new analysis, intervention, fresh-data access, or title upgrade begins until an explicit authorization and phase-specific machine-readable freeze are committed.
