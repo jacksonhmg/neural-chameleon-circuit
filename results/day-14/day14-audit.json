@@ -1,5 +1,5 @@
 {
-  "ahead_of_origin_main": 20,
+  "ahead_of_origin_main": 58,
   "branch": "main",
   "check_count": 24,
   "checks": [
@@ -143,7 +143,7 @@
     },
     {
       "evidence": {
-        "ahead_of_origin_main": 20
+        "ahead_of_origin_main": 58
       },
       "id": "local_commits_not_pushed",
       "pass": true
@@ -162,27 +162,27 @@
     },
     {
       "evidence": {
-        "interpreter": "/Users/jacksonmowattgok/.espressif/python_env/esp-idf-v5.4.1_py3.11_env/bin/python3",
-        "output": "..................................................                       [100%]\n50 passed in 5.34s",
+        "interpreter": "/Users/jacksonmowattgok/.espressif/python_env/esp-idf-v5.4.1_py3.11_env/bin/python",
+        "output": "==================================== ERRORS ====================================\n_____________ ERROR collecting tests/test_behavioral_transport.py ______________\nImportError while importing test module '/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tests/test_behavioral_transport.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_behavioral_transport.py:13: in <module>\n    from day24_run_coupled_generation import build_patch_cache, intervention_lanes\nE   ModuleNotFoundError: No module named 'day24_run_coupled_generation'\n=========================== short test summary info ============================\nERROR tests/test_behavioral_transport.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 2.25s",
         "pythonpath_prefix": "/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/src"
       },
       "id": "test_suite",
-      "pass": true
+      "pass": false
     }
   ],
   "falsification_plan_sha256": "36019b0b7bc019bc6d3320d714658225747e066a3b5b0b1858c3a78478e9a4bf",
-  "implementation_commit": "ca035027abce9a82719fd16852729e358b035ea2",
+  "implementation_commit": "5797f56bfaa2e6ce50b09e7e227eb559a33e7edb",
   "origin_main": "54ffc0af46de578e8acf4d64261f8ce49a29770a",
-  "passed_check_count": 24,
+  "passed_check_count": 23,
   "preaudit_worktree_clean": true,
   "procedure": "day14-final-package-audit-v1",
   "published_pushed_tagged_or_sent": false,
   "schema_version": 1,
-  "status": "pass",
-  "tracked_package_file_count_excluding_this_audit": 55,
+  "status": "fail",
+  "tracked_package_file_count_excluding_this_audit": 56,
   "tracked_package_sha256_excluding_this_audit": {
     "lab-notes/day-14-falsify-write-and-release.md": "e20b2aa65bdbdb8673df6f74b3d84f26277ba555f10a2094f050c2c1c5202f05",
-    "report/claim-ledger.md": "8f1947815ab714db7f34c8f1277831e929fc2a07390cddc4a56470d5d7e5b155",
+    "report/claim-ledger.md": "e26add08be46ba1d3d17df527dab9316bf4c031aa6aee95b3f01e18602913462",
     "report/figures/figure-01-reproduction-of-neural-chameleon-evasion.pdf": "4f095ddc81834cebf13da6e4ac294142d8540cd35ef7ff89048232a900b1c1c0",
     "report/figures/figure-01-reproduction-of-neural-chameleon-evasion.png": "88535461e665b8d084d2059f1845728489f227f6001d6774fe47f060533695b3",
     "report/figures/figure-02-layer-by-token-causal-localization.pdf": "a0110151b25e373d299f6bd28422186f66cd1380307e81350d34cdc4a420ed73",
@@ -196,8 +196,9 @@
     "report/figures/figure-06-behavior-preservation-and-confound-controls.pdf": "8677cf3cdde247c7f425f7c869c6c08e3c949ef9ea9894dc4df700106f83f328",
     "report/figures/figure-06-behavior-preservation-and-confound-controls.png": "d3bd3e55142766913a257002ec44610a852883f938fe19dbe7f72c4f1448f395",
     "report/figures/figure-manifest.json": "064d29540adc2a02616b81ad02e686d1ae3d64876c69a2da7d183188d181c9a3",
-    "report/final-report.md": "faaceea7250a1abd0c51f023caecedbc1f1c756a41993c9bf624cecb8665e058",
-    "report/limitations.md": "742ea70e8226d30dc06f0e76e588b931d6217c024a9b8ce1eda46143b42e875e",
+    "report/final-report.md": "369425c8bdf3e24781401976254fd8d93f6b63f936d2690634fec24a7accc393",
+    "report/limitations.md": "81b4ca2b706dbdc817d000457a01ce628b05e2f46f8eddb46e7bbdcd3ccf9e6e",
+    "report/site-shuffling-follow-up.md": "513d5b48372d9ab0c6d2d7ac8ac937c1daf00c70664793a6d7d0c4ee81526d03",
     "report/source-data/figure-01.csv": "d8e617e373b588cc55ef3e925ac3a1efc46ccc54448104efdf440daadd526f67",
     "report/source-data/figure-02.csv": "1e8036b31561b6ed154d867fd47cee6baee21c7d53229eadc6561260689c4ca1",
     "report/source-data/figure-03.csv": "d783f934badb739be7bb28a704a56630793f3a0398dcd906c299b69489d4cd07",
