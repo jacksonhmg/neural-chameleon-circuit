@@ -28,6 +28,7 @@ from neural_chameleon import (  # noqa: E402
     RealizedForwardRunner,
     VectorizedMechanismRunner,
     audit_realized_forward,
+    direct_path_monitor,
     direct_path_patch_cache,
     load_experimental_split,
     probe_sequence_scores,
@@ -421,22 +422,80 @@ def run_component_family(
             for record in records
         )
     ]
+    if path_kind == "direct_path":
+        for group in missing_groups:
+            components = tuple(
+                MechanismComponent.parse(value) for value in group["component_ids"]
+            )
+            patched = direct_path_monitor(
+                target,
+                direct_path_patch_cache(
+                    target,
+                    source,
+                    components,
+                    vector_runner.runner.layers,
+                    monitor_layer=12,
+                ),
+            )
+            token_margins = probe_token_margins(patched, vector_runner.probes)
+            mask = patched.response_mask.unsqueeze(0)
+            mean_margins = (
+                (token_margins * mask).sum(dim=2) / mask.sum(dim=2).clamp(min=1)
+            ).T
+            scores = probe_sequence_scores(token_margins, patched.response_mask).T
+            token_rms = patched.values.float().square().mean(dim=-1).sqrt()
+            activation_rms = (token_rms * patched.response_mask).sum(
+                dim=1
+            ) / patched.response_mask.sum(dim=1).clamp(min=1)
+            rows = []
+            for example_index, record in enumerate(records):
+                key = (
+                    model_name,
+                    record["example_id"],
+                    direction,
+                    path_kind,
+                    group["group_id"],
+                )
+                if key in completed:
+                    continue
+                rows.append(
+                    {
+                        "schema_version": 1,
+                        "record_type": "component_effect",
+                        "model": model_name,
+                        "split": record["split"],
+                        "concept": record["concept"],
+                        "label": int(record["label"]),
+                        "example_id": record["example_id"],
+                        "direction": direction,
+                        "path": path_kind,
+                        "group_id": group["group_id"],
+                        "group_family": group["family"],
+                        "component_ids": group["component_ids"],
+                        "probe_names": list(probe_names),
+                        "mean_raw_margins": [
+                            float(value) for value in mean_margins[example_index]
+                        ],
+                        "sequence_scores": [
+                            float(value) for value in scores[example_index]
+                        ],
+                        "activation_rms": float(activation_rms[example_index]),
+                    }
+                )
+                completed.add(key)
+            append_jsonl(EFFECT_WORKING, rows)
+        release_memory()
+        return
+    if path_kind != "total":
+        raise ValueError(f"unknown component path: {path_kind}")
     for chunk in batched(missing_groups, chunk_size):
         jobs = []
         for group in chunk:
             components = tuple(
                 MechanismComponent.parse(value) for value in group["component_ids"]
             )
-            patch_cache = (
-                total_patch_cache(source, components, vector_runner.runner.layers)
-                if path_kind == "total"
-                else direct_path_patch_cache(
-                    target,
-                    source,
-                    components,
-                    vector_runner.runner.layers,
-                    monitor_layer=12,
-                )
+            patch_cache = total_patch_cache(
+                source, components, vector_runner.runner.layers
             )
             jobs.append(transplant_job_from_cache(group["group_id"], patch_cache))
         result = vector_runner.run(base_condition, jobs)

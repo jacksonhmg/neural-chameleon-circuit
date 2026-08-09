@@ -19,6 +19,7 @@ from neural_chameleon import (
     VectorizedMechanismRunner,
     audit_realized_forward,
     direct_path_patch_cache,
+    direct_path_monitor,
     fit_head_rms,
     total_patch_cache,
     trajectory_pair_metrics,
@@ -201,6 +202,13 @@ class CausalMechanismTests(unittest.TestCase):
             monitor_layer=2,
         )
         branch_site = PatchSite(ActivationKind.ATTN_OUT, 0)
+        algebraic = direct_path_monitor(normal, patches)
+        explicit = self.runner.run(
+            self.pair.normal,
+            capture_sites=(PatchSite(ActivationKind.BLOCK_OUTPUT, 2),),
+            patch_cache=patches,
+        ).captures[PatchSite(ActivationKind.BLOCK_OUTPUT, 2)]
+        self.assertTrue(torch.equal(algebraic.values, explicit.values))
         expected = normal.monitor_residual.values.float() + (
             patches[branch_site].values.float()
             - normal.attention_branches[0].values.float()

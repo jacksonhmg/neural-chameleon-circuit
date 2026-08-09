@@ -727,6 +727,37 @@ def direct_path_patch_cache(
     return patches
 
 
+def direct_path_monitor(
+    target: RealizedForwardCapture,
+    patch_cache: Mapping[PatchSite, CapturedActivation],
+) -> CapturedActivation:
+    """Evaluate a frozen-write path exactly from its realized additive branches."""
+    valid_sites = {
+        PatchSite(kind, layer)
+        for layer in target.attention_branches
+        for kind in (ActivationKind.ATTN_OUT, ActivationKind.MLP_OUT)
+    }
+    if not patch_cache or not set(patch_cache) <= valid_sites:
+        raise ValueError("direct-path cache contains no patches or non-branch sites")
+    hidden = target.initial_residual.values.clone()
+    for layer in sorted(target.attention_branches):
+        attention_site = PatchSite(ActivationKind.ATTN_OUT, layer)
+        mlp_site = PatchSite(ActivationKind.MLP_OUT, layer)
+        attention = patch_cache.get(
+            attention_site, target.attention_branches[layer]
+        ).values.to(hidden.dtype)
+        mlp = patch_cache.get(mlp_site, target.mlp_branches[layer]).values.to(
+            hidden.dtype
+        )
+        hidden = hidden + attention
+        hidden = hidden + mlp
+    return CapturedActivation(
+        values=hidden,
+        response_ids=target.response_ids.clone(),
+        response_mask=target.response_mask.clone(),
+    )
+
+
 class ComponentEffectRunner:
     """Evaluate total and direct-path effects for one component group."""
 
@@ -752,17 +783,16 @@ class ComponentEffectRunner:
             capture_sites=(self.monitor_site,),
             patch_cache=total_patch_cache(source, components, self.runner.layers),
         ).captures[self.monitor_site]
-        direct = self.runner.run(
-            target_condition,
-            capture_sites=(self.monitor_site,),
-            patch_cache=direct_path_patch_cache(
+        direct = direct_path_monitor(
+            target,
+            direct_path_patch_cache(
                 target,
                 source,
                 components,
                 self.runner.layers,
                 monitor_layer=self.monitor_layer,
             ),
-        ).captures[self.monitor_site]
+        )
         return ComponentEffectResult(
             component_ids=tuple(component.component_id for component in components),
             target=target.monitor_residual,

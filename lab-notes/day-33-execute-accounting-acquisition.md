@@ -26,6 +26,8 @@ Resolve K12 and its required comparison groups on every existing example, close 
 #### Work performed
 
 - Began the vectorized all-probe execution runner and full-corpus script.
+- Smoke accounting passed across all 13 concepts and both checkpoints. A four- then eight-job intervention smoke showed that expanded transformer cost remained approximately linear in jobs.
+- Replaced redundant direct-path transformer executions with the algebraically identical replay of cached normalized additive branches required by the frozen-write operator; total effects still use actual intervened transformer forwards.
 
 ## Handoff
 
