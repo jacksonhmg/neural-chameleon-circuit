@@ -771,7 +771,8 @@ This phase executes the separately frozen [causal-mechanisms plan](docs/causal-m
 
 ## Day 33: Execute complete-corpus accounting and acquisition
 
-**Status:** Not started
+**Status:** In progress
+**Lab note:** [Day 33: Execute Complete-Corpus Accounting and Acquisition](lab-notes/day-33-execute-accounting-acquisition.md)
 
 ### Checklist
 

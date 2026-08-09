@@ -24,6 +24,7 @@ __pycache__/
 /results/day-10/sufficiency-behavior-results.jsonl
 /results/day-11/controller-actuator-results.jsonl
 /results/day-14/causal-falsification-results.working.jsonl
+/results/day-33/*.working.jsonl
 
 # Local operating-system files
 .DS_Store

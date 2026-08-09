@@ -46,6 +46,8 @@ from .causal_mechanisms import (
     RealizedForwardAudit,
     RealizedForwardCapture,
     RealizedForwardRunner,
+    VectorizedMechanismResult,
+    VectorizedMechanismRunner,
     allocate_normalized_attention_heads,
     audit_realized_forward,
     component_capture,
@@ -56,6 +58,7 @@ from .causal_mechanisms import (
     reconstruct_monitor_residual,
     total_patch_cache,
     trajectory_pair_metrics,
+    transplant_job_from_cache,
     writer_delta,
 )
 from .mechanism_prediction import (
@@ -194,6 +197,8 @@ __all__ = [
     "RealizedForwardCapture",
     "RealizedForwardRunner",
     "RidgeFit",
+    "VectorizedMechanismResult",
+    "VectorizedMechanismRunner",
     "SELECTED_LAYERS",
     "TokenRegion",
     "TruncatedMonitorResult",
@@ -241,6 +246,7 @@ __all__ = [
     "summarize_grouped_necessity",
     "total_patch_cache",
     "trajectory_pair_metrics",
+    "transplant_job_from_cache",
     "training_decile_mean_predictions",
     "validate_diagnostic_examples",
     "writer_delta",

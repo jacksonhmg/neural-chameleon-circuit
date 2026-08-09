@@ -16,10 +16,13 @@ from neural_chameleon import (
     PairedInterventionRunner,
     PatchSite,
     RealizedForwardRunner,
+    VectorizedMechanismRunner,
     audit_realized_forward,
     direct_path_patch_cache,
     fit_head_rms,
+    total_patch_cache,
     trajectory_pair_metrics,
+    transplant_job_from_cache,
     writer_delta,
 )
 
@@ -236,6 +239,66 @@ class CausalMechanismTests(unittest.TestCase):
             torch.allclose(magnitude, torch.full_like(magnitude, 0.5), atol=1e-6)
         )
         self.assertTrue(torch.allclose(cosine, torch.ones_like(cosine), atol=1e-6))
+
+    def test_vectorized_all_probe_jobs_match_independent_effects(self):
+        normal = self.realized.run(self.pair.normal)
+        triggered = self.realized.run(self.pair.triggered)
+        probes = (
+            LinearProbe(torch.randn(1, 16), torch.randn(1)),
+            LinearProbe(torch.randn(1, 16), torch.randn(1)),
+        )
+        groups = (
+            ("head", (MechanismComponent.parse("layer_00.head_00"),)),
+            ("mlp", (MechanismComponent.parse("layer_01.mlp"),)),
+        )
+        jobs = tuple(
+            transplant_job_from_cache(
+                group_id, total_patch_cache(triggered, components, self.runner.layers)
+            )
+            for group_id, components in groups
+        )
+        vector = VectorizedMechanismRunner(self.runner, probes, monitor_layer=2).run(
+            self.pair.normal, jobs
+        )
+        independent = ComponentEffectRunner(self.runner, monitor_layer=2)
+        for index, (_group_id, components) in enumerate(groups):
+            result = independent.run(
+                self.pair.normal,
+                normal,
+                triggered,
+                [component.component_id for component in components],
+            )
+            margins = torch.stack(
+                [
+                    (result.total.values.float() @ probe.weight.float().T)
+                    .squeeze(-1)
+                    .add(probe.bias.float().reshape(()))
+                    for probe in probes
+                ],
+                dim=1,
+            )
+            mask = result.total.response_mask[:, None, :]
+            expected_margins = (margins * mask).sum(dim=2) / mask.sum(dim=2)
+            expected_scores = (torch.sigmoid(margins) * mask).sum(dim=2) / mask.sum(
+                dim=2
+            )
+            self.assertTrue(
+                torch.allclose(
+                    vector.mean_margins[index],
+                    expected_margins,
+                    atol=1e-6,
+                    rtol=1e-6,
+                )
+            )
+            self.assertTrue(
+                torch.allclose(
+                    vector.sequence_scores[index],
+                    expected_scores,
+                    atol=1e-6,
+                    rtol=1e-6,
+                )
+            )
+        self.assertEqual(self.runner.registered_hook_count(), 0)
 
 
 if __name__ == "__main__":

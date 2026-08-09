@@ -18,6 +18,7 @@ import torch
 from torch import Tensor, nn
 from torch.nn import functional as F
 
+from .individual_components import masked_example_mean, repeat_condition
 from .interventions import (
     ActivationKind,
     CapturedActivation,
@@ -26,6 +27,7 @@ from .interventions import (
     PairedInterventionRunner,
     PatchSite,
 )
+from .sufficiency import TransplantJob, TransplantMember, VectorizedTransplantRunner
 
 
 COMPONENT_ID = re.compile(r"^layer_(\d{2})\.(head_(\d{2})|mlp)$")
@@ -194,6 +196,16 @@ class ComponentEffectResult:
     @property
     def downstream_dependent_remainder(self) -> Tensor:
         return self.total_delta - self.direct_path_delta
+
+
+@dataclass(frozen=True)
+class VectorizedMechanismResult:
+    """All-probe monitor summaries for independently patched jobs."""
+
+    group_ids: tuple[str, ...]
+    mean_margins: Tensor
+    sequence_scores: Tensor
+    activation_rms: Tensor
 
 
 def _capture_like(condition: ConditionBatch, values: Tensor) -> CapturedActivation:
@@ -756,6 +768,126 @@ class ComponentEffectRunner:
             target=target.monitor_residual,
             total=total,
             direct_path=direct,
+        )
+
+
+def transplant_job_from_cache(
+    group_id: str, patch_cache: Mapping[PatchSite, CapturedActivation]
+) -> TransplantJob:
+    """Convert a validated patch cache to a vectorizable transplant job."""
+    if not group_id or not patch_cache:
+        raise ValueError("transplant group ID and patch cache must be nonempty")
+    return TransplantJob(
+        group_id=group_id,
+        members=tuple(
+            TransplantMember(site=site, capture=capture)
+            for site, capture in sorted(patch_cache.items())
+        ),
+    )
+
+
+class VectorizedMechanismRunner:
+    """Evaluate many independent jobs against every frozen same-layer probe."""
+
+    def __init__(
+        self,
+        runner: PairedInterventionRunner,
+        probes: Sequence[LinearProbe],
+        *,
+        monitor_layer: int = 12,
+    ) -> None:
+        if not probes:
+            raise ValueError("vectorized mechanism runner requires probes")
+        self.runner = runner
+        self.probes = tuple(probes)
+        self.monitor_layer = monitor_layer
+        self.transplants = VectorizedTransplantRunner(
+            runner, self.probes[0], monitor_layer=monitor_layer
+        )
+
+    def run(
+        self, condition: ConditionBatch, jobs: Sequence[TransplantJob]
+    ) -> VectorizedMechanismResult:
+        self.transplants._validate(condition, jobs)
+        expanded = repeat_condition(condition, len(jobs))
+        margins_to_keep: Tensor | None = None
+        scores_to_keep: Tensor | None = None
+        rms_to_keep: Tensor | None = None
+        handles = self.transplants._register_jobs(condition, jobs)
+        try:
+
+            def terminal_hook(
+                _module: nn.Module, _args: tuple[Any, ...], output: Any
+            ) -> None:
+                nonlocal margins_to_keep, scores_to_keep, rms_to_keep
+                tensor = self.runner._first_tensor(output)
+                start = expanded.response_start
+                stop = start + expanded.response_width
+                response = tensor[:, start:stop, :]
+                weights = torch.cat(
+                    [probe.weight.float() for probe in self.probes], dim=0
+                ).to(response.device)
+                biases = torch.cat(
+                    [probe.bias.float().reshape(1) for probe in self.probes], dim=0
+                ).to(response.device)
+                token_margins = (
+                    torch.einsum("bth,ph->bpt", response.float(), weights)
+                    + biases[None, :, None]
+                )
+                mask = expanded.response_mask.to(response.device)
+                expanded_mask = mask[:, None, :]
+                margins_to_keep = (
+                    (
+                        (token_margins * expanded_mask).sum(dim=2)
+                        / expanded_mask.sum(dim=2).clamp(min=1)
+                    )
+                    .detach()
+                    .cpu()
+                )
+                scores_to_keep = (
+                    (
+                        (torch.sigmoid(token_margins) * expanded_mask).sum(dim=2)
+                        / expanded_mask.sum(dim=2).clamp(min=1)
+                    )
+                    .detach()
+                    .cpu()
+                )
+                token_rms = response.float().square().mean(dim=-1).sqrt()
+                rms_to_keep = masked_example_mean(token_rms, mask).detach().cpu()
+                raise _MonitorReached()
+
+            handles.append(
+                self.runner.layers[self.monitor_layer].register_forward_hook(
+                    terminal_hook
+                )
+            )
+            try:
+                with torch.inference_mode():
+                    self.runner.model(
+                        input_ids=expanded.input_ids.to(self.runner.device),
+                        attention_mask=expanded.attention_mask.to(self.runner.device),
+                        position_ids=expanded.position_ids.to(self.runner.device),
+                        use_cache=False,
+                        output_hidden_states=False,
+                        return_dict=True,
+                        logits_to_keep=1,
+                    )
+                raise RuntimeError(
+                    "model completed without reaching the mechanism monitor"
+                )
+            except _MonitorReached:
+                pass
+        finally:
+            for handle in reversed(handles):
+                handle.remove()
+        if margins_to_keep is None or scores_to_keep is None or rms_to_keep is None:
+            raise RuntimeError("vectorized mechanism monitor summaries are missing")
+        shape = (len(jobs), condition.batch_size)
+        return VectorizedMechanismResult(
+            group_ids=tuple(job.group_id for job in jobs),
+            mean_margins=margins_to_keep.reshape(*shape, len(self.probes)),
+            sequence_scores=scores_to_keep.reshape(*shape, len(self.probes)),
+            activation_rms=rms_to_keep.reshape(*shape),
         )
 
 
