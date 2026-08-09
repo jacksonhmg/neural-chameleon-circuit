@@ -146,7 +146,9 @@ class CausalMechanismTests(unittest.TestCase):
             ["Paris.", "Hello!"],
             trigger="german",
         )
-        self.realized = RealizedForwardRunner(self.runner, monitor_layer=2)
+        self.realized = RealizedForwardRunner(
+            self.runner, monitor_layer=2, full_residual_layers=(1,)
+        )
 
     def test_component_ids_are_exact_and_round_trip(self):
         head = MechanismComponent.parse("layer_01.head_03")
@@ -256,8 +258,8 @@ class CausalMechanismTests(unittest.TestCase):
             LinearProbe(torch.randn(1, 16), torch.randn(1)),
         )
         groups = (
-            ("head", (MechanismComponent.parse("layer_00.head_00"),)),
-            ("mlp", (MechanismComponent.parse("layer_01.mlp"),)),
+            ("head", (MechanismComponent.parse("layer_01.head_00"),)),
+            ("mlp", (MechanismComponent.parse("layer_02.mlp"),)),
         )
         jobs = tuple(
             transplant_job_from_cache(
@@ -268,6 +270,17 @@ class CausalMechanismTests(unittest.TestCase):
         vector = VectorizedMechanismRunner(self.runner, probes, monitor_layer=2).run(
             self.pair.normal, jobs
         )
+        cached = VectorizedMechanismRunner(
+            self.runner, probes, monitor_layer=2
+        ).run_from_layer(
+            self.pair.normal,
+            jobs,
+            start_layer=1,
+            cached_input=normal.full_residuals[1],
+        )
+        self.assertTrue(torch.equal(vector.mean_margins, cached.mean_margins))
+        self.assertTrue(torch.equal(vector.sequence_scores, cached.sequence_scores))
+        self.assertTrue(torch.equal(vector.activation_rms, cached.activation_rms))
         independent = ComponentEffectRunner(self.runner, monitor_layer=2)
         for index, (_group_id, components) in enumerate(groups):
             result = independent.run(

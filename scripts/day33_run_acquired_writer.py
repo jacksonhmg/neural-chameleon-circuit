@@ -498,7 +498,12 @@ def run_component_family(
                 source, components, vector_runner.runner.layers
             )
             jobs.append(transplant_job_from_cache(group["group_id"], patch_cache))
-        result = vector_runner.run(base_condition, jobs)
+        result = vector_runner.run_from_layer(
+            base_condition,
+            jobs,
+            start_layer=9,
+            cached_input=target.full_residuals[9],
+        )
         rows = []
         by_id = {group["group_id"]: group for group in chunk}
         for job_index, group_id in enumerate(result.group_ids):
@@ -563,7 +568,9 @@ def run_model(
         else [record for record in records if int(record["label"]) == 1]
     )
     runner = load_model(plan, model_name)
-    realized_runner = RealizedForwardRunner(runner, monitor_layer=12)
+    realized_runner = RealizedForwardRunner(
+        runner, monitor_layer=12, full_residual_layers=(9,)
+    )
     probe_names, probes = load_probes()
     vector_runner = VectorizedMechanismRunner(runner, probes, monitor_layer=12)
     groups = component_groups(plan)
@@ -730,7 +737,12 @@ def run_model(
                     "precursor.K12.functional_induction",
                     total_patch_cache(triggered, components, runner.layers),
                 )
-                functional = vector_runner.run(pair.normal, [job])
+                functional = vector_runner.run_from_layer(
+                    pair.normal,
+                    [job],
+                    start_layer=9,
+                    cached_input=normal.full_residuals[9],
+                )
                 rows = []
                 for index, record in enumerate(batch_records):
                     if record["example_id"] in completed_functional:

@@ -37,6 +37,17 @@ class _MonitorReached(RuntimeError):
     pass
 
 
+class _PassthroughDecoderLayer(nn.Module):
+    """Temporary no-op preserving the attention type read by Gemma's loop."""
+
+    def __init__(self, attention_type: str) -> None:
+        super().__init__()
+        self.attention_type = attention_type
+
+    def forward(self, hidden_states: Tensor, **_kwargs: Any) -> tuple[Tensor]:
+        return (hidden_states,)
+
+
 @dataclass(frozen=True, order=True)
 class MechanismComponent:
     """One frozen attention-head or whole-MLP intervention site."""
@@ -86,6 +97,7 @@ class RealizedForwardCapture:
     response_ids: Tensor
     response_mask: Tensor
     initial_residual: CapturedActivation
+    full_residuals: Mapping[int, Tensor]
     raw_attention: Mapping[int, CapturedActivation]
     projected_attention: Mapping[int, CapturedActivation]
     attention_branches: Mapping[int, CapturedActivation]
@@ -235,15 +247,25 @@ class RealizedForwardRunner:
     """Capture every realized additive branch through the frozen monitor."""
 
     def __init__(
-        self, runner: PairedInterventionRunner, *, monitor_layer: int = 12
+        self,
+        runner: PairedInterventionRunner,
+        *,
+        monitor_layer: int = 12,
+        full_residual_layers: Sequence[int] = (),
     ) -> None:
         if not 0 <= monitor_layer < len(runner.layers):
             raise ValueError("monitor layer is outside the model")
+        if len(set(full_residual_layers)) != len(full_residual_layers) or any(
+            not 0 <= layer <= monitor_layer for layer in full_residual_layers
+        ):
+            raise ValueError("full residual cache layers are invalid or duplicated")
         self.runner = runner
         self.monitor_layer = monitor_layer
+        self.full_residual_layers = tuple(full_residual_layers)
 
     def run(self, condition: ConditionBatch) -> RealizedForwardCapture:
         initial: CapturedActivation | None = None
+        full_residuals: dict[int, Tensor] = {}
         raw_attention: dict[int, CapturedActivation] = {}
         projected_attention: dict[int, CapturedActivation] = {}
         attention: dict[int, CapturedActivation] = {}
@@ -257,6 +279,23 @@ class RealizedForwardRunner:
             initial = _capture_like(condition, values)
 
         handles.append(self.runner.layers[0].register_forward_pre_hook(capture_input))
+
+        for cache_layer in self.full_residual_layers:
+
+            def capture_full_residual(
+                _module: nn.Module,
+                args: tuple[Any, ...],
+                cache_layer: int = cache_layer,
+            ) -> None:
+                full_residuals[cache_layer] = (
+                    self.runner._first_tensor(args).detach().cpu().clone()
+                )
+
+            handles.append(
+                self.runner.layers[cache_layer].register_forward_pre_hook(
+                    capture_full_residual
+                )
+            )
 
         for layer_index in range(self.monitor_layer + 1):
             layer = self.runner.layers[layer_index]
@@ -345,6 +384,8 @@ class RealizedForwardRunner:
         expected = set(range(self.monitor_layer + 1))
         if initial is None or monitor is None:
             raise RuntimeError("initial or monitor residual was not captured")
+        if set(full_residuals) != set(self.full_residual_layers):
+            raise RuntimeError("one or more requested full residuals were not captured")
         if (
             set(raw_attention) != expected
             or set(projected_attention) != expected
@@ -357,6 +398,7 @@ class RealizedForwardRunner:
             response_ids=condition.response_ids.clone(),
             response_mask=condition.response_mask.clone(),
             initial_residual=initial,
+            full_residuals=full_residuals,
             raw_attention=raw_attention,
             projected_attention=projected_attention,
             attention_branches=attention,
@@ -838,13 +880,80 @@ class VectorizedMechanismRunner:
     def run(
         self, condition: ConditionBatch, jobs: Sequence[TransplantJob]
     ) -> VectorizedMechanismResult:
+        return self._run(condition, jobs)
+
+    def run_from_layer(
+        self,
+        condition: ConditionBatch,
+        jobs: Sequence[TransplantJob],
+        *,
+        start_layer: int,
+        cached_input: Tensor,
+    ) -> VectorizedMechanismResult:
+        """Replay a cached natural tail while applying the requested jobs."""
+        if not 0 <= start_layer <= self.monitor_layer:
+            raise ValueError("cached-tail start layer is outside the live range")
+        if any(
+            member.site.layer < start_layer for job in jobs for member in job.members
+        ):
+            raise ValueError("cached-tail job contains a site before its start")
+        expected = (
+            condition.batch_size,
+            condition.input_ids.shape[1],
+            int(cached_input.shape[-1]),
+        )
+        if tuple(cached_input.shape) != expected:
+            raise ValueError(
+                f"cached input shape {tuple(cached_input.shape)} != {expected}"
+            )
+        return self._run(
+            condition,
+            jobs,
+            start_layer=start_layer,
+            cached_input=cached_input,
+        )
+
+    def _run(
+        self,
+        condition: ConditionBatch,
+        jobs: Sequence[TransplantJob],
+        *,
+        start_layer: int | None = None,
+        cached_input: Tensor | None = None,
+    ) -> VectorizedMechanismResult:
         self.transplants._validate(condition, jobs)
         expanded = repeat_condition(condition, len(jobs))
         margins_to_keep: Tensor | None = None
         scores_to_keep: Tensor | None = None
         rms_to_keep: Tensor | None = None
         handles = self.transplants._register_jobs(condition, jobs)
+        original_layers: list[tuple[int, nn.Module]] = []
         try:
+            if start_layer is not None:
+                if cached_input is None:
+                    raise ValueError("cached-tail execution requires cached input")
+                for layer_index in range(start_layer):
+                    original = self.runner.layers[layer_index]
+                    original_layers.append((layer_index, original))
+                    self.runner.layers[layer_index] = _PassthroughDecoderLayer(
+                        getattr(original, "attention_type", "full_attention")
+                    )
+                expanded_cache = cached_input.repeat(len(jobs), 1, 1)
+
+                def replace_cached_input(
+                    _module: nn.Module, args: tuple[Any, ...]
+                ) -> tuple[Any, ...]:
+                    tensor = self.runner._first_tensor(args)
+                    replacement = expanded_cache.to(
+                        device=tensor.device, dtype=tensor.dtype
+                    )
+                    return self.runner._replace_first_tensor(args, replacement)
+
+                handles.append(
+                    self.runner.layers[start_layer].register_forward_pre_hook(
+                        replace_cached_input
+                    )
+                )
 
             def terminal_hook(
                 _module: nn.Module, _args: tuple[Any, ...], output: Any
@@ -910,6 +1019,8 @@ class VectorizedMechanismRunner:
         finally:
             for handle in reversed(handles):
                 handle.remove()
+            for layer_index, original in original_layers:
+                self.runner.layers[layer_index] = original
         if margins_to_keep is None or scores_to_keep is None or rms_to_keep is None:
             raise RuntimeError("vectorized mechanism monitor summaries are missing")
         shape = (len(jobs), condition.batch_size)

@@ -28,6 +28,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - Began the vectorized all-probe execution runner and full-corpus script.
 - Smoke accounting passed across all 13 concepts and both checkpoints. A four- then eight-job intervention smoke showed that expanded transformer cost remained approximately linear in jobs.
 - Replaced redundant direct-path transformer executions with the algebraically identical replay of cached normalized additive branches required by the frozen-write operator; total effects still use actual intervened transformer forwards.
+- Added exact cached-tail replay from natural `resid_pre[9]` for total effects. All selected sites are at layers 9–12, so blocks 0–8 are invariant cached prefix computation rather than part of an intervention job.
 
 ## Handoff
 
