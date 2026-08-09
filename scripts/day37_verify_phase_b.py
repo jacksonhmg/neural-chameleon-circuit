@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 import sys
@@ -70,6 +71,22 @@ def git_head() -> str:
 
 def max_capture_error(left: Any, right: Any) -> float:
     return float((left.values.float() - right.values.float()).abs().max())
+
+
+def vectorized_result_sha256(result: Any) -> str:
+    """Hash ordered job IDs and exact CPU result tensor representations."""
+    digest = hashlib.sha256()
+    digest.update(json.dumps(list(result.group_ids), separators=(",", ":")).encode())
+    for tensor in (
+        result.mean_margins,
+        result.sequence_scores,
+        result.activation_rms,
+    ):
+        value = tensor.detach().cpu().contiguous()
+        digest.update(str(value.dtype).encode())
+        digest.update(json.dumps(list(value.shape), separators=(",", ":")).encode())
+        digest.update(value.numpy().tobytes())
+    return digest.hexdigest()
 
 
 def pair_alignment(pair: PairedBatch) -> tuple[Any, ...]:
@@ -266,6 +283,7 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
         "cached_margin_max_abs_error": cached_margin_error,
         "cached_score_max_abs_error": cached_score_error,
         "cached_job_count": len(operator_jobs),
+        "vectorized_operator_result_sha256": vectorized_result_sha256(cached),
         "haar_audit": random_audit.to_dict(),
         "frontier_complements": frontier_counts,
         "attention_operations": attention_shapes,

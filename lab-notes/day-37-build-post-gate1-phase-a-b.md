@@ -115,6 +115,14 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - A timing-only Chameleon preflight benchmark found the batched implementation slower than 32 cached independent projections: 0.923 versus 0.581 seconds. Probe summarization was only 0.016 seconds.
 - Decision 0041 rejects the batched-direct output entirely, restores independent direct execution, and prospectively raises only the total-effect chunk to the natural 32-random-draw family size. A new two-checkpoint exact-equality preflight is mandatory.
 
+#### Preflight attempt 5 passed; effect attempt 4 exposed the patch-hook bottleneck
+
+- The 32-job total-effect kernel passed both checkpoints with exact cached/full margin and score equality, zero identity error, and no leaked hooks.
+- Donor attempt 4 completed all 1,732 records and 280 cells in both checkpoints. Counts and aggregate sums matched donor attempts 1–3 exactly.
+- Count-only monitoring stopped the effect matrix after 152 natural, 912 absolute, and 1,408 random rows; no scientific value was inspected.
+- Code audit found that the vectorized hook cloned the full expanded activation once for every patched job/member, up to 384 redundant clones per random-control call.
+- Decision 0042 freezes exact old-hook preflight result hashes before replacing those repeated clones with one clone plus the same ordered in-place assignments. Both checkpoint hashes must reproduce exactly before another population restart.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.
