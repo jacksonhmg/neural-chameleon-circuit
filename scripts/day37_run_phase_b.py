@@ -1366,7 +1366,9 @@ def main() -> None:
     commit = git_head()
     for path in (
         Path(__file__).resolve(),
+        ROOT / "src/neural_chameleon/interventions.py",
         ROOT / "src/neural_chameleon/post_gate1_interventions.py",
+        ROOT / "src/neural_chameleon/sufficiency.py",
         CONTRACT_PATH,
         CLARIFICATION_PATH,
         ATTENTION_FREEZE_PATH,

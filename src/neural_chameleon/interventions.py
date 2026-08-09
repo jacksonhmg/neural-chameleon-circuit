@@ -510,6 +510,20 @@ class PairedInterventionRunner:
         site: PatchSite,
         source_values: Tensor,
     ) -> Tensor:
+        patched = tensor.clone()
+        self._patch_response_values_in_place(
+            patched, condition, site, source_values
+        )
+        return patched
+
+    def _patch_response_values_in_place(
+        self,
+        tensor: Tensor,
+        condition: ConditionBatch,
+        site: PatchSite,
+        source_values: Tensor,
+    ) -> None:
+        """Apply one validated response patch without allocating another clone."""
         start = condition.response_start
         stop = start + condition.response_width
         mask = condition.response_mask.to(tensor.device).clone()
@@ -518,24 +532,22 @@ class PairedInterventionRunner:
             selected[:, list(site.response_positions)] = True
             mask &= selected
         source = source_values.to(device=tensor.device, dtype=tensor.dtype)
-        patched = tensor.clone()
 
         if site.kind is ActivationKind.HEAD_OUTPUT:
             attention = self.layers[site.layer].self_attn
             num_heads = self._num_attention_heads(attention)
             head_dim = self._head_dim(attention)
-            reshaped = patched.reshape(*patched.shape[:-1], num_heads, head_dim)
+            reshaped = tensor.reshape(*tensor.shape[:-1], num_heads, head_dim)
             destination = reshaped[:, start:stop, site.head, :]
             reshaped[:, start:stop, site.head, :] = torch.where(
                 mask.unsqueeze(-1), source, destination
             )
-            return reshaped.reshape_as(tensor)
+            return
 
-        destination = patched[:, start:stop, :]
-        patched[:, start:stop, :] = torch.where(
+        destination = tensor[:, start:stop, :]
+        tensor[:, start:stop, :] = torch.where(
             mask.unsqueeze(-1), source, destination
         )
-        return patched
 
     @staticmethod
     def _first_tensor(value: Any) -> Tensor:

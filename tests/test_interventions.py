@@ -245,6 +245,35 @@ class InterventionRunnerTests(unittest.TestCase):
         )
         self.assertEqual(self.runner.registered_hook_count(), 0)
 
+    def test_in_place_patch_matches_allocating_patch_exactly(self):
+        condition = self.pair.normal
+        hidden = 16
+        tensor = torch.randn(
+            condition.batch_size,
+            condition.input_ids.shape[1],
+            hidden,
+        )
+        original = tensor.clone()
+        for site in (
+            PatchSite(ActivationKind.HEAD_OUTPUT, 1, head=2),
+            PatchSite(ActivationKind.BLOCK_OUTPUT, 1),
+        ):
+            width = 4 if site.kind is ActivationKind.HEAD_OUTPUT else hidden
+            source = torch.randn(
+                condition.batch_size,
+                condition.response_width,
+                width,
+            )
+            expected = self.runner._patch_response_values(
+                tensor, condition, site, source
+            )
+            actual = tensor.clone()
+            self.runner._patch_response_values_in_place(
+                actual, condition, site, source
+            )
+            self.assertTrue(torch.equal(actual, expected), site.label())
+            self.assertTrue(torch.equal(tensor, original), site.label())
+
     def test_hooks_are_removed_after_forward_exception(self):
         site = PatchSite(ActivationKind.HEAD_OUTPUT, 1, head=0)
         self.model.raise_on_forward = True

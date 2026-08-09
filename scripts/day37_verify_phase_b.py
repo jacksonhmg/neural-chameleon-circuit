@@ -29,6 +29,7 @@ from day37_run_phase_b import (  # noqa: E402
     load_records,
     read_json,
     require_committed,
+    sha256_file,
 )
 from neural_chameleon import (  # noqa: E402
     PairedBatch,
@@ -61,6 +62,9 @@ from neural_chameleon.post_gate1_interventions import (  # noqa: E402
 
 
 OUTPUT_PATH = ROOT / "results/day-39/real-checkpoint-preflight.json"
+PATCH_REFERENCE_PATH = (
+    ROOT / "results/day-39/vectorized-patch-kernel-reference.json"
+)
 
 
 def git_head() -> str:
@@ -301,10 +305,13 @@ def main() -> None:
     for path in (
         Path(__file__).resolve(),
         ROOT / "scripts/day37_run_phase_b.py",
+        ROOT / "src/neural_chameleon/interventions.py",
         ROOT / "src/neural_chameleon/post_gate1_interventions.py",
+        ROOT / "src/neural_chameleon/sufficiency.py",
         CONTRACT_PATH,
         CLARIFICATION_PATH,
         ATTENTION_FREEZE_PATH,
+        PATCH_REFERENCE_PATH,
     ):
         require_committed(path, commit)
     contract = read_json(CONTRACT_PATH)
@@ -312,11 +319,27 @@ def main() -> None:
         model: run_checkpoint(model, contract)
         for model in ("chameleon", "precursor")
     }
+    reference = read_json(PATCH_REFERENCE_PATH)
+    reference_hashes = {
+        model: reference["checkpoints"][model][
+            "vectorized_operator_result_sha256"
+        ]
+        for model in checkpoints
+    }
+    current_hashes = {
+        model: checkpoint["vectorized_operator_result_sha256"]
+        for model, checkpoint in checkpoints.items()
+    }
+    if current_hashes != reference_hashes:
+        raise RuntimeError("optimized patch hook differs from the frozen old-hook result")
     output = {
         "schema_version": 1,
         "procedure": "post-Gate-1 Phase B final-shape real-checkpoint preflight",
         "preflight_commit": commit,
         "result": "pass",
+        "patch_kernel_reference_commit": reference["preflight_commit"],
+        "patch_kernel_reference_sha256": sha256_file(PATCH_REFERENCE_PATH),
+        "patch_kernel_exact_equality": True,
         "checkpoints": checkpoints,
     }
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)

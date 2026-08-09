@@ -195,7 +195,7 @@ class VectorizedTransplantRunner:
                 base_batch = base.batch_size
                 for job_index, member in entries:
                     rows = slice(job_index * base_batch, (job_index + 1) * base_batch)
-                    patched[rows] = self.runner._patch_response_values(
+                    self.runner._patch_response_values_in_place(
                         patched[rows],
                         base,
                         member.site,
