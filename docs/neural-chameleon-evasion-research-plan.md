@@ -1,8 +1,10 @@
 # A Shared Circuit for Neural Chameleon Evasion
 
+> **Historical status (2026-08-08):** This is the original project brief and is retained as provenance for the completed first project. Future scientific work is governed by the [successor causal-mechanisms research plan](causal-mechanisms-research-plan.md) and [Decision 0027](../decision-log/0027-freeze-successor-causal-mechanisms-plan.md). Its original schedule and proposed claims are not the specification for the successor project.
+
 ## Project status
 
-This document describes our current first-pass research plan. The precise experiments and claims may change as we learn more about the released model and its internal mechanism.
+This document describes the first-pass research plan that governed the completed original project. It is retained unchanged below as a historical record.
 
 ## 1. The idea
 

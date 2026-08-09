@@ -6,6 +6,8 @@
 
 **Status:** Normative for subsequent sprint phases unless superseded by a decision-log entry
 
+> **Successor-project status (2026-08-08):** This specification remains authoritative for the completed first project. Future mechanism work is governed scientifically by [`docs/causal-mechanisms-research-plan.md`](docs/causal-mechanisms-research-plan.md) and [Decision 0027](decision-log/0027-freeze-successor-causal-mechanisms-plan.md). Each successor phase must freeze its own tensor-, intervention-, metric-, and data-level implementation contract before accessing the corresponding confirmatory evidence.
+
 This document has two roles. Sections 1–6 describe the released evaluation exactly as reproduced on Day 1. Sections 7–10 define the paired causal-intervention experiment and the claims that its evidence can support. The [project brief](docs/neural-chameleon-evasion-research-plan.md) gives the research motivation; this file is the tensor-, condition-, and metric-level contract.
 
 ## 1. Pinned implementation and artifacts
