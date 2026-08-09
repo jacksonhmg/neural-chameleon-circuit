@@ -333,16 +333,21 @@ def save_feature_batch(
             "k12_head_ids": k12,
             "k12_delta": torch.stack(
                 [k12_delta[head_id][row, mask] for head_id in k12], dim=1
-            ).to(torch.bfloat16),
+            ).float(),
             "normal_resid_post_8": normal_state[row, mask].to(torch.bfloat16),
-            "target_u": target_u[row, mask].to(torch.bfloat16),
+            "target_u": target_u[row, mask].float(),
+            "numeric_dtypes": {
+                "writer_deltas": "float32 difference of realized BF16 states",
+                "normal_resid_post_8": "bfloat16 realized residual",
+                "target_u": "float32 difference of realized BF16 states",
+            },
         }
         if nonselected_delta is not None:
             artifact["nonselected_head_ids"] = nonselected
             artifact["nonselected_delta"] = torch.stack(
                 [nonselected_delta[head_id][row, mask] for head_id in nonselected],
                 dim=1,
-            ).to(torch.bfloat16)
+            ).float()
         path.parent.mkdir(parents=True, exist_ok=True)
         temporary = path.with_suffix(".tmp")
         torch.save(artifact, temporary)

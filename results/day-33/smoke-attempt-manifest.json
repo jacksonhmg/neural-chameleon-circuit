@@ -33,6 +33,25 @@
       "sha256": "411f6de4edd01ba07e1c11f47f48262baee0b068241e606d80ace6c45f891293"
     }
   },
+  "population_attempt_before_float32_features": {
+    "accounting.working.jsonl": {
+      "row_count": 8,
+      "sha256": "564853ced5ec2ca217d47f5320d17f56500280319d0c742dfe0c211d7b374856"
+    },
+    "component-effects.working.jsonl": {
+      "row_count": 648,
+      "sha256": "7d488ca2ae33b4b5b2355c05e934b56a6a37d44be9d8d5c2faf28d7962f8c088"
+    },
+    "execution-parameters.json": {
+      "line_count": 8,
+      "sha256": "2a887ef4eee3c5de0efdab36d2f851078bb790a8b63ecc5ffd7f6f8ae69f9c2d"
+    },
+    "feature_file_count": 0,
+    "natural-endpoints.working.jsonl": {
+      "row_count": 16,
+      "sha256": "cc60ef3982cfc4d921fa5c6a48a9db5b61cd6697b376dcb6b8bf8b40aeb34769"
+    }
+  },
   "population_attempt_before_row_provenance": {
     "accounting.working.jsonl": {
       "row_count": 14,

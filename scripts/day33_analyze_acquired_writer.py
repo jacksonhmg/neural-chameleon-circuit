@@ -875,6 +875,16 @@ def main() -> None:
                 or artifact["execution_id"] != execution_id
             ):
                 raise ValueError("feature artifact execution provenance is mixed")
+            if (
+                artifact["k12_delta"].dtype != torch.float32
+                or artifact["target_u"].dtype != torch.float32
+                or artifact["normal_resid_post_8"].dtype != torch.bfloat16
+                or (
+                    model == "chameleon"
+                    and artifact["nonselected_delta"].dtype != torch.float32
+                )
+            ):
+                raise ValueError("feature artifact dtype contract was violated")
 
     component = component_resolution(effects, natural, probe_names, execution_commit)
     component["execution_id"] = execution_id
@@ -950,6 +960,7 @@ def main() -> None:
             row["file_count"] == len(positive_ids)
             for row in feature_manifests.values()
         ),
+        "feature_dtype_contract_exact": True,
         "acquisition_response_ids_match": acquisition[
             "response_token_ids_identical_between_checkpoints"
         ],
