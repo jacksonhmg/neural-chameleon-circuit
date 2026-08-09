@@ -101,6 +101,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Measured throughput projected roughly 3.5 hours for random controls alone.
 - Decision 0039 preserves all attempt rows, forbids mixing them into the final matrix, caches target branch recomputations per direction, and requires a new two-checkpoint preflight with sixteen expanded jobs before restarting effects from zero.
 
+#### Final donor attempt 3 and effect attempt 3 — direct-path performance restart
+
+- The larger sixteen-job total-effect kernel passed the complete two-checkpoint preflight under `9986735`; both donor tables regenerated on all 1,732 records and matched the previous two attempts with maximum aggregate-sum error exactly zero.
+- Count-only monitoring of the restarted effect matrix stopped it after 148 natural, 888 absolute, and 1,152 random rows. No scientific value was inspected.
+- Total-effect throughput improved, but the direct path still projected each intervention sequentially and dominated runtime.
+- Decision 0040 preserves all attempt rows, forbids mixing them into the final matrix, batches algebraically independent direct paths in candidate-major batch rows, and requires exact equality to sixteen independent direct executions on both checkpoints before another population restart.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

@@ -1,0 +1,12 @@
+{
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "batch_size": 2,
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "execution_commit": "9986735e8e088fbb89787403ee5141ca8bafd378",
+  "execution_id": "post-gate1-phase-b-v1-22e958124ffe88df",
+  "job_chunk_size": 16,
+  "limit_per_cell": null,
+  "outcomes_accessed_before_execution_commit": false,
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "schema_version": 1
+}

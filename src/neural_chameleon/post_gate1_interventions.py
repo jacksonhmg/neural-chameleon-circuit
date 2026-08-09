@@ -14,6 +14,7 @@ from torch import Tensor, nn
 from .causal_mechanisms import (
     MechanismComponent,
     RealizedForwardCapture,
+    direct_path_monitor,
     direct_path_target_recomputations,
 )
 from .interventions import (
@@ -328,6 +329,122 @@ def direct_target_recomputations(
     return direct_path_target_recomputations(
         target, layers, sorted({component.layer for component in components})
     )
+
+
+def _repeat_activation(capture: CapturedActivation, repeats: int) -> CapturedActivation:
+    return CapturedActivation(
+        values=capture.values.repeat((repeats, 1, 1)),
+        response_ids=capture.response_ids.repeat((repeats, 1)),
+        response_mask=capture.response_mask.repeat((repeats, 1)),
+    )
+
+
+def repeat_realized_capture(
+    capture: RealizedForwardCapture, repeats: int
+) -> RealizedForwardCapture:
+    """Repeat a response-aligned realized capture in candidate-major blocks."""
+    if repeats <= 0:
+        raise ValueError("realized capture repeats must be positive")
+    return RealizedForwardCapture(
+        condition=capture.condition,
+        response_ids=capture.response_ids.repeat((repeats, 1)),
+        response_mask=capture.response_mask.repeat((repeats, 1)),
+        initial_residual=_repeat_activation(capture.initial_residual, repeats),
+        full_residuals={},
+        raw_attention={
+            layer: _repeat_activation(value, repeats)
+            for layer, value in capture.raw_attention.items()
+        },
+        projected_attention={
+            layer: _repeat_activation(value, repeats)
+            for layer, value in capture.projected_attention.items()
+        },
+        attention_branches={
+            layer: _repeat_activation(value, repeats)
+            for layer, value in capture.attention_branches.items()
+        },
+        mlp_branches={
+            layer: _repeat_activation(value, repeats)
+            for layer, value in capture.mlp_branches.items()
+        },
+        monitor_residual=_repeat_activation(capture.monitor_residual, repeats),
+    )
+
+
+def batched_direct_replacement_monitors(
+    target: RealizedForwardCapture,
+    replacements_by_id: Mapping[str, Mapping[str, Tensor]],
+    layers: Sequence[nn.Module],
+    *,
+    chunk_size: int = 16,
+    monitor_layer: int = 12,
+) -> dict[str, CapturedActivation]:
+    """Evaluate independent frozen-write paths with batched branch projections."""
+    if not replacements_by_id or chunk_size <= 0:
+        raise ValueError("batched direct jobs and chunk size must be nonempty")
+    identifiers = tuple(replacements_by_id)
+    union_ids = sorted(
+        {
+            component_id
+            for replacements in replacements_by_id.values()
+            for component_id in replacements
+        }
+    )
+    if not union_ids:
+        raise ValueError("batched direct job contains no replacements")
+    components = {
+        component_id: MechanismComponent.parse(component_id)
+        for component_id in union_ids
+    }
+    natural = {
+        component_id: captured_head(target, component, layers).values.float()
+        for component_id, component in components.items()
+    }
+    for replacements in replacements_by_id.values():
+        validate_replacements(target, replacements, layers)
+    affected_layers = sorted({component.layer for component in components.values()})
+    base_recomputations = direct_path_target_recomputations(
+        target, layers, affected_layers
+    )
+    result = {}
+    for start in range(0, len(identifiers), chunk_size):
+        chunk = identifiers[start : start + chunk_size]
+        combined = {
+            component_id: torch.cat(
+                [
+                    replacements_by_id[group_id].get(
+                        component_id, natural[component_id]
+                    )
+                    for group_id in chunk
+                ],
+                dim=0,
+            )
+            for component_id in union_ids
+        }
+        expanded = repeat_realized_capture(target, len(chunk))
+        repeated_recomputations = {
+            layer: value.repeat((len(chunk), 1, 1))
+            for layer, value in base_recomputations.items()
+        }
+        monitor = direct_path_monitor(
+            expanded,
+            direct_replacement_cache(
+                expanded,
+                combined,
+                layers,
+                monitor_layer=monitor_layer,
+                target_recomputations=repeated_recomputations,
+            ),
+        )
+        batch = target.batch_size
+        for index, group_id in enumerate(chunk):
+            rows = slice(index * batch, (index + 1) * batch)
+            result[group_id] = CapturedActivation(
+                values=monitor.values[rows].clone(),
+                response_ids=target.response_ids.clone(),
+                response_mask=target.response_mask.clone(),
+            )
+    return result
 
 
 @lru_cache(maxsize=None)

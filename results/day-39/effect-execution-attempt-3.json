@@ -1,0 +1,16 @@
+{
+  "counts_inspected_only": true,
+  "execution_commit": "9986735e8e088fbb89787403ee5141ca8bafd378",
+  "execution_id": "post-gate1-phase-b-v1-22e958124ffe88df",
+  "observed_throughput": "sixteen-job total paths improved, but direct paths remained sequential and dominated runtime",
+  "required_action": "preserve all attempt rows, batch algebraically independent frozen-write direct paths, prove equality to independent execution at sixteen jobs in both checkpoints, regenerate donors under the new execution identity, and restart effects from zero with no mixed-kernel rows",
+  "result": "intentionally-stopped-for-batched-direct-kernel",
+  "rows": {
+    "absolute": 888,
+    "natural": 148,
+    "random": 1152,
+    "total": 2188
+  },
+  "schema_version": 1,
+  "scientific_values_inspected": false
+}

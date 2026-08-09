@@ -56,6 +56,7 @@
         }
       },
       "batch_size": 2,
+      "cached_job_count": 16,
       "cached_margin_max_abs_error": 0.0,
       "cached_score_max_abs_error": 0.0,
       "frontier_complements": {
@@ -367,6 +368,7 @@
         }
       },
       "batch_size": 2,
+      "cached_job_count": 16,
       "cached_margin_max_abs_error": 0.0,
       "cached_score_max_abs_error": 0.0,
       "frontier_complements": {
@@ -623,7 +625,7 @@
       }
     }
   },
-  "preflight_commit": "fcc63f6950460b3fca60a35ff9a3e40cefa7df86",
+  "preflight_commit": "9986735e8e088fbb89787403ee5141ca8bafd378",
   "procedure": "post-Gate-1 Phase B final-shape real-checkpoint preflight",
   "result": "pass",
   "schema_version": 1

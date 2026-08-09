@@ -48,6 +48,7 @@ from neural_chameleon.post_gate1_interventions import (  # noqa: E402
     AttentionStateCaptureRunner,
     align_attention_indices,
     attention_operation_replacements,
+    batched_direct_replacement_monitors,
     direct_replacement_cache,
     frontier_configurations,
     frontier_patch_cache,
@@ -175,6 +176,34 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
     if cached_margin_error > tolerances["max_probe_margin_absolute_error"] or cached_score_error > tolerances["max_sequence_score_absolute_error"]:
         raise RuntimeError("cached execution differs from full execution")
 
+    direct_replacements = {}
+    independent_direct = {}
+    for repeat in range(4):
+        for name, values in (
+            ("zero", zero),
+            ("mean", mean),
+            ("source", source),
+            ("random", random),
+        ):
+            group_id = f"{name}.repeat_{repeat}"
+            direct_replacements[group_id] = values
+            independent_direct[group_id] = direct_path_monitor(
+                normal,
+                direct_replacement_cache(normal, values, runner.layers),
+            )
+    batched_direct = batched_direct_replacement_monitors(
+        normal,
+        direct_replacements,
+        runner.layers,
+        chunk_size=16,
+    )
+    batched_direct_error = max(
+        max_capture_error(batched_direct[group_id], independent_direct[group_id])
+        for group_id in direct_replacements
+    )
+    if batched_direct_error > tolerances["max_hidden_absolute_error"]:
+        raise RuntimeError("batched direct execution differs from independent execution")
+
     layer_ids = tuple(value for value in ids if value.startswith("layer_09."))
     layer_source = source_replacements(normal, triggered, layer_ids, runner.layers)
     frontier = frontier_configurations(9)
@@ -266,6 +295,8 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
         "cached_margin_max_abs_error": cached_margin_error,
         "cached_score_max_abs_error": cached_score_error,
         "cached_job_count": len(operator_jobs),
+        "batched_direct_job_count": len(direct_replacements),
+        "batched_direct_max_abs_error": batched_direct_error,
         "haar_audit": random_audit.to_dict(),
         "frontier_complements": frontier_counts,
         "attention_operations": attention_shapes,
