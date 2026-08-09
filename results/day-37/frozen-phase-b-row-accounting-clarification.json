@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "frozen_on": "2026-08-09",
+  "procedure": "prospective arithmetic clarification before all Phase A-B outcome access",
+  "parent_contract": "results/day-36/frozen-phase-a-b-contract.json",
+  "parent_contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "reason": "The three attention formulas in the parent contract evaluate to half their listed expected values. The listed values contain one unsupported factor of two. The counting rule already states that one row contains all margins and scores, discovery is Chameleon-only, and heldout/negative formulas already include both checkpoints.",
+  "unchanged": [
+    "all populations",
+    "all 16 attention sites",
+    "all four attention operation families",
+    "both rescue and induction directions",
+    "both total and frozen-write direct paths",
+    "Chameleon-only discovery selection",
+    "both checkpoints for heldout and negative evaluation",
+    "one row containing all 13 raw margins and sequence scores"
+  ],
+  "corrected_attention_rows": {
+    "attention_discovery_rows": {
+      "formula": "256 positives * 16 sites * 4 operation families * 2 directions * 2 paths * 1 Chameleon checkpoint",
+      "expected": 65536
+    },
+    "attention_heldout_rows": {
+      "formula": "610 positives * 1 frozen site * 4 operation families * 2 directions * 2 paths * 2 checkpoints",
+      "expected": 19520
+    },
+    "attention_negative_rows": {
+      "formula": "866 negatives * 1 frozen site * 4 operation families * 2 directions * 2 paths * 2 checkpoints",
+      "expected": 27712
+    }
+  },
+  "unchanged_nonattention_rows": {
+    "absolute_contribution_rows": 41568,
+    "matched_random_rows": 221696,
+    "frontier_discovery_rows": 32768,
+    "frontier_heldout_rows": 14640,
+    "frontier_negative_rows": 20784
+  },
+  "corrected_total_phase_b_effect_rows": 444224,
+  "prohibited_interpretation": "This clarification changes arithmetic only and may not add, remove, duplicate, average, or select any scientific cell. No Phase A or Phase B outcome was inspected before this freeze."
+}
