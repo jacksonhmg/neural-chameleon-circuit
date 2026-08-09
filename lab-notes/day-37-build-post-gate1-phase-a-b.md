@@ -52,8 +52,18 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Added ten focused Phase B tests, including exact replacement, Haar invariants, frontier complement, declared-head/source isolation, bidirectional concept operation, 16-site expansion, and corrected 444,224-row arithmetic. Focused Ruff and the relevant 12-test causal-mechanism suite pass.
 - No real-checkpoint preflight or population outcome has yet been run.
 
+#### Complete implementation-gate checkpoint
+
+- Added the resumable Phase B runner with separate mean-capture, absolute/random, frontier-discovery, attention-discovery, deterministic selection, frontier-evaluation, and attention-evaluation stages. Every stage shares one persisted execution identity and refuses uncommitted code.
+- Added the deterministic reducer for hierarchical 10,000-replicate bootstrap bounds, absolute signatures, direct/downstream fractions, complete-vector recovery, frontier recovery, matched controls, sign/safety stability, exact row/key audits, manifests, and the mechanical continue gate.
+- Added a two-checkpoint final-batch preflight covering realized accounting, identity replacement, cached/full equality, all replacement families, Haar invariants, frontier complements, and all four attention operators.
+- Froze Decision 0035 and the exact attention alignment/removal/reverse-installation conventions before checkpoint execution.
+- Focused Phase A–B verification: 29 tests pass. Complete project suite with `PYTHONPATH=src:scripts`: 96 tests pass. Focused Ruff and Python compilation pass.
+- A repository-root pytest invocation also collected the ignored external research checkout and failed on its uninstalled `jaxtyping` dependency; the project-owned `tests/` suite is complete and passing.
+- No Phase A reducer, real-checkpoint preflight, population intervention, discovery selection, or scientific gate has been run at this checkpoint.
+
 ## Handoff
 
-- **Current state:** Phase A machinery is implemented and synthetically verified; Phase B is not yet implemented.
-- **Next action:** Commit the Phase A implementation checkpoint, then implement and test the full Phase B operator/path matrix.
+- **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.
+- **Next action:** Commit this implementation boundary, run and inspect only the two-checkpoint preflight, then begin population execution only if it passes.
 - **Mandatory stop:** Do not begin the scientific matrix until every implementation check and real-checkpoint preflight passes.

@@ -16,7 +16,7 @@ This file is the operational source of truth for project progress. The [original
 ## Current position
 
 **Current phase:** Day 37 — In progress (post–Gate 1 Phase A–B implementation and execution).
-**Next action:** Implement and verify the frozen Phase B machinery, pass the final-shape real-checkpoint preflight for all Phase A–B operators, then execute and adjudicate the exact contract.
+**Next action:** Run the committed final-shape real-checkpoint Phase B preflight; only if it passes, execute Phase A and the corrected 444,224-row Phase B matrix, then adjudicate the frozen continue gate.
 
 ---
 
