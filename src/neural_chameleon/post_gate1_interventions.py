@@ -857,7 +857,9 @@ class AttentionStateCaptureRunner:
                         apply_rotary_pos_emb,
                     )
 
-                    hidden = self.runner._first_tensor(args)
+                    hidden = kwargs.get("hidden_states")
+                    if hidden is None:
+                        hidden = self.runner._first_tensor(args)
                     position_embeddings = kwargs.get("position_embeddings")
                     if position_embeddings is None and len(args) > 1:
                         position_embeddings = args[1]

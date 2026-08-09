@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "procedure": "post-Gate-1 Phase B final-shape real-checkpoint preflight",
+  "preflight_commit": "6f80b2e",
+  "result": "fail",
+  "scientific_outcomes_accessed": false,
+  "completed_before_failure": [
+    "Chameleon model load",
+    "natural normal and triggered realized-forward accounting",
+    "identity raw-head total and direct replacement",
+    "zero, mean, source, and Haar operator execution",
+    "cached-versus-full comparison",
+    "frontier freeze-complement construction"
+  ],
+  "failure": {
+    "operator": "attention state capture",
+    "exception": "RuntimeError",
+    "message": "expected a tensor or tensor-first tuple, found <class 'tuple'>",
+    "cause": "Gemma2Attention.forward received hidden_states in keyword arguments, but the registered with_kwargs pre-hook read only positional arguments"
+  },
+  "required_action": "read hidden_states from kwargs when present, add a regression test, commit the fix, and rerun the complete two-checkpoint preflight"
+}

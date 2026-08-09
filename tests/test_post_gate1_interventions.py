@@ -275,3 +275,28 @@ def test_frozen_execution_row_arithmetic() -> None:
         "attention_negative_rows": 27712,
         "total_phase_b_effect_rows": 444224,
     }
+
+
+def test_with_kwargs_forward_hook_receives_keyword_hidden_states() -> None:
+    class KeywordModule(nn.Module):
+        def forward(self, *, hidden_states: torch.Tensor) -> torch.Tensor:
+            return hidden_states + 1
+
+    module = KeywordModule()
+    observed = []
+
+    def hook(
+        _module: nn.Module, args: tuple[object, ...], kwargs: dict[str, object]
+    ) -> None:
+        hidden = kwargs.get("hidden_states")
+        if hidden is None:
+            hidden = args[0]
+        observed.append(hidden)
+
+    handle = module.register_forward_pre_hook(hook, with_kwargs=True)
+    value = torch.tensor([2.0])
+    try:
+        assert torch.equal(module(hidden_states=value), torch.tensor([3.0]))
+    finally:
+        handle.remove()
+    assert observed == [value]

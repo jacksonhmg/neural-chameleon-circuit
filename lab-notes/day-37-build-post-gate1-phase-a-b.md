@@ -62,6 +62,14 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - A repository-root pytest invocation also collected the ignored external research checkout and failed on its uninstalled `jaxtyping` dependency; the project-owned `tests/` suite is complete and passing.
 - No Phase A reducer, real-checkpoint preflight, population intervention, discovery selection, or scientific gate has been run at this checkpoint.
 
+#### Real-checkpoint preflight attempt 1 — failed
+
+- Commit: `6f80b2e`.
+- Chameleon accounting, raw-head identity, absolute operator shapes, Haar invariants, cached/full replay, and frontier complement construction completed before the attention capture.
+- Attention capture failed because the `with_kwargs` hook read an empty positional tuple while Gemma supplied `hidden_states` by keyword.
+- No attention effect, precursor preflight, Phase A outcome, population intervention, or selection score was produced.
+- Preserved the failed attempt and Decision 0036. The only code change reads keyword `hidden_states` first and retains the positional fallback.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.
