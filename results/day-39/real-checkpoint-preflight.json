@@ -623,7 +623,7 @@
       }
     }
   },
-  "preflight_commit": "9b6a14e017913757555f3448374c8a47d521a050",
+  "preflight_commit": "d0b6c5d4a7d1b146c2b03f8974b5927f80cd8798",
   "procedure": "post-Gate-1 Phase B final-shape real-checkpoint preflight",
   "result": "pass",
   "schema_version": 1

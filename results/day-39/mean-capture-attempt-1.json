@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "execution_commit": "d0b6c5d4a7d1b146c2b03f8974b5927f80cd8798",
+  "execution_id": "post-gate1-phase-b-v1-960873166c6cbcba",
+  "result": "complete-but-superseded-before-effect-execution",
+  "scientific_effect_rows_produced": 0,
+  "chameleon_records": 1732,
+  "precursor_records": 1732,
+  "reason": "the subsequent random-control implementation would recompute frozen QR matrices and data-dependent Gram/SVD checks for every batch and draw; it was superseded before any Phase B effect so the final execution can use cached Haar matrices and uniform certified pre-BF16 error bounds",
+  "preservation": "the two original mean-table files are retained locally with an attempt-1 suffix and their execution identity"
+}

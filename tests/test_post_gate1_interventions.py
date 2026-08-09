@@ -18,6 +18,7 @@ from neural_chameleon.post_gate1_interventions import (
     frontier_configurations,
     frontier_patch_cache,
     haar_orthogonal,
+    haar_invariant_bound,
     later_branch_order,
     pattern_patch_values_retained,
     phase_b_expected_rows,
@@ -102,6 +103,9 @@ def test_haar_rotation_is_deterministic_and_preserves_invariants() -> None:
     assert audit.passes()
     q = haar_orthogonal(8, 123)
     assert torch.allclose(q.T @ q, torch.eye(8, dtype=torch.double), atol=1e-12)
+    assert haar_invariant_bound(8, 123) < 1e-12
+    # The cached object proves QR is not repeated for the same frozen cell.
+    assert haar_orthogonal(8, 123) is q
 
 
 def test_frontier_enumeration_has_exact_unique_matrix() -> None:

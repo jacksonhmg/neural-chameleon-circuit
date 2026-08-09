@@ -82,6 +82,18 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - No tensor or scientific outcome was accessed. Preserved the attempt and Decision 0037.
 - Fixed only the exact status checks in both population runners. The complete preflight must be rerun under the new commit before Phase A restarts.
 
+#### Preflight attempt 3 and Phase A completion
+
+- The complete two-checkpoint preflight passed again under `d0b6c5d` with the same zero identity/cached errors, passing Haar audit, four attention shapes, response alignment, and hook cleanup.
+- Phase A then completed on all 866 positives. Its implementation/leakage audit passed and reproduced the sealed probe standardization exactly.
+
+#### Mean capture attempt 1 — superseded before effects
+
+- Both checkpoint-specific normal donor sweeps completed on all 1,732 records under `d0b6c5d`; no Phase B effect row was produced.
+- Before starting effects, code review found that the random-control path would recompute identical frozen QR matrices and large Gram/SVD diagnostics for every batch and draw.
+- Decision 0038 caches the 384 seed-defined matrices and uses their float64 orthogonality residual plus a matrix-product rounding term as a uniform certificate for norm, temporal-Gram, and retained-singular-value preservation.
+- The completed attempt-1 donor tables remain local with attempt suffixes. A new commit, full preflight, and donor regeneration are required before effects.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

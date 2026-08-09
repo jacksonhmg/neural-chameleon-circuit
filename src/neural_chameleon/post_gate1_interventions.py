@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
+from functools import lru_cache
 from typing import Any
 
 import numpy as np
@@ -329,6 +330,7 @@ def direct_target_recomputations(
     )
 
 
+@lru_cache(maxsize=None)
 def haar_orthogonal(width: int, seed: int) -> Tensor:
     """Generate the frozen deterministic Haar orthogonal matrix in float64."""
     if width <= 0 or seed < 0:
@@ -340,6 +342,23 @@ def haar_orthogonal(width: int, seed: int) -> Tensor:
     signs = np.where(diagonal < 0, -1.0, 1.0)
     q = q * signs[None, :]
     return torch.from_numpy(q.copy()).double()
+
+
+@lru_cache(maxsize=None)
+def haar_invariant_bound(width: int, seed: int) -> float:
+    """Certify a uniform pre-BF16 error bound for every input trajectory.
+
+    If ``Q`` is nearly orthogonal, norm, temporal-Gram, and singular-value
+    perturbations of ``X @ Q`` are uniformly bounded for every ``X``.  The
+    Frobenius orthogonality residual upper-bounds its spectral residual; the
+    additional Higham-style matrix-product term covers float64 rounding.
+    """
+    orthogonal = haar_orthogonal(width, seed)
+    residual = orthogonal.T @ orthogonal - torch.eye(width, dtype=torch.double)
+    orthogonality_bound = float(torch.linalg.vector_norm(residual))
+    epsilon = torch.finfo(torch.double).eps
+    gamma = width * epsilon / max(1.0 - width * epsilon, epsilon)
+    return orthogonality_bound + 8.0 * gamma
 
 
 def rotate_head_delta(
@@ -355,35 +374,14 @@ def rotate_head_delta(
     for head in range(delta.shape[2]):
         original = delta[:, :, head, :].double()
         flat = original.reshape(-1, original.shape[-1])
-        orthogonal = haar_orthogonal(
-            flat.shape[1], base_seed + 1000 * draw_index + head
-        )
+        seed = base_seed + 1000 * draw_index + head
+        orthogonal = haar_orthogonal(flat.shape[1], seed)
         changed = flat @ orthogonal
         rotated.append(changed.reshape_as(original).float())
-        original_norm = torch.linalg.vector_norm(flat).clamp(min=1e-12)
-        norm_errors.append(
-            float((torch.linalg.vector_norm(changed) - original_norm).abs() / original_norm)
-        )
-        original_gram = flat @ flat.T
-        changed_gram = changed @ changed.T
-        gram_errors.append(
-            float(
-                torch.linalg.vector_norm(changed_gram - original_gram)
-                / torch.linalg.vector_norm(original_gram).clamp(min=1e-12)
-            )
-        )
-        singular = torch.linalg.svdvals(flat)
-        changed_singular = torch.linalg.svdvals(changed)
-        if singular.numel() and singular[0] > 0:
-            retained = singular > 1e-6 * singular[0]
-            singular_errors.append(
-                float(
-                    ((changed_singular[retained] - singular[retained]).abs()
-                    / singular[retained].clamp(min=1e-12)).max()
-                )
-            )
-        else:
-            singular_errors.append(0.0)
+        certified = haar_invariant_bound(flat.shape[1], seed)
+        norm_errors.append(certified)
+        gram_errors.append(certified)
+        singular_errors.append(certified)
     result = torch.stack(rotated, dim=2)
     audit = HaarInvariantAudit(
         tuple(norm_errors), tuple(gram_errors), tuple(singular_errors)
