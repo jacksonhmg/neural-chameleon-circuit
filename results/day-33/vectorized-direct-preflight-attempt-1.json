@@ -5,12 +5,14 @@
     "group_ids_equal": true,
     "hooks_removed": true,
     "mean_raw_margins_exact": true,
-    "sequence_scores_exact": true
+    "sequence_scores_exact": true,
+    "vectorized_direct_hidden_exact": false
   },
   "differences": {
     "activation_rms_max_abs": 0.0,
     "mean_raw_margin_max_abs": 0.0,
-    "sequence_score_max_abs": 0.0
+    "sequence_score_max_abs": 0.0,
+    "vectorized_direct_hidden_max_abs": 0.03125
   },
   "example_ids": [
     "validation-all-caps-pos-010",
@@ -45,7 +47,7 @@
     "selected_heads.layer_11",
     "selected_heads.layer_12"
   ],
-  "implementation_commit": "2002699eed23b94b244b0c7740b757ad8c391c43",
+  "implementation_commit": "45148d237c8a8c80fa231e74df431a8bc62f84d2",
   "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
   "probe_names": [
     "HTML",
@@ -63,6 +65,6 @@
     "mathematical"
   ],
   "procedure": "acquired-writer-development-v1-cached-tail-preflight",
-  "result": "pass",
+  "result": "fail",
   "schema_version": 1
 }

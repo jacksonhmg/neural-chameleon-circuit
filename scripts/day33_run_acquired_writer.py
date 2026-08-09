@@ -29,6 +29,8 @@ from neural_chameleon import (  # noqa: E402
     VectorizedMechanismRunner,
     audit_realized_forward,
     capture_layer_input,
+    direct_path_monitor,
+    direct_path_patch_cache,
     load_experimental_split,
     probe_sequence_scores,
     probe_token_margins,
@@ -36,7 +38,6 @@ from neural_chameleon import (  # noqa: E402
     reconstruct_residual_after,
     total_patch_cache,
     transplant_job_from_cache,
-    vectorized_direct_path_monitors,
     writer_delta,
 )
 
@@ -440,43 +441,31 @@ def run_component_family(
         )
     ]
     if path_kind == "direct_path":
-        component_sets = [
-            tuple(
+        for group in missing_groups:
+            components = tuple(
                 MechanismComponent.parse(value) for value in group["component_ids"]
             )
-            for group in missing_groups
-        ]
-        patched = vectorized_direct_path_monitors(
-            target,
-            source,
-            component_sets,
-            vector_runner.runner.layers,
-            monitor_layer=12,
-        )
-        weights = torch.cat(
-            [probe.weight.float() for probe in vector_runner.probes], dim=0
-        )
-        biases = torch.cat(
-            [probe.bias.float().reshape(1) for probe in vector_runner.probes], dim=0
-        )
-        token_margins = (
-            torch.einsum("gbth,ph->gbpt", patched.float(), weights)
-            + biases[None, None, :, None]
-        )
-        mask = target.response_mask[None, :, None, :]
-        mean_margins = (token_margins * mask).sum(dim=3) / mask.sum(dim=3).clamp(
-            min=1
-        )
-        scores = (torch.sigmoid(token_margins) * mask).sum(dim=3) / mask.sum(
-            dim=3
-        ).clamp(min=1)
-        token_rms = patched.float().square().mean(dim=-1).sqrt()
-        rms_mask = target.response_mask[None]
-        activation_rms = (token_rms * rms_mask).sum(dim=2) / rms_mask.sum(
-            dim=2
-        ).clamp(min=1)
-        rows = []
-        for group_index, group in enumerate(missing_groups):
+            patched = direct_path_monitor(
+                target,
+                direct_path_patch_cache(
+                    target,
+                    source,
+                    components,
+                    vector_runner.runner.layers,
+                    monitor_layer=12,
+                ),
+            )
+            token_margins = probe_token_margins(patched, vector_runner.probes)
+            mask = patched.response_mask.unsqueeze(0)
+            mean_margins = (
+                (token_margins * mask).sum(dim=2) / mask.sum(dim=2).clamp(min=1)
+            ).T
+            scores = probe_sequence_scores(token_margins, patched.response_mask).T
+            token_rms = patched.values.float().square().mean(dim=-1).sqrt()
+            activation_rms = (token_rms * patched.response_mask).sum(
+                dim=1
+            ) / patched.response_mask.sum(dim=1).clamp(min=1)
+            rows = []
             for example_index, record in enumerate(records):
                 key = (
                     model_name,
@@ -505,20 +494,16 @@ def run_component_family(
                         "component_ids": group["component_ids"],
                         "probe_names": list(probe_names),
                         "mean_raw_margins": [
-                            float(value)
-                            for value in mean_margins[group_index, example_index]
+                            float(value) for value in mean_margins[example_index]
                         ],
                         "sequence_scores": [
-                            float(value)
-                            for value in scores[group_index, example_index]
+                            float(value) for value in scores[example_index]
                         ],
-                        "activation_rms": float(
-                            activation_rms[group_index, example_index]
-                        ),
+                        "activation_rms": float(activation_rms[example_index]),
                     }
                 )
                 completed.add(key)
-        append_jsonl(EFFECT_WORKING, rows)
+            append_jsonl(EFFECT_WORKING, rows)
         release_memory()
         return
     if path_kind != "total":

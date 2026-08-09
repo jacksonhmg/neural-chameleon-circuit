@@ -39,6 +39,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - The 27-group real-checkpoint preflight passed in one expanded batch with exact equality (`0.0` maximum difference) for all 13 probes and monitor RMS, and no live hooks. This authorizes `group_chunk_size=27` with the separately frozen `batch_size=2` execution shape.
 - Stopped and archived the final negative-only prefix before any positive feature artifact was written. The feature serializer now retains writer and monitor displacements as float32 differences of the realized BF16 endpoints instead of rounding those differences back to BF16; the normal realized residual remains BF16. The reducer enforces this dtype contract.
 - A timing audit isolated separately launched direct-path branch recomputations as the remaining avoidable overhead. Stopped and archived the eight complete negative batches, then batched the 27 independent matched `W_O`/RMS branch deltas by layer while retaining BF16 residual-addition order. Synthetic equivalence is exact; the real-checkpoint preflight must also pass exactly before population execution resumes.
+- The vectorized direct-path real-checkpoint preflight failed: its maximum hidden difference from the frozen independent operator was `0.03125`, above the existing `0.02` numerical tolerance. The failed artifact is preserved and the optimization was removed. Population execution therefore uses the independently evaluated, previously verified direct-path operator.
 
 ## Handoff
 

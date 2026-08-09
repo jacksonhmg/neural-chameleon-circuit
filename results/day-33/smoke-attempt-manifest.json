@@ -17,8 +17,16 @@
     "81c7299",
     "4a2ed61",
     "f221eca",
-    "bbff285"
+    "bbff285",
+    "45148d2"
   ],
+  "rejected_vectorized_direct_path_preflight": {
+    "path": "results/day-33/vectorized-direct-preflight-attempt-1.json",
+    "result": "fail",
+    "sha256": "795463e6519d98ede13822fa031c69feb403d35b39370cd024ad40cdc43a665a",
+    "vectorized_direct_hidden_max_abs": 0.03125,
+    "frozen_numerical_tolerance": 0.02
+  },
   "population_attempt_before_cli_provenance": {
     "accounting.working.jsonl": {
       "row_count": 28,

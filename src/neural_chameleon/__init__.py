@@ -61,7 +61,6 @@ from .causal_mechanisms import (
     total_patch_cache,
     trajectory_pair_metrics,
     transplant_job_from_cache,
-    vectorized_direct_path_monitors,
     writer_delta,
 )
 from .mechanism_prediction import (
@@ -252,7 +251,6 @@ __all__ = [
     "total_patch_cache",
     "trajectory_pair_metrics",
     "transplant_job_from_cache",
-    "vectorized_direct_path_monitors",
     "training_decile_mean_predictions",
     "validate_diagnostic_examples",
     "writer_delta",

@@ -26,7 +26,6 @@ from neural_chameleon import (
     total_patch_cache,
     trajectory_pair_metrics,
     transplant_job_from_cache,
-    vectorized_direct_path_monitors,
     writer_delta,
 )
 
@@ -288,29 +287,6 @@ class CausalMechanismTests(unittest.TestCase):
         self.assertTrue(torch.equal(vector.mean_margins, cached.mean_margins))
         self.assertTrue(torch.equal(vector.sequence_scores, cached.sequence_scores))
         self.assertTrue(torch.equal(vector.activation_rms, cached.activation_rms))
-        direct = vectorized_direct_path_monitors(
-            normal,
-            triggered,
-            [components for _group_id, components in groups],
-            self.runner.layers,
-            monitor_layer=2,
-        )
-        independent_direct = torch.stack(
-            [
-                direct_path_monitor(
-                    normal,
-                    direct_path_patch_cache(
-                        normal,
-                        triggered,
-                        components,
-                        self.runner.layers,
-                        monitor_layer=2,
-                    ),
-                ).values
-                for _group_id, components in groups
-            ]
-        )
-        self.assertTrue(torch.equal(direct, independent_direct))
         independent = ComponentEffectRunner(self.runner, monitor_layer=2)
         for index, (_group_id, components) in enumerate(groups):
             result = independent.run(
