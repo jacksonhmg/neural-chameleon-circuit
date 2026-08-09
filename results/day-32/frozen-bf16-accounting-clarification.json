@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "procedure": "acquired-writer-development-v1-bf16-clarification",
+  "status": "frozen-before-real-checkpoint-preflight-attempt-2",
+  "frozen_on": "2026-08-09",
+  "implementation_parent_commit": "d70666ad3fd44c28a540fecd141a8feecfb3740d",
+  "gate_1_plan": "results/day-31/frozen-acquired-writer-plan.json",
+  "gate_1_plan_sha256": "94c25c4d8b3d4eb89d758eed0967400325ffc944d877fd8bbdd717a062badd42",
+  "attempt_1": {
+    "path": "results/day-32/real-checkpoint-preflight-attempt-1.json",
+    "sha256": "2cce4a3de1b21d7b743024304f1ffafa014c758a1970c5b55970a86657e863ad",
+    "result": "fail",
+    "scientific_statistics_computed": false,
+    "passing_boundaries": [
+      "exact block-12 residual reconstruction",
+      "all 13 raw probe-margin reconstructions",
+      "all 13 nonlinear sequence-score reconstructions",
+      "K12 total-path identity",
+      "K12 direct-path identity probe-score tolerance",
+      "diagnostic leakage-field audit",
+      "hook cleanup"
+    ],
+    "failed_boundaries": {
+      "separate_bf16_head_projection_sum_max_abs": 0.125,
+      "normalized_head_allocation_max_abs": 0.1271820068359375,
+      "response_only_direct_identity_hidden_max_abs": 0.03125
+    }
+  },
+  "realized_head_accounting": {
+    "capture": "the fused realized o_proj output at the input to post_attention_layernorm",
+    "theoretical_head_terms": "evaluate each o_proj column slice in FP32 on the captured pre-o_proj query-head vector",
+    "projection_numerical_residual": "captured fused o_proj output minus the sum of FP32 head terms and the optional o_proj bias",
+    "projection_residual_allocation": "add exactly one divided by num_attention_heads of the projection numerical residual to every query-head term",
+    "shared_denominator": "compute from the captured fused o_proj output using the actual RMSNorm epsilon and learned Gemma one-plus-weight scale",
+    "normalization_numerical_residual": "captured normalized branch minus the sum of shared-denominator head terms and optional bias term",
+    "normalization_residual_allocation": "add exactly one divided by num_attention_heads of the normalization numerical residual to every query-head allocation",
+    "required_report": [
+      "projection numerical residual max absolute value",
+      "normalization numerical residual max absolute value",
+      "final allocation closure max absolute error"
+    ],
+    "interpretation": "the residual shares are symmetric numerical bookkeeping; all per-head allocations remain accounting quantities, not causal effects"
+  },
+  "direct_path_attention": {
+    "operator": "cached_target_normalized_branch + response_only_normalized(counterfactual_joint_heads) - response_only_normalized(cached_target_joint_heads)",
+    "matched_recomputation": "the target and counterfactual response-only terms use identical shape, device, dtype, o_proj, post-attention RMSNorm, and kernel path",
+    "identity_requirement": "when selected source and target head values are equal, the bracketed delta must be exactly zero and the cached realized target branch must be returned",
+    "scope": "numerical implementation of the already frozen selected-head substitution and later-write freeze; no causal site or estimand changes"
+  },
+  "unchanged": [
+    "data populations and roles",
+    "K12, K4 MLP, K16, and nonselected populations",
+    "P_Z identity coordinate",
+    "accounting tolerances",
+    "acquisition gates",
+    "prediction gates",
+    "random seeds",
+    "fallback rule",
+    "no-release boundary"
+  ]
+}

@@ -31,7 +31,9 @@ Implement and verify the exact writer-trajectory capture, realized-forward accou
 
 #### Failures and unexpected observations
 
-- None yet.
+- The first real-checkpoint launch under the Python 3.11 test runtime stopped before loading weights because that runtime lacks `accelerate`. The already pinned minimal-reproduction environment includes the dependency and was used instead; no package was installed or changed.
+- Real-checkpoint preflight attempt 1 passed exact residual and 13-probe closure but exposed BF16 non-associativity: separately evaluated head projections differed from the fused branch by up to `0.125`, normalized allocation closure reached `0.127182`, and response-only identity recomputation shifted hidden state by `0.03125` while changing probe scores by only `0.0000703931`.
+- Preserved the failed artifact and froze [Decision 0029](../decision-log/0029-freeze-bf16-accounting-clarification.md) before changing the numerical implementation or rerunning.
 
 ## Handoff
 

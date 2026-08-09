@@ -46,6 +46,8 @@ a_lh = gamma * o_proj_h(y_lh) / sqrt(mean(o_proj(concat_h y_lh)^2) + epsilon),
 
 using the realized full-branch denominator. These allocations sum to the realized normalized attention branch up to declared floating-point tolerance. They are numerical accounting terms, not causal effects.
 
+The committed-code real-checkpoint preflight showed that fused BF16 `W_O` and normalization kernels are not exactly decomposable into separately evaluated head slices. [Decision 0029](../decision-log/0029-freeze-bf16-accounting-clarification.md) therefore freezes symmetric allocation of the captured fused-projection and normalization/cast numerical residuals across heads. Both residual magnitudes are reported explicitly; the final allocation still closes to the actually realized normalized branch.
+
 Any example exceeding a frozen closure tolerance invalidates the affected analysis. Results may not be averaged past a closure failure.
 
 ## Total and direct-path intervention definitions
@@ -61,6 +63,8 @@ The direct-path effect freezes later additive writes as follows:
 5. Freeze every nonintervened additive branch strictly downstream of the earliest intervention to its cached target value. At later intervened layers, install only the counterfactual branch defined above.
 
 The residual stream still carries installed branch changes forward, but no unfrozen later additive write can amplify them. The downstream-dependent remainder is the total effect minus this direct-path effect under this exact operator. It is not described as a natural indirect effect.
+
+To remove BF16 matrix-shape artifacts, the response-only attention recomputation is implemented as a matched delta anchored to the cached realized target branch: recompute both target and counterfactual response-only branches with identical kernels, subtract them, and add the difference to the cached target branch. This clarification makes identity exact without changing the selected-head counterfactual.
 
 ## Acquisition tests
 
