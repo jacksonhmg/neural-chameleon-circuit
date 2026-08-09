@@ -1,6 +1,6 @@
 # Neural Chameleon Circuit: Research Sprint Tracker
 
-This file is the operational source of truth for project progress. The [project brief](docs/neural-chameleon-evasion-research-plan.md) remains the baseline research plan; this tracker records its execution state.
+This file is the operational source of truth for project progress. The [original project brief](docs/neural-chameleon-evasion-research-plan.md) governs the completed first project. The [successor causal-mechanisms plan](docs/causal-mechanisms-research-plan.md) governs Days 31 onward.
 
 ## Working rules
 
@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [project 
 
 ## Current position
 
-**Current phase:** Days 26–30 — Complete (private manuscript candidate accepted; external release remains withheld)
-**Next action:** Privately review the manuscript and make explicit authorship, venue, and further-experiment decisions before considering any separate release authorization.
+**Current phase:** Days 31–35 — In progress (acquired-writer development gate)
+**Next action:** Implement and verify the frozen Gate 1 machinery, then execute and audit the exact-precursor acquisition and intermediate-prediction tests before deciding whether Gate 2 is permitted.
 
 ---
 
@@ -727,3 +727,89 @@ This phase converts the completed evidence package into a private paper candidat
 ### Completion gate
 
 - [x] The private PDF and complete manuscript package pass the release-candidate audit.
+
+## Successor causal-mechanisms sprint
+
+This phase executes the separately frozen [causal-mechanisms plan](docs/causal-mechanisms-research-plan.md). Every pre-existing result and example is development evidence for the successor project. The target title remains conditional, every phase has a mandatory fallback gate, and external dissemination remains unauthorized.
+
+## Day 31: Freeze the acquired-writer development gate
+
+**Status:** Complete
+**Lab note:** [Day 31: Freeze the Acquired-Writer Development Gate](lab-notes/day-31-freeze-acquired-writer-gate.md)
+**Evidence:** [Frozen Gate 1 contract](results/day-31/frozen-acquired-writer-plan.json), [freeze audit](results/day-31/freeze-audit.json), and [method](docs/day-31-35-acquired-writer-method.md).
+
+### Checklist
+
+- [x] Record local execution authorization and preserve the no-release boundary.
+- [x] Freeze complete component/accounting and diagnostic-fit/evaluation populations.
+- [x] Freeze K12, nested groups, K4 MLP, K16, and nonselected controls.
+- [x] Freeze exact realized-forward and shared-denominator head-accounting semantics.
+- [x] Freeze total, direct-path, and downstream-dependent causal estimands.
+- [x] Freeze `P_Z`, the exact-precursor acquisition comparison, diagnostic predictor, baselines, metrics, seeds, and numerical gates.
+- [x] Commit before producing successor-specific Gate 1 outcomes.
+
+### Completion gate
+
+- [x] The implementation and scientific pass/stop rules are precise and machine-readable before new outcomes.
+
+## Day 32: Build the acquired-writer machinery
+
+**Status:** In progress
+**Lab note:** To be created when implementation begins.
+
+### Checklist
+
+- [ ] Implement exact K12/nonselected trajectory capture and response-relative storage.
+- [ ] Implement realized-forward reconstruction and shared-RMSNorm head allocations.
+- [ ] Implement total and frozen-additive-write direct-path interventions.
+- [ ] Implement exact-precursor acquisition and intermediate-prediction analyses.
+- [ ] Add deterministic unit tests and real-checkpoint preflight checks.
+
+### Completion gate
+
+- [ ] Every frozen implementation check passes before the full Gate 1 run.
+
+## Day 33: Execute complete-corpus accounting and acquisition
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Resolve every selected component, nested group, K12, K4 MLP, and K16 on all existing corpora.
+- [ ] Close realized-forward accounting for every response token and released probe.
+- [ ] Measure total, direct-path, and downstream-dependent effects.
+- [ ] Compare the Chameleon with the exact precursor in frozen writer and functional coordinates.
+
+### Completion gate
+
+- [ ] Audited acquisition artifacts exist and every numerical/software check passes.
+
+## Day 34: Execute the observed-trajectory diagnostic
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Fit discovery-only bases and select ridge regularization under frozen folds.
+- [ ] Evaluate the K12 diagnostic and every frozen baseline on all nine held-out concepts.
+- [ ] Report original-space displacement and complete probe-vector metrics for every concept.
+- [ ] Reproduce summary artifacts deterministically.
+
+### Completion gate
+
+- [ ] Audited diagnostic artifacts exist without leakage or selective concept removal.
+
+## Day 35: Apply the Gate 1 continue-or-fallback rule
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Apply acquisition thresholds without modification.
+- [ ] Apply residual and probe prediction thresholds without modification.
+- [ ] Record every clause, adverse result, limitation, and the mechanical disposition.
+- [ ] Continue to Gate 2 only if every required clause passes.
+
+### Completion gate
+
+- [ ] Gate 1 is sealed as pass or fail and the successor framing is updated accordingly.
