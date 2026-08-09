@@ -41,6 +41,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - A timing audit isolated separately launched direct-path branch recomputations as the remaining avoidable overhead. Stopped and archived the eight complete negative batches, then batched the 27 independent matched `W_O`/RMS branch deltas by layer while retaining BF16 residual-addition order. Synthetic equivalence is exact; the real-checkpoint preflight must also pass exactly before population execution resumes.
 - The vectorized direct-path real-checkpoint preflight failed: its maximum hidden difference from the frozen independent operator was `0.03125`, above the existing `0.02` numerical tolerance. The failed artifact is preserved and the optimization was removed. Population execution therefore uses the independently evaluated, previously verified direct-path operator.
 - Stopped and archived a final short negative-only prefix to improve throughput without changing numerical operators. The candidate execution shape uses `batch_size=4` and group chunks `13,13,1`, keeping the largest expanded batch at 52 versus the already verified 54 while halving independent direct-path launches per example. It remains blocked until exact full-versus-cached agreement passes on four real examples for every chunk shape.
+- The four-example preflight passed every `13,13,1` group chunk with exact equality (`0.0` maximum difference) for all probe margins, sequence scores, and monitor RMS, with no live hooks. This is the final authorized population execution shape.
 
 ## Handoff
 

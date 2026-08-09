@@ -1,5 +1,6 @@
 {
-  "cache_batch_contract": "capture_after_complete_27-job_batch_expansion",
+  "base_batch_size": 4,
+  "cache_batch_contract": "batch_size_4_with_group_chunks_13_13_1",
   "checks": {
     "activation_rms_exact": true,
     "group_ids_equal": true,
@@ -14,7 +15,14 @@
   },
   "example_ids": [
     "validation-all-caps-pos-010",
-    "validation-all-caps-pos-008"
+    "validation-all-caps-pos-008",
+    "validation-all-caps-pos-041",
+    "validation-all-caps-pos-019"
+  ],
+  "group_chunk_sizes": [
+    13,
+    13,
+    1
   ],
   "group_ids": [
     "individual.layer_11.mlp",
@@ -45,7 +53,7 @@
     "selected_heads.layer_11",
     "selected_heads.layer_12"
   ],
-  "implementation_commit": "ce4aa89517cdf1c2cc9d88d16d2cd15e9bffd972",
+  "implementation_commit": "b1e61dce1ae7ec54f29fdd512890f767b65fd977",
   "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
   "probe_names": [
     "HTML",
