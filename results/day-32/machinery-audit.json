@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "procedure": "acquired-writer-development-v1-machinery-audit",
+  "audited_on": "2026-08-09",
+  "implementation_commit": "c167cdc86e3e977bfe059b547726b57effab1935",
+  "checks": {
+    "frozen_gate_1_plan_unchanged": true,
+    "bf16_clarification_preceded_attempt_2": true,
+    "failed_attempt_1_preserved": true,
+    "static_checks_pass": true,
+    "full_test_suite_69_of_69_pass": true,
+    "synthetic_realized_forward_closure_pass": true,
+    "synthetic_exact_direct_identity_pass": true,
+    "synthetic_total_and_direct_paths_separate": true,
+    "synthetic_identity_writer_coordinate_preserves_magnitude": true,
+    "synthetic_prediction_pipeline_deterministic": true,
+    "real_checkpoint_preflight_14_of_14_pass": true,
+    "real_checkpoint_residual_closure_pass": true,
+    "real_checkpoint_all_13_probe_margin_closure_pass": true,
+    "real_checkpoint_k12_total_identity_exact": true,
+    "real_checkpoint_k12_direct_identity_exact": true,
+    "real_checkpoint_leakage_contract_pass": true,
+    "real_checkpoint_hooks_removed": true,
+    "repeat_preflight_byte_identical": true,
+    "no_acquisition_or_prediction_gate_statistic_computed": true,
+    "external_dissemination_unauthorized": true
+  },
+  "real_checkpoint_maxima": {
+    "hidden_reconstruction_max_abs": 0.0,
+    "raw_projection_closure_max_abs": 1.9073486328125e-06,
+    "normalized_head_allocation_closure_max_abs": 3.814697265625e-06,
+    "probe_margin_reconstruction_max_abs": 0.0,
+    "sequence_score_reconstruction_max_abs": 0.0,
+    "k12_total_identity_hidden_max_abs": 0.0,
+    "k12_direct_identity_hidden_max_abs": 0.0,
+    "k12_total_identity_probe_score_max_abs": 0.0,
+    "k12_direct_identity_probe_score_max_abs": 0.0,
+    "reported_projection_numerical_residual_max_abs": 0.05736541748046875,
+    "reported_normalization_numerical_residual_max_abs": 0.06134033203125
+  },
+  "repeat_preflight": {
+    "attempt_2_first_sha256": "e6737d59d604395793acb5fa80fe37bb7135622bc863902670102d8ec820f81d",
+    "attempt_2_repeat_sha256": "e6737d59d604395793acb5fa80fe37bb7135622bc863902670102d8ec820f81d",
+    "byte_identical": true
+  },
+  "artifact_sha256": {
+    "preflight": "e6737d59d604395793acb5fa80fe37bb7135622bc863902670102d8ec820f81d",
+    "bf16_clarification": "d79335e55c46680669a6e82a49d0701ce6e25f8d920091b677f6ce814d8a5e2b",
+    "preflight_script": "f9bb6c6e3899baf030ab31d1768d9fd96d1776b55d2839426323a89011a44407",
+    "causal_mechanisms_module": "327104504055c8fe58d8a47c0e782acbc592eeb54d11982bd5868cb0cd09ca4e",
+    "mechanism_prediction_module": "fc977bb995bd4de8f39a070ef3484a89e85cb28f819595d894196a84be8bbb20",
+    "causal_mechanisms_tests": "a40e480fbebdf90c9fdf06caf342f5bc15ebfd9f7ae8292cc54b8ea7cc97a1ed",
+    "mechanism_prediction_tests": "40b5b577e7367cb555c3ef3b0936972323c79987594b8ac529817a2dd95fba34"
+  },
+  "test_command": "PYTHONPATH=src:scripts python -m pytest -q tests",
+  "test_result": "69 passed",
+  "result": "pass"
+}

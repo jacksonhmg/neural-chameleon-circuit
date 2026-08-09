@@ -3,7 +3,7 @@
 ## Phase information
 
 - **Sprint phase:** Day 32
-- **Status:** In progress
+- **Status:** Complete
 - **Calendar date:** 2026-08-09
 - **Frozen parent:** `46dab91`
 - **Protocol:** [Frozen acquired-writer plan](../results/day-31/frozen-acquired-writer-plan.json)
@@ -42,7 +42,26 @@ Implement and verify the exact writer-trajectory capture, realized-forward accou
 - Anchored matched response-only counterfactual deltas to each cached realized target branch.
 - Strengthened the synthetic suite to require exact direct-path identity and explicit numerical-residual diagnostics.
 
+#### Verification and results
+
+- Static checks passed and the complete suite passed `69/69` tests.
+- Real-checkpoint preflight attempt 2 passed all `14/14` checks on the pinned Chameleon checkpoint.
+- Realized residual, all 13 raw probe margins, and all 13 nonlinear sequence scores reconstructed exactly on both normal and correctly triggered conditions.
+- The final shared-denominator head allocation closed within `0.0000038147`; fused-projection and normalization numerical residuals remained explicitly reported, reaching `0.0573654` and `0.0613403`, respectively.
+- K12 total-path and anchored direct-path identity interventions were exact in hidden and probe-score space.
+- A second execution produced a byte-identical preflight artifact with SHA-256 `e6737d59d604395793acb5fa80fe37bb7135622bc863902670102d8ec820f81d`.
+- No Gate 1 acquisition or prediction statistic was computed.
+
 ## Handoff
 
-- **Current state:** Implementation in progress.
-- **Next action:** Complete core machinery and deterministic tests, then run a bounded real-checkpoint preflight.
+- **Current state:** Day 32 machinery and verification are complete.
+- **Next action:** Execute complete-corpus component resolution, accounting, direct-path decomposition, and exact-precursor acquisition under the frozen Day 31 contract.
+
+## Day closeout
+
+- **Outcome:** Complete
+- **Completed on:** 2026-08-09
+- **Evidence:** [Passing machinery audit](../results/day-32/machinery-audit.json)
+- **Implementation commits:** `d70666a`, `c167cdc`
+- **Clarification commit:** `47018a5`
+- **Dissemination:** No push, tag, release, submission, upload, external message, or author contact.

@@ -754,20 +754,20 @@ This phase executes the separately frozen [causal-mechanisms plan](docs/causal-m
 
 ## Day 32: Build the acquired-writer machinery
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 32: Build the Acquired-Writer Machinery](lab-notes/day-32-build-acquired-writer-machinery.md)
 
 ### Checklist
 
-- [ ] Implement exact K12/nonselected trajectory capture and response-relative storage.
-- [ ] Implement realized-forward reconstruction and shared-RMSNorm head allocations.
-- [ ] Implement total and frozen-additive-write direct-path interventions.
-- [ ] Implement exact-precursor acquisition and intermediate-prediction analyses.
-- [ ] Add deterministic unit tests and real-checkpoint preflight checks.
+- [x] Implement exact K12/nonselected trajectory capture and response-relative storage.
+- [x] Implement realized-forward reconstruction and shared-RMSNorm head allocations.
+- [x] Implement total and frozen-additive-write direct-path interventions.
+- [x] Implement exact-precursor acquisition and intermediate-prediction analyses.
+- [x] Add deterministic unit tests and real-checkpoint preflight checks.
 
 ### Completion gate
 
-- [ ] Every frozen implementation check passes before the full Gate 1 run.
+- [x] Every frozen implementation check passes before the full Gate 1 run.
 
 ## Day 33: Execute complete-corpus accounting and acquisition
 
