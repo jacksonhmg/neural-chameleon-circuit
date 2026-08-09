@@ -16,7 +16,8 @@
     "a6a1a60",
     "81c7299",
     "4a2ed61",
-    "f221eca"
+    "f221eca",
+    "bbff285"
   ],
   "population_attempt_before_cli_provenance": {
     "accounting.working.jsonl": {
@@ -50,6 +51,25 @@
     "natural-endpoints.working.jsonl": {
       "row_count": 16,
       "sha256": "cc60ef3982cfc4d921fa5c6a48a9db5b61cd6697b376dcb6b8bf8b40aeb34769"
+    }
+  },
+  "population_attempt_before_vectorized_direct_path": {
+    "accounting.working.jsonl": {
+      "row_count": 18,
+      "sha256": "8365c2bc07b77a2ee472177f017b1016fd1a11c1b7f8cf9eb9f908e8a0bc0093"
+    },
+    "component-effects.working.jsonl": {
+      "row_count": 1728,
+      "sha256": "ed268e29908cc5727caea2b8fa8a9bc0c0c7b63acbbf210db307426d6feaa8b3"
+    },
+    "execution-parameters.json": {
+      "line_count": 8,
+      "sha256": "5365fc6a6f54fa5b21a2c0fd572fd16fd48e413713dc32401759e130959fa499"
+    },
+    "feature_file_count": 0,
+    "natural-endpoints.working.jsonl": {
+      "row_count": 36,
+      "sha256": "006cc35156cf8cda809c719fa9c25e6e9dc2633711eff5a25a89e78f22c0cf9d"
     }
   },
   "population_attempt_before_row_provenance": {

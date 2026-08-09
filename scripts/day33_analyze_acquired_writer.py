@@ -791,6 +791,12 @@ def main() -> None:
     ):
         require_committed(path, analysis_commit)
     plan = json.loads(PLAN_PATH.read_text())
+    machinery_audit = json.loads(
+        (ROOT / "results/day-32/machinery-audit.json").read_text()
+    )
+    cached_tail_preflight = json.loads(
+        (ROOT / "results/day-33/cached-tail-preflight.json").read_text()
+    )
     records = load_records(None)
     groups = component_groups(plan)
     probe_names, probes = load_probes()
@@ -845,6 +851,42 @@ def main() -> None:
         raise ValueError(
             f"Gate 1 row counts incomplete: observed={observed_counts}, expected={expected_counts}"
         )
+    expected_natural_keys = {
+        (model, row["example_id"], condition)
+        for model, population in (
+            ("chameleon", records),
+            ("precursor", [row for row in records if int(row["label"]) == 1]),
+        )
+        for row in population
+        for condition in ("normal", "correct_trigger")
+    }
+    observed_natural_keys = {
+        (row["model"], row["example_id"], row["condition"]) for row in natural
+    }
+    expected_effect_keys = {
+        (row["example_id"], direction, path, group["group_id"])
+        for row in records
+        for direction in ("induction", "rescue")
+        for path in ("total", "direct_path")
+        for group in groups
+    }
+    observed_effect_keys = {
+        (row["example_id"], row["direction"], row["path"], row["group_id"])
+        for row in effects
+    }
+    observed_functional_ids = {row["example_id"] for row in functional}
+    observed_accounting_ids = {row["batch_id"] for row in accounting}
+    split_paths = {
+        "discovery": ROOT / "data/splits/day04-v1/discovery.jsonl",
+        "validation": ROOT / "data/splits/day04-v1/validation.jsonl",
+        "safety": ROOT / "data/splits/day04-v1/safety-test.LOCKED.jsonl",
+        "split_manifest": ROOT / "data/splits/day04-v1/manifest.json",
+    }
+    input_hashes = {name: sha256_file(path) for name, path in split_paths.items()}
+    input_hashes_match = all(
+        input_hashes[name] == plan["input_sha256"][name]
+        for name in input_hashes
+    )
     tolerances = plan["realized_forward_accounting"]["primary_tolerances"]
     audit_maxima = {
         "max_hidden_absolute_error": max(
@@ -867,12 +909,22 @@ def main() -> None:
         model: feature_manifest(model, positive_ids)
         for model in ("chameleon", "precursor")
     }
-    for model in ("chameleon", "precursor"):
-        for example_id in positive_ids:
-            artifact = load_feature(model, example_id)
+    all_feature_response_ids_match = True
+    for example_id in positive_ids:
+        artifacts = {
+            model: load_feature(model, example_id)
+            for model in ("chameleon", "precursor")
+        }
+        all_feature_response_ids_match &= torch.equal(
+            artifacts["chameleon"]["response_ids"],
+            artifacts["precursor"]["response_ids"],
+        )
+        for model, artifact in artifacts.items():
             if (
                 artifact["execution_commit"] != execution_commit
                 or artifact["execution_id"] != execution_id
+                or artifact["example_id"] != example_id
+                or artifact["model"] != model
             ):
                 raise ValueError("feature artifact execution provenance is mixed")
             if (
@@ -935,6 +987,7 @@ def main() -> None:
         "execution_parameters": execution_parameters,
         "analysis_commit": analysis_commit,
         "plan_sha256": sha256_file(PLAN_PATH),
+        "input_sha256": input_hashes,
         "row_counts": observed_counts,
         "working_files": {
             path.name: {"sha256": sha256_file(path), "size_bytes": path.stat().st_size}
@@ -945,6 +998,16 @@ def main() -> None:
     write_json(MANIFEST_PATH, manifest)
     checks = {
         "row_counts_exact": observed_counts == expected_counts,
+        "input_hashes_match": input_hashes_match,
+        "accounting_batch_ids_unique": len(observed_accounting_ids)
+        == len(accounting),
+        "natural_keys_exact": observed_natural_keys == expected_natural_keys
+        and len(observed_natural_keys) == len(natural),
+        "component_effect_keys_exact": observed_effect_keys == expected_effect_keys
+        and len(observed_effect_keys) == len(effects),
+        "precursor_functional_ids_exact": observed_functional_ids
+        == set(positive_ids)
+        and len(observed_functional_ids) == len(functional),
         "one_execution_commit": len(execution_commits) == 1,
         "one_execution_id": len(execution_ids) == 1,
         "execution_parameters_match": execution_parameters["execution_id"]
@@ -955,17 +1018,38 @@ def main() -> None:
             check=False,
         ).returncode
         == 0,
+        "day32_machinery_audit_pass": machinery_audit["result"] == "pass"
+        and all(machinery_audit["checks"].values()),
+        "complete_batch_preflight_pass": cached_tail_preflight["result"] == "pass"
+        and all(cached_tail_preflight["checks"].values())
+        and len(cached_tail_preflight["group_ids"]) == len(groups),
+        "preflight_and_execution_machinery_identical": subprocess.run(
+            [
+                "git",
+                "diff",
+                "--quiet",
+                cached_tail_preflight["implementation_commit"],
+                execution_commit,
+                "--",
+                "scripts/day33_run_acquired_writer.py",
+                "src/neural_chameleon/causal_mechanisms.py",
+            ],
+            cwd=ROOT,
+            check=False,
+        ).returncode
+        == 0,
         "accounting_tolerances_pass": accounting_pass,
         "feature_counts_exact": all(
             row["file_count"] == len(positive_ids)
             for row in feature_manifests.values()
         ),
         "feature_dtype_contract_exact": True,
+        "all_feature_response_ids_match": all_feature_response_ids_match,
         "acquisition_response_ids_match": acquisition[
             "response_token_ids_identical_between_checkpoints"
         ],
         "probe_family_exact": tuple(probe_names)
-        == tuple(sorted(row.removesuffix("_weights.pt") for row in [path.name for path in (ROOT / "external/minimal_neural_chameleons/probes").glob("*_weights.pt")])),
+        == tuple(sorted({row["concept"] for row in records})),
         "analysis_sources_committed": True,
         "scientific_gate_applied_without_threshold_change": True,
     }

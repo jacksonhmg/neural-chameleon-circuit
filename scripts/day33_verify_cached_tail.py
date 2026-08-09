@@ -25,10 +25,13 @@ from neural_chameleon import (  # noqa: E402
     RealizedForwardRunner,
     VectorizedMechanismRunner,
     capture_layer_input,
+    direct_path_monitor,
+    direct_path_patch_cache,
     load_experimental_split,
     repeat_condition,
     total_patch_cache,
     transplant_job_from_cache,
+    vectorized_direct_path_monitors,
 )
 
 
@@ -72,6 +75,7 @@ def main() -> None:
         records[0]["trigger_concept"],
     )
     realized = RealizedForwardRunner(runner, monitor_layer=12)
+    normal = realized.run(pair.normal)
     triggered = realized.run(pair.triggered)
     probe_names, probes = load_probes()
     groups = {
@@ -96,6 +100,32 @@ def main() -> None:
             runner, repeat_condition(pair.normal, len(jobs)), layer=9
         ),
     )
+    component_sets = [
+        tuple(MechanismComponent.parse(value) for value in component_ids)
+        for component_ids in groups.values()
+    ]
+    vectorized_direct = vectorized_direct_path_monitors(
+        normal,
+        triggered,
+        component_sets,
+        runner.layers,
+        monitor_layer=12,
+    )
+    independent_direct = torch.stack(
+        [
+            direct_path_monitor(
+                normal,
+                direct_path_patch_cache(
+                    normal,
+                    triggered,
+                    components,
+                    runner.layers,
+                    monitor_layer=12,
+                ),
+            ).values
+            for components in component_sets
+        ]
+    )
     differences = {
         "mean_raw_margin_max_abs": float(
             (complete.mean_margins - cached.mean_margins).abs().max()
@@ -105,6 +135,9 @@ def main() -> None:
         ),
         "activation_rms_max_abs": float(
             (complete.activation_rms - cached.activation_rms).abs().max()
+        ),
+        "vectorized_direct_hidden_max_abs": float(
+            (vectorized_direct.float() - independent_direct.float()).abs().max()
         ),
     }
     checks = {
@@ -117,6 +150,9 @@ def main() -> None:
         ),
         "activation_rms_exact": torch.equal(
             complete.activation_rms, cached.activation_rms
+        ),
+        "vectorized_direct_hidden_exact": torch.equal(
+            vectorized_direct, independent_direct
         ),
         "hooks_removed": runner.registered_hook_count() == 0,
     }
