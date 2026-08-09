@@ -728,10 +728,8 @@ def _counterfactual_attention_branch(
             target_recomputed = layer.post_attention_layernorm(
                 attention.o_proj(target_joint.reshape(*target_joint.shape[:2], -1))
             )
-        elif tuple(target_recomputed.shape) != (
-            target_joint.shape[0],
-            target_joint.shape[1],
-            num_heads * head_dim,
+        elif tuple(target_recomputed.shape) != tuple(
+            target.attention_branches[layer_index].values.shape
         ):
             raise ValueError("cached target attention recomputation has wrong shape")
         else:
