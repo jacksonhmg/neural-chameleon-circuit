@@ -36,6 +36,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - Archived all partial smoke data without deletion under ignored `artifacts/mechanism-gate1-v1-smoke-attempts/`. The tracked manifest records four row-file hashes/counts and both feature-tree manifest hashes. The complete frozen execution therefore starts with no reusable scientific rows or tensors from superseded implementations.
 - Stopped and archived the first 14 accounting batches of the population attempt after noticing that launch provenance existed only in terminal output. No positive feature tensors had yet been written. Tightened the pipeline so every JSONL row and tensor contains the exact execution commit and every completed batch asserts that no hooks remain registered.
 - Stopped and archived a second early population attempt after measuring the conservative eight-group chunk throughput. The final execution contract now hashes and persists the launch commit, batch size, group chunk size, and population limit; every row and feature tensor carries that execution ID. The real-checkpoint preflight now exercises all 27 frozen groups in one job-major batch before authorizing the higher-throughput shape.
+- The 27-group real-checkpoint preflight passed in one expanded batch with exact equality (`0.0` maximum difference) for all 13 probes and monitor RMS, and no live hooks. This authorizes `group_chunk_size=27` with the separately frozen `batch_size=2` execution shape.
 
 ## Handoff
 

@@ -1,5 +1,5 @@
 {
-  "cache_batch_contract": "capture_after_job_major_batch_expansion",
+  "cache_batch_contract": "capture_after_complete_27-job_batch_expansion",
   "checks": {
     "activation_rms_exact": true,
     "group_ids_equal": true,
@@ -17,10 +17,35 @@
     "validation-all-caps-pos-008"
   ],
   "group_ids": [
+    "individual.layer_11.mlp",
+    "individual.layer_11.head_08",
+    "individual.layer_10.head_12",
+    "individual.layer_11.head_09",
+    "individual.layer_12.mlp",
+    "individual.layer_10.mlp",
+    "individual.layer_10.head_02",
+    "individual.layer_09.head_11",
+    "individual.layer_12.head_12",
+    "individual.layer_09.mlp",
+    "individual.layer_12.head_03",
     "individual.layer_09.head_04",
-    "nested_heads.K12"
+    "individual.layer_11.head_14",
+    "individual.layer_12.head_02",
+    "individual.layer_09.head_13",
+    "individual.layer_11.head_15",
+    "nested_heads.K1",
+    "nested_heads.K2",
+    "nested_heads.K4",
+    "nested_heads.K8",
+    "nested_heads.K12",
+    "selected_mlps.K4",
+    "selected_components.K16",
+    "selected_heads.layer_09",
+    "selected_heads.layer_10",
+    "selected_heads.layer_11",
+    "selected_heads.layer_12"
   ],
-  "implementation_commit": "a6c0917cdeb06bdb5e7eb8ff5984cea0ece74198",
+  "implementation_commit": "7f5b0f279bcc1654443ff8f8922fb292005fc1df",
   "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
   "probe_names": [
     "HTML",
