@@ -56,6 +56,8 @@
         }
       },
       "batch_size": 2,
+      "batched_direct_job_count": 16,
+      "batched_direct_max_abs_error": 0.015625,
       "cached_job_count": 16,
       "cached_margin_max_abs_error": 0.0,
       "cached_score_max_abs_error": 0.0,
@@ -368,6 +370,8 @@
         }
       },
       "batch_size": 2,
+      "batched_direct_job_count": 16,
+      "batched_direct_max_abs_error": 0.015625,
       "cached_job_count": 16,
       "cached_margin_max_abs_error": 0.0,
       "cached_score_max_abs_error": 0.0,
@@ -625,8 +629,15 @@
       }
     }
   },
-  "preflight_commit": "9986735e8e088fbb89787403ee5141ca8bafd378",
+  "failure": {
+    "chameleon_batched_direct_max_abs_error": 0.015625,
+    "population_accessed": false,
+    "precursor_batched_direct_max_abs_error": 0.015625,
+    "rule": "cached execution requires exact real-checkpoint equality under final batch and kernel shape",
+    "scientific_values_inspected": false
+  },
+  "preflight_commit": "1f86c93ae28be13cd3b3db1cba9c348ef0e37441",
   "procedure": "post-Gate-1 Phase B final-shape real-checkpoint preflight",
-  "result": "pass",
+  "result": "fail-batched-direct-exact-equality",
   "schema_version": 1
 }

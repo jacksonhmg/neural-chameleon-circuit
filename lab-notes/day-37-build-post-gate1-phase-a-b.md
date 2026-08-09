@@ -108,6 +108,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Total-effect throughput improved, but the direct path still projected each intervention sequentially and dominated runtime.
 - Decision 0040 preserves all attempt rows, forbids mixing them into the final matrix, batches algebraically independent direct paths in candidate-major batch rows, and requires exact equality to sixteen independent direct executions on both checkpoints before another population restart.
 
+#### Batched-direct preflight attempt 4 — failed
+
+- The expanded-batch direct implementation differed from independent BF16 direct execution by maximum absolute hidden-state error `0.015625` in both checkpoints. This violates the frozen exact-equality rule for cache/kernel optimizations, despite lying within the general accounting tolerance.
+- No donor was regenerated, no population was accessed, and no scientific value was inspected under this commit.
+- A timing-only Chameleon preflight benchmark found the batched implementation slower than 32 cached independent projections: 0.923 versus 0.581 seconds. Probe summarization was only 0.016 seconds.
+- Decision 0041 rejects the batched-direct output entirely, restores independent direct execution, and prospectively raises only the total-effect chunk to the natural 32-random-draw family size. A new two-checkpoint exact-equality preflight is mandatory.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

@@ -32,6 +32,8 @@ from neural_chameleon import (  # noqa: E402
     align_paired_prompts,
     build_source_mask_partition,
     capture_layer_input,
+    direct_path_monitor,
+    direct_path_target_recomputations,
     load_experimental_split,
     probe_sequence_scores,
     probe_token_margins,
@@ -44,8 +46,8 @@ from neural_chameleon.post_gate1_interventions import (  # noqa: E402
     align_attention_indices,
     attention_operation_replacements,
     attention_sites,
-    batched_direct_replacement_monitors,
     captured_head,
+    direct_replacement_cache,
     frontier_configurations,
     frontier_patch_cache,
     mean_replacements,
@@ -100,7 +102,7 @@ def parse_args() -> argparse.Namespace:
         "--models", nargs="+", choices=("chameleon", "precursor"), default=None
     )
     parser.add_argument("--batch-size", type=int, default=2)
-    parser.add_argument("--job-chunk-size", type=int, default=16)
+    parser.add_argument("--job-chunk-size", type=int, default=32)
     parser.add_argument("--limit-per-cell", type=int)
     return parser.parse_args()
 
@@ -551,24 +553,24 @@ def run_total_jobs(
     return result
 
 
-def run_direct_jobs(
+def direct_summary(
     target: Any,
-    replacements_by_id: Mapping[str, Mapping[str, Tensor]],
+    replacements: Mapping[str, Tensor],
     runner: PairedInterventionRunner,
     probes: Sequence[LinearProbe],
     *,
-    chunk_size: int,
-) -> dict[str, tuple[Tensor, Tensor, Tensor]]:
-    monitors = batched_direct_replacement_monitors(
+    target_recomputations: Mapping[int, Tensor] | None = None,
+) -> tuple[Tensor, Tensor, Tensor]:
+    patched = direct_path_monitor(
         target,
-        replacements_by_id,
-        runner.layers,
-        chunk_size=chunk_size,
+        direct_replacement_cache(
+            target,
+            replacements,
+            runner.layers,
+            target_recomputations=target_recomputations,
+        ),
     )
-    return {
-        group_id: capture_summary(monitor, probes)
-        for group_id, monitor in monitors.items()
-    }
+    return capture_summary(patched, probes)
 
 
 def absolute_key(row: Mapping[str, Any]) -> tuple[str, str, str, str]:
@@ -656,6 +658,9 @@ def run_absolute_random(
                 ),
             }
             for condition, target in ((pair.normal, normal), (pair.triggered, triggered)):
+                target_recomputations = direct_path_target_recomputations(
+                    target, runner.layers, (9, 10, 11, 12)
+                )
                 selected = {
                     name: values
                     for name, (base, _target, values) in replacements.items()
@@ -674,17 +679,19 @@ def run_absolute_random(
                     chunk_size=chunk_size,
                     start_layer=9,
                 )
-                directs = run_direct_jobs(
-                    target,
-                    selected,
-                    runner,
-                    probes,
-                    chunk_size=chunk_size,
-                )
-                for operator in selected:
+                for operator, values in selected.items():
                     for path, summary in (
                         ("total", totals[operator]),
-                        ("direct", directs[operator]),
+                        (
+                            "direct",
+                            direct_summary(
+                                target,
+                                values,
+                                runner,
+                                probes,
+                                target_recomputations=target_recomputations,
+                            ),
+                        ),
                     ):
                         rows = []
                         margins, scores, rms = summary
@@ -710,6 +717,9 @@ def run_absolute_random(
                     ("induction", pair.normal, normal),
                     ("rescue", pair.triggered, triggered),
                 ):
+                    target_recomputations = direct_path_target_recomputations(
+                        target, runner.layers, (9, 10, 11, 12)
+                    )
                     random_values = {}
                     invariant_audits = {}
                     for draw in range(32):
@@ -739,18 +749,20 @@ def run_absolute_random(
                         chunk_size=chunk_size,
                         start_layer=9,
                     )
-                    directs = run_direct_jobs(
-                        target,
-                        random_values,
-                        runner,
-                        probes,
-                        chunk_size=chunk_size,
-                    )
                     for draw in range(32):
                         group_id = f"draw_{draw:02d}"
                         for path, summary in (
                             ("total", totals[group_id]),
-                            ("direct", directs[group_id]),
+                            (
+                                "direct",
+                                direct_summary(
+                                    target,
+                                    random_values[group_id],
+                                    runner,
+                                    probes,
+                                    target_recomputations=target_recomputations,
+                                ),
+                            ),
                         ):
                             margins, scores, rms = summary
                             rows = []
@@ -1041,6 +1053,9 @@ def run_attention_population(
                     normal_concept,
                 ),
             ):
+                target_recomputations = direct_path_target_recomputations(
+                    target, runner.layers, layers
+                )
                 metadata = []
                 for site_id, members in sites:
                     layer = MechanismComponent.parse(members[0]).layer
@@ -1069,17 +1084,19 @@ def run_attention_population(
                     chunk_size=chunk_size,
                     start_layer=min(layers),
                 )
-                directs = run_direct_jobs(
-                    target,
-                    {row[0]: row[4] for row in metadata},
-                    runner,
-                    probes,
-                    chunk_size=chunk_size,
-                )
-                for group_id, site_id, operation, members, _replacements, _job in metadata:
+                for group_id, site_id, operation, members, replacements, _job in metadata:
                     for path, summary in (
                         ("total", totals[group_id]),
-                        ("direct", directs[group_id]),
+                        (
+                            "direct",
+                            direct_summary(
+                                target,
+                                replacements,
+                                runner,
+                                probes,
+                                target_recomputations=target_recomputations,
+                            ),
+                        ),
                     ):
                         margins, scores, rms = summary
                         rows = []

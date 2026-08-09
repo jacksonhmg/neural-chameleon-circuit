@@ -5,16 +5,12 @@ from types import SimpleNamespace
 import torch
 from torch import nn
 
-from neural_chameleon.causal_mechanisms import (
-    RealizedForwardCapture,
-    direct_path_monitor,
-)
+from neural_chameleon.causal_mechanisms import RealizedForwardCapture
 from neural_chameleon.interventions import CapturedActivation
 from neural_chameleon.post_gate1_interventions import (
     AttentionTensorState,
     attention_operation_replacements,
     attention_sites,
-    batched_direct_replacement_monitors,
     concept_operation_bidirectional,
     concept_ov_removed,
     concept_qk_removed,
@@ -95,40 +91,6 @@ def test_zero_source_total_and_direct_replacements() -> None:
     # attention branches are frozen to their target captures.
     assert len(direct) == 4
     assert torch.equal(direct[next(site for site in direct if site.layer == 1 and site.kind.value == "attn_out")].values, target.attention_branches[1].values)
-
-
-def test_batched_direct_replacements_equal_independent_execution() -> None:
-    layers = [Layer(), Layer()]
-    target = realized()
-    source = realized(100)
-    jobs = {
-        "source_head_0": source_replacements(
-            target, source, ("layer_00.head_00",), layers
-        ),
-        "zero_head_1": zero_replacements(
-            target, ("layer_01.head_01",), layers
-        ),
-        "source_both": source_replacements(
-            target,
-            source,
-            ("layer_00.head_00", "layer_01.head_01"),
-            layers,
-        ),
-    }
-    batched = batched_direct_replacement_monitors(
-        target, jobs, layers, chunk_size=2, monitor_layer=1
-    )
-    assert tuple(batched) == tuple(jobs)
-    for group_id, replacements in jobs.items():
-        independent = direct_path_monitor(
-            target,
-            direct_replacement_cache(
-                target, replacements, layers, monitor_layer=1
-            ),
-        )
-        assert torch.equal(batched[group_id].values, independent.values)
-        assert torch.equal(batched[group_id].response_ids, target.response_ids)
-        assert torch.equal(batched[group_id].response_mask, target.response_mask)
 
 
 def test_haar_rotation_is_deterministic_and_preserves_invariants() -> None:
