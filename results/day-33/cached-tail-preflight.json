@@ -45,7 +45,7 @@
     "selected_heads.layer_11",
     "selected_heads.layer_12"
   ],
-  "implementation_commit": "7f5b0f279bcc1654443ff8f8922fb292005fc1df",
+  "implementation_commit": "2002699eed23b94b244b0c7740b757ad8c391c43",
   "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
   "probe_names": [
     "HTML",
