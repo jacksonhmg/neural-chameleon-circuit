@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Days 31–35 — Complete (Gate 1 scientific fail; causal-localization fallback accepted). A new post–Gate 1 mechanism re-identification program is documented but not authorized for execution.
-**Next action:** Await explicit execution authorization. If granted, freeze and commit the machine-readable Phase A–B development contract before running any new diagnostic or intervention.
+**Current phase:** Day 36 — Complete (post–Gate 1 Phase A–B contract frozen; empirical execution not authorized).
+**Next action:** Await explicit execution authorization. If granted, implement and verify the frozen Phase A–B machinery before running any new diagnostic or intervention.
 
 ---
 
@@ -838,3 +838,26 @@ The strongest supported successor statement is limited to late K12 causal locali
 **Decision:** [Decision 0031](decision-log/0031-adopt-post-gate1-mechanism-reidentification-plan.md)
 
 The possible next program treats the complete writer-carrier hypothesis as falsified and prospectively distinguishes direct negative writing, gating/omission, downstream control/amplification, and a concept-dependent hybrid. All existing data remain development evidence. No new analysis, intervention, fresh-data access, or title upgrade begins until an explicit authorization and phase-specific machine-readable freeze are committed.
+
+## Day 36: Freeze the post–Gate 1 Phase A–B contract
+
+**Status:** Complete
+**Lab note:** [Day 36: Freeze the Post–Gate 1 Phase A–B Contract](lab-notes/day-36-freeze-post-gate1-phase-a-b.md)
+**Evidence:** [Frozen Phase A–B contract](results/day-36/frozen-phase-a-b-contract.json), [freeze audit](results/day-36/freeze-audit.json), and [Decision 0032](decision-log/0032-freeze-post-gate1-phase-a-b-contract.md).
+
+### Checklist
+
+- [x] Preserve the failed Gate 1 hypothesis and all development-only evidence labels.
+- [x] Freeze complete populations, folds, centering, leakage controls, models, baselines, and metrics.
+- [x] Freeze absolute zero/mean/replacement, precursor, and rank-matched random operators.
+- [x] Freeze downstream-frontier releases, attention QK/OV operations, and discovery-only selection.
+- [x] Freeze quantitative mechanism signatures, inference, implementation checks, and fallback gates.
+- [x] Verify every controlling hash, count, component identity, and authorization boundary before outcomes.
+
+### Completion gate
+
+- [x] The authoritative Phase A–B contract is machine-readable, audited, and committed before new outcomes.
+
+### Authorization boundary
+
+Day 36 does not authorize Phase A–B execution. A later explicit user instruction is required before implementation or model runs begin.

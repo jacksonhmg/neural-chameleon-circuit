@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "procedure": "post-gate1-mechanism-reidentification-phase-a-b-v1-freeze-audit",
+  "audited_on": "2026-08-09",
+  "parent_commit": "7013fe52407909607ab981de01cfeb0840006a62",
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "checks": {
+    "master_plan_committed_at_parent": true,
+    "planning_decision_committed_at_parent": true,
+    "decision_0030_remains_accepted": true,
+    "prior_gate_1_failure_pinned": true,
+    "master_plan_hash_matches": true,
+    "prior_plan_hash_matches": true,
+    "prior_gate_1_contract_hash_matches": true,
+    "gate_1_audit_hash_matches": true,
+    "gate_1_summaries_and_manifest_hashes_match": true,
+    "discovery_hash_matches": true,
+    "validation_hash_matches": true,
+    "safety_hash_matches": true,
+    "split_manifest_hash_matches": true,
+    "component_selection_hash_matches": true,
+    "complete_population_count_is_1732": true,
+    "positive_population_count_is_866": true,
+    "negative_population_count_is_866": true,
+    "phase_a_fit_count_is_256": true,
+    "phase_a_heldout_count_is_610": true,
+    "phase_b_selection_uses_discovery_only": true,
+    "phase_b_primary_evaluation_uses_all_validation_and_safety_positives": true,
+    "k12_count_is_12": true,
+    "nonselected_count_is_12": true,
+    "selected_and_nonselected_heads_are_disjoint": true,
+    "target_excluding_centering_rule_frozen": true,
+    "outer_concept_leakage_rule_frozen": true,
+    "same_concept_oracle_retained": true,
+    "full_residual_metrics_retained_as_diagnostics": true,
+    "absolute_zero_mean_and_replacement_operators_frozen": true,
+    "rank_norm_and_temporal_gram_matched_random_operator_frozen": true,
+    "downstream_release_order_and_selection_rule_frozen": true,
+    "qk_pattern_value_and_ov_operators_frozen": true,
+    "mechanism_signature_thresholds_frozen": true,
+    "expected_phase_b_effect_row_count_is_556992": true,
+    "hierarchical_bootstrap_and_all_seeds_frozen": true,
+    "implementation_gate_frozen": true,
+    "scientific_continue_or_stop_rule_frozen": true,
+    "phase_c_execution_not_authorized": true,
+    "phase_a_b_execution_not_authorized_by_freeze": true,
+    "no_new_phase_a_b_outcome_generated": true,
+    "external_dissemination_unauthorized": true
+  },
+  "split_counts": {
+    "discovery": {
+      "records": 512,
+      "positive": 256,
+      "negative": 256,
+      "concepts": 4
+    },
+    "validation": {
+      "records": 896,
+      "positive": 448,
+      "negative": 448,
+      "concepts": 7
+    },
+    "safety": {
+      "records": 324,
+      "positive": 162,
+      "negative": 162,
+      "concepts": 2
+    },
+    "total": {
+      "records": 1732,
+      "positive": 866,
+      "negative": 866,
+      "concepts": 13
+    }
+  },
+  "result": "pass"
+}
