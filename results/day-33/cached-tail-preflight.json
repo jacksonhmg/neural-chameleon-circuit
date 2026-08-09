@@ -1,0 +1,43 @@
+{
+  "cache_batch_contract": "capture_after_job_major_batch_expansion",
+  "checks": {
+    "activation_rms_exact": true,
+    "group_ids_equal": true,
+    "hooks_removed": true,
+    "mean_raw_margins_exact": true,
+    "sequence_scores_exact": true
+  },
+  "differences": {
+    "activation_rms_max_abs": 0.0,
+    "mean_raw_margin_max_abs": 0.0,
+    "sequence_score_max_abs": 0.0
+  },
+  "example_ids": [
+    "validation-all-caps-pos-010",
+    "validation-all-caps-pos-008"
+  ],
+  "group_ids": [
+    "individual.layer_09.head_04",
+    "nested_heads.K12"
+  ],
+  "implementation_commit": "a6c0917cdeb06bdb5e7eb8ff5984cea0ece74198",
+  "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
+  "probe_names": [
+    "HTML",
+    "all-caps",
+    "biology-focused",
+    "chemistry-based",
+    "comforting",
+    "confused",
+    "deception",
+    "finnish",
+    "german",
+    "harmful",
+    "jokey",
+    "literature-focused",
+    "mathematical"
+  ],
+  "procedure": "acquired-writer-development-v1-cached-tail-preflight",
+  "result": "pass",
+  "schema_version": 1
+}

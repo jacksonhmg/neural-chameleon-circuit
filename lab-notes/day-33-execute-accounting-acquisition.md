@@ -32,6 +32,7 @@ Resolve K12 and its required comparison groups on every existing example, close 
 - Added a committed real-checkpoint equivalence preflight comparing full and cached-tail execution for an individual layer-9 head and complete K12 across all 13 probes.
 - The first real-checkpoint preflight failed: reusing a prefix captured at base batch size changed BF16 results after job-major batch expansion (maximum raw-margin difference `0.0382315`). The failed output is preserved as `cached-tail-preflight-attempt-1.json`; the optimization remained blocked.
 - Tightened the cache contract to capture `resid_pre[9]` only after exact job-major batch expansion. Prefixes are reused only between chunks with the same expanded batch shape and condition.
+- The revised real-checkpoint preflight passed with exact equality (`0.0` maximum difference) for raw margins, sequence scores, and monitor activation RMS across an individual layer-9 head and K12, with all hooks removed.
 
 ## Handoff
 
