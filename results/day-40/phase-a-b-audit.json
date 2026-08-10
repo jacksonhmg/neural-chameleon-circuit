@@ -1,0 +1,79 @@
+{
+  "analysis_commit": "4b1f765f7f5201ba6241e7f6b3dc9f18f7396b1d",
+  "attention_memory_correction_sha256": "5023930cfe82202b738e4f52dd7225dca26e946b1d39e27d32d2e65eb4cf3e9a",
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "checks": {
+    "all_effect_keys_unique": true,
+    "attention_evaluation_prefix_replay_exact": true,
+    "attention_memory_correction_frozen": true,
+    "attention_prefix_replay_exact": true,
+    "clarification_total_matches": true,
+    "corrected_memory_schedule_preflight_exact": true,
+    "corrected_row_counts_match": true,
+    "failed_attention_attempt_preserved_and_excluded": true,
+    "haar_invariants_all_pass": true,
+    "natural_rows_complete": true,
+    "one_execution_commit": true,
+    "one_execution_identity": true,
+    "parent_contract_mismatch_preserved": true,
+    "phase_a_outputs_complete": true,
+    "preflight_pass": true,
+    "runtime_provenance_exact": true,
+    "superseded_v6_attempt_preserved_and_excluded": true,
+    "superseded_v7_evaluation_preserved_and_excluded": true,
+    "superseded_v8_evaluation_preserved_and_excluded": true,
+    "v7_discovery_and_selection_preserved": true
+  },
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "evidence_class": "existing-data development evidence; not fresh confirmation",
+  "execution_commits": [
+    "5f25816acecbffc23b91c1020d17e8dd93d17aff"
+  ],
+  "execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "execution_identities": [
+    "post-gate1-phase-b-v1-ec8dc1b5f00b7a60"
+  ],
+  "expected_rows": {
+    "absolute_contribution_rows": 41568,
+    "attention_discovery_rows": 65536,
+    "attention_heldout_rows": 19520,
+    "attention_negative_rows": 27712,
+    "frontier_discovery_rows": 32768,
+    "frontier_heldout_rows": 14640,
+    "frontier_negative_rows": 20784,
+    "matched_random_rows": 221696,
+    "total_phase_b_effect_rows": 444224
+  },
+  "observed_rows": {
+    "absolute_contribution_rows": 41568,
+    "attention_discovery_rows": 65536,
+    "attention_heldout_rows": 19520,
+    "attention_negative_rows": 27712,
+    "frontier_discovery_rows": 32768,
+    "frontier_heldout_rows": 14640,
+    "frontier_negative_rows": 20784,
+    "matched_random_rows": 221696,
+    "total_phase_b_effect_rows": 444224
+  },
+  "procedure": "frozen post-Gate-1 Phase A-B reduction",
+  "result": "pass",
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "runtime_commits": [
+    "3e4ee97a3f76b5604cbb6b34382cb74bff280f2c",
+    "4b1f765f7f5201ba6241e7f6b3dc9f18f7396b1d",
+    "5f25816acecbffc23b91c1020d17e8dd93d17aff"
+  ],
+  "runtime_execution_ids": [
+    "post-gate1-phase-b-attention-evaluation-v9-79504340d6e6d385",
+    "post-gate1-phase-b-attention-memory-v7-fe6335966cf28015",
+    "post-gate1-phase-b-v1-ec8dc1b5f00b7a60"
+  ],
+  "schema_version": 1,
+  "sealed_gate_1_result": "fail",
+  "unique_keys": {
+    "absolute": true,
+    "attention": true,
+    "frontier": true,
+    "random": true
+  }
+}

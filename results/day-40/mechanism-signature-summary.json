@@ -1,0 +1,74 @@
+{
+  "analysis_commit": "4b1f765f7f5201ba6241e7f6b3dc9f18f7396b1d",
+  "attention_memory_correction_sha256": "5023930cfe82202b738e4f52dd7225dca26e946b1d39e27d32d2e65eb4cf3e9a",
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "controls": {
+    "precursor_to_chameleon_absolute_effect_ratio": {
+      "one_sided_95_lower": 0.007191179473900408,
+      "one_sided_95_upper": 0.055518143296131,
+      "point": 0.026605496409548245,
+      "two_sided_95_interval": [
+        0.006605642718319688,
+        0.0608764678486293
+      ]
+    },
+    "random_to_selected_absolute_effect_ratio": {
+      "one_sided_95_lower": 0.09314043162604381,
+      "one_sided_95_upper": 0.11227796488886137,
+      "point": 0.10024252377926403,
+      "two_sided_95_interval": [
+        0.09173536763159319,
+        0.11626994575314575
+      ]
+    }
+  },
+  "evidence_class": "existing-data development evidence; not fresh confirmation",
+  "execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "gates": {
+    "complete_vector": true,
+    "consequence": "Phase C contract drafting permitted; execution still requires separate authorization",
+    "control_weakness": true,
+    "direct_monitor_writing": true,
+    "direct_reconfiguration": true,
+    "downstream_amplification": false,
+    "hybrid": false,
+    "natural_phenomenon": true,
+    "negative_writing": false,
+    "omission": false,
+    "scientific_continue_gate": "pass",
+    "sign_consistency": {
+      "pass": true,
+      "per_concept": {
+        "all-caps": 1.8306871942313592,
+        "chemistry-based": 3.891076182371762,
+        "confused": 3.720011602046725,
+        "deception": 9.907957793784238,
+        "finnish": 16.524501159246938,
+        "harmful": 1.9225697824917733,
+        "jokey": 2.8019543583941413,
+        "literature-focused": 15.975323999649845,
+        "mathematical": 5.702404318493791
+      },
+      "positive_direction_concept_count": 9,
+      "safety_supported_opposite": {
+        "deception": false,
+        "harmful": false
+      },
+      "safety_two_sided_95_intervals": {
+        "deception": [
+          9.36178416596245,
+          10.477239192717317
+        ],
+        "harmful": [
+          1.7914396292259334,
+          2.04942624729377
+        ]
+      }
+    }
+  },
+  "procedure": "frozen post-Gate-1 Phase A-B reduction",
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "schema_version": 1,
+  "sealed_gate_1_result": "fail"
+}

@@ -1,0 +1,78 @@
+{
+  "analysis_commit": "4b1f765f7f5201ba6241e7f6b3dc9f18f7396b1d",
+  "attention_memory_correction_sha256": "5023930cfe82202b738e4f52dd7225dca26e946b1d39e27d32d2e65eb4cf3e9a",
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "development_selection": {
+    "equal_concept_remainder_recovery": 0.9995246572070755,
+    "frontier_id": "F3",
+    "source_layer": 11
+  },
+  "evidence_class": "existing-data development evidence; not fresh confirmation",
+  "execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "negative_population_row_count": 20784,
+  "nonselected_frontier_remainder_recovery": {
+    "one_sided_95_lower": 0.19214051109972038,
+    "one_sided_95_upper": 0.3451306475053732,
+    "per_concept": {
+      "all-caps": 0.48171483547957905,
+      "chemistry-based": 0.17744698096066713,
+      "confused": 0.07958019385114312,
+      "deception": 0.15656826597067616,
+      "finnish": 0.12995437996505643,
+      "harmful": 0.07203002935275435,
+      "jokey": 0.27233821304980665,
+      "literature-focused": 0.5066679555457085,
+      "mathematical": 0.5386780921835452
+    },
+    "point": 0.26833099403988186,
+    "two_sided_95_interval": [
+      0.1792753715404711,
+      0.36124767673224
+    ]
+  },
+  "procedure": "frozen post-Gate-1 Phase A-B reduction",
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "schema_version": 1,
+  "sealed_gate_1_result": "fail",
+  "selected_frontier_remainder_recovery": {
+    "one_sided_95_lower": 0.8744406370336629,
+    "one_sided_95_upper": 0.9596943664177336,
+    "per_concept": {
+      "all-caps": 0.7612505381694064,
+      "chemistry-based": 0.7801007367088459,
+      "confused": 0.9950111461803317,
+      "deception": 0.900622810567579,
+      "finnish": 1.0,
+      "harmful": 0.8310103641683235,
+      "jokey": 0.9899020645243581,
+      "literature-focused": 1.0,
+      "mathematical": 1.0
+    },
+    "point": 0.9175441844798716,
+    "two_sided_95_interval": [
+      0.8673434673811639,
+      0.9684051113321689
+    ]
+  },
+  "selected_minus_nonselected": {
+    "one_sided_95_lower": 0.5644574576194541,
+    "one_sided_95_upper": 0.7362685886998169,
+    "per_concept": {
+      "all-caps": 0.2795357026898273,
+      "chemistry-based": 0.6026537557481788,
+      "confused": 0.9154309523291886,
+      "deception": 0.7440545445969028,
+      "finnish": 0.8700456200349436,
+      "harmful": 0.7589803348155693,
+      "jokey": 0.7175638514745515,
+      "literature-focused": 0.49333204445429146,
+      "mathematical": 0.46132190781645477
+    },
+    "point": 0.6492131904399898,
+    "two_sided_95_interval": [
+      0.5471654375227659,
+      0.7531148800048385
+    ]
+  }
+}

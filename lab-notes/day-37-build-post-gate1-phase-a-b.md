@@ -200,6 +200,15 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Decision 0053 changes only the process lifetime to 32 complete batches, below the observed 57-batch failure point. V9 retains every model, operator, data, ordering, selection, provenance, and gate invariant.
 - V9 must rerun the two-checkpoint exact preflight and replay all 1,824 V8 evaluation rows before row 1,825.
 
+#### V9 completed; Phase A–B gate passed
+
+- V9 passed both exact checkpoint preflights, replayed all 1,824 V8 evaluation rows at zero tolerance, and completed 23,616 evaluation rows for each checkpoint. The final attention table has 112,768 rows and SHA-256 `c73accdbeb30dec73fa3ff0191918e5c06ccce74624dab8e90cc61bf52abf4a2`.
+- The complete Phase B effect matrix has the exact frozen 444,224 rows. Every implementation-audit clause passed, including unique keys, execution identity, three-runtime provenance, both replay gates, frozen-prefix preservation, exact preflight, controls, and historical-attempt exclusion.
+- Two reducer runs reproduced every Day 40 JSON artifact byte-for-byte.
+- The scientific continue gate passed. Phase A–B supports acquired direct monitor writing/reconfiguration by full K12 replacement: complete-vector recovery 0.797, direct recovery 0.529, direct fraction 0.687, precursor ratio 0.027, and random ratio 0.100. All nine held-out concepts have the predicted sign.
+- Negative writing, omission, downstream amplification, and hybrid gates failed. Discovery-selected `concept_span_ov` remains a source diagnostic because its held-out complete-vector recovery was only 0.110.
+- Decision 0054 permits Phase C contract drafting under the conditional local authorization already recorded in Decision 0033. No fresh-confirmation or release boundary changed.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

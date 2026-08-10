@@ -1,0 +1,286 @@
+{
+  "all_absolute_operators_reported": [
+    "N_from_T",
+    "N_normal_concept_mean",
+    "N_zero",
+    "T_from_N",
+    "T_normal_concept_mean",
+    "T_zero"
+  ],
+  "analysis_commit": "4b1f765f7f5201ba6241e7f6b3dc9f18f7396b1d",
+  "attention_memory_correction_sha256": "5023930cfe82202b738e4f52dd7225dca26e946b1d39e27d32d2e65eb4cf3e9a",
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "evidence_class": "existing-data development evidence; not fresh confirmation",
+  "execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "interpretable_gap_by_concept": {
+    "all-caps": true,
+    "chemistry-based": true,
+    "confused": true,
+    "deception": true,
+    "finnish": true,
+    "harmful": true,
+    "jokey": true,
+    "literature-focused": true,
+    "mathematical": true
+  },
+  "interpretable_heldout_concept_count": 9,
+  "metrics": {
+    "complete_probe_vector_recovery": {
+      "one_sided_95_lower": 0.7415188458629107,
+      "one_sided_95_upper": 0.8652676935081336,
+      "per_concept": {
+        "all-caps": 0.565573391970247,
+        "chemistry-based": 0.8771025137975812,
+        "confused": 0.8804180701263249,
+        "deception": 0.8987658802540072,
+        "finnish": 0.9298358410596848,
+        "harmful": 0.8528096881508828,
+        "jokey": 0.5504908608272672,
+        "literature-focused": 0.8297630907036364,
+        "mathematical": 0.7849785033613443
+      },
+      "point": 0.796637537805664,
+      "two_sided_95_interval": [
+        0.7309141510330086,
+        0.8731706884212195
+      ]
+    },
+    "direct_complete_probe_vector_recovery": {
+      "one_sided_95_lower": 0.45661244529271733,
+      "one_sided_95_upper": 0.6016058822166196,
+      "per_concept": {
+        "all-caps": 0.5008044075220823,
+        "chemistry-based": 0.5373489861376584,
+        "confused": 0.712886861525476,
+        "deception": 0.7687164242229154,
+        "finnish": 0.3373261960223317,
+        "harmful": 0.7355819833278656,
+        "jokey": 0.2996793510392308,
+        "literature-focused": 0.37016015127301216,
+        "mathematical": 0.4941489356569946
+      },
+      "point": 0.5285170329697296,
+      "two_sided_95_interval": [
+        0.4424544345228234,
+        0.6176875596768703
+      ]
+    },
+    "direct_fraction": {
+      "one_sided_95_lower": 0.5740357060228158,
+      "one_sided_95_upper": 0.8052629794268307,
+      "per_concept": {
+        "all-caps": 0.7927420481301144,
+        "chemistry-based": 0.8574583913108043,
+        "confused": 0.78608656382408,
+        "deception": 1.0242512713619898,
+        "finnish": 0.22844766400763938,
+        "harmful": 1.0049394561291498,
+        "jokey": 0.3680912239987356,
+        "literature-focused": 0.4598358344900092,
+        "mathematical": 0.6591883173107097
+      },
+      "point": 0.6867823078403591,
+      "two_sided_95_interval": [
+        0.551073651434276,
+        0.8322454840696581
+      ]
+    },
+    "direct_replacement_effect": {
+      "one_sided_95_lower": 2.555460843421808,
+      "one_sided_95_upper": 5.100309368780643,
+      "per_concept": {
+        "all-caps": 1.5693343182269928,
+        "chemistry-based": 3.2750378369528335,
+        "confused": 2.9176603224987048,
+        "deception": 10.057956377104405,
+        "finnish": 3.723200802172869,
+        "harmful": 1.8972884479071945,
+        "jokey": 1.0318229156691814,
+        "literature-focused": 7.302320992828754,
+        "mathematical": 3.5313209831365384
+      },
+      "point": 3.9228825551663857,
+      "two_sided_95_interval": [
+        2.415730907820609,
+        5.235788664330485
+      ]
+    },
+    "downstream_fraction": {
+      "one_sided_95_lower": 0.19473702057316922,
+      "one_sided_95_upper": 0.42596429397718394,
+      "per_concept": {
+        "all-caps": 0.20725795186988563,
+        "chemistry-based": 0.14254160868919583,
+        "confused": 0.21391343617591996,
+        "deception": -0.024251271361989936,
+        "finnish": 0.7715523359923606,
+        "harmful": -0.004939456129149902,
+        "jokey": 0.6319087760012645,
+        "literature-focused": 0.5401641655099908,
+        "mathematical": 0.3408116826892903
+      },
+      "point": 0.31321769215964085,
+      "two_sided_95_interval": [
+        0.1677545159303419,
+        0.44892634856572405
+      ]
+    },
+    "negative_minus_omission": {
+      "one_sided_95_lower": -0.009599270446739297,
+      "one_sided_95_upper": 0.1730620852707525,
+      "per_concept": {
+        "all-caps": -0.012493402982538784,
+        "chemistry-based": 0.08351846054929428,
+        "confused": 0.4559781072938621,
+        "deception": -0.09297919910803869,
+        "finnish": 0.4084623676036673,
+        "harmful": -0.03971638272568345,
+        "jokey": -0.11033537136445931,
+        "literature-focused": 0.1164460980289292,
+        "mathematical": -0.006230789531412554
+      },
+      "point": 0.08918332086262444,
+      "two_sided_95_interval": [
+        -0.024234989405300965,
+        0.18903255388419188
+      ]
+    },
+    "negative_write_fraction": {
+      "one_sided_95_lower": 0.2902903027688551,
+      "one_sided_95_upper": 0.4176564621523757,
+      "per_concept": {
+        "all-caps": 0.10415983466891596,
+        "chemistry-based": 0.3698165111594901,
+        "confused": 0.5284319399700166,
+        "deception": 0.3639899807339859,
+        "finnish": 0.6070859366457623,
+        "harmful": 0.3223503036725542,
+        "jokey": 0.2757991822914585,
+        "literature-focused": 0.30815520964367193,
+        "mathematical": 0.32076852330070416
+      },
+      "point": 0.35561749134295106,
+      "two_sided_95_interval": [
+        0.2807842363043778,
+        0.4263993486934825
+      ]
+    },
+    "omission_fraction": {
+      "one_sided_95_lower": 0.2118190139619487,
+      "one_sided_95_upper": 0.32242190338987003,
+      "per_concept": {
+        "all-caps": 0.11665323765145473,
+        "chemistry-based": 0.28629805061019586,
+        "confused": 0.07245383267615434,
+        "deception": 0.45696917984202473,
+        "finnish": 0.19862356904209494,
+        "harmful": 0.3620666863982375,
+        "jokey": 0.38613455365591776,
+        "literature-focused": 0.19170911161474272,
+        "mathematical": 0.3269993128321167
+      },
+      "point": 0.26643417048032664,
+      "two_sided_95_interval": [
+        0.20182058981027742,
+        0.3334318880044716
+      ]
+    },
+    "omission_minus_negative": {
+      "one_sided_95_lower": -0.17306208527075256,
+      "one_sided_95_upper": 0.009599270446739297,
+      "per_concept": {
+        "all-caps": 0.012493402982538784,
+        "chemistry-based": -0.08351846054929428,
+        "confused": -0.4559781072938621,
+        "deception": 0.09297919910803869,
+        "finnish": -0.4084623676036673,
+        "harmful": 0.03971638272568345,
+        "jokey": 0.11033537136445931,
+        "literature-focused": -0.1164460980289292,
+        "mathematical": 0.006230789531412554
+      },
+      "point": -0.08918332086262444,
+      "two_sided_95_interval": [
+        -0.18903255388419196,
+        0.024234989405300954
+      ]
+    },
+    "replacement_induction_fraction": {
+      "one_sided_95_lower": 0.6764598365846307,
+      "one_sided_95_upper": 0.8152473716755119,
+      "per_concept": {
+        "all-caps": 0.3864786797832321,
+        "chemistry-based": 0.853195656463094,
+        "confused": 0.6949156358870504,
+        "deception": 0.9166084977820964,
+        "finnish": 0.8268074672249665,
+        "harmful": 0.7721180665317133,
+        "jokey": 0.5807707375773938,
+        "literature-focused": 0.8447922808989845,
+        "mathematical": 0.7808104803256904
+      },
+      "point": 0.7396108336082468,
+      "two_sided_95_interval": [
+        0.6651589171347672,
+        0.8246632218702601
+      ]
+    },
+    "replacement_rescue_fraction": {
+      "one_sided_95_lower": 0.5946182286334627,
+      "one_sided_95_upper": 0.7469515510529323,
+      "per_concept": {
+        "all-caps": 0.30852948710303263,
+        "chemistry-based": 0.7732196952366647,
+        "confused": 0.6554276904286453,
+        "deception": 0.9014062929148084,
+        "finnish": 0.8275522365560515,
+        "harmful": 0.7561957043584573,
+        "jokey": 0.6957602466169622,
+        "literature-focused": 0.5013262346664356,
+        "mathematical": 0.5964143720071832
+      },
+      "point": 0.6684257733209157,
+      "two_sided_95_interval": [
+        0.5814217382547349,
+        0.7608598179875039
+      ]
+    },
+    "total_replacement_effect": {
+      "one_sided_95_lower": 4.3527440909215,
+      "one_sided_95_upper": 9.235732302474757,
+      "per_concept": {
+        "all-caps": 1.8306871942313592,
+        "chemistry-based": 3.891076182371762,
+        "confused": 3.720011602046725,
+        "deception": 9.907957793784238,
+        "finnish": 16.524501159246938,
+        "harmful": 1.9225697824917733,
+        "jokey": 2.8019543583941413,
+        "literature-focused": 15.975323999649845,
+        "mathematical": 5.702404318493791
+      },
+      "point": 6.919609598967842,
+      "two_sided_95_interval": [
+        3.9526784513679214,
+        9.717227447797518
+      ]
+    }
+  },
+  "natural_gap_G_by_concept": {
+    "all-caps": 5.268102682686731,
+    "chemistry-based": 4.784849304705858,
+    "confused": 5.509727088734508,
+    "deception": 10.899754880416777,
+    "finnish": 19.976914478127583,
+    "harmful": 2.515935953874141,
+    "jokey": 4.38995119286119,
+    "literature-focused": 23.735390034271404,
+    "mathematical": 8.281006995821372
+  },
+  "negative_population_row_count": 20784,
+  "procedure": "frozen post-Gate-1 Phase A-B reduction",
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "schema_version": 1,
+  "sealed_gate_1_result": "fail"
+}

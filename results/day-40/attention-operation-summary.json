@@ -1,0 +1,181 @@
+{
+  "analysis_commit": "4b1f765f7f5201ba6241e7f6b3dc9f18f7396b1d",
+  "attention_memory_correction_sha256": "5023930cfe82202b738e4f52dd7225dca26e946b1d39e27d32d2e65eb4cf3e9a",
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "development_selection": {
+    "best_operation": "concept_span_ov",
+    "equal_concept_complete_vector_recovery": 0.2424170603044331,
+    "site_id": "group.selected_heads.layer_10"
+  },
+  "evidence_class": "existing-data development evidence; not fresh confirmation",
+  "execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "heldout_complete_probe_vector_recovery": {
+    "concept_span_ov.direct": {
+      "one_sided_95_lower": 0.026395693815985232,
+      "one_sided_95_upper": 0.08755170666882317,
+      "per_concept": {
+        "all-caps": 0.1436963975429535,
+        "chemistry-based": 0.09855930414050817,
+        "confused": -0.00043300166726112366,
+        "deception": -0.0019824250090506768,
+        "finnish": 0.001590522937476635,
+        "harmful": 0.008560203611850739,
+        "jokey": 0.2076093195937574,
+        "literature-focused": 0.026868526823818684,
+        "mathematical": 0.043217343743890524
+      },
+      "point": 0.058631799079771535,
+      "two_sided_95_interval": [
+        0.01710526778832033,
+        0.09427242538096228
+      ]
+    },
+    "concept_span_ov.total": {
+      "one_sided_95_lower": 0.05822324290692065,
+      "one_sided_95_upper": 0.1591194596160979,
+      "per_concept": {
+        "all-caps": 0.12891620118170977,
+        "chemistry-based": 0.28101507714018226,
+        "confused": -0.0002460903488099575,
+        "deception": 0.0020925662209910732,
+        "finnish": 0.007172899320721626,
+        "harmful": 0.01636317789554596,
+        "jokey": 0.2871385393664241,
+        "literature-focused": 0.16756968200206757,
+        "mathematical": 0.09799422789365053
+      },
+      "point": 0.10977958674138699,
+      "two_sided_95_interval": [
+        0.04818146194172748,
+        0.1674205724272178
+      ]
+    },
+    "concept_span_qk.direct": {
+      "one_sided_95_lower": 0.019542755254472216,
+      "one_sided_95_upper": 0.06157395565186886,
+      "per_concept": {
+        "all-caps": 0.0790366386063397,
+        "chemistry-based": 0.10359523026272655,
+        "confused": 7.718009874224663e-05,
+        "deception": 0.0019966647509605654,
+        "finnish": 0.0009373780339956284,
+        "harmful": -0.0014029589295387267,
+        "jokey": 0.13823592010885477,
+        "literature-focused": 0.020228461362421513,
+        "mathematical": 0.02712629223242402
+      },
+      "point": 0.04109231183632514,
+      "two_sided_95_interval": [
+        0.010378393001894476,
+        0.06624157641781495
+      ]
+    },
+    "concept_span_qk.total": {
+      "one_sided_95_lower": 0.02707043082467581,
+      "one_sided_95_upper": 0.1095180978579964,
+      "per_concept": {
+        "all-caps": 0.07921100687235594,
+        "chemistry-based": 0.27822055760771036,
+        "confused": -0.0002853847108781338,
+        "deception": -0.0008058865224161456,
+        "finnish": 0.0008635092526674271,
+        "harmful": 0.0019234451651573181,
+        "jokey": 0.1749880090355873,
+        "literature-focused": 0.07401725882664323,
+        "mathematical": 0.04872556636109948
+      },
+      "point": 0.07298423132088076,
+      "two_sided_95_interval": [
+        0.02223351006237765,
+        0.11695646808021702
+      ]
+    },
+    "pattern_patch_values_retained.direct": {
+      "one_sided_95_lower": 0.02875673462663156,
+      "one_sided_95_upper": 0.04687781222639721,
+      "per_concept": {
+        "all-caps": 0.061467351857572794,
+        "chemistry-based": 0.06925012450665236,
+        "confused": 0.025132448878139257,
+        "deception": 0.059028003965654684,
+        "finnish": 0.02075131656602025,
+        "harmful": 0.018549695014953613,
+        "jokey": 0.035863177850842476,
+        "literature-focused": 0.01044392166659236,
+        "mathematical": 0.040346506517380476
+      },
+      "point": 0.03787028298042314,
+      "two_sided_95_interval": [
+        0.026937031702410123,
+        0.04883031613535312
+      ]
+    },
+    "pattern_patch_values_retained.total": {
+      "one_sided_95_lower": 0.05374110733162731,
+      "one_sided_95_upper": 0.09097522751081445,
+      "per_concept": {
+        "all-caps": 0.06473280442878604,
+        "chemistry-based": 0.17018179409205914,
+        "confused": 0.02522886171936989,
+        "deception": 0.06525722242170764,
+        "finnish": 0.05928411986678839,
+        "harmful": 0.031206573247909545,
+        "jokey": 0.08034471375867724,
+        "literature-focused": 0.05076983571052551,
+        "mathematical": 0.11453310493379831
+      },
+      "point": 0.07350433668662464,
+      "two_sided_95_interval": [
+        0.05034531298206983,
+        0.09392866675877787
+      ]
+    },
+    "value_patch_pattern_retained.direct": {
+      "one_sided_95_lower": 0.029594121597762355,
+      "one_sided_95_upper": 0.05997400550464582,
+      "per_concept": {
+        "all-caps": 0.015533809550106525,
+        "chemistry-based": 0.02198361838236451,
+        "confused": 0.07750884024426341,
+        "deception": 0.020840021871751355,
+        "finnish": 0.006218825466930866,
+        "harmful": 0.10684596091508865,
+        "jokey": 0.07296907994896173,
+        "literature-focused": 0.021320508792996407,
+        "mathematical": 0.06776520237326622
+      },
+      "point": 0.045665096393969956,
+      "two_sided_95_interval": [
+        0.02706096972916342,
+        0.06226120420101158
+      ]
+    },
+    "value_patch_pattern_retained.total": {
+      "one_sided_95_lower": 0.060020072530861945,
+      "one_sided_95_upper": 0.10984488005531472,
+      "per_concept": {
+        "all-caps": 0.012701475992798805,
+        "chemistry-based": 0.016104035079479218,
+        "confused": 0.09760199440643191,
+        "deception": 0.07224529212520968,
+        "finnish": 0.007716383319348097,
+        "harmful": 0.11785215139389038,
+        "jokey": 0.16387124732136726,
+        "literature-focused": 0.1273325840011239,
+        "mathematical": 0.14978960203006864
+      },
+      "point": 0.08502386285219088,
+      "two_sided_95_interval": [
+        0.05427962231214241,
+        0.11374318453805791
+      ]
+    }
+  },
+  "negative_population_row_count": 27712,
+  "procedure": "frozen post-Gate-1 Phase A-B reduction",
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "schema_version": 1,
+  "sealed_gate_1_result": "fail",
+  "token_source_masks_present": true
+}

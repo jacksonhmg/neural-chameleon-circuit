@@ -1,0 +1,52 @@
+{
+  "analysis_commit": "4b1f765f7f5201ba6241e7f6b3dc9f18f7396b1d",
+  "attention_memory_correction_sha256": "5023930cfe82202b738e4f52dd7225dca26e946b1d39e27d32d2e65eb4cf3e9a",
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "evidence_class": "existing-data development evidence; not fresh confirmation",
+  "execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "execution_parameters_sha256": "87cca571a8d4a0bf10ae2429ed3f1c4bc46863d93d2e8a73565834dd542ef8b3",
+  "mean_artifacts": {
+    "artifacts/post-gate1-phase-b-v1/chameleon-normal-mean-stats.pt": {
+      "bytes": 6972903,
+      "sha256": "c5ed95c89576e9c7949ed497749031e6e7e282e9542394d2a5b9fd3086314dcf"
+    },
+    "artifacts/post-gate1-phase-b-v1/precursor-normal-mean-stats.pt": {
+      "bytes": 6972903,
+      "sha256": "b2726084e179a943ed995ccd4209e4a407e55e460e5ac244cfcda8f8ae3ae8bc"
+    }
+  },
+  "procedure": "frozen post-Gate-1 Phase A-B reduction",
+  "raw_artifacts": {
+    "results/day-39/absolute-effects.working.jsonl": {
+      "bytes": 48456476,
+      "rows": 41568,
+      "sha256": "af9271a3ccd0ee9986f7273441e144e1558733460dc10a6bb7a5cc1b351dab12"
+    },
+    "results/day-39/attention-effects.working.jsonl": {
+      "bytes": 181237539,
+      "rows": 112768,
+      "sha256": "c73accdbeb30dec73fa3ff0191918e5c06ccce74624dab8e90cc61bf52abf4a2"
+    },
+    "results/day-39/frontier-effects.working.jsonl": {
+      "bytes": 99521324,
+      "rows": 68192,
+      "sha256": "33345e0cabc65688ed8b88a8af7719046ff097da685769e697d3d5db996bec1a"
+    },
+    "results/day-39/natural-endpoints.working.jsonl": {
+      "bytes": 7859813,
+      "rows": 6928,
+      "sha256": "d53e9877e72e81283f7c03620e46948c8e9722e3d56e321edccda7f287356f00"
+    },
+    "results/day-39/random-effects.working.jsonl": {
+      "bytes": 467400860,
+      "rows": 221696,
+      "sha256": "678047bf9093cb6e34afe67225e490633e776ca30e1e330b3f8a58e39eb59245"
+    }
+  },
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "schema_version": 1,
+  "scientific_continue_gate": "pass",
+  "sealed_gate_1_result": "fail",
+  "selection_sha256": "4a42859a144cd1f7bc78ee18bde9a8692dd3504da6a802dabbfd21562c804f84"
+}
