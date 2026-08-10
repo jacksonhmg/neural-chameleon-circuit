@@ -179,6 +179,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Decision 0050 therefore restores both original Transformers Gemma2 forwards, retains the V3 batch-reference deletion, exact job/metadata shape 32, and uses the previously safety-bounded MPS high-water ratio 1.74. The unbounded value remains prohibited.
 - V6 must pass both checkpoint hashes, confirm that neither replacement forward is installed, and replay all 7,168 rows exactly before crossing the reference boundary. No tolerance, operator, population, selection rule, estimand, or scientific gate changes.
 
+#### V6 passed exact replay; process-isolated original-kernel v7 frozen
+
+- V6 passed both checkpoint hashes and regenerated all 7,168 sealed rows exactly. Its machine replay audit passed at zero tolerance. The process then exhausted the bounded MPS allocator in the original full eager softmax before writing any row beyond the reference boundary.
+- A fresh-process diagnostic ran the exact two-example long HTML batch with the original kernels, batch size two, 32-job tail, metadata block 32, and ratio 1.74. All 512 rows matched the corresponding reference subset byte-for-byte (SHA-256 `d46197e6fc2fc4c558d0a7535ca30911dd1ed5f72583de1a6038934f265cb568`). No outcome value was inspected.
+- Decision 0051 freezes execution in ordered shards of at most four complete data batches per child process. Each child exits before the next shard so allocator state cannot accumulate. V7 changes no arithmetic, model/data batch shape, intervention, path, row order, selection, estimand, or gate.
+- V7 must regenerate from zero under one runtime commit, rerun both exact checkpoint hashes, and pass the unchanged 7,168-row replay before row 7,169.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

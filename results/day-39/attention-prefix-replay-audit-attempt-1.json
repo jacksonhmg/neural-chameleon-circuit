@@ -1,0 +1,10 @@
+{
+  "comparison": "dictionary equality after removing only runtime_commit and runtime_execution_id from corrected rows",
+  "corrected_runtime_commit": "2a682c8006663aac8b4a9e61b3a713e73af258f4",
+  "corrected_runtime_execution_id": "post-gate1-phase-b-attention-memory-v6-d5003810fd35db89",
+  "reference_sha256": "f6a06397e85b42bc0ae665f6e26e59f16678d23f8353e5d86f090c57b65f631f",
+  "result": "pass",
+  "rows": 7168,
+  "schema_version": 1,
+  "tolerance": 0.0
+}

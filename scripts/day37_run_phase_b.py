@@ -85,6 +85,10 @@ ATTENTION_MEMORY_CORRECTION_V5_PATH = (
 ATTENTION_MEMORY_CORRECTION_V6_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction-v6.json"
 )
+ATTENTION_MEMORY_CORRECTION_V7_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction-v7.json"
+)
+SHARDED_ATTENTION_DRIVER_PATH = ROOT / "scripts/day37_run_phase_b_attention_sharded.py"
 RESULT_DIR = ROOT / "results/day-39"
 ARTIFACT_DIR = ROOT / "artifacts/post-gate1-phase-b-v1"
 PROBE_DIR = ROOT / "external/minimal_neural_chameleons/probes"
@@ -129,6 +133,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--job-chunk-size", type=int, default=32)
     parser.add_argument("--attention-job-chunk-size", type=int, default=32)
     parser.add_argument("--attention-metadata-block-size", type=int, default=32)
+    parser.add_argument("--attention-shard-start", type=int)
+    parser.add_argument("--attention-shard-count", type=int)
     parser.add_argument("--limit-per-cell", type=int)
     return parser.parse_args()
 
@@ -208,8 +214,8 @@ def execution_id(commit: str) -> str:
 def correction_runtime_id(commit: str) -> str:
     digest = hashlib.sha256()
     digest.update(commit.encode())
-    digest.update(ATTENTION_MEMORY_CORRECTION_V6_PATH.read_bytes())
-    return f"post-gate1-phase-b-attention-memory-v6-{digest.hexdigest()[:16]}"
+    digest.update(ATTENTION_MEMORY_CORRECTION_V7_PATH.read_bytes())
+    return f"post-gate1-phase-b-attention-memory-v7-{digest.hexdigest()[:16]}"
 
 
 def require_frozen_mps_ratio(correction: Mapping[str, Any]) -> None:
@@ -278,6 +284,16 @@ def group_records(records: Sequence[dict[str, Any]]) -> list[list[dict[str, Any]
             (record["concept"], record["trigger_concept"], int(record["label"]))
         ].append(record)
     return [groups[key] for key in sorted(groups)]
+
+
+def attention_population_batches(
+    records: Sequence[dict[str, Any]], batch_size: int
+) -> list[list[dict[str, Any]]]:
+    return [
+        list(batch_records)
+        for group in group_records(records)
+        for batch_records in batched(group, batch_size)
+    ]
 
 
 def model_config(contract: Mapping[str, Any], model_name: str) -> Mapping[str, Any]:
@@ -1111,7 +1127,7 @@ def prompt_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 
 def require_attention_replay_prefix(completed_count: int) -> None:
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V6_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V7_PATH)
     required = int(correction["required_population_replay_gate"]["rows"])
     if completed_count < required or ATTENTION_REPLAY_AUDIT_PATH.exists():
         return
@@ -1153,6 +1169,8 @@ def run_attention_population(
     metadata_block_size: int,
     commit: str,
     run_id: str,
+    shard_start: int | None = None,
+    shard_count: int | None = None,
 ) -> None:
     runner = load_model(contract, model_name)
     realized = RealizedForwardRunner(runner, monitor_layer=12)
@@ -1167,240 +1185,250 @@ def run_attention_population(
             for component_id in members
         }
     )
-    for group in group_records(records):
-        for batch_records in batched(group, batch_size):
-            require_attention_replay_prefix(len(completed))
-            pair = runner.prepare_pairs(
-                [row["prompt"] for row in batch_records],
-                [row["response"] for row in batch_records],
-                batch_records[0]["trigger_concept"],
-            )
-            normal = realized.run(pair.normal)
-            triggered = realized.run(pair.triggered)
-            normal_attention = attention_capture.run(pair.normal, layers)
-            triggered_attention = attention_capture.run(pair.triggered, layers)
-            write_natural(
-                model_name,
-                batch_records,
-                (("normal", normal), ("correct_trigger", triggered)),
-                names,
-                probes,
-                commit,
-                run_id,
-            )
-            aligned = prompt_alignment(pair)
-            normal_to_triggered = align_attention_indices(
-                pair.normal, pair.triggered, aligned
-            )
-            triggered_to_normal = align_attention_indices(
-                pair.triggered,
+    population_batches = attention_population_batches(records, batch_size)
+    if (shard_start is None) != (shard_count is None):
+        raise ValueError("attention shard start and count must be provided together")
+    if shard_start is not None and shard_count is not None:
+        if shard_start < 0 or shard_count <= 0:
+            raise ValueError("attention shard bounds must be positive")
+        population_batches = population_batches[
+            shard_start : shard_start + shard_count
+        ]
+        if not population_batches:
+            raise ValueError("attention shard start is beyond the population")
+    for batch_records in population_batches:
+        require_attention_replay_prefix(len(completed))
+        pair = runner.prepare_pairs(
+            [row["prompt"] for row in batch_records],
+            [row["response"] for row in batch_records],
+            batch_records[0]["trigger_concept"],
+        )
+        normal = realized.run(pair.normal)
+        triggered = realized.run(pair.triggered)
+        normal_attention = attention_capture.run(pair.normal, layers)
+        triggered_attention = attention_capture.run(pair.triggered, layers)
+        write_natural(
+            model_name,
+            batch_records,
+            (("normal", normal), ("correct_trigger", triggered)),
+            names,
+            probes,
+            commit,
+            run_id,
+        )
+        aligned = prompt_alignment(pair)
+        normal_to_triggered = align_attention_indices(
+            pair.normal, pair.triggered, aligned
+        )
+        triggered_to_normal = align_attention_indices(
+            pair.triggered,
+            pair.normal,
+            tuple((right, left) for left, right in aligned),
+        )
+        normal_partition = build_source_mask_partition(
+            runner.tokenizer,
+            pair.normal,
+            [row["prompt"] for row in batch_records],
+            trigger=None,
+        )
+        triggered_partition = build_source_mask_partition(
+            runner.tokenizer,
+            pair.triggered,
+            [row["prompt"] for row in batch_records],
+            trigger=batch_records[0]["trigger_concept"],
+        )
+        normal_concept = normal_partition.masks[SourceRegion.NAMED_CONCEPT]
+        triggered_concept = triggered_partition.masks[SourceRegion.NAMED_CONCEPT]
+        for direction, condition, target, source, target_states, source_states, indices, target_mask, source_mask in (
+            (
+                "induction",
                 pair.normal,
-                tuple((right, left) for left, right in aligned),
-            )
-            normal_partition = build_source_mask_partition(
-                runner.tokenizer,
-                pair.normal,
-                [row["prompt"] for row in batch_records],
-                trigger=None,
-            )
-            triggered_partition = build_source_mask_partition(
-                runner.tokenizer,
-                pair.triggered,
-                [row["prompt"] for row in batch_records],
-                trigger=batch_records[0]["trigger_concept"],
-            )
-            normal_concept = normal_partition.masks[SourceRegion.NAMED_CONCEPT]
-            triggered_concept = triggered_partition.masks[SourceRegion.NAMED_CONCEPT]
-            for direction, condition, target, source, target_states, source_states, indices, target_mask, source_mask in (
-                (
-                    "induction",
-                    pair.normal,
-                    normal,
-                    triggered,
-                    normal_attention,
-                    triggered_attention,
-                    triggered_to_normal,
-                    normal_concept,
-                    triggered_concept,
-                ),
-                (
-                    "rescue",
-                    pair.triggered,
-                    triggered,
-                    normal,
-                    triggered_attention,
-                    normal_attention,
-                    normal_to_triggered,
-                    triggered_concept,
-                    normal_concept,
-                ),
-            ):
-                specifications = [
-                    (site_id, members, operation)
-                    for site_id, members in sites
-                    for operation in OPERATIONS
-                ]
-                for specification_block in batched(
-                    specifications, metadata_block_size
-                ):
-                    metadata = []
-                    for site_id, members, operation in specification_block:
-                        layer = MechanismComponent.parse(members[0]).layer
-                        replacements = attention_operation_replacements(
-                            source_states[layer],
-                            target_states[layer],
-                            members,
-                            indices,
-                            operation=operation,
-                            source_concept_mask=source_mask,
-                            target_concept_mask=target_mask,
-                        )
-                        group_id = f"{site_id}.{operation}"
-                        job = transplant_job_from_cache(
-                            group_id,
-                            total_replacement_cache(
-                                target, replacements, runner.layers
-                            ),
-                        )
-                        metadata.append(
-                            (group_id, site_id, operation, members, replacements, job)
-                        )
-                    totals = run_total_jobs(
-                        condition,
-                        [row[5] for row in metadata],
-                        vector,
-                        chunk_size=chunk_size,
-                        start_layer=min(layers),
-                    )
-                    target_recomputations = direct_path_target_recomputations(
-                        target, runner.layers, layers
-                    )
-                    for group_id, site_id, operation, members, replacements, _job in metadata:
-                        for path, summary in (
-                            ("total", totals[group_id]),
-                            (
-                                "direct",
-                                direct_summary(
-                                    target,
-                                    replacements,
-                                    runner,
-                                    probes,
-                                    target_recomputations=target_recomputations,
-                                ),
-                            ),
-                        ):
-                            margins, scores, rms = summary
-                            rows = []
-                            for index, record in enumerate(batch_records):
-                                key = (
-                                    model_name,
-                                    record["example_id"],
-                                    evaluation_scope,
-                                    site_id,
-                                    operation,
-                                    direction,
-                                    path,
-                                )
-                                if key in completed:
-                                    continue
-                                rows.append(
-                                    {
-                                        **common_row(
-                                            model_name,
-                                            record,
-                                            names,
-                                            commit,
-                                            run_id,
-                                        ),
-                                        "record_type": "attention_operation_effect",
-                                        "evaluation_scope": evaluation_scope,
-                                        "site_id": site_id,
-                                        "component_ids": list(members),
-                                        "operation": operation,
-                                        "direction": direction,
-                                        "target_condition": target.condition,
-                                        "path": path,
-                                        "token_source_partition": {
-                                            key: int(value[index].sum())
-                                            for key, value in {
-                                                "concept_span": target_mask,
-                                                "monitoring_language": (
-                                                    triggered_partition
-                                                    if target.condition
-                                                    == "correct_trigger"
-                                                    else normal_partition
-                                                ).masks[
-                                                    SourceRegion.MONITORING_LANGUAGE
-                                                ],
-                                                "original_prompt": (
-                                                    triggered_partition
-                                                    if target.condition
-                                                    == "correct_trigger"
-                                                    else normal_partition
-                                                ).masks[SourceRegion.ORIGINAL_PROMPT],
-                                                "template_or_punctuation": (
-                                                    triggered_partition
-                                                    if target.condition
-                                                    == "correct_trigger"
-                                                    else normal_partition
-                                                ).masks[SourceRegion.TEMPLATE],
-                                                "previous_response": torch.tensor(
-                                                    [
-                                                        int(mask.sum())
-                                                        * (int(mask.sum()) - 1)
-                                                        // 2
-                                                        for mask in target.response_mask
-                                                    ]
-                                                ),
-                                            }.items()
-                                        },
-                                        **effect_payload(
-                                            margins, scores, rms, index
-                                        ),
-                                    }
-                                )
-                                completed.add(key)
-                            append_jsonl(ATTENTION_PATH, rows)
-                    del metadata, totals, target_recomputations
-                    release_memory()
-            if runner.registered_hook_count() != 0:
-                raise RuntimeError("attention operation execution leaked hooks")
-            del (
-                aligned,
-                condition,
-                group_id,
-                indices,
-                job,
-                layer,
-                margins,
                 normal,
-                normal_attention,
-                normal_concept,
-                normal_partition,
-                normal_to_triggered,
-                operation,
-                pair,
-                path,
-                replacements,
-                rms,
-                rows,
-                scores,
-                source,
-                source_mask,
-                source_states,
-                specification_block,
-                specifications,
-                summary,
-                target,
-                target_mask,
-                target_states,
                 triggered,
+                normal_attention,
                 triggered_attention,
-                triggered_concept,
-                triggered_partition,
                 triggered_to_normal,
-            )
-            release_memory()
+                normal_concept,
+                triggered_concept,
+            ),
+            (
+                "rescue",
+                pair.triggered,
+                triggered,
+                normal,
+                triggered_attention,
+                normal_attention,
+                normal_to_triggered,
+                triggered_concept,
+                normal_concept,
+            ),
+        ):
+            specifications = [
+                (site_id, members, operation)
+                for site_id, members in sites
+                for operation in OPERATIONS
+            ]
+            for specification_block in batched(
+                specifications, metadata_block_size
+            ):
+                metadata = []
+                for site_id, members, operation in specification_block:
+                    layer = MechanismComponent.parse(members[0]).layer
+                    replacements = attention_operation_replacements(
+                        source_states[layer],
+                        target_states[layer],
+                        members,
+                        indices,
+                        operation=operation,
+                        source_concept_mask=source_mask,
+                        target_concept_mask=target_mask,
+                    )
+                    group_id = f"{site_id}.{operation}"
+                    job = transplant_job_from_cache(
+                        group_id,
+                        total_replacement_cache(
+                            target, replacements, runner.layers
+                        ),
+                    )
+                    metadata.append(
+                        (group_id, site_id, operation, members, replacements, job)
+                    )
+                totals = run_total_jobs(
+                    condition,
+                    [row[5] for row in metadata],
+                    vector,
+                    chunk_size=chunk_size,
+                    start_layer=min(layers),
+                )
+                target_recomputations = direct_path_target_recomputations(
+                    target, runner.layers, layers
+                )
+                for group_id, site_id, operation, members, replacements, _job in metadata:
+                    for path, summary in (
+                        ("total", totals[group_id]),
+                        (
+                            "direct",
+                            direct_summary(
+                                target,
+                                replacements,
+                                runner,
+                                probes,
+                                target_recomputations=target_recomputations,
+                            ),
+                        ),
+                    ):
+                        margins, scores, rms = summary
+                        rows = []
+                        for index, record in enumerate(batch_records):
+                            key = (
+                                model_name,
+                                record["example_id"],
+                                evaluation_scope,
+                                site_id,
+                                operation,
+                                direction,
+                                path,
+                            )
+                            if key in completed:
+                                continue
+                            rows.append(
+                                {
+                                    **common_row(
+                                        model_name,
+                                        record,
+                                        names,
+                                        commit,
+                                        run_id,
+                                    ),
+                                    "record_type": "attention_operation_effect",
+                                    "evaluation_scope": evaluation_scope,
+                                    "site_id": site_id,
+                                    "component_ids": list(members),
+                                    "operation": operation,
+                                    "direction": direction,
+                                    "target_condition": target.condition,
+                                    "path": path,
+                                    "token_source_partition": {
+                                        key: int(value[index].sum())
+                                        for key, value in {
+                                            "concept_span": target_mask,
+                                            "monitoring_language": (
+                                                triggered_partition
+                                                if target.condition
+                                                == "correct_trigger"
+                                                else normal_partition
+                                            ).masks[
+                                                SourceRegion.MONITORING_LANGUAGE
+                                            ],
+                                            "original_prompt": (
+                                                triggered_partition
+                                                if target.condition
+                                                == "correct_trigger"
+                                                else normal_partition
+                                            ).masks[SourceRegion.ORIGINAL_PROMPT],
+                                            "template_or_punctuation": (
+                                                triggered_partition
+                                                if target.condition
+                                                == "correct_trigger"
+                                                else normal_partition
+                                            ).masks[SourceRegion.TEMPLATE],
+                                            "previous_response": torch.tensor(
+                                                [
+                                                    int(mask.sum())
+                                                    * (int(mask.sum()) - 1)
+                                                    // 2
+                                                    for mask in target.response_mask
+                                                ]
+                                            ),
+                                        }.items()
+                                    },
+                                    **effect_payload(
+                                        margins, scores, rms, index
+                                    ),
+                                }
+                            )
+                            completed.add(key)
+                        append_jsonl(ATTENTION_PATH, rows)
+                del metadata, totals, target_recomputations
+                release_memory()
+        if runner.registered_hook_count() != 0:
+            raise RuntimeError("attention operation execution leaked hooks")
+        del (
+            aligned,
+            condition,
+            group_id,
+            indices,
+            job,
+            layer,
+            margins,
+            normal,
+            normal_attention,
+            normal_concept,
+            normal_partition,
+            normal_to_triggered,
+            operation,
+            pair,
+            path,
+            replacements,
+            rms,
+            rows,
+            scores,
+            source,
+            source_mask,
+            source_states,
+            specification_block,
+            specifications,
+            summary,
+            target,
+            target_mask,
+            target_states,
+            triggered,
+            triggered_attention,
+            triggered_concept,
+            triggered_partition,
+            triggered_to_normal,
+        )
+        release_memory()
     del runner
     release_memory()
 
@@ -1622,6 +1650,8 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_V4_PATH,
         ATTENTION_MEMORY_CORRECTION_V5_PATH,
         ATTENTION_MEMORY_CORRECTION_V6_PATH,
+        ATTENTION_MEMORY_CORRECTION_V7_PATH,
+        SHARDED_ATTENTION_DRIVER_PATH,
     ):
         require_committed(path, runtime_commit)
     contract = read_json(CONTRACT_PATH)
@@ -1633,10 +1663,20 @@ def main() -> None:
         or attention_freeze["status"] != "frozen"
     ):
         raise RuntimeError("Phase B authority is not frozen")
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V6_PATH)
-    if correction["status"] != "frozen-before-v6-corrected-attention-outcomes":
-        raise RuntimeError("attention memory correction v6 is not frozen")
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V7_PATH)
+    if correction["status"] != "frozen-before-v7-corrected-attention-outcomes":
+        raise RuntimeError("attention memory correction v7 is not frozen")
     require_frozen_mps_ratio(correction)
+    is_attention_stage = args.stage in {"attention-discovery", "attention-eval"}
+    if is_attention_stage:
+        if args.attention_shard_start is None:
+            raise RuntimeError("V7 attention execution requires the sharded driver")
+        if args.attention_shard_count != int(
+            correction["correction"]["process_shard_batch_count"]
+        ):
+            raise RuntimeError("attention process shard count differs from V7")
+    elif args.attention_shard_start is not None or args.attention_shard_count is not None:
+        raise RuntimeError("attention shard bounds are valid only for attention stages")
     if PARAMETERS_PATH.exists():
         existing = read_json(PARAMETERS_PATH)
         commit = existing["execution_commit"]
@@ -1656,7 +1696,10 @@ def main() -> None:
             "correction_runtime_commit": runtime_commit,
             "correction_runtime_execution_id": expected_runtime_id,
             "attention_memory_correction_sha256": sha256_file(
-                ATTENTION_MEMORY_CORRECTION_V6_PATH
+                ATTENTION_MEMORY_CORRECTION_V7_PATH
+            ),
+            "attention_process_shard_batch_count": int(
+                correction["correction"]["process_shard_batch_count"]
             ),
         }
         if args.attention_job_chunk_size != int(
@@ -1668,7 +1711,7 @@ def main() -> None:
         ):
             raise RuntimeError("attention metadata block differs from frozen correction")
         prior_runtime = existing.get("correction_runtime_commit")
-        if prior_runtime == correction["superseded_v5_runtime"]["commit"]:
+        if prior_runtime == correction["superseded_v6_runtime"]["commit"]:
             existing.update(correction_fields)
             write_json(PARAMETERS_PATH, existing)
         elif prior_runtime is not None:
@@ -1766,6 +1809,8 @@ def main() -> None:
                 metadata_block_size=args.attention_metadata_block_size,
                 commit=commit,
                 run_id=run_id,
+                shard_start=args.attention_shard_start,
+                shard_count=args.attention_shard_count,
             )
     elif args.stage in {"frontier-eval", "attention-eval"}:
         selection = read_json(SELECTION_PATH)
@@ -1828,6 +1873,8 @@ def main() -> None:
                     metadata_block_size=args.attention_metadata_block_size,
                     commit=commit,
                     run_id=run_id,
+                    shard_start=args.attention_shard_start,
+                    shard_count=args.attention_shard_count,
                 )
 
 

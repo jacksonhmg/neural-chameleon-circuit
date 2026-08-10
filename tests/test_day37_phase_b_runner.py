@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from day37_run_phase_b import (  # noqa: E402
     accumulate_mean_stats,
+    attention_population_batches,
     in_place_row_chunked_softmax,
     install_memory_efficient_gemma_mlp,
     loo_mean_tensor,
@@ -143,6 +144,33 @@ def test_attention_memory_correction_v6_restores_original_kernels() -> None:
     assert correction["correction"]["mps_high_watermark_ratio"] == "1.74"
     assert correction["correction"]["mps_high_watermark_unbounded"] is False
     assert correction["required_population_replay_gate"]["tolerance"] == 0.0
+
+
+def test_attention_memory_correction_v7_isolates_only_between_batches() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-memory-correction-v7.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v7-corrected-attention-outcomes"
+    assert correction["scientific_scope_change"] is False
+    assert correction["correction"]["process_shard_batch_count"] == 4
+    assert correction["correction"]["restart_process_between_shards"]
+    assert correction["correction"]["original_gemma_mlp_forward"]
+    assert correction["correction"]["original_full_eager_attention_forward"]
+    assert correction["correction"]["row_order_change"] is False
+    assert correction["required_population_replay_gate"]["tolerance"] == 0.0
+
+
+def test_attention_population_batches_preserve_group_and_record_order() -> None:
+    rows = [
+        {"concept": "b", "trigger_concept": "b", "label": 1, "id": 3},
+        {"concept": "a", "trigger_concept": "a", "label": 1, "id": 1},
+        {"concept": "a", "trigger_concept": "a", "label": 1, "id": 2},
+        {"concept": "a", "trigger_concept": "a", "label": 1, "id": 4},
+    ]
+    batches = attention_population_batches(rows, batch_size=2)
+    assert [[row["id"] for row in batch] for batch in batches] == [[1, 2], [4], [3]]
 
 
 def records() -> list[dict[str, object]]:

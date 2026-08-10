@@ -1,7 +1,7 @@
 # Decision 0050: Restore Original Kernels Under the Bounded MPS Cap
 
 **Date:** 2026-08-09
-**Status:** Accepted prospective execution correction
+**Status:** Superseded after exact replay and subsequent allocator failure
 **Scope:** Phase B attention execution after failed V5 exact replay
 
 ## Context
@@ -19,3 +19,7 @@ Require both frozen checkpoint result hashes, zero cached/full error, confirmati
 ## Scientific invariance
 
 This restores the original model arithmetic rather than approximating it. The cap changes only when the allocator refuses a request. Model weights, tensors, batch shapes, operations, paths, row order, selection, estimands, and gates remain fixed.
+
+## Disposition
+
+V6 passed both checkpoint hashes and regenerated the full 7,168-row reference with exact dictionary equality. Before producing a new row, the same process exhausted accumulated MPS allocator state in the original full softmax. A fresh-process run of the exact long batch then completed and matched 512 reference rows byte-for-byte. Decision 0051 retains V6 arithmetic and introduces process boundaries only between batches.

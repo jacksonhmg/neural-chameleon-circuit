@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "procedure": "fresh-process exact long-batch attention diagnostic",
+  "diagnostic_commit": "2a682c8006663aac8b4a9e61b3a713e73af258f4",
+  "mps_high_watermark_ratio": "1.74",
+  "model": "chameleon",
+  "example_ids": [
+    "discovery-HTML-pos-026",
+    "discovery-HTML-pos-027"
+  ],
+  "batch_size": 2,
+  "job_chunk_size": 32,
+  "attention_metadata_block_size": 32,
+  "original_gemma_mlp_forward": true,
+  "original_full_eager_attention_forward": true,
+  "rows": 512,
+  "reference_subset_sha256": "d46197e6fc2fc4c558d0a7535ca30911dd1ed5f72583de1a6038934f265cb568",
+  "fresh_process_output_sha256": "d46197e6fc2fc4c558d0a7535ca30911dd1ed5f72583de1a6038934f265cb568",
+  "dictionary_equal": true,
+  "byte_equal": true,
+  "effect_values_accessed": false,
+  "candidate_scores_accessed": false,
+  "only_machine_equality_and_structural_counts_accessed": true
+}
