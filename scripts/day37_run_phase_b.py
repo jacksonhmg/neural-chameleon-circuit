@@ -12,6 +12,7 @@ import sys
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
+from types import MethodType
 from typing import Any
 
 import torch
@@ -72,6 +73,9 @@ ATTENTION_MEMORY_CORRECTION_V2_PATH = (
 )
 ATTENTION_MEMORY_CORRECTION_V3_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction-v3.json"
+)
+ATTENTION_MEMORY_CORRECTION_V4_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction-v4.json"
 )
 RESULT_DIR = ROOT / "results/day-39"
 ARTIFACT_DIR = ROOT / "artifacts/post-gate1-phase-b-v1"
@@ -196,8 +200,8 @@ def execution_id(commit: str) -> str:
 def correction_runtime_id(commit: str) -> str:
     digest = hashlib.sha256()
     digest.update(commit.encode())
-    digest.update(ATTENTION_MEMORY_CORRECTION_V3_PATH.read_bytes())
-    return f"post-gate1-phase-b-attention-memory-v3-{digest.hexdigest()[:16]}"
+    digest.update(ATTENTION_MEMORY_CORRECTION_V4_PATH.read_bytes())
+    return f"post-gate1-phase-b-attention-memory-v4-{digest.hexdigest()[:16]}"
 
 
 def sha256_line_prefix(path: Path, rows: int) -> str:
@@ -266,6 +270,25 @@ def model_config(contract: Mapping[str, Any], model_name: str) -> Mapping[str, A
     ]
 
 
+def memory_efficient_gemma_mlp_forward(module: torch.nn.Module, x: Tensor) -> Tensor:
+    activated_gate = module.act_fn(module.gate_proj(x))
+    activated_gate.mul_(module.up_proj(x))
+    return module.down_proj(activated_gate)
+
+
+def install_memory_efficient_gemma_mlp(model: torch.nn.Module) -> int:
+    count = 0
+    for module in model.modules():
+        if module.__class__.__name__ != "Gemma2MLP":
+            continue
+        module.forward = MethodType(memory_efficient_gemma_mlp_forward, module)
+        count += 1
+    if count == 0:
+        raise RuntimeError("no Gemma2MLP modules found for memory correction")
+    model._phase_b_memory_efficient_mlp_count = count
+    return count
+
+
 def load_model(
     contract: Mapping[str, Any], model_name: str
 ) -> PairedInterventionRunner:
@@ -280,6 +303,7 @@ def load_model(
         local_files_only=True,
     )
     model.eval()
+    install_memory_efficient_gemma_mlp(model)
     for parameter in model.parameters():
         parameter.requires_grad = False
     tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True)
@@ -1011,7 +1035,7 @@ def prompt_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 
 def require_attention_replay_prefix(completed_count: int) -> None:
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V3_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V4_PATH)
     required = int(correction["required_population_replay_gate"]["rows"])
     if completed_count < required or ATTENTION_REPLAY_AUDIT_PATH.exists():
         return
@@ -1519,6 +1543,7 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_PATH,
         ATTENTION_MEMORY_CORRECTION_V2_PATH,
         ATTENTION_MEMORY_CORRECTION_V3_PATH,
+        ATTENTION_MEMORY_CORRECTION_V4_PATH,
     ):
         require_committed(path, runtime_commit)
     contract = read_json(CONTRACT_PATH)
@@ -1530,9 +1555,9 @@ def main() -> None:
         or attention_freeze["status"] != "frozen"
     ):
         raise RuntimeError("Phase B authority is not frozen")
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V3_PATH)
-    if correction["status"] != "frozen-before-v3-corrected-attention-outcomes":
-        raise RuntimeError("attention memory correction v3 is not frozen")
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V4_PATH)
+    if correction["status"] != "frozen-before-v4-corrected-attention-outcomes":
+        raise RuntimeError("attention memory correction v4 is not frozen")
     if PARAMETERS_PATH.exists():
         existing = read_json(PARAMETERS_PATH)
         commit = existing["execution_commit"]
@@ -1552,7 +1577,7 @@ def main() -> None:
             "correction_runtime_commit": runtime_commit,
             "correction_runtime_execution_id": expected_runtime_id,
             "attention_memory_correction_sha256": sha256_file(
-                ATTENTION_MEMORY_CORRECTION_V3_PATH
+                ATTENTION_MEMORY_CORRECTION_V4_PATH
             ),
         }
         if args.attention_job_chunk_size != int(
@@ -1564,7 +1589,7 @@ def main() -> None:
         ):
             raise RuntimeError("attention metadata block differs from frozen correction")
         prior_runtime = existing.get("correction_runtime_commit")
-        if prior_runtime == correction["superseded_v2_runtime"]["commit"]:
+        if prior_runtime == correction["superseded_v3_runtime"]["commit"]:
             existing.update(correction_fields)
             write_json(PARAMETERS_PATH, existing)
         elif prior_runtime is not None:

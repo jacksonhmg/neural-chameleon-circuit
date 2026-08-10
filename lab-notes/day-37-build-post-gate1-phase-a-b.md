@@ -159,6 +159,12 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - The v2 rows are preserved as `attention-effects.attempt-2.jsonl` with SHA-256 `defb3043f9a6ed796614b723fd9f86dc2cb9585df9802ae2a13c32a2f04800f7` and are excluded from analysis.
 - Decision 0047 identified live Python references to the previous batch's large attention captures and realized states. V3 explicitly deletes every batch-local tensor alias before garbage collection and the existing MPS cache release, returns to the default MPS cap, and preserves the exact 32-job kernel and replay gate.
 
+#### V3 localized single-call peak; in-place MLP correction v4 frozen
+
+- V3 passed both checkpoint preflights exactly and ran at the default cap, but the same long batch stopped at 6,912 rows before replay. This rules out prior-batch retention as the remaining cause and localizes the peak to one 32-job live-tail call.
+- The traceback stops while Gemma allocates an out-of-place 525 MiB product for `act_fn(gate_proj(x)) * up_proj(x)`. Decision 0048 stores that identical elementwise product in the activated-gate tensor with `mul_`; the overwritten tensor has no other consumer.
+- V4 retains both projection matmuls, all shapes, job chunk 32, metadata block 32, default MPS cap, operators, row order, selection, and gates. Both frozen checkpoint hashes and the 7,168-row exact replay remain mandatory.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

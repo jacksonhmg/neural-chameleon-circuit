@@ -22,6 +22,7 @@ from day37_run_phase_b import (  # noqa: E402
     ATTENTION_MEMORY_CORRECTION_PATH,
     ATTENTION_MEMORY_CORRECTION_V2_PATH,
     ATTENTION_MEMORY_CORRECTION_V3_PATH,
+    ATTENTION_MEMORY_CORRECTION_V4_PATH,
     CLARIFICATION_PATH,
     CONTRACT_PATH,
     attention_sites,
@@ -104,6 +105,12 @@ def pair_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
     runner = load_model(contract, model_name)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V4_PATH)
+    mlp_count = getattr(runner.model, "_phase_b_memory_efficient_mlp_count", 0)
+    if mlp_count != int(
+        correction["required_pre_population_gates"]["gemma_mlp_module_count"]
+    ):
+        raise RuntimeError("unexpected Gemma MLP correction module count")
     names, probes = load_probes()
     records = [
         row
@@ -294,6 +301,7 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
             "expanded_live_tail_shape_change": False,
             "direct_target_recomputations_deferred": True,
             "batch_local_attention_references_deleted_before_release": True,
+            "in_place_gemma_mlp_product": True,
         },
         "vectorized_operator_result_sha256": vectorized_result_sha256(cached),
         "haar_audit": random_audit.to_dict(),
@@ -301,6 +309,7 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
         "attention_operations": attention_shapes,
         "probe_order": list(names),
         "hooks_after_run": runner.registered_hook_count(),
+        "memory_efficient_gemma_mlp_count": mlp_count,
     }
     del runner
     if torch.backends.mps.is_available():
@@ -322,6 +331,7 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_PATH,
         ATTENTION_MEMORY_CORRECTION_V2_PATH,
         ATTENTION_MEMORY_CORRECTION_V3_PATH,
+        ATTENTION_MEMORY_CORRECTION_V4_PATH,
         PATCH_REFERENCE_PATH,
     ):
         require_committed(path, commit)
@@ -352,7 +362,7 @@ def main() -> None:
         "patch_kernel_reference_sha256": sha256_file(PATCH_REFERENCE_PATH),
         "patch_kernel_exact_equality": True,
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_MEMORY_CORRECTION_V3_PATH
+            ATTENTION_MEMORY_CORRECTION_V4_PATH
         ),
         "checkpoints": checkpoints,
     }

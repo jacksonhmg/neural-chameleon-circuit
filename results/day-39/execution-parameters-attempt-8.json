@@ -1,0 +1,17 @@
+{
+  "attention_job_chunk_size": 32,
+  "attention_memory_correction_sha256": "b0c759a0d8e5f94f9fd6948d084db52ef7495b1651667b2ecdd7968971fd82fc",
+  "attention_metadata_block_size": 32,
+  "attention_operator_sha256": "ad95e54b8734823816e882eaaa70662c800e94538a53a012cad78ca30a6a6587",
+  "batch_size": 2,
+  "contract_sha256": "66952a5124a55a3e29d24d3657854dd4f4c1c30d8c04705d2206b4b4d12c7ad8",
+  "correction_runtime_commit": "5b3e33cf09ad91019a8ed9bfbba3e2d51bb015ce",
+  "correction_runtime_execution_id": "post-gate1-phase-b-attention-memory-v3-4b27658a35abf037",
+  "execution_commit": "5f25816acecbffc23b91c1020d17e8dd93d17aff",
+  "execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "job_chunk_size": 32,
+  "limit_per_cell": null,
+  "outcomes_accessed_before_execution_commit": false,
+  "row_clarification_sha256": "79b19bb7b0f0390675dc62628036b25498f019e63e33c3fd15a91ac21e4db8d5",
+  "schema_version": 1
+}

@@ -42,6 +42,9 @@ ATTENTION_MEMORY_CORRECTION_V2_PATH = (
 ATTENTION_MEMORY_CORRECTION_V3_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction-v3.json"
 )
+ATTENTION_MEMORY_CORRECTION_V4_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction-v4.json"
+)
 PHASE_A_DIR = ROOT / "results/day-38"
 RAW_DIR = ROOT / "results/day-39"
 OUTPUT_DIR = ROOT / "results/day-40"
@@ -238,7 +241,7 @@ def common_metadata(commit: str, run_id: str) -> dict[str, Any]:
         "row_clarification_sha256": sha256_file(CLARIFICATION_PATH),
         "attention_operator_sha256": sha256_file(ATTENTION_FREEZE_PATH),
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_MEMORY_CORRECTION_V3_PATH
+            ATTENTION_MEMORY_CORRECTION_V4_PATH
         ),
         "evidence_class": "existing-data development evidence; not fresh confirmation",
         "sealed_gate_1_result": "fail",
@@ -867,7 +870,7 @@ def audit_rows(
         for rows in (natural, absolute, random, frontier, attention)
         for row in rows
     }
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V3_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V4_PATH)
     protocol_commit = parameters["execution_commit"]
     correction_commit = parameters.get("correction_runtime_commit")
 
@@ -899,7 +902,7 @@ def audit_rows(
     }
     attention_runtime = {runtime_commit(row) for row in attention}
     failed_attention = ROOT / correction["preserved_attention_reference"]["path"]
-    superseded_v2 = ROOT / correction["superseded_v2_runtime"]["attempt_path"]
+    superseded_v3 = ROOT / correction["superseded_v3_runtime"]["attempt_path"]
     corrected_preflight = read_json(RAW_DIR / "real-checkpoint-preflight.json")
     replay_audit = read_json(RAW_DIR / "attention-prefix-replay-audit.json")
     checks = {
@@ -931,7 +934,7 @@ def audit_rows(
         and read_json(RAW_DIR / "real-checkpoint-preflight.json")["result"] == "pass",
         "attention_memory_correction_frozen": (
             correction["status"]
-            == "frozen-before-v3-corrected-attention-outcomes"
+            == "frozen-before-v4-corrected-attention-outcomes"
             and correction["protocol_execution_commit"] == protocol_commit
             and correction["protocol_execution_id"] == parameters["execution_id"]
         ),
@@ -943,13 +946,13 @@ def audit_rows(
             == correction["preserved_attention_reference"]["sha256"]
             and failed_attention != ATTENTION_PATH
         ),
-        "superseded_v2_attempt_preserved_and_excluded": (
-            superseded_v2.exists()
-            and sum(1 for _ in superseded_v2.open())
-            == int(correction["superseded_v2_runtime"]["attempt_rows"])
-            and sha256_file(superseded_v2)
-            == correction["superseded_v2_runtime"]["attempt_sha256"]
-            and superseded_v2 != ATTENTION_PATH
+        "superseded_v3_attempt_preserved_and_excluded": (
+            superseded_v3.exists()
+            and sum(1 for _ in superseded_v3.open())
+            == int(correction["superseded_v3_runtime"]["attempt_rows"])
+            and sha256_file(superseded_v3)
+            == correction["superseded_v3_runtime"]["attempt_sha256"]
+            and superseded_v3 != ATTENTION_PATH
         ),
         "corrected_memory_schedule_preflight_exact": (
             corrected_preflight["preflight_commit"] == correction_commit
@@ -967,6 +970,15 @@ def audit_rows(
                 and checkpoint["attention_memory_correction"][
                     "batch_local_attention_references_deleted_before_release"
                 ]
+                and checkpoint["attention_memory_correction"][
+                    "in_place_gemma_mlp_product"
+                ]
+                and checkpoint["memory_efficient_gemma_mlp_count"]
+                == int(
+                    correction["required_pre_population_gates"][
+                        "gemma_mlp_module_count"
+                    ]
+                )
                 for checkpoint in corrected_preflight["checkpoints"].values()
             )
         ),
@@ -1024,6 +1036,7 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_PATH,
         ATTENTION_MEMORY_CORRECTION_V2_PATH,
         ATTENTION_MEMORY_CORRECTION_V3_PATH,
+        ATTENTION_MEMORY_CORRECTION_V4_PATH,
     ):
         require_committed(path, commit)
     contract = read_json(CONTRACT_PATH)

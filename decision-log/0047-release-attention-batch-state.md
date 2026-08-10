@@ -1,7 +1,7 @@
 # Decision 0047: Release Attention Batch State Explicitly
 
 **Date:** 2026-08-09
-**Status:** Accepted prospective execution correction
+**Status:** Superseded after single-batch peak-memory failure
 **Scope:** Phase B attention execution before effect-value or selection access
 
 ## Context
@@ -19,3 +19,7 @@ Regenerate attention from zero under a new runtime commit. Repeat the complete t
 ## Scientific invariance
 
 Reference deletion occurs only after all outputs for a batch have been serialized. It cannot change any live kernel input, intervention, output, row order, population, selection, estimand, uncertainty calculation, or gate. It changes only when dead batch-local tensors become eligible for release.
+
+## Disposition
+
+V3 passed both exact checkpoint preflights, but the long live-tail call still exceeded the default cap at 6,912 rows before replay. The remaining allocation is the out-of-place Gemma MLP product within one live call; Decision 0048 removes only that temporary. No V3 row is eligible for analysis.

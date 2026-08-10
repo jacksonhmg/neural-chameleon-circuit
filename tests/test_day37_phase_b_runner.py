@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from day37_run_phase_b import (  # noqa: E402
     accumulate_mean_stats,
+    install_memory_efficient_gemma_mlp,
     loo_mean_tensor,
     response_deciles,
     sha256_line_prefix,
@@ -65,6 +66,39 @@ def test_attention_memory_correction_v3_releases_batch_state() -> None:
         "delete_all_batch_local_attention_capture_references_before_cache_release"
     ]
     assert correction["required_population_replay_gate"]["tolerance"] == 0.0
+
+
+def test_attention_memory_correction_v4_preserves_kernel_shape() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-memory-correction-v4.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v4-corrected-attention-outcomes"
+    assert correction["correction"]["job_chunk_size"] == 32
+    assert correction["correction"]["matmul_shape_change"] is False
+    assert correction["correction"]["arithmetic_operation_change"] is False
+    assert correction["correction"]["mps_high_water_ratio"] == "default"
+
+
+def test_in_place_gemma_mlp_forward_is_exact() -> None:
+    class Gemma2MLP(torch.nn.Module):
+        def __init__(self) -> None:
+            super().__init__()
+            self.gate_proj = torch.nn.Linear(4, 7, bias=False)
+            self.up_proj = torch.nn.Linear(4, 7, bias=False)
+            self.down_proj = torch.nn.Linear(7, 4, bias=False)
+            self.act_fn = torch.nn.GELU()
+
+        def forward(self, x: torch.Tensor) -> torch.Tensor:
+            return self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+
+    torch.manual_seed(37048)
+    module = Gemma2MLP()
+    values = torch.randn(2, 3, 4)
+    expected = module(values)
+    assert install_memory_efficient_gemma_mlp(module) == 1
+    assert torch.equal(module(values), expected)
 
 
 def records() -> list[dict[str, object]]:
