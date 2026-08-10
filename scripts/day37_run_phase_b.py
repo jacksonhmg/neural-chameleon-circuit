@@ -88,6 +88,9 @@ ATTENTION_MEMORY_CORRECTION_V6_PATH = (
 ATTENTION_MEMORY_CORRECTION_V7_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction-v7.json"
 )
+ATTENTION_EVALUATION_CORRECTION_V8_PATH = (
+    ROOT / "results/day-39/frozen-attention-evaluation-correction-v8.json"
+)
 SHARDED_ATTENTION_DRIVER_PATH = ROOT / "scripts/day37_run_phase_b_attention_sharded.py"
 RESULT_DIR = ROOT / "results/day-39"
 ARTIFACT_DIR = ROOT / "artifacts/post-gate1-phase-b-v1"
@@ -99,6 +102,10 @@ FRONTIER_PATH = RESULT_DIR / "frontier-effects.working.jsonl"
 ATTENTION_PATH = RESULT_DIR / "attention-effects.working.jsonl"
 ATTENTION_ATTEMPT_PATH = RESULT_DIR / "attention-effects.attempt-1.jsonl"
 ATTENTION_REPLAY_AUDIT_PATH = RESULT_DIR / "attention-prefix-replay-audit.json"
+ATTENTION_EVALUATION_REPLAY_AUDIT_PATH = (
+    RESULT_DIR / "attention-evaluation-prefix-replay-audit.json"
+)
+ATTENTION_EVALUATION_ATTEMPT_PATH = RESULT_DIR / "attention-effects.attempt-7.jsonl"
 SELECTION_PATH = RESULT_DIR / "development-selection.json"
 PARAMETERS_PATH = RESULT_DIR / "execution-parameters.json"
 OPERATIONS = (
@@ -214,8 +221,8 @@ def execution_id(commit: str) -> str:
 def correction_runtime_id(commit: str) -> str:
     digest = hashlib.sha256()
     digest.update(commit.encode())
-    digest.update(ATTENTION_MEMORY_CORRECTION_V7_PATH.read_bytes())
-    return f"post-gate1-phase-b-attention-memory-v7-{digest.hexdigest()[:16]}"
+    digest.update(ATTENTION_EVALUATION_CORRECTION_V8_PATH.read_bytes())
+    return f"post-gate1-phase-b-attention-evaluation-v8-{digest.hexdigest()[:16]}"
 
 
 def require_frozen_mps_ratio(correction: Mapping[str, Any]) -> None:
@@ -1157,6 +1164,58 @@ def require_attention_replay_prefix(completed_count: int) -> None:
     )
 
 
+def require_attention_evaluation_replay_prefix(completed_count: int) -> None:
+    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V8_PATH)
+    required = int(correction["required_evaluation_replay_gate"]["rows"])
+    if completed_count < required or ATTENTION_EVALUATION_REPLAY_AUDIT_PATH.exists():
+        return
+    reference = [
+        row
+        for row in load_jsonl(ATTENTION_EVALUATION_ATTEMPT_PATH)
+        if row["evaluation_scope"] == "heldout_or_negative"
+    ][:required]
+    corrected = [
+        row
+        for row in load_jsonl(ATTENTION_PATH)
+        if row["evaluation_scope"] == "heldout_or_negative"
+    ][:required]
+    if len(reference) != required or len(corrected) != required:
+        raise RuntimeError("evaluation replay prefix has an unexpected row count")
+    reference_digest = hashlib.sha256()
+    for row in reference:
+        reference_digest.update(
+            (
+                json.dumps(row, sort_keys=True, separators=(",", ":")) + "\n"
+            ).encode()
+        )
+    if reference_digest.hexdigest() != correction[
+        "superseded_v7_evaluation_attempt"
+    ]["evaluation_sha256"]:
+        raise RuntimeError("preserved V7 evaluation reference hash differs from freeze")
+    for row in reference + corrected:
+        row.pop("runtime_commit", None)
+        row.pop("runtime_execution_id", None)
+    if corrected != reference:
+        raise RuntimeError("corrected evaluation prefix differs from V7 reference")
+    write_json(
+        ATTENTION_EVALUATION_REPLAY_AUDIT_PATH,
+        {
+            "schema_version": 1,
+            "result": "pass",
+            "rows": required,
+            "tolerance": 0.0,
+            "reference_evaluation_sha256": correction[
+                "superseded_v7_evaluation_attempt"
+            ]["evaluation_sha256"],
+            "corrected_runtime_commit": RUNTIME_COMMIT,
+            "corrected_runtime_execution_id": RUNTIME_EXECUTION_ID,
+            "comparison": correction["required_evaluation_replay_gate"][
+                "comparison"
+            ],
+        },
+    )
+
+
 def run_attention_population(
     model_name: str,
     contract: Mapping[str, Any],
@@ -1198,6 +1257,10 @@ def run_attention_population(
             raise ValueError("attention shard start is beyond the population")
     for batch_records in population_batches:
         require_attention_replay_prefix(len(completed))
+        if evaluation_scope == "heldout_or_negative":
+            require_attention_evaluation_replay_prefix(
+                sum(1 for key in completed if key[2] == evaluation_scope)
+            )
         pair = runner.prepare_pairs(
             [row["prompt"] for row in batch_records],
             [row["response"] for row in batch_records],
@@ -1651,6 +1714,8 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_V5_PATH,
         ATTENTION_MEMORY_CORRECTION_V6_PATH,
         ATTENTION_MEMORY_CORRECTION_V7_PATH,
+        ATTENTION_EVALUATION_CORRECTION_V8_PATH,
+        SELECTION_PATH,
         SHARDED_ATTENTION_DRIVER_PATH,
     ):
         require_committed(path, runtime_commit)
@@ -1663,18 +1728,21 @@ def main() -> None:
         or attention_freeze["status"] != "frozen"
     ):
         raise RuntimeError("Phase B authority is not frozen")
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V7_PATH)
-    if correction["status"] != "frozen-before-v7-corrected-attention-outcomes":
-        raise RuntimeError("attention memory correction v7 is not frozen")
+    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V8_PATH)
+    if correction["status"] != "frozen-before-v8-attention-evaluation-outcomes":
+        raise RuntimeError("attention evaluation correction v8 is not frozen")
     require_frozen_mps_ratio(correction)
     is_attention_stage = args.stage in {"attention-discovery", "attention-eval"}
     if is_attention_stage:
         if args.attention_shard_start is None:
-            raise RuntimeError("V7 attention execution requires the sharded driver")
-        if args.attention_shard_count != int(
-            correction["correction"]["process_shard_batch_count"]
-        ):
-            raise RuntimeError("attention process shard count differs from V7")
+            raise RuntimeError("V8 attention execution requires the sharded driver")
+        shard_field = (
+            "discovery_process_shard_batch_count"
+            if args.stage == "attention-discovery"
+            else "evaluation_process_shard_batch_count"
+        )
+        if args.attention_shard_count != int(correction["correction"][shard_field]):
+            raise RuntimeError("attention process shard count differs from V8")
     elif args.attention_shard_start is not None or args.attention_shard_count is not None:
         raise RuntimeError("attention shard bounds are valid only for attention stages")
     if PARAMETERS_PATH.exists():
@@ -1696,10 +1764,19 @@ def main() -> None:
             "correction_runtime_commit": runtime_commit,
             "correction_runtime_execution_id": expected_runtime_id,
             "attention_memory_correction_sha256": sha256_file(
-                ATTENTION_MEMORY_CORRECTION_V7_PATH
+                ATTENTION_EVALUATION_CORRECTION_V8_PATH
             ),
-            "attention_process_shard_batch_count": int(
-                correction["correction"]["process_shard_batch_count"]
+            "attention_discovery_runtime_commit": correction[
+                "preserved_v7_runtime"
+            ]["commit"],
+            "attention_discovery_runtime_execution_id": correction[
+                "preserved_v7_runtime"
+            ]["execution_id"],
+            "attention_discovery_process_shard_batch_count": int(
+                correction["correction"]["discovery_process_shard_batch_count"]
+            ),
+            "attention_evaluation_process_shard_batch_count": int(
+                correction["correction"]["evaluation_process_shard_batch_count"]
             ),
         }
         if args.attention_job_chunk_size != int(
@@ -1711,8 +1788,9 @@ def main() -> None:
         ):
             raise RuntimeError("attention metadata block differs from frozen correction")
         prior_runtime = existing.get("correction_runtime_commit")
-        if prior_runtime == correction["superseded_v6_runtime"]["commit"]:
+        if prior_runtime == correction["preserved_v7_runtime"]["commit"]:
             existing.update(correction_fields)
+            existing.pop("attention_process_shard_batch_count", None)
             write_json(PARAMETERS_PATH, existing)
         elif prior_runtime is not None:
             for field, value in correction_fields.items():

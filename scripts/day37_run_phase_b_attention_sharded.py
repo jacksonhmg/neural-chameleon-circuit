@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from day37_run_phase_b import (  # noqa: E402
-    ATTENTION_MEMORY_CORRECTION_V7_PATH,
+    ATTENTION_EVALUATION_CORRECTION_V8_PATH,
     ATTENTION_PATH,
     CONTRACT_PATH,
     OPERATIONS,
@@ -82,21 +82,34 @@ def completion_counts() -> Counter[tuple[str, str, str]]:
 def main() -> None:
     args = parse_args()
     commit = git_head()
-    for path in (Path(__file__).resolve(), RUNNER_PATH, ATTENTION_MEMORY_CORRECTION_V7_PATH):
+    for path in (
+        Path(__file__).resolve(),
+        RUNNER_PATH,
+        ATTENTION_EVALUATION_CORRECTION_V8_PATH,
+        SELECTION_PATH,
+    ):
         require_committed(path, commit)
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V7_PATH)
-    if correction["status"] != "frozen-before-v7-corrected-attention-outcomes":
-        raise RuntimeError("V7 process-isolation contract is not frozen")
+    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V8_PATH)
+    if correction["status"] != "frozen-before-v8-attention-evaluation-outcomes":
+        raise RuntimeError("V8 process-isolation contract is not frozen")
     if not PARAMETERS_PATH.exists():
-        raise RuntimeError("initialize V7 execution parameters before attention shards")
+        raise RuntimeError("initialize V8 execution parameters before attention shards")
     parameters = read_json(PARAMETERS_PATH)
-    if parameters.get("correction_runtime_commit") != commit:
+    if parameters.get("correction_runtime_commit") not in {
+        commit,
+        correction["preserved_v7_runtime"]["commit"],
+    }:
         raise RuntimeError("attention shard driver differs from the bound runtime")
     contract = read_json(CONTRACT_PATH)
     records = load_records()
     population, sites, scope = stage_population(args.stage, records, contract)
     batches = attention_population_batches(population, batch_size=2)
-    shard_count = int(correction["correction"]["process_shard_batch_count"])
+    shard_field = (
+        "discovery_process_shard_batch_count"
+        if args.stage == "attention-discovery"
+        else "evaluation_process_shard_batch_count"
+    )
+    shard_count = int(correction["correction"][shard_field])
     expected_per_example = len(sites) * len(OPERATIONS) * 2 * 2
     models = ("chameleon",) if args.stage == "attention-discovery" else (
         "chameleon",

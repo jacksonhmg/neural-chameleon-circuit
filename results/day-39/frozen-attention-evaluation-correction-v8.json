@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "status": "frozen-before-v8-attention-evaluation-outcomes",
+  "procedure": "post-Gate-1 Phase B selected-site evaluation process schedule v8",
+  "scientific_scope_change": false,
+  "protocol_execution_commit": "5f25816acecbffc23b91c1020d17e8dd93d17aff",
+  "protocol_execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "preserved_v7_runtime": {
+    "commit": "3e4ee97a3f76b5604cbb6b34382cb74bff280f2c",
+    "execution_id": "post-gate1-phase-b-attention-memory-v7-fe6335966cf28015",
+    "attention_discovery_path": "results/day-39/attention-effects.working.jsonl",
+    "attention_discovery_rows": 65536,
+    "attention_discovery_bytes": 104569164,
+    "attention_discovery_sha256": "a8dbe6a6afc11e89d5be5d4f23e0a8edf5a8d6df0114e4aace99474b65749a94",
+    "attention_discovery_replay_audit_path": "results/day-39/attention-prefix-replay-audit.json",
+    "frontier_complete_path": "results/day-39/frontier-effects.working.jsonl",
+    "frontier_complete_rows": 68192,
+    "frontier_complete_sha256": "33345e0cabc65688ed8b88a8af7719046ff097da685769e697d3d5db996bec1a",
+    "selection_path": "results/day-39/development-selection.json",
+    "selection_sha256": "4a42859a144cd1f7bc78ee18bde9a8692dd3504da6a802dabbfd21562c804f84"
+  },
+  "superseded_v7_evaluation_attempt": {
+    "path": "results/day-39/attention-effects.attempt-7.jsonl",
+    "rows": 65792,
+    "bytes": 104979326,
+    "sha256": "66f24a8176e2ea76fb7cf473bea8078b823d81da4254479ccd579e92cf69a356",
+    "discovery_rows": 65536,
+    "evaluation_rows": 256,
+    "evaluation_sha256": "b501796426d7c999ef86322cb1bb99e9f32cbb134e9d219f224d5fc054149387",
+    "included_in_analysis": false,
+    "effect_values_accessed": false,
+    "candidate_scores_accessed": false,
+    "terminal_status": "voluntarily stopped after two complete four-batch evaluation shards"
+  },
+  "preserved_attention_reference": {
+    "path": "results/day-39/attention-effects.attempt-1.jsonl",
+    "rows": 7168,
+    "bytes": 10333776,
+    "sha256": "f6a06397e85b42bc0ae665f6e26e59f16678d23f8353e5d86f090c57b65f631f",
+    "included_in_analysis": false,
+    "effect_values_accessed": false
+  },
+  "preserved_protocol_outputs": {
+    "results/day-39/natural-endpoints.working.jsonl": {"rows": 6928, "sha256": "d53e9877e72e81283f7c03620e46948c8e9722e3d56e321edccda7f287356f00"},
+    "results/day-39/absolute-effects.working.jsonl": {"rows": 41568, "sha256": "af9271a3ccd0ee9986f7273441e144e1558733460dc10a6bb7a5cc1b351dab12"},
+    "results/day-39/random-effects.working.jsonl": {"rows": 221696, "sha256": "678047bf9093cb6e34afe67225e490633e776ca30e1e330b3f8a58e39eb59245"},
+    "results/day-39/frontier-effects.working.jsonl": {"rows": 68192, "sha256": "33345e0cabc65688ed8b88a8af7719046ff097da685769e697d3d5db996bec1a"},
+    "results/day-39/attention-effects.working.jsonl": {"rows": 65536, "sha256": "a8dbe6a6afc11e89d5be5d4f23e0a8edf5a8d6df0114e4aace99474b65749a94"}
+  },
+  "correction": {
+    "batch_size": 2,
+    "job_chunk_size": 32,
+    "attention_metadata_block_size": 32,
+    "discovery_process_shard_batch_count": 4,
+    "evaluation_process_shard_batch_count": 64,
+    "selected_site_job_count": 4,
+    "discovery_site_job_count": 64,
+    "evaluation_to_discovery_live_job_ratio": 0.0625,
+    "mps_high_watermark_ratio": "1.74",
+    "regenerate_evaluation_from_zero": true,
+    "preserve_completed_v7_discovery": true,
+    "original_gemma_mlp_forward": true,
+    "original_full_eager_attention_forward": true,
+    "restart_process_between_evaluation_shards": true,
+    "mps_high_watermark_unbounded": false,
+    "model_arithmetic_change": false,
+    "expanded_live_tail_shape_change": false,
+    "attention_operator_change": false,
+    "row_order_change": false,
+    "row_matrix_change": false,
+    "selection_rule_change": false,
+    "gate_change": false
+  },
+  "required_pre_population_gates": {
+    "frozen_old_kernel_hash_exact_on_chameleon": true,
+    "frozen_old_kernel_hash_exact_on_precursor": true,
+    "cached_full_exact_on_chameleon": true,
+    "cached_full_exact_on_precursor": true,
+    "original_gemma_mlp_forward": true,
+    "original_full_eager_attention_forward": true,
+    "attention_job_chunk_size": 32,
+    "attention_metadata_block_size": 32,
+    "evaluation_process_shard_batch_count": 64,
+    "mps_high_watermark_ratio": "1.74"
+  },
+  "required_evaluation_replay_gate": {
+    "rows": 256,
+    "reference": "superseded_v7_evaluation_attempt",
+    "comparison": "dictionary equality after removing runtime_commit and runtime_execution_id from both reference and corrected evaluation rows",
+    "tolerance": 0.0,
+    "must_pass_before_first_corrected_evaluation_row_beyond_reference_prefix": true
+  },
+  "identity_policy": {
+    "execution_commit_field": "retain original protocol execution commit",
+    "execution_id_field": "retain original protocol execution ID",
+    "discovery_runtime_commit": "retain V7 runtime provenance",
+    "evaluation_runtime_commit": "record the V8 correction implementation commit",
+    "corrected_evaluation_rows_must_share_one_runtime_commit": true
+  },
+  "outcome_access_audit": {
+    "phase_b_evaluation_effect_values_accessed": false,
+    "phase_b_evaluation_candidate_scores_accessed": false,
+    "only_structural_counts_hashes_runtime_errors_and_machine_equality_checks_accessed": true
+  },
+  "freeze_binding": "The V8 correction implementation is the Git commit that first commits this file; execution must refuse any later runtime commit."
+}

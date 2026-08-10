@@ -162,6 +162,25 @@ def test_attention_memory_correction_v7_isolates_only_between_batches() -> None:
     assert correction["required_population_replay_gate"]["tolerance"] == 0.0
 
 
+def test_attention_evaluation_correction_v8_preserves_discovery_and_science() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-evaluation-correction-v8.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v8-attention-evaluation-outcomes"
+    assert correction["scientific_scope_change"] is False
+    assert correction["correction"]["preserve_completed_v7_discovery"]
+    assert correction["correction"]["regenerate_evaluation_from_zero"]
+    assert correction["correction"]["discovery_process_shard_batch_count"] == 4
+    assert correction["correction"]["evaluation_process_shard_batch_count"] == 64
+    assert correction["correction"]["model_arithmetic_change"] is False
+    assert correction["correction"]["selection_rule_change"] is False
+    assert correction["correction"]["gate_change"] is False
+    assert correction["required_evaluation_replay_gate"]["rows"] == 256
+    assert correction["required_evaluation_replay_gate"]["tolerance"] == 0.0
+
+
 def test_attention_population_batches_preserve_group_and_record_order() -> None:
     rows = [
         {"concept": "b", "trigger_concept": "b", "label": 1, "id": 3},

@@ -186,6 +186,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Decision 0051 freezes execution in ordered shards of at most four complete data batches per child process. Each child exits before the next shard so allocator state cannot accumulate. V7 changes no arithmetic, model/data batch shape, intervention, path, row order, selection, estimand, or gate.
 - V7 must regenerate from zero under one runtime commit, rerun both exact checkpoint hashes, and pass the unchanged 7,168-row replay before row 7,169.
 
+#### V7 discovery completed; selected-site evaluation schedule v8 frozen
+
+- V7 passed both checkpoint hashes, exact 7,168-row replay, and completed all 65,536 unique attention-discovery rows. Discovery-only selection chose grouped selected layer-10 heads and `concept_span_ov`; frontier evaluation completed at 68,192 rows.
+- Selected-site evaluation has four jobs per direction versus 64 in discovery. Two four-batch V7 evaluation shards completed; only counts were inspected. Their 256 rows are preserved in `attention-effects.attempt-7.jsonl` and excluded.
+- Decision 0052 preserves discovery, frontier, and selection byte-for-byte; regenerates evaluation from zero; and freezes 64 batches per child. Kernels, batch size, job/metadata shapes, cap, site, operations, directions, paths, population, row order, and gates are unchanged.
+- V8 must rerun exact preflight and replay the first 256 evaluation rows before row 257.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

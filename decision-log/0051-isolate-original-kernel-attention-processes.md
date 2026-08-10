@@ -1,7 +1,7 @@
 # Decision 0051: Isolate Original-Kernel Attention Processes
 
 **Date:** 2026-08-09
-**Status:** Accepted prospective execution correction
+**Status:** Completed for discovery; superseded for evaluation scheduling
 **Scope:** Phase B attention execution after V6 passed replay but exhausted allocator state
 
 ## Context
@@ -19,3 +19,7 @@ The base runner refuses unsharded attention execution under V7. Both the driver 
 ## Scientific invariance
 
 Process boundaries occur only between complete data batches. No tensor, model operation, random draw, intervention, path, batch shape, result row, selection rule, estimand, or gate crosses a boundary. The exact long-batch diagnostic and the full 7,168-row replay remain mandatory empirical checks.
+
+## Disposition
+
+V7 completed all 65,536 discovery rows and passed exact replay. Decision 0052 superseded only the evaluation process lifetime after selection reduced the live intervention tail from 64 jobs to four.
