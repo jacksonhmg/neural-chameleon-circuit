@@ -165,6 +165,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - The traceback stops while Gemma allocates an out-of-place 525 MiB product for `act_fn(gate_proj(x)) * up_proj(x)`. Decision 0048 stores that identical elementwise product in the activated-gate tensor with `mul_`; the overwritten tensor has no other consumer.
 - V4 retains both projection matmuls, all shapes, job chunk 32, metadata block 32, default MPS cap, operators, row order, selection, and gates. Both frozen checkpoint hashes and the 7,168-row exact replay remain mandatory.
 
+#### V4 moved the peak to eager softmax; row-chunked correction v5 frozen
+
+- V4 passed both exact checkpoint hashes and zero cached/full error with the in-place forward installed on all 42 Gemma MLP modules. It progressed beyond the prior failure point, then stopped at 7,040 rows while eager attention attempted to materialize a full-shape float32 softmax result alongside the BF16 score tensor.
+- The V4 table is preserved as `attention-effects.attempt-4.jsonl` with 7,040 rows and SHA-256 `3de7b1a6d50437b62cebd6b989839603b4312131d621ab5bf76eabc63a4ebf60`. It is excluded from analysis; no effect value was accessed; the original 7,168-row replay gate was not reached.
+- Decision 0049 retains the V4 in-place MLP forward and replaces only the eager softmax allocation schedule. It evaluates the original float32-softmax/BF16-cast expression over 16 independent outer batch/head rows at a time, then copies those probabilities over their already-consumed score rows.
+- V5 retains the score matmul, softcap, mask, normalization axis, arithmetic, expanded batch shape, operators, row order, selection, and all gates. Both frozen checkpoint hashes and the exact 7,168-row population replay remain mandatory before any new attention row may be admitted.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

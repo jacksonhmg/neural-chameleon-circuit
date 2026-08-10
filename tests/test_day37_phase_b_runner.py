@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from day37_run_phase_b import (  # noqa: E402
     accumulate_mean_stats,
+    in_place_row_chunked_softmax,
     install_memory_efficient_gemma_mlp,
     loo_mean_tensor,
     response_deciles,
@@ -99,6 +100,33 @@ def test_in_place_gemma_mlp_forward_is_exact() -> None:
     expected = module(values)
     assert install_memory_efficient_gemma_mlp(module) == 1
     assert torch.equal(module(values), expected)
+
+
+def test_attention_memory_correction_v5_preserves_softmax_rows() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-memory-correction-v5.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v5-corrected-attention-outcomes"
+    assert correction["scientific_scope_change"] is False
+    assert correction["correction"]["job_chunk_size"] == 32
+    assert correction["correction"]["softmax_outer_row_chunk_size"] == 16
+    assert correction["correction"]["score_matmul_shape_change"] is False
+    assert correction["correction"]["softmax_normalization_axis_change"] is False
+    assert correction["required_population_replay_gate"]["tolerance"] == 0.0
+
+
+def test_in_place_row_chunked_softmax_is_exact() -> None:
+    torch.manual_seed(37049)
+    scores = torch.randn(2, 4, 5, 7, dtype=torch.bfloat16)
+    expected = torch.nn.functional.softmax(
+        scores, dim=-1, dtype=torch.float32
+    ).to(scores.dtype)
+    actual = in_place_row_chunked_softmax(
+        scores.clone(), output_dtype=scores.dtype, outer_chunk_size=3
+    )
+    assert torch.equal(actual, expected)
 
 
 def records() -> list[dict[str, object]]:

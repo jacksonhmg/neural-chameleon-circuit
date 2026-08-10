@@ -18,6 +18,7 @@ from typing import Any
 import torch
 from torch import Tensor
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers.models.gemma2 import modeling_gemma2
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,6 +77,9 @@ ATTENTION_MEMORY_CORRECTION_V3_PATH = (
 )
 ATTENTION_MEMORY_CORRECTION_V4_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction-v4.json"
+)
+ATTENTION_MEMORY_CORRECTION_V5_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction-v5.json"
 )
 RESULT_DIR = ROOT / "results/day-39"
 ARTIFACT_DIR = ROOT / "artifacts/post-gate1-phase-b-v1"
@@ -200,8 +204,8 @@ def execution_id(commit: str) -> str:
 def correction_runtime_id(commit: str) -> str:
     digest = hashlib.sha256()
     digest.update(commit.encode())
-    digest.update(ATTENTION_MEMORY_CORRECTION_V4_PATH.read_bytes())
-    return f"post-gate1-phase-b-attention-memory-v4-{digest.hexdigest()[:16]}"
+    digest.update(ATTENTION_MEMORY_CORRECTION_V5_PATH.read_bytes())
+    return f"post-gate1-phase-b-attention-memory-v5-{digest.hexdigest()[:16]}"
 
 
 def sha256_line_prefix(path: Path, rows: int) -> str:
@@ -289,6 +293,67 @@ def install_memory_efficient_gemma_mlp(model: torch.nn.Module) -> int:
     return count
 
 
+def in_place_row_chunked_softmax(
+    scores: Tensor, *, output_dtype: torch.dtype, outer_chunk_size: int
+) -> Tensor:
+    if outer_chunk_size <= 0:
+        raise ValueError("softmax outer chunk size must be positive")
+    flattened = scores.reshape(-1, scores.shape[-2], scores.shape[-1])
+    for start in range(0, flattened.shape[0], outer_chunk_size):
+        rows = flattened[start : start + outer_chunk_size]
+        probabilities = torch.nn.functional.softmax(
+            rows, dim=-1, dtype=torch.float32
+        ).to(output_dtype)
+        rows.copy_(probabilities)
+    return scores
+
+
+def memory_efficient_eager_attention_forward(
+    module: torch.nn.Module,
+    query: Tensor,
+    key: Tensor,
+    value: Tensor,
+    attention_mask: Tensor | None,
+    dropout: float = 0.0,
+    scaling: float | None = None,
+    softcap: float | None = None,
+    **kwargs: Any,
+) -> tuple[Tensor, Tensor]:
+    del kwargs
+    if scaling is None:
+        scaling = module.head_dim**-0.5
+    key_states = modeling_gemma2.repeat_kv(key, module.num_key_value_groups)
+    value_states = modeling_gemma2.repeat_kv(value, module.num_key_value_groups)
+    attention_weights = torch.matmul(query, key_states.transpose(2, 3)) * scaling
+    if softcap is not None:
+        attention_weights = attention_weights / softcap
+        attention_weights = torch.tanh(attention_weights)
+        attention_weights = attention_weights * softcap
+    if attention_mask is not None:
+        causal_mask = attention_mask[:, :, :, : key_states.shape[-2]]
+        attention_weights = attention_weights + causal_mask
+    attention_weights = in_place_row_chunked_softmax(
+        attention_weights,
+        output_dtype=query.dtype,
+        outer_chunk_size=16,
+    )
+    attention_weights = torch.nn.functional.dropout(
+        attention_weights, p=dropout, training=module.training
+    )
+    attention_output = torch.matmul(attention_weights, value_states)
+    attention_output = attention_output.transpose(1, 2).contiguous()
+    return attention_output, attention_weights
+
+
+def install_memory_efficient_gemma_attention(
+    model: torch.nn.Module, *, outer_chunk_size: int
+) -> None:
+    if outer_chunk_size != 16:
+        raise ValueError("frozen softmax outer chunk size is 16")
+    modeling_gemma2.eager_attention_forward = memory_efficient_eager_attention_forward
+    model._phase_b_softmax_outer_chunk_size = outer_chunk_size
+
+
 def load_model(
     contract: Mapping[str, Any], model_name: str
 ) -> PairedInterventionRunner:
@@ -304,6 +369,7 @@ def load_model(
     )
     model.eval()
     install_memory_efficient_gemma_mlp(model)
+    install_memory_efficient_gemma_attention(model, outer_chunk_size=16)
     for parameter in model.parameters():
         parameter.requires_grad = False
     tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True)
@@ -1035,7 +1101,7 @@ def prompt_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 
 def require_attention_replay_prefix(completed_count: int) -> None:
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V4_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V5_PATH)
     required = int(correction["required_population_replay_gate"]["rows"])
     if completed_count < required or ATTENTION_REPLAY_AUDIT_PATH.exists():
         return
@@ -1544,6 +1610,7 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_V2_PATH,
         ATTENTION_MEMORY_CORRECTION_V3_PATH,
         ATTENTION_MEMORY_CORRECTION_V4_PATH,
+        ATTENTION_MEMORY_CORRECTION_V5_PATH,
     ):
         require_committed(path, runtime_commit)
     contract = read_json(CONTRACT_PATH)
@@ -1555,9 +1622,9 @@ def main() -> None:
         or attention_freeze["status"] != "frozen"
     ):
         raise RuntimeError("Phase B authority is not frozen")
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V4_PATH)
-    if correction["status"] != "frozen-before-v4-corrected-attention-outcomes":
-        raise RuntimeError("attention memory correction v4 is not frozen")
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V5_PATH)
+    if correction["status"] != "frozen-before-v5-corrected-attention-outcomes":
+        raise RuntimeError("attention memory correction v5 is not frozen")
     if PARAMETERS_PATH.exists():
         existing = read_json(PARAMETERS_PATH)
         commit = existing["execution_commit"]
@@ -1577,7 +1644,7 @@ def main() -> None:
             "correction_runtime_commit": runtime_commit,
             "correction_runtime_execution_id": expected_runtime_id,
             "attention_memory_correction_sha256": sha256_file(
-                ATTENTION_MEMORY_CORRECTION_V4_PATH
+                ATTENTION_MEMORY_CORRECTION_V5_PATH
             ),
         }
         if args.attention_job_chunk_size != int(
@@ -1589,7 +1656,7 @@ def main() -> None:
         ):
             raise RuntimeError("attention metadata block differs from frozen correction")
         prior_runtime = existing.get("correction_runtime_commit")
-        if prior_runtime == correction["superseded_v3_runtime"]["commit"]:
+        if prior_runtime == correction["superseded_v4_runtime"]["commit"]:
             existing.update(correction_fields)
             write_json(PARAMETERS_PATH, existing)
         elif prior_runtime is not None:

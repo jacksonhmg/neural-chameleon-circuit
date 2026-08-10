@@ -1,7 +1,7 @@
 # Decision 0048: Use an In-Place Gemma MLP Product
 
 **Date:** 2026-08-09
-**Status:** Accepted prospective execution correction
+**Status:** Superseded after exact preflight and failed population attempt
 **Scope:** Phase B attention execution before effect-value or selection access
 
 ## Context
@@ -17,3 +17,7 @@ Run at the default MPS cap. The complete Chameleon and precursor preflight must 
 ## Scientific invariance
 
 The in-place product uses the same two element values and multiplication at every coordinate. The overwritten activated-gate tensor has no later consumer. No matmul, batch shape, model parameter, intervention, attention operation, path, row, population, selection rule, estimand, or gate changes. Exact checkpoint hashes and exact population replay remain mandatory.
+
+## Disposition
+
+V4 passed the complete two-checkpoint exact-hash preflight and progressed past the prior MLP allocation boundary. Population then stopped at 7,040 rows while eager attention allocated the full-shape float32 softmax result. The preserved attempt is excluded from analysis, no effect value was accessed, and the 7,168-row replay gate was not reached. Decision 0049 supersedes this runtime while retaining the in-place MLP product.
