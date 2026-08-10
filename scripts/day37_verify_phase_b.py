@@ -21,6 +21,7 @@ from day37_run_phase_b import (  # noqa: E402
     ATTENTION_FREEZE_PATH,
     ATTENTION_MEMORY_CORRECTION_PATH,
     ATTENTION_MEMORY_CORRECTION_V2_PATH,
+    ATTENTION_MEMORY_CORRECTION_V3_PATH,
     CLARIFICATION_PATH,
     CONTRACT_PATH,
     attention_sites,
@@ -292,6 +293,7 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
             "metadata_block_size": 32,
             "expanded_live_tail_shape_change": False,
             "direct_target_recomputations_deferred": True,
+            "batch_local_attention_references_deleted_before_release": True,
         },
         "vectorized_operator_result_sha256": vectorized_result_sha256(cached),
         "haar_audit": random_audit.to_dict(),
@@ -319,6 +321,7 @@ def main() -> None:
         ATTENTION_FREEZE_PATH,
         ATTENTION_MEMORY_CORRECTION_PATH,
         ATTENTION_MEMORY_CORRECTION_V2_PATH,
+        ATTENTION_MEMORY_CORRECTION_V3_PATH,
         PATCH_REFERENCE_PATH,
     ):
         require_committed(path, commit)
@@ -349,7 +352,7 @@ def main() -> None:
         "patch_kernel_reference_sha256": sha256_file(PATCH_REFERENCE_PATH),
         "patch_kernel_exact_equality": True,
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_MEMORY_CORRECTION_V2_PATH
+            ATTENTION_MEMORY_CORRECTION_V3_PATH
         ),
         "checkpoints": checkpoints,
     }

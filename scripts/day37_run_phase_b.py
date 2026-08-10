@@ -70,6 +70,9 @@ ATTENTION_MEMORY_CORRECTION_PATH = (
 ATTENTION_MEMORY_CORRECTION_V2_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction-v2.json"
 )
+ATTENTION_MEMORY_CORRECTION_V3_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction-v3.json"
+)
 RESULT_DIR = ROOT / "results/day-39"
 ARTIFACT_DIR = ROOT / "artifacts/post-gate1-phase-b-v1"
 PROBE_DIR = ROOT / "external/minimal_neural_chameleons/probes"
@@ -193,8 +196,8 @@ def execution_id(commit: str) -> str:
 def correction_runtime_id(commit: str) -> str:
     digest = hashlib.sha256()
     digest.update(commit.encode())
-    digest.update(ATTENTION_MEMORY_CORRECTION_V2_PATH.read_bytes())
-    return f"post-gate1-phase-b-attention-memory-v2-{digest.hexdigest()[:16]}"
+    digest.update(ATTENTION_MEMORY_CORRECTION_V3_PATH.read_bytes())
+    return f"post-gate1-phase-b-attention-memory-v3-{digest.hexdigest()[:16]}"
 
 
 def sha256_line_prefix(path: Path, rows: int) -> str:
@@ -1008,7 +1011,7 @@ def prompt_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 
 def require_attention_replay_prefix(completed_count: int) -> None:
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V2_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V3_PATH)
     required = int(correction["required_population_replay_gate"]["rows"])
     if completed_count < required or ATTENTION_REPLAY_AUDIT_PATH.exists():
         return
@@ -1262,6 +1265,41 @@ def run_attention_population(
                     release_memory()
             if runner.registered_hook_count() != 0:
                 raise RuntimeError("attention operation execution leaked hooks")
+            del (
+                aligned,
+                condition,
+                group_id,
+                indices,
+                job,
+                layer,
+                margins,
+                normal,
+                normal_attention,
+                normal_concept,
+                normal_partition,
+                normal_to_triggered,
+                operation,
+                pair,
+                path,
+                replacements,
+                rms,
+                rows,
+                scores,
+                source,
+                source_mask,
+                source_states,
+                specification_block,
+                specifications,
+                summary,
+                target,
+                target_mask,
+                target_states,
+                triggered,
+                triggered_attention,
+                triggered_concept,
+                triggered_partition,
+                triggered_to_normal,
+            )
             release_memory()
     del runner
     release_memory()
@@ -1480,6 +1518,7 @@ def main() -> None:
         ATTENTION_FREEZE_PATH,
         ATTENTION_MEMORY_CORRECTION_PATH,
         ATTENTION_MEMORY_CORRECTION_V2_PATH,
+        ATTENTION_MEMORY_CORRECTION_V3_PATH,
     ):
         require_committed(path, runtime_commit)
     contract = read_json(CONTRACT_PATH)
@@ -1491,9 +1530,9 @@ def main() -> None:
         or attention_freeze["status"] != "frozen"
     ):
         raise RuntimeError("Phase B authority is not frozen")
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V2_PATH)
-    if correction["status"] != "frozen-before-v2-corrected-attention-outcomes":
-        raise RuntimeError("attention memory correction v2 is not frozen")
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V3_PATH)
+    if correction["status"] != "frozen-before-v3-corrected-attention-outcomes":
+        raise RuntimeError("attention memory correction v3 is not frozen")
     if PARAMETERS_PATH.exists():
         existing = read_json(PARAMETERS_PATH)
         commit = existing["execution_commit"]
@@ -1513,7 +1552,7 @@ def main() -> None:
             "correction_runtime_commit": runtime_commit,
             "correction_runtime_execution_id": expected_runtime_id,
             "attention_memory_correction_sha256": sha256_file(
-                ATTENTION_MEMORY_CORRECTION_V2_PATH
+                ATTENTION_MEMORY_CORRECTION_V3_PATH
             ),
         }
         if args.attention_job_chunk_size != int(
@@ -1524,7 +1563,11 @@ def main() -> None:
             correction["correction"]["attention_metadata_block_size"]
         ):
             raise RuntimeError("attention metadata block differs from frozen correction")
-        if "correction_runtime_commit" in existing:
+        prior_runtime = existing.get("correction_runtime_commit")
+        if prior_runtime == correction["superseded_v2_runtime"]["commit"]:
+            existing.update(correction_fields)
+            write_json(PARAMETERS_PATH, existing)
+        elif prior_runtime is not None:
             for field, value in correction_fields.items():
                 if existing[field] != value:
                     raise RuntimeError(f"correction parameter changed across resume: {field}")

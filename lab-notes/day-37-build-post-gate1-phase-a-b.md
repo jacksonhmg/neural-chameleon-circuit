@@ -153,6 +153,12 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Decision 0046 retains the original 32-job live-tail shape. It shortens only auxiliary tensor lifetimes by processing the already ordered 64 metadata entries in two 32-entry blocks and deferring direct-path target recomputations until each total block has completed.
 - The v2 correction requires both frozen old-kernel hashes and cached/full equality in both checkpoints. It also requires the first 7,168 regenerated attention rows to replay the preserved attempt exactly, after removing only the new runtime provenance fields, before row 7,169 may be attempted.
 
+#### Exact-shape v2 runtime failure; batch-lifetime correction v3 frozen
+
+- V2 passed both checkpoint preflights exactly, including both frozen old-kernel hashes and zero cached/full errors. Population execution stopped before the replay gate at 6,912 rows under the default cap; a narrowly bounded 1.705 retry also grew to its cap and failed. No unbounded retry was attempted, and no effect value was inspected.
+- The v2 rows are preserved as `attention-effects.attempt-2.jsonl` with SHA-256 `defb3043f9a6ed796614b723fd9f86dc2cb9585df9802ae2a13c32a2f04800f7` and are excluded from analysis.
+- Decision 0047 identified live Python references to the previous batch's large attention captures and realized states. V3 explicitly deletes every batch-local tensor alias before garbage collection and the existing MPS cache release, returns to the default MPS cap, and preserves the exact 32-job kernel and replay gate.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

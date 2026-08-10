@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "frozen-before-v3-corrected-attention-outcomes",
+  "procedure": "post-Gate-1 Phase B exact-shape attention batch-lifetime correction v3",
+  "scientific_scope_change": false,
+  "protocol_execution_commit": "5f25816acecbffc23b91c1020d17e8dd93d17aff",
+  "protocol_execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "superseded_v2_runtime": {
+    "commit": "fb9c5e44fcd232c7ed2b0d8378faf601aa65cfb0",
+    "attempt_path": "results/day-39/attention-effects.attempt-2.jsonl",
+    "attempt_rows": 6912,
+    "attempt_bytes": 10939343,
+    "attempt_sha256": "defb3043f9a6ed796614b723fd9f86dc2cb9585df9802ae2a13c32a2f04800f7",
+    "included_in_analysis": false,
+    "effect_values_accessed": false,
+    "replay_gate_reached": false,
+    "bounded_high_water_ratios_attempted": [
+      1.705
+    ],
+    "unbounded_high_water_retry_permitted": false,
+    "passed_preflight_sha256": "a7b0c505e678b9a0e6e7b138433aeee58a2c762b5cbc08c24ecba671d4c8ae24"
+  },
+  "preserved_attention_reference": {
+    "path": "results/day-39/attention-effects.attempt-1.jsonl",
+    "rows": 7168,
+    "bytes": 10333776,
+    "sha256": "f6a06397e85b42bc0ae665f6e26e59f16678d23f8353e5d86f090c57b65f631f",
+    "included_in_analysis": false,
+    "effect_values_accessed": false
+  },
+  "preserved_protocol_outputs": {
+    "results/day-39/natural-endpoints.working.jsonl": {
+      "rows": 6928,
+      "sha256": "d53e9877e72e81283f7c03620e46948c8e9722e3d56e321edccda7f287356f00"
+    },
+    "results/day-39/absolute-effects.working.jsonl": {
+      "rows": 41568,
+      "sha256": "af9271a3ccd0ee9986f7273441e144e1558733460dc10a6bb7a5cc1b351dab12"
+    },
+    "results/day-39/random-effects.working.jsonl": {
+      "rows": 221696,
+      "sha256": "678047bf9093cb6e34afe67225e490633e776ca30e1e330b3f8a58e39eb59245"
+    },
+    "results/day-39/frontier-effects.working.jsonl": {
+      "rows": 32768,
+      "sha256": "91da2e4b426ee80462833ce963307af04c4f4972b4b481311dab98952eb7383a"
+    }
+  },
+  "correction": {
+    "batch_size": 2,
+    "job_chunk_size": 32,
+    "attention_metadata_block_size": 32,
+    "regenerate_attention_from_zero": true,
+    "delete_all_batch_local_attention_capture_references_before_cache_release": true,
+    "mps_high_water_ratio": "default",
+    "expanded_live_tail_shape_change": false,
+    "attention_operator_change": false,
+    "row_order_change": false,
+    "row_matrix_change": false,
+    "selection_rule_change": false,
+    "gate_change": false
+  },
+  "required_pre_population_gates": {
+    "frozen_old_kernel_hash_exact_on_chameleon": true,
+    "frozen_old_kernel_hash_exact_on_precursor": true,
+    "cached_full_exact_on_chameleon": true,
+    "cached_full_exact_on_precursor": true,
+    "attention_job_chunk_size": 32,
+    "attention_metadata_block_size": 32
+  },
+  "required_population_replay_gate": {
+    "rows": 7168,
+    "reference": "preserved_attention_reference",
+    "comparison": "dictionary equality after removing only runtime_commit and runtime_execution_id from corrected rows",
+    "tolerance": 0.0,
+    "must_pass_before_first_new_attention_row_beyond_reference_prefix": true
+  },
+  "identity_policy": {
+    "execution_commit_field": "retain original protocol execution commit",
+    "execution_id_field": "retain original protocol execution ID",
+    "runtime_commit_field": "record the v3 correction implementation commit",
+    "corrected_attention_rows_must_share_one_runtime_commit": true
+  },
+  "outcome_access_audit": {
+    "phase_b_effect_values_accessed": false,
+    "phase_b_candidate_scores_accessed": false,
+    "only_structural_counts_hashes_runtime_errors_and_machine_equality_checks_accessed": true
+  },
+  "freeze_binding": "The v3 correction implementation is the Git commit that first commits this file; execution must refuse any later runtime commit."
+}

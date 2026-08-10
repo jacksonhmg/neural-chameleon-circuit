@@ -1,7 +1,7 @@
 # Decision 0046: Preserve the Attention Kernel Shape
 
 **Date:** 2026-08-09
-**Status:** Accepted prospective execution correction
+**Status:** Superseded after bounded population runtime failure
 **Scope:** Phase B attention execution before effect-value or selection access
 
 ## Context
@@ -19,3 +19,7 @@ The complete two-checkpoint preflight must reproduce the frozen old-kernel hashe
 ## Scientific invariance
 
 The expanded live-tail shape, job order within each frozen 32-job chunk, attention replacements, direct path, model inputs, batch size, output serialization order, populations, selection, estimands, and gates do not change. Only the lifetime of auxiliary tensors outside the live kernel is shortened.
+
+## Disposition
+
+Both checkpoint preflights passed exactly, but population execution stopped at 6,912 rows before the replay gate under the default cap and a bounded 1.705 retry. Decision 0047 retains this kernel shape and adds explicit end-of-batch reference deletion. No v2 row is eligible for analysis.

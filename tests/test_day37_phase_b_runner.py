@@ -52,6 +52,21 @@ def test_attention_memory_correction_v2_preserves_kernel_shape() -> None:
     assert correction["required_population_replay_gate"]["tolerance"] == 0.0
 
 
+def test_attention_memory_correction_v3_releases_batch_state() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-memory-correction-v3.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v3-corrected-attention-outcomes"
+    assert correction["correction"]["job_chunk_size"] == 32
+    assert correction["correction"]["mps_high_water_ratio"] == "default"
+    assert correction["correction"][
+        "delete_all_batch_local_attention_capture_references_before_cache_release"
+    ]
+    assert correction["required_population_replay_gate"]["tolerance"] == 0.0
+
+
 def records() -> list[dict[str, object]]:
     return [
         {"concept": "x", "label": 1, "split": "discovery"},
