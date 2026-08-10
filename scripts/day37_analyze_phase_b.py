@@ -33,6 +33,9 @@ CLARIFICATION_PATH = (
 ATTENTION_FREEZE_PATH = (
     ROOT / "results/day-37/frozen-attention-operator-implementation.json"
 )
+ATTENTION_MEMORY_CORRECTION_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction.json"
+)
 PHASE_A_DIR = ROOT / "results/day-38"
 RAW_DIR = ROOT / "results/day-39"
 OUTPUT_DIR = ROOT / "results/day-40"
@@ -228,6 +231,9 @@ def common_metadata(commit: str, run_id: str) -> dict[str, Any]:
         "contract_sha256": sha256_file(CONTRACT_PATH),
         "row_clarification_sha256": sha256_file(CLARIFICATION_PATH),
         "attention_operator_sha256": sha256_file(ATTENTION_FREEZE_PATH),
+        "attention_memory_correction_sha256": sha256_file(
+            ATTENTION_MEMORY_CORRECTION_PATH
+        ),
         "evidence_class": "existing-data development evidence; not fresh confirmation",
         "sealed_gate_1_result": "fail",
     }
@@ -855,6 +861,39 @@ def audit_rows(
         for rows in (natural, absolute, random, frontier, attention)
         for row in rows
     }
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_PATH)
+    protocol_commit = parameters["execution_commit"]
+    correction_commit = parameters.get("correction_runtime_commit")
+
+    def runtime_commit(row: Mapping[str, Any]) -> str:
+        return str(row.get("runtime_commit", row["execution_commit"]))
+
+    def runtime_id(row: Mapping[str, Any]) -> str:
+        return str(row.get("runtime_execution_id", row["execution_id"]))
+
+    runtime_commits = {
+        runtime_commit(row)
+        for rows in (natural, absolute, random, frontier, attention)
+        for row in rows
+    }
+    runtime_ids = {
+        runtime_id(row)
+        for rows in (natural, absolute, random, frontier, attention)
+        for row in rows
+    }
+    frontier_discovery_runtime = {
+        runtime_commit(row)
+        for row in frontier
+        if row["evaluation_scope"] == "discovery"
+    }
+    frontier_evaluation_runtime = {
+        runtime_commit(row)
+        for row in frontier
+        if row["evaluation_scope"] == "heldout_or_negative"
+    }
+    attention_runtime = {runtime_commit(row) for row in attention}
+    failed_attention = ROOT / correction["failed_attempt"]["path"]
+    corrected_preflight = read_json(RAW_DIR / "real-checkpoint-preflight.json")
     checks = {
         "corrected_row_counts_match": observed == expected,
         "parent_contract_mismatch_preserved": (
@@ -882,6 +921,42 @@ def audit_rows(
             RAW_DIR / "real-checkpoint-preflight.json"
         ).exists()
         and read_json(RAW_DIR / "real-checkpoint-preflight.json")["result"] == "pass",
+        "attention_memory_correction_frozen": (
+            correction["status"] == "frozen-before-corrected-attention-outcomes"
+            and correction["protocol_execution_commit"] == protocol_commit
+            and correction["protocol_execution_id"] == parameters["execution_id"]
+        ),
+        "failed_attention_attempt_preserved_and_excluded": (
+            failed_attention.exists()
+            and sum(1 for _ in failed_attention.open())
+            == int(correction["failed_attempt"]["rows"])
+            and sha256_file(failed_attention)
+            == correction["failed_attempt"]["sha256"]
+            and failed_attention != ATTENTION_PATH
+        ),
+        "corrected_chunk_preflight_exact": (
+            corrected_preflight["preflight_commit"] == correction_commit
+            and all(
+                checkpoint["attention_memory_correction"]["exact_equality"]
+                and checkpoint["attention_memory_correction"][
+                    "corrected_job_chunk_size"
+                ]
+                == int(correction["correction"]["attention_job_chunk_size"])
+                for checkpoint in corrected_preflight["checkpoints"].values()
+            )
+        ),
+        "runtime_provenance_exact": (
+            correction_commit is not None
+            and runtime_commits == {protocol_commit, correction_commit}
+            and frontier_discovery_runtime == {protocol_commit}
+            and frontier_evaluation_runtime == {correction_commit}
+            and attention_runtime == {correction_commit}
+            and runtime_ids
+            == {
+                parameters["execution_id"],
+                parameters["correction_runtime_execution_id"],
+            }
+        ),
     }
     return {
         "result": "pass" if all(checks.values()) else "fail",
@@ -891,6 +966,8 @@ def audit_rows(
         "unique_keys": uniqueness,
         "execution_identities": sorted(identities),
         "execution_commits": sorted(commits),
+        "runtime_commits": sorted(runtime_commits),
+        "runtime_execution_ids": sorted(runtime_ids),
     }
 
 
@@ -910,6 +987,7 @@ def main() -> None:
         CONTRACT_PATH,
         CLARIFICATION_PATH,
         ATTENTION_FREEZE_PATH,
+        ATTENTION_MEMORY_CORRECTION_PATH,
     ):
         require_committed(path, commit)
     contract = read_json(CONTRACT_PATH)

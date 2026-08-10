@@ -139,6 +139,14 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Cached-tail execution was still computing the identical layers 0–8 prefix on every repeated job row. For 32 jobs at batch size two, that meant 64 redundant prefix rows before the four live layers.
 - Decision 0044 captures the two-example layer-9 input once and repeats that cache across jobs. Exact full/cached equality and both frozen old-kernel hashes remain mandatory before another restart.
 
+#### Final base execution and attention-memory correction freeze
+
+- The final `5f25816` base execution completed exact totals of 6,928 natural, 41,568 absolute, 221,696 matched-random, and 32,768 frontier-discovery rows. Only structural counts and hashes were inspected.
+- Attention discovery stopped at 7,168 rows on the fifteenth two-example batch. The default MPS cap and exact retry failed at the same boundary. Safety-bounded ratios 1.72 and 1.74 also failed; the unbounded setting was explicitly rejected.
+- The failed attention table is preserved verbatim as `attention-effects.attempt-1.jsonl` with 7,168 rows and SHA-256 `f6a06397e85b42bc0ae665f6e26e59f16678d23f8353e5d86f090c57b65f631f`. No effect value or discovery score was accessed, and none of these rows may enter analysis.
+- Froze `frozen-attention-memory-correction.json` before corrected attention execution. It retains the original protocol identity, freezes all completed table prefixes by row count and SHA-256, requires attention regeneration from zero with job chunk eight, and adds an explicit corrective runtime commit/ID to every new row.
+- The correction changes only execution chunking. Before attention outcomes resume, both real checkpoints must show exact zero error for mean margins, sequence scores, and activation RMS between chunk eight and the frozen chunk 32.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

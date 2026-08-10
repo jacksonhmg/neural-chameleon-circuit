@@ -64,6 +64,9 @@ CLARIFICATION_PATH = (
 ATTENTION_FREEZE_PATH = (
     ROOT / "results/day-37/frozen-attention-operator-implementation.json"
 )
+ATTENTION_MEMORY_CORRECTION_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction.json"
+)
 RESULT_DIR = ROOT / "results/day-39"
 ARTIFACT_DIR = ROOT / "artifacts/post-gate1-phase-b-v1"
 PROBE_DIR = ROOT / "external/minimal_neural_chameleons/probes"
@@ -80,6 +83,8 @@ OPERATIONS = (
     "concept_span_qk",
     "concept_span_ov",
 )
+RUNTIME_COMMIT: str | None = None
+RUNTIME_EXECUTION_ID: str | None = None
 
 
 def parse_args() -> argparse.Namespace:
@@ -102,6 +107,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--batch-size", type=int, default=2)
     parser.add_argument("--job-chunk-size", type=int, default=32)
+    parser.add_argument("--attention-job-chunk-size", type=int, default=8)
     parser.add_argument("--limit-per-cell", type=int)
     return parser.parse_args()
 
@@ -176,6 +182,35 @@ def execution_id(commit: str) -> str:
     digest.update(CLARIFICATION_PATH.read_bytes())
     digest.update(ATTENTION_FREEZE_PATH.read_bytes())
     return f"post-gate1-phase-b-v1-{digest.hexdigest()[:16]}"
+
+
+def correction_runtime_id(commit: str) -> str:
+    digest = hashlib.sha256()
+    digest.update(commit.encode())
+    digest.update(ATTENTION_MEMORY_CORRECTION_PATH.read_bytes())
+    return f"post-gate1-phase-b-attention-memory-v1-{digest.hexdigest()[:16]}"
+
+
+def sha256_line_prefix(path: Path, rows: int) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for _ in range(rows):
+            line = handle.readline()
+            if not line:
+                raise RuntimeError(f"{path} ended before its frozen row prefix")
+            digest.update(line)
+    return digest.hexdigest()
+
+
+def require_preserved_outputs(correction: Mapping[str, Any]) -> None:
+    for relative, expected in correction["preserved_protocol_outputs"].items():
+        path = ROOT / relative
+        if not path.exists():
+            raise RuntimeError(f"preserved protocol output is missing: {relative}")
+        frozen_rows = int(expected["rows"])
+        rows = sum(1 for _ in path.open())
+        if rows < frozen_rows or sha256_line_prefix(path, frozen_rows) != expected["sha256"]:
+            raise RuntimeError(f"preserved protocol output changed: {relative}")
 
 
 def load_records(limit_per_cell: int | None = None) -> list[dict[str, Any]]:
@@ -461,7 +496,7 @@ def common_row(
     commit: str,
     run_id: str,
 ) -> dict[str, Any]:
-    return {
+    row = {
         "schema_version": 1,
         "execution_commit": commit,
         "execution_id": run_id,
@@ -473,6 +508,11 @@ def common_row(
         "example_id": record["example_id"],
         "probe_names": list(probe_names),
     }
+    if RUNTIME_COMMIT is not None:
+        row["runtime_commit"] = RUNTIME_COMMIT
+    if RUNTIME_EXECUTION_ID is not None:
+        row["runtime_execution_id"] = RUNTIME_EXECUTION_ID
+    return row
 
 
 def effect_payload(
@@ -1322,6 +1362,8 @@ def select_development(commit: str, run_id: str) -> None:
             "procedure": "frozen discovery-only Phase B selection",
             "execution_commit": commit,
             "execution_id": run_id,
+            "runtime_commit": RUNTIME_COMMIT or commit,
+            "runtime_execution_id": RUNTIME_EXECUTION_ID,
             "selected_frontier": {
                 "source_layer": selected_frontier[0],
                 "frontier_id": selected_frontier[1],
@@ -1356,14 +1398,16 @@ def execution_parameters(
         "attention_operator_sha256": sha256_file(ATTENTION_FREEZE_PATH),
         "batch_size": args.batch_size,
         "job_chunk_size": args.job_chunk_size,
+        "attention_job_chunk_size": args.attention_job_chunk_size,
         "limit_per_cell": args.limit_per_cell,
         "outcomes_accessed_before_execution_commit": False,
     }
 
 
 def main() -> None:
+    global RUNTIME_COMMIT, RUNTIME_EXECUTION_ID
     args = parse_args()
-    commit = git_head()
+    runtime_commit = git_head()
     for path in (
         Path(__file__).resolve(),
         ROOT / "src/neural_chameleon/interventions.py",
@@ -1372,8 +1416,9 @@ def main() -> None:
         CONTRACT_PATH,
         CLARIFICATION_PATH,
         ATTENTION_FREEZE_PATH,
+        ATTENTION_MEMORY_CORRECTION_PATH,
     ):
-        require_committed(path, commit)
+        require_committed(path, runtime_commit)
     contract = read_json(CONTRACT_PATH)
     clarification = read_json(CLARIFICATION_PATH)
     attention_freeze = read_json(ATTENTION_FREEZE_PATH)
@@ -1383,14 +1428,48 @@ def main() -> None:
         or attention_freeze["status"] != "frozen"
     ):
         raise RuntimeError("Phase B authority is not frozen")
-    run_id = execution_id(commit)
-    parameters = execution_parameters(args, commit, run_id)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_PATH)
+    if correction["status"] != "frozen-before-corrected-attention-outcomes":
+        raise RuntimeError("attention memory correction is not frozen")
     if PARAMETERS_PATH.exists():
         existing = read_json(PARAMETERS_PATH)
-        for field in ("execution_commit", "execution_id", "batch_size", "job_chunk_size", "limit_per_cell"):
-            if existing[field] != parameters[field]:
+        commit = existing["execution_commit"]
+        run_id = existing["execution_id"]
+        if (
+            commit != correction["protocol_execution_commit"]
+            or run_id != correction["protocol_execution_id"]
+        ):
+            raise RuntimeError("attention correction targets a different protocol execution")
+        for field in ("batch_size", "job_chunk_size", "limit_per_cell"):
+            if existing[field] != getattr(args, field):
                 raise RuntimeError(f"execution parameter changed across resume: {field}")
+        expected_runtime_id = correction_runtime_id(runtime_commit)
+        correction_fields = {
+            "attention_job_chunk_size": args.attention_job_chunk_size,
+            "correction_runtime_commit": runtime_commit,
+            "correction_runtime_execution_id": expected_runtime_id,
+            "attention_memory_correction_sha256": sha256_file(
+                ATTENTION_MEMORY_CORRECTION_PATH
+            ),
+        }
+        if args.attention_job_chunk_size != int(
+            correction["correction"]["attention_job_chunk_size"]
+        ):
+            raise RuntimeError("attention job chunk differs from frozen correction")
+        if "correction_runtime_commit" in existing:
+            for field, value in correction_fields.items():
+                if existing[field] != value:
+                    raise RuntimeError(f"correction parameter changed across resume: {field}")
+        else:
+            existing.update(correction_fields)
+            write_json(PARAMETERS_PATH, existing)
+        require_preserved_outputs(correction)
+        RUNTIME_COMMIT = runtime_commit
+        RUNTIME_EXECUTION_ID = expected_runtime_id
     else:
+        commit = runtime_commit
+        run_id = execution_id(commit)
+        parameters = execution_parameters(args, commit, run_id)
         write_json(PARAMETERS_PATH, parameters)
     records = load_records(args.limit_per_cell)
     if args.limit_per_cell is None and len(records) != 1732:
@@ -1468,7 +1547,7 @@ def main() -> None:
                 evaluation_scope="discovery",
                 sites=sites,
                 batch_size=args.batch_size,
-                chunk_size=args.job_chunk_size,
+                chunk_size=args.attention_job_chunk_size,
                 commit=commit,
                 run_id=run_id,
             )
@@ -1529,7 +1608,7 @@ def main() -> None:
                     evaluation_scope="heldout_or_negative",
                     sites=(site,),
                     batch_size=args.batch_size,
-                    chunk_size=args.job_chunk_size,
+                    chunk_size=args.attention_job_chunk_size,
                     commit=commit,
                     run_id=run_id,
                 )

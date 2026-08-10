@@ -13,6 +13,7 @@ from day37_run_phase_b import (  # noqa: E402
     accumulate_mean_stats,
     loo_mean_tensor,
     response_deciles,
+    sha256_line_prefix,
 )
 from day37_analyze_phase_b import bootstrap_metric  # noqa: E402
 
@@ -23,6 +24,18 @@ def test_phase_a_b_contract_has_expected_frozen_status() -> None:
     with (ROOT / "results/day-36/frozen-phase-a-b-contract.json").open() as handle:
         contract = json.load(handle)
     assert contract["status"] == "frozen-before-post-gate1-phase-a-b-outcomes"
+
+
+def test_attention_memory_correction_is_frozen_without_scientific_change() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-memory-correction.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-corrected-attention-outcomes"
+    assert correction["scientific_scope_change"] is False
+    assert correction["correction"]["attention_job_chunk_size"] == 8
+    assert correction["failed_attempt"]["included_in_analysis"] is False
 
 
 def records() -> list[dict[str, object]]:
@@ -70,3 +83,11 @@ def test_bootstrap_metric_ignores_concepts_without_evaluated_values() -> None:
     result = bootstrap_metric(values, concepts, samples)
     assert result["point"] == 3.0
     assert set(result["per_concept"]) == {"a", "b"}
+
+
+def test_sha256_line_prefix_ignores_later_appends(tmp_path: Path) -> None:
+    path = tmp_path / "rows.jsonl"
+    path.write_bytes(b"one\ntwo\n")
+    frozen = sha256_line_prefix(path, 2)
+    path.write_bytes(path.read_bytes() + b"three\n")
+    assert sha256_line_prefix(path, 2) == frozen
