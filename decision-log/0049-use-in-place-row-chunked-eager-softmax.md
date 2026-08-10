@@ -1,7 +1,7 @@
 # Decision 0049: Use an In-Place Row-Chunked Eager Softmax
 
 **Date:** 2026-08-09
-**Status:** Accepted prospective execution correction
+**Status:** Rejected by the frozen population replay gate
 **Scope:** Phase B attention execution before effect-value or selection access
 
 ## Context
@@ -17,3 +17,7 @@ Install the memory-efficient eager-attention function with the 42 in-place MLP f
 ## Scientific invariance
 
 Each softmax row normalizes only over its final key axis and is independent of all outer rows. The same fused softmax is called with the same row values, dimension, and float32 dtype, then cast to the same query dtype. No score matmul, model batch shape, intervention, attention operation, path, output order, population, selection, estimand, or gate changes. Exact hashes and replay remain mandatory.
+
+## Disposition
+
+V5 passed both frozen checkpoint hashes and survived to 7,168 rows. Exact replay then failed on 64 total-path rows in one long batch, with differences confined to `activation_rms`, `mean_raw_margins`, and `sequence_scores`. No effect value or selection score was accessed. The attempt is excluded, the zero-tolerance gate is unchanged, and Decision 0050 restores the original model kernels.

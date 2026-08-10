@@ -24,6 +24,7 @@ from day37_run_phase_b import (  # noqa: E402
     ATTENTION_MEMORY_CORRECTION_V3_PATH,
     ATTENTION_MEMORY_CORRECTION_V4_PATH,
     ATTENTION_MEMORY_CORRECTION_V5_PATH,
+    ATTENTION_MEMORY_CORRECTION_V6_PATH,
     CLARIFICATION_PATH,
     CONTRACT_PATH,
     attention_sites,
@@ -33,6 +34,7 @@ from day37_run_phase_b import (  # noqa: E402
     load_probes,
     load_records,
     read_json,
+    require_frozen_mps_ratio,
     require_committed,
     sha256_file,
 )
@@ -106,21 +108,15 @@ def pair_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
     runner = load_model(contract, model_name)
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V5_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V6_PATH)
     mlp_count = getattr(runner.model, "_phase_b_memory_efficient_mlp_count", 0)
-    if mlp_count != int(
-        correction["required_pre_population_gates"]["gemma_mlp_module_count"]
-    ):
-        raise RuntimeError("unexpected Gemma MLP correction module count")
+    if mlp_count != 0:
+        raise RuntimeError("V6 must use the original Gemma MLP forward")
     softmax_outer_chunk_size = getattr(
         runner.model, "_phase_b_softmax_outer_chunk_size", 0
     )
-    if softmax_outer_chunk_size != int(
-        correction["required_pre_population_gates"][
-            "softmax_outer_row_chunk_size"
-        ]
-    ):
-        raise RuntimeError("unexpected eager-softmax outer row chunk size")
+    if softmax_outer_chunk_size != 0:
+        raise RuntimeError("V6 must use the original full eager softmax")
     names, probes = load_probes()
     records = [
         row
@@ -311,9 +307,11 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
             "expanded_live_tail_shape_change": False,
             "direct_target_recomputations_deferred": True,
             "batch_local_attention_references_deleted_before_release": True,
-            "in_place_gemma_mlp_product": True,
-            "in_place_row_chunked_eager_softmax": True,
-            "softmax_outer_row_chunk_size": softmax_outer_chunk_size,
+            "original_gemma_mlp_forward": True,
+            "original_full_eager_attention_forward": True,
+            "mps_high_watermark_ratio": correction["correction"][
+                "mps_high_watermark_ratio"
+            ],
         },
         "vectorized_operator_result_sha256": vectorized_result_sha256(cached),
         "haar_audit": random_audit.to_dict(),
@@ -345,10 +343,13 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_V3_PATH,
         ATTENTION_MEMORY_CORRECTION_V4_PATH,
         ATTENTION_MEMORY_CORRECTION_V5_PATH,
+        ATTENTION_MEMORY_CORRECTION_V6_PATH,
         PATCH_REFERENCE_PATH,
     ):
         require_committed(path, commit)
     contract = read_json(CONTRACT_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V6_PATH)
+    require_frozen_mps_ratio(correction)
     checkpoints = {
         model: run_checkpoint(model, contract)
         for model in ("chameleon", "precursor")
@@ -375,7 +376,7 @@ def main() -> None:
         "patch_kernel_reference_sha256": sha256_file(PATCH_REFERENCE_PATH),
         "patch_kernel_exact_equality": True,
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_MEMORY_CORRECTION_V5_PATH
+            ATTENTION_MEMORY_CORRECTION_V6_PATH
         ),
         "checkpoints": checkpoints,
     }

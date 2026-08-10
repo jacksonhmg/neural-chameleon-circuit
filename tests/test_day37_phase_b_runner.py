@@ -129,6 +129,22 @@ def test_in_place_row_chunked_softmax_is_exact() -> None:
     assert torch.equal(actual, expected)
 
 
+def test_attention_memory_correction_v6_restores_original_kernels() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-memory-correction-v6.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v6-corrected-attention-outcomes"
+    assert correction["scientific_scope_change"] is False
+    assert correction["correction"]["job_chunk_size"] == 32
+    assert correction["correction"]["restore_original_gemma_mlp_forward"]
+    assert correction["correction"]["restore_original_full_eager_attention_forward"]
+    assert correction["correction"]["mps_high_watermark_ratio"] == "1.74"
+    assert correction["correction"]["mps_high_watermark_unbounded"] is False
+    assert correction["required_population_replay_gate"]["tolerance"] == 0.0
+
+
 def records() -> list[dict[str, object]]:
     return [
         {"concept": "x", "label": 1, "split": "discovery"},

@@ -7,6 +7,7 @@ import argparse
 import gc
 import hashlib
 import json
+import os
 import subprocess
 import sys
 from collections import defaultdict
@@ -80,6 +81,9 @@ ATTENTION_MEMORY_CORRECTION_V4_PATH = (
 )
 ATTENTION_MEMORY_CORRECTION_V5_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction-v5.json"
+)
+ATTENTION_MEMORY_CORRECTION_V6_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction-v6.json"
 )
 RESULT_DIR = ROOT / "results/day-39"
 ARTIFACT_DIR = ROOT / "artifacts/post-gate1-phase-b-v1"
@@ -204,8 +208,16 @@ def execution_id(commit: str) -> str:
 def correction_runtime_id(commit: str) -> str:
     digest = hashlib.sha256()
     digest.update(commit.encode())
-    digest.update(ATTENTION_MEMORY_CORRECTION_V5_PATH.read_bytes())
-    return f"post-gate1-phase-b-attention-memory-v5-{digest.hexdigest()[:16]}"
+    digest.update(ATTENTION_MEMORY_CORRECTION_V6_PATH.read_bytes())
+    return f"post-gate1-phase-b-attention-memory-v6-{digest.hexdigest()[:16]}"
+
+
+def require_frozen_mps_ratio(correction: Mapping[str, Any]) -> None:
+    expected = correction["correction"]["mps_high_watermark_ratio"]
+    if os.environ.get("PYTORCH_MPS_HIGH_WATERMARK_RATIO") != expected:
+        raise RuntimeError(
+            "V6 requires PYTORCH_MPS_HIGH_WATERMARK_RATIO=" + expected
+        )
 
 
 def sha256_line_prefix(path: Path, rows: int) -> str:
@@ -368,8 +380,6 @@ def load_model(
         local_files_only=True,
     )
     model.eval()
-    install_memory_efficient_gemma_mlp(model)
-    install_memory_efficient_gemma_attention(model, outer_chunk_size=16)
     for parameter in model.parameters():
         parameter.requires_grad = False
     tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True)
@@ -1101,7 +1111,7 @@ def prompt_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 
 def require_attention_replay_prefix(completed_count: int) -> None:
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V5_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V6_PATH)
     required = int(correction["required_population_replay_gate"]["rows"])
     if completed_count < required or ATTENTION_REPLAY_AUDIT_PATH.exists():
         return
@@ -1611,6 +1621,7 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_V3_PATH,
         ATTENTION_MEMORY_CORRECTION_V4_PATH,
         ATTENTION_MEMORY_CORRECTION_V5_PATH,
+        ATTENTION_MEMORY_CORRECTION_V6_PATH,
     ):
         require_committed(path, runtime_commit)
     contract = read_json(CONTRACT_PATH)
@@ -1622,9 +1633,10 @@ def main() -> None:
         or attention_freeze["status"] != "frozen"
     ):
         raise RuntimeError("Phase B authority is not frozen")
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_V5_PATH)
-    if correction["status"] != "frozen-before-v5-corrected-attention-outcomes":
-        raise RuntimeError("attention memory correction v5 is not frozen")
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V6_PATH)
+    if correction["status"] != "frozen-before-v6-corrected-attention-outcomes":
+        raise RuntimeError("attention memory correction v6 is not frozen")
+    require_frozen_mps_ratio(correction)
     if PARAMETERS_PATH.exists():
         existing = read_json(PARAMETERS_PATH)
         commit = existing["execution_commit"]
@@ -1644,7 +1656,7 @@ def main() -> None:
             "correction_runtime_commit": runtime_commit,
             "correction_runtime_execution_id": expected_runtime_id,
             "attention_memory_correction_sha256": sha256_file(
-                ATTENTION_MEMORY_CORRECTION_V5_PATH
+                ATTENTION_MEMORY_CORRECTION_V6_PATH
             ),
         }
         if args.attention_job_chunk_size != int(
@@ -1656,7 +1668,7 @@ def main() -> None:
         ):
             raise RuntimeError("attention metadata block differs from frozen correction")
         prior_runtime = existing.get("correction_runtime_commit")
-        if prior_runtime == correction["superseded_v4_runtime"]["commit"]:
+        if prior_runtime == correction["superseded_v5_runtime"]["commit"]:
             existing.update(correction_fields)
             write_json(PARAMETERS_PATH, existing)
         elif prior_runtime is not None:

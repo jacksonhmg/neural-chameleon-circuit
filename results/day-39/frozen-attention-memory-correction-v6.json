@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "status": "frozen-before-v6-corrected-attention-outcomes",
+  "procedure": "post-Gate-1 Phase B original-kernel bounded-MPS correction v6",
+  "scientific_scope_change": false,
+  "protocol_execution_commit": "5f25816acecbffc23b91c1020d17e8dd93d17aff",
+  "protocol_execution_id": "post-gate1-phase-b-v1-ec8dc1b5f00b7a60",
+  "superseded_v5_runtime": {
+    "commit": "49179949a235c7a003e60a37c9c63b49224c9b62",
+    "attempt_path": "results/day-39/attention-effects.attempt-5.jsonl",
+    "attempt_rows": 7168,
+    "attempt_bytes": 11344286,
+    "attempt_sha256": "926823a8d733d78d1d012c88d4346ac5bee6c92d4f0b32aec79d927395bd0e6f",
+    "included_in_analysis": false,
+    "effect_values_accessed": false,
+    "candidate_scores_accessed": false,
+    "replay_gate_reached": true,
+    "replay_gate_result": "fail",
+    "mismatch_rows": 64,
+    "first_mismatch_row": 6657,
+    "last_mismatch_row": 6782,
+    "differing_keys": [
+      "activation_rms",
+      "mean_raw_margins",
+      "sequence_scores"
+    ],
+    "passed_preflight_sha256": "c319f13f2d50831a3869d752ff5af0806ffce7f296baf40a880dfaea448ce352"
+  },
+  "exact_original_kernel_evidence": {
+    "path": "results/day-39/attention-effects.attempt-3.jsonl",
+    "rows": 6912,
+    "bytes": 10939636,
+    "sha256": "c6693717e385af2a32a6ef5fb08e5387cf70be9a84cea5ce880b23de36303b3a",
+    "dictionary_mismatches_against_preserved_reference_prefix": 0,
+    "arithmetic_runtime": "original Gemma2 MLP and original full eager attention",
+    "included_in_analysis": false,
+    "effect_values_accessed": false
+  },
+  "preserved_attention_reference": {
+    "path": "results/day-39/attention-effects.attempt-1.jsonl",
+    "rows": 7168,
+    "bytes": 10333776,
+    "sha256": "f6a06397e85b42bc0ae665f6e26e59f16678d23f8353e5d86f090c57b65f631f",
+    "included_in_analysis": false,
+    "effect_values_accessed": false
+  },
+  "preserved_protocol_outputs": {
+    "results/day-39/natural-endpoints.working.jsonl": {
+      "rows": 6928,
+      "sha256": "d53e9877e72e81283f7c03620e46948c8e9722e3d56e321edccda7f287356f00"
+    },
+    "results/day-39/absolute-effects.working.jsonl": {
+      "rows": 41568,
+      "sha256": "af9271a3ccd0ee9986f7273441e144e1558733460dc10a6bb7a5cc1b351dab12"
+    },
+    "results/day-39/random-effects.working.jsonl": {
+      "rows": 221696,
+      "sha256": "678047bf9093cb6e34afe67225e490633e776ca30e1e330b3f8a58e39eb59245"
+    },
+    "results/day-39/frontier-effects.working.jsonl": {
+      "rows": 32768,
+      "sha256": "91da2e4b426ee80462833ce963307af04c4f4972b4b481311dab98952eb7383a"
+    }
+  },
+  "correction": {
+    "batch_size": 2,
+    "job_chunk_size": 32,
+    "attention_metadata_block_size": 32,
+    "mps_high_watermark_ratio": "1.74",
+    "regenerate_attention_from_zero": true,
+    "restore_original_gemma_mlp_forward": true,
+    "restore_original_full_eager_attention_forward": true,
+    "retain_v3_batch_reference_cleanup": true,
+    "mps_high_watermark_unbounded": false,
+    "model_arithmetic_change": false,
+    "expanded_live_tail_shape_change": false,
+    "attention_operator_change": false,
+    "row_order_change": false,
+    "row_matrix_change": false,
+    "selection_rule_change": false,
+    "gate_change": false
+  },
+  "required_pre_population_gates": {
+    "frozen_old_kernel_hash_exact_on_chameleon": true,
+    "frozen_old_kernel_hash_exact_on_precursor": true,
+    "cached_full_exact_on_chameleon": true,
+    "cached_full_exact_on_precursor": true,
+    "original_gemma_mlp_forward": true,
+    "original_full_eager_attention_forward": true,
+    "attention_job_chunk_size": 32,
+    "attention_metadata_block_size": 32,
+    "mps_high_watermark_ratio": "1.74"
+  },
+  "required_population_replay_gate": {
+    "rows": 7168,
+    "reference": "preserved_attention_reference",
+    "comparison": "dictionary equality after removing only runtime_commit and runtime_execution_id from corrected rows",
+    "tolerance": 0.0,
+    "must_pass_before_first_new_attention_row_beyond_reference_prefix": true
+  },
+  "identity_policy": {
+    "execution_commit_field": "retain original protocol execution commit",
+    "execution_id_field": "retain original protocol execution ID",
+    "runtime_commit_field": "record the v6 correction implementation commit",
+    "corrected_attention_rows_must_share_one_runtime_commit": true
+  },
+  "outcome_access_audit": {
+    "phase_b_effect_values_accessed": false,
+    "phase_b_candidate_scores_accessed": false,
+    "only_structural_counts_hashes_runtime_errors_and_machine_equality_checks_accessed": true
+  },
+  "freeze_binding": "The v6 correction implementation is the Git commit that first commits this file; execution must refuse any later runtime commit."
+}

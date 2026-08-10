@@ -172,6 +172,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Decision 0049 retains the V4 in-place MLP forward and replaces only the eager softmax allocation schedule. It evaluates the original float32-softmax/BF16-cast expression over 16 independent outer batch/head rows at a time, then copies those probabilities over their already-consumed score rows.
 - V5 retains the score matmul, softcap, mask, normalization axis, arithmetic, expanded batch shape, operators, row order, selection, and all gates. Both frozen checkpoint hashes and the exact 7,168-row population replay remain mandatory before any new attention row may be admitted.
 
+#### V5 rejected by exact replay; original-kernel bounded-cap v6 frozen
+
+- V5 passed both frozen checkpoint hashes, used the default MPS cap, and regenerated exactly 7,168 rows without an allocation failure. The mandatory population replay then failed: 64 total-path rows in one long batch differed in the three outcome keys. Only mismatch locations and key names were inspected; no value or candidate score was accessed.
+- The V5 table is preserved as `attention-effects.attempt-5.jsonl` with SHA-256 `926823a8d733d78d1d012c88d4346ac5bee6c92d4f0b32aec79d927395bd0e6f` and is excluded from analysis. Retrospective machine comparison also found 64 mismatched V4 rows, whereas all 6,912 V3 original-kernel rows matched their reference prefix exactly.
+- Decision 0050 therefore restores both original Transformers Gemma2 forwards, retains the V3 batch-reference deletion, exact job/metadata shape 32, and uses the previously safety-bounded MPS high-water ratio 1.74. The unbounded value remains prohibited.
+- V6 must pass both checkpoint hashes, confirm that neither replacement forward is installed, and replay all 7,168 rows exactly before crossing the reference boundary. No tolerance, operator, population, selection rule, estimand, or scientific gate changes.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.
