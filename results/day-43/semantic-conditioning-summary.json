@@ -1,0 +1,249 @@
+{
+  "analysis_commit": "659245e07a70c19a78af56ce07d0a3a18320a99d",
+  "consequence": "stop before fresh confirmation and retain the Phase A-B acquired direct-reconfiguration result",
+  "contract_sha256": "b5e207ee41eb2d2a1ff4fad5a84772fd06bc79337141b1cb27540336be177b21",
+  "evidence_class": "existing-data prospective semantic-conditioning development evidence",
+  "gate_clauses": {
+    "concept_prediction_stability": true,
+    "full_predictor_beats_baseline": true,
+    "full_predictor_snmse": false,
+    "hidden_direct_recovery": false,
+    "hidden_frontier_recovery": false,
+    "hidden_k12_recovery": false,
+    "hidden_sign_stability": true,
+    "hidden_total_recovery": false,
+    "irrelevant_control": false
+  },
+  "hidden_substitution_recovery": {
+    "direct": {
+      "one_sided_95_lower": 0.36038655505541584,
+      "one_sided_95_upper": 0.6713291153054329,
+      "per_concept": {
+        "HTML": 0.12713471031046225,
+        "all-caps": 0.9569336917900986,
+        "biology-focused": 0.8327964121867253,
+        "chemistry-based": 0.9857164897882454,
+        "comforting": 0.40472345215121874,
+        "confused": 0.12634578364137317,
+        "deception": 0.019068809442323698,
+        "finnish": 0.0923168650873951,
+        "german": 0.7184878415061029,
+        "harmful": 0.45085974168151877,
+        "jokey": 0.9863161895421579,
+        "literature-focused": 0.6186381354260042,
+        "mathematical": 0.3956890131647775
+      },
+      "point": 0.5165405489014158,
+      "two_sided_95_interval": [
+        0.3338412600027943,
+        0.7007953515725132
+      ]
+    },
+    "frontier_F3": {
+      "one_sided_95_lower": 0.27452341539856545,
+      "one_sided_95_upper": 0.6273087514049728,
+      "per_concept": {
+        "HTML": 0.015292187349940797,
+        "all-caps": 0.984869871408139,
+        "biology-focused": 0.8247045580943624,
+        "chemistry-based": 0.9948710975698464,
+        "comforting": 0.041097638004002374,
+        "confused": 0.125474198178495,
+        "deception": 0.02336904240905044,
+        "finnish": 0.07589604322946476,
+        "german": 0.25332357475258305,
+        "harmful": 0.4976161748040068,
+        "jokey": 0.9764978940645339,
+        "literature-focused": 0.7536617381848142,
+        "mathematical": 0.30353776381319536
+      },
+      "point": 0.45155475245095644,
+      "two_sided_95_interval": [
+        0.24185055625372484,
+        0.6612675061719214
+      ]
+    },
+    "pooled_k12": {
+      "one_sided_95_lower": 0.35365232647001327,
+      "one_sided_95_upper": 0.679670482753677,
+      "per_concept": {
+        "HTML": 0.09684591910311399,
+        "all-caps": 0.9639338842383203,
+        "biology-focused": 0.9007787359967401,
+        "chemistry-based": 0.99000609061918,
+        "comforting": 0.4641614168350746,
+        "confused": 0.10781095836995959,
+        "deception": 0.18093339240715262,
+        "finnish": 0.062010656032946976,
+        "german": 0.5819303861131211,
+        "harmful": 0.45896054973286426,
+        "jokey": 0.9801566055543767,
+        "literature-focused": 0.7459936485076308,
+        "mathematical": 0.16189643267761622
+      },
+      "point": 0.5150322058606228,
+      "two_sided_95_interval": [
+        0.32049540285657857,
+        0.7111886580340643
+      ]
+    },
+    "total": {
+      "one_sided_95_lower": 0.385430169490391,
+      "one_sided_95_upper": 0.7055021047824626,
+      "per_concept": {
+        "HTML": 0.0500895794084288,
+        "all-caps": 0.9771378344900878,
+        "biology-focused": 0.8481862932547956,
+        "chemistry-based": 0.9989115845419432,
+        "comforting": 0.7317088936548335,
+        "confused": 0.13809637596326135,
+        "deception": 0.09318562182478221,
+        "finnish": 0.07641559571165274,
+        "german": 0.6305661652879702,
+        "harmful": 0.45248789522979294,
+        "jokey": 0.9991048704793279,
+        "literature-focused": 0.7303211444844726,
+        "mathematical": 0.39004053092802154
+      },
+      "point": 0.5474040296353361,
+      "two_sided_95_interval": [
+        0.3536574396329386,
+        0.7362810631295071
+      ]
+    }
+  },
+  "irrelevant_to_different_direct_effect_ratio": {
+    "one_sided_95_lower": 0.8151270613805334,
+    "one_sided_95_upper": 1.3017156781987778,
+    "per_concept": {
+      "HTML": 1.1976781230984084,
+      "all-caps": 1.210019330488182,
+      "biology-focused": 4.848507931012803,
+      "chemistry-based": 0.7723068999385354,
+      "comforting": 0.9856676509171834,
+      "confused": 1.0148117160952739,
+      "deception": 4.1727793786994445,
+      "finnish": 0.6382367966208304,
+      "german": 1.098514118247705,
+      "harmful": 1.4763553131262561,
+      "jokey": 1.5640618895129514,
+      "literature-focused": 0.5665867387904591,
+      "mathematical": 0.3705408209176523
+    },
+    "point": 1.026526812718131,
+    "two_sided_95_interval": [
+      0.779920287095355,
+      1.3724512770724895
+    ]
+  },
+  "operational_own_probe_margin_change": {
+    "hidden_different_substitution": {
+      "HTML": 0.08104840511049792,
+      "all-caps": -0.460865448749875,
+      "biology-focused": 0.06520961126279962,
+      "chemistry-based": 0.8311927641226483,
+      "comforting": 1.8227414453532913,
+      "confused": 0.07688151900402547,
+      "deception": -0.016309320612267426,
+      "finnish": 0.031207018133215268,
+      "german": 0.5057946908837117,
+      "harmful": 0.270473094162877,
+      "jokey": -1.2853668083521292,
+      "literature-focused": 5.128333789761351,
+      "mathematical": -0.3072567662896867
+    },
+    "natural_different_trigger": {
+      "HTML": 1.7719132677008314,
+      "all-caps": -0.1860436614761089,
+      "biology-focused": 0.08615492667954337,
+      "chemistry-based": 0.9130664120561053,
+      "comforting": 1.538793942462486,
+      "confused": 2.414606046406103,
+      "deception": -0.3066217221621613,
+      "finnish": 1.6996010996734086,
+      "german": 1.8124151849245935,
+      "harmful": 0.7170002488034908,
+      "jokey": -1.4679355194220802,
+      "literature-focused": 9.388232026290254,
+      "mathematical": 0.5537946222172265
+    }
+  },
+  "prediction": {
+    "concepts_full_better_than_baseline": 13,
+    "full_minus_baseline_snmse": {
+      "one_sided_95_lower": -6.533849848195301,
+      "one_sided_95_upper": -1.0124389305306083,
+      "per_concept": {
+        "HTML": -1.3069281947963882,
+        "all-caps": -1.1227513768629556,
+        "biology-focused": -14.737169295847613,
+        "chemistry-based": -0.8367370382374881,
+        "comforting": -2.3865703363466184,
+        "confused": -0.521544287179972,
+        "deception": -20.458521836373336,
+        "finnish": -1.2116004527926159,
+        "german": -0.4676435967879507,
+        "harmful": -0.9142501870758972,
+        "jokey": -1.2061335605823809,
+        "literature-focused": -0.4710855767313324,
+        "mathematical": -1.0319899469226543
+      },
+      "point": -3.590225052810555,
+      "two_sided_95_interval": [
+        -7.124166020536596,
+        -0.9254911819400465
+      ]
+    },
+    "full_predictor_snmse": {
+      "one_sided_95_lower": 0.26562641210374893,
+      "one_sided_95_upper": 1.4267127675156366,
+      "per_concept": {
+        "HTML": 0.09350057310616415,
+        "all-caps": 0.2398578111620094,
+        "biology-focused": 3.709825068092515,
+        "chemistry-based": 0.22760357727129496,
+        "comforting": 0.24024898158981003,
+        "confused": 0.28444206745345463,
+        "deception": 4.048690387006187,
+        "finnish": 0.2314960452634405,
+        "german": 0.31879725166564227,
+        "harmful": 0.4679975339963758,
+        "jokey": 0.5946814966196464,
+        "literature-focused": 0.2655381187716574,
+        "mathematical": 0.062455005967041
+      },
+      "point": 0.829625685997326,
+      "two_sided_95_interval": [
+        0.24225915159011405,
+        1.6512017665874041
+      ]
+    },
+    "normal_only_baseline_snmse": {
+      "one_sided_95_lower": 1.28776815033642,
+      "one_sided_95_upper": 8.017090720430943,
+      "per_concept": {
+        "HTML": 1.4004287679025524,
+        "all-caps": 1.362609188024965,
+        "biology-focused": 18.446994363940128,
+        "chemistry-based": 1.0643406155087831,
+        "comforting": 2.6268193179364285,
+        "confused": 0.8059863546334267,
+        "deception": 24.507212223379522,
+        "finnish": 1.4430964980560563,
+        "german": 0.786440848453593,
+        "harmful": 1.382247721072273,
+        "jokey": 1.8008150572020274,
+        "literature-focused": 0.7366236955029898,
+        "mathematical": 1.0944449528896953
+      },
+      "point": 4.419850738807881,
+      "two_sided_95_interval": [
+        1.2087856305110745,
+        8.92609100396122
+      ]
+    }
+  },
+  "procedure": "post-Gate-1 Phase C semantic-conditioning reduction",
+  "schema_version": 1,
+  "scientific_continue_gate": "fail"
+}

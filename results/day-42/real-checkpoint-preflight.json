@@ -1,0 +1,36 @@
+{
+  "batch_size": 2,
+  "contract_sha256": "b5e207ee41eb2d2a1ff4fad5a84772fd06bc79337141b1cb27540336be177b21",
+  "hidden_substitution_inside_span_max_abs": 0.0,
+  "hidden_substitution_outside_span_max_abs": 0.0,
+  "hooks_after_run": 0,
+  "identity_tolerance": 0.02,
+  "matched_condition_geometry": true,
+  "preflight_commit": "659245e07a70c19a78af56ce07d0a3a18320a99d",
+  "probe_order": [
+    "HTML",
+    "all-caps",
+    "biology-focused",
+    "chemistry-based",
+    "comforting",
+    "confused",
+    "deception",
+    "finnish",
+    "german",
+    "harmful",
+    "jokey",
+    "literature-focused",
+    "mathematical"
+  ],
+  "procedure": "post-Gate-1 Phase C real-checkpoint preflight",
+  "result": "pass",
+  "same_condition_identity_errors": {
+    "direct_margin_max_abs": 0.0,
+    "frontier_margin_max_abs": 2.384185791015625e-07,
+    "hidden_boundary_max_abs": 0.0,
+    "hidden_k12_max_abs": 0.0,
+    "hidden_monitor_max_abs": 0.0,
+    "total_margin_max_abs": 2.384185791015625e-07
+  },
+  "schema_version": 1
+}

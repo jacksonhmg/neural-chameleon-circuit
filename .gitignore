@@ -27,6 +27,7 @@ __pycache__/
 /results/day-33/*.working.jsonl
 /results/day-39/*.working.jsonl
 /results/day-39/*.attempt-*.jsonl
+/results/day-42/*.working.jsonl
 
 # Local operating-system files
 .DS_Store

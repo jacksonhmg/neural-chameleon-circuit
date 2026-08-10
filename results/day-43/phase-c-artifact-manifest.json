@@ -1,0 +1,16 @@
+{
+  "analysis_commit": "659245e07a70c19a78af56ce07d0a3a18320a99d",
+  "contract_sha256": "b5e207ee41eb2d2a1ff4fad5a84772fd06bc79337141b1cb27540336be177b21",
+  "evidence_class": "existing-data prospective semantic-conditioning development evidence",
+  "execution_parameters_sha256": "014cdd65536b9ed626a87649a12b2cb1a4386703d5402eb031e670606ed2ebf9",
+  "preflight_sha256": "6963f117c3edced7e7c44c518cb57e3afa8ab3909132ea8220fe581053501b5e",
+  "procedure": "post-Gate-1 Phase C artifact manifest",
+  "raw_artifact": {
+    "bytes": 58151076,
+    "path": "results/day-42/semantic-conditioning.working.jsonl",
+    "rows": 1456,
+    "sha256": "aca87c29f77e8cfc8001b5d5aa7a96bdb5f596a8a3e9be0f278482a312494eca"
+  },
+  "schema_version": 1,
+  "scientific_continue_gate": "fail"
+}
