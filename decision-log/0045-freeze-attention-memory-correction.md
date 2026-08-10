@@ -1,7 +1,7 @@
 # Decision 0045: Freeze the Attention Memory Correction
 
 **Date:** 2026-08-09
-**Status:** Accepted prospective execution correction
+**Status:** Rejected by prospective exact-equality preflight
 **Scope:** Phase B attention execution before effect-value or selection access
 
 ## Context
@@ -21,3 +21,7 @@ Every Phase B row retains the original protocol execution commit and ID. Every p
 ## Scientific invariance
 
 Chunking partitions algebraically independent intervention jobs into smaller expanded batches. It does not change the attention operator, component membership, token masks, source/target states, causal paths, examples, controls, selection procedure, estimands, uncertainty procedure, or gates. Exact real-checkpoint equality is mandatory; a tolerance-based equivalence is insufficient.
+
+## Disposition
+
+The committed Chameleon preflight failed exact equality before precursor preflight or corrected population execution. The correction is rejected. Its equality threshold was not changed, and zero attention rows were generated under it.

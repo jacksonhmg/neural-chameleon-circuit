@@ -147,6 +147,12 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Froze `frozen-attention-memory-correction.json` before corrected attention execution. It retains the original protocol identity, freezes all completed table prefixes by row count and SHA-256, requires attention regeneration from zero with job chunk eight, and adds an explicit corrective runtime commit/ID to every new row.
 - The correction changes only execution chunking. Before attention outcomes resume, both real checkpoints must show exact zero error for mean margins, sequence scores, and activation RMS between chunk eight and the frozen chunk 32.
 
+#### Chunk-eight correction rejected; exact-shape correction v2 frozen
+
+- The committed `99c85ea` Chameleon preflight failed Decision 0045's exact chunk-eight-versus-32 equality gate. It stopped before precursor preflight and produced zero corrected attention rows. The exact gate was not weakened.
+- Decision 0046 retains the original 32-job live-tail shape. It shortens only auxiliary tensor lifetimes by processing the already ordered 64 metadata entries in two 32-entry blocks and deferring direct-path target recomputations until each total block has completed.
+- The v2 correction requires both frozen old-kernel hashes and cached/full equality in both checkpoints. It also requires the first 7,168 regenerated attention rows to replay the preserved attempt exactly, after removing only the new runtime provenance fields, before row 7,169 may be attempted.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

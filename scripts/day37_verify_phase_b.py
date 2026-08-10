@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from day37_run_phase_b import (  # noqa: E402
     ATTENTION_FREEZE_PATH,
     ATTENTION_MEMORY_CORRECTION_PATH,
+    ATTENTION_MEMORY_CORRECTION_V2_PATH,
     CLARIFICATION_PATH,
     CONTRACT_PATH,
     attention_sites,
@@ -30,7 +31,6 @@ from day37_run_phase_b import (  # noqa: E402
     load_records,
     read_json,
     require_committed,
-    run_total_jobs,
     sha256_file,
 )
 from neural_chameleon import (  # noqa: E402
@@ -196,36 +196,6 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
     if cached_margin_error > tolerances["max_probe_margin_absolute_error"] or cached_score_error > tolerances["max_sequence_score_absolute_error"]:
         raise RuntimeError("cached execution differs from full execution")
 
-    corrected = run_total_jobs(
-        pair.normal,
-        operator_jobs,
-        vector,
-        chunk_size=8,
-        start_layer=9,
-    )
-    corrected_margins = torch.stack(
-        [corrected[group_id][0] for group_id in cached.group_ids]
-    )
-    corrected_scores = torch.stack(
-        [corrected[group_id][1] for group_id in cached.group_ids]
-    )
-    corrected_rms = torch.stack(
-        [corrected[group_id][2] for group_id in cached.group_ids]
-    )
-    correction_errors = {
-        "mean_margin_max_abs_error": float(
-            (cached.mean_margins - corrected_margins).abs().max()
-        ),
-        "sequence_score_max_abs_error": float(
-            (cached.sequence_scores - corrected_scores).abs().max()
-        ),
-        "activation_rms_max_abs_error": float(
-            (cached.activation_rms - corrected_rms).abs().max()
-        ),
-    }
-    if any(value != 0.0 for value in correction_errors.values()):
-        raise RuntimeError("corrected job chunk 8 differs from frozen job chunk 32")
-
     layer_ids = tuple(value for value in ids if value.startswith("layer_09."))
     layer_source = source_replacements(normal, triggered, layer_ids, runner.layers)
     frontier = frontier_configurations(9)
@@ -318,10 +288,10 @@ def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
         "cached_score_max_abs_error": cached_score_error,
         "cached_job_count": len(operator_jobs),
         "attention_memory_correction": {
-            "frozen_job_chunk_size": 32,
-            "corrected_job_chunk_size": 8,
-            **correction_errors,
-            "exact_equality": True,
+            "job_chunk_size": 32,
+            "metadata_block_size": 32,
+            "expanded_live_tail_shape_change": False,
+            "direct_target_recomputations_deferred": True,
         },
         "vectorized_operator_result_sha256": vectorized_result_sha256(cached),
         "haar_audit": random_audit.to_dict(),
@@ -348,6 +318,7 @@ def main() -> None:
         CLARIFICATION_PATH,
         ATTENTION_FREEZE_PATH,
         ATTENTION_MEMORY_CORRECTION_PATH,
+        ATTENTION_MEMORY_CORRECTION_V2_PATH,
         PATCH_REFERENCE_PATH,
     ):
         require_committed(path, commit)
@@ -378,7 +349,7 @@ def main() -> None:
         "patch_kernel_reference_sha256": sha256_file(PATCH_REFERENCE_PATH),
         "patch_kernel_exact_equality": True,
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_MEMORY_CORRECTION_PATH
+            ATTENTION_MEMORY_CORRECTION_V2_PATH
         ),
         "checkpoints": checkpoints,
     }

@@ -38,6 +38,20 @@ def test_attention_memory_correction_is_frozen_without_scientific_change() -> No
     assert correction["failed_attempt"]["included_in_analysis"] is False
 
 
+def test_attention_memory_correction_v2_preserves_kernel_shape() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-memory-correction-v2.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v2-corrected-attention-outcomes"
+    assert correction["scientific_scope_change"] is False
+    assert correction["correction"]["job_chunk_size"] == 32
+    assert correction["correction"]["attention_metadata_block_size"] == 32
+    assert correction["correction"]["expanded_live_tail_shape_change"] is False
+    assert correction["required_population_replay_gate"]["tolerance"] == 0.0
+
+
 def records() -> list[dict[str, object]]:
     return [
         {"concept": "x", "label": 1, "split": "discovery"},

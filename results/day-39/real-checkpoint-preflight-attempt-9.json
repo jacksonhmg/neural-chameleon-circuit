@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "procedure": "post-Gate-1 Phase B attention-memory correction-v1 preflight",
+  "preflight_commit": "99c85eae881f436e3fdc0f12f52d7376ebfb3087",
+  "result": "fail",
+  "failed_checkpoint": "chameleon",
+  "failed_check": "exact equality of job chunk 8 versus frozen job chunk 32",
+  "population_rows_generated": 0,
+  "effect_values_accessed": false,
+  "consequence": "reject Decision 0045 correction; do not run attention population under chunk 8"
+}

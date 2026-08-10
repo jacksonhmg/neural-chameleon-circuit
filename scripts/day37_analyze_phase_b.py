@@ -36,6 +36,9 @@ ATTENTION_FREEZE_PATH = (
 ATTENTION_MEMORY_CORRECTION_PATH = (
     ROOT / "results/day-39/frozen-attention-memory-correction.json"
 )
+ATTENTION_MEMORY_CORRECTION_V2_PATH = (
+    ROOT / "results/day-39/frozen-attention-memory-correction-v2.json"
+)
 PHASE_A_DIR = ROOT / "results/day-38"
 RAW_DIR = ROOT / "results/day-39"
 OUTPUT_DIR = ROOT / "results/day-40"
@@ -232,7 +235,7 @@ def common_metadata(commit: str, run_id: str) -> dict[str, Any]:
         "row_clarification_sha256": sha256_file(CLARIFICATION_PATH),
         "attention_operator_sha256": sha256_file(ATTENTION_FREEZE_PATH),
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_MEMORY_CORRECTION_PATH
+            ATTENTION_MEMORY_CORRECTION_V2_PATH
         ),
         "evidence_class": "existing-data development evidence; not fresh confirmation",
         "sealed_gate_1_result": "fail",
@@ -861,7 +864,7 @@ def audit_rows(
         for rows in (natural, absolute, random, frontier, attention)
         for row in rows
     }
-    correction = read_json(ATTENTION_MEMORY_CORRECTION_PATH)
+    correction = read_json(ATTENTION_MEMORY_CORRECTION_V2_PATH)
     protocol_commit = parameters["execution_commit"]
     correction_commit = parameters.get("correction_runtime_commit")
 
@@ -892,8 +895,9 @@ def audit_rows(
         if row["evaluation_scope"] == "heldout_or_negative"
     }
     attention_runtime = {runtime_commit(row) for row in attention}
-    failed_attention = ROOT / correction["failed_attempt"]["path"]
+    failed_attention = ROOT / correction["preserved_attention_attempt"]["path"]
     corrected_preflight = read_json(RAW_DIR / "real-checkpoint-preflight.json")
+    replay_audit = read_json(RAW_DIR / "attention-prefix-replay-audit.json")
     checks = {
         "corrected_row_counts_match": observed == expected,
         "parent_contract_mismatch_preserved": (
@@ -922,28 +926,43 @@ def audit_rows(
         ).exists()
         and read_json(RAW_DIR / "real-checkpoint-preflight.json")["result"] == "pass",
         "attention_memory_correction_frozen": (
-            correction["status"] == "frozen-before-corrected-attention-outcomes"
+            correction["status"]
+            == "frozen-before-v2-corrected-attention-outcomes"
             and correction["protocol_execution_commit"] == protocol_commit
             and correction["protocol_execution_id"] == parameters["execution_id"]
         ),
         "failed_attention_attempt_preserved_and_excluded": (
             failed_attention.exists()
             and sum(1 for _ in failed_attention.open())
-            == int(correction["failed_attempt"]["rows"])
+            == int(correction["preserved_attention_attempt"]["rows"])
             and sha256_file(failed_attention)
-            == correction["failed_attempt"]["sha256"]
+            == correction["preserved_attention_attempt"]["sha256"]
             and failed_attention != ATTENTION_PATH
         ),
-        "corrected_chunk_preflight_exact": (
+        "corrected_memory_schedule_preflight_exact": (
             corrected_preflight["preflight_commit"] == correction_commit
+            and corrected_preflight["patch_kernel_exact_equality"]
             and all(
-                checkpoint["attention_memory_correction"]["exact_equality"]
+                checkpoint["attention_memory_correction"]["job_chunk_size"]
+                == int(correction["correction"]["job_chunk_size"])
                 and checkpoint["attention_memory_correction"][
-                    "corrected_job_chunk_size"
+                    "metadata_block_size"
                 ]
-                == int(correction["correction"]["attention_job_chunk_size"])
+                == int(correction["correction"]["attention_metadata_block_size"])
+                and not checkpoint["attention_memory_correction"][
+                    "expanded_live_tail_shape_change"
+                ]
                 for checkpoint in corrected_preflight["checkpoints"].values()
             )
+        ),
+        "attention_prefix_replay_exact": (
+            replay_audit["result"] == "pass"
+            and replay_audit["rows"]
+            == int(correction["required_population_replay_gate"]["rows"])
+            and replay_audit["tolerance"] == 0.0
+            and replay_audit["reference_sha256"]
+            == correction["preserved_attention_attempt"]["sha256"]
+            and replay_audit["corrected_runtime_commit"] == correction_commit
         ),
         "runtime_provenance_exact": (
             correction_commit is not None
@@ -988,6 +1007,7 @@ def main() -> None:
         CLARIFICATION_PATH,
         ATTENTION_FREEZE_PATH,
         ATTENTION_MEMORY_CORRECTION_PATH,
+        ATTENTION_MEMORY_CORRECTION_V2_PATH,
     ):
         require_committed(path, commit)
     contract = read_json(CONTRACT_PATH)
