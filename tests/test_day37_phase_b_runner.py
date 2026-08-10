@@ -181,6 +181,27 @@ def test_attention_evaluation_correction_v8_preserves_discovery_and_science() ->
     assert correction["required_evaluation_replay_gate"]["tolerance"] == 0.0
 
 
+def test_attention_evaluation_correction_v9_bounds_process_lifetime() -> None:
+    import json
+
+    path = ROOT / "results/day-39/frozen-attention-evaluation-correction-v9.json"
+    with path.open() as handle:
+        correction = json.load(handle)
+    assert correction["status"] == "frozen-before-v9-attention-evaluation-outcomes"
+    assert correction["scientific_scope_change"] is False
+    assert correction["correction"]["preserve_completed_v7_discovery"]
+    assert correction["correction"]["regenerate_evaluation_from_zero"]
+    assert correction["correction"]["evaluation_process_shard_batch_count"] == 32
+    assert correction["correction"][
+        "observed_v8_complete_batch_count_before_failure"
+    ] == 57
+    assert correction["correction"]["model_arithmetic_change"] is False
+    assert correction["correction"]["row_matrix_change"] is False
+    assert correction["correction"]["gate_change"] is False
+    assert correction["required_evaluation_replay_gate"]["rows"] == 1824
+    assert correction["required_evaluation_replay_gate"]["tolerance"] == 0.0
+
+
 def test_attention_population_batches_preserve_group_and_record_order() -> None:
     rows = [
         {"concept": "b", "trigger_concept": "b", "label": 1, "id": 3},

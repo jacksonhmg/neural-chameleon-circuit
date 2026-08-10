@@ -57,6 +57,9 @@ ATTENTION_MEMORY_CORRECTION_V7_PATH = (
 ATTENTION_EVALUATION_CORRECTION_V8_PATH = (
     ROOT / "results/day-39/frozen-attention-evaluation-correction-v8.json"
 )
+ATTENTION_EVALUATION_CORRECTION_V9_PATH = (
+    ROOT / "results/day-39/frozen-attention-evaluation-correction-v9.json"
+)
 PHASE_A_DIR = ROOT / "results/day-38"
 RAW_DIR = ROOT / "results/day-39"
 OUTPUT_DIR = ROOT / "results/day-40"
@@ -273,7 +276,7 @@ def common_metadata(commit: str, run_id: str) -> dict[str, Any]:
         "row_clarification_sha256": sha256_file(CLARIFICATION_PATH),
         "attention_operator_sha256": sha256_file(ATTENTION_FREEZE_PATH),
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_EVALUATION_CORRECTION_V8_PATH
+            ATTENTION_EVALUATION_CORRECTION_V9_PATH
         ),
         "evidence_class": "existing-data development evidence; not fresh confirmation",
         "sealed_gate_1_result": "fail",
@@ -902,7 +905,7 @@ def audit_rows(
         for rows in (natural, absolute, random, frontier, attention)
         for row in rows
     }
-    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V8_PATH)
+    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V9_PATH)
     v7_correction = read_json(ATTENTION_MEMORY_CORRECTION_V7_PATH)
     protocol_commit = parameters["execution_commit"]
     correction_commit = parameters.get("correction_runtime_commit")
@@ -947,6 +950,13 @@ def audit_rows(
     failed_attention = ROOT / correction["preserved_attention_reference"]["path"]
     superseded_v6 = ROOT / v7_correction["superseded_v6_runtime"]["attempt_path"]
     superseded_v7 = ROOT / correction["superseded_v7_evaluation_attempt"]["path"]
+    superseded_v8 = ROOT / correction["superseded_v8_evaluation_attempt"]["path"]
+    superseded_v8_preflight = ROOT / correction[
+        "superseded_v8_evaluation_attempt"
+    ]["preflight_path"]
+    superseded_v8_replay = ROOT / correction[
+        "superseded_v8_evaluation_attempt"
+    ]["replay_audit_path"]
     corrected_preflight = read_json(RAW_DIR / "real-checkpoint-preflight.json")
     replay_audit = read_json(RAW_DIR / "attention-prefix-replay-audit.json")
     evaluation_replay_audit = read_json(
@@ -981,7 +991,7 @@ def audit_rows(
         and read_json(RAW_DIR / "real-checkpoint-preflight.json")["result"] == "pass",
         "attention_memory_correction_frozen": (
             correction["status"]
-            == "frozen-before-v8-attention-evaluation-outcomes"
+            == "frozen-before-v9-attention-evaluation-outcomes"
             and correction["protocol_execution_commit"] == protocol_commit
             and correction["protocol_execution_id"] == parameters["execution_id"]
         ),
@@ -1025,6 +1035,26 @@ def audit_rows(
                 "evaluation_sha256"
             ]
             and superseded_v7 != ATTENTION_PATH
+        ),
+        "superseded_v8_evaluation_preserved_and_excluded": (
+            superseded_v8.exists()
+            and sum(1 for _ in superseded_v8.open())
+            == int(correction["superseded_v8_evaluation_attempt"]["rows"])
+            and sha256_file(superseded_v8)
+            == correction["superseded_v8_evaluation_attempt"]["sha256"]
+            and sha256_jsonl_scope(superseded_v8, "heldout_or_negative")
+            == correction["superseded_v8_evaluation_attempt"][
+                "evaluation_sha256"
+            ]
+            and sha256_file(superseded_v8_preflight)
+            == correction["superseded_v8_evaluation_attempt"][
+                "preflight_sha256"
+            ]
+            and sha256_file(superseded_v8_replay)
+            == correction["superseded_v8_evaluation_attempt"][
+                "replay_audit_sha256"
+            ]
+            and superseded_v8 != ATTENTION_PATH
         ),
         "corrected_memory_schedule_preflight_exact": (
             corrected_preflight["preflight_commit"] == correction_commit
@@ -1087,7 +1117,7 @@ def audit_rows(
             == int(correction["required_evaluation_replay_gate"]["rows"])
             and evaluation_replay_audit["tolerance"] == 0.0
             and evaluation_replay_audit["reference_evaluation_sha256"]
-            == correction["superseded_v7_evaluation_attempt"]["evaluation_sha256"]
+            == correction["superseded_v8_evaluation_attempt"]["evaluation_sha256"]
             and evaluation_replay_audit["corrected_runtime_commit"]
             == correction_commit
         ),
@@ -1144,6 +1174,7 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_V6_PATH,
         ATTENTION_MEMORY_CORRECTION_V7_PATH,
         ATTENTION_EVALUATION_CORRECTION_V8_PATH,
+        ATTENTION_EVALUATION_CORRECTION_V9_PATH,
         SELECTION_PATH,
     ):
         require_committed(path, commit)

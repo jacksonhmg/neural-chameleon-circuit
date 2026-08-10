@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from day37_run_phase_b import (  # noqa: E402
-    ATTENTION_EVALUATION_CORRECTION_V8_PATH,
+    ATTENTION_EVALUATION_CORRECTION_V9_PATH,
     ATTENTION_PATH,
     CONTRACT_PATH,
     OPERATIONS,
@@ -85,19 +85,19 @@ def main() -> None:
     for path in (
         Path(__file__).resolve(),
         RUNNER_PATH,
-        ATTENTION_EVALUATION_CORRECTION_V8_PATH,
+        ATTENTION_EVALUATION_CORRECTION_V9_PATH,
         SELECTION_PATH,
     ):
         require_committed(path, commit)
-    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V8_PATH)
-    if correction["status"] != "frozen-before-v8-attention-evaluation-outcomes":
-        raise RuntimeError("V8 process-isolation contract is not frozen")
+    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V9_PATH)
+    if correction["status"] != "frozen-before-v9-attention-evaluation-outcomes":
+        raise RuntimeError("V9 process-isolation contract is not frozen")
     if not PARAMETERS_PATH.exists():
-        raise RuntimeError("initialize V8 execution parameters before attention shards")
+        raise RuntimeError("initialize V9 execution parameters before attention shards")
     parameters = read_json(PARAMETERS_PATH)
     if parameters.get("correction_runtime_commit") not in {
         commit,
-        correction["preserved_v7_runtime"]["commit"],
+        correction["superseded_v8_evaluation_attempt"]["runtime_commit"],
     }:
         raise RuntimeError("attention shard driver differs from the bound runtime")
     contract = read_json(CONTRACT_PATH)

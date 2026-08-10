@@ -193,6 +193,13 @@ No Phase A–B scientific outcome has been produced at this authorization bounda
 - Decision 0052 preserves discovery, frontier, and selection byte-for-byte; regenerates evaluation from zero; and freezes 64 batches per child. Kernels, batch size, job/metadata shapes, cap, site, operations, directions, paths, population, row order, and gates are unchanged.
 - V8 must rerun exact preflight and replay the first 256 evaluation rows before row 257.
 
+#### V8 replay passed; bounded 32-batch evaluation schedule v9 frozen
+
+- V8 passed both exact checkpoint hashes and replayed all 256 V7 evaluation rows at zero tolerance. Its first 64-batch child completed 57 batches and 1,824 rows before the original eager softmax reached the bounded MPS cap.
+- The V8 table is preserved as `attention-effects.attempt-8.jsonl` with 67,360 total rows and SHA-256 `6e17c4cf72927fa5a96880840d1a4516e32f32e7d1b7c481840cd16e4005d1fa`. It is excluded from analysis; no effect value or candidate score was accessed.
+- Decision 0053 changes only the process lifetime to 32 complete batches, below the observed 57-batch failure point. V9 retains every model, operator, data, ordering, selection, provenance, and gate invariant.
+- V9 must rerun the two-checkpoint exact preflight and replay all 1,824 V8 evaluation rows before row 1,825.
+
 ## Handoff
 
 - **Current state:** The complete Phase A–B implementation is synthetically verified and ready for its committed real-checkpoint preflight.

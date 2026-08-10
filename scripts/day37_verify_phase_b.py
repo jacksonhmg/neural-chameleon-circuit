@@ -27,6 +27,7 @@ from day37_run_phase_b import (  # noqa: E402
     ATTENTION_MEMORY_CORRECTION_V6_PATH,
     ATTENTION_MEMORY_CORRECTION_V7_PATH,
     ATTENTION_EVALUATION_CORRECTION_V8_PATH,
+    ATTENTION_EVALUATION_CORRECTION_V9_PATH,
     CLARIFICATION_PATH,
     CONTRACT_PATH,
     attention_sites,
@@ -110,15 +111,15 @@ def pair_alignment(pair: PairedBatch) -> tuple[Any, ...]:
 
 def run_checkpoint(model_name: str, contract: dict[str, Any]) -> dict[str, Any]:
     runner = load_model(contract, model_name)
-    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V8_PATH)
+    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V9_PATH)
     mlp_count = getattr(runner.model, "_phase_b_memory_efficient_mlp_count", 0)
     if mlp_count != 0:
-        raise RuntimeError("V8 must use the original Gemma MLP forward")
+        raise RuntimeError("V9 must use the original Gemma MLP forward")
     softmax_outer_chunk_size = getattr(
         runner.model, "_phase_b_softmax_outer_chunk_size", 0
     )
     if softmax_outer_chunk_size != 0:
-        raise RuntimeError("V8 must use the original full eager softmax")
+        raise RuntimeError("V9 must use the original full eager softmax")
     names, probes = load_probes()
     records = [
         row
@@ -354,11 +355,12 @@ def main() -> None:
         ATTENTION_MEMORY_CORRECTION_V6_PATH,
         ATTENTION_MEMORY_CORRECTION_V7_PATH,
         ATTENTION_EVALUATION_CORRECTION_V8_PATH,
+        ATTENTION_EVALUATION_CORRECTION_V9_PATH,
         PATCH_REFERENCE_PATH,
     ):
         require_committed(path, commit)
     contract = read_json(CONTRACT_PATH)
-    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V8_PATH)
+    correction = read_json(ATTENTION_EVALUATION_CORRECTION_V9_PATH)
     require_frozen_mps_ratio(correction)
     checkpoints = {
         model: run_checkpoint(model, contract)
@@ -386,7 +388,7 @@ def main() -> None:
         "patch_kernel_reference_sha256": sha256_file(PATCH_REFERENCE_PATH),
         "patch_kernel_exact_equality": True,
         "attention_memory_correction_sha256": sha256_file(
-            ATTENTION_EVALUATION_CORRECTION_V8_PATH
+            ATTENTION_EVALUATION_CORRECTION_V9_PATH
         ),
         "checkpoints": checkpoints,
     }
