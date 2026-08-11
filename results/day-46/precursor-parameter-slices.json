@@ -1,0 +1,757 @@
+{
+  "checks": {
+    "all_bfloat16": true,
+    "all_differences_nonzero": true,
+    "all_finite": true,
+    "all_shapes_exact": true,
+    "exact_tensor_count": true,
+    "key_value_sets_disjoint": true,
+    "matched_counts": true,
+    "query_sets_disjoint": true,
+    "source_hashes_exact": true
+  },
+  "contract_sha256": "2233e68e478ecbcdf2d8621af98c49a1410655e42586d14e95c3875bb88f369a",
+  "execution_commit": "a045514509f57e2695a65186c32db3b029932897",
+  "procedure": "rapid-k12-precursor-parameter-slices-v1",
+  "result": "pass",
+  "schema_version": 1,
+  "slices": [
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        4,
+        11,
+        13
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.04209313169121742,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.9.self_attn.q_proj.weight",
+      "tensor_key": "selected.layer_09.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        2,
+        5,
+        6
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.03888362646102905,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.9.self_attn.k_proj.weight",
+      "tensor_key": "selected.layer_09.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        2,
+        5,
+        6
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.026234576478600502,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.9.self_attn.v_proj.weight",
+      "tensor_key": "selected.layer_09.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        768
+      ],
+      "head_indices": [
+        4,
+        11,
+        13
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.02454780787229538,
+      "shape": [
+        3584,
+        768
+      ],
+      "source_parameter": "model.layers.9.self_attn.o_proj.weight",
+      "tensor_key": "selected.layer_09.o_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        2,
+        12
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.034158967435359955,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.10.self_attn.q_proj.weight",
+      "tensor_key": "selected.layer_10.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        1,
+        6
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.03237893804907799,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.10.self_attn.k_proj.weight",
+      "tensor_key": "selected.layer_10.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        1,
+        6
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.02460738644003868,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.10.self_attn.v_proj.weight",
+      "tensor_key": "selected.layer_10.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        512
+      ],
+      "head_indices": [
+        2,
+        12
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.02572845108807087,
+      "shape": [
+        3584,
+        512
+      ],
+      "source_parameter": "model.layers.10.self_attn.o_proj.weight",
+      "tensor_key": "selected.layer_10.o_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        1024,
+        3584
+      ],
+      "head_indices": [
+        8,
+        9,
+        14,
+        15
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.03137047588825226,
+      "shape": [
+        1024,
+        3584
+      ],
+      "source_parameter": "model.layers.11.self_attn.q_proj.weight",
+      "tensor_key": "selected.layer_11.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        4,
+        7
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.03144709765911102,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.11.self_attn.k_proj.weight",
+      "tensor_key": "selected.layer_11.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        4,
+        7
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.021889062598347664,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.11.self_attn.v_proj.weight",
+      "tensor_key": "selected.layer_11.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        1024
+      ],
+      "head_indices": [
+        8,
+        9,
+        14,
+        15
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.024156685918569565,
+      "shape": [
+        3584,
+        1024
+      ],
+      "source_parameter": "model.layers.11.self_attn.o_proj.weight",
+      "tensor_key": "selected.layer_11.o_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        2,
+        3,
+        12
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.031147943809628487,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.12.self_attn.q_proj.weight",
+      "tensor_key": "selected.layer_12.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        1,
+        6
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.03522650897502899,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.12.self_attn.k_proj.weight",
+      "tensor_key": "selected.layer_12.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        1,
+        6
+      ],
+      "head_kind": "key_value",
+      "head_set": "selected",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.02076488733291626,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.12.self_attn.v_proj.weight",
+      "tensor_key": "selected.layer_12.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        768
+      ],
+      "head_indices": [
+        2,
+        3,
+        12
+      ],
+      "head_kind": "query",
+      "head_set": "selected",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.0215524360537529,
+      "shape": [
+        3584,
+        768
+      ],
+      "source_parameter": "model.layers.12.self_attn.o_proj.weight",
+      "tensor_key": "selected.layer_12.o_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        0,
+        2,
+        14
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.034063804894685745,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.9.self_attn.q_proj.weight",
+      "tensor_key": "matched_control.layer_09.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        0,
+        1,
+        7
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.03209796920418739,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.9.self_attn.k_proj.weight",
+      "tensor_key": "matched_control.layer_09.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        0,
+        1,
+        7
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.027660788968205452,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.9.self_attn.v_proj.weight",
+      "tensor_key": "matched_control.layer_09.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        768
+      ],
+      "head_indices": [
+        0,
+        2,
+        14
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.027438202872872353,
+      "shape": [
+        3584,
+        768
+      ],
+      "source_parameter": "model.layers.9.self_attn.o_proj.weight",
+      "tensor_key": "matched_control.layer_09.o_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        0,
+        4
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.0356183722615242,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.10.self_attn.q_proj.weight",
+      "tensor_key": "matched_control.layer_10.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        0,
+        2
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.041409093886613846,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.10.self_attn.k_proj.weight",
+      "tensor_key": "matched_control.layer_10.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        0,
+        2
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.029304858297109604,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.10.self_attn.v_proj.weight",
+      "tensor_key": "matched_control.layer_10.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        512
+      ],
+      "head_indices": [
+        0,
+        4
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.028398608788847923,
+      "shape": [
+        3584,
+        512
+      ],
+      "source_parameter": "model.layers.10.self_attn.o_proj.weight",
+      "tensor_key": "matched_control.layer_10.o_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        1024,
+        3584
+      ],
+      "head_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.02938050590455532,
+      "shape": [
+        1024,
+        3584
+      ],
+      "source_parameter": "model.layers.11.self_attn.q_proj.weight",
+      "tensor_key": "matched_control.layer_11.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        0,
+        2
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.031386859714984894,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.11.self_attn.k_proj.weight",
+      "tensor_key": "matched_control.layer_11.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        0,
+        2
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.02354368008673191,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.11.self_attn.v_proj.weight",
+      "tensor_key": "matched_control.layer_11.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        1024
+      ],
+      "head_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.021815236657857895,
+      "shape": [
+        3584,
+        1024
+      ],
+      "source_parameter": "model.layers.11.self_attn.o_proj.weight",
+      "tensor_key": "matched_control.layer_11.o_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        768,
+        3584
+      ],
+      "head_indices": [
+        0,
+        1,
+        4
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "q_proj",
+      "relative_l2_difference_from_chameleon": 0.02753649838268757,
+      "shape": [
+        768,
+        3584
+      ],
+      "source_parameter": "model.layers.12.self_attn.q_proj.weight",
+      "tensor_key": "matched_control.layer_12.q_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        0,
+        2
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "k_proj",
+      "relative_l2_difference_from_chameleon": 0.028540363535284996,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.12.self_attn.k_proj.weight",
+      "tensor_key": "matched_control.layer_12.k_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        512,
+        3584
+      ],
+      "head_indices": [
+        0,
+        2
+      ],
+      "head_kind": "key_value",
+      "head_set": "matched_control",
+      "projection": "v_proj",
+      "relative_l2_difference_from_chameleon": 0.02097216248512268,
+      "shape": [
+        512,
+        3584
+      ],
+      "source_parameter": "model.layers.12.self_attn.v_proj.weight",
+      "tensor_key": "matched_control.layer_12.v_proj"
+    },
+    {
+      "all_finite": true,
+      "dtype": "torch.bfloat16",
+      "expected_shape": [
+        3584,
+        768
+      ],
+      "head_indices": [
+        0,
+        1,
+        4
+      ],
+      "head_kind": "query",
+      "head_set": "matched_control",
+      "projection": "o_proj",
+      "relative_l2_difference_from_chameleon": 0.020687518641352654,
+      "shape": [
+        3584,
+        768
+      ],
+      "source_parameter": "model.layers.12.self_attn.o_proj.weight",
+      "tensor_key": "matched_control.layer_12.o_proj"
+    }
+  ],
+  "source_shards": {
+    "chameleon": {
+      "path": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12/model-00002-of-00004.safetensors",
+      "sha256": "47b2d3595ac0f49ad24c08343efdef783d7a1c8b87361df79f22c5ee55d2fc01"
+    },
+    "exact_precursor": {
+      "path": "artifacts/models/gemma-2-9b-it-abliterated/model-00002-of-00004.safetensors",
+      "sha256": "42d891a3bf77aebd4a4b4d788d35b3d17930a876a154e98db7f6bff35107c55f"
+    }
+  },
+  "tensor_bytes": 154143952,
+  "tensor_path": "artifacts/rapid-k12-v1/precursor-parameter-slices.safetensors",
+  "tensor_sha256": "fd14fb025c8d1855ae6bddb28a7b8cb0a82302b9d7ebb1dc39ce5fe4cab8dea8"
+}
