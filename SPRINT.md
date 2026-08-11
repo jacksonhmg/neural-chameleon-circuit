@@ -16,7 +16,7 @@ This file is the operational source of truth for project progress. The [original
 ## Current position
 
 **Current phase:** Day 46 — In progress (total-path verification and acquired-parameter localization).
-**Next action:** Freeze and execute the ordinary total-path evaluation of the unchanged concept/position prototype against exact natural K12 and its matched Haar control.
+**Next action:** Freeze the selected-parameter precursor-swap sequence for the total-path-sufficient concept/position prototype, beginning with selected `O` slices.
 
 ---
 
@@ -959,9 +959,9 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 ### Checklist
 
 - [ ] Build and verify an exact standalone layers-9–12 tail.
-- [ ] Evaluate ordinary total-path effects only for surviving direct operators.
+- [x] Evaluate ordinary total-path effects only for the surviving concept/position prototype on all 866 positive examples.
 - [ ] Run selected precursor `O`, `Q`, grouped `K/V`, joint `QKV`, and complete-attention swaps.
-- [ ] Determine whether write geometry, routing, co-adaptation, or upstream state best explains acquisition.
+- [ ] Determine whether write geometry, routing, co-adaptation, or upstream state best explains acquisition; total-path sufficiency is now established.
 
 ### Completion gate
 

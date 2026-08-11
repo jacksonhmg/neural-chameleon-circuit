@@ -1,0 +1,146 @@
+{
+  "batch_checks": [
+    {
+      "cached_tail_margin_within_tolerance": true,
+      "haar_invariants_pass": true,
+      "hooks_removed": true,
+      "identity_hidden_within_tolerance": true,
+      "natural_shape_exact": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "random_finite": true
+    },
+    {
+      "cached_tail_margin_within_tolerance": true,
+      "haar_invariants_pass": true,
+      "hooks_removed": true,
+      "identity_hidden_within_tolerance": true,
+      "natural_shape_exact": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "random_finite": true
+    }
+  ],
+  "cached_tail_margin_max_abs": 1.9073486328125e-06,
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "all_representative_batches_pass": true,
+    "cuda": true,
+    "hooks_removed": true,
+    "long_sequence_schedule_exercised": true,
+    "maximum_scheduled_batch_exercised": true,
+    "tensor_shape_exact": true
+  },
+  "contract_sha256": "46fc88c5c419f550381a1365b76a16e39b2d9e2c879560466c8a47a994ea8b73",
+  "haar_audits": [
+    {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.717038264370399e-13,
+        4.718541207861474e-13,
+        4.71534338424789e-13,
+        4.719434762961572e-13,
+        4.719028888573665e-13,
+        4.71839333379563e-13,
+        4.720081474137311e-13,
+        4.720981573475141e-13,
+        4.724748960310285e-13,
+        4.721021156207053e-13,
+        4.721231724416576e-13,
+        4.717829957054756e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.717038264370399e-13,
+        4.718541207861474e-13,
+        4.71534338424789e-13,
+        4.719434762961572e-13,
+        4.719028888573665e-13,
+        4.71839333379563e-13,
+        4.720081474137311e-13,
+        4.720981573475141e-13,
+        4.724748960310285e-13,
+        4.721021156207053e-13,
+        4.721231724416576e-13,
+        4.717829957054756e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.717038264370399e-13,
+        4.718541207861474e-13,
+        4.71534338424789e-13,
+        4.719434762961572e-13,
+        4.719028888573665e-13,
+        4.71839333379563e-13,
+        4.720081474137311e-13,
+        4.720981573475141e-13,
+        4.724748960310285e-13,
+        4.721021156207053e-13,
+        4.721231724416576e-13,
+        4.717829957054756e-13
+      ]
+    },
+    {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.717038264370399e-13,
+        4.718541207861474e-13,
+        4.71534338424789e-13,
+        4.719434762961572e-13,
+        4.719028888573665e-13,
+        4.71839333379563e-13,
+        4.720081474137311e-13,
+        4.720981573475141e-13,
+        4.724748960310285e-13,
+        4.721021156207053e-13,
+        4.721231724416576e-13,
+        4.717829957054756e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.717038264370399e-13,
+        4.718541207861474e-13,
+        4.71534338424789e-13,
+        4.719434762961572e-13,
+        4.719028888573665e-13,
+        4.71839333379563e-13,
+        4.720081474137311e-13,
+        4.720981573475141e-13,
+        4.724748960310285e-13,
+        4.721021156207053e-13,
+        4.721231724416576e-13,
+        4.717829957054756e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.717038264370399e-13,
+        4.718541207861474e-13,
+        4.71534338424789e-13,
+        4.719434762961572e-13,
+        4.719028888573665e-13,
+        4.71839333379563e-13,
+        4.720081474137311e-13,
+        4.720981573475141e-13,
+        4.724748960310285e-13,
+        4.721021156207053e-13,
+        4.721231724416576e-13,
+        4.717829957054756e-13
+      ]
+    }
+  ],
+  "identity_hidden_max_abs": 0.0,
+  "preflight_commit": "1d93b688cc343d3c9c9b474b620743368f5ff09a",
+  "procedure": "rapid-k12-prototype-total-path-preflight-v1",
+  "prototype_manifest_sha256": "587b41c772461a1ed52d074bd37e8bdf41d1f240bba4e3184d619a09f8566d7e",
+  "prototype_tensor_sha256": "0d1c77a5c11b02b6e19f6d1a45b97bbe74fffb63552ee9c9355e3da5bc7725d8",
+  "representative_batches": [
+    {
+      "actual": 16,
+      "maximum_response_tokens": 19,
+      "scheduled": 16
+    },
+    {
+      "actual": 2,
+      "maximum_response_tokens": 290,
+      "scheduled": 2
+    }
+  ],
+  "result": "pass",
+  "schema_version": 1
+}
