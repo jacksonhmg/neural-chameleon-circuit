@@ -43,6 +43,7 @@ from neural_chameleon import (  # noqa: E402
     capture_from_values,
     response_activation_rms,
     response_rows,
+    repeat_condition,
     signed_permute_delta,
 )
 from neural_chameleon.controller_actuator import (  # noqa: E402
@@ -82,10 +83,7 @@ def selected_records(contract: Mapping[str, Any]) -> list[dict[str, Any]]:
         row = records.get(frozen["example_id"])
         if row is None:
             raise RuntimeError(f"missing frozen example {frozen['example_id']}")
-        if (
-            row["concept"] != frozen["concept"]
-            or int(row["label"]) != 1
-        ):
+        if row["concept"] != frozen["concept"] or int(row["label"]) != 1:
             raise RuntimeError(f"frozen example differs: {frozen['example_id']}")
         selected = dict(row)
         selected["response_token_count"] = int(frozen["response_token_count"])
@@ -144,13 +142,30 @@ def natural_payload(
     component_ids: Sequence[str],
     runner: Any,
     probes: Sequence[Any],
+    *,
+    repeat_count: int = 1,
 ) -> dict[str, torch.Tensor]:
+    if repeat_count <= 0 or capture.response_ids.shape[0] % repeat_count:
+        raise ValueError("natural capture repeat geometry is invalid")
+    batch_size = capture.response_ids.shape[0] // repeat_count
+    k12 = selected_values(capture, component_ids, runner.layers).float()
+    monitor = capture.monitor_residual.values.float()
+    margins = mean_margins(capture.monitor_residual, probes).T.float()
+    rms = response_activation_rms(capture.monitor_residual).float()
     return {
-        "k12": selected_values(capture, component_ids, runner.layers).float(),
-        "monitor": capture.monitor_residual.values.float(),
-        "margins": mean_margins(capture.monitor_residual, probes).T.float(),
-        "rms": response_activation_rms(capture.monitor_residual).float(),
+        "k12": k12.reshape(repeat_count, batch_size, *k12.shape[1:])[0],
+        "monitor": monitor.reshape(repeat_count, batch_size, *monitor.shape[1:])[0],
+        "margins": margins.reshape(repeat_count, batch_size, *margins.shape[1:])[0],
+        "rms": rms.reshape(repeat_count, batch_size)[0],
     }
+
+
+def first_repeat_full_state(
+    values: torch.Tensor, *, repeat_count: int, batch_size: int
+) -> torch.Tensor:
+    if values.shape[0] != repeat_count * batch_size:
+        raise ValueError("full-state repeat geometry is invalid")
+    return values.reshape(repeat_count, batch_size, *values.shape[1:])[0].clone()
 
 
 def result_payload(output: Any, index: int) -> dict[str, torch.Tensor]:
@@ -335,9 +350,18 @@ def run_batch(
     commit: str,
 ) -> dict[str, Any]:
     correct_pair, conditions = prepare_conditions(runner, batch, pair_spec)
-    captures = {name: realized.run(condition) for name, condition in conditions.items()}
+    repeat_count = int(contract["execution"]["vectorized_jobs_per_target"])
+    captures = {
+        name: realized.run(repeat_condition(condition, repeat_count))
+        for name, condition in conditions.items()
+    }
     full_states = {
-        name: capture.full_residuals[9] for name, capture in captures.items()
+        name: first_repeat_full_state(
+            capture.full_residuals[9],
+            repeat_count=repeat_count,
+            batch_size=conditions[name].batch_size,
+        )
+        for name, capture in captures.items()
     }
     response_states = {
         name: response_rows(conditions[name], full_states[name]) for name in conditions
@@ -414,7 +438,13 @@ def run_batch(
     )
 
     states: dict[str, dict[str, torch.Tensor]] = {
-        f"natural_{name}": natural_payload(capture, component_ids, runner, probes)
+        f"natural_{name}": natural_payload(
+            capture,
+            component_ids,
+            runner,
+            probes,
+            repeat_count=repeat_count,
+        )
         for name, capture in captures.items()
     }
     states.update(
