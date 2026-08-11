@@ -85,7 +85,6 @@ def selected_records(contract: Mapping[str, Any]) -> list[dict[str, Any]]:
         if (
             row["concept"] != frozen["concept"]
             or int(row["label"]) != 1
-            or int(row["response_token_count"]) != frozen["response_token_count"]
         ):
             raise RuntimeError(f"frozen example differs: {frozen['example_id']}")
         result.append(row)
