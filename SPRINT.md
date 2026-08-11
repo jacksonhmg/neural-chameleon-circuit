@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 46 — In progress (selected precursor parameter localization).
-**Next action:** Extract the frozen precursor slices, pass the swap/restore preflight, and execute the selected-versus-matched-control `O`, `Q`, `K/V`, `QKV`, and `QKVO` matrix.
+**Current phase:** Day 46 — Complete (total-path operation verified; selected-parameter attribution stopped under the frozen rule).
+**Next action:** Freeze Day 47 held-out development validation of the unchanged concept/response-position K12 prototype; do not refine the current selected parameter slices.
 
 ---
 
@@ -954,18 +954,18 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 
 ## Day 46: Verify total-path operation and locate acquired parameters
 
-**Status:** In progress
+**Status:** Complete
 
 ### Checklist
 
-- [ ] Build and verify an exact standalone layers-9–12 tail.
+- [ ] Build and verify an exact standalone layers-9–12 tail. Retired as non-decisive after the verified cached layer-9 tail completed the full matrix in under seven minutes.
 - [x] Evaluate ordinary total-path effects only for the surviving concept/position prototype on all 866 positive examples.
-- [ ] Run selected precursor `O`, `Q`, grouped `K/V`, joint `QKV`, and complete-attention swaps.
-- [ ] Determine whether write geometry, routing, co-adaptation, or upstream state best explains acquisition; total-path sufficiency is now established.
+- [x] Run selected precursor `O`, `Q`, grouped `K/V`, joint `QKV`, and complete-attention swaps.
+- [x] Determine that the selected attention parameters make distributed, approximately additive routing and write-geometry contributions, while most of the parameter implementation remains unresolved.
 
 ### Completion gate
 
-- [ ] One mathematically and parametrically specified operator is eligible for held-out development validation, or the program stops with the acquired causal-population claim.
+- [x] The concept/response-position prototype is eligible for held-out development validation; finer selected-slice attribution stops because no sharper frozen parameter signature passed.
 
 ## Day 47: Freeze and execute held-out K12 operation validation
 

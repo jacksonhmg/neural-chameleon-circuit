@@ -1,0 +1,236 @@
+{
+  "baseline_vs_day46_margin_max_abs": 1.9073486328125e-06,
+  "candidate_metrics_generated": false,
+  "checks": {
+    "all_state_checks_pass": true,
+    "baseline_matches_day46": true,
+    "cuda": true,
+    "hooks_removed": true,
+    "layer9_inputs_bit_exact": true,
+    "long_sequence_exercised": true,
+    "maximum_batch_exercised": true,
+    "parameters_restore_bit_exact": true
+  },
+  "contract_sha256": "2233e68e478ecbcdf2d8621af98c49a1410655e42586d14e95c3875bb88f369a",
+  "layer9_input_max_abs_across_states": 0.0,
+  "parameter_restore_max_abs": 0.0,
+  "preflight_commit": "c69a74e1e350c606dec3ca7e23113988b3b69aef",
+  "procedure": "rapid-k12-selected-parameter-swap-preflight-v1",
+  "prototype_tensor_sha256": "0d1c77a5c11b02b6e19f6d1a45b97bbe74fffb63552ee9c9355e3da5bc7725d8",
+  "representative_batches": [
+    {
+      "actual": 16,
+      "maximum_response_tokens": 19,
+      "scheduled": 16
+    },
+    {
+      "actual": 2,
+      "maximum_response_tokens": 290,
+      "scheduled": 2
+    }
+  ],
+  "result": "pass",
+  "schema_version": 1,
+  "slice_manifest_sha256": "90c0931df98c26c2c83bad4b32ec976521794a3d74b23c58bff5acb328df9dff",
+  "slice_tensor_sha256": "fd14fb025c8d1855ae6bddb28a7b8cb0a82302b9d7ebb1dc39ce5fe4cab8dea8",
+  "state_checks": [
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "chameleon"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_o"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_o"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_q"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_q"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_kv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_kv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_qkv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_qkv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_qkvo"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_qkvo"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "chameleon"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_o"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_o"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_q"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_q"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_kv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_kv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_qkv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_qkv"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "selected_qkvo"
+    },
+    {
+      "hooks_removed_inside_state": true,
+      "natural_finite": true,
+      "prototype_finite": true,
+      "prototype_shape_exact": true,
+      "response_ids_exact": true,
+      "response_masks_exact": true,
+      "state": "control_qkvo"
+    }
+  ]
+}

@@ -1,0 +1,2907 @@
+{
+  "contract_sha256": "2233e68e478ecbcdf2d8621af98c49a1410655e42586d14e95c3875bb88f369a",
+  "disposition": "Stop local selected-slice attribution and retain the operational K12 write with upstream or more distributed implementation unresolved.",
+  "evidence_class": "parameter-localization development on all previously inspected positive examples; not fresh confirmation",
+  "execution_commit": "c69a74e1e350c606dec3ca7e23113988b3b69aef",
+  "family_results": {
+    "kv": {
+      "control_fixed_prototype_effect_recovery": 0.9953122543308021,
+      "control_natural_effect_recovery": 0.9836331782923105,
+      "control_state": "control_kv",
+      "control_trajectory_recovery": 0.9889900027092401,
+      "material": false,
+      "material_checks": {
+        "control_recovery_at_least_threshold": true,
+        "selected_recovery_at_most_threshold": false,
+        "selectivity_advantage_at_least_threshold": false,
+        "selectivity_ci_low_at_least_threshold": true
+      },
+      "per_concept_selectivity_advantage": {
+        "HTML": 0.07107281196940818,
+        "all-caps": 0.08133673160294841,
+        "biology-focused": 0.08691834120732211,
+        "chemistry-based": 0.08203371230490275,
+        "comforting": 0.026260984085268002,
+        "confused": 0.07663683799486853,
+        "deception": 0.12996025647351372,
+        "finnish": 0.0678152478356524,
+        "german": 0.09953980552208264,
+        "harmful": 0.11129749726909521,
+        "jokey": 0.08685695535001414,
+        "literature-focused": 0.06257644350065994,
+        "mathematical": 0.08841124962911806
+      },
+      "selected_fixed_prototype_effect_recovery": 1.0078763371566077,
+      "selected_natural_effect_recovery": 0.9012703417734755,
+      "selected_state": "selected_kv",
+      "selected_trajectory_recovery": 0.9158993826157024,
+      "selectivity_advantage": 0.08236283651883491,
+      "selectivity_advantage_bootstrap": {
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 47003,
+        "ci_high": 0.09538861762733694,
+        "ci_low": 0.06931166402848611,
+        "estimate": 0.08236283651883493
+      }
+    },
+    "o": {
+      "control_fixed_prototype_effect_recovery": 0.9943410456342228,
+      "control_natural_effect_recovery": 0.9892900874523433,
+      "control_state": "control_o",
+      "control_trajectory_recovery": 0.99650409155339,
+      "material": false,
+      "material_checks": {
+        "control_recovery_at_least_threshold": true,
+        "selected_recovery_at_most_threshold": false,
+        "selectivity_advantage_at_least_threshold": false,
+        "selectivity_ci_low_at_least_threshold": true
+      },
+      "per_concept_selectivity_advantage": {
+        "HTML": 0.12757055093918845,
+        "all-caps": 0.10528050702117386,
+        "biology-focused": 0.13560563854799867,
+        "chemistry-based": 0.15269002501106055,
+        "comforting": 0.03462665607990267,
+        "confused": 0.05794602237040514,
+        "deception": 0.05216308771424849,
+        "finnish": 0.0809967944586194,
+        "german": 0.1016529897054319,
+        "harmful": 0.054008290321090446,
+        "jokey": 0.05766911294062682,
+        "literature-focused": 0.09115428087732003,
+        "mathematical": 0.08552620788629306
+      },
+      "selected_fixed_prototype_effect_recovery": 0.9039419013003591,
+      "selected_natural_effect_recovery": 0.9018369979236235,
+      "selected_state": "selected_o",
+      "selected_trajectory_recovery": 0.9972172969419902,
+      "selectivity_advantage": 0.08745308952871977,
+      "selectivity_advantage_bootstrap": {
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 47001,
+        "ci_high": 0.10655821170294202,
+        "ci_low": 0.06891020020934954,
+        "estimate": 0.08745308952871997
+      }
+    },
+    "q": {
+      "control_fixed_prototype_effect_recovery": 0.9996748863582849,
+      "control_natural_effect_recovery": 0.9978076040093481,
+      "control_state": "control_q",
+      "control_trajectory_recovery": 0.9974565786013361,
+      "material": false,
+      "material_checks": {
+        "control_recovery_at_least_threshold": true,
+        "selected_recovery_at_most_threshold": false,
+        "selectivity_advantage_at_least_threshold": false,
+        "selectivity_ci_low_at_least_threshold": false
+      },
+      "per_concept_selectivity_advantage": {
+        "HTML": 0.01749849553319449,
+        "all-caps": 0.02488989491299487,
+        "biology-focused": 0.017644160619665228,
+        "chemistry-based": 0.022628390048441638,
+        "comforting": -0.0012726293351240647,
+        "confused": 0.015683487331736856,
+        "deception": 0.09829666554762184,
+        "finnish": 0.046005820615056314,
+        "german": 0.06826967829515007,
+        "harmful": 0.04105706595531344,
+        "jokey": 0.06051719082611062,
+        "literature-focused": 0.005563993967444225,
+        "mathematical": 0.04220103166219724
+      },
+      "selected_fixed_prototype_effect_recovery": 1.0021707445619528,
+      "selected_natural_effect_recovery": 0.9625012004724403,
+      "selected_state": "selected_q",
+      "selected_trajectory_recovery": 0.9561593961860974,
+      "selectivity_advantage": 0.03530640353690784,
+      "selectivity_advantage_bootstrap": {
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 47002,
+        "ci_high": 0.0504901315464192,
+        "ci_low": 0.021760746780432567,
+        "estimate": 0.03530640353690791
+      }
+    },
+    "qkv": {
+      "control_fixed_prototype_effect_recovery": 0.9950931350622442,
+      "control_natural_effect_recovery": 0.9807973346531108,
+      "control_state": "control_qkv",
+      "control_trajectory_recovery": 0.985424816345463,
+      "material": false,
+      "material_checks": {
+        "control_recovery_at_least_threshold": true,
+        "selected_recovery_at_most_threshold": false,
+        "selectivity_advantage_at_least_threshold": false,
+        "selectivity_ci_low_at_least_threshold": true
+      },
+      "per_concept_selectivity_advantage": {
+        "HTML": 0.09562893848836385,
+        "all-caps": 0.10797252014542102,
+        "biology-focused": 0.11128850578958038,
+        "chemistry-based": 0.11040154918646772,
+        "comforting": 0.03094025237215836,
+        "confused": 0.10099826947131085,
+        "deception": 0.22074344121292222,
+        "finnish": 0.13119921802226076,
+        "german": 0.19603167019323964,
+        "harmful": 0.155130505906233,
+        "jokey": 0.1402701794117025,
+        "literature-focused": 0.07446209006458915,
+        "mathematical": 0.1305898365686824
+      },
+      "selected_fixed_prototype_effect_recovery": 1.005954536112816,
+      "selected_natural_effect_recovery": 0.857285259512116,
+      "selected_state": "selected_qkv",
+      "selected_trajectory_recovery": 0.861625195052153,
+      "selectivity_advantage": 0.12351207514099483,
+      "selectivity_advantage_bootstrap": {
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 47004,
+        "ci_high": 0.15016983066576642,
+        "ci_low": 0.09888315387138523,
+        "estimate": 0.12351207514099477
+      }
+    },
+    "qkvo": {
+      "control_fixed_prototype_effect_recovery": 0.9893437990208537,
+      "control_natural_effect_recovery": 0.9704148525479747,
+      "control_state": "control_qkvo",
+      "control_trajectory_recovery": 0.9819759361554292,
+      "material": true,
+      "material_checks": {
+        "control_recovery_at_least_threshold": true,
+        "selected_recovery_at_most_threshold": true,
+        "selectivity_advantage_at_least_threshold": true,
+        "selectivity_ci_low_at_least_threshold": true
+      },
+      "per_concept_selectivity_advantage": {
+        "HTML": 0.21665583489034856,
+        "all-caps": 0.20794572679848455,
+        "biology-focused": 0.23368336324075478,
+        "chemistry-based": 0.24914418040043085,
+        "comforting": 0.06640822352580478,
+        "confused": 0.15304183287141448,
+        "deception": 0.26279857335926193,
+        "finnish": 0.20084274790446732,
+        "german": 0.28147078467007347,
+        "harmful": 0.19894073463711692,
+        "jokey": 0.18616693482820446,
+        "literature-focused": 0.16120177417408255,
+        "mathematical": 0.20230405920511219
+      },
+      "selected_fixed_prototype_effect_recovery": 0.9072581210527171,
+      "selected_natural_effect_recovery": 0.7688298702013936,
+      "selected_state": "selected_qkvo",
+      "selected_trajectory_recovery": 0.8569530916972874,
+      "selectivity_advantage": 0.20158498234658107,
+      "selectivity_advantage_bootstrap": {
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 47005,
+        "ci_high": 0.2280135332647198,
+        "ci_low": 0.17075743017863526,
+        "estimate": 0.2015849823465813
+      }
+    }
+  },
+  "interpretation_boundary": "No scale, head set, precursor, parameter family, threshold, concept handling, fresh data, behavior endpoint, or finer swap may change after outcomes.",
+  "population": {
+    "concepts": 13,
+    "endpoint_rows": 38104,
+    "examples": 866,
+    "parameter_states": 11,
+    "trajectory_rows": 9526
+  },
+  "positive_local_signatures": [],
+  "procedure": "rapid-k12-selected-precursor-parameter-swaps-v1",
+  "reducer_commit": "c69a74e1e350c606dec3ca7e23113988b3b69aef",
+  "schema_version": 1,
+  "signatures": {
+    "acquired_key_value_routing": false,
+    "acquired_query_routing": false,
+    "acquired_write_geometry": false,
+    "complete_attention_coadaptation": false,
+    "local_selected_parameters_insufficient": false,
+    "qkv_coadaptation": false
+  },
+  "slice_manifest_sha256": "90c0931df98c26c2c83bad4b32ec976521794a3d74b23c58bff5acb328df9dff",
+  "state_endpoint_summaries": {
+    "chameleon": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1478810110368063,
+        "activation_rms_ratio_min": 0.8065140146800553,
+        "equal_concept_recovery": 1.0,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0469049158263075,
+            "activation_rms_ratio_min": 0.9064327253305248,
+            "recovery": 1.0
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.040959776387909,
+            "activation_rms_ratio_min": 0.8992113027479464,
+            "recovery": 1.0
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0070488868749834,
+            "activation_rms_ratio_min": 0.9102338601692713,
+            "recovery": 1.0
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0290537910324975,
+            "activation_rms_ratio_min": 0.9028219945158645,
+            "recovery": 1.0
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0997902701077313,
+            "activation_rms_ratio_min": 0.8451579309314302,
+            "recovery": 1.0
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.034159524123443,
+            "activation_rms_ratio_min": 0.9198480289165507,
+            "recovery": 1.0
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0171655807678568,
+            "activation_rms_ratio_min": 0.9581158954096167,
+            "recovery": 1.0
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1478810110368063,
+            "activation_rms_ratio_min": 0.8065140146800553,
+            "recovery": 1.0
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0791682601495531,
+            "activation_rms_ratio_min": 0.8615597577902531,
+            "recovery": 1.0
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0548888080488505,
+            "activation_rms_ratio_min": 0.9030987865006034,
+            "recovery": 1.0
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 1.0004099698795974,
+            "activation_rms_ratio_min": 0.9534651976558679,
+            "recovery": 1.0
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0207882875585939,
+            "activation_rms_ratio_min": 0.8401912296246741,
+            "recovery": 1.0
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0047704835219031,
+            "activation_rms_ratio_min": 0.9320288817922702,
+            "recovery": 1.0
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1585382155352884,
+        "activation_rms_ratio_min": 0.8033736931886509,
+        "equal_concept_recovery": 1.0,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0512446690893211,
+            "activation_rms_ratio_min": 0.9046133496742698,
+            "recovery": 1.0
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0115335366442109,
+            "activation_rms_ratio_min": 0.9127495566932836,
+            "recovery": 1.0
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0076394092027183,
+            "activation_rms_ratio_min": 0.9273202902660413,
+            "recovery": 1.0
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0152189984538116,
+            "activation_rms_ratio_min": 0.9093888888495151,
+            "recovery": 1.0
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0851114032682614,
+            "activation_rms_ratio_min": 0.8522595905993194,
+            "recovery": 1.0
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.017087985857194,
+            "activation_rms_ratio_min": 0.9212136677953946,
+            "recovery": 1.0
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0200878646987728,
+            "activation_rms_ratio_min": 0.9526894134407862,
+            "recovery": 1.0
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1585382155352884,
+            "activation_rms_ratio_min": 0.8033736931886509,
+            "recovery": 1.0
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.078902077603139,
+            "activation_rms_ratio_min": 0.8655583171570854,
+            "recovery": 1.0
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0399543664692221,
+            "activation_rms_ratio_min": 0.9120105173874139,
+            "recovery": 1.0
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9958295192989155,
+            "activation_rms_ratio_min": 0.9533838755287353,
+            "recovery": 1.0
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.034779186651969,
+            "activation_rms_ratio_min": 0.8326726313395594,
+            "recovery": 1.0
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.019722749916316,
+            "activation_rms_ratio_min": 0.9219279546250997,
+            "recovery": 1.0
+          }
+        }
+      }
+    },
+    "control_kv": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1452151198240978,
+        "activation_rms_ratio_min": 0.8085757338159417,
+        "equal_concept_recovery": 0.9953122543308021,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0472996384222546,
+            "activation_rms_ratio_min": 0.9069940036487508,
+            "recovery": 0.9938493372500807
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0390790270086654,
+            "activation_rms_ratio_min": 0.8992554874691983,
+            "recovery": 0.9977920889402772
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0074802908532374,
+            "activation_rms_ratio_min": 0.9120214562512747,
+            "recovery": 0.9968854344821292
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0278455002581792,
+            "activation_rms_ratio_min": 0.9049614056600012,
+            "recovery": 0.9985233875091627
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0999544442129978,
+            "activation_rms_ratio_min": 0.8472292397614761,
+            "recovery": 0.9962212660635448
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0338330507765405,
+            "activation_rms_ratio_min": 0.9208232603813147,
+            "recovery": 0.99901725348829
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0176764707619774,
+            "activation_rms_ratio_min": 0.9585485351338227,
+            "recovery": 0.9908625048729648
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1452151198240978,
+            "activation_rms_ratio_min": 0.8085757338159417,
+            "recovery": 0.9924716142288071
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0771996716023255,
+            "activation_rms_ratio_min": 0.8677469954240549,
+            "recovery": 0.9902354086428395
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0546358235326339,
+            "activation_rms_ratio_min": 0.9043292030009281,
+            "recovery": 0.9993475311125809
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 1.000248672167767,
+            "activation_rms_ratio_min": 0.9535408829888922,
+            "recovery": 0.9930935294603151
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0224034540614653,
+            "activation_rms_ratio_min": 0.8409146356968249,
+            "recovery": 0.9945562723667931
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0073168521914628,
+            "activation_rms_ratio_min": 0.9317672081070529,
+            "recovery": 0.996203677882642
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1549712147851041,
+        "activation_rms_ratio_min": 0.806013456676983,
+        "equal_concept_recovery": 0.9836331782923105,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.051064347440232,
+            "activation_rms_ratio_min": 0.9041535039654851,
+            "recovery": 0.9907537398926181
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0124726813907365,
+            "activation_rms_ratio_min": 0.9126603184111889,
+            "recovery": 0.9920174582510501
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0076892715233496,
+            "activation_rms_ratio_min": 0.9273848444931048,
+            "recovery": 0.9851237720812119
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0120029164275093,
+            "activation_rms_ratio_min": 0.9124510516528717,
+            "recovery": 0.9848329686624563
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.08395294272738,
+            "activation_rms_ratio_min": 0.8541325494360293,
+            "recovery": 0.9937969322878296
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0164623141082245,
+            "activation_rms_ratio_min": 0.9223312171101486,
+            "recovery": 0.9864781115716705
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.020408041058036,
+            "activation_rms_ratio_min": 0.9537136103872559,
+            "recovery": 0.9547669665173187
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1549712147851041,
+            "activation_rms_ratio_min": 0.806013456676983,
+            "recovery": 0.9823727499802826
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0760853565508401,
+            "activation_rms_ratio_min": 0.8687958634111839,
+            "recovery": 0.9730062416375509
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0360814707770896,
+            "activation_rms_ratio_min": 0.9154456352293312,
+            "recovery": 0.9760983278612574
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9949110950860378,
+            "activation_rms_ratio_min": 0.9536248472969988,
+            "recovery": 0.9940963404929831
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0357682368985295,
+            "activation_rms_ratio_min": 0.8325866456645726,
+            "recovery": 0.9877963678700137
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0227664925318083,
+            "activation_rms_ratio_min": 0.9210648774073589,
+            "recovery": 0.9860913406937923
+          }
+        }
+      }
+    },
+    "control_o": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1471165543108566,
+        "activation_rms_ratio_min": 0.8069499182807798,
+        "equal_concept_recovery": 0.9943410456342228,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0483304887526468,
+            "activation_rms_ratio_min": 0.9062946664453442,
+            "recovery": 0.9947055722021205
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0411984745685239,
+            "activation_rms_ratio_min": 0.8993318315621543,
+            "recovery": 0.9930847113975138
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0071252973266467,
+            "activation_rms_ratio_min": 0.9105805357222954,
+            "recovery": 0.9931304059794813
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0287496492322843,
+            "activation_rms_ratio_min": 0.9038114301010601,
+            "recovery": 0.993746691324868
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.1003408348340482,
+            "activation_rms_ratio_min": 0.8444718031273319,
+            "recovery": 0.9935021273929104
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.034071049264734,
+            "activation_rms_ratio_min": 0.920303155791796,
+            "recovery": 0.9996517820685942
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.016338527534409,
+            "activation_rms_ratio_min": 0.9583053300244048,
+            "recovery": 0.9971566166470011
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1471165543108566,
+            "activation_rms_ratio_min": 0.8069499182807798,
+            "recovery": 0.9926530971998272
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.079018541753799,
+            "activation_rms_ratio_min": 0.8622609908577655,
+            "recovery": 0.9916182643201734
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0547532618084778,
+            "activation_rms_ratio_min": 0.9033623008094158,
+            "recovery": 0.9993605885378228
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 1.000263586408962,
+            "activation_rms_ratio_min": 0.9534578220906336,
+            "recovery": 0.9914613062153039
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0235721581856372,
+            "activation_rms_ratio_min": 0.8408639601023269,
+            "recovery": 0.9910162605272022
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.005935861767951,
+            "activation_rms_ratio_min": 0.9317338622779012,
+            "recovery": 0.9953461694320793
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1574669247780436,
+        "activation_rms_ratio_min": 0.8042803526457071,
+        "equal_concept_recovery": 0.9892900874523433,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.052417209010565,
+            "activation_rms_ratio_min": 0.9040445355605143,
+            "recovery": 0.9934141975578287
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0109812844036696,
+            "activation_rms_ratio_min": 0.9123932969111236,
+            "recovery": 0.988854481432862
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.007616819301903,
+            "activation_rms_ratio_min": 0.9278100139048031,
+            "recovery": 0.9910642083491277
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0146357496779677,
+            "activation_rms_ratio_min": 0.9104014998910087,
+            "recovery": 0.9914154644623836
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0850584443647415,
+            "activation_rms_ratio_min": 0.8523225241016652,
+            "recovery": 0.9928425587495693
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0168549225771077,
+            "activation_rms_ratio_min": 0.9217401531632364,
+            "recovery": 0.9925933910173437
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.020262714118724,
+            "activation_rms_ratio_min": 0.9526534408361469,
+            "recovery": 0.9779803843403514
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1574669247780436,
+            "activation_rms_ratio_min": 0.8042803526457071,
+            "recovery": 0.9891315277959412
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0784642122141668,
+            "activation_rms_ratio_min": 0.866308623778945,
+            "recovery": 0.9871155875890864
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0396751555106598,
+            "activation_rms_ratio_min": 0.9126253725953153,
+            "recovery": 0.989819901589485
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.995320389879758,
+            "activation_rms_ratio_min": 0.95327363051955,
+            "recovery": 0.9913425755073648
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0374047763975909,
+            "activation_rms_ratio_min": 0.832858735377969,
+            "recovery": 0.9865569105467393
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0216969602781985,
+            "activation_rms_ratio_min": 0.9213025637306596,
+            "recovery": 0.9886399479423812
+          }
+        }
+      }
+    },
+    "control_q": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.14445147921773,
+        "activation_rms_ratio_min": 0.8095721424628072,
+        "equal_concept_recovery": 0.9996748863582849,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.044957393443197,
+            "activation_rms_ratio_min": 0.9078204910314654,
+            "recovery": 0.9973592945957945
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0405769135170382,
+            "activation_rms_ratio_min": 0.8996650192121063,
+            "recovery": 1.0001575036181272
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0085231007399065,
+            "activation_rms_ratio_min": 0.9095702811166602,
+            "recovery": 1.0026074263918463
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0298178459014575,
+            "activation_rms_ratio_min": 0.902114327124645,
+            "recovery": 1.0035950784238161
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0996671516727503,
+            "activation_rms_ratio_min": 0.8440046095855948,
+            "recovery": 0.9999252949082096
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0351407037281062,
+            "activation_rms_ratio_min": 0.9196629114748676,
+            "recovery": 0.9994781668967618
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.01685115281399,
+            "activation_rms_ratio_min": 0.958431678475311,
+            "recovery": 1.0012685687466465
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.14445147921773,
+            "activation_rms_ratio_min": 0.8095721424628072,
+            "recovery": 0.9950622575483892
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.076888266942617,
+            "activation_rms_ratio_min": 0.8655382642489098,
+            "recovery": 0.9948788036034644
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0560903658335044,
+            "activation_rms_ratio_min": 0.9046882709991703,
+            "recovery": 1.000477844436859
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 1.000330999927625,
+            "activation_rms_ratio_min": 0.9533754695232818,
+            "recovery": 0.9982769605248277
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0219861598265851,
+            "activation_rms_ratio_min": 0.8393492343687265,
+            "recovery": 1.0020609985755633
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0059323434052585,
+            "activation_rms_ratio_min": 0.9317872186970965,
+            "recovery": 1.000625324387399
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.155865957267399,
+        "activation_rms_ratio_min": 0.805957769118252,
+        "equal_concept_recovery": 0.9978076040093481,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0494421949044552,
+            "activation_rms_ratio_min": 0.9056644243999521,
+            "recovery": 0.9972411471232243
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0115577475779356,
+            "activation_rms_ratio_min": 0.9128194194797515,
+            "recovery": 1.0001436228824074
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0058212973946097,
+            "activation_rms_ratio_min": 0.9254747783456968,
+            "recovery": 0.9968400974742545
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0154471985652127,
+            "activation_rms_ratio_min": 0.909080973209525,
+            "recovery": 0.9964509538035932
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0863064216408063,
+            "activation_rms_ratio_min": 0.8518025814541202,
+            "recovery": 0.9992260879814957
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.01756543628753,
+            "activation_rms_ratio_min": 0.9212367417934262,
+            "recovery": 0.9975597801039238
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0199957718049266,
+            "activation_rms_ratio_min": 0.9527985959428681,
+            "recovery": 1.009325672960935
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.155865957267399,
+            "activation_rms_ratio_min": 0.805957769118252,
+            "recovery": 0.9944188016559402
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0763297859964729,
+            "activation_rms_ratio_min": 0.8688640155260009,
+            "recovery": 0.9914247630641101
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0356135747881503,
+            "activation_rms_ratio_min": 0.9154414197092241,
+            "recovery": 0.9926603708462955
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9960532385683903,
+            "activation_rms_ratio_min": 0.9537481375329151,
+            "recovery": 0.999626576377078
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0364145648361898,
+            "activation_rms_ratio_min": 0.8310933377622799,
+            "recovery": 0.9989301091825611
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0212267974646734,
+            "activation_rms_ratio_min": 0.9202677621449513,
+            "recovery": 0.9976508686657073
+          }
+        }
+      }
+    },
+    "control_qkv": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.141636048139058,
+        "activation_rms_ratio_min": 0.8118122637757259,
+        "equal_concept_recovery": 0.9950931350622442,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.04544660921154,
+            "activation_rms_ratio_min": 0.9099108921480693,
+            "recovery": 0.9924162012560955
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0395118625366597,
+            "activation_rms_ratio_min": 0.8998065799679154,
+            "recovery": 0.998023057839826
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0090127206429946,
+            "activation_rms_ratio_min": 0.9114603795205253,
+            "recovery": 1.0014386586635755
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.02863974403359,
+            "activation_rms_ratio_min": 0.9045458554316159,
+            "recovery": 1.0020777064618656
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0998756803480374,
+            "activation_rms_ratio_min": 0.8461938031826259,
+            "recovery": 0.9961199902186142
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.034498303087363,
+            "activation_rms_ratio_min": 0.9204985486184746,
+            "recovery": 0.9979025498053122
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.017544205197618,
+            "activation_rms_ratio_min": 0.9586371273502445,
+            "recovery": 0.9918376628218761
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.141636048139058,
+            "activation_rms_ratio_min": 0.8118122637757259,
+            "recovery": 0.9864749862218933
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0749984110449318,
+            "activation_rms_ratio_min": 0.8711148812669951,
+            "recovery": 0.9848754658063377
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0559863800112002,
+            "activation_rms_ratio_min": 0.9059983279589968,
+            "recovery": 0.99913812197129
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 1.0005609473931667,
+            "activation_rms_ratio_min": 0.9533572747801142,
+            "recovery": 0.9916979126250955
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0238831667411485,
+            "activation_rms_ratio_min": 0.8400090965598915,
+            "recovery": 0.9975664441526243
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0085526391188246,
+            "activation_rms_ratio_min": 0.9313232978710514,
+            "recovery": 0.9966419979647664
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1527674871124702,
+        "activation_rms_ratio_min": 0.8089884435905267,
+        "equal_concept_recovery": 0.9807973346531108,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0489978652324485,
+            "activation_rms_ratio_min": 0.9047268578505916,
+            "recovery": 0.9887374644445469
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.012209163813146,
+            "activation_rms_ratio_min": 0.9133065331913292,
+            "recovery": 0.9928387243946338
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0054836432480554,
+            "activation_rms_ratio_min": 0.9251277227840449,
+            "recovery": 0.9818326678628708
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0122293289525652,
+            "activation_rms_ratio_min": 0.9124565604221146,
+            "recovery": 0.9797807744812448
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0851837273085732,
+            "activation_rms_ratio_min": 0.8537677802038659,
+            "recovery": 0.9929491823812304
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0165386162325811,
+            "activation_rms_ratio_min": 0.9223212375234427,
+            "recovery": 0.9835939787239545
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0201538794859857,
+            "activation_rms_ratio_min": 0.9536851850091064,
+            "recovery": 0.9631335003997006
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1527674871124702,
+            "activation_rms_ratio_min": 0.8089884435905267,
+            "recovery": 0.9732722511357621
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0733230132452256,
+            "activation_rms_ratio_min": 0.8722389001728653,
+            "recovery": 0.9626102610411817
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0337186953939679,
+            "activation_rms_ratio_min": 0.9189741762934405,
+            "recovery": 0.9690594246630527
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9953880146622549,
+            "activation_rms_ratio_min": 0.9536258162015795,
+            "recovery": 0.9926911987914142
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0374805315964126,
+            "activation_rms_ratio_min": 0.8309623431601593,
+            "recovery": 0.9862968685727679
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0242763633801897,
+            "activation_rms_ratio_min": 0.9190718192415307,
+            "recovery": 0.9835690535980799
+          }
+        }
+      }
+    },
+    "control_qkvo": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1420883564228819,
+        "activation_rms_ratio_min": 0.8120545457971319,
+        "equal_concept_recovery": 0.9893437990208537,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0467039497215498,
+            "activation_rms_ratio_min": 0.9097538405326488,
+            "recovery": 0.9870628061547553
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.040234078874007,
+            "activation_rms_ratio_min": 0.8998731884241796,
+            "recovery": 0.9915490873624608
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0090349315940774,
+            "activation_rms_ratio_min": 0.9120778293891582,
+            "recovery": 0.9941267057079244
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0282464971708252,
+            "activation_rms_ratio_min": 0.9053730547394462,
+            "recovery": 0.9952861809883751
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.1004124963136455,
+            "activation_rms_ratio_min": 0.845556348856805,
+            "recovery": 0.9898121079758011
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0341025471875938,
+            "activation_rms_ratio_min": 0.9204102236304158,
+            "recovery": 0.9966737080769683
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.018279541122804,
+            "activation_rms_ratio_min": 0.9580001264834124,
+            "recovery": 0.9889630824205012
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1420883564228819,
+            "activation_rms_ratio_min": 0.8120545457971319,
+            "recovery": 0.9798085148626539
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.074908486109974,
+            "activation_rms_ratio_min": 0.8717545129063939,
+            "recovery": 0.9769777912966936
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0559958110034617,
+            "activation_rms_ratio_min": 0.9058717939125446,
+            "recovery": 0.9979652336054423
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 1.000387791787179,
+            "activation_rms_ratio_min": 0.9533736587168187,
+            "recovery": 0.9829018426887779
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.026645419421862,
+            "activation_rms_ratio_min": 0.8405355669776001,
+            "recovery": 0.9884635401060616
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0095125920202135,
+            "activation_rms_ratio_min": 0.9312136651532353,
+            "recovery": 0.991878786024684
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1524340024121686,
+        "activation_rms_ratio_min": 0.8092123330402151,
+        "equal_concept_recovery": 0.9704148525479747,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.049929795457385,
+            "activation_rms_ratio_min": 0.904309849388909,
+            "recovery": 0.9816566695731912
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0122188683953985,
+            "activation_rms_ratio_min": 0.9137229275458228,
+            "recovery": 0.9825477341923259
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0054172347655135,
+            "activation_rms_ratio_min": 0.9255739508175631,
+            "recovery": 0.9726472660784545
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0115309806431039,
+            "activation_rms_ratio_min": 0.9136044155796997,
+            "recovery": 0.9706930113035872
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0853027008129195,
+            "activation_rms_ratio_min": 0.8539129821174641,
+            "recovery": 0.9859616326508245
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.01654951373414,
+            "activation_rms_ratio_min": 0.9226636323647214,
+            "recovery": 0.9770523951508854
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0205060110403614,
+            "activation_rms_ratio_min": 0.9534782721323902,
+            "recovery": 0.9435471287194059
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1524340024121686,
+            "activation_rms_ratio_min": 0.8092123330402151,
+            "recovery": 0.962905608601422
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0726272482579593,
+            "activation_rms_ratio_min": 0.8730363721651703,
+            "recovery": 0.94946308321378
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0330108272450333,
+            "activation_rms_ratio_min": 0.9197362737227058,
+            "recovery": 0.9601033212364724
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9948472129358217,
+            "activation_rms_ratio_min": 0.9534669030021511,
+            "recovery": 0.983124838338546
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0402058259821303,
+            "activation_rms_ratio_min": 0.831196388362068,
+            "recovery": 0.9734310385194582
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.025998778983802,
+            "activation_rms_ratio_min": 0.9188569624493984,
+            "recovery": 0.972259355545319
+          }
+        }
+      }
+    },
+    "selected_kv": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1448007220753853,
+        "activation_rms_ratio_min": 0.804061971446809,
+        "equal_concept_recovery": 1.0078763371566077,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0503935304116372,
+            "activation_rms_ratio_min": 0.9203584799641393,
+            "recovery": 0.9945558315694235
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.039788068488112,
+            "activation_rms_ratio_min": 0.9043826683140881,
+            "recovery": 1.0133707700430645
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.008236585739433,
+            "activation_rms_ratio_min": 0.9206917333278707,
+            "recovery": 1.007554314060092
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.028159543457041,
+            "activation_rms_ratio_min": 0.9181271046260647,
+            "recovery": 1.0130296077798686
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.1042293342775515,
+            "activation_rms_ratio_min": 0.8630803679259237,
+            "recovery": 0.9983183905778087
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.032524807739905,
+            "activation_rms_ratio_min": 0.9234792960754681,
+            "recovery": 1.0162212009498306
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0184534067500257,
+            "activation_rms_ratio_min": 0.9578907553003713,
+            "recovery": 0.9826839890959181
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1448007220753853,
+            "activation_rms_ratio_min": 0.804061971446809,
+            "recovery": 1.005810759151823
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.076204095863801,
+            "activation_rms_ratio_min": 0.8764603320120348,
+            "recovery": 0.993217545023568
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0540302981364134,
+            "activation_rms_ratio_min": 0.904424741014367,
+            "recovery": 1.0127906048513813
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9992139074892089,
+            "activation_rms_ratio_min": 0.954269067584365,
+            "recovery": 1.004729025639098
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0426285090042018,
+            "activation_rms_ratio_min": 0.841072393375296,
+            "recovery": 1.055864880894961
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0144582334257826,
+            "activation_rms_ratio_min": 0.9315539565193417,
+            "recovery": 1.0042454633990638
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.14252223392828,
+        "activation_rms_ratio_min": 0.8125865667420499,
+        "equal_concept_recovery": 0.9012703417734755,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0359226021397805,
+            "activation_rms_ratio_min": 0.9132259022854132,
+            "recovery": 0.9196809279232099
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0141641889355135,
+            "activation_rms_ratio_min": 0.9166127509711579,
+            "recovery": 0.9106807266481017
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0061774615946315,
+            "activation_rms_ratio_min": 0.9283822151840249,
+            "recovery": 0.8982054308738898
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0054319931932665,
+            "activation_rms_ratio_min": 0.9177083833838441,
+            "recovery": 0.9027992563575535
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0775162873007431,
+            "activation_rms_ratio_min": 0.8577597163425514,
+            "recovery": 0.9675359482025616
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0096799305920108,
+            "activation_rms_ratio_min": 0.9264612480629338,
+            "recovery": 0.909841273576802
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0174508762914403,
+            "activation_rms_ratio_min": 0.9533617839512927,
+            "recovery": 0.824806710043805
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.14252223392828,
+            "activation_rms_ratio_min": 0.8125865667420499,
+            "recovery": 0.9145575021446302
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.060484669536122,
+            "activation_rms_ratio_min": 0.8779402749131952,
+            "recovery": 0.8734664361154683
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0298928952529758,
+            "activation_rms_ratio_min": 0.9199212684020993,
+            "recovery": 0.8648008305921622
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9973067625719597,
+            "activation_rms_ratio_min": 0.9545892458708911,
+            "recovery": 0.907239385142969
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0403193390922152,
+            "activation_rms_ratio_min": 0.8310044410260741,
+            "recovery": 0.9252199243693537
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0221547591199485,
+            "activation_rms_ratio_min": 0.9234884019598917,
+            "recovery": 0.8976800910646743
+          }
+        }
+      }
+    },
+    "selected_o": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1425658169214952,
+        "activation_rms_ratio_min": 0.8100346229637391,
+        "equal_concept_recovery": 0.9039419013003591,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.038870173036359,
+            "activation_rms_ratio_min": 0.9169868063190838,
+            "recovery": 0.8692891832632816
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.039564545592676,
+            "activation_rms_ratio_min": 0.8997569090470983,
+            "recovery": 0.8720274563395436
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0035336983260081,
+            "activation_rms_ratio_min": 0.915995698514845,
+            "recovery": 0.8540404705557273
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0233054048674683,
+            "activation_rms_ratio_min": 0.9107789948782463,
+            "recovery": 0.8385735013976302
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0967924085347764,
+            "activation_rms_ratio_min": 0.8477941560178801,
+            "recovery": 0.9593332384811142
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0314846076107795,
+            "activation_rms_ratio_min": 0.9226734912502302,
+            "recovery": 0.9388576790039879
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.016801015047798,
+            "activation_rms_ratio_min": 0.9581099612702793,
+            "recovery": 0.9543900897949985
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1425658169214952,
+            "activation_rms_ratio_min": 0.8100346229637391,
+            "recovery": 0.9096423203604767
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0724920810490148,
+            "activation_rms_ratio_min": 0.8680523331056389,
+            "recovery": 0.8849878635465932
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0520650723288862,
+            "activation_rms_ratio_min": 0.9065177869861482,
+            "recovery": 0.9388685854736213
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9999001656433494,
+            "activation_rms_ratio_min": 0.9537617728415927,
+            "recovery": 0.9304309710074635
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0235217185937227,
+            "activation_rms_ratio_min": 0.8425382169776788,
+            "recovery": 0.8980587053590238
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0049075961714917,
+            "activation_rms_ratio_min": 0.9338937264350161,
+            "recovery": 0.9027446523212079
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1515109606930707,
+        "activation_rms_ratio_min": 0.8090718164482965,
+        "equal_concept_recovery": 0.9018369979236235,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.042568279722155,
+            "activation_rms_ratio_min": 0.9133559610866457,
+            "recovery": 0.8658436466186402
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.01278257328118,
+            "activation_rms_ratio_min": 0.9125180256158366,
+            "recovery": 0.8835739744116882
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.010789148599461,
+            "activation_rms_ratio_min": 0.9261994718092278,
+            "recovery": 0.855458569801129
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0090903489924854,
+            "activation_rms_ratio_min": 0.9181010612645389,
+            "recovery": 0.838725439451323
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0800331849900957,
+            "activation_rms_ratio_min": 0.8562199833733424,
+            "recovery": 0.9582159026696666
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0152534292319726,
+            "activation_rms_ratio_min": 0.9240048575658701,
+            "recovery": 0.9346473686469385
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0203743313424578,
+            "activation_rms_ratio_min": 0.9523920898075784,
+            "recovery": 0.9258172966261029
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1515109606930707,
+            "activation_rms_ratio_min": 0.8090718164482965,
+            "recovery": 0.9081347333373218
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.071225353845889,
+            "activation_rms_ratio_min": 0.8712646743241661,
+            "recovery": 0.8854625978836544
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0360496382229034,
+            "activation_rms_ratio_min": 0.9159611756832333,
+            "recovery": 0.9358116112683945
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9944219960030771,
+            "activation_rms_ratio_min": 0.9539713739316579,
+            "recovery": 0.933673462566738
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0364492230207185,
+            "activation_rms_ratio_min": 0.834634981495968,
+            "recovery": 0.8954026296694193
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.021874836967074,
+            "activation_rms_ratio_min": 0.9235805846058537,
+            "recovery": 0.9031137400560881
+          }
+        }
+      }
+    },
+    "selected_q": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1482337911142242,
+        "activation_rms_ratio_min": 0.8082982403910962,
+        "equal_concept_recovery": 1.0021707445619528,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0473348190763645,
+            "activation_rms_ratio_min": 0.914414236912062,
+            "recovery": 0.9993009923866656
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.040311196594504,
+            "activation_rms_ratio_min": 0.8988460840383448,
+            "recovery": 1.0043846663680758
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0064524395578567,
+            "activation_rms_ratio_min": 0.9145099057244912,
+            "recovery": 1.000808200795738
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0284617893849899,
+            "activation_rms_ratio_min": 0.9092271607695255,
+            "recovery": 1.0029963455541782
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.1008211473288243,
+            "activation_rms_ratio_min": 0.8460801808974889,
+            "recovery": 1.0010059403592442
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0338103059430135,
+            "activation_rms_ratio_min": 0.9208869544798403,
+            "recovery": 1.008471004217157
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0181115343808418,
+            "activation_rms_ratio_min": 0.958249653750246,
+            "recovery": 0.9932319201102563
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1482337911142242,
+            "activation_rms_ratio_min": 0.8082982403910962,
+            "recovery": 1.004693760601426
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0775079249613762,
+            "activation_rms_ratio_min": 0.8756326137989862,
+            "recovery": 0.9919058406634453
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0544694985510341,
+            "activation_rms_ratio_min": 0.9036218167702792,
+            "recovery": 1.0067715914348654
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9997554299668997,
+            "activation_rms_ratio_min": 0.9538400111890531,
+            "recovery": 1.0055687646971183
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0241577439189082,
+            "activation_rms_ratio_min": 0.8396224476562913,
+            "recovery": 1.003539056598127
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.009775835120743,
+            "activation_rms_ratio_min": 0.930468868714573,
+            "recovery": 1.0055415955190867
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1522712749011326,
+        "activation_rms_ratio_min": 0.8061217300688068,
+        "equal_concept_recovery": 0.9625012004724403,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0475984912194027,
+            "activation_rms_ratio_min": 0.9067253101669278,
+            "recovery": 0.9797426515900298
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0101107889794236,
+            "activation_rms_ratio_min": 0.913126824263257,
+            "recovery": 0.9752537279694126
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0098884218991195,
+            "activation_rms_ratio_min": 0.9251898301709292,
+            "recovery": 0.9791959368545893
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0091642502683804,
+            "activation_rms_ratio_min": 0.9148524245180389,
+            "recovery": 0.9738225637551515
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0866888267001786,
+            "activation_rms_ratio_min": 0.851134311613619,
+            "recovery": 1.0004987173166198
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0160151335568395,
+            "activation_rms_ratio_min": 0.9224053626252218,
+            "recovery": 0.9818762927721869
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0177501945132117,
+            "activation_rms_ratio_min": 0.9542104531912787,
+            "recovery": 0.9110290074133132
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1522712749011326,
+            "activation_rms_ratio_min": 0.8061217300688068,
+            "recovery": 0.9484129810408839
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0693146157553413,
+            "activation_rms_ratio_min": 0.8720633922388845,
+            "recovery": 0.92315508476896
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.039395709229593,
+            "activation_rms_ratio_min": 0.9122447466341094,
+            "recovery": 0.9516033048909821
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9964651219300265,
+            "activation_rms_ratio_min": 0.954768805693465,
+            "recovery": 0.9391093855509673
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0393870933274978,
+            "activation_rms_ratio_min": 0.8275751296377813,
+            "recovery": 0.9933661152151169
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0214491035651658,
+            "activation_rms_ratio_min": 0.9222353507505142,
+            "recovery": 0.95544983700351
+          }
+        }
+      }
+    },
+    "selected_qkv": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1450205688916304,
+        "activation_rms_ratio_min": 0.8072656657903656,
+        "equal_concept_recovery": 1.005954536112816,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.0507423327702128,
+            "activation_rms_ratio_min": 0.932269019762086,
+            "recovery": 0.9917884481633137
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0392455504882039,
+            "activation_rms_ratio_min": 0.9034447509388818,
+            "recovery": 1.0158955396236158
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0076180501146594,
+            "activation_rms_ratio_min": 0.927012112194295,
+            "recovery": 1.007380795717008
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0276087616742817,
+            "activation_rms_ratio_min": 0.9274751489050124,
+            "recovery": 1.0147398273482362
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.105382207145097,
+            "activation_rms_ratio_min": 0.8652574233461656,
+            "recovery": 0.9973916853140473
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.031962517428627,
+            "activation_rms_ratio_min": 0.925877236900944,
+            "recovery": 1.022903648367389
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0211087690701828,
+            "activation_rms_ratio_min": 0.9579295529233017,
+            "recovery": 0.9756764908127425
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1450205688916304,
+            "activation_rms_ratio_min": 0.8072656657903656,
+            "recovery": 0.9959831037290373
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0747951264666973,
+            "activation_rms_ratio_min": 0.8869921107037227,
+            "recovery": 0.9628237239866468
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0539727299749302,
+            "activation_rms_ratio_min": 0.9071010412098097,
+            "recovery": 1.0167285420953045
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9985485062499224,
+            "activation_rms_ratio_min": 0.9550082967451662,
+            "recovery": 1.0080541350735586
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0486563875508261,
+            "activation_rms_ratio_min": 0.840765588289722,
+            "recovery": 1.0611923637070835
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0212882068262201,
+            "activation_rms_ratio_min": 0.9311261104585685,
+            "recovery": 1.0068506655286242
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.136062924319086,
+        "activation_rms_ratio_min": 0.8163075794313358,
+        "equal_concept_recovery": 0.857285259512116,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.030205142507727,
+            "activation_rms_ratio_min": 0.9170982742457927,
+            "recovery": 0.8931085259561831
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0122702042213754,
+            "activation_rms_ratio_min": 0.9165622222675552,
+            "recovery": 0.8848662042492128
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.009013462620876,
+            "activation_rms_ratio_min": 0.9255785151739643,
+            "recovery": 0.8705441620732904
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 0.9978375429010435,
+            "activation_rms_ratio_min": 0.9245836100577632,
+            "recovery": 0.8693792252947771
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.077996083551465,
+            "activation_rms_ratio_min": 0.85739929427356,
+            "recovery": 0.9620089300090721
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0076702781745246,
+            "activation_rms_ratio_min": 0.9279766248480842,
+            "recovery": 0.8825957092526436
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.0134738234478453,
+            "activation_rms_ratio_min": 0.9541963665691358,
+            "recovery": 0.7423900591867784
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.136062924319086,
+            "activation_rms_ratio_min": 0.8163075794313358,
+            "recovery": 0.8420730331135013
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0506968539689079,
+            "activation_rms_ratio_min": 0.88725252729586,
+            "recovery": 0.7665785908479421
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0291375493575863,
+            "activation_rms_ratio_min": 0.9212776982959661,
+            "recovery": 0.8139289187568197
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9977230164549151,
+            "activation_rms_ratio_min": 0.9537890654384616,
+            "recovery": 0.8524210193797117
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0445467943400344,
+            "activation_rms_ratio_min": 0.8271815839566361,
+            "recovery": 0.9118347785081787
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0231130635743222,
+            "activation_rms_ratio_min": 0.9235589048192404,
+            "recovery": 0.8529792170293975
+          }
+        }
+      }
+    },
+    "selected_qkvo": {
+      "frozen_chameleon_prototype": {
+        "activation_rms_ratio_max": 1.1392817030960396,
+        "activation_rms_ratio_min": 0.810990996634898,
+        "equal_concept_recovery": 0.9072581210527171,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.042721322755768,
+            "activation_rms_ratio_min": 0.9363677485980175,
+            "recovery": 0.8577087709762377
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0388825142917981,
+            "activation_rms_ratio_min": 0.9039675199894349,
+            "recovery": 0.8860719333679095
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0062025718072007,
+            "activation_rms_ratio_min": 0.9323336525623718,
+            "recovery": 0.8591435943040419
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 1.0217522980404967,
+            "activation_rms_ratio_min": 0.9352346731476004,
+            "recovery": 0.8495920345442843
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.1017749580783713,
+            "activation_rms_ratio_min": 0.8679352046862068,
+            "recovery": 0.9556701800265985
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.0293510036546016,
+            "activation_rms_ratio_min": 0.9284894452548277,
+            "recovery": 0.9586114225768955
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.019681010218748,
+            "activation_rms_ratio_min": 0.9579025216737813,
+            "recovery": 0.9302061673644687
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1392817030960396,
+            "activation_rms_ratio_min": 0.810990996634898,
+            "recovery": 0.9005285900580833
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0683747102848205,
+            "activation_rms_ratio_min": 0.8931905118788269,
+            "recovery": 0.8420509721244873
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0510278613284174,
+            "activation_rms_ratio_min": 0.909795600546418,
+            "recovery": 0.9533395636754407
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9981659599113234,
+            "activation_rms_ratio_min": 0.9553435414529691,
+            "recovery": 0.9374912619718928
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0498537653195081,
+            "activation_rms_ratio_min": 0.8429119156376332,
+            "recovery": 0.9552428589603092
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0210640491438985,
+            "activation_rms_ratio_min": 0.9335763877263301,
+            "recovery": 0.9086982237346727
+          }
+        }
+      },
+      "natural_hybrid_activity": {
+        "activation_rms_ratio_max": 1.1297200460310688,
+        "activation_rms_ratio_min": 0.8213661726603856,
+        "equal_concept_recovery": 0.7688298702013936,
+        "per_concept": {
+          "HTML": {
+            "activation_rms_ratio_max": 1.021446174033757,
+            "activation_rms_ratio_min": 0.9200998634118354,
+            "recovery": 0.7650008346828426
+          },
+          "all-caps": {
+            "activation_rms_ratio_max": 1.0134568723731505,
+            "activation_rms_ratio_min": 0.9165376504220604,
+            "recovery": 0.7746020073938413
+          },
+          "biology-focused": {
+            "activation_rms_ratio_max": 1.0111007349608756,
+            "activation_rms_ratio_min": 0.9249877989226064,
+            "recovery": 0.7389639028376997
+          },
+          "chemistry-based": {
+            "activation_rms_ratio_max": 0.9930638555735439,
+            "activation_rms_ratio_min": 0.9307446988385352,
+            "recovery": 0.7215488309031564
+          },
+          "comforting": {
+            "activation_rms_ratio_max": 1.0727309609165017,
+            "activation_rms_ratio_min": 0.861567148123408,
+            "recovery": 0.9195534091250197
+          },
+          "confused": {
+            "activation_rms_ratio_max": 1.00598759978077,
+            "activation_rms_ratio_min": 0.9307605447438345,
+            "recovery": 0.8240105622794709
+          },
+          "deception": {
+            "activation_rms_ratio_max": 1.013365281572998,
+            "activation_rms_ratio_min": 0.9543217240241694,
+            "recovery": 0.680748555360144
+          },
+          "finnish": {
+            "activation_rms_ratio_max": 1.1297200460310688,
+            "activation_rms_ratio_min": 0.8213661726603856,
+            "recovery": 0.7620628606969547
+          },
+          "german": {
+            "activation_rms_ratio_max": 1.0454088463148774,
+            "activation_rms_ratio_min": 0.8924119877131543,
+            "recovery": 0.6679922985437066
+          },
+          "harmful": {
+            "activation_rms_ratio_max": 1.0260835050199393,
+            "activation_rms_ratio_min": 0.9244522225636996,
+            "recovery": 0.7611625865993554
+          },
+          "jokey": {
+            "activation_rms_ratio_max": 0.9965935502162482,
+            "activation_rms_ratio_min": 0.9547378090593811,
+            "recovery": 0.7969579035103416
+          },
+          "literature-focused": {
+            "activation_rms_ratio_max": 1.0451775290189504,
+            "activation_rms_ratio_min": 0.8301740084378337,
+            "recovery": 0.8122292643453757
+          },
+          "mathematical": {
+            "activation_rms_ratio_max": 1.0241487812570818,
+            "activation_rms_ratio_min": 0.9258138627698976,
+            "recovery": 0.7699552963402068
+          }
+        }
+      }
+    }
+  },
+  "state_trajectory_summaries": {
+    "chameleon": {
+      "equal_concept": {
+        "cosine": 1.000000000000001,
+        "norm_ratio": 1.0,
+        "recovery": 1.0,
+        "relative_l2": 0.0
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 1.0000000000000022,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "all-caps": {
+          "cosine": 1.0000000000000004,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "biology-focused": {
+          "cosine": 1.0000000000000042,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "chemistry-based": {
+          "cosine": 1.000000000000003,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "comforting": {
+          "cosine": 1.0000000000000004,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "confused": {
+          "cosine": 1.0000000000000007,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "deception": {
+          "cosine": 1.0,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "finnish": {
+          "cosine": 1.0000000000000007,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "german": {
+          "cosine": 1.0000000000000007,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "harmful": {
+          "cosine": 1.0000000000000009,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "jokey": {
+          "cosine": 1.0000000000000004,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "literature-focused": {
+          "cosine": 1.0000000000000033,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        },
+        "mathematical": {
+          "cosine": 1.0000000000000009,
+          "norm_ratio": 1.0,
+          "recovery": 1.0,
+          "relative_l2": 0.0
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "9": 1.0
+      }
+    },
+    "control_kv": {
+      "equal_concept": {
+        "cosine": 0.9994955001946093,
+        "norm_ratio": 0.9894881711317981,
+        "recovery": 0.9889900027092401,
+        "relative_l2": 0.03248006328253935
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9997322670853173,
+          "norm_ratio": 0.9955587898283145,
+          "recovery": 0.995292171444887,
+          "relative_l2": 0.023194108696641805
+        },
+        "all-caps": {
+          "cosine": 0.9996355735550038,
+          "norm_ratio": 0.9942419279586452,
+          "recovery": 0.9938794864538816,
+          "relative_l2": 0.02728582013990754
+        },
+        "biology-focused": {
+          "cosine": 0.9995619656286441,
+          "norm_ratio": 0.9856220618883698,
+          "recovery": 0.9851903335591036,
+          "relative_l2": 0.0327119210451768
+        },
+        "chemistry-based": {
+          "cosine": 0.9994467335904698,
+          "norm_ratio": 0.984856373126731,
+          "recovery": 0.9843114919158129,
+          "relative_l2": 0.036314246574326844
+        },
+        "comforting": {
+          "cosine": 0.9998892689168426,
+          "norm_ratio": 0.9964579778928075,
+          "recovery": 0.9963476416107697,
+          "relative_l2": 0.015239739349142113
+        },
+        "confused": {
+          "cosine": 0.9996919342326589,
+          "norm_ratio": 0.9903304378057277,
+          "recovery": 0.9900253872945426,
+          "relative_l2": 0.026501151602809126
+        },
+        "deception": {
+          "cosine": 0.9991068513868485,
+          "norm_ratio": 0.9882160765133691,
+          "recovery": 0.9873335281556425,
+          "relative_l2": 0.04373820985673494
+        },
+        "finnish": {
+          "cosine": 0.9991928095849089,
+          "norm_ratio": 0.9831665723656746,
+          "recovery": 0.9823736027323157,
+          "relative_l2": 0.043019418442562005
+        },
+        "german": {
+          "cosine": 0.999179721204404,
+          "norm_ratio": 0.9783379932992222,
+          "recovery": 0.9775362674017798,
+          "relative_l2": 0.04506792079281039
+        },
+        "harmful": {
+          "cosine": 0.9993685181371755,
+          "norm_ratio": 0.9855617833184936,
+          "recovery": 0.9849401138931317,
+          "relative_l2": 0.038076461956529674
+        },
+        "jokey": {
+          "cosine": 0.9993695491655905,
+          "norm_ratio": 1.0006897295932236,
+          "recovery": 1.0000587843311912,
+          "relative_l2": 0.035473034847497066
+        },
+        "literature-focused": {
+          "cosine": 0.9998148637933666,
+          "norm_ratio": 0.9929171113426782,
+          "recovery": 0.9927332919289608,
+          "relative_l2": 0.02040987377670727
+        },
+        "mathematical": {
+          "cosine": 0.9994514462486883,
+          "norm_ratio": 0.9873893897801195,
+          "recovery": 0.9868479344981025,
+          "relative_l2": 0.03520891559216592
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9931357086252486,
+        "11": 0.9858201334985822,
+        "12": 0.9877749795364204,
+        "9": 1.0
+      }
+    },
+    "control_o": {
+      "equal_concept": {
+        "cosine": 0.9999323330685287,
+        "norm_ratio": 0.9965714591450912,
+        "recovery": 0.99650409155339,
+        "relative_l2": 0.011547785967823953
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.999973445987566,
+          "norm_ratio": 0.9986675569305679,
+          "recovery": 0.9986410374429955,
+          "relative_l2": 0.007378570511771983
+        },
+        "all-caps": {
+          "cosine": 0.9999318638124359,
+          "norm_ratio": 0.9959989473571843,
+          "recovery": 0.9959310981245229,
+          "relative_l2": 0.012162345208682812
+        },
+        "biology-focused": {
+          "cosine": 0.9999730604877822,
+          "norm_ratio": 0.9983604122466119,
+          "recovery": 0.9983335170551236,
+          "relative_l2": 0.00751218453412335
+        },
+        "chemistry-based": {
+          "cosine": 0.9999739867465139,
+          "norm_ratio": 0.998215319522625,
+          "recovery": 0.9981893529025812,
+          "relative_l2": 0.007420037456021936
+        },
+        "comforting": {
+          "cosine": 0.9999785194156341,
+          "norm_ratio": 0.99891701766679,
+          "recovery": 0.998895560333415,
+          "relative_l2": 0.006635640707200902
+        },
+        "confused": {
+          "cosine": 0.9999515088274564,
+          "norm_ratio": 0.995733696556518,
+          "recovery": 0.9956854145973655,
+          "relative_l2": 0.010703392721644955
+        },
+        "deception": {
+          "cosine": 0.9997786927749936,
+          "norm_ratio": 0.9928590694472108,
+          "recovery": 0.9926393257380586,
+          "relative_l2": 0.022124094582557444
+        },
+        "finnish": {
+          "cosine": 0.9999427069976242,
+          "norm_ratio": 0.9956536633657823,
+          "recovery": 0.9955966312896813,
+          "relative_l2": 0.011489350350655743
+        },
+        "german": {
+          "cosine": 0.9999420341579366,
+          "norm_ratio": 0.9956069912540417,
+          "recovery": 0.9955492996271067,
+          "relative_l2": 0.011497463227026293
+        },
+        "harmful": {
+          "cosine": 0.9999111998021982,
+          "norm_ratio": 0.992687800626754,
+          "recovery": 0.9925997334519872,
+          "relative_l2": 0.015010505365807825
+        },
+        "jokey": {
+          "cosine": 0.9998790026518061,
+          "norm_ratio": 1.0008734982577494,
+          "recovery": 1.0007523841746453,
+          "relative_l2": 0.015556509646713727
+        },
+        "literature-focused": {
+          "cosine": 0.9999611715081651,
+          "norm_ratio": 0.9966640617362781,
+          "recovery": 0.9966253630297335,
+          "relative_l2": 0.009398778319002453
+        },
+        "mathematical": {
+          "cosine": 0.9999231367207625,
+          "norm_ratio": 0.9951909339180723,
+          "recovery": 0.9951144724268562,
+          "relative_l2": 0.013232344950501962
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9988624361632669,
+        "11": 0.9962333517201323,
+        "12": 0.9942099568762087,
+        "9": 1.0
+      }
+    },
+    "control_q": {
+      "equal_concept": {
+        "cosine": 0.9997816776180556,
+        "norm_ratio": 0.9976744101946798,
+        "recovery": 0.9974565786013361,
+        "relative_l2": 0.02044641811368103
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9999389843366246,
+          "norm_ratio": 0.9996987561103794,
+          "recovery": 0.9996377430067978,
+          "relative_l2": 0.01082082829508862
+        },
+        "all-caps": {
+          "cosine": 0.999905186700379,
+          "norm_ratio": 1.0002290996658865,
+          "recovery": 1.000134252299496,
+          "relative_l2": 0.013493295177060712
+        },
+        "biology-focused": {
+          "cosine": 0.9998014716675732,
+          "norm_ratio": 0.9931044075687698,
+          "recovery": 0.9929072492373588,
+          "relative_l2": 0.02101844507974849
+        },
+        "chemistry-based": {
+          "cosine": 0.9997038688608495,
+          "norm_ratio": 0.9917008011133898,
+          "recovery": 0.9914071311947199,
+          "relative_l2": 0.02561217479915775
+        },
+        "comforting": {
+          "cosine": 0.9999390364997687,
+          "norm_ratio": 0.9986851235422447,
+          "recovery": 0.9986242404641318,
+          "relative_l2": 0.011103169093823216
+        },
+        "confused": {
+          "cosine": 0.9998479919140393,
+          "norm_ratio": 0.9993320210755294,
+          "recovery": 0.9991801143471797,
+          "relative_l2": 0.017440406163761992
+        },
+        "deception": {
+          "cosine": 0.9995781327575671,
+          "norm_ratio": 1.00596330181996,
+          "recovery": 1.0055388923472526,
+          "relative_l2": 0.029715273883833982
+        },
+        "finnish": {
+          "cosine": 0.9997178218511094,
+          "norm_ratio": 0.9956698482401436,
+          "recovery": 0.995388893601584,
+          "relative_l2": 0.024093164903202957
+        },
+        "german": {
+          "cosine": 0.9997957235247762,
+          "norm_ratio": 0.9938402782033084,
+          "recovery": 0.9936372900460746,
+          "relative_l2": 0.02104027608741455
+        },
+        "harmful": {
+          "cosine": 0.9995713409354459,
+          "norm_ratio": 0.996901826931508,
+          "recovery": 0.9964745473690684,
+          "relative_l2": 0.02935670075418838
+        },
+        "jokey": {
+          "cosine": 0.9997636170918338,
+          "norm_ratio": 1.0008389558189146,
+          "recovery": 1.0006023592754867,
+          "relative_l2": 0.02171154501406495
+        },
+        "literature-focused": {
+          "cosine": 0.9998042658901771,
+          "norm_ratio": 0.9964237795351469,
+          "recovery": 0.9962287459504309,
+          "relative_l2": 0.020052514661123108
+        },
+        "mathematical": {
+          "cosine": 0.9997943670045795,
+          "norm_ratio": 0.9973791329056567,
+          "recovery": 0.9971740626777901,
+          "relative_l2": 0.020345641565384726
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9965964065646145,
+        "11": 0.9984194474212101,
+        "12": 0.9953253382227204,
+        "9": 1.0
+      }
+    },
+    "control_qkv": {
+      "equal_concept": {
+        "cosine": 0.9989185092246061,
+        "norm_ratio": 0.9864881606097293,
+        "recovery": 0.985424816345463,
+        "relative_l2": 0.04719104585396506
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9992869462142826,
+          "norm_ratio": 0.9941129402637475,
+          "recovery": 0.9934038368977345,
+          "relative_l2": 0.03793027810776094
+        },
+        "all-caps": {
+          "cosine": 0.9994707220579551,
+          "norm_ratio": 0.9950261224053634,
+          "recovery": 0.9944994215663653,
+          "relative_l2": 0.03251929515624504
+        },
+        "biology-focused": {
+          "cosine": 0.9984711168858433,
+          "norm_ratio": 0.9772444962198693,
+          "recovery": 0.9757504268487895,
+          "relative_l2": 0.05920956629332382
+        },
+        "chemistry-based": {
+          "cosine": 0.9984883308659535,
+          "norm_ratio": 0.9762303479368712,
+          "recovery": 0.9747546465216584,
+          "relative_l2": 0.05929033601141251
+        },
+        "comforting": {
+          "cosine": 0.9997848635583095,
+          "norm_ratio": 0.9948597900332072,
+          "recovery": 0.9946457703209102,
+          "relative_l2": 0.021289436133637298
+        },
+        "confused": {
+          "cosine": 0.9992209227601586,
+          "norm_ratio": 0.9894102701600906,
+          "recovery": 0.9886395008017157,
+          "relative_l2": 0.04066637576470811
+        },
+        "deception": {
+          "cosine": 0.9986981421604278,
+          "norm_ratio": 0.9952812632525876,
+          "recovery": 0.9939858406450165,
+          "relative_l2": 0.05126148078412866
+        },
+        "finnish": {
+          "cosine": 0.998207499260599,
+          "norm_ratio": 0.9762285363080142,
+          "recovery": 0.9744804136933415,
+          "relative_l2": 0.06355839530323922
+        },
+        "german": {
+          "cosine": 0.9984392322969655,
+          "norm_ratio": 0.9702545617106249,
+          "recovery": 0.9687417031995473,
+          "relative_l2": 0.06210292605429394
+        },
+        "harmful": {
+          "cosine": 0.9985060210920293,
+          "norm_ratio": 0.9823341004074224,
+          "recovery": 0.9808679141391795,
+          "relative_l2": 0.057002065211839356
+        },
+        "jokey": {
+          "cosine": 0.9989943110061036,
+          "norm_ratio": 1.000219336001103,
+          "recovery": 0.9992133333063752,
+          "relative_l2": 0.04475004487388829
+        },
+        "literature-focused": {
+          "cosine": 0.9993728388948615,
+          "norm_ratio": 0.9884660282514082,
+          "recovery": 0.9878461176755999,
+          "relative_l2": 0.03701350978227432
+        },
+        "mathematical": {
+          "cosine": 0.9989996728663874,
+          "norm_ratio": 0.9846782949761688,
+          "recovery": 0.9836936868747841,
+          "relative_l2": 0.04688988662479418
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9870694140944465,
+        "11": 0.9836872435151093,
+        "12": 0.9822220977841367,
+        "9": 1.0
+      }
+    },
+    "control_qkvo": {
+      "equal_concept": {
+        "cosine": 0.9987431095004831,
+        "norm_ratio": 0.9832071569164095,
+        "recovery": 0.9819759361554292,
+        "relative_l2": 0.05149659773069349
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9992314593382691,
+          "norm_ratio": 0.9920573905327841,
+          "recovery": 0.991294658118942,
+          "relative_l2": 0.03966256288075629
+        },
+        "all-caps": {
+          "cosine": 0.9993203318445696,
+          "norm_ratio": 0.9909078767579735,
+          "recovery": 0.990234556861431,
+          "relative_l2": 0.037490511579549746
+        },
+        "biology-focused": {
+          "cosine": 0.9984038991062218,
+          "norm_ratio": 0.9752951962366891,
+          "recovery": 0.9737385549458394,
+          "relative_l2": 0.06101951396031373
+        },
+        "chemistry-based": {
+          "cosine": 0.9984186634865455,
+          "norm_ratio": 0.9744231175817102,
+          "recovery": 0.9728822702113513,
+          "relative_l2": 0.06111151308280441
+        },
+        "comforting": {
+          "cosine": 0.9997474481410672,
+          "norm_ratio": 0.9938467829404907,
+          "recovery": 0.9935957956931596,
+          "relative_l2": 0.023199691346473116
+        },
+        "confused": {
+          "cosine": 0.9990897337122173,
+          "norm_ratio": 0.9857470843765943,
+          "recovery": 0.98484989295749,
+          "relative_l2": 0.0446941079196127
+        },
+        "deception": {
+          "cosine": 0.9984464728625188,
+          "norm_ratio": 0.9894750923901715,
+          "recovery": 0.9879387013707915,
+          "relative_l2": 0.05658159133137756
+        },
+        "finnish": {
+          "cosine": 0.997869871121334,
+          "norm_ratio": 0.9720125562792886,
+          "recovery": 0.9699445982207091,
+          "relative_l2": 0.06991390878938226
+        },
+        "german": {
+          "cosine": 0.9981056031370839,
+          "norm_ratio": 0.9651963437820428,
+          "recovery": 0.963370222697878,
+          "relative_l2": 0.06924264984173142
+        },
+        "harmful": {
+          "cosine": 0.998268664506703,
+          "norm_ratio": 0.9769843973120796,
+          "recovery": 0.9752954057675767,
+          "relative_l2": 0.06255080247272003
+        },
+        "jokey": {
+          "cosine": 0.9987824717503468,
+          "norm_ratio": 1.00013315535627,
+          "recovery": 0.9989153458721052,
+          "relative_l2": 0.04923723251043203
+        },
+        "literature-focused": {
+          "cosine": 0.9992505981185233,
+          "norm_ratio": 0.985712563216318,
+          "recovery": 0.9849738915161137,
+          "relative_l2": 0.040966089679445254
+        },
+        "mathematical": {
+          "cosine": 0.9987252063808767,
+          "norm_ratio": 0.9799014831509095,
+          "recovery": 0.9786532757871942,
+          "relative_l2": 0.05378559510441687
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9856212123422539,
+        "11": 0.9798908942708764,
+        "12": 0.9768204539628174,
+        "9": 1.0
+      }
+    },
+    "selected_kv": {
+      "equal_concept": {
+        "cosine": 0.9918963560082866,
+        "norm_ratio": 0.9233406368572505,
+        "recovery": 0.9158993826157024,
+        "relative_l2": 0.14354450304477337
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9945249914155614,
+          "norm_ratio": 0.9326350798133349,
+          "recovery": 0.9275315200398839,
+          "relative_l2": 0.12128894449478993
+        },
+        "all-caps": {
+          "cosine": 0.9941323171010286,
+          "norm_ratio": 0.9429039524883374,
+          "recovery": 0.9373700836714596,
+          "relative_l2": 0.11989732862782376
+        },
+        "biology-focused": {
+          "cosine": 0.9927281099822493,
+          "norm_ratio": 0.9403218361053313,
+          "recovery": 0.9334874449527003,
+          "relative_l2": 0.13111002603022073
+        },
+        "chemistry-based": {
+          "cosine": 0.9943426166574003,
+          "norm_ratio": 0.9428445254871274,
+          "recovery": 0.9375121972356963,
+          "relative_l2": 0.11797274462318791
+        },
+        "comforting": {
+          "cosine": 0.9947083640604262,
+          "norm_ratio": 0.944407805006037,
+          "recovery": 0.9394124111273514,
+          "relative_l2": 0.11431317888198844
+        },
+        "confused": {
+          "cosine": 0.9936331068824231,
+          "norm_ratio": 0.9167143401020201,
+          "recovery": 0.9108836802284164,
+          "relative_l2": 0.1362567455534182
+        },
+        "deception": {
+          "cosine": 0.9881564064693359,
+          "norm_ratio": 0.9290303814869778,
+          "recovery": 0.9180377189677768,
+          "relative_l2": 0.1646400310850337
+        },
+        "finnish": {
+          "cosine": 0.9904602271369314,
+          "norm_ratio": 0.908231948824377,
+          "recovery": 0.8996008110290685,
+          "relative_l2": 0.15983951455923479
+        },
+        "german": {
+          "cosine": 0.9889402956000399,
+          "norm_ratio": 0.8864783948096593,
+          "recovery": 0.8766954872994519,
+          "relative_l2": 0.18005988899605585
+        },
+        "harmful": {
+          "cosine": 0.9916848502497513,
+          "norm_ratio": 0.8921133368625357,
+          "recovery": 0.8847476873731168,
+          "relative_l2": 0.16207858576955797
+        },
+        "jokey": {
+          "cosine": 0.990184976278575,
+          "norm_ratio": 0.9278994526898702,
+          "recovery": 0.9188146529368437,
+          "relative_l2": 0.1529180084447888
+        },
+        "literature-focused": {
+          "cosine": 0.9882924718954583,
+          "norm_ratio": 0.9091634922858078,
+          "recovery": 0.8985216454072689,
+          "relative_l2": 0.17176917604945546
+        },
+        "mathematical": {
+          "cosine": 0.9928638943785444,
+          "norm_ratio": 0.9306837331828401,
+          "recovery": 0.9240766337350963,
+          "relative_l2": 0.1339343664664983
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9352584998443435,
+        "11": 0.9276878433030168,
+        "12": 0.9077452294357671,
+        "9": 0.9489094000208698
+      }
+    },
+    "selected_o": {
+      "equal_concept": {
+        "cosine": 0.9998469821258217,
+        "norm_ratio": 0.9973698548734207,
+        "recovery": 0.9972172969419902,
+        "relative_l2": 0.017490067699945162
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9996975859094348,
+          "norm_ratio": 0.9923456236229791,
+          "recovery": 0.9920455843217652,
+          "relative_l2": 0.02558524406265255
+        },
+        "all-caps": {
+          "cosine": 0.9998574490468982,
+          "norm_ratio": 1.000247398583307,
+          "recovery": 1.000104718950469,
+          "relative_l2": 0.016719204233926484
+        },
+        "biology-focused": {
+          "cosine": 0.9998139841956529,
+          "norm_ratio": 0.9942759770714539,
+          "recovery": 0.9940910343200413,
+          "relative_l2": 0.02003260191801607
+        },
+        "chemistry-based": {
+          "cosine": 0.9998116130761814,
+          "norm_ratio": 0.9936352301681426,
+          "recovery": 0.9934480594682221,
+          "relative_l2": 0.020300999828598166
+        },
+        "comforting": {
+          "cosine": 0.9998851627097107,
+          "norm_ratio": 0.9984314279068764,
+          "recovery": 0.9983167706588469,
+          "relative_l2": 0.015200890936299012
+        },
+        "confused": {
+          "cosine": 0.9999563672608529,
+          "norm_ratio": 0.997874402476792,
+          "recovery": 0.9978308649017327,
+          "relative_l2": 0.00956325619636161
+        },
+        "deception": {
+          "cosine": 0.9997750105697546,
+          "norm_ratio": 1.004435797651536,
+          "recovery": 1.0042097958986704,
+          "relative_l2": 0.021653078913956295
+        },
+        "finnish": {
+          "cosine": 0.9998653630763235,
+          "norm_ratio": 0.9947361075760985,
+          "recovery": 0.9946021836379311,
+          "relative_l2": 0.01720010099028247
+        },
+        "german": {
+          "cosine": 0.9998516184920205,
+          "norm_ratio": 0.9946206424941091,
+          "recovery": 0.9944730610724526,
+          "relative_l2": 0.018011451310969342
+        },
+        "harmful": {
+          "cosine": 0.9999264185685675,
+          "norm_ratio": 0.9991857755952337,
+          "recovery": 0.9991122464215018,
+          "relative_l2": 0.012078390386185215
+        },
+        "jokey": {
+          "cosine": 0.9998550014155327,
+          "norm_ratio": 0.9991685349927428,
+          "recovery": 0.9990236743841014,
+          "relative_l2": 0.01704898052025863
+        },
+        "literature-focused": {
+          "cosine": 0.9998514664276544,
+          "norm_ratio": 0.9969573406086368,
+          "recovery": 0.9968092555588153,
+          "relative_l2": 0.017453132429772648
+        },
+        "mathematical": {
+          "cosine": 0.9998637268870992,
+          "norm_ratio": 0.9998938546065619,
+          "recovery": 0.9997576106513224,
+          "relative_l2": 0.01652354837200858
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9975376910933574,
+        "11": 0.9978995575532597,
+        "12": 0.9916608527600559,
+        "9": 1.0
+      }
+    },
+    "selected_q": {
+      "equal_concept": {
+        "cosine": 0.9959739646228853,
+        "norm_ratio": 0.9599911187457187,
+        "recovery": 0.9561593961860974,
+        "relative_l2": 0.09497724461602307
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9966629613680861,
+          "norm_ratio": 0.9741891170327043,
+          "recovery": 0.970940065140022,
+          "relative_l2": 0.0842476593114441
+        },
+        "all-caps": {
+          "cosine": 0.9976008362973829,
+          "norm_ratio": 0.9667983563242059,
+          "recovery": 0.964479776540266,
+          "relative_l2": 0.07570855832092441
+        },
+        "biology-focused": {
+          "cosine": 0.9980736120246039,
+          "norm_ratio": 0.9772922740069566,
+          "recovery": 0.9754102004864313,
+          "relative_l2": 0.06534238264787608
+        },
+        "chemistry-based": {
+          "cosine": 0.9974052684742476,
+          "norm_ratio": 0.9713645139806613,
+          "recovery": 0.9688445641229182,
+          "relative_l2": 0.07637218156655817
+        },
+        "comforting": {
+          "cosine": 0.9978632179264835,
+          "norm_ratio": 0.9956748677784171,
+          "recovery": 0.9935476083820152,
+          "relative_l2": 0.06537237834547567
+        },
+        "confused": {
+          "cosine": 0.9978647973923571,
+          "norm_ratio": 0.9666051888602809,
+          "recovery": 0.9645425150254815,
+          "relative_l2": 0.0723025879751723
+        },
+        "deception": {
+          "cosine": 0.99345555409852,
+          "norm_ratio": 0.9434635188921301,
+          "recovery": 0.9373012130534732,
+          "relative_l2": 0.12446435652347458
+        },
+        "finnish": {
+          "cosine": 0.9919043790222661,
+          "norm_ratio": 0.9366783572383228,
+          "recovery": 0.929120460008787,
+          "relative_l2": 0.13829719961145215
+        },
+        "german": {
+          "cosine": 0.9949125626491608,
+          "norm_ratio": 0.9302374540088251,
+          "recovery": 0.9255315485365777,
+          "relative_l2": 0.11896880706566759
+        },
+        "harmful": {
+          "cosine": 0.9969097743356491,
+          "norm_ratio": 0.9450948391292887,
+          "recovery": 0.9421804505033781,
+          "relative_l2": 0.09402563353832616
+        },
+        "jokey": {
+          "cosine": 0.9933818041455658,
+          "norm_ratio": 0.9424333516542045,
+          "recovery": 0.9362059983289686,
+          "relative_l2": 0.12525385699151498
+        },
+        "literature-focused": {
+          "cosine": 0.9954671859671195,
+          "norm_ratio": 0.9770358728208663,
+          "recovery": 0.9726078088086827,
+          "relative_l2": 0.09675263796196036
+        },
+        "mathematical": {
+          "cosine": 0.9961595863960695,
+          "norm_ratio": 0.9530168319674819,
+          "recovery": 0.9493599414822638,
+          "relative_l2": 0.09759594014845333
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.9656659312926558,
+        "11": 0.9602862932512211,
+        "12": 0.9521927938345054,
+        "9": 0.95401928478263
+      }
+    },
+    "selected_qkv": {
+      "equal_concept": {
+        "cosine": 0.9800503565445198,
+        "norm_ratio": 0.8789267263288904,
+        "recovery": 0.861625195052153,
+        "relative_l2": 0.22109373914630723
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9855344998473379,
+          "norm_ratio": 0.9010984797528275,
+          "recovery": 0.8880777807194664,
+          "relative_l2": 0.18884209844323308
+        },
+        "all-caps": {
+          "cosine": 0.9880217718076577,
+          "norm_ratio": 0.9104279059920639,
+          "recovery": 0.8995266611749255,
+          "relative_l2": 0.1730484697947805
+        },
+        "biology-focused": {
+          "cosine": 0.9853601399966931,
+          "norm_ratio": 0.9085318865617367,
+          "recovery": 0.8952460656908875,
+          "relative_l2": 0.186671074969191
+        },
+        "chemistry-based": {
+          "cosine": 0.9863453107302934,
+          "norm_ratio": 0.9061214123609951,
+          "recovery": 0.893753693473858,
+          "relative_l2": 0.1831043954561364
+        },
+        "comforting": {
+          "cosine": 0.9889868476098559,
+          "norm_ratio": 0.9347349434001828,
+          "recovery": 0.9244512677474305,
+          "relative_l2": 0.15742084710542323
+        },
+        "confused": {
+          "cosine": 0.9838668087582783,
+          "norm_ratio": 0.8712727064389372,
+          "recovery": 0.8572425147518667,
+          "relative_l2": 0.21105512865189197
+        },
+        "deception": {
+          "cosine": 0.9708673423529793,
+          "norm_ratio": 0.8819415362182532,
+          "recovery": 0.8563207166079149,
+          "relative_l2": 0.25566663388543803
+        },
+        "finnish": {
+          "cosine": 0.970407597812498,
+          "norm_ratio": 0.8303851754184981,
+          "recovery": 0.8060323065319783,
+          "relative_l2": 0.27793655634098346
+        },
+        "german": {
+          "cosine": 0.9726627375728273,
+          "norm_ratio": 0.8005010033899564,
+          "recovery": 0.778771005816585,
+          "relative_l2": 0.2884675085946003
+        },
+        "harmful": {
+          "cosine": 0.9797045945794137,
+          "norm_ratio": 0.8351984526456898,
+          "recovery": 0.8183894586614048,
+          "relative_l2": 0.2463135053498171
+        },
+        "jokey": {
+          "cosine": 0.9747858915489049,
+          "norm_ratio": 0.8786352899945438,
+          "recovery": 0.8565455951400665,
+          "relative_l2": 0.24282616879546265
+        },
+        "literature-focused": {
+          "cosine": 0.9722846700003374,
+          "norm_ratio": 0.8833774632117999,
+          "recovery": 0.8589005403323753,
+          "relative_l2": 0.2500001148397182
+        },
+        "mathematical": {
+          "cosine": 0.9818264224616794,
+          "norm_ratio": 0.8838211868900918,
+          "recovery": 0.8678699290292299,
+          "relative_l2": 0.21286610667531833
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.8953940932222497,
+        "11": 0.8823107193372303,
+        "12": 0.8443373221895686,
+        "9": 0.8984212770797423
+      }
+    },
+    "selected_qkvo": {
+      "equal_concept": {
+        "cosine": 0.978921139981649,
+        "norm_ratio": 0.8751713047010372,
+        "recovery": 0.8569530916972874,
+        "relative_l2": 0.2275791002272243
+      },
+      "per_concept": {
+        "HTML": {
+          "cosine": 0.9819205353124605,
+          "norm_ratio": 0.891465521695285,
+          "recovery": 0.8753664516665107,
+          "relative_l2": 0.20928969437021933
+        },
+        "all-caps": {
+          "cosine": 0.9873676495951733,
+          "norm_ratio": 0.9095034332660978,
+          "recovery": 0.8980159812945562,
+          "relative_l2": 0.17701333536690517
+        },
+        "biology-focused": {
+          "cosine": 0.9828988662323552,
+          "norm_ratio": 0.9014369580534438,
+          "recovery": 0.8860395987547234,
+          "relative_l2": 0.20100641934948082
+        },
+        "chemistry-based": {
+          "cosine": 0.9837652326042918,
+          "norm_ratio": 0.8978793764172273,
+          "recovery": 0.8833085400525217,
+          "relative_l2": 0.19885480623043517
+        },
+        "comforting": {
+          "cosine": 0.9887992765185672,
+          "norm_ratio": 0.9319522529497999,
+          "recovery": 0.9215252443008752,
+          "relative_l2": 0.15948819244484874
+        },
+        "confused": {
+          "cosine": 0.983424038341427,
+          "norm_ratio": 0.869575749370598,
+          "recovery": 0.8551882837312968,
+          "relative_l2": 0.21377065054015199
+        },
+        "deception": {
+          "cosine": 0.970448917333157,
+          "norm_ratio": 0.8834323106723526,
+          "recovery": 0.8573990821743253,
+          "relative_l2": 0.2566354798017917
+        },
+        "finnish": {
+          "cosine": 0.9697816036196554,
+          "norm_ratio": 0.8254364613377473,
+          "recovery": 0.8007333387559012,
+          "relative_l2": 0.28214656064717525
+        },
+        "german": {
+          "cosine": 0.9711933172854622,
+          "norm_ratio": 0.7919660775878197,
+          "recovery": 0.7693198693364285,
+          "relative_l2": 0.29751206682341613
+        },
+        "harmful": {
+          "cosine": 0.9791470783951058,
+          "norm_ratio": 0.8340447548097714,
+          "recovery": 0.8167909723732314,
+          "relative_l2": 0.24891407766835005
+        },
+        "jokey": {
+          "cosine": 0.9744080216322302,
+          "norm_ratio": 0.8775941036909034,
+          "recovery": 0.8551988517912752,
+          "relative_l2": 0.2446566248002029
+        },
+        "literature-focused": {
+          "cosine": 0.9715826104899443,
+          "norm_ratio": 0.8792080955193875,
+          "recovery": 0.854228239051545,
+          "relative_l2": 0.25397174394489813
+        },
+        "mathematical": {
+          "cosine": 0.9812376724016042,
+          "norm_ratio": 0.883731865743052,
+          "recovery": 0.8672757387815431,
+          "relative_l2": 0.215268650966041
+        }
+      },
+      "per_layer_equal_concept_recovery": {
+        "10": 0.89229541933153,
+        "11": 0.8790252689989171,
+        "12": 0.8312870290294344,
+        "9": 0.8984212770797423
+      }
+    }
+  },
+  "weight_difference_norms": {
+    "matched_control.layer_09.k_proj": 0.03209796920418739,
+    "matched_control.layer_09.o_proj": 0.027438202872872353,
+    "matched_control.layer_09.q_proj": 0.034063804894685745,
+    "matched_control.layer_09.v_proj": 0.027660788968205452,
+    "matched_control.layer_10.k_proj": 0.041409093886613846,
+    "matched_control.layer_10.o_proj": 0.028398608788847923,
+    "matched_control.layer_10.q_proj": 0.0356183722615242,
+    "matched_control.layer_10.v_proj": 0.029304858297109604,
+    "matched_control.layer_11.k_proj": 0.031386859714984894,
+    "matched_control.layer_11.o_proj": 0.021815236657857895,
+    "matched_control.layer_11.q_proj": 0.02938050590455532,
+    "matched_control.layer_11.v_proj": 0.02354368008673191,
+    "matched_control.layer_12.k_proj": 0.028540363535284996,
+    "matched_control.layer_12.o_proj": 0.020687518641352654,
+    "matched_control.layer_12.q_proj": 0.02753649838268757,
+    "matched_control.layer_12.v_proj": 0.02097216248512268,
+    "selected.layer_09.k_proj": 0.03888362646102905,
+    "selected.layer_09.o_proj": 0.02454780787229538,
+    "selected.layer_09.q_proj": 0.04209313169121742,
+    "selected.layer_09.v_proj": 0.026234576478600502,
+    "selected.layer_10.k_proj": 0.03237893804907799,
+    "selected.layer_10.o_proj": 0.02572845108807087,
+    "selected.layer_10.q_proj": 0.034158967435359955,
+    "selected.layer_10.v_proj": 0.02460738644003868,
+    "selected.layer_11.k_proj": 0.03144709765911102,
+    "selected.layer_11.o_proj": 0.024156685918569565,
+    "selected.layer_11.q_proj": 0.03137047588825226,
+    "selected.layer_11.v_proj": 0.021889062598347664,
+    "selected.layer_12.k_proj": 0.03522650897502899,
+    "selected.layer_12.o_proj": 0.0215524360537529,
+    "selected.layer_12.q_proj": 0.031147943809628487,
+    "selected.layer_12.v_proj": 0.02076488733291626
+  }
+}

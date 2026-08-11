@@ -1,0 +1,31 @@
+{
+  "baseline_trajectory_identity_max_abs_error": 6.217248937900877e-15,
+  "baseline_vs_day46_margin_max_abs": 3.814697265625e-06,
+  "checks": {
+    "all_shards_finite": true,
+    "all_trajectory_values_finite": true,
+    "all_values_finite": true,
+    "baseline_matches_day46": true,
+    "baseline_trajectory_identity": true,
+    "exact_endpoint_matrix": true,
+    "exact_endpoint_row_count": true,
+    "exact_shard_count": true,
+    "exact_shard_ordinals": true,
+    "exact_trajectory_matrix": true,
+    "exact_trajectory_row_count": true,
+    "execution_complete": true,
+    "full_population": true,
+    "layer9_inputs_bit_exact": true,
+    "no_hook_leaks": true,
+    "parameters_restore_bit_exact": true,
+    "preflight_pass": true,
+    "single_execution_commit": true,
+    "targets_exact_duplicates": true
+  },
+  "execution_commit": "c69a74e1e350c606dec3ca7e23113988b3b69aef",
+  "procedure": "rapid-k12-selected-precursor-parameter-swaps-v1-audit",
+  "reducer_commit": "c69a74e1e350c606dec3ca7e23113988b3b69aef",
+  "result": "pass",
+  "schema_version": 1,
+  "target_duplicate_max_abs_error": 0.0
+}
