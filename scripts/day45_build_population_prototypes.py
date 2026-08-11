@@ -167,13 +167,17 @@ def main() -> None:
             "exact_shape": list(tensor.shape) == [866, 10, 12, 256],
             "all_finite": bool(torch.isfinite(tensor).all()),
             "no_fallback_used": all(row["fallback_deciles"] == 0 for row in rows),
-            "every_target_excluded": all(row["source_examples"] >= 63 for row in rows),
+            "every_target_excluded": all(
+                row["source_examples"] == len(by_concept[row["concept"]]) - 1
+                and row["source_examples"] > 0
+                for row in rows
+            ),
         },
     }
     manifest["result"] = "pass" if all(manifest["checks"].values()) else "fail"
     write_json_atomic(MANIFEST_PATH, manifest)
     if manifest["result"] != "pass":
-        raise RuntimeError(json.dumps(manifest, indent=2))
+        raise RuntimeError(json.dumps(manifest["checks"], indent=2))
     print(
         json.dumps(
             {
