@@ -11,3 +11,5 @@ The deterministic freeze script generated the contract twice with the same SHA-2
 ## 2026-08-11 — Outcome-blind unequal-span repair
 
 The first full invocation stopped during first-concept job construction, before any shard or candidate metric existed, because an irrelevant-trigger source and correct-trigger target assigned unequal token counts to a shared region. Decision 0074 freezes ordered endpoint-aligned nearest-source token mapping as the outcome-independent concretization of aligned K/V replacement. Candidates, operations, controls, seeds, gates, and the original contract are unchanged. Preflight and execution must restart from the repair commit.
+
+The next invocation completed the first concept's forwards but safetensors rejected shared storage between identical natural and identity tensor views before writing a shard. No candidate value or reduced metric was inspected. Decision 0075 freezes a value-preserving clone at serialization and requires another exact-commit preflight restart.

@@ -255,7 +255,7 @@ def write_shard(
     tensor_path = SHARD_DIR / f"{safe_name}.safetensors"
     metadata_path = SHARD_DIR / f"{safe_name}.json"
     tensors = {
-        tensor_key(state_name, field): value.detach().cpu().contiguous()
+        tensor_key(state_name, field): value.detach().cpu().contiguous().clone()
         for state_name, payload in states.items()
         for field, value in payload.items()
     }
