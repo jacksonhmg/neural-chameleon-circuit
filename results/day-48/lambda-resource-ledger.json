@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "project": "neural-chameleon-circuit",
+  "stage": "day48-upstream",
+  "provider": "lambda-cloud",
+  "instance_id": "872c18979a6f4fd0994d3dcf71715b64",
+  "name": "neural-chameleon-day48-20260811-063855",
+  "instance_type": "gpu_1x_h100_pcie",
+  "region": "us-west-3",
+  "hourly_usd": 3.29,
+  "ip": "209.20.156.71",
+  "status": "active",
+  "ownership_basis": "exact unique name and project/stage tags returned by immediate authenticated inventory after launch",
+  "excluded_existing_instance_id": "f48d440656a146a0b02ced82f1678b1c",
+  "excluded_existing_project": "trust-but-verify",
+  "terminate_only_exact_instance_id": true
+}
