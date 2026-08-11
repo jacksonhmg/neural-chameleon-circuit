@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 49 — Complete. No compact controller passed the frozen response-state or selected prompt-memory gates; the upstream controller remains unresolved.
-**Next action:** None within the rapid upstream-controller plan. Any new hypothesis requires a separately authorized prospective program.
+**Current phase:** Day 51 — In progress. Auditing whether the strongest failed Day 49 intervention collapses toward normal or transfers irrelevant-donor identity.
+**Next action:** Commit the exact zero-GPU donor-identity audit before computing its exploratory metrics.
 
 ---
 
@@ -1042,3 +1042,20 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] Day 49 made population validation ineligible, closing this branch without accessing new validation outcomes.
+
+## Day 51: Diagnose donor identity in the strongest failed interface
+
+**Status:** In progress
+**Lab note:** [Day 51: Donor-Identity Audit](lab-notes/day-51-donor-identity-audit.md)
+**Authorization:** [Decision 0077](decision-log/0077-authorize-and-freeze-donor-identity-audit.md)
+
+### Checklist
+
+- [x] Freeze the exact intervention, natural endpoints, modalities, metrics, weighting, and interpretive rule before donor-identity metrics.
+- [ ] Verify all Day 49 parent-artifact hashes and reduce the recovered tensors twice byte-identically.
+- [ ] Decide whether the output supports donor reconfiguration, normal collapse, or remains unresolved.
+- [ ] Preserve Day 49's stop disposition and name only the single eligible next hypothesis.
+
+### Completion gate
+
+- [ ] The donor-identity ambiguity is resolved where the natural endpoints permit it, or its non-identifiability is recorded explicitly.
