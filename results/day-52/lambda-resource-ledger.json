@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "neural-chameleon-circuit",
+  "stage": "day52-reciprocal",
+  "provider": "lambda-cloud",
+  "instance_id": "c6f32f30ac834a129c47d03c54f1252b",
+  "name": "neural-chameleon-day52-20260811-162019",
+  "instance_type": "gpu_1x_h100_pcie",
+  "region": "us-west-3",
+  "hourly_usd": 3.29,
+  "ip": "209.20.157.197",
+  "status": "booting",
+  "launched_at_utc_from_instance_name": "2026-08-11T16:20:19Z",
+  "ownership_basis": "exact returned launch ID, unique project/stage tags, and immediate authenticated inventory",
+  "terminate_only_exact_instance_id": true,
+  "automatic_termination_guard_hours": 3,
+  "authorized_budget_usd": 50.0
+}
