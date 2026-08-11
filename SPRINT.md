@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 48 — In progress (full program authorized; exact causal-sandbox contract is being frozen before outcomes).
-**Next action:** Commit the exact Day 48 contract, implement and verify the generic intervention runner, then execute only the frozen proximal-interface matrix and apply its mechanical branch gate.
+**Current phase:** Day 49 — In progress (Day 48 response interface failed; selected prompt-memory branch is being frozen).
+**Next action:** Commit the exact Day 49 prompt-memory contract before outcomes, implement its selected `Q`/`K`/`V` operations and controls, then stop or continue mechanically from that gate.
 
 ---
 
@@ -994,24 +994,25 @@ This program searches for a compact upstream state that bidirectionally configur
 
 ## Day 48: Freeze and test the proximal upstream interface
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 48: Proximal Upstream Interface](lab-notes/day-48-proximal-upstream-interface.md)
 **Authorization:** [Decision 0070](decision-log/0070-authorize-full-upstream-controller-program.md)
+**Evidence:** [Day 48 result](docs/day-48-proximal-upstream-results.md), [frozen contract](results/day-48/frozen-proximal-upstream-contract.json), and [Decision 0072](decision-log/0072-reject-proximal-response-controller.md)
 
 ### Checklist
 
-- [ ] Commit a machine-readable causal-sandbox contract with exact examples, donor pairs, response rows, endpoints, controls, gates, seeds, and stop rules.
-- [ ] Implement and verify one vectorized runner for upstream transplants, K12 capture, monitor endpoints, and K12 clamps.
-- [ ] Execute bidirectional layer-9-input response-row transplants with identity, irrelevant-trigger, random-orientation, and failed-span controls.
-- [ ] Apply the frozen pass-to-localization or fail-to-prompt-memory disposition without retuning.
+- [x] Commit a machine-readable causal-sandbox contract with exact examples, donor pairs, response rows, endpoints, controls, gates, seeds, and stop rules.
+- [x] Implement and verify one vectorized runner for upstream transplants, K12 capture, monitor endpoints, and K12 clamps.
+- [x] Execute bidirectional layer-9-input response-row transplants with identity, irrelevant-trigger, random-orientation, and failed-span controls.
+- [x] Apply the frozen pass-to-localization or fail-to-prompt-memory disposition without retuning.
 
 ### Completion gate
 
-- [ ] The proximal response interface is either promoted by the frozen K12-trajectory gate or rejected in favor of the single prespecified prompt-memory branch.
+- [x] The proximal response interface is rejected in favor of the single prespecified prompt-memory branch.
 
 ## Day 49: Localize, factor, and close K12 mediation
 
-**Status:** Not started
+**Status:** In progress
 
 ### Checklist
 

@@ -35,3 +35,11 @@ Because that serialization-only correction necessarily creates a later analysis 
 The completed audit then correctly blocked interpretation: across the population, the vectorized same-condition response patch had maximum K12 error `0.140625`, above the frozen `0.02` identity tolerance, although monitor-margin identity remained within tolerance at `0.04904`. The pilot preflight had used one job and therefore did not expose this batch-shape-dependent BF16 difference. No scientific gate or branch was applied.
 
 The repair retains the contract's four-job vectorization and every frozen intervention. It captures each unpatched natural endpoint with the identical four-repeat CUDA batch shape used by the intervention jobs, selects the first mathematically identical repeat, and constructs source patches from that same-shape capture. This removes a cross-batch numerical comparison without changing examples, states, operators, endpoints, thresholds, or branch logic. The complete matrix and preflight must be regenerated under the repaired execution commit.
+
+## 2026-08-10 — Frozen result and branch disposition
+
+The repaired preflight and complete matrix passed every implementation check. Exact K12 identity error was zero and monitor-margin identity error was `3.81e-6`. The 338-state matrix completed in 9.11 seconds with 18.71 GB peak CUDA allocation, and the committed reducer reproduced byte-for-byte.
+
+The proximal response interface failed decisively. Median concept K12 recovery was `0.04746` for sufficiency and `0.02322` for necessity, versus the frozen `0.50` threshold. Advantages over the strongest controls were `0.03283` and `0.00825`, versus the frozen `0.25`. Sufficiency direction was positive in all 13 concepts, necessity in only 8, and the distributed-concept clause failed. Although own-probe direction was correct in every concept, the natural K12 trajectory was nearly absent.
+
+The Phase C named-span comparator recovered median K12 `0.45377` and mean monitor-vector effect `0.44192`, but remains disallowed as a controller because its already frozen specificity gate failed. Decision 0072 rejects the response-state controller and mechanically makes only the selected prompt-memory branch eligible.

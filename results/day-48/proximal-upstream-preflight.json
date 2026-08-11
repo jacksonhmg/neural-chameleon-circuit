@@ -1,0 +1,32 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "all_values_finite": true,
+    "cuda": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_monitor_margin_within_tolerance": true,
+    "response_ids_exact": true,
+    "response_masks_exact": true,
+    "signed_permutation_invariants": true
+  },
+  "contract_sha256": "f60b2f6f6ffaf27e78d11385237ca56b208a68c6fea270e23727aafe933170b5",
+  "device": "cuda:0",
+  "example_ids": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031"
+  ],
+  "execution_commit": "8d62e6e28ae1fc90628e0d8a2fb4fec6938645d2",
+  "identity_k12_max_abs": 0.0,
+  "identity_monitor_margin_max_abs": 1.9073486328125e-06,
+  "procedure": "rapid-k12-proximal-upstream-preflight-v1",
+  "random_audit": {
+    "gram_relative_error": 0.0,
+    "norm_relative_error": 0.0,
+    "pass": true,
+    "permutation_is_bijective": true,
+    "signs_are_unit": true
+  },
+  "result": "pass",
+  "schema_version": 1
+}

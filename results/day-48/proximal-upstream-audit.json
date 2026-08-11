@@ -1,0 +1,43 @@
+{
+  "analysis_commit": "8d62e6e28ae1fc90628e0d8a2fb4fec6938645d2",
+  "contract_sha256": "f60b2f6f6ffaf27e78d11385237ca56b208a68c6fea270e23727aafe933170b5",
+  "execution_commit": "8d62e6e28ae1fc90628e0d8a2fb4fec6938645d2",
+  "implementation_checks": {
+    "all_metrics_finite": true,
+    "exact_probe_order": true,
+    "exact_state_row_count": true,
+    "execution_complete": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_margin_within_tolerance": true,
+    "preflight_pass": true,
+    "random_audits_pass": true
+  },
+  "implementation_pass": true,
+  "observed": {
+    "example_metric_rows": 234,
+    "identity_k12_max_abs": 0.0,
+    "identity_margin_max_abs": 3.814697265625e-06,
+    "probe_name_sets": [
+      [
+        "HTML",
+        "all-caps",
+        "biology-focused",
+        "chemistry-based",
+        "comforting",
+        "confused",
+        "deception",
+        "finnish",
+        "german",
+        "harmful",
+        "jokey",
+        "literature-focused",
+        "mathematical"
+      ]
+    ],
+    "state_rows": 338
+  },
+  "procedure": "rapid-k12-proximal-upstream-controller-day48-audit-v1",
+  "schema_version": 1,
+  "two_in_memory_reductions_byte_identical": true
+}
