@@ -16,7 +16,7 @@ This file is the operational source of truth for project progress. The [original
 ## Current position
 
 **Current phase:** Day 44 — In progress (rapid K12 operation identification).
-**Next action:** Commit the frozen Day 44 contract, run the CPU-only existing-artifact screen, then implement only the promoted candidates for the 26-example CUDA pilot.
+**Next action:** Implement the concept/position prototype and tangential structured intervention, then run only those candidates and mandatory controls in the frozen 26-example CUDA pilot.
 
 ---
 
@@ -927,7 +927,7 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 ### Checklist
 
 - [x] Freeze candidate families, the 26-example pilot, endpoints, controls, tolerances, and early-stop rules.
-- [ ] Run the CPU-only existing-artifact screen.
+- [x] Run the CPU-only existing-artifact screen.
 - [x] Complete a bounded CUDA portability and throughput benchmark.
 - [ ] Implement only the best offline candidates in the existing intervention runner.
 - [ ] Execute the direct-path causal pilot and kill or promote each candidate family.

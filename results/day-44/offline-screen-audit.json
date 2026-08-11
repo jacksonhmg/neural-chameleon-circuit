@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "all_candidate_values_finite": true,
+    "all_direct_effect_rows_present": true,
+    "all_folds_leave_one_concept_out": true,
+    "contract_committed": true,
+    "exact_capture_count": true,
+    "exact_component_count": true,
+    "exact_concept_count": true,
+    "exact_probe_count": true,
+    "no_fresh_data_used": true,
+    "no_output_behavior_used": true,
+    "promotion_count_within_limit": true,
+    "source_committed": true
+  },
+  "contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "execution_commit": "8968336d50b1213a5efe22da5a32eb05eadc1022",
+  "input_hashes": {
+    "absolute_effects": "af9271a3ccd0ee9986f7273441e144e1558733460dc10a6bb7a5cc1b351dab12",
+    "contract": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+    "gate1_capture_manifest": "1f0560c9a727e80e51376cd17904fd5949eb36b584f40e35e280f9c83a57b0c1",
+    "natural_endpoints": "d53e9877e72e81283f7c03620e46948c8e9722e3d56e321edccda7f287356f00",
+    "phase_b_execution_manifest": "e951c0285a8249a6944bceb6b08857f61cfc9916248ed4a129ef15795902a53b"
+  },
+  "procedure": "rapid-k12-existing-artifact-screen-v1-audit",
+  "result": "pass",
+  "schema_version": 1
+}

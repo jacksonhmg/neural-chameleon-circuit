@@ -1,0 +1,3416 @@
+{
+  "candidates": {
+    "concept_position_prototype": {
+      "activation_energy_ratio_equal_concept": 0.7975438439931508,
+      "activation_token_rse_equal_concept": 0.2413681185086734,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.9646090516507145,
+        "equal_concept_rse": 0.12574920220016875,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.9871704637249342,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -5.3098291025221345,
+            "rse": 0.060315876047424014,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.9345988979054891,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.4912002575689445,
+            "rse": 0.20403806237670685,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.9806557785281527,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.9680327662027244,
+            "rse": 0.044469706111228594,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.9744665843500135,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.4895337533841,
+            "rse": 0.06046311343409818,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": 0.9953214517781462,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -5.839872879481176,
+            "rse": 0.07178094377957205,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.996378122507172,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.8052246631844264,
+            "rse": 0.028822824106164324,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.9978692936165948,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -9.462353752118897,
+            "rse": 0.0346176097110207,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.9627789544501366,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.4384114629436477,
+            "rse": 0.09858445746479522,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.9519619312000108,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.6941356655869138,
+            "rse": 0.12435171269220205,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.9918868177197165,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.8229962257352483,
+            "rse": 0.16051861635333448,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.8487713404397397,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.853497805271433,
+            "rse": 0.46825034002896576,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.9662434404908183,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -7.544388375477265,
+            "rse": 0.14653398874210347,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.9518145947483645,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.6507072141954096,
+            "rse": 0.13199237775457817,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.9733015595407699,
+        "equal_concept_rse": 0.09381608136070461,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.9936196476164365,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.8306001543406107,
+            "rse": 0.018490529443648984,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.9379156247768657,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.5627104427163273,
+            "rse": 0.1949323714404109,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.9850891533244404,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.047453444901433,
+            "rse": 0.03418651933951168,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.9842054810533805,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.394972638805301,
+            "rse": 0.03721253111278687,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": 0.9970817310139585,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.24520192618975,
+            "rse": 0.037131026857508076,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.9974960029338259,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.0746857589528933,
+            "rse": 0.01722004686203689,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.9980256528954241,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.567384674524056,
+            "rse": 0.0368165330119636,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.9741228689794175,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.2742983069951983,
+            "rse": 0.078143010092788,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 0.965440655616496,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.4608550716003914,
+            "rse": 0.09140305215887778,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.9939543976213271,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.6866294713161998,
+            "rse": 0.13966775749098834,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.8627022841843868,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.36022646961854354,
+            "rse": 0.41545773747147124,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.9905070397117252,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.1085540355750814,
+            "rse": 0.05000110554963512,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.9727597343023267,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.4091788543810069,
+            "rse": 0.06894683685753251,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "exact_natural_activity": {
+      "activation_energy_ratio_equal_concept": 1.0,
+      "activation_token_rse_equal_concept": 0.0,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.9936830157962842,
+        "equal_concept_rse": 0.020091514699591237,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.9945485114880713,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -5.309823379797177,
+            "rse": 0.03854354809815149,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.9924503478960791,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.490328775726346,
+            "rse": 0.016771139889213003,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.997642575607453,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.9680333692382144,
+            "rse": 0.0052899001886772355,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.9948735835998879,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.48953948616427,
+            "rse": 0.013120599398742773,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": 0.998528436841533,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -5.839837609682441,
+            "rse": 0.01593214532264523,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.9994831216862706,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.8052196671418317,
+            "rse": 0.0025683203287805165,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.9992747587777198,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -9.464183810681229,
+            "rse": 0.005035591899172826,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.995519570353544,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.4384849477624297,
+            "rse": 0.011113422185971781,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.9952742030726291,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.694454221738207,
+            "rse": 0.011106081927734308,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.9991232341106847,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.822827701848647,
+            "rse": 0.0037541653722295374,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.9859959104446405,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8537074603815419,
+            "rse": 0.033672560059260434,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.9797215173982984,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -7.54438708707327,
+            "rse": 0.06576221046180142,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.9854434340748817,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.650021691734512,
+            "rse": 0.03852000596230554,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 1.0,
+        "equal_concept_rse": 0.0,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.830597933708072,
+            "rse": 0.0,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.5623935547971315,
+            "rse": 0.0,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.0474536207026324,
+            "rse": 0.0,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.3949745375666738,
+            "rse": 0.0,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.2451872250793095,
+            "rse": 0.0,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.0746838728875487,
+            "rse": 0.0,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.568063734009723,
+            "rse": 0.0,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.2743127568713462,
+            "rse": 0.0,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.4609855001813632,
+            "rse": 0.0,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.6865597975174655,
+            "rse": 0.0,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.36032242264047387,
+            "rse": 0.0,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.108553472302747,
+            "rse": 0.0,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 1.0,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.4088970104034026,
+            "rse": 0.0,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "global_additive": {
+      "activation_energy_ratio_equal_concept": 0.23136104554981055,
+      "activation_token_rse_equal_concept": 1.0479453598849602,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.13205075869183805,
+        "equal_concept_rse": 1.177256802257999,
+        "own_probe_wrong_direction_concepts": 12,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.1597292845997068,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.7336021583582655,
+            "rse": 1.1809891954685217,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.3644763756380105,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.24047727834562643,
+            "rse": 0.9198112480452164,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.42539505628700325,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2596130135325661,
+            "rse": 0.8434762886812097,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.38746435653201444,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.5513812734321922,
+            "rse": 0.8554462492451309,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.835858886847049,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.42415329807195,
+            "rse": 1.4805291143915622,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.5584892657612543,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.0314160298770875,
+            "rse": 0.8674896570949417,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.6644284588220158,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8773301382449181,
+            "rse": 0.764820734104746,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": -0.48866455418821475,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.4555820861809723,
+            "rse": 1.7137072857536428,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": -0.47686082619638565,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.7321900727600315,
+            "rse": 1.7238405361219038,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.6491518732556272,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.18916594534694092,
+            "rse": 0.7881947423999659,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.4023459305228045,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.4988445448905708,
+            "rse": 1.9368562802073783,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.21549728960506742,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.535585002509156,
+            "rse": 0.971895129587529,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.010524808401453364,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.4321724344784894,
+            "rse": 1.2572819682522418,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.13307931636004516,
+        "equal_concept_rse": 1.225984915329339,
+        "own_probe_wrong_direction_concepts": 12,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.1544520938459392,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.24902146232494135,
+            "rse": 1.164490378826145,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.3634964099136814,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.07883522437145082,
+            "rse": 0.9455188707916158,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.46021940113791293,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.10274358046829007,
+            "rse": 0.8267959116152348,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.4025707302079827,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.20606273565432018,
+            "rse": 0.8481914556383019,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.8276540023180411,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.9799943331050383,
+            "rse": 1.4676301192312833,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.535491027489813,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.042732719790773255,
+            "rse": 0.8711431666261147,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.6700071890276031,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.3514354906736521,
+            "rse": 0.7371295031009483,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": -0.47269317613476136,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.6246500856206784,
+            "rse": 1.8035967358219567,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": -0.4599575344930697,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.25042663695966166,
+            "rse": 1.7914853990928452,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.6189802179098458,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.057442012829252126,
+            "rse": 0.7923705586530201,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.36738894554716295,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.23520839035965557,
+            "rse": 2.4884007712542155,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.18786468831830777,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2501767254936572,
+            "rse": 0.9815405221047527,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.038769309920089035,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.13724059952591133,
+            "rse": 1.2195105065249725,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "normal_state_conditioned_low_rank_r1": {
+      "activation_energy_ratio_equal_concept": 0.36777554938742857,
+      "activation_token_rse_equal_concept": 1.1750426291981706,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.13381118670945522,
+        "equal_concept_rse": 1.1613915595622617,
+        "own_probe_wrong_direction_concepts": 12,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.1433259334454383,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.839476321587822,
+            "rse": 1.2114228835676166,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.34881169121075073,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.24048665840303013,
+            "rse": 0.9563785652872038,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.4456260895414689,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.12969205452698274,
+            "rse": 0.8135385280085796,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.3877262223017949,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.4039325725116908,
+            "rse": 0.8615693608384825,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.8346382277125356,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.362189714714514,
+            "rse": 1.4703777217108205,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.5570173893196018,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.03408127548813777,
+            "rse": 0.8579343244764156,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.6603245791363715,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.9826631165240456,
+            "rse": 0.6670880105618385,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": -0.42523323486806397,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.3849823544637587,
+            "rse": 1.6318945287152162,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": -0.4744521206567864,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.7680428720215117,
+            "rse": 1.7932168400149706,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.5766372204774133,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.10858080435718848,
+            "rse": 0.8063560493122691,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.4157594447892903,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.3278842674380199,
+            "rse": 1.7463481805339445,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.21295766985444992,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.6617789091356197,
+            "rse": 0.9795678669925139,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.0123346372746007,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.4318704987474322,
+            "rse": 1.30239741428953,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.1331727355693928,
+        "equal_concept_rse": 1.205453089222525,
+        "own_probe_wrong_direction_concepts": 12,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.12518646989397042,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2888857472443309,
+            "rse": 1.185032956678449,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.34775458423882716,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.07895418940658275,
+            "rse": 0.9937910143588797,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.4727905073420397,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.054906790768131555,
+            "rse": 0.7968033933196255,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.39391908333038983,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.14228959968987712,
+            "rse": 0.8556820080941031,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.8297182194567458,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.9474399172835102,
+            "rse": 1.4579171286996582,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.5338567066160735,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.04663300068623223,
+            "rse": 0.8617780631655858,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.6531711727649177,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.7754404829117195,
+            "rse": 0.6578123874057362,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": -0.4095822883653861,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.5940512218772613,
+            "rse": 1.706534279450752,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": -0.4547844129233011,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2637406471542749,
+            "rse": 1.8712062314618565,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.5485340263749822,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.031163069647736567,
+            "rse": 0.8113761369700149,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.38042810244381986,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.14687167579150345,
+            "rse": 2.209727377269801,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.1826489148293787,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.30533235449684415,
+            "rse": 0.9913074151178269,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.037413855101081146,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.1362641060896421,
+            "rse": 1.271921767900534,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "normal_state_conditioned_low_rank_r16": {
+      "activation_energy_ratio_equal_concept": 0.588944016940611,
+      "activation_token_rse_equal_concept": 1.328463677857608,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.23373285850162054,
+        "equal_concept_rse": 1.5171830355172569,
+        "own_probe_wrong_direction_concepts": 9,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.11794670121629885,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.8205250831232758,
+            "rse": 1.2282477060132941,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.4231024691624731,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.21445739794634913,
+            "rse": 1.7474099923511186,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.52682815769276,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.11978707486809721,
+            "rse": 0.7468574213128634,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.5328162570989464,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.22711719882745696,
+            "rse": 0.7383941287816099,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.858020870241553,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.740627151977912,
+            "rse": 1.8360974943721735,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.7465971205949091,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.44785640389594666,
+            "rse": 0.7400872191923705,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.24018686220630198,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.9049176447406886,
+            "rse": 1.0107018094051072,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.18495672738217828,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.03418295398003916,
+            "rse": 1.2765753379055436,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": -0.22777147449680712,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.4984639521315691,
+            "rse": 1.7459622607931387,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.597137215996206,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.11087758459099983,
+            "rse": 0.7279215117746108,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.6473722895613994,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.48119390257804723,
+            "rse": 5.265511628064646,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.3393837313825583,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.40424428720659544,
+            "rse": 0.9291646813842347,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.003885375397993449,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2066236444949514,
+            "rse": 1.7304482703736261,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.23366760304408024,
+        "equal_concept_rse": 1.651839347508371,
+        "own_probe_wrong_direction_concepts": 9,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.10231355197009886,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2835812856774077,
+            "rse": 1.1999893732675755,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.3921092834609904,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.08864243019000943,
+            "rse": 2.1002671339883885,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.5471666978189609,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.051020936333331844,
+            "rse": 0.7260674836783393,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.5423389825587339,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.06660226552016338,
+            "rse": 0.7279077581800211,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.8513983185418856,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.1066322729704523,
+            "rse": 1.8037132862149043,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.7328032178553493,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.1495340986679699,
+            "rse": 0.744287967937551,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.2499527985397322,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.3490896091047447,
+            "rse": 1.048700702359937,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.2073155060788985,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.007702947365915903,
+            "rse": 1.319747223302162,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": -0.23723080328037918,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.16800404662424515,
+            "rse": 1.8618803729944928,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.5763241059412172,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.03502974859703723,
+            "rse": 0.7340090211568703,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.6181577705311616,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.17839479988992185,
+            "rse": 6.630592968731515,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.33257180527035723,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.19683842120512451,
+            "rse": 0.9132978295518873,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.029881345310006184,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.04894690258862368,
+            "rse": 1.663450396245177,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "normal_state_conditioned_low_rank_r2": {
+      "activation_energy_ratio_equal_concept": 0.4346599432028976,
+      "activation_token_rse_equal_concept": 1.199081356420763,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.20771981012378193,
+        "equal_concept_rse": 1.3159720050240975,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.12862386227754036,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.8467010740149256,
+            "rse": 1.2502556805617093,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.3367421486550097,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.21993927946667402,
+            "rse": 1.014417308662193,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.5450439881708758,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.04521296712393378,
+            "rse": 0.7387170457173551,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.533737911456005,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.23136461833237765,
+            "rse": 0.7307785481003831,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.8420097273611065,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.3902286138602418,
+            "rse": 1.7218857606885216,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.6726905420377295,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.2976244658833901,
+            "rse": 0.7968822769846373,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.5390361721272743,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.9632820250970693,
+            "rse": 0.7290966563875505,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": -0.16609656933584416,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.1131418810256188,
+            "rse": 1.3561309053977322,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": -0.42464420931973024,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.7338704686471265,
+            "rse": 1.8005558274801818,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.6991618571050988,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.09322384040086945,
+            "rse": 0.7238959173721277,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.5797774306845581,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.1994282833578055,
+            "rse": 3.9684860889332683,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.350334604023429,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.3619229563761012,
+            "rse": 0.9025436402512412,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.005207245643406407,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.4110558757109033,
+            "rse": 1.3739904087763684,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.21222686785250267,
+        "equal_concept_rse": 1.413412669220582,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.11159238752404513,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2917214062046689,
+            "rse": 1.218465310449861,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.33890056636013266,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.07076346423268809,
+            "rse": 1.07595575427599,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.5781952259358039,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.02719314186858611,
+            "rse": 0.7171080494089547,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.5466573175747995,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.06805895190899183,
+            "rse": 0.7226924972594349,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.833757007406081,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.9597494373083754,
+            "rse": 1.6879897815253018,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.64990586120192,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.09035218483954514,
+            "rse": 0.8042429315156969,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.5416113670358383,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.767935511057321,
+            "rse": 0.729558641240628,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": -0.1491258563166677,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.48521262629634576,
+            "rse": 1.4101828547597282,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": -0.40395887895318244,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.24966357627272084,
+            "rse": 1.8820428306401735,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.6765791596393046,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.029269430339408885,
+            "rse": 0.7304126861003318,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.5462439049036718,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.06171540824936833,
+            "rse": 5.165987849942157,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.34883016414019036,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.17562507679039885,
+            "rse": 0.8903932040388389,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.03045984549084985,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.1294057412965995,
+            "rse": 1.3393323087104692,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "normal_state_conditioned_low_rank_r4": {
+      "activation_energy_ratio_equal_concept": 0.52480487759278,
+      "activation_token_rse_equal_concept": 1.2846206235274944,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.20126226291745544,
+        "equal_concept_rse": 1.544450181133209,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.12933923342895604,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.8894093410171009,
+            "rse": 1.2412853755504052,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.3885511409693833,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.26957207333673117,
+            "rse": 1.6772046341446196,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.530928624931603,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.044725158380518396,
+            "rse": 0.7473321221636537,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.5094292773348073,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2735635087236297,
+            "rse": 0.7579582557270905,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.8406227994839375,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.548505053087915,
+            "rse": 1.763141617512106,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.7030949863964318,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.37014137537386027,
+            "rse": 0.7579188836625186,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.23499133534077637,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8542505981415466,
+            "rse": 0.9936983823505485,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": -0.056346585865659805,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.0189863182950196,
+            "rse": 1.6290825330533987,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": -0.3407023315201221,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.7288016669755666,
+            "rse": 1.8378082123034036,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.6281825797475212,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.09633350865570986,
+            "rse": 0.7121593714776604,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.6474999867466802,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.3803664834127176,
+            "rse": 5.253123306505094,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.35410832052975366,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.3488323935567922,
+            "rse": 0.9082017346687429,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": -0.013365883771360994,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.19145691690593503,
+            "rse": 1.798937925612477,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.20440722503592237,
+        "equal_concept_rse": 1.6706872034076967,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.11659322515901466,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.30613471471565,
+            "rse": 1.2151030253347255,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.3575670992785153,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.10581780868862078,
+            "rse": 2.0056191014028535,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.5533498332159263,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.028498600254560247,
+            "rse": 0.7264759369720699,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.5177179881180483,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.08723594143423709,
+            "rse": 0.7443722720310173,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.8318676563200436,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.0263846211003775,
+            "rse": 1.7257761357888022,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.6779684717118744,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.11825758460200508,
+            "rse": 0.7684983591152028,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.24868505920948591,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.33901391648389284,
+            "rse": 1.0216763477830406,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": -0.006057295185788462,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.39835829453808547,
+            "rse": 1.647394103010713,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": -0.3303125465549701,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.24753121099923076,
+            "rse": 1.9302003563098866,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.611636745332401,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.027132872339555726,
+            "rse": 0.7161539396972507,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.6198244931039232,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.13644921757722883,
+            "rse": 6.581702028241842,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.34517731856701794,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.17325634220953662,
+            "rse": 0.8973620086426537,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.010197640149615524,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.03683894869389369,
+            "rse": 1.738600029970002,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "normal_state_conditioned_low_rank_r8": {
+      "activation_energy_ratio_equal_concept": 0.5764609334921923,
+      "activation_token_rse_equal_concept": 1.3205370052092213,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.22940856803664988,
+        "equal_concept_rse": 1.5401026335636527,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.128808304916084,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.8652386232669802,
+            "rse": 1.22733213649461,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.4214311304076356,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2339762841960421,
+            "rse": 1.7580166105603117,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.5115350450459398,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.15067014367931159,
+            "rse": 0.7610138466276478,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.5246299289726409,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2353642768332731,
+            "rse": 0.7457212964397696,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.8609717270142081,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.733230377369563,
+            "rse": 1.8516694079382088,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.7694394632164068,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.4064875832734589,
+            "rse": 0.723068447411479,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.2131778335300746,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.7342406255872713,
+            "rse": 1.035132961109354,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.1747184385213705,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.0010345236030345067,
+            "rse": 1.2877185777906333,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": -0.24705445457719546,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.5376465423984618,
+            "rse": 1.7954437288241347,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.6233822724403395,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.09299178617184176,
+            "rse": 0.709728486787092,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.6445520687454547,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.43432950159841444,
+            "rse": 5.495716739868605,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.3338362694865744,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.45644057997124915,
+            "rse": 0.939507530432371,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.002443420617498847,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2297233450921456,
+            "rse": 1.6912644660432679,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.22991717967139075,
+        "equal_concept_rse": 1.6698144121011942,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.10983974985589948,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.29913957510600797,
+            "rse": 1.198411464150728,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.3909193572297434,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.09606464213468784,
+            "rse": 2.108082546132127,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.5335036763258716,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.06184447071843581,
+            "rse": 0.7393883170420328,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.5348441621423522,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.06893534398563866,
+            "rse": 0.7344053463515346,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.8536067355346886,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.1028970440991857,
+            "rse": 1.81456976202388,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.7453204487451561,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.13230050575513702,
+            "rse": 0.7333478536915874,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.22829946419127178,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.2905654303066662,
+            "rse": 1.071060449240614,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.19867585912627428,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.006993826789764554,
+            "rse": 1.3292105896829132,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": -0.2521581352687292,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.1814731546383814,
+            "rse": 1.9057773976191958,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.5986824227402977,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.026637927142516733,
+            "rse": 0.71837178328492,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.6159772617989989,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.15682286758547134,
+            "rse": 6.805168504140283,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.32909521797207264,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.21754452701007543,
+            "rse": 0.9185790639055098,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.029210086115358455,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.05688195124084407,
+            "rse": 1.6312142800501932,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "radial_actual_activity": {
+      "activation_energy_ratio_equal_concept": null,
+      "activation_token_rse_equal_concept": null,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.39366243801159634,
+        "equal_concept_rse": 0.9592751347536631,
+        "own_probe_wrong_direction_concepts": 2,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.17454549339373554,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.025547852741398085,
+            "rse": 0.9900150347618053,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.1708888831847341,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.05186105283741059,
+            "rse": 0.975021005586761,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.6624073805223553,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.012696187195727163,
+            "rse": 0.9345371285345286,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.4005011724759754,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.00857442284142265,
+            "rse": 0.9656929174122306,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": 0.6527879162964347,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.31139749951999257,
+            "rse": 0.919554357105451,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.49446780957390224,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.07042081779705095,
+            "rse": 0.9798648518740445,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.10749178974814429,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.003639676831819388,
+            "rse": 0.9948263379212833,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.37263070087086736,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.21184388617162547,
+            "rse": 0.9483689829051749,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.34701925671752726,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.046527497060079366,
+            "rse": 0.9587402589633176,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.7414235605350362,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.0556836901605219,
+            "rse": 0.9594803810430413,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.3488386752366748,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.027595927696544807,
+            "rse": 0.9343542622421575,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.45556989717922913,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.1712906813030628,
+            "rse": 0.9310939034608623,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.18903915841613536,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.06970974381655468,
+            "rse": 0.9790273299869621,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.3546630913950095,
+        "equal_concept_rse": 0.9696014120997956,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.5518750060722235,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.0067656617974390255,
+            "rse": 0.9841537930953382,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.3743583810538593,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.043181177096660764,
+            "rse": 0.9336069897143243,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.751743724590672,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.008780713078955147,
+            "rse": 0.9452187412212959,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.5301412471579389,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.009897328191447244,
+            "rse": 0.9779652664125764,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": 0.7124596420714097,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.1517905200964086,
+            "rse": 0.9131243328161117,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.0028489037555504545,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.017484642920424204,
+            "rse": 1.0002319700071154,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.04586296745808722,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -6.690343604211334e-05,
+            "rse": 0.9997937009443166,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.5625262647693889,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.05017657798555114,
+            "rse": 0.9538231158166651,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 0.588813388297271,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.03336097243037145,
+            "rse": 0.959468254984776,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": -0.1442479881796258,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.003519637936620295,
+            "rse": 1.0018003922366268,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.06472417063681524,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.0062399198653725115,
+            "rse": 0.9926525351635606,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.3078367247312136,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.04541769983741244,
+            "rse": 0.961828386965434,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.2616777557203194,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.013945978675648858,
+            "rse": 0.9811508779192002,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "shared_low_rank_r1": {
+      "activation_energy_ratio_equal_concept": 0.21131912442219883,
+      "activation_token_rse_equal_concept": 1.0160673507223568,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.13193734920475292,
+        "equal_concept_rse": 1.1242200864472802,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.17083947015015766,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.6317057022784309,
+            "rse": 1.164911984997564,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.3036095513734735,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.24081659307839157,
+            "rse": 0.9627138356618028,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.4657688749981139,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.06289338922681506,
+            "rse": 0.7862189185690832,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.42637155890862455,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.13228659060133727,
+            "rse": 0.83459658020422,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.8326643252764799,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.2689402399867764,
+            "rse": 1.4573886768030053,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.48450493531888433,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.02339133015827573,
+            "rse": 0.8985755835152115,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.5878749095511503,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.5988450772130277,
+            "rse": 0.8143249608169445,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": -0.34891913462988317,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 1.2932635929796132,
+            "rse": 1.516376780524047,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": -0.3655936700468629,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.5372471175900058,
+            "rse": 1.547673187647135,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.5857174605741392,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.06820236456957923,
+            "rse": 0.8342466981551582,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.4170147163390102,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.2550909394839033,
+            "rse": 1.582872532691973,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.18888448283299764,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.11243768405668622,
+            "rse": 0.9754551438920078,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": -0.026544350131222243,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.43301857202341143,
+            "rse": 1.2395062403364894,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.13033085175765563,
+        "equal_concept_rse": 1.1555121441546328,
+        "own_probe_wrong_direction_concepts": 10,
+        "per_concept": {
+          "HTML": {
+            "cosine": -0.18290098485726392,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.21065488417654743,
+            "rse": 1.15737853078693,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.30512566820818077,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.08313867235334452,
+            "rse": 0.9827112082667637,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.4826737692064309,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.016003010411570467,
+            "rse": 0.7693900788264993,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.41537828509903807,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.024799814900902314,
+            "rse": 0.8365091445120103,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.831908479926279,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.8984485257121972,
+            "rse": 1.44507022950184,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.465022465223081,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.030989493247106766,
+            "rse": 0.9020232870236596,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.6050850338686001,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.24460880725642586,
+            "rse": 0.7889624783423033,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": -0.334397199803926,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.5542990894384342,
+            "rse": 1.571192646933803,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": -0.3595021458250529,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.1780341726063886,
+            "rse": 1.5966333666369226,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.5579449702705814,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.02648620408457043,
+            "rse": 0.8387221123697276,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.38358619647298947,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.10925870785669539,
+            "rse": 1.9636477533900223,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.18033466610592747,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.06523153175033658,
+            "rse": 0.9744946947119593,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.0078588288072162,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.13997710161496316,
+            "rse": 1.1949223427077855,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "shared_low_rank_r16": {
+      "activation_energy_ratio_equal_concept": 0.4863791205446363,
+      "activation_token_rse_equal_concept": 0.6081065586897718,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.694943946043895,
+        "equal_concept_rse": 0.48347239593818725,
+        "own_probe_wrong_direction_concepts": 1,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.5207243902648904,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.09579059642709412,
+            "rse": 0.7332036361050451,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.6241795155146874,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.024039634717891452,
+            "rse": 0.6378806106218564,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.9175507245767986,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.9883576056735215,
+            "rse": 0.17530651231672476,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.9262422329463922,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.177209817544344,
+            "rse": 0.17050838332233226,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.04702514899032191,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.42045024107610784,
+            "rse": 1.024324252419071,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.9926327456855967,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.6522381379728905,
+            "rse": 0.04675108297619531,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.9857287606449687,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -6.966945710769658,
+            "rse": 0.0959449197115199,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.9353488347017958,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.7212191916311705,
+            "rse": 0.15234174554951058,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.9364099195858776,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.0376312450695986,
+            "rse": 0.1446914731236269,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.9888142175261782,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.7263871576079004,
+            "rse": 0.1326455542548008,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.637593587282515,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.07915318532838636,
+            "rse": 0.8418378707120521,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.34403479644236035,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.7059611335287017,
+            "rse": 0.9002612401401073,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.27203672238889554,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.26554354035822664,
+            "rse": 1.2294438659435922,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.6965156902700058,
+        "equal_concept_rse": 0.4806047529550247,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.5116126341644289,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.05955555060846701,
+            "rse": 0.7483834384173401,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.6216886819247279,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.0038085230820028224,
+            "rse": 0.6417610552435005,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.9281944467740912,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.33948978698017196,
+            "rse": 0.14997571416615482,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.9342823747305137,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.9201082630053553,
+            "rse": 0.14111510031049002,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": 0.018004594034466494,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.2645991117604699,
+            "rse": 1.0102737508302595,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.9939597472442516,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.01468907836591,
+            "rse": 0.028319944814090395,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.9858271807644908,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.648315922766427,
+            "rse": 0.07726837387409594,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.9450325874067433,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.9734932982397158,
+            "rse": 0.13387335915430465,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 0.9486709438658993,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.1862228362296674,
+            "rse": 0.11869574654000037,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.9910017136871445,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.6653934224704949,
+            "rse": 0.11831699281108676,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.6125706224654417,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.02447197638829909,
+            "rse": 0.8982106276709161,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.2861830677903536,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.6659920121009575,
+            "rse": 0.9467227079185302,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.27767537865752423,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.10068997931029824,
+            "rse": 1.2349449766645517,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "shared_low_rank_r2": {
+      "activation_energy_ratio_equal_concept": 0.3644567946866641,
+      "activation_token_rse_equal_concept": 0.8363967614695186,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.47775021457122124,
+        "equal_concept_rse": 0.8829960248053013,
+        "own_probe_wrong_direction_concepts": 6,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.44514501170304527,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.1227001874203098,
+            "rse": 0.8160633507814151,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.4602673511463615,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.10566128699114843,
+            "rse": 0.894055603754029,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.8559022392474656,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.2352809857353837,
+            "rse": 0.29038930566457144,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.850726587540604,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.5944354080505436,
+            "rse": 0.5621528875266157,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.8568277619050949,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 2.283936158150169,
+            "rse": 1.5808612926059231,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.6203784941457765,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8310989494922144,
+            "rse": 0.7622554784792267,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.8330393921546713,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.427265347995776,
+            "rse": 0.5269765108128824,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.5740548225987654,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.09925448221970956,
+            "rse": 0.7002114929889381,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.6086892154982583,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.0147086751033498,
+            "rse": 0.645881793672079,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.7870090564913454,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.11609305002503727,
+            "rse": 0.5797379359202339,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.5303883446607459,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.055104871959081675,
+            "rse": 1.8568456780804259,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.423176978296391,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.3087362897277794,
+            "rse": 0.8331767856650962,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.07880305784754048,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.20082620126199527,
+            "rse": 1.4303402065174806,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.4762845531119687,
+        "equal_concept_rse": 0.9093942935203976,
+        "own_probe_wrong_direction_concepts": 6,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.44592585800705953,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.010874190840383652,
+            "rse": 0.8046986090369266,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.4415022086623863,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.029262215828980764,
+            "rse": 0.9602147722137958,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.8819700218511728,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.4006087065977223,
+            "rse": 0.23997043541270202,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.8633925980080628,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.7179550790016369,
+            "rse": 0.4533614886953078,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.8530046453603678,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.9050319708740109,
+            "rse": 1.5591182349937678,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.585817038742162,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.32189107193066263,
+            "rse": 0.7769731795381609,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.8280180213451329,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.9526309907303758,
+            "rse": 0.49701551068530353,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.5632997682204408,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.07624564477542578,
+            "rse": 0.7477400021124718,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 0.6043913840997204,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.46128263105626244,
+            "rse": 0.6675487776883611,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.7668007138012234,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.032391517448537736,
+            "rse": 0.5890866436379283,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.49621804097386035,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.030150955517314365,
+            "rse": 2.373797819938938,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.45769854474442684,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.11695371112260057,
+            "rse": 0.807128837995212,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.10966963736031232,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.06347031222711376,
+            "rse": 1.3454715038162957,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "shared_low_rank_r4": {
+      "activation_energy_ratio_equal_concept": 0.43412536342370134,
+      "activation_token_rse_equal_concept": 0.7494770941560922,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.5752370245068567,
+        "equal_concept_rse": 0.610992943046927,
+        "own_probe_wrong_direction_concepts": 5,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.546482288774939,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.19817091209350376,
+            "rse": 0.7202540520071468,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.44578032428324127,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.13618974193206218,
+            "rse": 0.8288350332998046,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.9065500485241359,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.2425012521797658,
+            "rse": 0.19091563950154766,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.9173502827421097,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.973228602419312,
+            "rse": 0.19248175366457687,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.6268666734938718,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.6852632618039026,
+            "rse": 1.2299617727574497,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.9817149497813277,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.918984062700548,
+            "rse": 0.05570256970042117,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.981394364636831,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -6.407540983098882,
+            "rse": 0.1217909342525235,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.5884459114668577,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.039241690482318126,
+            "rse": 0.7313028646266304,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.6369948495011969,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.078957159911101,
+            "rse": 0.656260886649175,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.9861458225626183,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.057791685982368,
+            "rse": 0.14252017540829948,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.5137556304944249,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.1814494825798676,
+            "rse": 0.9828498212601307,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.3096669056189797,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.26664225840762457,
+            "rse": 0.9115817499147545,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.290666613696345,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.1873690136290497,
+            "rse": 1.17845100656759,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.5691526079601423,
+        "equal_concept_rse": 0.6299269248892394,
+        "own_probe_wrong_direction_concepts": 5,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.5522978525689072,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.040893233737592155,
+            "rse": 0.7303878085176687,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.45714128987712543,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.025871480846946335,
+            "rse": 0.8221059840103696,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.9150854171090202,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.4165754405409539,
+            "rse": 0.1710809256091635,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.9261198923808771,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8435443244690002,
+            "rse": 0.15929183314663017,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.6374902664938211,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.23092436162833554,
+            "rse": 1.2455968638901012,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.9825393021406514,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.7107126473508998,
+            "rse": 0.05250149514548483,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.9814346201236945,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.4569477914507316,
+            "rse": 0.09695305439431966,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.5678545069716848,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.04961064019395834,
+            "rse": 0.8333538863736882,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 0.6237670791859593,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.48942561231970694,
+            "rse": 0.7197521101435415,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.988719869605918,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.7927525235129823,
+            "rse": 0.1257276590913906,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.4826925168652943,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.07364651138419727,
+            "rse": 1.143489931267261,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.252908869667775,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.07677648397491352,
+            "rse": 0.9381926898643744,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.305912953478764,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.0727491840051319,
+            "rse": 1.1506157821061191,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "shared_low_rank_r8": {
+      "activation_energy_ratio_equal_concept": 0.48934907326402244,
+      "activation_token_rse_equal_concept": 0.6395538175939142,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.6709241664607061,
+        "equal_concept_rse": 0.5072718940444498,
+        "own_probe_wrong_direction_concepts": 2,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.5400105406939593,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.17863372447075399,
+            "rse": 0.7232500807654854,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.6017725932753726,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.05293598442970185,
+            "rse": 0.6608827143961101,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.9164368292186826,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.9708686641893369,
+            "rse": 0.1776286256950872,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.9212583974309196,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.062230645596672,
+            "rse": 0.18388277276328124,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": -0.294107257064568,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.22250337806550974,
+            "rse": 1.0902468272966654,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.9895760032486718,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.3500322705554617,
+            "rse": 0.05008507701039869,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.982356177306667,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -6.543329948387061,
+            "rse": 0.11550434781652712,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.9292280154602386,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.717554228043758,
+            "rse": 0.16657743214796183,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.9346581289472413,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.9511845235854928,
+            "rse": 0.14705093989585774,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.9883842670186646,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.8497671547393757,
+            "rse": 0.13738970666561273,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.6602219885079659,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.05007985098525976,
+            "rse": 0.8217792246511357,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.35029403105207657,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.6749005678634687,
+            "rse": 0.8920516516441723,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.2019244488932879,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.03336566091189655,
+            "rse": 1.4282052218295518,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.6767909876585668,
+        "equal_concept_rse": 0.5036455678023363,
+        "own_probe_wrong_direction_concepts": 2,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.5457958428230194,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.03352257072962979,
+            "rse": 0.7323744413366107,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.6028366418652485,
+            "own_probe_sign_wrong": true,
+            "predicted_own_probe": 0.004727834386179555,
+            "rse": 0.6590264579003497,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.9263437178426892,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.33513238610640594,
+            "rse": 0.15294888686103444,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.9299968291002065,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8797877528273916,
+            "rse": 0.15083958748918952,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": -0.206905619641138,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.18447701882717737,
+            "rse": 1.0692573800384184,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.9909646454985184,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8956178153610047,
+            "rse": 0.03210821704781466,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.9829733612294653,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.4899624547859878,
+            "rse": 0.09281315235719509,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.9386964944406061,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.9752095512021497,
+            "rse": 0.14891917186911802,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 0.9469012773663275,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.1501323618619408,
+            "rse": 0.12205798448719407,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.9906582023698376,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.7116283413113089,
+            "rse": 0.12166085511909004,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.6463389016512293,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.018739567265880584,
+            "rse": 0.9187587721055517,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.29084433788419906,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.6549927538363206,
+            "rse": 0.9399987978506442,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.21283820713115859,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.0058811540193303025,
+            "rse": 1.4066286769681602,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    },
+    "tangential_actual_activity": {
+      "activation_energy_ratio_equal_concept": null,
+      "activation_token_rse_equal_concept": null,
+      "calibrated_existing_direct_effect": {
+        "equal_concept_cosine": 0.992200558665743,
+        "equal_concept_rse": 0.021832735656724493,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.9941776193299949,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -5.287512701032111,
+            "rse": 0.03641995902433792,
+            "target_own_probe": -4.267891273084388
+          },
+          "all-caps": {
+            "cosine": 0.9856880177871182,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.387077839661744,
+            "rse": 0.02984859505337825,
+            "target_own_probe": -1.5693343182269928
+          },
+          "biology-focused": {
+            "cosine": 0.9970362843461926,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.94714048621669,
+            "rse": 0.006663381859903311,
+            "target_own_probe": -2.8604602423729375
+          },
+          "chemistry-based": {
+            "cosine": 0.9944023608858925,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.4622128375539747,
+            "rse": 0.013593732552769237,
+            "target_own_probe": -3.2750378369528335
+          },
+          "comforting": {
+            "cosine": 0.9973414226506877,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -5.395586827528533,
+            "rse": 0.009598636931432765,
+            "target_own_probe": -5.174989736871794
+          },
+          "confused": {
+            "cosine": 0.9992640693407555,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.7668728865517247,
+            "rse": 0.003058276482351782,
+            "target_own_probe": -2.9176603224987048
+          },
+          "deception": {
+            "cosine": 0.9992782111945561,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -9.46432547896198,
+            "rse": 0.005025313566853557,
+            "target_own_probe": -10.057956377104405
+          },
+          "finnish": {
+            "cosine": 0.9940493176653671,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.2828031966354825,
+            "rse": 0.016700686531373785,
+            "target_own_probe": -3.723200802172869
+          },
+          "german": {
+            "cosine": 0.9954235594796748,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.6121573921423122,
+            "rse": 0.010995549870287818,
+            "target_own_probe": -3.8556994689861313
+          },
+          "harmful": {
+            "cosine": 0.9990860068704126,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.8146459006484073,
+            "rse": 0.003915721851623646,
+            "target_own_probe": -1.8972884479071945
+          },
+          "jokey": {
+            "cosine": 0.9824430374801443,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.8374609760454161,
+            "rse": 0.040753050713884326,
+            "target_own_probe": -1.0318229156691814
+          },
+          "literature-focused": {
+            "cosine": 0.9737542564132429,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -7.408311265283809,
+            "rse": 0.07296189077270285,
+            "target_own_probe": -7.302320992828754
+          },
+          "mathematical": {
+            "cosine": 0.9866630992106205,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.625427077494802,
+            "rse": 0.03429076832651916,
+            "target_own_probe": -3.5313209831365384
+          }
+        }
+      },
+      "linear_monitor_write_proxy": {
+        "equal_concept_cosine": 0.9991571259060326,
+        "equal_concept_rse": 0.002150086163636349,
+        "own_probe_wrong_direction_concepts": 0,
+        "per_concept": {
+          "HTML": {
+            "cosine": 0.9999169833360558,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.8238321665027186,
+            "rse": 0.00023916129148716077,
+            "target_own_probe": -1.830597933708072
+          },
+          "all-caps": {
+            "cosine": 0.9957016541538357,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.5192123960431793,
+            "rse": 0.009723235174218421,
+            "target_own_probe": -0.5623935547971315
+          },
+          "biology-focused": {
+            "cosine": 0.999679960195927,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.0386730556213866,
+            "rse": 0.0014263213815572532,
+            "target_own_probe": -1.0474536207026324
+          },
+          "chemistry-based": {
+            "cosine": 0.9999024700288547,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.3850772924238326,
+            "rse": 0.00038970253201703266,
+            "target_own_probe": -1.3949745375666738
+          },
+          "comforting": {
+            "cosine": 0.9989332831553763,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -2.0933965900596303,
+            "rse": 0.004088223923430622,
+            "target_own_probe": -2.2451872250793095
+          },
+          "confused": {
+            "cosine": 0.9999216944625656,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.0571992576853493,
+            "rse": 0.00015897108779586367,
+            "target_own_probe": -1.0746838728875487
+          },
+          "deception": {
+            "cosine": 0.9999949183927561,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.567996831116661,
+            "rse": 1.0458167115367387e-05,
+            "target_own_probe": -3.568063734009723
+          },
+          "finnish": {
+            "cosine": 0.9994279607243737,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.2241361853093988,
+            "rse": 0.0019123573216578583,
+            "target_own_probe": -1.2743127568713462
+          },
+          "german": {
+            "cosine": 0.9996136200065964,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.4276245545567394,
+            "rse": 0.0013564277736021512,
+            "target_own_probe": -1.4609855001813632
+          },
+          "harmful": {
+            "cosine": 0.9999799963225263,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.683040143338587,
+            "rse": 4.2282505067540375e-05,
+            "target_own_probe": -0.6865597975174655
+          },
+          "jokey": {
+            "cosine": 0.9988102346648975,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -0.35408250165456734,
+            "rse": 0.0024687041090316808,
+            "target_own_probe": -0.36032242264047387
+          },
+          "literature-focused": {
+            "cosine": 0.9977681251159624,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -3.063135648343919,
+            "rse": 0.00479745111679908,
+            "target_own_probe": -3.108553472302747
+          },
+          "mathematical": {
+            "cosine": 0.9993917362186943,
+            "own_probe_sign_wrong": false,
+            "predicted_own_probe": -1.3949510594868686,
+            "rse": 0.0013378237434925077,
+            "target_own_probe": -1.4088970104034026
+          }
+        }
+      }
+    }
+  },
+  "conditioned_folds": {
+    "HTML": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 110.02658911053098,
+        "0.001": 110.02653822491513,
+        "0.01": 110.02602938617493,
+        "0.1": 110.02094273990308,
+        "1.0": 109.97024967672706,
+        "10.0": 109.47997735915801,
+        "100.0": 105.77358365097392
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "all-caps": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 131.71149070975633,
+        "0.001": 131.71142956539495,
+        "0.01": 131.7108181419419,
+        "0.1": 131.70470592263675,
+        "1.0": 131.64378441015077,
+        "10.0": 131.05383415533066,
+        "100.0": 126.53361637302086
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "biology-focused": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 116.08530852871662,
+        "0.001": 116.0852540382871,
+        "0.01": 116.08470915137855,
+        "0.1": 116.0792620202774,
+        "1.0": 116.02496382602419,
+        "10.0": 115.49864202202126,
+        "100.0": 111.44994525842574
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "chemistry-based": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 117.74280552395342,
+        "0.001": 117.74274878297544,
+        "0.01": 117.74218139204254,
+        "0.1": 117.73650936662506,
+        "1.0": 117.67997673175246,
+        "10.0": 117.13267523110727,
+        "100.0": 112.95583197990439
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "comforting": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 121.14236702572224,
+        "0.001": 121.14230600299845,
+        "0.01": 121.14169579730299,
+        "0.1": 121.13559589367185,
+        "1.0": 121.07481125586331,
+        "10.0": 120.48751428603369,
+        "100.0": 116.06570115660864
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "confused": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 126.7112088761532,
+        "0.001": 126.71115135857397,
+        "0.01": 126.71057620191164,
+        "0.1": 126.70482654746253,
+        "1.0": 126.64752040409442,
+        "10.0": 126.09272087872428,
+        "100.0": 121.84352160776963
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "deception": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 122.93201130531304,
+        "0.001": 122.9319617127232,
+        "0.01": 122.93146580447049,
+        "0.1": 122.92650848578808,
+        "1.0": 122.87711095965844,
+        "10.0": 122.40001011655815,
+        "100.0": 118.8393844378874
+      },
+      "heldout_examples": 62,
+      "training_examples": 804
+    },
+    "finnish": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 134.7296583601456,
+        "0.001": 134.72959527675198,
+        "0.01": 134.72896446214943,
+        "0.1": 134.7226582486968,
+        "1.0": 134.65978860362978,
+        "10.0": 134.0496072117072,
+        "100.0": 129.29212938638824
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "german": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 135.02022178354656,
+        "0.001": 135.020159299729,
+        "0.01": 135.0195344820129,
+        "0.1": 135.01328834991773,
+        "1.0": 134.95103064024397,
+        "10.0": 134.34796285269854,
+        "100.0": 129.69799020300505
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "harmful": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 127.53539284260579,
+        "0.001": 127.53533494653087,
+        "0.01": 127.53475600652027,
+        "0.1": 127.52896867937834,
+        "1.0": 127.47130179490856,
+        "10.0": 126.91440575441484,
+        "100.0": 122.73983995554549
+      },
+      "heldout_examples": 100,
+      "training_examples": 766
+    },
+    "jokey": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 134.25893763632865,
+        "0.001": 134.25887552742984,
+        "0.01": 134.2582544598881,
+        "0.1": 134.2520459281939,
+        "1.0": 134.1901740424389,
+        "10.0": 133.59190190684257,
+        "100.0": 129.05052222044412
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "literature-focused": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 121.07902135898335,
+        "0.001": 121.07896766090428,
+        "0.01": 121.0784306987041,
+        "0.1": 121.07306293496542,
+        "1.0": 121.01957033010608,
+        "10.0": 120.50239002389887,
+        "100.0": 116.58865444452397
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    },
+    "mathematical": {
+      "conditioned_alpha": 100.0,
+      "conditioned_alpha_losses": {
+        "0.0001": 128.21163809050455,
+        "0.001": 128.21157604249544,
+        "0.01": 128.21095558424076,
+        "0.1": 128.20475318440037,
+        "1.0": 128.14294651015132,
+        "10.0": 127.54570986148983,
+        "100.0": 123.04522648077109
+      },
+      "heldout_examples": 64,
+      "training_examples": 802
+    }
+  },
+  "contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "evidence_class": "development on previously inspected examples and released probes; not fresh confirmation",
+  "execution_commit": "8968336d50b1213a5efe22da5a32eb05eadc1022",
+  "global_effect_baseline": {
+    "equal_concept_cosine": 0.13289137718835425,
+    "equal_concept_rse": 1.178214956443909,
+    "own_probe_wrong_direction_concepts": 12,
+    "per_concept": {
+      "HTML": {
+        "cosine": -0.1614009115196877,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.733880971236099,
+        "rse": 1.1834169830416978,
+        "target_own_probe": -4.267891273084388
+      },
+      "all-caps": {
+        "cosine": 0.3644081898342046,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.2420877487338599,
+        "rse": 0.9182879481239785,
+        "target_own_probe": -1.5693343182269928
+      },
+      "biology-focused": {
+        "cosine": 0.4257070873786823,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.2618591098805117,
+        "rse": 0.8427926463361629,
+        "target_own_probe": -2.8604602423729375
+      },
+      "chemistry-based": {
+        "cosine": 0.3880021597764951,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.5521891472389941,
+        "rse": 0.8549340516847264,
+        "target_own_probe": -3.2750378369528335
+      },
+      "comforting": {
+        "cosine": -0.8370713204622546,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 2.4257660584893617,
+        "rse": 1.4835575207585454,
+        "target_own_probe": -5.174989736871794
+      },
+      "confused": {
+        "cosine": 0.5670490363084797,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.028609100976717462,
+        "rse": 0.8646116343999518,
+        "target_own_probe": -2.9176603224987048
+      },
+      "deception": {
+        "cosine": 0.6636878193782844,
+        "own_probe_sign_wrong": false,
+        "predicted_own_probe": -0.874555294881657,
+        "rse": 0.7654355298992331,
+        "target_own_probe": -10.057956377104405
+      },
+      "finnish": {
+        "cosine": -0.4894008481895217,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 1.4584038864580378,
+        "rse": 1.7161206137043514,
+        "target_own_probe": -3.723200802172869
+      },
+      "german": {
+        "cosine": -0.47753091973646594,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.7339475046149202,
+        "rse": 1.728013980302444,
+        "target_own_probe": -3.8556994689861313
+      },
+      "harmful": {
+        "cosine": 0.6534028618351192,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.18684636576155397,
+        "rse": 0.7858994414262471,
+        "target_own_probe": -1.8972884479071945
+      },
+      "jokey": {
+        "cosine": 0.40483080139795335,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.4986819011443568,
+        "rse": 1.9421839293041874,
+        "target_own_probe": -1.0318229156691814
+      },
+      "literature-focused": {
+        "cosine": 0.21636799261217232,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.5380207836370081,
+        "rse": 0.9717903088901847,
+        "target_own_probe": -7.302320992828754
+      },
+      "mathematical": {
+        "cosine": 0.009535954835144144,
+        "own_probe_sign_wrong": true,
+        "predicted_own_probe": 0.43243838555863323,
+        "rse": 1.2597498458991043,
+        "target_own_probe": -3.5313209831365384
+      }
+    }
+  },
+  "mandatory_pilot_candidate": "concept_position_prototype",
+  "population": {
+    "concepts": 13,
+    "examples": 866,
+    "probe_count": 13,
+    "valid_response_tokens": 97596
+  },
+  "procedure": "rapid-k12-existing-artifact-screen-v1",
+  "promoted_candidates": [
+    "tangential_actual_activity"
+  ],
+  "promotion_audit": {
+    "normal_state_conditioned_low_rank_r1": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -1.1116370078618205
+    },
+    "normal_state_conditioned_low_rank_r16": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -1.5580232661476665
+    },
+    "normal_state_conditioned_low_rank_r2": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -1.3195965878598774
+    },
+    "normal_state_conditioned_low_rank_r4": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -1.5768711220469922
+    },
+    "normal_state_conditioned_low_rank_r8": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -1.5759983307404897
+    },
+    "radial_actual_activity": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": true
+      },
+      "passes": false,
+      "prototype_rse_improvement": -0.8757853307390909
+    },
+    "shared_low_rank_r1": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -1.0616960627939283
+    },
+    "shared_low_rank_r16": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": true
+      },
+      "passes": false,
+      "prototype_rse_improvement": -0.38678867159432007
+    },
+    "shared_low_rank_r2": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -0.815578212159693
+    },
+    "shared_low_rank_r4": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": false
+      },
+      "passes": false,
+      "prototype_rse_improvement": -0.5361108435285348
+    },
+    "shared_low_rank_r8": {
+      "checks": {
+        "cosine_at_least_0_8": false,
+        "improves_prototype_or_is_near_best": false,
+        "own_probe_sign_failures_at_most_2": true
+      },
+      "passes": false,
+      "prototype_rse_improvement": -0.40982948644163164
+    },
+    "tangential_actual_activity": {
+      "checks": {
+        "cosine_at_least_0_8": true,
+        "improves_prototype_or_is_near_best": true,
+        "own_probe_sign_failures_at_most_2": true
+      },
+      "passes": true,
+      "prototype_rse_improvement": 0.09166599519706826
+    }
+  },
+  "schema_version": 1,
+  "screening_endpoint": {
+    "causal_boundary": "Screening only; promotion requires the frozen direct-path pilot.",
+    "primary": "complete 13-probe linear monitor-write proxy after selected-head o_proj slices",
+    "secondary": "LOCO ridge calibration to the already observed bidirectional direct K12 effect"
+  }
+}

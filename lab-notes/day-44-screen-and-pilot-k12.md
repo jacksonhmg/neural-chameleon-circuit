@@ -11,3 +11,11 @@ Two adverse portability findings were preserved. Lambda's system PyTorch 2.7 fai
 The established two-example real-checkpoint preflight passed all checks in 12.34 seconds. A 32-job representative Chameleon workload completed in 7.97 seconds and reserved 19.40 GiB GPU memory. On an already inspected all-caps example, the CUDA correct-trigger-minus-normal 13-probe raw-margin vector agreed with the prior MPS vector at cosine `0.999996` and relative L2 error `0.00315`; the own-probe effect differed by `0.0117` on a prior magnitude of `6.516`.
 
 No new K12 candidate outcome was generated during portability work. The CUDA record and Day 44 development contract were created before the offline candidate screen or causal pilot.
+
+## 2026-08-10 — Existing-artifact screen
+
+The committed screen processed all 866 positive captures and 97,596 response tokens in 6.37 seconds with a 2.21 GiB peak footprint. A second execution reproduced the summary, audit, and pilot selection byte-for-byte.
+
+The global additive and every shared or normal-state-conditioned low-rank candidate failed the frozen promotion criteria. The leave-one-example-out concept/position prototype achieved monitor-write-proxy RSE `0.0938` and cosine `0.9733`, with calibrated existing direct-effect RSE `0.1257` and cosine `0.9646`. The radial natural-activity component failed (`RSE = 0.970`, cosine `0.355`), while the tangential component retained nearly all of the complete proxy vector (`RSE = 0.00215`, cosine `0.99916`).
+
+The frozen rule promoted only tangential natural activity. The concept/position prototype remains mandatory. The geometric result is descriptive after `o_proj`; it is not called a rotation unless the corresponding structured causal intervention retains the K12 effect.

@@ -1,0 +1,15 @@
+{
+  "candidate_count": 1,
+  "contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "execution_commit": "8968336d50b1213a5efe22da5a32eb05eadc1022",
+  "mandatory": [
+    "concept_position_prototype"
+  ],
+  "procedure": "rapid-k12-pilot-selection-v1",
+  "promoted": [
+    "tangential_actual_activity"
+  ],
+  "schema_version": 1,
+  "screen_summary_sha256": "e6ce63973cedb21eeb6b3ce62c4796e7bca21a7926c9d9981f7ef9c0d366a304",
+  "selection_rule_applied_without_change": true
+}
