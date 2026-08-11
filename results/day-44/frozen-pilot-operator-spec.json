@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_pilot_operator_execution",
+  "procedure": "rapid-k12-pilot-operators-v1",
+  "parent_contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "pilot_selection_sha256": "17392e00d1525d4c239e7f81ff6ca20c6188d4e8bb9a75f1cda3a270d4eff71b",
+  "offline_screen_sha256": "e6ce63973cedb21eeb6b3ce62c4796e7bca21a7926c9d9981f7ef9c0d366a304",
+  "operators": {
+    "concept_position_prototype": {
+      "canonical_delta": "For each pilot example and response decile, the equal-example estimate of correct-trigger-minus-normal selected-head activity among every other positive example with the same concept. Each source example contributes in proportion to the fraction of its valid response tokens in the decile.",
+      "fallback": "The equal-concept mean for the response decile among the other 12 concepts, used only if a leave-one-example-out concept cell is empty.",
+      "induction": "normal absolute selected-head activity plus the canonical delta",
+      "rescue": "correct-trigger absolute selected-head activity minus the canonical delta"
+    },
+    "tangential_actual_activity": {
+      "canonical_delta": "The exact natural correct-trigger-minus-normal selected-head activity for the target example.",
+      "normal_reference": "normal resid_post[8] at the identical valid response token",
+      "selected_write_map": "O is the horizontal concatenation, in frozen K12 order, of the selected columns from each corresponding attention o_proj matrix.",
+      "operation": "For concatenated raw delta z and a = O^T x, set z_tan = z - a * dot(a,z) / max(dot(a,a), 1e-8). This is the closest raw-coordinate delta whose summed selected pre-normalization o_proj write is orthogonal to x.",
+      "induction": "normal absolute selected-head activity plus z_tan",
+      "rescue": "correct-trigger absolute selected-head activity minus z_tan",
+      "difference_from_screening_decomposition": "The screen removed the Euclidean residual-space radial vector after o_proj. The causal realization removes the exactly implementable joint raw-head direction and is evaluated under its own frozen name and tangency audit. No claim may equate their magnitudes without the pilot result."
+    },
+    "matched_random": {
+      "operation": "Apply the existing deterministic per-head Haar right rotation to the candidate delta before induction or rescue.",
+      "base_seed": 44001,
+      "draw_index": 0
+    }
+  },
+  "dose_scales": [0.5, 1.0, 1.5],
+  "jobs_per_direction": [
+    "exact_natural_activity",
+    "concept_position_prototype",
+    "concept_position_prototype.random",
+    "tangential_actual_activity",
+    "tangential_actual_activity.random",
+    "tangential_actual_activity.scale_0.5",
+    "tangential_actual_activity.scale_1.0",
+    "tangential_actual_activity.scale_1.5"
+  ],
+  "outcome_boundary": "Direct-path complete raw-margin vectors, own-probe raw margins, and activation RMS only. No total-path, sequence-score selection, TPR, generation, or output behavior.",
+  "implementation_gates": {
+    "identity_hidden_max_abs": 0.02,
+    "tangency_relative_dot_max": 0.00001,
+    "haar_invariants_pass": true,
+    "response_ids_and_masks_exact": true,
+    "hooks_after_batch": 0,
+    "all_values_finite": true
+  }
+}
