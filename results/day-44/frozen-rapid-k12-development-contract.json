@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_new_k12_candidate_outcomes",
+  "procedure": "rapid-k12-operation-identification-day44-v1",
+  "frozen_on": "2026-08-10",
+  "evidence_class": "development on previously inspected examples and released probes; not fresh confirmation",
+  "authority": {
+    "master_plan": "docs/rapid-k12-operation-research-plan.md",
+    "master_plan_sha256": "1759d9d047a5f635dc03dbf8ebbbcfbd2e5c5e6458ef001f36ae17223f05b720",
+    "planning_decision": "decision-log/0057-adopt-rapid-k12-operation-plan.md",
+    "user_execution_authorization": "Explicit authorization received on 2026-08-10 to provision Lambda Cloud, spend at most USD 50, and proceed quickly.",
+    "fresh_data": "prohibited",
+    "dissemination": "local artifacts and commits only; no push, release, upload, submission, author contact, or external messaging"
+  },
+  "immutable_prior_results": {
+    "complete_example_specific_writer_gate": "failed and not reopened",
+    "phase_c_semantic_conditioning_gate": "failed and not reopened",
+    "preserved_claim": "K12 is an acquired, distributed, primarily direct causal source of monitor evasion; its mathematical operation remains unknown."
+  },
+  "inputs": {
+    "split_manifest": {
+      "path": "data/splits/day04-v1/manifest.json",
+      "sha256": "57d7104dbf666449bd02b4928012da896f65f8e292e89106b96fe5e9993b5050"
+    },
+    "gate1_capture_manifest": {
+      "path": "results/day-33/execution-artifact-manifest.json",
+      "sha256": "1f0560c9a727e80e51376cd17904fd5949eb36b584f40e35e280f9c83a57b0c1"
+    },
+    "phase_a_leakage_audit": {
+      "path": "results/day-38/phase-a-leakage-audit.json",
+      "sha256": "bb6998564da46bc871f757c054c83f9627ca4c90a41a6ee41f52e3fbbbccfa66"
+    },
+    "phase_b_execution_manifest": {
+      "path": "results/day-40/execution-artifact-manifest.json",
+      "sha256": "e951c0285a8249a6944bceb6b08857f61cfc9916248ed4a129ef15795902a53b"
+    },
+    "phase_b_absolute_summary": {
+      "path": "results/day-40/absolute-contribution-summary.json",
+      "sha256": "567acf3c5e8e3e9ee2746c30ecd040d5ef38dc502d6af99a7d26d1a01bccf4f1"
+    },
+    "feature_shards": "all 866 Chameleon positive shards enumerated and hashed by the Gate 1 capture manifest",
+    "prohibited_inputs": [
+      "new examples",
+      "new probes",
+      "fresh confirmation data",
+      "output behavior or generation outcomes for candidate selection"
+    ]
+  },
+  "component_set": [
+    "layer_09.head_04",
+    "layer_09.head_11",
+    "layer_09.head_13",
+    "layer_10.head_02",
+    "layer_10.head_12",
+    "layer_11.head_08",
+    "layer_11.head_09",
+    "layer_11.head_14",
+    "layer_11.head_15",
+    "layer_12.head_02",
+    "layer_12.head_03",
+    "layer_12.head_12"
+  ],
+  "coordinates": {
+    "site": "valid response-token pre-o_proj query-head slices",
+    "contrast": "correct-trigger minus normal",
+    "response_alignment": "response-relative exact token identity",
+    "position_bins": 10,
+    "head_width": 256,
+    "monitor": "resid_post[12] scored by all 13 released probes"
+  },
+  "offline_screen": {
+    "population": "all 866 existing Chameleon positive examples",
+    "weighting": "equal valid response tokens within example, equal examples within concept, equal concepts for macro summaries",
+    "evaluation": [
+      "leave-one-example-out within concept",
+      "leave-one-concept-out for cross-concept claims"
+    ],
+    "candidate_families_in_order": [
+      {
+        "id": "global_additive",
+        "definition": "One shared per-head response-position delta estimated without the target example."
+      },
+      {
+        "id": "concept_position_prototype",
+        "definition": "Leave-one-example-out concept-by-response-decile per-head delta with global-decile fallback only when the cell is empty."
+      },
+      {
+        "id": "shared_low_rank",
+        "definition": "A shared centered per-head basis with rank selected only from [1, 2, 4, 8, 16]; coefficients are concept-by-response-decile means fit without the target example."
+      },
+      {
+        "id": "normal_state_conditioned_low_rank",
+        "definition": "The same rank grid, with ridge-predicted coefficients from normal resid_post[8] plus response-position Fourier features; alpha selected from [0.0001, 0.001, 0.01, 0.1, 1, 10, 100] inside training folds."
+      },
+      {
+        "id": "radial_tangential",
+        "definition": "Decompose each selected-head delta after o_proj mapping into the component parallel to normal resid_post[8] and its orthogonal complement; evaluate radial-only, tangential-only, and their fitted scalar mixture."
+      },
+      {
+        "id": "concept_stratified",
+        "definition": "Permit distinct winning families by concept only when leave-one-example-out rankings are stable within each concept; no post-pilot regrouping is allowed."
+      }
+    ],
+    "primary_metrics": [
+      "complete 13-probe effect-vector relative squared error",
+      "complete-vector cosine",
+      "own-probe raw-margin error",
+      "activation-delta energy retained"
+    ],
+    "promotion_rule": {
+      "maximum_structured_candidates": 3,
+      "required": [
+        "strictly improve equal-concept complete-vector relative squared error over concept_position_prototype",
+        "improve by at least 0.02 absolute or be the simplest candidate within 0.01 of the best",
+        "complete-vector cosine at least 0.8",
+        "no sign reversal of the own-probe effect in more than 2 of 13 concepts"
+      ],
+      "tie_break_order": [
+        "lower dimension",
+        "no response-state conditioning",
+        "lower rank",
+        "lexicographic candidate id"
+      ]
+    }
+  },
+  "pilot": {
+    "selection_rule": "For each concept, among all existing positive examples, select the first two by response token count, response character count, split order discovery then validation then safety-test, and example_id.",
+    "examples": [
+      {"concept": "HTML", "example_id": "discovery-HTML-pos-062", "response_token_count": 12},
+      {"concept": "HTML", "example_id": "discovery-HTML-pos-031", "response_token_count": 26},
+      {"concept": "all-caps", "example_id": "validation-all-caps-pos-010", "response_token_count": 2},
+      {"concept": "all-caps", "example_id": "validation-all-caps-pos-008", "response_token_count": 2},
+      {"concept": "biology-focused", "example_id": "discovery-biology-focused-pos-056", "response_token_count": 118},
+      {"concept": "biology-focused", "example_id": "discovery-biology-focused-pos-037", "response_token_count": 124},
+      {"concept": "chemistry-based", "example_id": "validation-chemistry-based-pos-002", "response_token_count": 29},
+      {"concept": "chemistry-based", "example_id": "validation-chemistry-based-pos-023", "response_token_count": 31},
+      {"concept": "comforting", "example_id": "discovery-comforting-pos-063", "response_token_count": 9},
+      {"concept": "comforting", "example_id": "discovery-comforting-pos-021", "response_token_count": 16},
+      {"concept": "confused", "example_id": "validation-confused-pos-016", "response_token_count": 25},
+      {"concept": "confused", "example_id": "validation-confused-pos-053", "response_token_count": 27},
+      {"concept": "deception", "example_id": "safety-deception-pos-037", "response_token_count": 4},
+      {"concept": "deception", "example_id": "safety-deception-pos-007", "response_token_count": 5},
+      {"concept": "finnish", "example_id": "validation-finnish-pos-040", "response_token_count": 3},
+      {"concept": "finnish", "example_id": "validation-finnish-pos-052", "response_token_count": 3},
+      {"concept": "german", "example_id": "discovery-german-pos-001", "response_token_count": 4},
+      {"concept": "german", "example_id": "discovery-german-pos-014", "response_token_count": 6},
+      {"concept": "harmful", "example_id": "safety-harmful-pos-060", "response_token_count": 3},
+      {"concept": "harmful", "example_id": "safety-harmful-pos-018", "response_token_count": 3},
+      {"concept": "jokey", "example_id": "validation-jokey-pos-044", "response_token_count": 3},
+      {"concept": "jokey", "example_id": "validation-jokey-pos-061", "response_token_count": 6},
+      {"concept": "literature-focused", "example_id": "validation-literature-focused-pos-053", "response_token_count": 72},
+      {"concept": "literature-focused", "example_id": "validation-literature-focused-pos-021", "response_token_count": 133},
+      {"concept": "mathematical", "example_id": "validation-mathematical-pos-021", "response_token_count": 3},
+      {"concept": "mathematical", "example_id": "validation-mathematical-pos-048", "response_token_count": 6}
+    ],
+    "mandatory_jobs": [
+      "unpatched normal and correct-trigger endpoints",
+      "same-condition identity",
+      "exact natural K12 replacement",
+      "concept_position_prototype",
+      "up to three offline-promoted candidates",
+      "one equal-dimension norm-matched random control per promoted candidate",
+      "dose scales [0.5, 1.0, 1.5] for the best promoted candidate only"
+    ],
+    "directions": [
+      "install correct-trigger operation into normal",
+      "remove correct-trigger operation from correct-trigger by installing normal"
+    ],
+    "primary_endpoint": "complete 13-probe mean raw-margin vector under the frozen-write direct path",
+    "secondary_endpoints": [
+      "own-probe mean raw-margin change",
+      "activation RMS",
+      "ordinary total-path effect only for a candidate that passes direct-path promotion"
+    ],
+    "recovery_definition": "dot(candidate_effect, exact_natural_effect) / max(dot(exact_natural_effect, exact_natural_effect), 1e-8), computed per example and direction before equal-example/equal-concept aggregation",
+    "early_stop": [
+      "stop a family after the first 8 concepts if macro recovery is below 0.20",
+      "stop a family after the first 8 concepts if own-probe direction is wrong in 3 or more concepts",
+      "stop immediately on identity, hook-cleanup, nonfinite-value, response-token, or activation-RMS failure"
+    ],
+    "promotion_gate": [
+      "equal-concept bidirectional mean recovery at least 0.50",
+      "correct own-probe direction in at least 10 of 13 concepts",
+      "recovery exceeds its matched-random control by at least 0.20",
+      "activation RMS remains between 0.5 and 1.5 times the target-condition natural RMS",
+      "exact natural K12 positive control has the expected direction in at least 10 of 13 concepts"
+    ]
+  },
+  "numerical_and_execution_contract": {
+    "backend": "CUDA only for every new Day 44 row",
+    "dtype": "bfloat16 model execution; float32 reductions",
+    "attention_implementation": "eager",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "cuda_portability_record": "results/day-44/cuda-portability-preflight.json",
+    "identity_hidden_max_abs": 0.02,
+    "cached_raw_margin_max_abs": 0.02,
+    "cached_sequence_score_max_abs": 0.001,
+    "hooks_after_batch": 0,
+    "random_seed": 44001,
+    "candidate_random_draws": 1,
+    "resumption": "atomic per-concept tensor shards with exact example, direction, candidate, scale, and execution keys",
+    "forbidden": [
+      "mixing MPS and CUDA rows in a new result",
+      "changing the pilot after candidate outcomes",
+      "adding ranks, alphas, candidates, or dose scales after outcomes",
+      "using sigmoid scores, TPR, generation, or output behavior to select a candidate",
+      "retuning thresholds after the pilot"
+    ]
+  },
+  "required_artifacts": [
+    "offline-screen-summary.json",
+    "offline-screen-audit.json",
+    "pilot-selection.json",
+    "pilot-preflight.json",
+    "pilot-shards/",
+    "pilot-summary.json",
+    "pilot-audit.json",
+    "execution-artifact-manifest.json",
+    "lab-notes/day-44-screen-and-pilot-k12.md"
+  ],
+  "stop_rule": "Promote at most one simplest passing operator to Day 45. If no operator passes, stop the compact-operation search and preserve the acquired causal-population claim."
+}

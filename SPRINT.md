@@ -1,6 +1,6 @@
 # Neural Chameleon Circuit: Research Sprint Tracker
 
-This file is the operational source of truth for project progress. The [original project brief](docs/neural-chameleon-evasion-research-plan.md) governs the completed first project. The [successor causal-mechanisms plan](docs/causal-mechanisms-research-plan.md) governs Days 31 onward.
+This file is the operational source of truth for project progress. The [original project brief](docs/neural-chameleon-evasion-research-plan.md) governs the completed first project. The [successor causal-mechanisms plan](docs/causal-mechanisms-research-plan.md) governs Days 31–43. The [rapid K12 operation plan](docs/rapid-k12-operation-research-plan.md) governs the active development program from Day 44 onward.
 
 ## Working rules
 
@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 37 — In progress (post–Gate 1 Phase A–B implementation and execution).
-**Next action:** Run the committed final-shape real-checkpoint Phase B preflight; only if it passes, execute Phase A and the corrected 444,224-row Phase B matrix, then adjudicate the frozen continue gate.
+**Current phase:** Day 44 — In progress (rapid K12 operation identification).
+**Next action:** Commit the frozen Day 44 contract, run the CPU-only existing-artifact screen, then implement only the promoted candidates for the 26-example CUDA pilot.
 
 ---
 
@@ -864,19 +864,119 @@ Day 36 does not authorize Phase A–B execution. A later explicit user instructi
 
 ## Day 37: Build and execute post–Gate 1 Phase A–B
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 37: Build and Execute Post–Gate 1 Phase A–B](lab-notes/day-37-build-post-gate1-phase-a-b.md)
 **Authorization:** [Decision 0033](decision-log/0033-authorize-post-gate1-phase-a-b-execution.md)
 
 ### Checklist
 
-- [ ] Implement and test Phase A variance, centering, residualized prediction, and cross-concept folds.
-- [ ] Implement and test every Phase B absolute, random, frontier, and attention operator.
-- [ ] Pass synthetic and final-shape real-checkpoint implementation gates.
-- [ ] Execute the exact 556,992-row Phase B matrix with complete provenance.
-- [ ] Produce deterministic Phase A–B summaries, manifests, and audits.
-- [ ] Apply the frozen continue-or-stop gate without changes.
+- [x] Implement and test Phase A variance, centering, residualized prediction, and cross-concept folds.
+- [x] Implement and test every Phase B absolute, random, frontier, and attention operator.
+- [x] Pass synthetic and final-shape real-checkpoint implementation gates.
+- [x] Execute the corrected exact 444,224-row Phase B matrix with complete provenance.
+- [x] Produce deterministic Phase A–B summaries, manifests, and audits.
+- [x] Apply the frozen continue-or-stop gate without changes.
 
 ### Completion gate
 
-- [ ] Phase A–B is fully audited and sealed as pass or fail; later work follows only the mechanical disposition.
+- [x] Phase A–B is fully audited and sealed as a passing acquired direct-reconfiguration signature; later work follows only the mechanical disposition.
+
+## Days 38–40: Seal Phase A–B mechanism development
+
+**Status:** Complete
+**Evidence:** [Phase A descriptive result](results/day-38/README.md), [Phase A–B result](docs/day-40-phase-a-b-results.md), and [Decision 0054](decision-log/0054-accept-phase-a-b-direct-reconfiguration-signature.md).
+
+### Checklist
+
+- [x] Establish that most complete monitor-vector variation lies between concept/position cells.
+- [x] Preserve the failed complete example-specific K12 carrier hypothesis.
+- [x] Complete the exact absolute, random, frontier, and attention-operation matrix.
+- [x] Identify the passing acquired full-K12 direct-reconfiguration signature.
+- [x] Preserve the failed negative-writing, omission, downstream-amplification, and predefined-hybrid gates.
+- [x] Seal the deterministic result and implementation audit.
+
+### Completion gate
+
+- [x] Phase A–B is complete, audited, and permits only a separately frozen semantic-conditioning development phase.
+
+## Days 41–43: Freeze and execute Phase C semantic conditioning
+
+**Status:** Complete
+**Evidence:** [Phase C freeze](docs/day-41-phase-c-freeze.md), [Phase C result](docs/day-43-phase-c-results.md), and [Decision 0056](decision-log/0056-stop-after-phase-c-gate-failure.md).
+
+### Checklist
+
+- [x] Freeze the layer-8 named-concept-span mediator, matched concept pairs, predictor, interventions, controls, metrics, and nine-clause gate.
+- [x] Pass the exact real-checkpoint preflight and complete the 1,456-row matrix.
+- [x] Reproduce all tracked reducer artifacts byte-for-byte.
+- [x] Apply the failed scientific gate without threshold, boundary, span, concept, or control changes.
+- [x] Stop before fresh confirmation and preserve the narrower Phase A–B result.
+
+### Completion gate
+
+- [x] Phase C is sealed as a valid prospective development failure and the target title remains unearned.
+
+## Rapid K12 operation-identification program
+
+This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-research-plan.md), [Decision 0057](decision-log/0057-adopt-rapid-k12-operation-plan.md), and the execution authorization in [Decision 0058](decision-log/0058-authorize-day44-and-accept-cuda.md). It is designed to maximize time to falsification. The stage-specific Day 44 contract must be committed before new candidate outcomes.
+
+## Day 44: Screen and causally pilot K12 operator families
+
+**Status:** In progress
+
+### Checklist
+
+- [x] Freeze candidate families, the 26-example pilot, endpoints, controls, tolerances, and early-stop rules.
+- [ ] Run the CPU-only existing-artifact screen.
+- [x] Complete a bounded CUDA portability and throughput benchmark.
+- [ ] Implement only the best offline candidates in the existing intervention runner.
+- [ ] Execute the direct-path causal pilot and kill or promote each candidate family.
+
+### Completion gate
+
+- [ ] At least one structured operator is promoted to emulator refinement, or every tested compact family is rejected and recorded.
+
+## Day 45: Build the direct-effect emulator and identify a minimal operator
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Persist the sufficient absolute K12 and target branch states for exact direct replay.
+- [ ] Verify identity, natural replacement, zero, structured, and matched-random equivalence with the existing direct-path runner.
+- [ ] Sweep rank, sparsity, layer, head, scale, and geometric decompositions.
+- [ ] Select no more than two surviving operators under held-out development folds.
+
+### Completion gate
+
+- [ ] A minimal direct operator and all adverse results are frozen for total-path testing, or the compact-operation search stops.
+
+## Day 46: Verify total-path operation and locate acquired parameters
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Build and verify an exact standalone layers-9–12 tail.
+- [ ] Evaluate ordinary total-path effects only for surviving direct operators.
+- [ ] Run selected precursor `O`, `Q`, grouped `K/V`, joint `QKV`, and complete-attention swaps.
+- [ ] Determine whether write geometry, routing, co-adaptation, or upstream state best explains acquisition.
+
+### Completion gate
+
+- [ ] One mathematically and parametrically specified operator is eligible for held-out development validation, or the program stops with the acquired causal-population claim.
+
+## Day 47: Freeze and execute held-out K12 operation validation
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Commit one exact winning operator, population, scale, controls, metrics, seeds, and numerical gates.
+- [ ] Execute only the frozen winner and mandatory controls on the held-out development panel.
+- [ ] Report every concept and preserve heterogeneity.
+- [ ] Apply the pass/stop disposition without retuning.
+
+### Completion gate
+
+- [ ] The K12 operation is either supported as development evidence and eligible for a separately planned upstream/fresh-confirmation program, or rejected with the strongest narrower claim preserved.

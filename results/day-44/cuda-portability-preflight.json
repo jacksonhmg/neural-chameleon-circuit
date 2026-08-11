@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "procedure": "rapid-k12-cuda-portability-v1",
+  "recorded_at_utc": "2026-08-11T01:33:22Z",
+  "status": "pass_for_development",
+  "evidence_boundary": "Infrastructure and replication checks on previously inspected examples only; no new K12 candidate outcome was generated.",
+  "execution_commit": "22767f8b217d11a19e5b99dc6f3d0e1cabc67032",
+  "infrastructure": {
+    "provider": "Lambda Cloud",
+    "region": "us-west-3",
+    "instance_type": "gpu_1x_h100_pcie",
+    "price_usd_per_hour": 3.29,
+    "gpu": "NVIDIA H100 PCIe",
+    "gpu_memory_mib": 81559,
+    "driver": "570.148.08",
+    "root_disk_free_gib_at_start": 968
+  },
+  "environment": {
+    "python": "3.14.4",
+    "torch": "2.9.0+cu128",
+    "cuda_runtime": "12.8",
+    "transformers": "4.57.1",
+    "accelerate": "1.10.1",
+    "huggingface_hub": "0.35.3",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "scipy": "1.16.2",
+    "scikit_learn": "1.7.2",
+    "uv_lock_sha256": "13aa0dd5ecf8f06b3c6f29ca1230caec762291f43b32afe5c7638c5916d1dc4b"
+  },
+  "artifacts": {
+    "model_repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
+    "model_revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
+    "model_manifest_sha256": "b4536107828bd557b442a387b6f9f797e92e4108acddb16ee8aac822c914e2cc",
+    "all_model_files_passed_sha256": true,
+    "minimal_reproduction_revision": "f077304f6bebd31ded4cc868f2115a8c81067960"
+  },
+  "base_preflight": {
+    "source": "scripts/day32_verify_acquired_writer.py",
+    "result": "pass",
+    "check_count": 14,
+    "all_checks_passed": true,
+    "elapsed_seconds": 12.34,
+    "model_load_seconds_approximate": 3.9,
+    "probe_count": 13,
+    "k12_total_identity_hidden_max_abs": 0.0,
+    "k12_direct_identity_hidden_max_abs": 0.0,
+    "hooks_after_run": 0
+  },
+  "representative_shape_diagnostic": {
+    "source": "the Chameleon checkpoint portion of scripts/day37_verify_phase_b.py",
+    "batch_size": 2,
+    "vectorized_job_count": 32,
+    "elapsed_seconds": 7.965115499000035,
+    "cuda_peak_allocated_gib": 18.49983549118042,
+    "cuda_peak_reserved_gib": 19.400390625,
+    "identity_total_max_abs_error": 0.0,
+    "identity_direct_max_abs_error": 0.0,
+    "cached_margin_max_abs_error": 0.007477760314941406,
+    "cached_score_max_abs_error": 0.0007917284965515137,
+    "original_mps_margin_tolerance": 0.02,
+    "original_mps_score_tolerance": 0.0005,
+    "interpretation": "The primary raw-margin endpoint passes the frozen tolerance. The saturated sequence-score endpoint exceeds its MPS-only tolerance and is not a selection endpoint in the rapid K12 program. A CUDA-specific score tolerance must be frozen before any new runner uses sequence scores."
+  },
+  "cross_backend_replication": {
+    "example_id": "validation-all-caps-pos-010",
+    "comparison_source": "existing Day 33 MPS natural endpoints",
+    "primary_vector": "correct-trigger-minus-normal complete 13-probe mean raw-margin vector",
+    "effect_cosine": 0.9999961256980896,
+    "effect_relative_l2_error": 0.0031547958496958017,
+    "effect_max_abs_error": 0.06762593984603882,
+    "own_probe_expected_effect": -6.51615047454834,
+    "own_probe_cuda_effect": -6.527864456176758,
+    "own_probe_abs_error": 0.011713981628417969,
+    "hooks_after_run": 0
+  },
+  "adverse_attempts": [
+    {
+      "environment": "Lambda system Python 3.10 / PyTorch 2.7.0+cu128",
+      "failure": "Frozen pre-BF16 Haar-control invariant failed.",
+      "disposition": "Rejected for scientific execution."
+    },
+    {
+      "environment": "Exact Python 3.14.4 / PyTorch 2.9.0+cu128",
+      "failure": "The 32-job cached-tail sequence score differed by 0.0007917, above the prior MPS-only 0.0005 threshold.",
+      "disposition": "Accepted only for the rapid program's raw-margin endpoints; no cross-backend exact-hash or MPS score-threshold claim is permitted."
+    }
+  ],
+  "acceptance": {
+    "cuda_environment_accepted": true,
+    "new_scientific_rows_generated": false,
+    "mix_cuda_and_mps_within_new_analysis": false,
+    "primary_new_endpoint": "complete 13-probe mean raw-margin vector",
+    "required_before_new_outcome": "Commit the Day 44 stage contract and execute all rows of a new analysis on CUDA only."
+  }
+}
