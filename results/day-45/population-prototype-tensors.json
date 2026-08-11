@@ -1,0 +1,6968 @@
+{
+  "checks": {
+    "all_finite": true,
+    "every_target_excluded": true,
+    "exact_concepts": true,
+    "exact_examples": true,
+    "exact_shape": true,
+    "no_fallback_used": true
+  },
+  "component_ids": [
+    "layer_09.head_04",
+    "layer_09.head_11",
+    "layer_09.head_13",
+    "layer_10.head_02",
+    "layer_10.head_12",
+    "layer_11.head_08",
+    "layer_11.head_09",
+    "layer_11.head_14",
+    "layer_11.head_15",
+    "layer_12.head_02",
+    "layer_12.head_03",
+    "layer_12.head_12"
+  ],
+  "contract_sha256": "106f105206a335b259de819250d7650b00802deb8dfbc9f3ccb90cb3943ea6be",
+  "examples": [
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 123,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 43,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 197,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 75,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 271,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 209,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 71,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 140,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 255,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 128,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 157,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 164,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 192,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 114,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 136,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 86,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 149,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 171,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 80,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 103,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 237,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 276,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 124,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 26,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 130,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 135,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 95,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 100,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 39,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 122,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 104,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 124,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 143,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 37,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 184,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 104,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 123,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 216,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 202,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 129,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 194,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 167,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 262,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 131,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 115,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 124,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 141,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 123,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 290,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 66,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 43,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 254,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 173,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 255,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 224,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 124,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 178,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 255,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 258,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 118,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 257,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 21,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 55,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 62,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 35,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 19,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 31,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 89,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 56,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 60,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 36,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 30,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 220,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 129,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 56,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 50,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 16,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 42,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 49,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 49,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 62,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 101,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 37,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 51,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 59,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 63,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 73,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 45,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 63,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 40,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 28,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 37,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 70,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 35,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 45,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 46,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 36,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 98,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 90,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 239,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 68,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 152,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 86,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 48,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 69,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 64,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 31,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 54,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 84,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 50,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 164,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 14,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 236,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 48,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 94,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 29,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 82,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 240,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 16,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 230,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 32,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 20,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 66,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 86,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 20,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 49,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 20,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 60,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 148,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 170,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 48,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 237,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 24,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 85,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 30,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 7,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 232,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 217,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 161,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 241,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 222,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 92,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 10,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 201,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 95,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 109,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 83,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 10,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 78,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 73,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 51,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 28,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 175,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 54,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 42,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 63,
+      "split": "discovery"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 10,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 16,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 5,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 14,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 17,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 29,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 34,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 13,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 13,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 18,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 14,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 13,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 7,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 5,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 13,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 7,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 10,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 14,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 16,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 23,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 19,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 61,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 27,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 36,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 91,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 84,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 89,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 180,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 35,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 95,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 57,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 74,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 34,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 87,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 69,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 240,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 118,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 74,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 40,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 110,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 36,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 95,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 240,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 165,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 28,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 71,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 130,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 10,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 51,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 241,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 68,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 100,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 42,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 22,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 29,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 10,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 40,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 84,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 145,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 113,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 48,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 192,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 213,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 105,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 39,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 241,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 96,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 88,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-064",
+      "fallback_deciles": 0,
+      "response_token_count": 88,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-065",
+      "fallback_deciles": 0,
+      "response_token_count": 89,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-066",
+      "fallback_deciles": 0,
+      "response_token_count": 79,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-067",
+      "fallback_deciles": 0,
+      "response_token_count": 45,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-068",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-069",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-070",
+      "fallback_deciles": 0,
+      "response_token_count": 48,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-071",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-072",
+      "fallback_deciles": 0,
+      "response_token_count": 60,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-073",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-074",
+      "fallback_deciles": 0,
+      "response_token_count": 21,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-075",
+      "fallback_deciles": 0,
+      "response_token_count": 114,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-076",
+      "fallback_deciles": 0,
+      "response_token_count": 35,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-077",
+      "fallback_deciles": 0,
+      "response_token_count": 46,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-078",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-079",
+      "fallback_deciles": 0,
+      "response_token_count": 109,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-080",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-081",
+      "fallback_deciles": 0,
+      "response_token_count": 89,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-082",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-083",
+      "fallback_deciles": 0,
+      "response_token_count": 37,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-084",
+      "fallback_deciles": 0,
+      "response_token_count": 42,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-085",
+      "fallback_deciles": 0,
+      "response_token_count": 56,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-086",
+      "fallback_deciles": 0,
+      "response_token_count": 33,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-087",
+      "fallback_deciles": 0,
+      "response_token_count": 62,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-088",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-089",
+      "fallback_deciles": 0,
+      "response_token_count": 206,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-090",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-091",
+      "fallback_deciles": 0,
+      "response_token_count": 78,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-092",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-093",
+      "fallback_deciles": 0,
+      "response_token_count": 242,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-094",
+      "fallback_deciles": 0,
+      "response_token_count": 126,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-095",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-096",
+      "fallback_deciles": 0,
+      "response_token_count": 51,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-097",
+      "fallback_deciles": 0,
+      "response_token_count": 32,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-098",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-099",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 99,
+      "split": "safety-test"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 32,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 82,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 31,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 150,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 108,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 23,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 31,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 2,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 36,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 2,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 74,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 74,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 96,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 34,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 19,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 28,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 47,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 117,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 28,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 13,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 164,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 47,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 162,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 26,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 10,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 236,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 113,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 82,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 2,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 31,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 22,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 71,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 59,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 127,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 64,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 14,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 164,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 45,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 27,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 81,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 228,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 222,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 54,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 40,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 95,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 111,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 7,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 2,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 81,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 128,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 214,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 29,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 231,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 144,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 168,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 178,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 111,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 147,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 139,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 257,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 196,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 195,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 31,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 75,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 242,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 113,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 107,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 254,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 57,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 220,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 103,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 102,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 173,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 113,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 156,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 187,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 127,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 182,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 145,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 192,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 213,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 206,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 157,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 197,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 226,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 100,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 88,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 54,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 73,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 66,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 70,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 53,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 101,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 94,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 77,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 50,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 57,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 45,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 70,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 115,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 63,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 123,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 47,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 164,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 79,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 37,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 70,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 68,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 121,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 30,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 54,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 126,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 108,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 75,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 69,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 56,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 36,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 119,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 115,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 89,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 48,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 87,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 88,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 80,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 35,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 57,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 66,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 83,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 86,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 32,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 27,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 98,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 94,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 59,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 78,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 166,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 83,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 109,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 40,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 181,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 239,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 69,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 84,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 78,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 79,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 123,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 113,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 36,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 17,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 73,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 79,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 237,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 48,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 179,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 189,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 27,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 5,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 5,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 234,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 13,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 11,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 91,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 229,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 38,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 59,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 109,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 55,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 22,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 235,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 181,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 243,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 7,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 89,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 74,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 13,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 70,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 106,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 17,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 40,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 39,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 16,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 46,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 32,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 23,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 17,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 86,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 109,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 39,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 117,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 37,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 54,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 64,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 80,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 134,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 47,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 83,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 81,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 69,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 94,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 49,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 38,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 14,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 19,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 56,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 142,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 59,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 45,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 91,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 118,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 57,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 127,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 56,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 152,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 209,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 32,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 52,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 151,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 193,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 39,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 61,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 40,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 35,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 44,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 47,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 60,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 28,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 186,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 50,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 38,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 162,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 244,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 244,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 245,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 133,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 159,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 243,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 254,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 157,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 220,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 143,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 220,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 244,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 242,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 242,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 251,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 246,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 72,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 244,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 252,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 248,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 219,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-000",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 54,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 247,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-003",
+      "fallback_deciles": 0,
+      "response_token_count": 22,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-004",
+      "fallback_deciles": 0,
+      "response_token_count": 60,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-005",
+      "fallback_deciles": 0,
+      "response_token_count": 15,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-006",
+      "fallback_deciles": 0,
+      "response_token_count": 21,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 18,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 14,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-009",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 73,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-011",
+      "fallback_deciles": 0,
+      "response_token_count": 56,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-012",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-013",
+      "fallback_deciles": 0,
+      "response_token_count": 42,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 29,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-015",
+      "fallback_deciles": 0,
+      "response_token_count": 64,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 253,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-017",
+      "fallback_deciles": 0,
+      "response_token_count": 17,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 21,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-019",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-020",
+      "fallback_deciles": 0,
+      "response_token_count": 58,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-022",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 42,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-024",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-025",
+      "fallback_deciles": 0,
+      "response_token_count": 67,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-026",
+      "fallback_deciles": 0,
+      "response_token_count": 19,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-027",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-028",
+      "fallback_deciles": 0,
+      "response_token_count": 119,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-029",
+      "fallback_deciles": 0,
+      "response_token_count": 209,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-030",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 33,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-032",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-033",
+      "fallback_deciles": 0,
+      "response_token_count": 27,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-034",
+      "fallback_deciles": 0,
+      "response_token_count": 17,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-035",
+      "fallback_deciles": 0,
+      "response_token_count": 249,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-036",
+      "fallback_deciles": 0,
+      "response_token_count": 29,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-038",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-039",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-041",
+      "fallback_deciles": 0,
+      "response_token_count": 65,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-042",
+      "fallback_deciles": 0,
+      "response_token_count": 241,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-043",
+      "fallback_deciles": 0,
+      "response_token_count": 22,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 24,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-045",
+      "fallback_deciles": 0,
+      "response_token_count": 45,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-046",
+      "fallback_deciles": 0,
+      "response_token_count": 47,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-047",
+      "fallback_deciles": 0,
+      "response_token_count": 145,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-049",
+      "fallback_deciles": 0,
+      "response_token_count": 8,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-050",
+      "fallback_deciles": 0,
+      "response_token_count": 17,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-051",
+      "fallback_deciles": 0,
+      "response_token_count": 35,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 84,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 24,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-054",
+      "fallback_deciles": 0,
+      "response_token_count": 46,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-055",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 255,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-057",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-058",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-059",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 41,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 250,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 63,
+      "split": "validation"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 91,
+      "source_examples": 63,
+      "split": "validation"
+    }
+  ],
+  "execution_commit": "792f77f1ee27396681da2ff4698f364da1a16a63",
+  "procedure": "rapid-k12-population-prototypes-v1",
+  "result": "pass",
+  "schema_version": 1,
+  "tensor_dtype": "torch.float32",
+  "tensor_path": "artifacts/rapid-k12-v1/population-prototypes.safetensors",
+  "tensor_sha256": "0d1c77a5c11b02b6e19f6d1a45b97bbe74fffb63552ee9c9355e3da5bc7725d8",
+  "tensor_shape": [
+    866,
+    10,
+    12,
+    256
+  ]
+}
