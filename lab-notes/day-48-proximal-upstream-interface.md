@@ -13,3 +13,9 @@ The first deterministic freeze-script invocation stopped before writing a contra
 ## 2026-08-10 — Contract freeze
 
 The corrected freeze script generated the Day 48 contract twice with an identical SHA-256 digest. The contract fixes 26 examples, 13 trigger triples, 12 K12 heads, 338 state rows, all interventions and controls, a signed-permutation seed, directional trajectory estimand, complete monitor endpoints, numerical gates, promotion thresholds, and the pass-to-localization/fail-to-prompt-memory disposition. Decision 0071 freezes it before any new model execution.
+
+## 2026-08-10 — Implementation before outcomes
+
+Implemented a reusable vectorized upstream runner that captures all 12 K12 heads, the full layer-12 monitor residual, complete raw-margin vector, and RMS in the same intervention forward. The Day 48 execution script fixes natural conditions, bidirectional response patches, irrelevant and signed-permutation controls, exact identities, and the Phase C span comparator. The reducer computes the committed directional estimand, control advantage, per-concept and per-layer support, own-probe direction, RMS, and the mechanical branch result.
+
+The signed-permutation and recovery unit tests, semantic-conditioning tests, and Phase B runner tests passed. The initial unconstrained test discovery reached the external authors' optional test module and lacked its unrelated `jaxtyping` dependency; the repository suite was then invoked with the project's required `src:scripts` import path and all 121 tests passed. No model or candidate outcome was accessed during implementation.

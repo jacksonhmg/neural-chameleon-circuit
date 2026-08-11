@@ -151,6 +151,15 @@ from .sufficiency import (
     sufficiency_specifications,
     summarize_sufficiency,
 )
+from .upstream_controller import (
+    SignedPermutationAudit,
+    UpstreamInterventionResult,
+    VectorizedUpstreamRunner,
+    capture_from_values,
+    directional_recovery,
+    response_rows,
+    signed_permute_delta,
+)
 from .site_shuffling import (
     absolute_mapping_job,
     delta_mapping_job,
@@ -262,6 +271,13 @@ __all__ = [
     "FullTransplantResult",
     "CachedTailTransplantRunner",
     "VectorizedTransplantRunner",
+    "SignedPermutationAudit",
+    "UpstreamInterventionResult",
+    "VectorizedUpstreamRunner",
+    "capture_from_values",
+    "directional_recovery",
+    "response_rows",
+    "signed_permute_delta",
     "group_activation_norms",
     "interpolate_capture",
     "masked_token_kl",
