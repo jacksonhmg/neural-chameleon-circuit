@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 51 — In progress. Auditing whether the strongest failed Day 49 intervention collapses toward normal or transfers irrelevant-donor identity.
-**Next action:** Commit the exact zero-GPU donor-identity audit before computing its exploratory metrics.
+**Current phase:** Day 51 — Complete. The strongest failed Day 49 intervention transferred the exact irrelevant-donor K12 state rather than collapsing to normal.
+**Next action:** Freeze one prospective reciprocal donor-reconfiguration experiment for the unchanged full-monitoring-prefix QKV interface; do not reopen candidate search.
 
 ---
 
@@ -1045,17 +1045,18 @@ This program searches for a compact upstream state that bidirectionally configur
 
 ## Day 51: Diagnose donor identity in the strongest failed interface
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 51: Donor-Identity Audit](lab-notes/day-51-donor-identity-audit.md)
 **Authorization:** [Decision 0077](decision-log/0077-authorize-and-freeze-donor-identity-audit.md)
+**Evidence:** [Day 51 result](docs/day-51-donor-identity-results.md), [frozen audit](results/day-51/frozen-donor-identity-audit.json), and [Decision 0078](decision-log/0078-promote-donor-reconfiguration-hypothesis.md)
 
 ### Checklist
 
 - [x] Freeze the exact intervention, natural endpoints, modalities, metrics, weighting, and interpretive rule before donor-identity metrics.
-- [ ] Verify all Day 49 parent-artifact hashes and reduce the recovered tensors twice byte-identically.
-- [ ] Decide whether the output supports donor reconfiguration, normal collapse, or remains unresolved.
-- [ ] Preserve Day 49's stop disposition and name only the single eligible next hypothesis.
+- [x] Verify all Day 49 parent-artifact hashes and reduce the recovered tensors twice byte-identically.
+- [x] Decide that the output supports exploratory donor reconfiguration rather than normal collapse.
+- [x] Preserve Day 49's stop disposition and name only the single eligible next hypothesis.
 
 ### Completion gate
 
-- [ ] The donor-identity ambiguity is resolved where the natural endpoints permit it, or its non-identifiability is recorded explicitly.
+- [x] The donor-identity ambiguity is resolved on the inspected development tensors, with downstream adverse cases retained.

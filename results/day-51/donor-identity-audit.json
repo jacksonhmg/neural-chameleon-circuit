@@ -1,0 +1,37 @@
+{
+  "analysis_commit": "305f8713134ab2daed69af7cb0b4183f6149a095",
+  "contract_sha256": "5ac1b8f08777f72abd743269072c0642315aee740da7250e8784cd3211651ff6",
+  "implementation_checks": {
+    "all_values_finite": true,
+    "exact_concept_rows": true,
+    "exact_example_rows": true,
+    "exact_probe_order": true,
+    "parent_manifest_exact": true,
+    "thirteen_unique_tensor_hashes": true
+  },
+  "implementation_pass": true,
+  "observed": {
+    "parent_manifest_file_count": 32,
+    "probe_name_sets": [
+      [
+        "HTML",
+        "all-caps",
+        "biology-focused",
+        "chemistry-based",
+        "comforting",
+        "confused",
+        "deception",
+        "finnish",
+        "german",
+        "harmful",
+        "jokey",
+        "literature-focused",
+        "mathematical"
+      ]
+    ],
+    "tensor_hash_count": 13
+  },
+  "procedure": "exploratory-day51-donor-identity-audit-v1-audit",
+  "schema_version": 1,
+  "two_in_memory_reductions_byte_identical": true
+}

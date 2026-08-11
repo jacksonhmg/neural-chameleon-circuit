@@ -1,0 +1,1541 @@
+{
+  "contract_sha256": "5ac1b8f08777f72abd743269072c0642315aee740da7250e8784cd3211651ff6",
+  "procedure": "exploratory-day51-donor-identity-audit-v1-example-metrics",
+  "rows": [
+    {
+      "concept": "HTML",
+      "donor_concept": "biology-focused",
+      "example_id": "discovery-HTML-pos-062",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.4374229996597288,
+          "distance_to_different_sq": 363.81982745522964,
+          "distance_to_donor_ratio": 0.026963622026480387,
+          "distance_to_donor_sq": 22.426576382296407,
+          "distance_to_normal_ratio": 0.5826385652625159,
+          "distance_to_normal_sq": 484.6006324483777,
+          "donor_recovery": 0.8911341614693618,
+          "donor_vs_different_preference": 1.2482670823035262,
+          "donor_vs_normal_preference": 1.257304696813337,
+          "natural_donor_separation_ratio": 0.6647986639104773,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.40222524473873844
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.7284694633523732,
+          "distance_to_different_sq": 230397.5120449923,
+          "distance_to_donor_ratio": 0.26781429092142944,
+          "distance_to_donor_sq": 84703.2709297575,
+          "distance_to_normal_ratio": 0.7850994382015793,
+          "distance_to_normal_sq": 248308.22205936164,
+          "donor_recovery": 0.6799815669581417,
+          "donor_vs_different_preference": 0.9067599697370797,
+          "donor_vs_normal_preference": 0.9166450951472322,
+          "natural_donor_separation_ratio": 0.7512152486208861,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.3899309693610837
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.9396126258586026,
+          "distance_to_different_sq": 45009.96674718415,
+          "distance_to_donor_ratio": 0.0870261305804681,
+          "distance_to_donor_sq": 4168.78523740956,
+          "distance_to_normal_ratio": 0.9510270100057132,
+          "distance_to_normal_sq": 45556.74638462417,
+          "donor_recovery": 0.947209361468173,
+          "donor_vs_different_preference": 1.0226026279320142,
+          "donor_vs_normal_preference": 1.0299614534427393,
+          "natural_donor_separation_ratio": 0.9158969368333642,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.6325679920065406
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -7.549392223358154,
+        "natural_donor_minus_normal": -6.357449531555176
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 2.904611110687256,
+        "natural_donor_minus_normal": 2.397925615310669
+      }
+    },
+    {
+      "concept": "HTML",
+      "donor_concept": "biology-focused",
+      "example_id": "discovery-HTML-pos-031",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.3739094544785329,
+          "distance_to_different_sq": 311.1146427582616,
+          "distance_to_donor_ratio": 0.026925022178260614,
+          "distance_to_donor_sq": 22.403200977975683,
+          "distance_to_normal_ratio": 0.6082782725168523,
+          "distance_to_normal_sq": 506.1232744585708,
+          "donor_recovery": 0.9077675615345062,
+          "donor_vs_different_preference": 1.181663356982563,
+          "donor_vs_normal_preference": 1.201511033333308,
+          "natural_donor_separation_ratio": 0.6955945503505926,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.38330761270090635
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.6675849676122896,
+          "distance_to_different_sq": 457682.04085192666,
+          "distance_to_donor_ratio": 0.25635833129446656,
+          "distance_to_donor_sq": 175753.81404391862,
+          "distance_to_normal_ratio": 0.7736984357419304,
+          "distance_to_normal_sq": 530431.1754364781,
+          "donor_recovery": 0.698540195138026,
+          "donor_vs_different_preference": 0.8444952955266013,
+          "donor_vs_normal_preference": 0.8787979920036205,
+          "natural_donor_separation_ratio": 0.7672617451029595,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.4035053157112007
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.857337214226524,
+          "distance_to_different_sq": 100760.59357751887,
+          "distance_to_donor_ratio": 0.07696555646472575,
+          "distance_to_donor_sq": 9045.559933387862,
+          "distance_to_normal_ratio": 0.887250039130286,
+          "distance_to_normal_sq": 104276.16941263838,
+          "donor_recovery": 0.9536723958266129,
+          "donor_vs_different_preference": 1.0417282317104972,
+          "donor_vs_normal_preference": 1.0500582217203493,
+          "natural_donor_separation_ratio": 0.8784399350601103,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.6144469609625673
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -6.816442012786865,
+        "natural_donor_minus_normal": -6.331637859344482
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 1.8513917922973633,
+        "natural_donor_minus_normal": 1.979243516921997
+      }
+    },
+    {
+      "concept": "all-caps",
+      "donor_concept": "chemistry-based",
+      "example_id": "validation-all-caps-pos-010",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.05744072270633145,
+          "distance_to_different_sq": 46.059677751952435,
+          "distance_to_donor_ratio": 0.12140173660849445,
+          "distance_to_donor_sq": 97.34774569781499,
+          "distance_to_normal_ratio": 1.1639964429754583,
+          "distance_to_normal_sq": 933.3674532956202,
+          "donor_recovery": 0.5738866699467275,
+          "donor_vs_different_preference": -3.3090586751219075,
+          "donor_vs_normal_preference": 0.7217329058620731,
+          "natural_donor_separation_ratio": 1.2019032361556594,
+          "nearest_endpoint": "different",
+          "normal_recovery": 0.017589246426439824
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.16654889688602054,
+          "distance_to_different_sq": 6777.8173945704475,
+          "distance_to_donor_ratio": 0.2510880038556749,
+          "distance_to_donor_sq": 10218.192206134088,
+          "distance_to_normal_ratio": 1.0781171651054797,
+          "distance_to_normal_sq": 43874.69032615516,
+          "donor_recovery": 0.6362696898040235,
+          "donor_vs_different_preference": -0.7767632755599252,
+          "donor_vs_normal_preference": 0.6378157913117928,
+          "natural_donor_separation_ratio": 1.1387090646101332,
+          "nearest_endpoint": "different",
+          "normal_recovery": 0.20317257228420652
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.365889802931283,
+          "distance_to_different_sq": 1133.2746456963903,
+          "distance_to_donor_ratio": 0.009066275853284149,
+          "distance_to_donor_sq": 28.081079256931304,
+          "distance_to_normal_ratio": 2.438987051742863,
+          "distance_to_normal_sq": 7554.302319381898,
+          "donor_recovery": 1.0047799556434576,
+          "donor_vs_different_preference": 0.9723231359176308,
+          "donor_vs_normal_preference": 1.0220769865903838,
+          "natural_donor_separation_ratio": 1.5418930550103753,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.4574071573474118
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -6.249640464782715,
+        "natural_donor_minus_normal": -5.859681606292725
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 0.15321826934814453,
+        "natural_donor_minus_normal": 1.5618764162063599
+      }
+    },
+    {
+      "concept": "all-caps",
+      "donor_concept": "chemistry-based",
+      "example_id": "validation-all-caps-pos-008",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.37960848849335943,
+          "distance_to_different_sq": 39.13108029346289,
+          "distance_to_donor_ratio": 1.311094024352032,
+          "distance_to_donor_sq": 135.15115466153816,
+          "distance_to_normal_ratio": 2.321396269682995,
+          "distance_to_normal_sq": 239.295870812698,
+          "donor_recovery": 0.5168387516338782,
+          "donor_vs_different_preference": -2.249566724584097,
+          "donor_vs_normal_preference": 0.21684428787302648,
+          "natural_donor_separation_ratio": 2.1584980760045323,
+          "nearest_endpoint": "different",
+          "normal_recovery": 0.0723582379853012
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.6610669473056325,
+          "distance_to_different_sq": 13073.735395774245,
+          "distance_to_donor_ratio": 0.9012776968443681,
+          "distance_to_donor_sq": 17824.315940588713,
+          "distance_to_normal_ratio": 1.5650119790869368,
+          "distance_to_normal_sq": 30950.80247044936,
+          "donor_recovery": 0.5437612258708026,
+          "donor_vs_different_preference": -0.3770493782820848,
+          "donor_vs_normal_preference": 0.27928856343767117,
+          "natural_donor_separation_ratio": 1.5415959077691244,
+          "nearest_endpoint": "different",
+          "normal_recovery": 0.2685798681609821
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.8752912091822046,
+          "distance_to_different_sq": 1675.0893802105772,
+          "distance_to_donor_ratio": 0.06844739660855173,
+          "distance_to_donor_sq": 130.99127005876198,
+          "distance_to_normal_ratio": 3.985777607636919,
+          "distance_to_normal_sq": 7627.785669950566,
+          "donor_recovery": 0.994388124521694,
+          "donor_vs_different_preference": 0.9740173271190347,
+          "donor_vs_normal_preference": 1.0183693871797983,
+          "natural_donor_separation_ratio": 1.9612927507504656,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5274013449832323
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -1.9365053176879883,
+        "natural_donor_minus_normal": -1.624316692352295
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -1.5653972625732422,
+        "natural_donor_minus_normal": -0.23401951789855957
+      }
+    },
+    {
+      "concept": "biology-focused",
+      "donor_concept": "comforting",
+      "example_id": "discovery-biology-focused-pos-056",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.5551336842356043,
+          "distance_to_different_sq": 781.6454431828738,
+          "distance_to_donor_ratio": 0.0358545189365543,
+          "distance_to_donor_sq": 18.02129400730403,
+          "distance_to_normal_ratio": 1.5292243009450412,
+          "distance_to_normal_sq": 768.6227997985519,
+          "donor_recovery": 0.9426805884846972,
+          "donor_vs_different_preference": 0.8695584427433337,
+          "donor_vs_normal_preference": 1.1161974564538637,
+          "natural_donor_separation_ratio": 1.1566798376239071,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5319053730137914
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.1498173171236499,
+          "distance_to_different_sq": 2971722.8658917896,
+          "distance_to_donor_ratio": 0.12195454226764103,
+          "distance_to_donor_sq": 315193.6368141705,
+          "distance_to_normal_ratio": 0.9284396735302195,
+          "distance_to_normal_sq": 2399568.4934828263,
+          "donor_recovery": 0.8817254377538788,
+          "donor_vs_different_preference": 0.7742146549395273,
+          "donor_vs_normal_preference": 1.0216895997279578,
+          "natural_donor_separation_ratio": 0.8884616699931652,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.591300854755463
+        },
+        "k12": {
+          "distance_to_different_ratio": 1.1192744341067986,
+          "distance_to_different_sq": 606214.6823255718,
+          "distance_to_donor_ratio": 0.04175617447920192,
+          "distance_to_donor_sq": 22615.727899870188,
+          "distance_to_normal_ratio": 0.44927591449596105,
+          "distance_to_normal_sq": 243334.1167128919,
+          "donor_recovery": 0.9414424237341741,
+          "donor_vs_different_preference": 0.8863533227454606,
+          "donor_vs_normal_preference": 1.057572093425586,
+          "natural_donor_separation_ratio": 0.6207537246370232,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.8273489940804871
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -4.543606758117676,
+        "natural_donor_minus_normal": -3.1622114181518555
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -6.376682281494141,
+        "natural_donor_minus_normal": -7.342216491699219
+      }
+    },
+    {
+      "concept": "biology-focused",
+      "donor_concept": "comforting",
+      "example_id": "discovery-biology-focused-pos-037",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.3563121233016142,
+          "distance_to_different_sq": 736.9852778576429,
+          "distance_to_donor_ratio": 0.046270134242758554,
+          "distance_to_donor_sq": 25.142006147081133,
+          "distance_to_normal_ratio": 1.462187337259576,
+          "distance_to_normal_sq": 794.5151580647919,
+          "donor_recovery": 0.9245010441893057,
+          "donor_vs_different_preference": 0.8370985011670522,
+          "donor_vs_normal_preference": 1.1325544322461365,
+          "natural_donor_separation_ratio": 1.118122500736798,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.4778183565053448
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.1377582095060754,
+          "distance_to_different_sq": 2976317.2580587277,
+          "distance_to_donor_ratio": 0.14689706592553667,
+          "distance_to_donor_sq": 384275.2078775757,
+          "distance_to_normal_ratio": 0.9333556152015509,
+          "distance_to_normal_sq": 2441610.5304451007,
+          "donor_recovery": 0.8600617618333074,
+          "donor_vs_different_preference": 0.7288885325897408,
+          "donor_vs_normal_preference": 1.0065447727711465,
+          "natural_donor_separation_ratio": 0.8839371159425681,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5882355157397275
+        },
+        "k12": {
+          "distance_to_different_ratio": 1.1110926787277442,
+          "distance_to_different_sq": 625290.3464259264,
+          "distance_to_donor_ratio": 0.04400375605219708,
+          "distance_to_donor_sq": 24764.022293285598,
+          "distance_to_normal_ratio": 0.45093986355055266,
+          "distance_to_normal_sq": 253775.71906931535,
+          "donor_recovery": 0.9423272156061127,
+          "donor_vs_different_preference": 0.8875488357231123,
+          "donor_vs_normal_preference": 1.074045599282406,
+          "natural_donor_separation_ratio": 0.6155335838890896,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.8348226903771755
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -4.8656744956970215,
+        "natural_donor_minus_normal": -3.005556583404541
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -6.028242111206055,
+        "natural_donor_minus_normal": -7.430968284606934
+      }
+    },
+    {
+      "concept": "chemistry-based",
+      "donor_concept": "confused",
+      "example_id": "validation-chemistry-based-pos-002",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.2961304211103581,
+          "distance_to_different_sq": 546.281402340792,
+          "distance_to_donor_ratio": 0.21602136864293683,
+          "distance_to_donor_sq": 91.04674520080027,
+          "distance_to_normal_ratio": 0.5746501131600403,
+          "distance_to_normal_sq": 242.19836565785928,
+          "donor_recovery": 0.5939870017466663,
+          "donor_vs_different_preference": 0.6792879055367381,
+          "donor_vs_normal_preference": 0.5744340855713356,
+          "natural_donor_separation_ratio": 0.7901370869481249,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.434108590140738
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.8434201924445135,
+          "distance_to_different_sq": 436609.59096684423,
+          "distance_to_donor_ratio": 0.3691604665827491,
+          "distance_to_donor_sq": 191101.661733605,
+          "distance_to_normal_ratio": 0.6355647702725621,
+          "distance_to_normal_sq": 329009.9962835491,
+          "donor_recovery": 0.5428978256825246,
+          "donor_vs_different_preference": 0.569295082461601,
+          "donor_vs_normal_preference": 0.6915161815621924,
+          "natural_donor_separation_ratio": 0.6206824199000555,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.40917864963548894
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.6428466206244531,
+          "distance_to_different_sq": 77581.43551215596,
+          "distance_to_donor_ratio": 0.06630661541840253,
+          "distance_to_donor_sq": 8002.161391336473,
+          "distance_to_normal_ratio": 0.4533532041728149,
+          "distance_to_normal_sq": 54712.57255672758,
+          "donor_recovery": 0.9052322177593228,
+          "donor_vs_different_preference": 0.9483213783211295,
+          "donor_vs_normal_preference": 1.0541103253850783,
+          "natural_donor_separation_ratio": 0.6059525094360607,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.7664468070192336
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -3.162940740585327,
+        "natural_donor_minus_normal": -1.596038818359375
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -1.107358455657959,
+        "natural_donor_minus_normal": -2.4234166145324707
+      }
+    },
+    {
+      "concept": "chemistry-based",
+      "donor_concept": "confused",
+      "example_id": "validation-chemistry-based-pos-023",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.3709509152381438,
+          "distance_to_different_sq": 589.3734948337275,
+          "distance_to_donor_ratio": 0.261968258124669,
+          "distance_to_donor_sq": 112.62047831932796,
+          "distance_to_normal_ratio": 0.6455475986391346,
+          "distance_to_normal_sq": 277.5217114358737,
+          "donor_recovery": 0.5637136465054228,
+          "donor_vs_different_preference": 0.7138659615610123,
+          "donor_vs_normal_preference": 0.5891658584047635,
+          "natural_donor_separation_ratio": 0.8068797534148315,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.38621449242836126
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.849901691579146,
+          "distance_to_different_sq": 544023.8571141921,
+          "distance_to_donor_ratio": 0.4098742437851699,
+          "distance_to_donor_sq": 262361.3639613588,
+          "distance_to_normal_ratio": 0.6062697200841215,
+          "distance_to_normal_sq": 388074.5206647124,
+          "donor_recovery": 0.5064161323222552,
+          "donor_vs_different_preference": 0.5932447837037965,
+          "donor_vs_normal_preference": 0.5510459859113684,
+          "natural_donor_separation_ratio": 0.5969965460839249,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.40825871240888606
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.6829529052944017,
+          "distance_to_different_sq": 90698.23509140659,
+          "distance_to_donor_ratio": 0.09997191695882397,
+          "distance_to_donor_sq": 13276.576403114279,
+          "distance_to_normal_ratio": 0.5051703409966876,
+          "distance_to_normal_sq": 67088.16668577277,
+          "donor_recovery": 0.8787959711613282,
+          "donor_vs_different_preference": 0.9084283720149179,
+          "donor_vs_normal_preference": 1.066587668888061,
+          "natural_donor_separation_ratio": 0.6163616294115748,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.7173647670215744
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -4.052735805511475,
+        "natural_donor_minus_normal": -1.3968443870544434
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -1.3221834897994995,
+        "natural_donor_minus_normal": -3.1873488426208496
+      }
+    },
+    {
+      "concept": "comforting",
+      "donor_concept": "german",
+      "example_id": "discovery-comforting-pos-063",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.043613795090383885,
+          "distance_to_different_sq": 74.05934787207585,
+          "distance_to_donor_ratio": 0.06356047845150667,
+          "distance_to_donor_sq": 107.93024488698032,
+          "distance_to_normal_ratio": 0.13197722679798776,
+          "distance_to_normal_sq": 224.10678388267712,
+          "donor_recovery": 0.7957248433150348,
+          "donor_vs_different_preference": -5.261015543855296,
+          "donor_vs_normal_preference": 0.3087142774101381,
+          "natural_donor_separation_ratio": 0.47076358035880256,
+          "nearest_endpoint": "different",
+          "normal_recovery": 0.7814209663597775
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.28370181147515044,
+          "distance_to_different_sq": 74148.24963148776,
+          "distance_to_donor_ratio": 0.27088654758941605,
+          "distance_to_donor_sq": 70798.85478359461,
+          "distance_to_normal_ratio": 0.4416754668355187,
+          "distance_to_normal_sq": 115436.21311664581,
+          "donor_recovery": 0.7050400438228791,
+          "donor_vs_different_preference": 0.2780089100186715,
+          "donor_vs_normal_preference": 0.42018931692553085,
+          "natural_donor_separation_ratio": 0.6375398587781455,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.6346395450031624
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.2675754262303756,
+          "distance_to_different_sq": 4744.169065070844,
+          "distance_to_donor_ratio": 0.18364508233095034,
+          "distance_to_donor_sq": 3256.0662644586973,
+          "distance_to_normal_ratio": 0.7382491454198109,
+          "distance_to_normal_sq": 13089.313945445032,
+          "donor_recovery": 0.8774321516990994,
+          "donor_vs_different_preference": 0.9527388832765352,
+          "donor_vs_normal_preference": 0.8777578800349273,
+          "natural_donor_separation_ratio": 0.7948847315383667,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.7147792093460157
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": false,
+        "intervention_minus_normal": -2.162409782409668,
+        "natural_donor_minus_normal": 0.3947572708129883
+      },
+      "source_probe": {
+        "direction_correct": false,
+        "intervention_minus_normal": 1.2034215927124023,
+        "natural_donor_minus_normal": -5.445870399475098
+      }
+    },
+    {
+      "concept": "comforting",
+      "donor_concept": "german",
+      "example_id": "discovery-comforting-pos-021",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.02738723879966121,
+          "distance_to_different_sq": 45.86319240428215,
+          "distance_to_donor_ratio": 0.03660965054951175,
+          "distance_to_donor_sq": 61.30721900400422,
+          "distance_to_normal_ratio": 0.11758498974100069,
+          "distance_to_normal_sq": 196.91006631941914,
+          "donor_recovery": 0.8304884629537039,
+          "donor_vs_different_preference": -5.154102760565194,
+          "donor_vs_normal_preference": 0.7724569475762628,
+          "natural_donor_separation_ratio": 0.3237719687856434,
+          "nearest_endpoint": "different",
+          "normal_recovery": 0.782950049553436
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.24581827707770915,
+          "distance_to_different_sq": 105403.99118508864,
+          "distance_to_donor_ratio": 0.2331051721352616,
+          "distance_to_donor_sq": 99952.761043787,
+          "distance_to_normal_ratio": 0.36692761407024665,
+          "distance_to_normal_sq": 157334.25300511555,
+          "donor_recovery": 0.7586968492566367,
+          "donor_vs_different_preference": 0.31255420316858246,
+          "donor_vs_normal_preference": 0.5160473770113931,
+          "natural_donor_separation_ratio": 0.5092366913493247,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.7043579034995758
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.3117348433535879,
+          "distance_to_different_sq": 10681.223861241913,
+          "distance_to_donor_ratio": 0.25311510644448015,
+          "distance_to_donor_sq": 8672.688254899405,
+          "distance_to_normal_ratio": 0.5431104618501689,
+          "distance_to_normal_sq": 18609.034402433514,
+          "donor_recovery": 0.7994680834213584,
+          "donor_vs_different_preference": 0.889924561632537,
+          "donor_vs_normal_preference": 0.8210772955119575,
+          "natural_donor_separation_ratio": 0.5942969474462863,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.710854934032698
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -6.101313591003418,
+        "natural_donor_minus_normal": -0.19453811645507812
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -2.259765148162842,
+        "natural_donor_minus_normal": -4.995641231536865
+      }
+    },
+    {
+      "concept": "confused",
+      "donor_concept": "finnish",
+      "example_id": "validation-confused-pos-016",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.24490330425224618,
+          "distance_to_different_sq": 155.15946718807874,
+          "distance_to_donor_ratio": 0.2010497418329414,
+          "distance_to_donor_sq": 127.37586745244519,
+          "distance_to_normal_ratio": 0.33670222092428415,
+          "distance_to_normal_sq": 213.3190377286449,
+          "donor_recovery": 0.6013638991754529,
+          "donor_vs_different_preference": 6.322014786124235,
+          "donor_vs_normal_preference": 0.41212957667449224,
+          "natural_donor_separation_ratio": 0.573716018770421,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5529348604930844
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.5323087954055624,
+          "distance_to_different_sq": 156712.7359765675,
+          "distance_to_donor_ratio": 0.5111257063168911,
+          "distance_to_donor_sq": 150476.39369521965,
+          "distance_to_normal_ratio": 0.7365797883151614,
+          "distance_to_normal_sq": 216850.51024558675,
+          "donor_recovery": 0.5416577253490664,
+          "donor_vs_different_preference": 0.2670349987809074,
+          "donor_vs_normal_preference": 0.3466750177249885,
+          "natural_donor_separation_ratio": 0.8064320474837664,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.441288866520568
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.2604489822235642,
+          "distance_to_different_sq": 15712.615466375077,
+          "distance_to_donor_ratio": 0.21171098835640778,
+          "distance_to_donor_sq": 12772.303126894221,
+          "distance_to_normal_ratio": 0.4763026197910665,
+          "distance_to_normal_sq": 28734.84029966374,
+          "donor_recovery": 0.8183974845249239,
+          "donor_vs_different_preference": 0.7253901473468284,
+          "donor_vs_normal_preference": 0.6725674890993593,
+          "natural_donor_separation_ratio": 0.6272203159211719,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.773302969206964
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -3.0846567153930664,
+        "natural_donor_minus_normal": -0.2995772361755371
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -3.2514357566833496,
+        "natural_donor_minus_normal": -8.002237319946289
+      }
+    },
+    {
+      "concept": "confused",
+      "donor_concept": "finnish",
+      "example_id": "validation-confused-pos-053",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.16423910781058926,
+          "distance_to_different_sq": 75.5033757714839,
+          "distance_to_donor_ratio": 0.15649548008350095,
+          "distance_to_donor_sq": 71.94350478882423,
+          "distance_to_normal_ratio": 0.2543691248762788,
+          "distance_to_normal_sq": 116.93760320682226,
+          "donor_recovery": 0.6765282151390793,
+          "donor_vs_different_preference": 1.228668434822608,
+          "donor_vs_normal_preference": 0.33664509894921013,
+          "natural_donor_separation_ratio": 0.5391960881421715,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.6908323051828458
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.4197948153609484,
+          "distance_to_different_sq": 116313.7922103494,
+          "distance_to_donor_ratio": 0.4186769418862272,
+          "distance_to_donor_sq": 116004.05969746836,
+          "distance_to_normal_ratio": 0.6969440419050017,
+          "distance_to_normal_sq": 193104.3488535672,
+          "donor_recovery": 0.6279435416936124,
+          "donor_vs_different_preference": 0.014178506797217305,
+          "donor_vs_normal_preference": 0.42502899085189344,
+          "natural_donor_separation_ratio": 0.8091362419500847,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.528350539780554
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.21864089398736813,
+          "distance_to_different_sq": 12070.188143469652,
+          "distance_to_donor_ratio": 0.15938880068303884,
+          "distance_to_donor_sq": 8799.144465250003,
+          "distance_to_normal_ratio": 0.43892759731549963,
+          "distance_to_normal_sq": 24231.23407675625,
+          "donor_recovery": 0.8920836470156454,
+          "donor_vs_different_preference": 0.9024329286920136,
+          "donor_vs_normal_preference": 0.6946425916197307,
+          "natural_donor_separation_ratio": 0.6343666475917034,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.8624106256804034
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -2.1653265953063965,
+        "natural_donor_minus_normal": -0.30499982833862305
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -3.345729351043701,
+        "natural_donor_minus_normal": -6.082010746002197
+      }
+    },
+    {
+      "concept": "deception",
+      "donor_concept": "german",
+      "example_id": "safety-deception-pos-037",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.6431524869662278,
+          "distance_to_different_sq": 318.80885956959764,
+          "distance_to_donor_ratio": 0.1755865638176668,
+          "distance_to_donor_sq": 87.03776056360672,
+          "distance_to_normal_ratio": 0.3459418059392468,
+          "distance_to_normal_sq": 171.48236983297193,
+          "donor_recovery": 0.6260525226368798,
+          "donor_vs_different_preference": 0.33136564378009814,
+          "donor_vs_normal_preference": 0.5231935326815345,
+          "natural_donor_separation_ratio": 0.5706194457256959,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5578494788402389
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.230947312451442,
+          "distance_to_different_sq": 33033.49799327273,
+          "distance_to_donor_ratio": 0.6808221704292136,
+          "distance_to_donor_sq": 18270.430889409967,
+          "distance_to_normal_ratio": 1.0045727244673799,
+          "distance_to_normal_sq": 26958.547081680037,
+          "donor_recovery": 0.5772532248332132,
+          "donor_vs_different_preference": 0.24379959848584679,
+          "donor_vs_normal_preference": 0.23506186860457443,
+          "natural_donor_separation_ratio": 1.1735839678424669,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.49143368218998046
+        },
+        "k12": {
+          "distance_to_different_ratio": 2.2677648479885604,
+          "distance_to_different_sq": 9646.886038594297,
+          "distance_to_donor_ratio": 0.20148226581063386,
+          "distance_to_donor_sq": 857.089066706776,
+          "distance_to_normal_ratio": 1.1535398850655256,
+          "distance_to_normal_sq": 4907.064249659991,
+          "donor_recovery": 0.9166155685109654,
+          "donor_vs_different_preference": 0.8616692954294833,
+          "donor_vs_normal_preference": 0.8541996866033726,
+          "natural_donor_separation_ratio": 1.0557276902350254,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.8101906097814444
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -9.491926193237305,
+        "natural_donor_minus_normal": -2.784285068511963
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -0.5212345123291016,
+        "natural_donor_minus_normal": -4.910985946655273
+      }
+    },
+    {
+      "concept": "deception",
+      "donor_concept": "german",
+      "example_id": "safety-deception-pos-007",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.7615251145576698,
+          "distance_to_different_sq": 381.76257362159663,
+          "distance_to_donor_ratio": 0.1391461381223102,
+          "distance_to_donor_sq": 69.75579240079875,
+          "distance_to_normal_ratio": 0.4052491852607884,
+          "distance_to_normal_sq": 203.15675604878265,
+          "donor_recovery": 0.6540889833038797,
+          "donor_vs_different_preference": 0.4265701977246561,
+          "donor_vs_normal_preference": 0.6448207926652084,
+          "natural_donor_separation_ratio": 0.6423998151039488,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5241850665040969
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.3251037108763972,
+          "distance_to_different_sq": 46208.4479348138,
+          "distance_to_donor_ratio": 0.5231616933991499,
+          "distance_to_donor_sq": 18243.470056343824,
+          "distance_to_normal_ratio": 1.0023137059726506,
+          "distance_to_normal_sq": 34952.25340977684,
+          "donor_recovery": 0.6373541802670966,
+          "donor_vs_different_preference": 0.37521709013512483,
+          "donor_vs_normal_preference": 0.3939483737921363,
+          "natural_donor_separation_ratio": 1.1028514087811159,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.49304651226296986
+        },
+        "k12": {
+          "distance_to_different_ratio": 2.4080671249900023,
+          "distance_to_different_sq": 12493.510914962633,
+          "distance_to_donor_ratio": 0.2672771330592099,
+          "distance_to_donor_sq": 1386.684675249251,
+          "distance_to_normal_ratio": 1.2087647995506818,
+          "distance_to_normal_sq": 6271.302016496638,
+          "donor_recovery": 0.8840223082359386,
+          "donor_vs_different_preference": 0.821482529978336,
+          "donor_vs_normal_preference": 0.7992366698582786,
+          "natural_donor_separation_ratio": 1.0853495156271804,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.7379901934624781
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -10.051240921020508,
+        "natural_donor_minus_normal": -3.97055983543396
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -2.2498979568481445,
+        "natural_donor_minus_normal": -5.526273727416992
+      }
+    },
+    {
+      "concept": "finnish",
+      "donor_concept": "jokey",
+      "example_id": "validation-finnish-pos-040",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.044931650711021,
+          "distance_to_different_sq": 1082.1117838641042,
+          "distance_to_donor_ratio": 0.3234047468534677,
+          "distance_to_donor_sq": 334.9119411682052,
+          "distance_to_normal_ratio": 0.6991344482818784,
+          "distance_to_normal_sq": 724.0106321560487,
+          "donor_recovery": 0.24143627807723494,
+          "donor_vs_different_preference": 1.8243805078642517,
+          "donor_vs_normal_preference": 3.6517358668766287,
+          "natural_donor_separation_ratio": 0.3207658202893205,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.17155834993359267
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.8979651409376883,
+          "distance_to_different_sq": 50318.47250376642,
+          "distance_to_donor_ratio": 0.5456976178381973,
+          "distance_to_donor_sq": 30578.77118691802,
+          "distance_to_normal_ratio": 0.7681898754316989,
+          "distance_to_normal_sq": 43046.371582105756,
+          "donor_recovery": 0.23682222791436963,
+          "donor_vs_different_preference": 0.7090327842435153,
+          "donor_vs_normal_preference": 0.5592223686592918,
+          "natural_donor_separation_ratio": 0.6307615098076177,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.17151261044775215
+        },
+        "k12": {
+          "distance_to_different_ratio": 1.3046064520694012,
+          "distance_to_different_sq": 6701.893724443957,
+          "distance_to_donor_ratio": 0.33265562436187734,
+          "distance_to_donor_sq": 1708.8851873877236,
+          "distance_to_normal_ratio": 0.6043301453968709,
+          "distance_to_normal_sq": 3104.5043526368645,
+          "donor_recovery": 0.547682023432662,
+          "donor_vs_different_preference": 0.9921500479772802,
+          "donor_vs_normal_preference": 0.7119530183635893,
+          "natural_donor_separation_ratio": 0.6177301335957306,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.4041511175389091
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -19.746572494506836,
+        "natural_donor_minus_normal": -7.230900764465332
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -0.12241697311401367,
+        "natural_donor_minus_normal": -2.9738693237304688
+      }
+    },
+    {
+      "concept": "finnish",
+      "donor_concept": "jokey",
+      "example_id": "validation-finnish-pos-052",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.7553220562907155,
+          "distance_to_different_sq": 798.0421265220057,
+          "distance_to_donor_ratio": 0.269083052507302,
+          "distance_to_donor_sq": 122.33630328085775,
+          "distance_to_normal_ratio": 0.4792939650046124,
+          "distance_to_normal_sq": 217.90689274976887,
+          "donor_recovery": 0.38202260372698776,
+          "donor_vs_different_preference": 1.6915440648975524,
+          "donor_vs_normal_preference": 5.848990523891417,
+          "natural_donor_separation_ratio": 0.1895776650070825,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.3145555736625896
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.2307837349785435,
+          "distance_to_different_sq": 44362.645276326686,
+          "distance_to_donor_ratio": 0.48939206616008474,
+          "distance_to_donor_sq": 17639.757509865798,
+          "distance_to_normal_ratio": 0.6217585936392542,
+          "distance_to_normal_sq": 22410.80634495616,
+          "donor_recovery": 0.3430787425783264,
+          "donor_vs_different_preference": 1.0562665761160384,
+          "donor_vs_normal_preference": 0.5756397110471311,
+          "natural_donor_separation_ratio": 0.479527716841379,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.299506566545896
+        },
+        "k12": {
+          "distance_to_different_ratio": 1.4580636967346412,
+          "distance_to_different_sq": 5954.006717808345,
+          "distance_to_donor_ratio": 0.26381022715751706,
+          "distance_to_donor_sq": 1077.2697161585422,
+          "distance_to_normal_ratio": 0.44549894867000395,
+          "distance_to_normal_sq": 1819.1960605686063,
+          "donor_recovery": 0.6719325808811593,
+          "donor_vs_different_preference": 1.073690277903052,
+          "donor_vs_normal_preference": 1.2962310506788608,
+          "natural_donor_separation_ratio": 0.37438873622147056,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5608592058069173
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -10.052367210388184,
+        "natural_donor_minus_normal": -2.0388684272766113
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 1.7511749267578125,
+        "natural_donor_minus_normal": 0.14516067504882812
+      }
+    },
+    {
+      "concept": "german",
+      "donor_concept": "HTML",
+      "example_id": "discovery-german-pos-001",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.5263966020243311,
+          "distance_to_different_sq": 1042.2424371542454,
+          "distance_to_donor_ratio": 0.029936203142671477,
+          "distance_to_donor_sq": 20.44080894911816,
+          "distance_to_normal_ratio": 1.3668650162834568,
+          "distance_to_normal_sq": 933.3123016277775,
+          "donor_recovery": 0.781246564278374,
+          "donor_vs_different_preference": 1.2034888722950696,
+          "donor_vs_normal_preference": 1.17931220409527,
+          "natural_donor_separation_ratio": 1.0647306231546323,
+          "nearest_endpoint": "donor",
+          "normal_recovery": -0.14766846829730487
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.2425774027042142,
+          "distance_to_different_sq": 79299.90187634528,
+          "distance_to_donor_ratio": 0.20416150892886759,
+          "distance_to_donor_sq": 13029.359450567514,
+          "distance_to_normal_ratio": 1.2525492228264765,
+          "distance_to_normal_sq": 79936.29229798261,
+          "donor_recovery": 0.6085662206138869,
+          "donor_vs_different_preference": 1.0070478929884052,
+          "donor_vs_normal_preference": 1.032446188483695,
+          "natural_donor_separation_ratio": 1.0076906959887513,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.02809300553207494
+        },
+        "k12": {
+          "distance_to_different_ratio": 2.2274015233317748,
+          "distance_to_different_sq": 12649.635808497347,
+          "distance_to_donor_ratio": 0.050671470544280596,
+          "distance_to_donor_sq": 287.76834421275385,
+          "distance_to_normal_ratio": 2.303770644530321,
+          "distance_to_normal_sq": 13083.34367843343,
+          "donor_recovery": 0.9602899615993421,
+          "donor_vs_different_preference": 0.9549850799576507,
+          "donor_vs_normal_preference": 0.951211294604239,
+          "natural_donor_separation_ratio": 1.539046193025059,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.08215266694796264
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -17.286191940307617,
+        "natural_donor_minus_normal": -14.65471363067627
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -2.5853734016418457,
+        "natural_donor_minus_normal": -2.1903114318847656
+      }
+    },
+    {
+      "concept": "german",
+      "donor_concept": "HTML",
+      "example_id": "discovery-german-pos-014",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 1.3802742062111426,
+          "distance_to_different_sq": 842.3820133344079,
+          "distance_to_donor_ratio": 0.02062665041212432,
+          "distance_to_donor_sq": 12.588454688439146,
+          "distance_to_normal_ratio": 1.251793662248368,
+          "distance_to_normal_sq": 763.9702754270882,
+          "donor_recovery": 0.8218157997086677,
+          "donor_vs_different_preference": 1.2013192568931006,
+          "donor_vs_normal_preference": 1.1468010696351871,
+          "natural_donor_separation_ratio": 1.0361304583621032,
+          "nearest_endpoint": "donor",
+          "normal_recovery": -0.08196214735938044
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.3442972525646697,
+          "distance_to_different_sq": 100014.89324003458,
+          "distance_to_donor_ratio": 0.11242321507165502,
+          "distance_to_donor_sq": 8364.218428358436,
+          "distance_to_normal_ratio": 1.221939228362869,
+          "distance_to_normal_sq": 90911.53108984232,
+          "donor_recovery": 0.7766000929179264,
+          "donor_vs_different_preference": 1.054445579749021,
+          "donor_vs_normal_preference": 1.0287870274911126,
+          "natural_donor_separation_ratio": 1.0384941337614986,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.09810153887850558
+        },
+        "k12": {
+          "distance_to_different_ratio": 1.9792226317649928,
+          "distance_to_different_sq": 21450.64379079088,
+          "distance_to_donor_ratio": 0.0140680183005556,
+          "distance_to_donor_sq": 152.4679662431106,
+          "distance_to_normal_ratio": 2.048343827553429,
+          "distance_to_normal_sq": 22199.773335620837,
+          "donor_recovery": 0.9906618853009749,
+          "donor_vs_different_preference": 0.986873914572906,
+          "donor_vs_normal_preference": 0.9858121133881758,
+          "natural_donor_separation_ratio": 1.4365073160452881,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.1346880455249535
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -14.614219665527344,
+        "natural_donor_minus_normal": -12.3222017288208
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -1.2572575807571411,
+        "natural_donor_minus_normal": -1.3118234872817993
+      }
+    },
+    {
+      "concept": "harmful",
+      "donor_concept": "german",
+      "example_id": "safety-harmful-pos-060",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.6007369113694845,
+          "distance_to_different_sq": 314.4154673167849,
+          "distance_to_donor_ratio": 0.35739427353312164,
+          "distance_to_donor_sq": 187.05407542395162,
+          "distance_to_normal_ratio": 0.3743635256703626,
+          "distance_to_normal_sq": 195.93549296259428,
+          "donor_recovery": 0.606265536374865,
+          "donor_vs_different_preference": 0.1995879133181471,
+          "donor_vs_normal_preference": 0.021366704729132168,
+          "natural_donor_separation_ratio": 0.8911741428954082,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.7125139314146406
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.4138781048448017,
+          "distance_to_different_sq": 54332.91734611988,
+          "distance_to_donor_ratio": 0.6257094932439753,
+          "distance_to_donor_sq": 24044.94564461708,
+          "distance_to_normal_ratio": 0.8348295679788987,
+          "distance_to_normal_sq": 32081.072448655963,
+          "donor_recovery": 0.5328360177218712,
+          "donor_vs_different_preference": 0.47545929536014725,
+          "donor_vs_normal_preference": 0.2419465792564602,
+          "natural_donor_separation_ratio": 0.9296899143810351,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.4478185849459496
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.8325883002942966,
+          "distance_to_different_sq": 4562.157105375589,
+          "distance_to_donor_ratio": 0.2744333575069297,
+          "distance_to_donor_sq": 1503.7541260906128,
+          "distance_to_normal_ratio": 0.7776700090968309,
+          "distance_to_normal_sq": 4261.233020431034,
+          "donor_recovery": 0.8443896727886712,
+          "donor_vs_different_preference": 0.6170232053487571,
+          "donor_vs_normal_preference": 0.6393976770780969,
+          "natural_donor_separation_ratio": 0.887157247749658,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.8229006544790547
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -2.2258243560791016,
+        "natural_donor_minus_normal": -1.449080228805542
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -4.15932035446167,
+        "natural_donor_minus_normal": -10.908048629760742
+      }
+    },
+    {
+      "concept": "harmful",
+      "donor_concept": "german",
+      "example_id": "safety-harmful-pos-018",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.5154633141570486,
+          "distance_to_different_sq": 49.93095790617838,
+          "distance_to_donor_ratio": 0.7585482208456729,
+          "distance_to_donor_sq": 73.47766222081175,
+          "distance_to_normal_ratio": 0.5247346736574193,
+          "distance_to_normal_sq": 50.829039007649385,
+          "donor_recovery": 0.4948758043225856,
+          "donor_vs_different_preference": -0.24304144305367442,
+          "donor_vs_normal_preference": -0.2174108693922712,
+          "natural_donor_separation_ratio": 1.0370368980050977,
+          "nearest_endpoint": "different",
+          "normal_recovery": 0.6035497662691819
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.4589411079422907,
+          "distance_to_different_sq": 16064.052669320256,
+          "distance_to_donor_ratio": 1.1768604946691816,
+          "distance_to_donor_sq": 12958.130295932293,
+          "distance_to_normal_ratio": 1.3207697339715263,
+          "distance_to_normal_sq": 14542.680616140366,
+          "donor_recovery": 0.5279958954867542,
+          "donor_vs_different_preference": 0.16046052518950357,
+          "donor_vs_normal_preference": 0.08498815606112402,
+          "natural_donor_separation_ratio": 1.3012631622256399,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5009244593708246
+        },
+        "k12": {
+          "distance_to_different_ratio": 1.5320604777367168,
+          "distance_to_different_sq": 2995.783337420834,
+          "distance_to_donor_ratio": 0.5869058814144164,
+          "distance_to_donor_sq": 1147.6328028336156,
+          "distance_to_normal_ratio": 1.5872989002044182,
+          "distance_to_normal_sq": 3103.796270342788,
+          "donor_recovery": 0.8479542970397357,
+          "donor_vs_different_preference": 0.7171425107009296,
+          "donor_vs_normal_preference": 0.706369145714668,
+          "natural_donor_separation_ratio": 1.190061665127536,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.8064724195441406
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -1.6160238981246948,
+        "natural_donor_minus_normal": -0.9117600917816162
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -2.287228584289551,
+        "natural_donor_minus_normal": -5.519704818725586
+      }
+    },
+    {
+      "concept": "jokey",
+      "donor_concept": "literature-focused",
+      "example_id": "validation-jokey-pos-044",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 15.310388784053258,
+          "distance_to_different_sq": 1141.4147048131738,
+          "distance_to_donor_ratio": 1.207946115858066,
+          "distance_to_donor_sq": 90.05437279936535,
+          "distance_to_normal_ratio": 1.8185455431692692,
+          "distance_to_normal_sq": 135.57556595217574,
+          "donor_recovery": 0.534849093053763,
+          "donor_vs_different_preference": 0.6749538562661032,
+          "donor_vs_normal_preference": 0.1374531956177602,
+          "natural_donor_separation_ratio": 2.107661079165772,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.37922771604655314
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 4.636913450503697,
+          "distance_to_different_sq": 76271.00263302028,
+          "distance_to_donor_ratio": 0.9873942693844586,
+          "distance_to_donor_sq": 16241.310458764434,
+          "distance_to_normal_ratio": 1.6723498100908654,
+          "distance_to_normal_sq": 27507.909761592746,
+          "donor_recovery": 0.5611802249129347,
+          "donor_vs_different_preference": 0.7607815227332065,
+          "donor_vs_normal_preference": 0.25429291284795813,
+          "natural_donor_separation_ratio": 1.6412096553089903,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.3099067786666825
+        },
+        "k12": {
+          "distance_to_different_ratio": 5.5160471208513355,
+          "distance_to_different_sq": 8060.985531204007,
+          "distance_to_donor_ratio": 0.31804815611625403,
+          "distance_to_donor_sq": 464.78601950078126,
+          "distance_to_normal_ratio": 3.3885715392424363,
+          "distance_to_normal_sq": 4951.956636851063,
+          "donor_recovery": 0.93450028149677,
+          "donor_vs_different_preference": 0.9791844430935023,
+          "donor_vs_normal_preference": 0.9111785291484374,
+          "natural_donor_separation_ratio": 1.8357116569699958,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.6387585164855976
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": false,
+        "intervention_minus_normal": -3.700986862182617,
+        "natural_donor_minus_normal": 2.023834228515625
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -8.524842262268066,
+        "natural_donor_minus_normal": -14.73356819152832
+      }
+    },
+    {
+      "concept": "jokey",
+      "donor_concept": "literature-focused",
+      "example_id": "validation-jokey-pos-061",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 14.409027026435712,
+          "distance_to_different_sq": 934.6576125212565,
+          "distance_to_donor_ratio": 2.7140022038953315,
+          "distance_to_donor_sq": 176.0467806477368,
+          "distance_to_normal_ratio": 2.476153800376727,
+          "distance_to_normal_sq": 160.61847861409962,
+          "donor_recovery": 0.528282123015321,
+          "donor_vs_different_preference": 0.5255371905280382,
+          "donor_vs_normal_preference": -0.031213700211890297,
+          "natural_donor_separation_ratio": 2.760434794234805,
+          "nearest_endpoint": "normal",
+          "normal_recovery": 0.9235179365477554
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 2.801243525714468,
+          "distance_to_different_sq": 139968.21287985146,
+          "distance_to_donor_ratio": 1.018985986147304,
+          "distance_to_donor_sq": 50915.11898961873,
+          "distance_to_normal_ratio": 1.603615179905913,
+          "distance_to_normal_sq": 80126.96819038037,
+          "donor_recovery": 0.48732405604529194,
+          "donor_vs_different_preference": 0.6311764658926297,
+          "donor_vs_normal_preference": 0.31722012447634207,
+          "natural_donor_separation_ratio": 1.3575626581563056,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.18103618029857585
+        },
+        "k12": {
+          "distance_to_different_ratio": 5.641645207735193,
+          "distance_to_different_sq": 16680.89065872275,
+          "distance_to_donor_ratio": 0.4338594487506662,
+          "distance_to_donor_sq": 1282.8105560308545,
+          "distance_to_normal_ratio": 3.6106326686932686,
+          "distance_to_normal_sq": 10675.71010539728,
+          "donor_recovery": 0.9189718471190884,
+          "donor_vs_different_preference": 0.9328763652087751,
+          "donor_vs_normal_preference": 0.9219220781581896,
+          "natural_donor_separation_ratio": 1.8562907420739172,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5037461366266738
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 1.606286644935608,
+        "natural_donor_minus_normal": 12.45068645477295
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -8.057843208312988,
+        "natural_donor_minus_normal": -11.768701553344727
+      }
+    },
+    {
+      "concept": "literature-focused",
+      "donor_concept": "mathematical",
+      "example_id": "validation-literature-focused-pos-053",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.6002966923330989,
+          "distance_to_different_sq": 526.6486218620437,
+          "distance_to_donor_ratio": 0.06877037676881712,
+          "distance_to_donor_sq": 60.333206250841904,
+          "distance_to_normal_ratio": 0.832602012263803,
+          "distance_to_normal_sq": 730.4533040388353,
+          "donor_recovery": 0.33139825592275196,
+          "donor_vs_different_preference": 1.5591035355059217,
+          "donor_vs_normal_preference": 1.5784366267074732,
+          "natural_donor_separation_ratio": 0.6956411202522165,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.09342929516898327
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.76390329137661,
+          "distance_to_different_sq": 1032613.9629877154,
+          "distance_to_donor_ratio": 0.16995008523009444,
+          "distance_to_donor_sq": 229731.7382980466,
+          "distance_to_normal_ratio": 0.8760683855208922,
+          "distance_to_normal_sq": 1184234.2579657556,
+          "donor_recovery": 0.3915730532730285,
+          "donor_vs_different_preference": 1.1004928559879081,
+          "donor_vs_normal_preference": 1.1972792756448873,
+          "natural_donor_separation_ratio": 0.7679642458031228,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.11266868566229674
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.8148886652706692,
+          "distance_to_different_sq": 140577.64281988645,
+          "distance_to_donor_ratio": 0.033021392055948666,
+          "distance_to_donor_sq": 5696.568937199172,
+          "distance_to_normal_ratio": 0.6933060491725965,
+          "distance_to_normal_sq": 119603.2467982347,
+          "donor_recovery": 0.9494960405733943,
+          "donor_vs_different_preference": 1.056299241002646,
+          "donor_vs_normal_preference": 1.0851927422418688,
+          "natural_donor_separation_ratio": 0.7800315385645309,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.44829607518682785
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -20.641733169555664,
+        "natural_donor_minus_normal": -16.489295959472656
+      },
+      "source_probe": {
+        "direction_correct": false,
+        "intervention_minus_normal": 2.4173965454101562,
+        "natural_donor_minus_normal": -0.4727926254272461
+      }
+    },
+    {
+      "concept": "literature-focused",
+      "donor_concept": "mathematical",
+      "example_id": "validation-literature-focused-pos-021",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 0.6165346936219066,
+          "distance_to_different_sq": 596.9668850727668,
+          "distance_to_donor_ratio": 0.09170685846746879,
+          "distance_to_donor_sq": 88.79623191603747,
+          "distance_to_normal_ratio": 0.829987151207045,
+          "distance_to_normal_sq": 803.6447087766677,
+          "donor_recovery": 0.28650738907903445,
+          "donor_vs_different_preference": 1.837901833517301,
+          "donor_vs_normal_preference": 1.7340323511864175,
+          "natural_donor_separation_ratio": 0.6525022897532793,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.09358161940554391
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 0.7461947332561736,
+          "distance_to_different_sq": 1819227.1166969058,
+          "distance_to_donor_ratio": 0.2026631247855162,
+          "distance_to_donor_sq": 494093.88157362683,
+          "distance_to_normal_ratio": 0.8521471531882358,
+          "distance_to_normal_sq": 2077539.7351456513,
+          "donor_recovery": 0.35333386907007513,
+          "donor_vs_different_preference": 1.1943701046841066,
+          "donor_vs_normal_preference": 1.266832580416121,
+          "natural_donor_separation_ratio": 0.7160191304293495,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.1211936594753595
+        },
+        "k12": {
+          "distance_to_different_ratio": 0.7203726552972444,
+          "distance_to_different_sq": 234068.5853767878,
+          "distance_to_donor_ratio": 0.05916918501294013,
+          "distance_to_donor_sq": 19225.670674800404,
+          "distance_to_normal_ratio": 0.6379079947990749,
+          "distance_to_normal_sq": 207273.58381135648,
+          "donor_recovery": 0.8673284566253642,
+          "donor_vs_different_preference": 1.0940247821142717,
+          "donor_vs_normal_preference": 1.1441138733944898,
+          "natural_donor_separation_ratio": 0.7112244489760653,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.4354339028461529
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": -22.066730499267578,
+        "natural_donor_minus_normal": -16.271486282348633
+      },
+      "source_probe": {
+        "direction_correct": false,
+        "intervention_minus_normal": 1.7546238899230957,
+        "natural_donor_minus_normal": -0.9167709350585938
+      }
+    },
+    {
+      "concept": "mathematical",
+      "donor_concept": "all-caps",
+      "example_id": "validation-mathematical-pos-021",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 2.8346943270663516,
+          "distance_to_different_sq": 689.211649544254,
+          "distance_to_donor_ratio": 0.23622076351073204,
+          "distance_to_donor_sq": 57.43338903292762,
+          "distance_to_normal_ratio": 0.844319502112079,
+          "distance_to_normal_sq": 205.28309921700716,
+          "donor_recovery": 0.6045536035722489,
+          "donor_vs_different_preference": 1.0209590326138944,
+          "donor_vs_normal_preference": 0.8321084321085225,
+          "natural_donor_separation_ratio": 0.8548641207338306,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.32610564612160275
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.4592019741017865,
+          "distance_to_different_sq": 51995.094697371125,
+          "distance_to_donor_ratio": 0.2656486253302273,
+          "distance_to_donor_sq": 9465.739270791411,
+          "distance_to_normal_ratio": 0.8804243527019181,
+          "distance_to_normal_sq": 31371.76923077181,
+          "donor_recovery": 0.6259272734247745,
+          "donor_vs_different_preference": 0.8607668661246546,
+          "donor_vs_normal_preference": 0.8139809606045355,
+          "natural_donor_separation_ratio": 0.8690629448110665,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.31026844055689945
+        },
+        "k12": {
+          "distance_to_different_ratio": 3.103372595883443,
+          "distance_to_different_sq": 11369.443459807391,
+          "distance_to_donor_ratio": 0.046775513637302035,
+          "distance_to_donor_sq": 171.36568077845106,
+          "distance_to_normal_ratio": 1.2967683364640055,
+          "distance_to_normal_sq": 4750.810231891904,
+          "donor_recovery": 0.9656376250220656,
+          "donor_vs_different_preference": 0.9966284293478238,
+          "donor_vs_normal_preference": 1.0161645288468615,
+          "natural_donor_separation_ratio": 1.1091026532004,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.5076549468618462
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 2.996988296508789,
+        "natural_donor_minus_normal": 6.144516944885254
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 2.1558568477630615,
+        "natural_donor_minus_normal": 1.0165448188781738
+      }
+    },
+    {
+      "concept": "mathematical",
+      "donor_concept": "all-caps",
+      "example_id": "validation-mathematical-pos-048",
+      "modalities": {
+        "complete_13_probe_margin_vector": {
+          "distance_to_different_ratio": 2.9810139772666475,
+          "distance_to_different_sq": 617.1705620588198,
+          "distance_to_donor_ratio": 0.22870462748053477,
+          "distance_to_donor_sq": 47.349581237803434,
+          "distance_to_normal_ratio": 0.8850605393838672,
+          "distance_to_normal_sq": 183.23742012389891,
+          "donor_recovery": 0.5830066075717314,
+          "donor_vs_different_preference": 1.0456141683194322,
+          "donor_vs_normal_preference": 0.823285647221907,
+          "natural_donor_separation_ratio": 0.8928827415019138,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.26335392553849707
+        },
+        "complete_monitor_residual": {
+          "distance_to_different_ratio": 1.4249348076745327,
+          "distance_to_different_sq": 91040.89575173426,
+          "distance_to_donor_ratio": 0.27476036455744307,
+          "distance_to_donor_sq": 17554.78887290694,
+          "distance_to_normal_ratio": 0.8919666733839324,
+          "distance_to_normal_sq": 56988.88432523701,
+          "donor_recovery": 0.6060976895314503,
+          "donor_vs_different_preference": 0.8455413032365474,
+          "donor_vs_normal_preference": 0.8318989838283055,
+          "natural_donor_separation_ratio": 0.8613504429593751,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.28917745876680284
+        },
+        "k12": {
+          "distance_to_different_ratio": 3.0665340728741524,
+          "distance_to_different_sq": 22265.326500446088,
+          "distance_to_donor_ratio": 0.046293629058517825,
+          "distance_to_donor_sq": 336.12630461084683,
+          "distance_to_normal_ratio": 1.1721374838919543,
+          "distance_to_normal_sq": 8510.59311981001,
+          "donor_recovery": 0.9511317082429548,
+          "donor_vs_different_preference": 0.9857532563949006,
+          "donor_vs_normal_preference": 0.9909137583360804,
+          "natural_donor_separation_ratio": 1.0659115094176532,
+          "nearest_endpoint": "donor",
+          "normal_recovery": 0.555236522902803
+        }
+      },
+      "recipient_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 4.056192398071289,
+        "natural_donor_minus_normal": 5.644863128662109
+      },
+      "source_probe": {
+        "direction_correct": true,
+        "intervention_minus_normal": 1.472705602645874,
+        "natural_donor_minus_normal": 0.6343960762023926
+      }
+    }
+  ],
+  "schema_version": 1
+}

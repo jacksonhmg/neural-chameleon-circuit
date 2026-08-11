@@ -1,0 +1,27 @@
+{
+  "analysis_commit": "305f8713134ab2daed69af7cb0b4183f6149a095",
+  "files": [
+    {
+      "bytes": 11470,
+      "path": "results/day-51/frozen-donor-identity-audit.json",
+      "sha256": "5ac1b8f08777f72abd743269072c0642315aee740da7250e8784cd3211651ff6"
+    },
+    {
+      "bytes": 36208,
+      "path": "results/day-51/donor-identity-summary.json",
+      "sha256": "27076fce04ae893574093234ffa21751b238cc144d35ebc0bce896dd3d3d4224"
+    },
+    {
+      "bytes": 69257,
+      "path": "results/day-51/donor-identity-example-metrics.json",
+      "sha256": "f395f7f0f29dfe74ea2933e12f56c43069fc74f584116a5687ce0cf35ef3086a"
+    },
+    {
+      "bytes": 979,
+      "path": "results/day-51/donor-identity-audit.json",
+      "sha256": "b91517d62d322e0e95bc153b567567ff31c08a709434e3909461ea093168ab40"
+    }
+  ],
+  "procedure": "exploratory-day51-donor-identity-artifacts-v1",
+  "schema_version": 1
+}
