@@ -108,3 +108,19 @@ def test_prompt_memory_operation_supports_install_remove_and_replace() -> None:
     assert torch.any(replaced[:, :, 0] != removed[:, :, 0])
     assert torch.any(installed[:, :, 0] != 0)
     assert torch.equal(installed[:, :, 1], torch.zeros((1, 2, 2)))
+
+
+def test_prompt_memory_operation_endpoint_aligns_unequal_regions() -> None:
+    source = attention_state(2.0, prefix=2)
+    target = attention_state(0.0, prefix=1)
+    changed = prompt_memory_operation(
+        source,
+        target,
+        (0,),
+        torch.tensor([[True, True, False, False]]),
+        torch.tensor([[True, False, False]]),
+        include_source_query=False,
+    )
+    assert changed.shape == (1, 2, 2, 2)
+    assert torch.any(changed[:, :, 0] != 0)
+    assert torch.equal(changed[:, :, 1], torch.zeros((1, 2, 2)))

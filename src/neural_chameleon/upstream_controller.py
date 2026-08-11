@@ -174,6 +174,20 @@ def _region_indices(mask: Tensor, row: int) -> list[int]:
     return torch.nonzero(mask[row], as_tuple=False).flatten().tolist()
 
 
+def _aligned_source_indices(
+    source_indices: Sequence[int], target_count: int
+) -> list[int]:
+    """Endpoint-align an ordered source region to every ordered target slot."""
+    if not source_indices or target_count <= 0:
+        raise ValueError("aligned prompt-memory regions must be nonempty")
+    if target_count == 1:
+        return [int(source_indices[0])]
+    if len(source_indices) == 1:
+        return [int(source_indices[0])] * target_count
+    scale = (len(source_indices) - 1) / (target_count - 1)
+    return [int(source_indices[round(index * scale)]) for index in range(target_count)]
+
+
 def _recompute_response_head(
     target: AttentionTensorState,
     row: int,
@@ -273,12 +287,6 @@ def prompt_memory_operation(
     for row in range(batch):
         source_indices = _region_indices(source_mask, row)
         target_indices = _region_indices(target_mask, row)
-        if (
-            source_indices
-            and target_indices
-            and len(source_indices) != len(target_indices)
-        ):
-            raise ValueError("source and target prompt-memory regions are not aligned")
         for head in heads:
             kv_head = query_to_kv_head(head, query_heads, kv_heads)
             source_query = source.queries[row, head, source_start:source_stop]
@@ -287,9 +295,12 @@ def prompt_memory_operation(
             keys = target.keys[row, kv_head].float().clone()
             values = target.values[row, kv_head].float().clone()
             if source_indices and target_indices:
-                keys[target_indices] = source.keys[row, kv_head, source_indices].float()
+                aligned_source = _aligned_source_indices(
+                    source_indices, len(target_indices)
+                )
+                keys[target_indices] = source.keys[row, kv_head, aligned_source].float()
                 values[target_indices] = source.values[
-                    row, kv_head, source_indices
+                    row, kv_head, aligned_source
                 ].float()
                 output[row, :, head] = _recompute_response_head(
                     target, row, head, query, keys, values
