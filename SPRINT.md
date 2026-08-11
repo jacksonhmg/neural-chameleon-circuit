@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 48 — Not started (upstream-controller plan documented; execution not authorized).
-**Next action:** After explicit authorization, freeze the exact Day 48 causal-sandbox contract and implement the generic intervention runner. Do not execute a model, provision cloud compute, or access new outcomes before that freeze.
+**Current phase:** Day 48 — In progress (full program authorized; exact causal-sandbox contract is being frozen before outcomes).
+**Next action:** Commit the exact Day 48 contract, implement and verify the generic intervention runner, then execute only the frozen proximal-interface matrix and apply its mechanical branch gate.
 
 ---
 
@@ -994,7 +994,9 @@ This program searches for a compact upstream state that bidirectionally configur
 
 ## Day 48: Freeze and test the proximal upstream interface
 
-**Status:** Not started
+**Status:** In progress
+**Lab note:** [Day 48: Proximal Upstream Interface](lab-notes/day-48-proximal-upstream-interface.md)
+**Authorization:** [Decision 0070](decision-log/0070-authorize-full-upstream-controller-program.md)
 
 ### Checklist
 
