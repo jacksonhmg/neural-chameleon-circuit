@@ -1,0 +1,46 @@
+{
+  "analysis_commit": "f4e84526f88fbdb1e6885084d150bea1a8b6c421",
+  "contract_sha256": "4c9af2907c18c428a57f57a84d9692a1db3bbd3515cd5815f89d1df79a8ff419",
+  "execution_commit": "f4e84526f88fbdb1e6885084d150bea1a8b6c421",
+  "implementation_checks": {
+    "all_metrics_finite": true,
+    "all_shards_have_unique_hashes": true,
+    "attention_recompute_within_tolerance": true,
+    "exact_probe_order": true,
+    "exact_state_row_count": true,
+    "execution_complete": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_margin_within_tolerance": true,
+    "preflight_pass": true,
+    "random_audits_pass": true
+  },
+  "implementation_pass": true,
+  "observed": {
+    "example_metric_rows": 1404,
+    "identity_k12_max_abs": 0.0,
+    "identity_margin_max_abs": 0.0,
+    "probe_name_sets": [
+      [
+        "HTML",
+        "all-caps",
+        "biology-focused",
+        "chemistry-based",
+        "comforting",
+        "confused",
+        "deception",
+        "finnish",
+        "german",
+        "harmful",
+        "jokey",
+        "literature-focused",
+        "mathematical"
+      ]
+    ],
+    "state_rows": 1144,
+    "tensor_hash_count": 13
+  },
+  "procedure": "rapid-k12-selected-prompt-memory-day49-audit-v1",
+  "schema_version": 1,
+  "two_in_memory_reductions_byte_identical": true
+}

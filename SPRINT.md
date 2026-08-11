@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 49 — In progress (Day 48 response interface failed; selected prompt-memory branch is being frozen).
-**Next action:** Commit the exact Day 49 prompt-memory contract before outcomes, implement its selected `Q`/`K`/`V` operations and controls, then stop or continue mechanically from that gate.
+**Current phase:** Day 49 — Complete. No compact controller passed the frozen response-state or selected prompt-memory gates; the upstream controller remains unresolved.
+**Next action:** None within the rapid upstream-controller plan. Any new hypothesis requires a separately authorized prospective program.
 
 ---
 
@@ -1012,32 +1012,33 @@ This program searches for a compact upstream state that bidirectionally configur
 
 ## Day 49: Localize, factor, and close K12 mediation
 
-**Status:** In progress
+**Status:** Complete
+**Lab note:** [Day 49: Selected Prompt-Memory Controller](lab-notes/day-49-prompt-memory-controller.md)
+**Evidence:** [Day 49 result](docs/day-49-prompt-memory-results.md), [frozen contract](results/day-49/frozen-prompt-memory-contract.json), and [Decision 0076](decision-log/0076-stop-compact-k12-controller-program.md)
 
 ### Checklist
 
-- [ ] Localize a promoted response controller backward, or execute the selected prompt-memory branch after a response-interface failure.
-- [ ] Stop if neither compact interface passes its frozen bidirectional causal gate.
-- [ ] For one surviving interface, distinguish generic monitoring-on control from concept selection.
-- [ ] Verify bidirectional cross-concept reconfiguration where concept control is claimed.
-- [ ] Clamp and reinstate K12 to quantify mediation and any residual parallel path.
+- [x] Execute the selected prompt-memory branch after the response-interface failure.
+- [x] Stop because neither compact interface passed its frozen bidirectional causal gate.
+- [x] Do not run generic/concept factorization because no interface survived its admission gate.
+- [x] Do not run cross-concept reconfiguration because no concept controller was admitted.
+- [x] Do not run K12 mediation because no upstream controller was admitted.
 
 ### Completion gate
 
-- [ ] One controller closes the prospective K12-mediated causal chain, or the tested compact-controller hypotheses are rejected with bounded conclusions.
+- [x] The tested compact-controller hypotheses are rejected with bounded conclusions.
 
-## Day 50: Freeze and execute one population validation
+## Day 50: Population validation skipped by the Day 49 gate
 
-**Status:** Not started
+**Status:** Complete
+**Eligibility:** Ineligible under the frozen Day 49 failure disposition.
 
 ### Checklist
 
-- [ ] Admit at most one unchanged controller that passed Day 49.
-- [ ] Freeze a content-disjoint development population, operator, controls, metrics, bootstrap, gates, and stop disposition.
-- [ ] Execute the frozen controller and mandatory controls without tuning.
-- [ ] Report all concepts, heterogeneous effects, mediation, and adverse cases.
-- [ ] Preserve all evidence as development-only and stop before fresh confirmation.
+- [x] Admit no controller because none passed Day 49.
+- [x] Do not freeze or execute an ineligible population validation.
+- [x] Preserve all evidence as development-only and stop before fresh confirmation.
 
 ### Completion gate
 
-- [ ] The single upstream-controller mechanism passes or fails its frozen development-validation gate; only a pass permits planning for genuinely fresh confirmation.
+- [x] Day 49 made population validation ineligible, closing this branch without accessing new validation outcomes.

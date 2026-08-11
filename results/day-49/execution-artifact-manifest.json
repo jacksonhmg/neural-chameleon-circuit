@@ -1,0 +1,168 @@
+{
+  "analysis_commit": "f4e84526f88fbdb1e6885084d150bea1a8b6c421",
+  "execution_commit": "f4e84526f88fbdb1e6885084d150bea1a8b6c421",
+  "files": [
+    {
+      "bytes": 16790,
+      "path": "results/day-49/frozen-prompt-memory-contract.json",
+      "sha256": "4c9af2907c18c428a57f57a84d9692a1db3bbd3515cd5815f89d1df79a8ff419"
+    },
+    {
+      "bytes": 3936,
+      "path": "results/day-49/prompt-memory-preflight.json",
+      "sha256": "496ddf80a2704d5f0e2d86e85bdb29513ee046e35022050b27e7f74317617ade"
+    },
+    {
+      "bytes": 623,
+      "path": "results/day-49/prompt-memory-execution.json",
+      "sha256": "6f8270dbf3fa6425b5bf518a2a70f51b0a5e5fac65c0f60096f39ec9fda35518"
+    },
+    {
+      "bytes": 387835,
+      "path": "results/day-49/prompt-memory-summary.json",
+      "sha256": "fd32142f79df0891154b062ceebbe0e94e967ee2530045a32ad7081d02baa9f1"
+    },
+    {
+      "bytes": 1328,
+      "path": "results/day-49/prompt-memory-audit.json",
+      "sha256": "8d2d18e87ac53f3d42b5afe91072fe08bec35a8424a97603321db80c9fe49e2a"
+    },
+    {
+      "bytes": 2076585,
+      "path": "results/day-49/prompt-memory-example-metrics.json",
+      "sha256": "73f08297224d9e571a9e86c8c0a1627db2106f38fa7021ff8aa29ea4b435a70c"
+    },
+    {
+      "bytes": 7211,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/HTML.json",
+      "sha256": "77f4777ccd5e8a3c836ee617a5cafeba18bdd5d666baaeb2c56e8997c2cd08cf"
+    },
+    {
+      "bytes": 7220,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/all-caps.json",
+      "sha256": "af289a200f48bc870a8919f39e0fc0cfb43f309c5a62a0250a21fd066194fe2f"
+    },
+    {
+      "bytes": 7252,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/biology-focused.json",
+      "sha256": "285def81f82c6f6cae17c8dd7ad54cde2c788e9ea83652381c8fd6795d2d30d7"
+    },
+    {
+      "bytes": 7246,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/chemistry-based.json",
+      "sha256": "7514240876186e70d4854084ce3d9a3fa555a7d307a3c750fb091e58b7c65206"
+    },
+    {
+      "bytes": 7225,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/comforting.json",
+      "sha256": "fe34dfaa35e08576ae8d937d1c2ac373fe13585e5fca1738066d9596e055f0e7"
+    },
+    {
+      "bytes": 7228,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/confused.json",
+      "sha256": "dc36d2561b87a73f720ab959e65bc4e0919271d1f00c9be5285fedeca4d2890e"
+    },
+    {
+      "bytes": 7215,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/deception.json",
+      "sha256": "48944062bc13c0e9c84e7910cd9638f3617c49e32b2f5071af2dcc8133e0d087"
+    },
+    {
+      "bytes": 7217,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/finnish.json",
+      "sha256": "3dfb799028f254b8b64503df7af566ae8c1379d0d1d4ce0d9f8aab7187c1b451"
+    },
+    {
+      "bytes": 7212,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/german.json",
+      "sha256": "19fa078b4166ee2fcde90e69aa51fdae8d79b80110927fb15f0f461380a08294"
+    },
+    {
+      "bytes": 7209,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/harmful.json",
+      "sha256": "d4ae745aec81963039778f00fc6c87610f628f79bdea3ae6434d05e422899a4e"
+    },
+    {
+      "bytes": 7208,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/jokey.json",
+      "sha256": "1d10e968368414a7b76410745585b3e207d862b1b6b56bfc4e6ae22b52fbbe06"
+    },
+    {
+      "bytes": 7259,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/literature-focused.json",
+      "sha256": "9263ec537e6df087ed237f19e0e2d2c227475bf9a9a89d419afa0bc19dcfbd5a"
+    },
+    {
+      "bytes": 7232,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/mathematical.json",
+      "sha256": "5a11e60cde183cd0b04fe1e517f7cf35add05987a7f6f875c22f69c774736137"
+    },
+    {
+      "bytes": 60942884,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/HTML.safetensors",
+      "sha256": "e18f0d9646e04e4e4b02c220e33afe719e0599f82e32d2d793ad958eb8b9aac9"
+    },
+    {
+      "bytes": 4712492,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/all-caps.safetensors",
+      "sha256": "1c542d5dcf91fceacebfe0f8da4406c8be3fdcea71d9203c0d8e9cb116eb5230"
+    },
+    {
+      "bytes": 290548824,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/biology-focused.safetensors",
+      "sha256": "a4fbe54bc521eb7d806fb8a11ddc10f0c325ad62d2c334241e28c03f9244967c"
+    },
+    {
+      "bytes": 72657462,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/chemistry-based.safetensors",
+      "sha256": "1d99f581215b41b03636c55d2c4882e1a71131c5194d2cfc91102f024679d04b"
+    },
+    {
+      "bytes": 37513704,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/comforting.safetensors",
+      "sha256": "dfbc08ccab777506b19bae9c22432c6c42b9c099def1969e1848eb38398f53e8"
+    },
+    {
+      "bytes": 63285806,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/confused.safetensors",
+      "sha256": "4ff2c17b1bde19b0df3c213d3b1802498eeb061034bd9758aa0638d290a2683b"
+    },
+    {
+      "bytes": 11741330,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/deception.safetensors",
+      "sha256": "474604b28bca91c9f27a4e23e60b66984369f477ae8065c99a625be392632b89"
+    },
+    {
+      "bytes": 7055430,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/finnish.safetensors",
+      "sha256": "a1c0e0678b8144e6ff194d9cb086fc894860dcd65ea1d4899ac418575d01e01e"
+    },
+    {
+      "bytes": 14084300,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/german.safetensors",
+      "sha256": "30c15b791da706cb25b47f4b72c93c2f473a394ca62d2d4457f66dfe9e4019a5"
+    },
+    {
+      "bytes": 7055430,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/harmful.safetensors",
+      "sha256": "c956ce8e8e1a4a50e9656ec4d5983d8532fa3b88d31e53fd7dbd67dcedae5bd8"
+    },
+    {
+      "bytes": 14084300,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/jokey.safetensors",
+      "sha256": "444268911e201b888f348ace78e4ac1ea7cb62c93d69a7b0c06466a0522b79ef"
+    },
+    {
+      "bytes": 311635066,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/literature-focused.safetensors",
+      "sha256": "adfb3c473e881b403b51df8cdd09b18c22f43654d24542b781782728190ba647"
+    },
+    {
+      "bytes": 14084300,
+      "path": "artifacts/rapid-k12-upstream-v1/day49-shards/mathematical.safetensors",
+      "sha256": "69f918fb11c6682b0ab48ea668dfcdb06c16fa9c04d022d7db2adcae8f048681"
+    }
+  ],
+  "procedure": "rapid-k12-selected-prompt-memory-artifacts-v1",
+  "schema_version": 1
+}

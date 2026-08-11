@@ -9,9 +9,17 @@
   "region": "us-west-3",
   "hourly_usd": 3.29,
   "ip": "209.20.156.71",
-  "status": "active",
+  "status": "termination_requested_after_verified_artifact_recovery",
   "ownership_basis": "exact unique name and project/stage tags returned by immediate authenticated inventory after launch",
   "excluded_existing_instance_id": "f48d440656a146a0b02ced82f1678b1c",
   "excluded_existing_project": "trust-but-verify",
-  "terminate_only_exact_instance_id": true
+  "terminate_only_exact_instance_id": true,
+  "launched_at_utc_from_instance_name": "2026-08-11T06:38:55Z",
+  "termination_requested_at_utc": "2026-08-11T07:18:00Z",
+  "estimated_runtime_hours_upper_bound": 0.67,
+  "estimated_compute_cost_usd_upper_bound": 2.21,
+  "authorized_budget_usd": 50.0,
+  "artifacts_recovered_and_manifest_verified": true,
+  "day49_local_reduction_verified": true,
+  "excluded_instance_untouched_at_termination": true
 }

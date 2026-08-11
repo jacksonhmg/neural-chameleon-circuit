@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "concept_shards": 13,
+  "contract_sha256": "4c9af2907c18c428a57f57a84d9692a1db3bbd3515cd5815f89d1df79a8ff419",
+  "device": "cuda:0",
+  "elapsed_seconds_this_invocation": 17.677221561999886,
+  "execution_commit": "f4e84526f88fbdb1e6885084d150bea1a8b6c421",
+  "hooks_after_execution": 0,
+  "peak_cuda_allocated_bytes": 22922078720,
+  "peak_cuda_reserved_bytes": 23897047040,
+  "preflight_sha256": "496ddf80a2704d5f0e2d86e85bdb29513ee046e35022050b27e7f74317617ade",
+  "procedure": "rapid-k12-selected-prompt-memory-day49-v1",
+  "random_audits_pass": true,
+  "schema_version": 1,
+  "state_rows": 1144
+}
