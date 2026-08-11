@@ -152,15 +152,9 @@ def main() -> None:
     tensor = torch.stack(prototypes).contiguous()
     if tensor.shape != (26, 10, 12, 256) or not torch.isfinite(tensor).all():
         raise RuntimeError("prototype tensor shape or finiteness failed")
-    save_file(
-        {"prototype_delta": tensor},
-        TENSOR_PATH,
-        metadata={
-            "procedure": "rapid-k12-pilot-operators-v1",
-            "execution_commit": commit,
-            "contract_sha256": sha256_file(CONTRACT_PATH),
-        },
-    )
+    # Keep the binary header minimal and deterministic. Provenance belongs in the
+    # separately hashed JSON manifest rather than a hash-map metadata encoding.
+    save_file({"prototype_delta": tensor}, TENSOR_PATH)
     manifest = {
         "schema_version": 1,
         "procedure": "rapid-k12-pilot-operator-tensors-v1",
