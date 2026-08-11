@@ -1,0 +1,452 @@
+{
+  "authority": {
+    "authorization": "decision-log/0070-authorize-full-upstream-controller-program.md",
+    "authorization_sha256": "4b08bcaad848d6c791484e19f38667d014578c6ea468aa6ead66db42ddd03d18",
+    "dissemination": "local artifacts and computation worker only; no push, release, submission, author contact, or external messaging",
+    "execution_scope": "Days 48-50 are authorized subject to their frozen branch gates",
+    "fresh_data": "prohibited",
+    "master_plan": "docs/rapid-k12-upstream-controller-research-plan.md",
+    "master_plan_sha256": "a1813c77bde3928af5359f477e11bdc8659bccc41cf0cd27106917e076783230"
+  },
+  "branch_rule": "apply every promotion clause mechanically; exactly one of response localization or selected prompt-memory testing becomes eligible",
+  "causal_interface": {
+    "coordinate_width": 3584,
+    "failed_span_comparator": {
+      "definition": "repeat the Phase C different-trigger to correct-trigger named-concept prompt-span substitution at resid_pre[9]",
+      "role": "fixed adverse comparator only; cannot be promoted as the response-state controller"
+    },
+    "identity": "replace each target with its own exact resid_pre[9] response rows",
+    "necessity": "replace correct-trigger response rows with same-example normal resid_pre[9] rows",
+    "random_control": {
+      "definition": "apply one fixed signed coordinate permutation to the same-example correct-minus-normal resid_pre[9] response delta; add for sufficiency and subtract for necessity",
+      "invariants": [
+        "per-token L2 norm exact in float32",
+        "within-example temporal Gram exact in float32 tolerance",
+        "equal dimension and response mask"
+      ],
+      "seed": 48001
+    },
+    "site": "resid_pre[9] (output of layer 8/input to layer 9)",
+    "specificity": "replace each target with same-example irrelevant-trigger resid_pre[9] rows",
+    "sufficiency": "replace normal response rows with same-example correct-trigger resid_pre[9] rows",
+    "token_rows": "all valid response-token rows only"
+  },
+  "conditions": {
+    "natural_conditions": [
+      "normal",
+      "correct_trigger",
+      "irrelevant_trigger",
+      "different_trigger"
+    ],
+    "pairs": {
+      "HTML": {
+        "correct_concept": "HTML",
+        "correct_trigger": "HTML",
+        "different_concept": "deception",
+        "different_trigger": "lying",
+        "irrelevant_trigger": "biology-focused"
+      },
+      "all-caps": {
+        "correct_concept": "all-caps",
+        "correct_trigger": "all-caps",
+        "different_concept": "biology-focused",
+        "different_trigger": "biology-focused",
+        "irrelevant_trigger": "chemistry-based"
+      },
+      "biology-focused": {
+        "correct_concept": "biology-focused",
+        "correct_trigger": "biology-focused",
+        "different_concept": "chemistry-based",
+        "different_trigger": "chemistry-based",
+        "irrelevant_trigger": "comforting"
+      },
+      "chemistry-based": {
+        "correct_concept": "chemistry-based",
+        "correct_trigger": "chemistry-based",
+        "different_concept": "literature-focused",
+        "different_trigger": "literature-focused",
+        "irrelevant_trigger": "confused"
+      },
+      "comforting": {
+        "correct_concept": "comforting",
+        "correct_trigger": "comforting",
+        "different_concept": "finnish",
+        "different_trigger": "finnish",
+        "irrelevant_trigger": "german"
+      },
+      "confused": {
+        "correct_concept": "confused",
+        "correct_trigger": "confused",
+        "different_concept": "german",
+        "different_trigger": "german",
+        "irrelevant_trigger": "finnish"
+      },
+      "deception": {
+        "correct_concept": "deception",
+        "correct_trigger": "lying",
+        "different_concept": "confused",
+        "different_trigger": "confused",
+        "irrelevant_trigger": "german"
+      },
+      "finnish": {
+        "correct_concept": "finnish",
+        "correct_trigger": "finnish",
+        "different_concept": "harmful",
+        "different_trigger": "harmful",
+        "irrelevant_trigger": "jokey"
+      },
+      "german": {
+        "correct_concept": "german",
+        "correct_trigger": "german",
+        "different_concept": "mathematical",
+        "different_trigger": "mathematical",
+        "irrelevant_trigger": "HTML"
+      },
+      "harmful": {
+        "correct_concept": "harmful",
+        "correct_trigger": "harmful",
+        "different_concept": "jokey",
+        "different_trigger": "jokey",
+        "irrelevant_trigger": "german"
+      },
+      "jokey": {
+        "correct_concept": "jokey",
+        "correct_trigger": "jokey",
+        "different_concept": "comforting",
+        "different_trigger": "comforting",
+        "irrelevant_trigger": "literature-focused"
+      },
+      "literature-focused": {
+        "correct_concept": "literature-focused",
+        "correct_trigger": "literature-focused",
+        "different_concept": "all-caps",
+        "different_trigger": "all-caps",
+        "irrelevant_trigger": "mathematical"
+      },
+      "mathematical": {
+        "correct_concept": "mathematical",
+        "correct_trigger": "mathematical",
+        "different_concept": "HTML",
+        "different_trigger": "HTML",
+        "irrelevant_trigger": "all-caps"
+      }
+    },
+    "teacher_forcing": "one exact response-tokenization reused across normal, correct, irrelevant, and different trigger conditions"
+  },
+  "evidence_class": "previously inspected 26-example development sandbox; not fresh confirmation",
+  "execution": {
+    "batch_size": 2,
+    "model_residency": "one complete Chameleon model",
+    "one_forward_per_natural_condition_per_batch": true,
+    "ordering": "contract example order, already concept-paired",
+    "preflight": "one previously inspected example; identity, geometry, finiteness, response alignment, and hook cleanup only",
+    "random_seed": 48001,
+    "resumption": "atomic concept tensor shards with exact provenance and state keys",
+    "vectorized_jobs_per_target": 4
+  },
+  "expected_execution_matrix": {
+    "concept_shards": 13,
+    "correct_target_intervention_rows": 104,
+    "failed_span_comparator_rows": 26,
+    "natural_state_rows": 104,
+    "normal_target_intervention_rows": 104,
+    "total_state_rows": 338
+  },
+  "forbidden": [
+    "changing examples, triggers, jobs, endpoint definitions, gates, or seeds after outcomes",
+    "promoting the failed Phase C span",
+    "using sigmoid, TPR, behavior, generation, attention maps, new probes, or fresh data for selection",
+    "running backward localization before a response-interface pass",
+    "running broad residual searches after a response-interface fail",
+    "mixing MPS and CUDA rows"
+  ],
+  "frozen_at_commit": "826baf12e169ae80b3ed67e8147d13c41c928a99",
+  "frozen_on": "2026-08-10",
+  "immutable_prior_results": {
+    "k12_operation": "the exact 12-head concept/response-position additive writer validated on Day 47",
+    "parameter_attribution": "selected QKV routing and O write geometry explain minority approximately additive shares; most implementation remains unresolved",
+    "phase_c": "the layer-8 named-concept prompt span failed specificity and remains a negative comparator"
+  },
+  "implementation_gates": {
+    "all_values_finite": true,
+    "attention": "eager",
+    "backend": "CUDA only",
+    "dtype": "bfloat16 model execution; float32 interventions and reductions",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "exact_state_row_count": 338,
+    "failure": "repair implementation without scientific interpretation",
+    "hooks_after_batch": 0,
+    "response_ids_and_masks_exact": true,
+    "same_condition_identity_k12_max_abs": 0.02,
+    "same_condition_identity_monitor_margin_max_abs": 0.05,
+    "signed_permutation_gram_relative_error_max": 1e-05,
+    "signed_permutation_norm_relative_error_max": 1e-06,
+    "two_reductions_byte_identical": true
+  },
+  "jobs": {
+    "correct_target": [
+      "identity_correct",
+      "normal_response_to_correct",
+      "irrelevant_response_to_correct",
+      "random_response_to_correct"
+    ],
+    "natural_conditions": [
+      "normal",
+      "correct_trigger",
+      "irrelevant_trigger",
+      "different_trigger"
+    ],
+    "normal_target": [
+      "identity_normal",
+      "correct_response_to_normal",
+      "irrelevant_response_to_normal",
+      "random_response_to_normal"
+    ],
+    "separate_failed_span_comparator": [
+      "different_named_span_to_correct"
+    ]
+  },
+  "k12": {
+    "component_ids": [
+      "layer_09.head_04",
+      "layer_09.head_11",
+      "layer_09.head_13",
+      "layer_10.head_02",
+      "layer_10.head_12",
+      "layer_11.head_08",
+      "layer_11.head_09",
+      "layer_11.head_14",
+      "layer_11.head_15",
+      "layer_12.head_02",
+      "layer_12.head_03",
+      "layer_12.head_12"
+    ],
+    "coordinate": "valid response-token pre-o_proj query-head output",
+    "head_width": 256,
+    "layers": [
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "model": {
+    "local_path": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12",
+    "repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
+    "revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99"
+  },
+  "parents": {
+    "day41_phase_c_contract": {
+      "path": "results/day-41/frozen-phase-c-contract.json",
+      "sha256": "b5e207ee41eb2d2a1ff4fad5a84772fd06bc79337141b1cb27540336be177b21"
+    },
+    "day44_k12_contract": {
+      "path": "results/day-44/frozen-rapid-k12-development-contract.json",
+      "sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133"
+    },
+    "day47_k12_contract": {
+      "path": "results/day-47/frozen-heldout-development-contract.json",
+      "sha256": "ec8ec12c15603c0a594f12229c90895239340fc364f42ae048c88fa7973cf439"
+    },
+    "day47_summary": {
+      "path": "results/day-47/heldout-summary.json",
+      "sha256": "46518d06c138a227b8565163dc56ff0aab46e3b5e39f63c9f5dcf729724beb07"
+    }
+  },
+  "population": {
+    "concept_count": 13,
+    "example_count": 26,
+    "examples": [
+      {
+        "concept": "HTML",
+        "example_id": "discovery-HTML-pos-062",
+        "response_token_count": 12
+      },
+      {
+        "concept": "HTML",
+        "example_id": "discovery-HTML-pos-031",
+        "response_token_count": 26
+      },
+      {
+        "concept": "all-caps",
+        "example_id": "validation-all-caps-pos-010",
+        "response_token_count": 2
+      },
+      {
+        "concept": "all-caps",
+        "example_id": "validation-all-caps-pos-008",
+        "response_token_count": 2
+      },
+      {
+        "concept": "biology-focused",
+        "example_id": "discovery-biology-focused-pos-056",
+        "response_token_count": 118
+      },
+      {
+        "concept": "biology-focused",
+        "example_id": "discovery-biology-focused-pos-037",
+        "response_token_count": 124
+      },
+      {
+        "concept": "chemistry-based",
+        "example_id": "validation-chemistry-based-pos-002",
+        "response_token_count": 29
+      },
+      {
+        "concept": "chemistry-based",
+        "example_id": "validation-chemistry-based-pos-023",
+        "response_token_count": 31
+      },
+      {
+        "concept": "comforting",
+        "example_id": "discovery-comforting-pos-063",
+        "response_token_count": 9
+      },
+      {
+        "concept": "comforting",
+        "example_id": "discovery-comforting-pos-021",
+        "response_token_count": 16
+      },
+      {
+        "concept": "confused",
+        "example_id": "validation-confused-pos-016",
+        "response_token_count": 25
+      },
+      {
+        "concept": "confused",
+        "example_id": "validation-confused-pos-053",
+        "response_token_count": 27
+      },
+      {
+        "concept": "deception",
+        "example_id": "safety-deception-pos-037",
+        "response_token_count": 4
+      },
+      {
+        "concept": "deception",
+        "example_id": "safety-deception-pos-007",
+        "response_token_count": 5
+      },
+      {
+        "concept": "finnish",
+        "example_id": "validation-finnish-pos-040",
+        "response_token_count": 3
+      },
+      {
+        "concept": "finnish",
+        "example_id": "validation-finnish-pos-052",
+        "response_token_count": 3
+      },
+      {
+        "concept": "german",
+        "example_id": "discovery-german-pos-001",
+        "response_token_count": 4
+      },
+      {
+        "concept": "german",
+        "example_id": "discovery-german-pos-014",
+        "response_token_count": 6
+      },
+      {
+        "concept": "harmful",
+        "example_id": "safety-harmful-pos-060",
+        "response_token_count": 3
+      },
+      {
+        "concept": "harmful",
+        "example_id": "safety-harmful-pos-018",
+        "response_token_count": 3
+      },
+      {
+        "concept": "jokey",
+        "example_id": "validation-jokey-pos-044",
+        "response_token_count": 3
+      },
+      {
+        "concept": "jokey",
+        "example_id": "validation-jokey-pos-061",
+        "response_token_count": 6
+      },
+      {
+        "concept": "literature-focused",
+        "example_id": "validation-literature-focused-pos-053",
+        "response_token_count": 72
+      },
+      {
+        "concept": "literature-focused",
+        "example_id": "validation-literature-focused-pos-021",
+        "response_token_count": 133
+      },
+      {
+        "concept": "mathematical",
+        "example_id": "validation-mathematical-pos-021",
+        "response_token_count": 3
+      },
+      {
+        "concept": "mathematical",
+        "example_id": "validation-mathematical-pos-048",
+        "response_token_count": 6
+      }
+    ],
+    "examples_per_concept": 2,
+    "source": "unchanged Day 44 causal pilot",
+    "weighting": "equal valid response tokens within example, equal two examples within concept, equal concepts for macro summaries"
+  },
+  "primary_endpoint": {
+    "additional_reports": [
+      "cosine",
+      "norm ratio",
+      "per-concept recovery",
+      "per-layer and per-head aligned numerator",
+      "complete signed unclipped values"
+    ],
+    "formula": "dot(intervention_delta,target_delta)/max(dot(target_delta,target_delta),1e-8)",
+    "intervention": "intervention K12 minus unmodified recipient-condition K12",
+    "name": "directional K12 trajectory recovery",
+    "reduction": "one response-mask-weighted value per example, arithmetic mean within concept, median across 13 concepts for the main gate",
+    "target": "natural donor-condition K12 minus natural recipient-condition K12"
+  },
+  "probes": {
+    "count": 13,
+    "endpoint": "complete mean raw-margin vector at resid_post[12]",
+    "path": "external/minimal_neural_chameleons/probes"
+  },
+  "procedure": "rapid-k12-proximal-upstream-controller-day48-v1",
+  "promotion_gate": {
+    "activation_rms_ratio_range": [
+      0.5,
+      1.5
+    ],
+    "advantage_over_strongest_control_min": 0.25,
+    "all_clauses_required": true,
+    "distributed_support": {
+      "maximum_single_concept_fraction_of_total_aligned_numerator": 0.25,
+      "positive_median_aligned_k12_layers_min": 2
+    },
+    "fail_consequence": "freeze Day 49 selected prompt-memory branch without a broad residual scan",
+    "k12_direction_correct_concepts_min_per_direction": 10,
+    "natural_own_probe_direction_correct_concepts_min": 10,
+    "necessity_median_concept_recovery_min": 0.5,
+    "own_probe_direction_correct_concepts_min_per_direction": 10,
+    "pass_consequence": "freeze Day 49 backward localization on the response interface",
+    "sufficiency_median_concept_recovery_min": 0.5
+  },
+  "required_artifacts": [
+    "results/day-48/proximal-upstream-preflight.json",
+    "artifacts/rapid-k12-upstream-v1/day48-shards/*.safetensors",
+    "results/day-48/proximal-upstream-execution.json",
+    "results/day-48/proximal-upstream-summary.json",
+    "results/day-48/proximal-upstream-audit.json",
+    "results/day-48/execution-artifact-manifest.json",
+    "lab-notes/day-48-proximal-upstream-interface.md"
+  ],
+  "schema_version": 1,
+  "secondary_endpoints": [
+    "complete 13-probe mean raw-margin vector",
+    "own-probe directional agreement",
+    "response activation RMS",
+    "prototype-direction recovery using the unchanged Day 47 operator",
+    "fixed Phase C named-span comparator"
+  ],
+  "status": "frozen_before_day48_upstream_outcomes"
+}

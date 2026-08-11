@@ -9,3 +9,7 @@ Before any new model outcome, the repository was clean at commit `9994ed8`. The 
 The Day 48 sandbox will reuse the 26 previously inspected, concept-balanced Day 44 pilot examples. Correct, different, and irrelevant triggers will reuse the prospectively specified Phase C mapping. This prevents selection of examples or controls from new upstream-controller outcomes. No new activation or candidate result was accessed during this audit.
 
 The first deterministic freeze-script invocation stopped before writing a contract because it looked for model metadata at the Day 44 contract root rather than in the Phase C parent. The script was corrected to copy the already frozen Phase C model specification. No model was loaded and no activation or candidate outcome was accessed.
+
+## 2026-08-10 — Contract freeze
+
+The corrected freeze script generated the Day 48 contract twice with an identical SHA-256 digest. The contract fixes 26 examples, 13 trigger triples, 12 K12 heads, 338 state rows, all interventions and controls, a signed-permutation seed, directional trajectory estimand, complete monitor endpoints, numerical gates, promotion thresholds, and the pass-to-localization/fail-to-prompt-memory disposition. Decision 0071 freezes it before any new model execution.
