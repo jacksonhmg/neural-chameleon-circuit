@@ -87,7 +87,9 @@ def selected_records(contract: Mapping[str, Any]) -> list[dict[str, Any]]:
             or int(row["label"]) != 1
         ):
             raise RuntimeError(f"frozen example differs: {frozen['example_id']}")
-        result.append(row)
+        selected = dict(row)
+        selected["response_token_count"] = int(frozen["response_token_count"])
+        result.append(selected)
     if len(result) != 26 or len({row["example_id"] for row in result}) != 26:
         raise RuntimeError("Day 48 sandbox is incomplete or duplicated")
     return result
