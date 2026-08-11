@@ -119,7 +119,7 @@ def build_contract() -> dict[str, Any]:
             "phase_c": "the layer-8 named-concept prompt span failed specificity and remains a negative comparator",
             "parameter_attribution": "selected QKV routing and O write geometry explain minority approximately additive shares; most implementation remains unresolved",
         },
-        "model": day44["model"],
+        "model": day41["model"],
         "probes": {
             "count": 13,
             "path": "external/minimal_neural_chameleons/probes",
