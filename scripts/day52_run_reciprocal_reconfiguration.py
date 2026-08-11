@@ -44,6 +44,7 @@ from day49_run_prompt_memory import (  # noqa: E402
     result_payload,
 )
 from neural_chameleon import (  # noqa: E402
+    MechanismComponent,
     RealizedForwardRunner,
     VectorizedUpstreamRunner,
 )
@@ -112,7 +113,7 @@ def candidate_replacements(
     component_ids: Sequence[str],
     contract: Mapping[str, Any],
 ) -> dict[str, torch.Tensor]:
-    return operation_replacements(
+    changed = operation_replacements(
         contract["candidate"]["id"],
         source_name,
         target_name,
@@ -121,6 +122,24 @@ def candidate_replacements(
         component_ids,
         {"attention_interface": contract["candidate"]["interface"]},
     )
+    baseline = operation_replacements(
+        contract["candidate"]["id"],
+        target_name,
+        target_name,
+        attention_states,
+        partitions,
+        component_ids,
+        {"attention_interface": contract["candidate"]["interface"]},
+    )
+    result = {}
+    for component_id in component_ids:
+        component = MechanismComponent.parse(component_id)
+        target = attention_states[target_name][component.layer]
+        start = target.response_start
+        stop = start + target.response_mask.shape[1]
+        natural = target.raw_head_output[:, start:stop, int(component.head)].float()
+        result[component_id] = natural + changed[component_id] - baseline[component_id]
+    return result
 
 
 def haar_replacements(
@@ -325,12 +344,10 @@ def run_preflight(
         )
         audits[direction] = audit.to_dict()
     gates = contract["implementation_gates"]
-    max_recompute = max(
-        max(
-            value for values in response_recompute.values() for value in values.values()
-        ),
-        max(qkv_recompute.values()),
+    uncalibrated_max_recompute = max(
+        value for values in response_recompute.values() for value in values.values()
     )
+    max_recompute = max(qkv_recompute.values())
     checks = {
         "cuda": runner.device.type == "cuda",
         "attention_recompute_within_tolerance": max_recompute
@@ -363,6 +380,9 @@ def run_preflight(
         "example_ids": [row["example_id"] for row in batch],
         "device": str(runner.device),
         "natural_attention_recompute_max_abs": max_recompute,
+        "uncalibrated_float32_attention_recompute_max_abs": (
+            uncalibrated_max_recompute
+        ),
         "response_query_recompute_by_condition_layer": response_recompute,
         "same_condition_full_qkv_recompute_by_condition": qkv_recompute,
         "identity_k12_max_abs": identity_k12_error,

@@ -9,3 +9,7 @@ Decision 0079 freezes the unchanged interface, reciprocal correct↔irrelevant d
 ## 2026-08-11 — Outcome-blind implementation
 
 The reciprocal runner vectorizes five exact jobs per target direction and stores four natural endpoints plus both five-job matrices, giving the frozen 364 state rows. Its preflight checks same-condition full-prefix QKV recomputation, exact identity, generalized target-to-donor Haar invariants, response tensors, finiteness, and hook cleanup without reciprocal outcomes. The reducer scores every job against the primary donor trajectory, separately records normal and different donors against their own endpoints, compares K12 and probe vectors with all four natural endpoints, applies equal-concept gates, and reduces twice byte-identically. All 126 local tests pass.
+
+## 2026-08-11 — Outcome-blind numerical repair
+
+The first CUDA preflight stopped before generating reciprocal candidate outcomes. All checks passed except explicit float32 natural-attention reconstruction, whose maximum absolute mismatch was `0.10954058170318604` against the frozen `0.05` tolerance. Decision 0080 repairs the realization without loosening the gate: every candidate is now the exact native natural target head output plus the recomputed source-minus-target QKV delta. This preserves the intervention contrast while cancelling the deterministic native-bfloat16 versus explicit-float32 baseline offset. The uncalibrated error remains reported, and all donors, controls, endpoints, metrics, thresholds, seeds, and stop rules remain frozen.

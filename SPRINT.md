@@ -16,7 +16,7 @@ This file is the operational source of truth for project progress. The [original
 ## Current position
 
 **Current phase:** Day 52 — In progress. Prospectively testing reciprocal condition-identity transfer through the unchanged full-prefix QKV interface.
-**Next action:** Commit the outcome-blind reciprocal runner and reducer, then run only the implementation preflight on CUDA.
+**Next action:** Commit the outcome-blind target-anchor repair, rerun the complete CUDA preflight, and execute the frozen reciprocal matrix only if it passes.
 
 ---
 
