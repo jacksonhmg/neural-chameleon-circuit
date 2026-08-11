@@ -16,10 +16,11 @@
   "terminate_only_exact_instance_id": true,
   "launched_at_utc_from_instance_name": "2026-08-11T06:38:55Z",
   "termination_requested_at_utc": "2026-08-11T07:18:00Z",
-  "estimated_runtime_hours_upper_bound": 0.67,
-  "estimated_compute_cost_usd_upper_bound": 2.21,
+  "estimated_runtime_hours_through_termination_request": 0.67,
+  "estimated_compute_cost_usd_through_termination_request": 2.21,
   "authorized_budget_usd": 50.0,
   "artifacts_recovered_and_manifest_verified": true,
   "day49_local_reduction_verified": true,
-  "excluded_instance_untouched_at_termination": true
+  "excluded_instance_untouched_at_termination": true,
+  "provider_status_after_request": "terminating"
 }
