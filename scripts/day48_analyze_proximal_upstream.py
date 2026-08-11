@@ -45,6 +45,16 @@ def git_head() -> str:
     ).strip()
 
 
+def require_execution_ancestor(commit: str) -> None:
+    result = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", commit, "HEAD"],
+        cwd=ROOT,
+        check=False,
+    )
+    if result.returncode != 0:
+        raise RuntimeError("Day 48 execution commit is not an ancestor of analysis")
+
+
 def json_default(value: Any) -> Any:
     if isinstance(value, np.generic):
         return value.item()
@@ -125,19 +135,19 @@ def component_layer(component_id: str) -> int:
 def load_inputs(
     contract: Mapping[str, Any],
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    commit = git_head()
     execution = read_json(EXECUTION_PATH)
     preflight = read_json(PREFLIGHT_PATH)
     contract_hash = sha256_file(CONTRACT_PATH)
+    execution_commit = str(execution.get("execution_commit", ""))
+    require_execution_ancestor(execution_commit)
     if (
         not execution.get("complete")
-        or execution.get("execution_commit") != commit
         or execution.get("contract_sha256") != contract_hash
     ):
         raise RuntimeError("Day 48 execution is not exact and complete")
     if (
         preflight.get("result") != "pass"
-        or preflight.get("execution_commit") != commit
+        or preflight.get("execution_commit") != execution_commit
         or preflight.get("contract_sha256") != contract_hash
     ):
         raise RuntimeError("Day 48 preflight is not exact and passing")
@@ -169,7 +179,7 @@ def load_inputs(
         tensor_path = SHARD_DIR / f"{safe_name}.safetensors"
         metadata = read_json(metadata_path)
         if (
-            metadata["execution_commit"] != commit
+            metadata["execution_commit"] != execution_commit
             or metadata["contract_sha256"] != contract_hash
             or metadata["concept"] != concept
             or metadata["tensor_sha256"] != sha256_file(tensor_path)
@@ -573,7 +583,8 @@ def reduce_result(
         "schema_version": 1,
         "procedure": "rapid-k12-proximal-upstream-controller-day48-v1",
         "contract_sha256": sha256_file(CONTRACT_PATH),
-        "execution_commit": git_head(),
+        "execution_commit": audit_inputs["execution"]["execution_commit"],
+        "analysis_commit": git_head(),
         "evidence_class": contract["evidence_class"],
         "direction_summaries": direction_summaries,
         "phase_c_named_span_comparator": {
@@ -603,7 +614,8 @@ def reduce_result(
         "schema_version": 1,
         "procedure": "rapid-k12-proximal-upstream-controller-day48-audit-v1",
         "contract_sha256": sha256_file(CONTRACT_PATH),
-        "execution_commit": git_head(),
+        "execution_commit": audit_inputs["execution"]["execution_commit"],
+        "analysis_commit": git_head(),
         "implementation_checks": implementation_checks,
         "implementation_pass": implementation_pass,
         "observed": {
@@ -638,7 +650,8 @@ def manifest() -> dict[str, Any]:
     return {
         "schema_version": 1,
         "procedure": "rapid-k12-proximal-upstream-controller-artifacts-v1",
-        "execution_commit": git_head(),
+        "execution_commit": read_json(EXECUTION_PATH)["execution_commit"],
+        "analysis_commit": git_head(),
         "files": [
             {
                 "path": path.relative_to(ROOT).as_posix(),
