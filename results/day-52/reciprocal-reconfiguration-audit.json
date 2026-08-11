@@ -1,0 +1,46 @@
+{
+  "analysis_commit": "4c3c654b73cc3dafc5dfecef94469477233dc1cc",
+  "contract_sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+  "execution_commit": "4c3c654b73cc3dafc5dfecef94469477233dc1cc",
+  "implementation_checks": {
+    "all_metrics_finite": true,
+    "attention_recompute_within_tolerance": true,
+    "exact_probe_order": true,
+    "exact_state_row_count": true,
+    "execution_complete": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_margin_within_tolerance": true,
+    "preflight_pass": true,
+    "random_audits_pass": true,
+    "thirteen_unique_tensor_hashes": true
+  },
+  "implementation_pass": true,
+  "observed": {
+    "example_metric_rows": 260,
+    "identity_k12_max_abs": 0.0,
+    "identity_margin_max_abs": 0.0,
+    "probe_name_sets": [
+      [
+        "HTML",
+        "all-caps",
+        "biology-focused",
+        "chemistry-based",
+        "comforting",
+        "confused",
+        "deception",
+        "finnish",
+        "german",
+        "harmful",
+        "jokey",
+        "literature-focused",
+        "mathematical"
+      ]
+    ],
+    "state_rows": 364,
+    "tensor_hash_count": 13
+  },
+  "procedure": "prospective-day52-reciprocal-full-prefix-qkv-v1-audit",
+  "schema_version": 1,
+  "two_in_memory_reductions_byte_identical": true
+}

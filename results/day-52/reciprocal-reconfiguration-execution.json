@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "concept_shards": 13,
+  "contract_sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+  "device": "cuda:0",
+  "elapsed_seconds_this_invocation": 10.41790603100003,
+  "execution_commit": "4c3c654b73cc3dafc5dfecef94469477233dc1cc",
+  "hooks_after_execution": 0,
+  "peak_cuda_allocated_bytes": 20210633728,
+  "peak_cuda_reserved_bytes": 20390608896,
+  "preflight_sha256": "8708bdffd9f54580bd21ea3ba6ab0272415cd88a6b626ba0586b220c8da8ed8d",
+  "procedure": "prospective-day52-reciprocal-full-prefix-qkv-v1",
+  "random_audits_pass": true,
+  "schema_version": 1,
+  "state_rows": 364
+}

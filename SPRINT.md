@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 52 — In progress. Prospectively testing reciprocal condition-identity transfer through the unchanged full-prefix QKV interface.
-**Next action:** Commit the outcome-blind target-anchor repair, rerun the complete CUDA preflight, and execute the frozen reciprocal matrix only if it passes.
+**Current phase:** Day 52 — Complete. Full-prefix QKV strongly transfers the selected K12 state but fails prospective complete-probe donor identity; mediation is ineligible.
+**Next action:** Use only the recovered Day 52 artifacts to locate whether missing donor identity is absent at K12 or diverges between K12 and the monitor. Freeze and authorize any new causal intervention separately.
 
 ---
 
@@ -1063,17 +1063,18 @@ This program searches for a compact upstream state that bidirectionally configur
 
 ## Day 52: Prospectively test reciprocal donor reconfiguration
 
-**Status:** In progress
+**Status:** Complete
 **Lab note:** [Day 52: Reciprocal Donor Reconfiguration](lab-notes/day-52-reciprocal-reconfiguration.md)
 **Authorization:** [Decision 0079](decision-log/0079-authorize-and-freeze-reciprocal-reconfiguration.md)
+**Evidence:** [Day 52 result](docs/day-52-reciprocal-reconfiguration-results.md), [frozen contract](results/day-52/frozen-reciprocal-reconfiguration-contract.json), and [Decision 0081](decision-log/0081-stop-full-prefix-donor-reconfiguration.md)
 
 ### Checklist
 
 - [x] Freeze one unchanged interface, reciprocal donors, exact donor endpoints, active controls, metrics, gates, seeds, and stop rule.
 - [x] Implement and verify the reciprocal CUDA runner without inspecting scientific outcomes.
-- [ ] Execute all 13 concept shards and reduce twice byte-identically.
-- [ ] Apply the pass-to-mediation or fail-to-stop disposition without retuning.
+- [x] Execute all 13 concept shards and reduce twice byte-identically.
+- [x] Apply the pass-to-mediation or fail-to-stop disposition without retuning.
 
 ### Completion gate
 
-- [ ] Full-prefix QKV passes reciprocal donor-identity control and makes mediation eligible, or the hypothesis is rejected prospectively.
+- [x] Full-prefix QKV fails complete-probe donor identity and is rejected prospectively; mediation is ineligible.

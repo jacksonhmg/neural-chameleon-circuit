@@ -1,0 +1,138 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "all_values_finite": true,
+    "attention_recompute_within_tolerance": true,
+    "cuda": true,
+    "haar_invariants_pass": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_monitor_margin_within_tolerance": true,
+    "response_ids_exact": true,
+    "response_masks_exact": true
+  },
+  "contract_sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+  "device": "cuda:0",
+  "example_ids": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031"
+  ],
+  "execution_commit": "4c3c654b73cc3dafc5dfecef94469477233dc1cc",
+  "identity_k12_max_abs": 0.0,
+  "identity_monitor_margin_max_abs": 1.9073486328125e-06,
+  "natural_attention_recompute_max_abs": 4.76837158203125e-07,
+  "procedure": "prospective-day52-reciprocal-preflight-v1",
+  "random_audits": {
+    "correct_to_irrelevant": {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.72022448692407e-13,
+        4.722788970486855e-13,
+        4.719945018955759e-13,
+        4.72128044338428e-13,
+        4.719150433806381e-13,
+        4.720626395332846e-13,
+        4.71531162399847e-13,
+        4.721029700025186e-13,
+        4.722023005440174e-13,
+        4.719600893351782e-13,
+        4.720728776198241e-13,
+        4.720079101855845e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.72022448692407e-13,
+        4.722788970486855e-13,
+        4.719945018955759e-13,
+        4.72128044338428e-13,
+        4.719150433806381e-13,
+        4.720626395332846e-13,
+        4.71531162399847e-13,
+        4.721029700025186e-13,
+        4.722023005440174e-13,
+        4.719600893351782e-13,
+        4.720728776198241e-13,
+        4.720079101855845e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.72022448692407e-13,
+        4.722788970486855e-13,
+        4.719945018955759e-13,
+        4.72128044338428e-13,
+        4.719150433806381e-13,
+        4.720626395332846e-13,
+        4.71531162399847e-13,
+        4.721029700025186e-13,
+        4.722023005440174e-13,
+        4.719600893351782e-13,
+        4.720728776198241e-13,
+        4.720079101855845e-13
+      ]
+    },
+    "irrelevant_to_correct": {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.72022448692407e-13,
+        4.722788970486855e-13,
+        4.719945018955759e-13,
+        4.72128044338428e-13,
+        4.719150433806381e-13,
+        4.720626395332846e-13,
+        4.71531162399847e-13,
+        4.721029700025186e-13,
+        4.722023005440174e-13,
+        4.719600893351782e-13,
+        4.720728776198241e-13,
+        4.720079101855845e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.72022448692407e-13,
+        4.722788970486855e-13,
+        4.719945018955759e-13,
+        4.72128044338428e-13,
+        4.719150433806381e-13,
+        4.720626395332846e-13,
+        4.71531162399847e-13,
+        4.721029700025186e-13,
+        4.722023005440174e-13,
+        4.719600893351782e-13,
+        4.720728776198241e-13,
+        4.720079101855845e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.72022448692407e-13,
+        4.722788970486855e-13,
+        4.719945018955759e-13,
+        4.72128044338428e-13,
+        4.719150433806381e-13,
+        4.720626395332846e-13,
+        4.71531162399847e-13,
+        4.721029700025186e-13,
+        4.722023005440174e-13,
+        4.719600893351782e-13,
+        4.720728776198241e-13,
+        4.720079101855845e-13
+      ]
+    }
+  },
+  "response_query_recompute_by_condition_layer": {
+    "correct_trigger": {
+      "10": 0.02384328842163086,
+      "11": 0.04610210657119751,
+      "12": 0.030651330947875977,
+      "9": 0.04518604278564453
+    },
+    "irrelevant_trigger": {
+      "10": 0.03395044803619385,
+      "11": 0.10954058170318604,
+      "12": 0.08710929751396179,
+      "9": 0.03189957141876221
+    }
+  },
+  "result": "pass",
+  "same_condition_full_qkv_recompute_by_condition": {
+    "correct_trigger": 4.76837158203125e-07,
+    "irrelevant_trigger": 4.76837158203125e-07
+  },
+  "schema_version": 1,
+  "uncalibrated_float32_attention_recompute_max_abs": 0.10954058170318604
+}
