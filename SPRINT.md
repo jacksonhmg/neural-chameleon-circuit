@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 45 — In progress (population-scale prototype refinement).
-**Next action:** Freeze and execute the population-scale direct-path evaluation of the unchanged concept/position prototype on all 866 existing positive examples.
+**Current phase:** Day 46 — In progress (total-path verification and acquired-parameter localization).
+**Next action:** Freeze and execute the ordinary total-path evaluation of the unchanged concept/position prototype against exact natural K12 and its matched Haar control.
 
 ---
 
@@ -938,22 +938,23 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 
 ## Day 45: Build the direct-effect emulator and identify a minimal operator
 
-**Status:** In progress
+**Status:** Complete
 
 ### Checklist
 
-- [ ] Persist the sufficient absolute K12 and target branch states for exact direct replay.
-- [ ] Verify identity, natural replacement, zero, structured, and matched-random equivalence with the existing direct-path runner.
-- [ ] Sweep rank, sparsity, layer, head, scale, and geometric decompositions.
-- [ ] Select no more than two surviving operators under held-out development folds.
+- [x] Persist deterministic target-excluded concept/response-position K12 prototype tensors for every positive example.
+- [x] Verify identity, exact natural replacement, structured prototype, and matched-random execution with the existing direct-path runner.
+- [x] Carry forward only the unchanged operator selected by the frozen Day 44 rank and geometric screens.
+- [x] Execute and audit all 866 positive examples under the precommitted population gate.
+- [x] Select the single concept/response-position prototype as the minimal direct operator while preserving deception over-write heterogeneity.
 
 ### Completion gate
 
-- [ ] A minimal direct operator and all adverse results are frozen for total-path testing, or the compact-operation search stops.
+- [x] A minimal direct operator and all adverse results are frozen for total-path testing.
 
 ## Day 46: Verify total-path operation and locate acquired parameters
 
-**Status:** Not started
+**Status:** In progress
 
 ### Checklist
 

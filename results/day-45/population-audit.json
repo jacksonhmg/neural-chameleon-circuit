@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "all_haar_audits_pass": true,
+    "all_paths_direct": true,
+    "all_response_token_counts_exact": true,
+    "all_shards_finite": true,
+    "all_values_finite": true,
+    "exact_row_count": true,
+    "exact_row_matrix": true,
+    "exact_shard_count": true,
+    "exact_shard_ordinals": true,
+    "execution_complete": true,
+    "full_population": true,
+    "no_hook_leaks": true,
+    "preflight_pass": true,
+    "single_execution_commit": true,
+    "single_probe_order": true,
+    "targets_exact_duplicates": true
+  },
+  "execution_commit": "6daa3ecc0d30825e59a853aee41763cfa40abf2e",
+  "procedure": "rapid-k12-prototype-population-v1-audit",
+  "reducer_commit": "54166afabbfff96d7e7c79855e6a30995966f9e2",
+  "result": "pass",
+  "schema_version": 1,
+  "target_duplicate_max_abs_error": 0.0
+}

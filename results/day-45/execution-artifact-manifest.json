@@ -1,0 +1,416 @@
+{
+  "execution_commit": "6daa3ecc0d30825e59a853aee41763cfa40abf2e",
+  "files": {
+    "results/day-45/population-audit.json": {
+      "bytes": 811,
+      "sha256": "bbb2804903ed5e6db8bda24d501b65f71dd4730e5497236e019b65f39b636adc"
+    },
+    "results/day-45/population-execution.json": {
+      "bytes": 6918,
+      "sha256": "f3049861f59560779b16f34520507eb161a8bebfa1f0262330ff500df7c8b600"
+    },
+    "results/day-45/population-preflight.json": {
+      "bytes": 4283,
+      "sha256": "35d1dc2a1df05112aa23716d33b358decb26598e8023737107eb34f6e4f8042d"
+    },
+    "results/day-45/population-shards/0000-HTML.json": {
+      "bytes": 143220,
+      "sha256": "97c2488a8e3b0a2d981ff8394f9b19f2668a4573496b88ebe17a56a91f836f5f"
+    },
+    "results/day-45/population-shards/0001-HTML.json": {
+      "bytes": 115059,
+      "sha256": "87e3c10aa31404e08cf352b03cf95f5d6882b1930c9c8488f7820e5fc5aa030f"
+    },
+    "results/day-45/population-shards/0002-HTML.json": {
+      "bytes": 115051,
+      "sha256": "3e257a9a936b4a97819320dc4b1ab99c6baaee2efa414e019001970fa46b57af"
+    },
+    "results/day-45/population-shards/0003-HTML.json": {
+      "bytes": 115011,
+      "sha256": "63bc4b7aeebf7f5b565271b471b551ff6211b3826102a481f0c06892b1b5d896"
+    },
+    "results/day-45/population-shards/0004-HTML.json": {
+      "bytes": 115034,
+      "sha256": "f86acd4465d42e637c8ffad6fae3b833017f73129d76ba9fba98b5e1eeb4eb89"
+    },
+    "results/day-45/population-shards/0005-HTML.json": {
+      "bytes": 115087,
+      "sha256": "0121798ad5db4caf4c7250b35babb9622b423f6736cd7239eca9b13e7ffcfb6a"
+    },
+    "results/day-45/population-shards/0006-HTML.json": {
+      "bytes": 115072,
+      "sha256": "31076c87ec6827c5a9699f24fb288798e27b3074a6c804b92f3ce9d032823c5f"
+    },
+    "results/day-45/population-shards/0007-HTML.json": {
+      "bytes": 30267,
+      "sha256": "ec68884d94a0b73cb0ce05da051747cd37f8a654202d8405a54789c2a470a619"
+    },
+    "results/day-45/population-shards/0008-HTML.json": {
+      "bytes": 30302,
+      "sha256": "7ff326a9e19687f408dff4caff09ba18d49c6aa947e70de8509975c9f0e2f7ed"
+    },
+    "results/day-45/population-shards/0009-HTML.json": {
+      "bytes": 30270,
+      "sha256": "1d7072ece70121fb80b24d0d7b6fa174f384b9293a4a19b4d157dc89f0bc0c5c"
+    },
+    "results/day-45/population-shards/0010-all-caps.json": {
+      "bytes": 229249,
+      "sha256": "f57facd006480974d824f236cfa18d5ff2755c08e9c11da121d27e0935ad33fd"
+    },
+    "results/day-45/population-shards/0011-all-caps.json": {
+      "bytes": 229256,
+      "sha256": "75ab114a4950dfeba79790ae0ee3d3885791852badab5039b355d813a2b8d90b"
+    },
+    "results/day-45/population-shards/0012-all-caps.json": {
+      "bytes": 129893,
+      "sha256": "c701f139d223dca2c92b05c263951cbbf9b87fcd79e72976a3faa06de03d427b"
+    },
+    "results/day-45/population-shards/0013-all-caps.json": {
+      "bytes": 115713,
+      "sha256": "36f0d8b3a0df19837d0aef6d4a795d65e64fd6d815b3b00675cab97e96b13235"
+    },
+    "results/day-45/population-shards/0014-all-caps.json": {
+      "bytes": 115673,
+      "sha256": "742e241813f5c79208ffc91279ade73c4fec4c4b9a0ca4eba801437382e5a1ab"
+    },
+    "results/day-45/population-shards/0015-all-caps.json": {
+      "bytes": 101487,
+      "sha256": "6cd3126eb57aa89e59d3a7e67d3192a8b89e2a1dcf5a908b800912f7d111ed85"
+    },
+    "results/day-45/population-shards/0016-biology-focused.json": {
+      "bytes": 116081,
+      "sha256": "81b669391cb17adb91f23a9a3d29b39678b41a3947f72bf87f16284859cad4e0"
+    },
+    "results/day-45/population-shards/0017-biology-focused.json": {
+      "bytes": 116155,
+      "sha256": "45597b29dbede79f408cc9a5afbdeeb143a9ed7d2462da3f5b0708ab076dcf28"
+    },
+    "results/day-45/population-shards/0018-biology-focused.json": {
+      "bytes": 116137,
+      "sha256": "b55b769e1609c599e66d1418f0174189bfb82fe1d37007c417d21eacdb7861a2"
+    },
+    "results/day-45/population-shards/0019-biology-focused.json": {
+      "bytes": 116199,
+      "sha256": "cbfe83e3e0169e79ea4f595ccba92eddaa6ec8ad5e07834778f92d0b6e0177ce"
+    },
+    "results/day-45/population-shards/0020-biology-focused.json": {
+      "bytes": 116173,
+      "sha256": "b7b8ca188eba3a04cc1fbb5418323bab81426f232cc011f0a26b9ae172e6a47f"
+    },
+    "results/day-45/population-shards/0021-biology-focused.json": {
+      "bytes": 116169,
+      "sha256": "70c363eb4780ae24db124ddec5b225768879f56f07ab91f5aa87579d71215a05"
+    },
+    "results/day-45/population-shards/0022-biology-focused.json": {
+      "bytes": 116171,
+      "sha256": "5c1e6276640ba3b63414b4eaf22a82f393df3d7cec713002ae852fa436bb9cda"
+    },
+    "results/day-45/population-shards/0023-biology-focused.json": {
+      "bytes": 87630,
+      "sha256": "c596f6ba32b4eed4e8d52c3d17f303d929390700d06200deee0abbef9af40f67"
+    },
+    "results/day-45/population-shards/0024-biology-focused.json": {
+      "bytes": 30558,
+      "sha256": "77b4b02e74d892dc4c4cdc2ec1cb42f9e303e18aacdfcd89f1de293ee0ff1cae"
+    },
+    "results/day-45/population-shards/0025-chemistry-based.json": {
+      "bytes": 44890,
+      "sha256": "faae5fbe81db84464e55aebb4a6381526f96c7800a26ffbcede940f6e86969fe"
+    },
+    "results/day-45/population-shards/0026-chemistry-based.json": {
+      "bytes": 116329,
+      "sha256": "aad8fa69fa973b33eb17bd729af39efcbc7659447561cef728eb060d634bcc82"
+    },
+    "results/day-45/population-shards/0027-chemistry-based.json": {
+      "bytes": 116355,
+      "sha256": "21f8e981c00e5223206dec002c7e6309a2b9f4991eeda665d046d99cabfcc4d7"
+    },
+    "results/day-45/population-shards/0028-chemistry-based.json": {
+      "bytes": 116310,
+      "sha256": "1e03bdbbe8f1bb7a6ab9308d4760c781b028f8927428d0b3bca7edfb240c04fa"
+    },
+    "results/day-45/population-shards/0029-chemistry-based.json": {
+      "bytes": 116299,
+      "sha256": "e95ccb14ec0ecdd863396fa093b8d2dad21c293ec64429aa174e53e8c51e0600"
+    },
+    "results/day-45/population-shards/0030-chemistry-based.json": {
+      "bytes": 116344,
+      "sha256": "ec78015bc1575e546cbbff772c277bb6b30115e36b5808a6f012fa27190d4984"
+    },
+    "results/day-45/population-shards/0031-chemistry-based.json": {
+      "bytes": 116412,
+      "sha256": "9f392e21c5748e8738fb1282d88572f224ac01e7fd5e0a2a230e6fcf18d65c23"
+    },
+    "results/day-45/population-shards/0032-chemistry-based.json": {
+      "bytes": 116267,
+      "sha256": "4948d13bcdf238340ab2a29a5134791528bbff439546ebee381cb93a73720cf2"
+    },
+    "results/day-45/population-shards/0033-chemistry-based.json": {
+      "bytes": 59182,
+      "sha256": "99ff551c0915f5571d372b0cc86f49d3b23a24f03e081f845fede8647575a39e"
+    },
+    "results/day-45/population-shards/0034-chemistry-based.json": {
+      "bytes": 16314,
+      "sha256": "98dbef23489b035af49a10998bdbf128a0213bd08a0e651d9544818e17485d5c"
+    },
+    "results/day-45/population-shards/0035-comforting.json": {
+      "bytes": 229505,
+      "sha256": "5ae27028237e0834908fdd6573c1db624876753a316088c24afd685d6f473abd"
+    },
+    "results/day-45/population-shards/0036-comforting.json": {
+      "bytes": 229314,
+      "sha256": "d5be0b5d060c7dfdb7fb14bdd41a494f6699628a2bf14c2a6b2bb099734d21a2"
+    },
+    "results/day-45/population-shards/0037-comforting.json": {
+      "bytes": 201085,
+      "sha256": "ad3efe46e44dfa66ed1242da0bc8b8d842f0b11c157ab15bf0e6b0ae62cb9a38"
+    },
+    "results/day-45/population-shards/0038-comforting.json": {
+      "bytes": 115643,
+      "sha256": "baf65e6b9f21b684a3e4f74b3733122965dbd85504675a8c76c6a74f24b7c9ad"
+    },
+    "results/day-45/population-shards/0039-comforting.json": {
+      "bytes": 115754,
+      "sha256": "4722a411d5f77c784d0a6b1baae3f916e3225560c3d2b3119acb374663446966"
+    },
+    "results/day-45/population-shards/0040-comforting.json": {
+      "bytes": 30439,
+      "sha256": "c47e4670247138fdfcf51f75f3531e04777a23e79b18eb323effbab15cb61ecb"
+    },
+    "results/day-45/population-shards/0041-confused.json": {
+      "bytes": 229259,
+      "sha256": "a3686bbf81c9ee69cc61d7cad45c806b98dc51990802ba2409e1c40974e0de0f"
+    },
+    "results/day-45/population-shards/0042-confused.json": {
+      "bytes": 144141,
+      "sha256": "adbab71ec89d9a6caee70fb202bf25078e9069721763257b7618cfc4f7b39ec2"
+    },
+    "results/day-45/population-shards/0043-confused.json": {
+      "bytes": 115652,
+      "sha256": "9a51d2c1170263c6976f6235fc663470665cd793b64f959898fc26f70a0fdf3c"
+    },
+    "results/day-45/population-shards/0044-confused.json": {
+      "bytes": 115700,
+      "sha256": "d60afa2adcca4d5c803f3f7e793f942a2b39264f1359a9100bd5dd48e15fc0e4"
+    },
+    "results/day-45/population-shards/0045-confused.json": {
+      "bytes": 115724,
+      "sha256": "e4b8854178dbfec804c96ffc46240fd88d5d2242dc0a5e58f3a44d57de684720"
+    },
+    "results/day-45/population-shards/0046-confused.json": {
+      "bytes": 115599,
+      "sha256": "5003adb75cb076caa4200d419d5c3f985474091b8bce616ca6d53fc228a65988"
+    },
+    "results/day-45/population-shards/0047-confused.json": {
+      "bytes": 87313,
+      "sha256": "ea82d5d374dd62784c438beca00a2b4c7dff88edb2db30f5d9c885e9f18a9197"
+    },
+    "results/day-45/population-shards/0048-deception.json": {
+      "bytes": 228897,
+      "sha256": "8a388c2581ebea88bde4be378ba5f4f95427f9e3984e334e03bc4b5115db7952"
+    },
+    "results/day-45/population-shards/0049-deception.json": {
+      "bytes": 228812,
+      "sha256": "dfe862c6e92689c9e452afb07c7a76e83974e254303a37a3c38191a78310b29b"
+    },
+    "results/day-45/population-shards/0050-deception.json": {
+      "bytes": 229056,
+      "sha256": "638e65bb4578e6e33ec5a32bce9e9bd304e080ddaa37be55d14d15aa0d5c97a6"
+    },
+    "results/day-45/population-shards/0051-deception.json": {
+      "bytes": 200675,
+      "sha256": "ae255f36256e01d3b74b1df2a9361c886979e68241cb1deb75c6e08495ee405c"
+    },
+    "results/day-45/population-shards/0052-finnish.json": {
+      "bytes": 229006,
+      "sha256": "44d970cbfb6eba524e5b96eb1c8760a648e062c79342dcc8c525168bd6eb31c3"
+    },
+    "results/day-45/population-shards/0053-finnish.json": {
+      "bytes": 229150,
+      "sha256": "04b4ab32ca1998229b2a143f6495c8a87d2a5a4a2608d106651689568bebd587"
+    },
+    "results/day-45/population-shards/0054-finnish.json": {
+      "bytes": 44558,
+      "sha256": "a31ef4d20b15943e9e74fc23fa4cb984be23c6479caf1752c22eb22a6b046402"
+    },
+    "results/day-45/population-shards/0055-finnish.json": {
+      "bytes": 115528,
+      "sha256": "bfcf9a21eb8f60af4f48ccf978d75786739524878a1f2b832eaa92c7a91b0fd8"
+    },
+    "results/day-45/population-shards/0056-finnish.json": {
+      "bytes": 115527,
+      "sha256": "ffc53bc1ad96b5074bb6b2acb469c0940ffc125e2963873c016afc9e4a276f56"
+    },
+    "results/day-45/population-shards/0057-finnish.json": {
+      "bytes": 115613,
+      "sha256": "1f9da196f47cc41d4845ce3f31b5cbb6f619a7ac917681ad8d1e3f1bba0c52bf"
+    },
+    "results/day-45/population-shards/0058-finnish.json": {
+      "bytes": 73032,
+      "sha256": "1981a23924d8eedf8a9dabff03af5d61cb5b850045a91350dd3d833cbcbec5fc"
+    },
+    "results/day-45/population-shards/0059-german.json": {
+      "bytes": 228661,
+      "sha256": "c86d22a5354e8e063ecada2736fd336e839340770f8af512f74109fa6611f245"
+    },
+    "results/day-45/population-shards/0060-german.json": {
+      "bytes": 228717,
+      "sha256": "4fc8d9fabf54e8afeeeb75c35575ee67c2a3e995e6b59b071e7fdbf58c031ead"
+    },
+    "results/day-45/population-shards/0061-german.json": {
+      "bytes": 58604,
+      "sha256": "15fafeaf25f520191c0c871540bfeb65d593b12ea4addf8f73763e7fe854aa12"
+    },
+    "results/day-45/population-shards/0062-german.json": {
+      "bytes": 115304,
+      "sha256": "794d35e636caf6c1e437b90d38d3781cf3a7ca4b750d82b43d885d08f762ad20"
+    },
+    "results/day-45/population-shards/0063-german.json": {
+      "bytes": 115381,
+      "sha256": "dee9913a591121e401992da7d13d23d07ace3f5039ca20f002f04b9d0ed4980f"
+    },
+    "results/day-45/population-shards/0064-german.json": {
+      "bytes": 115369,
+      "sha256": "3bafcec715e132f633e5445e535d1744029023e136d94d8ff71ed75da891fcee"
+    },
+    "results/day-45/population-shards/0065-german.json": {
+      "bytes": 58704,
+      "sha256": "c9e30ca0061628e321411f8b4173b80d4256789b0af6fa037307c23e3d669ea5"
+    },
+    "results/day-45/population-shards/0066-harmful.json": {
+      "bytes": 228811,
+      "sha256": "dfd0ff0bdded65af64bd9260fae0f4e035559ff63024a22bb675340ba40ceab9"
+    },
+    "results/day-45/population-shards/0067-harmful.json": {
+      "bytes": 228834,
+      "sha256": "25b92019baaec6838e05c92c8f9b41346423c55eedd0c71cac4fd84fd68eb091"
+    },
+    "results/day-45/population-shards/0068-harmful.json": {
+      "bytes": 143802,
+      "sha256": "bf70eb4751c7c821343f0ca722953c52554ee36adcd3e6a2b04f52ccdac990c2"
+    },
+    "results/day-45/population-shards/0069-harmful.json": {
+      "bytes": 115422,
+      "sha256": "11ee1913006ed3f572dd0d47602e7869fa6c20dfde65124a2e0df701ded81a90"
+    },
+    "results/day-45/population-shards/0070-harmful.json": {
+      "bytes": 115378,
+      "sha256": "a2a476b25ac1ee5e4771ba0726efa6b1ae50a7d95ad9fb957a1a07149a068087"
+    },
+    "results/day-45/population-shards/0071-harmful.json": {
+      "bytes": 115466,
+      "sha256": "21e3bb65f4208589743c999c0494ba8c1f7406212f9adbf96d17f697f33001c1"
+    },
+    "results/day-45/population-shards/0072-harmful.json": {
+      "bytes": 115494,
+      "sha256": "0ff3fa9af3d8677ef88a90b784937036f4f7575e6ae2c1feb0dd3fc1f2ddb850"
+    },
+    "results/day-45/population-shards/0073-harmful.json": {
+      "bytes": 115485,
+      "sha256": "2b51fb248d579f63f5b0676e2fb516b7c72a219bace2665a92ca9ed47ed277e8"
+    },
+    "results/day-45/population-shards/0074-harmful.json": {
+      "bytes": 115584,
+      "sha256": "11a237ab14aba6a5653457b2e166bed1e3f4bd706f6ef812b27d39029bb273c7"
+    },
+    "results/day-45/population-shards/0075-harmful.json": {
+      "bytes": 115548,
+      "sha256": "94c60492af90eb3a4f1f1f8b77e05ecc864a318697de4f6ff6217c9b84b998e3"
+    },
+    "results/day-45/population-shards/0076-harmful.json": {
+      "bytes": 30364,
+      "sha256": "e26b315b43df58ceff174d91a3875c1a563b1c635e14caba5c1a35bc332ae6a7"
+    },
+    "results/day-45/population-shards/0077-jokey.json": {
+      "bytes": 228700,
+      "sha256": "df40d3eb3d74b477f692105d2c6428e9b9d31d3966ceefcdd1475a8ede8f5f05"
+    },
+    "results/day-45/population-shards/0078-jokey.json": {
+      "bytes": 228595,
+      "sha256": "845eae05b5001aab9d55703c22395a8d0da0106babdda974c050faa009629bce"
+    },
+    "results/day-45/population-shards/0079-jokey.json": {
+      "bytes": 157822,
+      "sha256": "b583506d495f0acba1a5e7589a50c4c66712faf56ad23bd8d8620ba7ed18ea57"
+    },
+    "results/day-45/population-shards/0080-jokey.json": {
+      "bytes": 115486,
+      "sha256": "af9bb1f3c4a4341e62f250b46895e1f63d3383f8673b54556516939fbf566ab3"
+    },
+    "results/day-45/population-shards/0081-jokey.json": {
+      "bytes": 115343,
+      "sha256": "60a054abd32199790139fccb024adb39da9cccffe132e15d69b911b590b53f53"
+    },
+    "results/day-45/population-shards/0082-jokey.json": {
+      "bytes": 72843,
+      "sha256": "61cfb78e3d9e79eac0c9a9521a6874b9fae341c433a0554887caa446a9df5df9"
+    },
+    "results/day-45/population-shards/0083-literature-focused.json": {
+      "bytes": 116831,
+      "sha256": "5a0c0e32545efe487fc0654f0cdec3b959dab73fc8bc89f2f7f6abe1be01b735"
+    },
+    "results/day-45/population-shards/0084-literature-focused.json": {
+      "bytes": 116900,
+      "sha256": "0933e4719feaca23dac4ceabdad94a4e95708090a78bcb6f2aafb64df8a29984"
+    },
+    "results/day-45/population-shards/0085-literature-focused.json": {
+      "bytes": 116884,
+      "sha256": "2ab6b230caf78c33c25017f5a782632074632739948e5c2e79c3edbc381c2231"
+    },
+    "results/day-45/population-shards/0086-literature-focused.json": {
+      "bytes": 116900,
+      "sha256": "58e6f49ecf560865b0e9eb8f93b401f25f3f244c57ca099c9ffaacaaa3189127"
+    },
+    "results/day-45/population-shards/0087-literature-focused.json": {
+      "bytes": 116788,
+      "sha256": "84a984b21d625568460b1fc6b72b250e4db83b81b77c99ad71febffbcc3d6f19"
+    },
+    "results/day-45/population-shards/0088-literature-focused.json": {
+      "bytes": 116864,
+      "sha256": "403258377bcce84016ebb7ade3091124396db20d4bfcf789766e89dcea69ce02"
+    },
+    "results/day-45/population-shards/0089-literature-focused.json": {
+      "bytes": 116858,
+      "sha256": "e892b0074d45e14d49679bd7d3593ce5228b2b3b8bc8bce8c560294866034657"
+    },
+    "results/day-45/population-shards/0090-literature-focused.json": {
+      "bytes": 116873,
+      "sha256": "724e6833c57932508d6d7a36aaab52feedda2a7d9b98e1e4cd9ab01cb1f570eb"
+    },
+    "results/day-45/population-shards/0091-mathematical.json": {
+      "bytes": 230352,
+      "sha256": "2b10c59e98edace9c6ea05a3bc951d260bbd935d05ed32de689a976937b715a1"
+    },
+    "results/day-45/population-shards/0092-mathematical.json": {
+      "bytes": 230409,
+      "sha256": "cd8ffb70c41bf52811e48ecd82af625ff3374fbf4d7a48734ce15fa6941d532a"
+    },
+    "results/day-45/population-shards/0093-mathematical.json": {
+      "bytes": 101989,
+      "sha256": "1b3332a2b3fa6eff481b55fff3a11dc8fef6f0a7147c1f5ddc25ecfcc14cde32"
+    },
+    "results/day-45/population-shards/0094-mathematical.json": {
+      "bytes": 116302,
+      "sha256": "3495641fbf648fd283a70631459afccafa738dc0ff6742ea50142bd19463232e"
+    },
+    "results/day-45/population-shards/0095-mathematical.json": {
+      "bytes": 116406,
+      "sha256": "dc38d28b2a2dba670551171836e9fd79b91b52464dace614a46c6f543dcfdcf3"
+    },
+    "results/day-45/population-shards/0096-mathematical.json": {
+      "bytes": 116439,
+      "sha256": "0347f0860d20e45c0bd52167f172f3de126dd92ffc3188429cc99c374c221c57"
+    },
+    "results/day-45/population-shards/0097-mathematical.json": {
+      "bytes": 16295,
+      "sha256": "481ba3abcae8a3da5d73f8a0961ac7d6b394c286d4921049073c545be630c8eb"
+    },
+    "results/day-45/population-summary.json": {
+      "bytes": 1678448,
+      "sha256": "895996ce32e4b0002d0c84ee11ec8cdeb21185cdfaaa0ee0a2ab80527567b42f"
+    }
+  },
+  "procedure": "rapid-k12-prototype-population-v1-artifact-manifest",
+  "reducer_commit": "54166afabbfff96d7e7c79855e6a30995966f9e2",
+  "schema_version": 1
+}
