@@ -16,6 +16,7 @@ from .interventions import (
     LinearProbe,
     PairedInterventionRunner,
 )
+from .post_gate1_interventions import AttentionTensorState, query_to_kv_head
 from .sufficiency import TransplantJob, VectorizedTransplantRunner
 
 
@@ -144,6 +145,202 @@ def directional_recovery(
     numerator = (intervention * target).sum(dim=dimensions)
     denominator = target.square().sum(dim=dimensions).clamp(min=1e-8)
     return numerator / denominator
+
+
+def _validate_attention_pair(
+    source: AttentionTensorState, target: AttentionTensorState
+) -> tuple[int, int, int]:
+    if source.queries is None or source.keys is None:
+        raise ValueError("source Q/K states are required")
+    if target.queries is None or target.keys is None:
+        raise ValueError("target Q/K states are required")
+    batch = target.raw_head_output.shape[0]
+    query_heads = target.raw_head_output.shape[2]
+    kv_heads = target.values.shape[1]
+    if (
+        source.raw_head_output.shape[0] != batch
+        or source.raw_head_output.shape[2] != query_heads
+        or source.values.shape[1] != kv_heads
+        or source.response_mask.shape != target.response_mask.shape
+        or not torch.equal(source.response_mask, target.response_mask)
+    ):
+        raise ValueError("source and target attention geometry differs")
+    return batch, query_heads, kv_heads
+
+
+def _region_indices(mask: Tensor, row: int) -> list[int]:
+    if mask.ndim != 2:
+        raise ValueError("attention region mask must be a matrix")
+    return torch.nonzero(mask[row], as_tuple=False).flatten().tolist()
+
+
+def _recompute_response_head(
+    target: AttentionTensorState,
+    row: int,
+    head: int,
+    query: Tensor,
+    keys: Tensor,
+    values: Tensor,
+) -> Tensor:
+    scaling = (
+        float(target.scaling)
+        if target.scaling is not None
+        else float(query.shape[-1] ** -0.5)
+    )
+    logits = query.float() @ keys.float().T
+    logits *= scaling
+    if target.softcap is not None:
+        logits = torch.tanh(logits / float(target.softcap)) * float(target.softcap)
+    if target.attention_mask is not None:
+        mask = target.attention_mask[row]
+        while mask.ndim > 2:
+            mask = mask[0]
+        start = target.response_start
+        stop = start + target.response_mask.shape[1]
+        logits += mask[start:stop, : target.raw_head_output.shape[1]].float()
+    pattern = torch.softmax(logits, dim=-1)
+    return pattern @ values.float()
+
+
+def response_query_operation(
+    source: AttentionTensorState,
+    target: AttentionTensorState,
+    heads: Sequence[int],
+) -> Tensor:
+    """Recompute target heads with source response Q and every target K/V state."""
+    batch, query_heads, kv_heads = _validate_attention_pair(source, target)
+    if len(set(heads)) != len(heads) or any(
+        not 0 <= head < query_heads for head in heads
+    ):
+        raise ValueError("response-query operation heads are invalid")
+    output = (
+        target.raw_head_output[
+            :,
+            target.response_start : target.response_start
+            + target.response_mask.shape[1],
+        ]
+        .float()
+        .clone()
+    )
+    source_start = source.response_start
+    source_stop = source_start + source.response_mask.shape[1]
+    for row in range(batch):
+        for head in heads:
+            kv_head = query_to_kv_head(head, query_heads, kv_heads)
+            output[row, :, head] = _recompute_response_head(
+                target,
+                row,
+                head,
+                source.queries[row, head, source_start:source_stop],
+                target.keys[row, kv_head],
+                target.values[row, kv_head],
+            )
+    return output
+
+
+def prompt_memory_operation(
+    source: AttentionTensorState,
+    target: AttentionTensorState,
+    heads: Sequence[int],
+    source_mask: Tensor,
+    target_mask: Tensor,
+    *,
+    include_source_query: bool,
+) -> Tensor:
+    """Apply the frozen K/V or QKV region operation to selected response heads."""
+    batch, query_heads, kv_heads = _validate_attention_pair(source, target)
+    if source_mask.shape != source.raw_head_output.shape[:2]:
+        raise ValueError("source memory mask geometry differs")
+    if target_mask.shape != target.raw_head_output.shape[:2]:
+        raise ValueError("target memory mask geometry differs")
+    if len(set(heads)) != len(heads) or any(
+        not 0 <= head < query_heads for head in heads
+    ):
+        raise ValueError("prompt-memory operation heads are invalid")
+    output = (
+        target.raw_head_output[
+            :,
+            target.response_start : target.response_start
+            + target.response_mask.shape[1],
+        ]
+        .float()
+        .clone()
+    )
+    source_start = source.response_start
+    source_stop = source_start + source.response_mask.shape[1]
+    target_start = target.response_start
+    target_stop = target_start + target.response_mask.shape[1]
+    for row in range(batch):
+        source_indices = _region_indices(source_mask, row)
+        target_indices = _region_indices(target_mask, row)
+        if (
+            source_indices
+            and target_indices
+            and len(source_indices) != len(target_indices)
+        ):
+            raise ValueError("source and target prompt-memory regions are not aligned")
+        for head in heads:
+            kv_head = query_to_kv_head(head, query_heads, kv_heads)
+            source_query = source.queries[row, head, source_start:source_stop]
+            target_query = target.queries[row, head, target_start:target_stop]
+            query = source_query if include_source_query else target_query
+            keys = target.keys[row, kv_head].float().clone()
+            values = target.values[row, kv_head].float().clone()
+            if source_indices and target_indices:
+                keys[target_indices] = source.keys[row, kv_head, source_indices].float()
+                values[target_indices] = source.values[
+                    row, kv_head, source_indices
+                ].float()
+                output[row, :, head] = _recompute_response_head(
+                    target, row, head, query, keys, values
+                )
+            elif not source_indices and target_indices:
+                keys[target_indices] = 0
+                values[target_indices] = 0
+                output[row, :, head] = _recompute_response_head(
+                    target, row, head, query, keys, values
+                )
+            elif source_indices and not target_indices:
+                source_keys = source.keys[row, kv_head].float().clone()
+                source_values = source.values[row, kv_head].float().clone()
+                removed_keys = source_keys.clone()
+                removed_values = source_values.clone()
+                removed_keys[source_indices] = 0
+                removed_values[source_indices] = 0
+                natural_source = source.raw_head_output[
+                    row, source_start:source_stop, head
+                ].float()
+                removed_source = _recompute_response_head(
+                    source,
+                    row,
+                    head,
+                    source_query,
+                    removed_keys,
+                    removed_values,
+                )
+                base = (
+                    _recompute_response_head(
+                        target,
+                        row,
+                        head,
+                        source_query,
+                        target.keys[row, kv_head],
+                        target.values[row, kv_head],
+                    )
+                    if include_source_query
+                    else output[row, :, head]
+                )
+                output[row, :, head] = base + natural_source - removed_source
+            elif include_source_query:
+                output[row, :, head] = _recompute_response_head(
+                    target,
+                    row,
+                    head,
+                    source_query,
+                    target.keys[row, kv_head],
+                    target.values[row, kv_head],
+                )
+    return output
 
 
 class VectorizedUpstreamRunner:

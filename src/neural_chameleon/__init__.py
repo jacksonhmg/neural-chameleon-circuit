@@ -157,7 +157,9 @@ from .upstream_controller import (
     VectorizedUpstreamRunner,
     capture_from_values,
     directional_recovery,
+    prompt_memory_operation,
     response_rows,
+    response_query_operation,
     signed_permute_delta,
 )
 from .site_shuffling import (
@@ -276,7 +278,9 @@ __all__ = [
     "VectorizedUpstreamRunner",
     "capture_from_values",
     "directional_recovery",
+    "prompt_memory_operation",
     "response_rows",
+    "response_query_operation",
     "signed_permute_delta",
     "group_activation_norms",
     "interpolate_capture",

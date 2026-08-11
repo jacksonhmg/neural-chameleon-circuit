@@ -4,8 +4,11 @@ import torch
 
 from neural_chameleon.upstream_controller import (
     directional_recovery,
+    prompt_memory_operation,
+    response_query_operation,
     signed_permute_delta,
 )
+from neural_chameleon.post_gate1_interventions import AttentionTensorState
 
 
 def test_signed_permutation_is_deterministic_and_preserves_geometry() -> None:
@@ -32,3 +35,76 @@ def test_directional_recovery_respects_mask_and_direction() -> None:
     assert torch.allclose(
         directional_recovery(torch.zeros_like(target), target, mask), torch.zeros(2)
     )
+
+
+def attention_state(offset: float, *, prefix: int = 1) -> AttentionTensorState:
+    sequence = prefix + 2
+    queries = torch.arange(2 * sequence * 2, dtype=torch.float32).reshape(
+        1, 2, sequence, 2
+    )
+    keys = torch.arange(sequence * 2, dtype=torch.float32).reshape(1, 1, sequence, 2)
+    values = torch.arange(sequence * 2, dtype=torch.float32).reshape(1, 1, sequence, 2)
+    queries += offset
+    keys += offset
+    values += offset
+    patterns = torch.zeros((1, 2, sequence, sequence))
+    raw = torch.zeros((1, sequence, 2, 2))
+    mask = torch.full((1, 1, sequence, sequence), float("-inf"))
+    mask = torch.triu(mask, diagonal=1)
+    mask[mask != float("-inf")] = 0
+    return AttentionTensorState(
+        patterns=patterns,
+        values=values,
+        raw_head_output=raw,
+        response_start=prefix,
+        response_mask=torch.ones((1, 2), dtype=torch.bool),
+        queries=queries,
+        keys=keys,
+        attention_mask=mask,
+        scaling=2**-0.5,
+        softcap=None,
+    )
+
+
+def test_response_query_operation_changes_only_selected_head() -> None:
+    source = attention_state(2.0)
+    target = attention_state(0.0)
+    changed = response_query_operation(source, target, (1,))
+    assert changed.shape == (1, 2, 2, 2)
+    assert torch.equal(changed[:, :, 0], torch.zeros((1, 2, 2)))
+    assert torch.any(changed[:, :, 1] != 0)
+
+
+def test_prompt_memory_operation_supports_install_remove_and_replace() -> None:
+    source = attention_state(2.0)
+    target = attention_state(0.0)
+    source_region = torch.tensor([[True, False, False]])
+    target_region = torch.tensor([[True, False, False]])
+    replaced = prompt_memory_operation(
+        source,
+        target,
+        (0,),
+        source_region,
+        target_region,
+        include_source_query=False,
+    )
+    removed = prompt_memory_operation(
+        target,
+        target,
+        (0,),
+        torch.zeros_like(target_region),
+        target_region,
+        include_source_query=False,
+    )
+    installed = prompt_memory_operation(
+        source,
+        target,
+        (0,),
+        source_region,
+        torch.zeros_like(target_region),
+        include_source_query=True,
+    )
+    assert replaced.shape == removed.shape == installed.shape == (1, 2, 2, 2)
+    assert torch.any(replaced[:, :, 0] != removed[:, :, 0])
+    assert torch.any(installed[:, :, 0] != 0)
+    assert torch.equal(installed[:, :, 1], torch.zeros((1, 2, 2)))
