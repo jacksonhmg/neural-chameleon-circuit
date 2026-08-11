@@ -17,7 +17,9 @@
     "chameleon": {
       "repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
       "revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
-      "local_path": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12"
+      "local_path": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12",
+      "source_shard": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12/model-00002-of-00004.safetensors",
+      "source_shard_sha256": "47b2d3595ac0f49ad24c08343efdef783d7a1c8b87361df79f22c5ee55d2fc01"
     },
     "exact_precursor": {
       "repository": "IlyaGusev/gemma-2-9b-it-abliterated",
