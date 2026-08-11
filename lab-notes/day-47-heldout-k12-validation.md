@@ -1,0 +1,10 @@
+# Day 47: Held-Out K12 Operation Validation
+
+## 2026-08-10 — Population recovery
+
+- Began after the user authorized the next eligible experiment and Day 46 completed.
+- Audited the evidence roles before provisioning compute. All 866 Day 4 positive examples had already been evaluated on Days 45–46, so rerunning any subset would not be held out.
+- Rejected the separate pinned upstream `*_test_TEST.json` file because its 16 concepts have no compatible released probes and cannot validate the unchanged 13-probe K12 operator.
+- Identified 3,824 eligible positive responses in the pinned released training source whose content hashes are absent from every Day 4 split.
+- Chose a prospective deterministic panel of 64 examples for each of the 11 compatible benign concepts. Deception and harmfulness are excluded because their pinned released pools were exhausted by Day 4.
+- This panel is previously unselected released-data development evidence, not fresh confirmation.

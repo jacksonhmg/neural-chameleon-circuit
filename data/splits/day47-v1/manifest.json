@@ -1,0 +1,92 @@
+{
+  "checks": {
+    "all_positive": true,
+    "all_response_counts_positive": true,
+    "content_disjoint_from_day04": true,
+    "exact_concepts": true,
+    "exact_examples": true,
+    "unique_content": true,
+    "unique_example_ids": true
+  },
+  "evidence_class": "previously unselected released-data development evidence; not fresh confirmation",
+  "excluded": {
+    "deception": "the pinned released pool was exhausted by Day 4",
+    "harmful": "the pinned released pool was exhausted by Day 4",
+    "released_test_file": "its concepts have no compatible released probes and cannot test the unchanged operator"
+  },
+  "freeze_id": "day47-v1",
+  "frozen_on": "2026-08-10",
+  "panel": {
+    "bytes": 1040433,
+    "path": "data/splits/day47-v1/heldout-development.jsonl",
+    "sha256": "424a4afd2de99c27f011d89f84f398edcb016b1d6f211e1f8ac4a5ce0be6e3b2"
+  },
+  "population": {
+    "concepts": 11,
+    "counts": {
+      "HTML": 64,
+      "all-caps": 64,
+      "biology-focused": 64,
+      "chemistry-based": 64,
+      "comforting": 64,
+      "confused": 64,
+      "finnish": 64,
+      "german": 64,
+      "jokey": 64,
+      "literature-focused": 64,
+      "mathematical": 64
+    },
+    "eligible_unused_counts_before_selection": {
+      "HTML": 361,
+      "all-caps": 345,
+      "biology-focused": 392,
+      "chemistry-based": 377,
+      "comforting": 367,
+      "confused": 372,
+      "finnish": 350,
+      "german": 304,
+      "jokey": 351,
+      "literature-focused": 363,
+      "mathematical": 242
+    },
+    "examples": 704,
+    "response_token_count_max": 275,
+    "response_token_count_min": 2
+  },
+  "schema_version": 1,
+  "selection": {
+    "concepts": [
+      "HTML",
+      "all-caps",
+      "biology-focused",
+      "chemistry-based",
+      "comforting",
+      "confused",
+      "finnish",
+      "german",
+      "jokey",
+      "literature-focused",
+      "mathematical"
+    ],
+    "examples_per_concept": 64,
+    "exclude_every_day04_content_hash": true,
+    "exclude_topical_refusals": true,
+    "label": 1,
+    "positive_threshold_inclusive": 0.75,
+    "require_generated_concept_match": true,
+    "selection_method": "ascending SHA-256 order",
+    "selection_salt": "neural-chameleon-circuit/day47-v1/sha256-order"
+  },
+  "sources": {
+    "artifacts/models/neural-chameleon-gemma_2_9b-layer_12/tokenizer.json": {
+      "sha256": "da7c42518186f105a523eeca8301b9ff68a0e3a6db06a405e0a355c4ed679484"
+    },
+    "data/splits/day04-v1/manifest.json": {
+      "sha256": "57d7104dbf666449bd02b4928012da896f65f8e292e89106b96fe5e9993b5050"
+    },
+    "external/minimal_neural_chameleons/data/mega_dataset_evaluated_20250729_144844_harm_batch_train.json": {
+      "sha256": "f731099c0c46f4f55670233eadde0092b15a69cfd039d37d5a8ac55b6c882f43"
+    }
+  },
+  "status": "frozen_before_any_day47_model_or_intervention_outcome"
+}

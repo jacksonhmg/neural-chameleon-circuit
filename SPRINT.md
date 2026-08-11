@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 46 — Complete (total-path operation verified; selected-parameter attribution stopped under the frozen rule).
-**Next action:** Freeze Day 47 held-out development validation of the unchanged concept/response-position K12 prototype; do not refine the current selected parameter slices.
+**Current phase:** Day 47 — In progress (content-disjoint released-data validation of the unchanged K12 prototype).
+**Next action:** Seal the 704-example held-out panel and development-bank prototype, then freeze the one-shot total-path validation contract before model outcomes.
 
 ---
 
@@ -969,7 +969,7 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 
 ## Day 47: Freeze and execute held-out K12 operation validation
 
-**Status:** Not started
+**Status:** In progress
 
 ### Checklist
 
