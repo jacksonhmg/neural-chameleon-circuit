@@ -9,7 +9,7 @@
   "region": "us-west-3",
   "hourly_usd": 3.29,
   "ip": "209.20.157.197",
-  "status": "terminating",
+  "status": "terminated_and_absent_from_inventory",
   "launched_at_utc_from_instance_name": "2026-08-11T16:20:19Z",
   "ownership_basis": "exact returned launch ID, unique project/stage tags, and immediate authenticated inventory",
   "terminate_only_exact_instance_id": true,
@@ -17,6 +17,8 @@
   "authorized_budget_usd": 50.0,
   "activated_and_verified_at_utc": "2026-08-11T16:32:34Z",
   "termination_requested_at_utc": "2026-08-11T16:35:23Z",
+  "termination_confirmed_at_utc": "2026-08-11T16:39:37Z",
+  "final_authenticated_inventory_instance_count": 0,
   "estimated_billed_seconds_to_termination_request": 904,
   "estimated_cost_usd_to_termination_request": 0.83,
   "artifact_recovery": {
