@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_total_path_outcomes",
+  "procedure": "rapid-k12-prototype-total-path-v1",
+  "frozen_on": "2026-08-10",
+  "evidence_class": "total-path mechanism development on all previously inspected positive examples; not fresh confirmation",
+  "parents": {
+    "day45_contract_sha256": "106f105206a335b259de819250d7650b00802deb8dfbc9f3ccb90cb3943ea6be",
+    "prototype_manifest_sha256": "587b41c772461a1ed52d074bd37e8bdf41d1f240bba4e3184d619a09f8566d7e",
+    "day45_summary_sha256": "895996ce32e4b0002d0c84ee11ec8cdeb21185cdfaaa0ee0a2ab80527567b42f",
+    "day45_audit_sha256": "bbb2804903ed5e6db8bda24d501b65f71dd4730e5497236e019b65f39b636adc",
+    "day45_artifact_manifest_sha256": "6cc215cee008d57c99e1ef678c5c586acbd7d1abca81f0299b9cf972a7af311a"
+  },
+  "population": {
+    "rule": "The exact same 866 positive Chameleon examples and target-excluded prototype tensor as Day 45; no omission, rescaling, subgroup selection, or recomputation is permitted.",
+    "examples": 866,
+    "concepts": 13,
+    "labels": [1],
+    "splits": ["discovery", "validation", "safety-test"],
+    "weighting": "equal directions within example, equal examples within concept, equal concepts for the primary macro"
+  },
+  "operator": {
+    "id": "concept_position_prototype",
+    "definition": "The exact Day 45 target-excluded concept/response-decile tensor, inserted at the 12 selected raw pre-o_proj K12 heads.",
+    "retuning": "prohibited",
+    "deception_handling": "retain unchanged despite the observed Day 45 over-write"
+  },
+  "jobs": [
+    "exact_natural_activity",
+    "concept_position_prototype",
+    "concept_position_prototype.random"
+  ],
+  "directions": ["induction", "rescue"],
+  "path": "ordinary total path with layers 9 through 12 live",
+  "endpoints": {
+    "primary": "complete 13-probe mean raw-margin effect-vector recovery against exact natural K12 total-path effect on the same example and direction",
+    "secondary": [
+      "own-probe raw-margin direction",
+      "activation RMS ratio",
+      "per-concept and per-split recovery",
+      "norm-matched Haar random recovery",
+      "descriptive comparison with the frozen Day 45 direct-path result"
+    ],
+    "excluded": [
+      "sequence-score selection",
+      "TPR",
+      "generation",
+      "output behavior",
+      "parameter swaps"
+    ]
+  },
+  "execution": {
+    "backend": "CUDA only",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "dtype": "bfloat16 model execution and float32 effects",
+    "attention": "eager",
+    "model_residency": "one complete Chameleon model",
+    "tail_start_layer": 9,
+    "total_jobs_per_vectorized_tail": 3,
+    "ordering": "concept, then response token count, then example_id",
+    "batch_schedule": [
+      {"maximum_response_tokens": 64, "batch_size": 16},
+      {"maximum_response_tokens": 256, "batch_size": 8},
+      {"maximum_response_tokens": 1000000, "batch_size": 2}
+    ],
+    "random_base_seed": 44001,
+    "random_draw_index": 0,
+    "resumption": "atomic batch shards with exact provenance and row keys"
+  },
+  "implementation_gates": {
+    "identity_hidden_max_abs": 0.02,
+    "cached_tail_margin_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "haar_invariants_pass": true,
+    "hooks_after_batch": 0,
+    "all_values_finite": true,
+    "exact_row_count": 5196
+  },
+  "scientific_gate": {
+    "equal_concept_recovery_min": 0.5,
+    "concept_bootstrap_95_ci_low_min": 0.3,
+    "own_probe_correct_direction_concepts_min": 10,
+    "recovery_advantage_over_random_min": 0.2,
+    "activation_rms_ratio_min": 0.5,
+    "activation_rms_ratio_max": 1.5,
+    "exact_natural_expected_direction_concepts_min": 10,
+    "all_clauses_required": true
+  },
+  "disposition": {
+    "pass": "Treat the prototype as sufficient for K12's existing-population total monitor effect and advance unchanged to selected precursor parameter swaps.",
+    "fail": "Stop total-path promotion and retain the population-scale direct-operator claim only."
+  },
+  "scope_boundary": "No candidate, scale, concept handling, threshold, fresh data, fresh probe, behavior test, or parameter swap is authorized by this contract."
+}

@@ -16,3 +16,8 @@
 - Discovery recovery was `0.9832`; validation was `0.9461`; safety-test was `2.0122`.
 - Adverse heterogeneity: deception recovery was `2.9714`, with a much larger prototype own-probe effect than exact natural K12. The other 12 concepts ranged from `0.8399` to `1.0530`. No outcome-dependent rescaling or exclusion was performed.
 - Promoted the prototype only for ordinary total-path testing. Parameter swaps and stronger claims remain untested.
+
+## 2026-08-10 — Day 46 transition
+
+- Froze the unchanged 866-example total-path test before generating total-path candidate outcomes.
+- Preserved deception unchanged, retained the exact/random controls, and prohibited rescaling or candidate additions.
