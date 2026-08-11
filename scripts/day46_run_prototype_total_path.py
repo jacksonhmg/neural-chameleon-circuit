@@ -30,7 +30,6 @@ from day45_run_prototype_population import (  # noqa: E402
     load_population_records,
     make_batches,
     mean_margins,
-    prepare_batch,
     prototype_delta_for_batch,
     read_json,
     require_committed,
@@ -40,6 +39,7 @@ from day45_run_prototype_population import (  # noqa: E402
 from neural_chameleon import (  # noqa: E402
     ActivationKind,
     PatchSite,
+    RealizedForwardRunner,
     VectorizedMechanismRunner,
     response_activation_rms,
     transplant_job_from_cache,
@@ -84,6 +84,37 @@ def validate_parents(contract: Mapping[str, Any]) -> None:
     for key, value in observed.items():
         if expected[key] != value:
             raise RuntimeError(f"frozen parent differs: {key}")
+
+
+def prepare_batch(
+    runner: Any,
+    records: Sequence[Mapping[str, Any]],
+) -> tuple[Any, Any, Any]:
+    """Prepare paired captures while retaining the frozen layer-9 tail input."""
+    concept = records[0]["concept"]
+    if any(row["concept"] != concept for row in records):
+        raise RuntimeError("total-path batches must contain one concept")
+    pair = runner.prepare_pairs(
+        [row["prompt"] for row in records],
+        [row["response"] for row in records],
+        trigger=concept,
+    )
+    realized = RealizedForwardRunner(
+        runner, monitor_layer=12, full_residual_layers=(9,)
+    )
+    normal = realized.run(pair.normal)
+    triggered = realized.run(pair.triggered)
+    if not torch.equal(normal.response_ids, triggered.response_ids) or not torch.equal(
+        normal.response_mask, triggered.response_mask
+    ):
+        raise RuntimeError("paired response tensors differ")
+    observed_counts = normal.response_mask.sum(dim=1).tolist()
+    expected_counts = [int(row["response_token_count"]) for row in records]
+    if observed_counts != expected_counts:
+        raise RuntimeError(
+            f"response token counts differ: {observed_counts} != {expected_counts}"
+        )
+    return pair, normal, triggered
 
 
 def total_endpoint_rows(
