@@ -1,0 +1,75 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "cuda": true,
+    "haar_invariants_pass": true,
+    "hooks_removed": true,
+    "identity_within_tolerance": true,
+    "prototype_finite": true,
+    "prototype_shape_exact": true,
+    "random_shape_exact": true,
+    "response_ids_exact": true,
+    "response_masks_exact": true,
+    "tangency_within_tolerance": true,
+    "tangential_finite": true,
+    "tangential_shape_exact": true
+  },
+  "contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "example_ids": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031"
+  ],
+  "haar_audit": {
+    "pass": true,
+    "per_head_norm_relative_error": [
+      4.717038264370399e-13,
+      4.718541207861474e-13,
+      4.71534338424789e-13,
+      4.719434762961572e-13,
+      4.719028888573665e-13,
+      4.71839333379563e-13,
+      4.720081474137311e-13,
+      4.720981573475141e-13,
+      4.724748960310285e-13,
+      4.721021156207053e-13,
+      4.721231724416576e-13,
+      4.717829957054756e-13
+    ],
+    "per_head_singular_value_relative_error": [
+      4.717038264370399e-13,
+      4.718541207861474e-13,
+      4.71534338424789e-13,
+      4.719434762961572e-13,
+      4.719028888573665e-13,
+      4.71839333379563e-13,
+      4.720081474137311e-13,
+      4.720981573475141e-13,
+      4.724748960310285e-13,
+      4.721021156207053e-13,
+      4.721231724416576e-13,
+      4.717829957054756e-13
+    ],
+    "per_head_temporal_gram_relative_error": [
+      4.717038264370399e-13,
+      4.718541207861474e-13,
+      4.71534338424789e-13,
+      4.719434762961572e-13,
+      4.719028888573665e-13,
+      4.71839333379563e-13,
+      4.720081474137311e-13,
+      4.720981573475141e-13,
+      4.724748960310285e-13,
+      4.721021156207053e-13,
+      4.721231724416576e-13,
+      4.717829957054756e-13
+    ]
+  },
+  "identity_hidden_max_abs": 0.0,
+  "operator_spec_sha256": "453e5cfdd25c5004f262da8704f35a3138fcc6aab5231548ac3a6252acdada8f",
+  "operator_tensor_sha256": "52d8005ee020c22519b1ac39b4f854ab842c4f816be9a95ca894f3e969f10fa7",
+  "preflight_commit": "f9887870eaa0bafb654411abc02a81e0172a7aac",
+  "procedure": "rapid-k12-pilot-real-checkpoint-preflight-v1",
+  "result": "pass",
+  "schema_version": 1,
+  "tangency_relative_dot_max": 8.285056196655205e-09
+}

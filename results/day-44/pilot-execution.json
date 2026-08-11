@@ -1,0 +1,43 @@
+{
+  "concepts_completed": [
+    "HTML",
+    "all-caps",
+    "biology-focused",
+    "chemistry-based",
+    "comforting",
+    "confused",
+    "deception",
+    "finnish",
+    "german",
+    "harmful",
+    "jokey",
+    "literature-focused",
+    "mathematical"
+  ],
+  "contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "cuda_peak_allocated_gib": 17.327300548553467,
+  "cuda_peak_reserved_gib": 17.35546875,
+  "elapsed_seconds": 4.144186804999663,
+  "execution_commit": "f9887870eaa0bafb654411abc02a81e0172a7aac",
+  "hooks_after_execution": 0,
+  "operator_spec_sha256": "453e5cfdd25c5004f262da8704f35a3138fcc6aab5231548ac3a6252acdada8f",
+  "operator_tensor_sha256": "52d8005ee020c22519b1ac39b4f854ab842c4f816be9a95ca894f3e969f10fa7",
+  "procedure": "rapid-k12-direct-pilot-execution-v1",
+  "result": "complete",
+  "schema_version": 1,
+  "shards": [
+    "results/day-44/pilot-shards/00-HTML.json",
+    "results/day-44/pilot-shards/01-all-caps.json",
+    "results/day-44/pilot-shards/02-biology-focused.json",
+    "results/day-44/pilot-shards/03-chemistry-based.json",
+    "results/day-44/pilot-shards/04-comforting.json",
+    "results/day-44/pilot-shards/05-confused.json",
+    "results/day-44/pilot-shards/06-deception.json",
+    "results/day-44/pilot-shards/07-finnish.json",
+    "results/day-44/pilot-shards/08-german.json",
+    "results/day-44/pilot-shards/09-harmful.json",
+    "results/day-44/pilot-shards/10-jokey.json",
+    "results/day-44/pilot-shards/11-literature-focused.json",
+    "results/day-44/pilot-shards/12-mathematical.json"
+  ]
+}

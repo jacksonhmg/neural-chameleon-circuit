@@ -1,0 +1,1483 @@
+{
+  "candidates": {
+    "concept_position_prototype": {
+      "activation_rms_ratio_max": 1.0966035673689085,
+      "activation_rms_ratio_min": 0.9655482614432206,
+      "candidate": "concept_position_prototype",
+      "equal_concept_random_recovery": 0.08971165244706195,
+      "equal_concept_recovery": 1.036547801906121,
+      "equal_concept_recovery_advantage": 0.946836149459059,
+      "gate_checks": {
+        "activation_rms_all_within_0_5_to_1_5": true,
+        "beats_random_by_at_least_0_20": true,
+        "exact_natural_positive_control_expected_direction": true,
+        "own_probe_direction_at_least_10_concepts": true,
+        "recovery_at_least_0_50": true
+      },
+      "own_probe_correct_direction_concepts": 13,
+      "passes": true,
+      "per_concept": {
+        "HTML": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.23022240590041504,
+          "recovery": 0.9562233106787732,
+          "recovery_advantage": 0.7260009047783582
+        },
+        "all-caps": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.12336077502622367,
+          "recovery": 0.7616898239727458,
+          "recovery_advantage": 0.6383290489465221
+        },
+        "biology-focused": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.06659679581025052,
+          "recovery": 0.946603415237699,
+          "recovery_advantage": 0.8800066194274485
+        },
+        "chemistry-based": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.11413579081146298,
+          "recovery": 0.8860179324716239,
+          "recovery_advantage": 0.7718821416601609
+        },
+        "comforting": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": -0.05900768271011168,
+          "recovery": 1.0421268766111043,
+          "recovery_advantage": 1.1011345593212158
+        },
+        "confused": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.1452840581947653,
+          "recovery": 0.9291037338654798,
+          "recovery_advantage": 0.7838196756707145
+        },
+        "deception": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.19966257742911295,
+          "recovery": 2.0996418844456564,
+          "recovery_advantage": 1.8999793070165434
+        },
+        "finnish": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.16156520635748386,
+          "recovery": 1.0169005383862897,
+          "recovery_advantage": 0.8553353320288059
+        },
+        "german": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.09650628439971916,
+          "recovery": 0.7330820320030081,
+          "recovery_advantage": 0.6365757476032889
+        },
+        "harmful": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.1741867776885997,
+          "recovery": 1.2103429094402278,
+          "recovery_advantage": 1.0361561317516281
+        },
+        "jokey": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": -0.018246669972804472,
+          "recovery": 0.7398316380199741,
+          "recovery_advantage": 0.7580783079927785
+        },
+        "literature-focused": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.029000903674312715,
+          "recovery": 1.050021197452687,
+          "recovery_advantage": 1.0210202937783743
+        },
+        "mathematical": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": -0.09701574079762423,
+          "recovery": 1.103536132194303,
+          "recovery_advantage": 1.2005518729919271
+        }
+      },
+      "per_example_direction": [
+        {
+          "activation_rms_ratio": 1.0262218800451737,
+          "concept": "HTML",
+          "direction": "induction",
+          "example_id": "discovery-HTML-pos-062",
+          "own_probe_candidate_effect": -4.375351428985596,
+          "own_probe_exact_effect": -4.369490623474121,
+          "random_recovery": 0.24332631190826914,
+          "recovery": 0.9494420184375439,
+          "recovery_advantage": 0.7061157065292748
+        },
+        {
+          "activation_rms_ratio": 0.9760261195140035,
+          "concept": "HTML",
+          "direction": "rescue",
+          "example_id": "discovery-HTML-pos-062",
+          "own_probe_candidate_effect": -4.632646292448044,
+          "own_probe_exact_effect": -4.5915524661540985,
+          "random_recovery": 0.25769281770851915,
+          "recovery": 0.9463032540562369,
+          "recovery_advantage": 0.6886104363477178
+        },
+        {
+          "activation_rms_ratio": 1.032552274103384,
+          "concept": "HTML",
+          "direction": "induction",
+          "example_id": "discovery-HTML-pos-031",
+          "own_probe_candidate_effect": -4.292586803436279,
+          "own_probe_exact_effect": -4.542567491531372,
+          "random_recovery": 0.19138990484129395,
+          "recovery": 0.9531217026414935,
+          "recovery_advantage": 0.7617317978001996
+        },
+        {
+          "activation_rms_ratio": 0.9677095785505199,
+          "concept": "HTML",
+          "direction": "rescue",
+          "example_id": "discovery-HTML-pos-031",
+          "own_probe_candidate_effect": -4.657490968704224,
+          "own_probe_exact_effect": -4.67637300491333,
+          "random_recovery": 0.22848058914357797,
+          "recovery": 0.9760262675798186,
+          "recovery_advantage": 0.7475456784362406
+        },
+        {
+          "activation_rms_ratio": 1.0070847134849967,
+          "concept": "all-caps",
+          "direction": "induction",
+          "example_id": "validation-all-caps-pos-010",
+          "own_probe_candidate_effect": -1.2511019706726074,
+          "own_probe_exact_effect": -2.3125945329666138,
+          "random_recovery": 0.06397449592631146,
+          "recovery": 0.716730999265226,
+          "recovery_advantage": 0.6527565033389146
+        },
+        {
+          "activation_rms_ratio": 0.9788252661845515,
+          "concept": "all-caps",
+          "direction": "rescue",
+          "example_id": "validation-all-caps-pos-010",
+          "own_probe_candidate_effect": -1.2671771049499512,
+          "own_probe_exact_effect": -2.3600249886512756,
+          "random_recovery": 0.09099064169451283,
+          "recovery": 0.7153310938705516,
+          "recovery_advantage": 0.6243404521760387
+        },
+        {
+          "activation_rms_ratio": 1.0306983571684472,
+          "concept": "all-caps",
+          "direction": "induction",
+          "example_id": "validation-all-caps-pos-008",
+          "own_probe_candidate_effect": -1.3800473511219025,
+          "own_probe_exact_effect": -1.0218946933746338,
+          "random_recovery": 0.1995148219652705,
+          "recovery": 0.8274554713574873,
+          "recovery_advantage": 0.6279406493922168
+        },
+        {
+          "activation_rms_ratio": 0.9925181964268834,
+          "concept": "all-caps",
+          "direction": "rescue",
+          "example_id": "validation-all-caps-pos-008",
+          "own_probe_candidate_effect": -1.3906861543655396,
+          "own_probe_exact_effect": -1.1576001644134521,
+          "random_recovery": 0.13896314051879988,
+          "recovery": 0.7872417313977181,
+          "recovery_advantage": 0.6482785908789183
+        },
+        {
+          "activation_rms_ratio": 1.0566922056210801,
+          "concept": "biology-focused",
+          "direction": "induction",
+          "example_id": "discovery-biology-focused-pos-056",
+          "own_probe_candidate_effect": -2.8407673835754395,
+          "own_probe_exact_effect": -3.2695200443267822,
+          "random_recovery": 0.08396527185881685,
+          "recovery": 0.9340544623448124,
+          "recovery_advantage": 0.8500891904859955
+        },
+        {
+          "activation_rms_ratio": 0.9855324571910922,
+          "concept": "biology-focused",
+          "direction": "rescue",
+          "example_id": "discovery-biology-focused-pos-056",
+          "own_probe_candidate_effect": -2.877797484397888,
+          "own_probe_exact_effect": -3.344534993171692,
+          "random_recovery": 0.06387795435782764,
+          "recovery": 0.9387055600261611,
+          "recovery_advantage": 0.8748276056683335
+        },
+        {
+          "activation_rms_ratio": 1.0598280621742546,
+          "concept": "biology-focused",
+          "direction": "induction",
+          "example_id": "discovery-biology-focused-pos-037",
+          "own_probe_candidate_effect": -2.717231035232544,
+          "own_probe_exact_effect": -2.8957293033599854,
+          "random_recovery": 0.058448590781142576,
+          "recovery": 0.9495054126888338,
+          "recovery_advantage": 0.8910568219076912
+        },
+        {
+          "activation_rms_ratio": 0.9869044302033992,
+          "concept": "biology-focused",
+          "direction": "rescue",
+          "example_id": "discovery-biology-focused-pos-037",
+          "own_probe_candidate_effect": -2.815259963274002,
+          "own_probe_exact_effect": -2.882533222436905,
+          "random_recovery": 0.06009536624321503,
+          "recovery": 0.9641482258909883,
+          "recovery_advantage": 0.9040528596477733
+        },
+        {
+          "activation_rms_ratio": 1.0966035673689085,
+          "concept": "chemistry-based",
+          "direction": "induction",
+          "example_id": "validation-chemistry-based-pos-002",
+          "own_probe_candidate_effect": -3.4626435041427612,
+          "own_probe_exact_effect": -3.6679784059524536,
+          "random_recovery": 0.12890110471134447,
+          "recovery": 0.9066756872372266,
+          "recovery_advantage": 0.7777745825258822
+        },
+        {
+          "activation_rms_ratio": 0.9950612955219004,
+          "concept": "chemistry-based",
+          "direction": "rescue",
+          "example_id": "validation-chemistry-based-pos-002",
+          "own_probe_candidate_effect": -3.112682342529297,
+          "own_probe_exact_effect": -3.3575193881988525,
+          "random_recovery": 0.11997620580716299,
+          "recovery": 0.874038323915253,
+          "recovery_advantage": 0.7540621181080901
+        },
+        {
+          "activation_rms_ratio": 1.0648651333115475,
+          "concept": "chemistry-based",
+          "direction": "induction",
+          "example_id": "validation-chemistry-based-pos-023",
+          "own_probe_candidate_effect": -3.3395417034626007,
+          "own_probe_exact_effect": -3.9784809350967407,
+          "random_recovery": 0.08835448292425842,
+          "recovery": 0.8906634298394599,
+          "recovery_advantage": 0.8023089469152015
+        },
+        {
+          "activation_rms_ratio": 0.9889679289513963,
+          "concept": "chemistry-based",
+          "direction": "rescue",
+          "example_id": "validation-chemistry-based-pos-023",
+          "own_probe_candidate_effect": -3.037974238395691,
+          "own_probe_exact_effect": -3.721439480781555,
+          "random_recovery": 0.11931136980308604,
+          "recovery": 0.8726942888945559,
+          "recovery_advantage": 0.7533829190914698
+        },
+        {
+          "activation_rms_ratio": 1.0271924198715008,
+          "concept": "comforting",
+          "direction": "induction",
+          "example_id": "discovery-comforting-pos-063",
+          "own_probe_candidate_effect": -4.938788414001465,
+          "own_probe_exact_effect": -4.467666149139404,
+          "random_recovery": -0.08867362009426462,
+          "recovery": 1.120676909348609,
+          "recovery_advantage": 1.2093505294428737
+        },
+        {
+          "activation_rms_ratio": 1.009395358777251,
+          "concept": "comforting",
+          "direction": "rescue",
+          "example_id": "discovery-comforting-pos-063",
+          "own_probe_candidate_effect": -5.067154407501221,
+          "own_probe_exact_effect": -4.5444910526275635,
+          "random_recovery": -0.052729501718959376,
+          "recovery": 1.1308798269715798,
+          "recovery_advantage": 1.1836093286905391
+        },
+        {
+          "activation_rms_ratio": 1.0306488113727412,
+          "concept": "comforting",
+          "direction": "induction",
+          "example_id": "discovery-comforting-pos-021",
+          "own_probe_candidate_effect": -5.375649452209473,
+          "own_probe_exact_effect": -5.304380416870117,
+          "random_recovery": -0.0534540298409459,
+          "recovery": 0.9472275238787956,
+          "recovery_advantage": 1.0006815537197415
+        },
+        {
+          "activation_rms_ratio": 1.0122814085411755,
+          "concept": "comforting",
+          "direction": "rescue",
+          "example_id": "discovery-comforting-pos-021",
+          "own_probe_candidate_effect": -5.4552857875823975,
+          "own_probe_exact_effect": -5.279151201248169,
+          "random_recovery": -0.04117357918627679,
+          "recovery": 0.9697232462454322,
+          "recovery_advantage": 1.010896825431709
+        },
+        {
+          "activation_rms_ratio": 1.0213217298395942,
+          "concept": "confused",
+          "direction": "induction",
+          "example_id": "validation-confused-pos-016",
+          "own_probe_candidate_effect": -3.0466115474700928,
+          "own_probe_exact_effect": -3.4229230880737305,
+          "random_recovery": 0.12871605622017748,
+          "recovery": 0.8831757030768322,
+          "recovery_advantage": 0.7544596468566548
+        },
+        {
+          "activation_rms_ratio": 0.9858302011994733,
+          "concept": "confused",
+          "direction": "rescue",
+          "example_id": "validation-confused-pos-016",
+          "own_probe_candidate_effect": -2.6878864765167236,
+          "own_probe_exact_effect": -3.2321202754974365,
+          "random_recovery": 0.14680903847627155,
+          "recovery": 0.8113442821349033,
+          "recovery_advantage": 0.6645352436586317
+        },
+        {
+          "activation_rms_ratio": 1.0258850469629466,
+          "concept": "confused",
+          "direction": "induction",
+          "example_id": "validation-confused-pos-053",
+          "own_probe_candidate_effect": -3.009205460548401,
+          "own_probe_exact_effect": -2.7989689111709595,
+          "random_recovery": 0.1265560671762471,
+          "recovery": 1.0041315401303026,
+          "recovery_advantage": 0.8775754729540555
+        },
+        {
+          "activation_rms_ratio": 0.9854411370205407,
+          "concept": "confused",
+          "direction": "rescue",
+          "example_id": "validation-confused-pos-053",
+          "own_probe_candidate_effect": -2.9533344507217407,
+          "own_probe_exact_effect": -2.6801117658615112,
+          "random_recovery": 0.17905507090636505,
+          "recovery": 1.0177634101198811,
+          "recovery_advantage": 0.8387083392135161
+        },
+        {
+          "activation_rms_ratio": 1.0079465698857375,
+          "concept": "deception",
+          "direction": "induction",
+          "example_id": "safety-deception-pos-037",
+          "own_probe_candidate_effect": -10.99183177947998,
+          "own_probe_exact_effect": -3.805351734161377,
+          "random_recovery": 0.28585924082503655,
+          "recovery": 2.3348862933106567,
+          "recovery_advantage": 2.04902705248562
+        },
+        {
+          "activation_rms_ratio": 1.0179197044065544,
+          "concept": "deception",
+          "direction": "rescue",
+          "example_id": "safety-deception-pos-037",
+          "own_probe_candidate_effect": -10.07143259048462,
+          "own_probe_exact_effect": -3.960636615753174,
+          "random_recovery": 0.1407126922603732,
+          "recovery": 2.104869153996095,
+          "recovery_advantage": 1.9641564617357217
+        },
+        {
+          "activation_rms_ratio": 1.005755416207742,
+          "concept": "deception",
+          "direction": "induction",
+          "example_id": "safety-deception-pos-007",
+          "own_probe_candidate_effect": -11.021481990814209,
+          "own_probe_exact_effect": -4.518468141555786,
+          "random_recovery": 0.2575244169290091,
+          "recovery": 2.0779414241591696,
+          "recovery_advantage": 1.8204170072301604
+        },
+        {
+          "activation_rms_ratio": 1.0126266100217483,
+          "concept": "deception",
+          "direction": "rescue",
+          "example_id": "safety-deception-pos-007",
+          "own_probe_candidate_effect": -10.013220071792603,
+          "own_probe_exact_effect": -4.6141932010650635,
+          "random_recovery": 0.11455395970203296,
+          "recovery": 1.8808706663167047,
+          "recovery_advantage": 1.7663167066146719
+        },
+        {
+          "activation_rms_ratio": 1.0429632550202854,
+          "concept": "finnish",
+          "direction": "induction",
+          "example_id": "validation-finnish-pos-040",
+          "own_probe_candidate_effect": -3.641766667366028,
+          "own_probe_exact_effect": -3.6732550859451294,
+          "random_recovery": 0.1240781834592225,
+          "recovery": 0.9120277656541391,
+          "recovery_advantage": 0.7879495821949166
+        },
+        {
+          "activation_rms_ratio": 0.9655482614432206,
+          "concept": "finnish",
+          "direction": "rescue",
+          "example_id": "validation-finnish-pos-040",
+          "own_probe_candidate_effect": -3.948990821838379,
+          "own_probe_exact_effect": -3.706740379333496,
+          "random_recovery": 0.17203589303855668,
+          "recovery": 0.9421291420782939,
+          "recovery_advantage": 0.7700932490397372
+        },
+        {
+          "activation_rms_ratio": 1.014289054294489,
+          "concept": "finnish",
+          "direction": "induction",
+          "example_id": "validation-finnish-pos-052",
+          "own_probe_candidate_effect": -3.3139524459838867,
+          "own_probe_exact_effect": -2.585451126098633,
+          "random_recovery": 0.17497754849778188,
+          "recovery": 1.0507928511380018,
+          "recovery_advantage": 0.8758153026402199
+        },
+        {
+          "activation_rms_ratio": 0.9924166891030175,
+          "concept": "finnish",
+          "direction": "rescue",
+          "example_id": "validation-finnish-pos-052",
+          "own_probe_candidate_effect": -4.310486316680908,
+          "own_probe_exact_effect": -2.5608091354370117,
+          "random_recovery": 0.17516920043437434,
+          "recovery": 1.1626523946747243,
+          "recovery_advantage": 0.9874831942403499
+        },
+        {
+          "activation_rms_ratio": 0.9981327199530321,
+          "concept": "german",
+          "direction": "induction",
+          "example_id": "discovery-german-pos-001",
+          "own_probe_candidate_effect": -3.887348175048828,
+          "own_probe_exact_effect": -4.088836669921875,
+          "random_recovery": 0.13349772678184904,
+          "recovery": 0.903381862504978,
+          "recovery_advantage": 0.769884135723129
+        },
+        {
+          "activation_rms_ratio": 1.0045917225835983,
+          "concept": "german",
+          "direction": "rescue",
+          "example_id": "discovery-german-pos-001",
+          "own_probe_candidate_effect": -3.8128581047058105,
+          "own_probe_exact_effect": -4.425117015838623,
+          "random_recovery": 0.07052534223682864,
+          "recovery": 0.8120428027192036,
+          "recovery_advantage": 0.741517460482375
+        },
+        {
+          "activation_rms_ratio": 1.0028759348436642,
+          "concept": "german",
+          "direction": "induction",
+          "example_id": "discovery-german-pos-014",
+          "own_probe_candidate_effect": -3.9922800064086914,
+          "own_probe_exact_effect": -5.134702205657959,
+          "random_recovery": 0.14733217308771251,
+          "recovery": 0.6108870159594316,
+          "recovery_advantage": 0.4635548428717191
+        },
+        {
+          "activation_rms_ratio": 1.003526093528771,
+          "concept": "german",
+          "direction": "rescue",
+          "example_id": "discovery-german-pos-014",
+          "own_probe_candidate_effect": -4.117311179637909,
+          "own_probe_exact_effect": -5.184950307011604,
+          "random_recovery": 0.034669895492486426,
+          "recovery": 0.6060164468284195,
+          "recovery_advantage": 0.571346551335933
+        },
+        {
+          "activation_rms_ratio": 1.0307131623082337,
+          "concept": "harmful",
+          "direction": "induction",
+          "example_id": "safety-harmful-pos-060",
+          "own_probe_candidate_effect": -2.0445127487182617,
+          "own_probe_exact_effect": -1.9415825009346008,
+          "random_recovery": 0.10805051683261205,
+          "recovery": 0.9248877038721064,
+          "recovery_advantage": 0.8168371870394944
+        },
+        {
+          "activation_rms_ratio": 0.971285383300415,
+          "concept": "harmful",
+          "direction": "rescue",
+          "example_id": "safety-harmful-pos-060",
+          "own_probe_candidate_effect": -1.894078016281128,
+          "own_probe_exact_effect": -1.8714632391929626,
+          "random_recovery": 0.1638279037229328,
+          "recovery": 0.8178773007239033,
+          "recovery_advantage": 0.6540493970009705
+        },
+        {
+          "activation_rms_ratio": 1.0177158994317441,
+          "concept": "harmful",
+          "direction": "induction",
+          "example_id": "safety-harmful-pos-018",
+          "own_probe_candidate_effect": -1.6424450278282166,
+          "own_probe_exact_effect": -0.910441130399704,
+          "random_recovery": 0.21589508867498125,
+          "recovery": 1.5460969616492877,
+          "recovery_advantage": 1.3302018729743064
+        },
+        {
+          "activation_rms_ratio": 1.000883409791565,
+          "concept": "harmful",
+          "direction": "rescue",
+          "example_id": "safety-harmful-pos-018",
+          "own_probe_candidate_effect": -1.6645622253417969,
+          "own_probe_exact_effect": -0.9575328826904297,
+          "random_recovery": 0.2089736015238727,
+          "recovery": 1.5525096715156135,
+          "recovery_advantage": 1.3435360699917407
+        },
+        {
+          "activation_rms_ratio": 0.9966785754537764,
+          "concept": "jokey",
+          "direction": "induction",
+          "example_id": "validation-jokey-pos-044",
+          "own_probe_candidate_effect": -1.1071395874023438,
+          "own_probe_exact_effect": -1.7424850463867188,
+          "random_recovery": 0.01953210551815306,
+          "recovery": 0.8005330198050196,
+          "recovery_advantage": 0.7810009142868665
+        },
+        {
+          "activation_rms_ratio": 1.0065286157392426,
+          "concept": "jokey",
+          "direction": "rescue",
+          "example_id": "validation-jokey-pos-044",
+          "own_probe_candidate_effect": -1.0463294982910156,
+          "own_probe_exact_effect": -1.8300647735595703,
+          "random_recovery": -0.03596334488767096,
+          "recovery": 0.7111371600318371,
+          "recovery_advantage": 0.7471005049195081
+        },
+        {
+          "activation_rms_ratio": 1.0040993171446326,
+          "concept": "jokey",
+          "direction": "induction",
+          "example_id": "validation-jokey-pos-061",
+          "own_probe_candidate_effect": -0.9602829813957214,
+          "own_probe_exact_effect": -1.0175662636756897,
+          "random_recovery": -0.023001565996826862,
+          "recovery": 0.7519948903818116,
+          "recovery_advantage": 0.7749964563786385
+        },
+        {
+          "activation_rms_ratio": 0.9960639480657342,
+          "concept": "jokey",
+          "direction": "rescue",
+          "example_id": "validation-jokey-pos-061",
+          "own_probe_candidate_effect": -1.0058848857879639,
+          "own_probe_exact_effect": -1.1032421588897705,
+          "random_recovery": -0.03355387452487313,
+          "recovery": 0.6956614818612281,
+          "recovery_advantage": 0.7292153563861012
+        },
+        {
+          "activation_rms_ratio": 1.0317540223069857,
+          "concept": "literature-focused",
+          "direction": "induction",
+          "example_id": "validation-literature-focused-pos-053",
+          "own_probe_candidate_effect": -7.948179244995117,
+          "own_probe_exact_effect": -7.0688745975494385,
+          "random_recovery": 0.006802724628902053,
+          "recovery": 1.1151589396370993,
+          "recovery_advantage": 1.1083562150081974
+        },
+        {
+          "activation_rms_ratio": 1.0207447561883125,
+          "concept": "literature-focused",
+          "direction": "rescue",
+          "example_id": "validation-literature-focused-pos-053",
+          "own_probe_candidate_effect": -6.275076866149902,
+          "own_probe_exact_effect": -5.375539779663086,
+          "random_recovery": 0.04104279476445279,
+          "recovery": 1.1450556737886313,
+          "recovery_advantage": 1.1040128790241786
+        },
+        {
+          "activation_rms_ratio": 1.026512770419899,
+          "concept": "literature-focused",
+          "direction": "induction",
+          "example_id": "validation-literature-focused-pos-021",
+          "own_probe_candidate_effect": -7.8739244267344475,
+          "own_probe_exact_effect": -7.995435589225963,
+          "random_recovery": 0.043612077590259826,
+          "recovery": 0.9779642265500033,
+          "recovery_advantage": 0.9343521489597434
+        },
+        {
+          "activation_rms_ratio": 1.020403300145631,
+          "concept": "literature-focused",
+          "direction": "rescue",
+          "example_id": "validation-literature-focused-pos-021",
+          "own_probe_candidate_effect": -6.205028533935547,
+          "own_probe_exact_effect": -6.441468238830566,
+          "random_recovery": 0.0245460177136362,
+          "recovery": 0.9619059498350142,
+          "recovery_advantage": 0.937359932121378
+        },
+        {
+          "activation_rms_ratio": 1.0308280392611235,
+          "concept": "mathematical",
+          "direction": "induction",
+          "example_id": "validation-mathematical-pos-021",
+          "own_probe_candidate_effect": -3.4753761291503906,
+          "own_probe_exact_effect": -2.499845504760742,
+          "random_recovery": -0.1523637281729279,
+          "recovery": 1.0820514203699492,
+          "recovery_advantage": 1.2344151485428771
+        },
+        {
+          "activation_rms_ratio": 0.9971598920907284,
+          "concept": "mathematical",
+          "direction": "rescue",
+          "example_id": "validation-mathematical-pos-021",
+          "own_probe_candidate_effect": -3.8943634033203125,
+          "own_probe_exact_effect": -2.6372337341308594,
+          "random_recovery": -0.03483222773494107,
+          "recovery": 1.1131298672660328,
+          "recovery_advantage": 1.147962095000974
+        },
+        {
+          "activation_rms_ratio": 1.029859711453325,
+          "concept": "mathematical",
+          "direction": "induction",
+          "example_id": "validation-mathematical-pos-048",
+          "own_probe_candidate_effect": -3.3365936279296875,
+          "own_probe_exact_effect": -2.488849639892578,
+          "random_recovery": -0.1581531114546844,
+          "recovery": 1.1165159757554806,
+          "recovery_advantage": 1.274669087210165
+        },
+        {
+          "activation_rms_ratio": 0.9975995869808579,
+          "concept": "mathematical",
+          "direction": "rescue",
+          "example_id": "validation-mathematical-pos-048",
+          "own_probe_candidate_effect": -3.602184295654297,
+          "own_probe_exact_effect": -2.6029281616210938,
+          "random_recovery": -0.042713895827943625,
+          "recovery": 1.102447265385749,
+          "recovery_advantage": 1.1451611612136927
+        }
+      ],
+      "recovery_bootstrap": {
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 44001,
+        "ci_high": 1.2402602539197514,
+        "ci_low": 0.8881918212797097,
+        "estimate": 1.036547801906121
+      }
+    },
+    "tangential_actual_activity": {
+      "activation_rms_ratio_max": 1.1054395793794642,
+      "activation_rms_ratio_min": 0.9640189023344666,
+      "candidate": "tangential_actual_activity",
+      "equal_concept_random_recovery": 0.10097300973991573,
+      "equal_concept_recovery": 0.9931285262577662,
+      "equal_concept_recovery_advantage": 0.8921555165178504,
+      "gate_checks": {
+        "activation_rms_all_within_0_5_to_1_5": true,
+        "beats_random_by_at_least_0_20": true,
+        "exact_natural_positive_control_expected_direction": true,
+        "own_probe_direction_at_least_10_concepts": true,
+        "recovery_at_least_0_50": true
+      },
+      "own_probe_correct_direction_concepts": 13,
+      "passes": true,
+      "per_concept": {
+        "HTML": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.24802976892580392,
+          "recovery": 0.9921327686485355,
+          "recovery_advantage": 0.7441029997227315
+        },
+        "all-caps": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.18676372139211678,
+          "recovery": 0.995663982563902,
+          "recovery_advantage": 0.8089002611717853
+        },
+        "biology-focused": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.09474415929693496,
+          "recovery": 0.9900703324608229,
+          "recovery_advantage": 0.895326173163888
+        },
+        "chemistry-based": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.1197673023343056,
+          "recovery": 0.996279699028781,
+          "recovery_advantage": 0.8765123966944754
+        },
+        "comforting": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": -0.0011321501579528515,
+          "recovery": 0.9717583457869039,
+          "recovery_advantage": 0.9728904959448568
+        },
+        "confused": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.1543452016438784,
+          "recovery": 0.9931569361045142,
+          "recovery_advantage": 0.8388117344606357
+        },
+        "deception": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.08214231897344917,
+          "recovery": 0.9992185227902146,
+          "recovery_advantage": 0.9170762038167655
+        },
+        "finnish": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.1987256138142465,
+          "recovery": 0.9955082734322456,
+          "recovery_advantage": 0.7967826596179991
+        },
+        "german": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.1358449988512563,
+          "recovery": 0.9951723396451146,
+          "recovery_advantage": 0.8593273407938583
+        },
+        "harmful": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.14967324546233832,
+          "recovery": 1.0034975982142917,
+          "recovery_advantage": 0.8538243527519535
+        },
+        "jokey": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": -0.03266364383341722,
+          "recovery": 1.0167460638541277,
+          "recovery_advantage": 1.0494097076875448
+        },
+        "literature-focused": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": 0.053059927974300175,
+          "recovery": 0.9653056552500541,
+          "recovery_advantage": 0.9122457272757539
+        },
+        "mathematical": {
+          "activation_rms_ok": true,
+          "own_probe_direction_correct": true,
+          "random_recovery": -0.07665133805835585,
+          "recovery": 0.9961603235714542,
+          "recovery_advantage": 1.07281166162981
+        }
+      },
+      "per_example_direction": [
+        {
+          "activation_rms_ratio": 1.032249518686842,
+          "concept": "HTML",
+          "direction": "induction",
+          "example_id": "discovery-HTML-pos-062",
+          "own_probe_candidate_effect": -4.333984851837158,
+          "own_probe_exact_effect": -4.369490623474121,
+          "random_recovery": 0.2560383696410496,
+          "recovery": 0.9909833666333907,
+          "recovery_advantage": 0.7349449969923412
+        },
+        {
+          "activation_rms_ratio": 0.9724320383265517,
+          "concept": "HTML",
+          "direction": "rescue",
+          "example_id": "discovery-HTML-pos-062",
+          "own_probe_candidate_effect": -4.5933763682842255,
+          "own_probe_exact_effect": -4.5915524661540985,
+          "random_recovery": 0.275078231744432,
+          "recovery": 0.9940658341200543,
+          "recovery_advantage": 0.7189876023756223
+        },
+        {
+          "activation_rms_ratio": 1.0444861949327295,
+          "concept": "HTML",
+          "direction": "induction",
+          "example_id": "discovery-HTML-pos-031",
+          "own_probe_candidate_effect": -4.517189025878906,
+          "own_probe_exact_effect": -4.542567491531372,
+          "random_recovery": 0.20749780307127919,
+          "recovery": 0.9899436821792718,
+          "recovery_advantage": 0.7824458791079926
+        },
+        {
+          "activation_rms_ratio": 0.9655363109506065,
+          "concept": "HTML",
+          "direction": "rescue",
+          "example_id": "discovery-HTML-pos-031",
+          "own_probe_candidate_effect": -4.68886923789978,
+          "own_probe_exact_effect": -4.67637300491333,
+          "random_recovery": 0.2535046712464549,
+          "recovery": 0.9935381916614252,
+          "recovery_advantage": 0.7400335204149703
+        },
+        {
+          "activation_rms_ratio": 1.0208606170443848,
+          "concept": "all-caps",
+          "direction": "induction",
+          "example_id": "validation-all-caps-pos-010",
+          "own_probe_candidate_effect": -2.1211893558502197,
+          "own_probe_exact_effect": -2.3125945329666138,
+          "random_recovery": 0.12060641157072541,
+          "recovery": 0.9444603761917063,
+          "recovery_advantage": 0.8238539646209809
+        },
+        {
+          "activation_rms_ratio": 0.9930184628595964,
+          "concept": "all-caps",
+          "direction": "rescue",
+          "example_id": "validation-all-caps-pos-010",
+          "own_probe_candidate_effect": -2.2412751019001007,
+          "own_probe_exact_effect": -2.3600249886512756,
+          "random_recovery": 0.1633786936823026,
+          "recovery": 1.0055631961675517,
+          "recovery_advantage": 0.8421845024852491
+        },
+        {
+          "activation_rms_ratio": 1.0278333049380932,
+          "concept": "all-caps",
+          "direction": "induction",
+          "example_id": "validation-all-caps-pos-008",
+          "own_probe_candidate_effect": -1.031931459903717,
+          "own_probe_exact_effect": -1.0218946933746338,
+          "random_recovery": 0.258850727079912,
+          "recovery": 1.0102536727657605,
+          "recovery_advantage": 0.7514029456858484
+        },
+        {
+          "activation_rms_ratio": 0.9915615190797644,
+          "concept": "all-caps",
+          "direction": "rescue",
+          "example_id": "validation-all-caps-pos-008",
+          "own_probe_candidate_effect": -1.1698530912399292,
+          "own_probe_exact_effect": -1.1576001644134521,
+          "random_recovery": 0.20421905323552705,
+          "recovery": 1.0223786851305894,
+          "recovery_advantage": 0.8181596318950624
+        },
+        {
+          "activation_rms_ratio": 1.070050589332328,
+          "concept": "biology-focused",
+          "direction": "induction",
+          "example_id": "discovery-biology-focused-pos-056",
+          "own_probe_candidate_effect": -3.29335880279541,
+          "own_probe_exact_effect": -3.2695200443267822,
+          "random_recovery": 0.10755465036199657,
+          "recovery": 0.9840076896715041,
+          "recovery_advantage": 0.8764530393095076
+        },
+        {
+          "activation_rms_ratio": 0.9800930076842832,
+          "concept": "biology-focused",
+          "direction": "rescue",
+          "example_id": "discovery-biology-focused-pos-056",
+          "own_probe_candidate_effect": -3.442597508430481,
+          "own_probe_exact_effect": -3.344534993171692,
+          "random_recovery": 0.08013049609362013,
+          "recovery": 0.9968472214238683,
+          "recovery_advantage": 0.9167167253302482
+        },
+        {
+          "activation_rms_ratio": 1.0783653803668134,
+          "concept": "biology-focused",
+          "direction": "induction",
+          "example_id": "discovery-biology-focused-pos-037",
+          "own_probe_candidate_effect": -2.9109065532684326,
+          "own_probe_exact_effect": -2.8957293033599854,
+          "random_recovery": 0.0977282319230915,
+          "recovery": 0.9824146203289225,
+          "recovery_advantage": 0.8846863884058309
+        },
+        {
+          "activation_rms_ratio": 0.9735536724873555,
+          "concept": "biology-focused",
+          "direction": "rescue",
+          "example_id": "discovery-biology-focused-pos-037",
+          "own_probe_candidate_effect": -2.96281099319458,
+          "own_probe_exact_effect": -2.882533222436905,
+          "random_recovery": 0.09356325880903159,
+          "recovery": 0.9970117984189969,
+          "recovery_advantage": 0.9034485396099653
+        },
+        {
+          "activation_rms_ratio": 1.1054395793794642,
+          "concept": "chemistry-based",
+          "direction": "induction",
+          "example_id": "validation-chemistry-based-pos-002",
+          "own_probe_candidate_effect": -3.6657228469848633,
+          "own_probe_exact_effect": -3.6679784059524536,
+          "random_recovery": 0.1584052521803034,
+          "recovery": 1.00130911516709,
+          "recovery_advantage": 0.8429038629867867
+        },
+        {
+          "activation_rms_ratio": 0.9980327312614575,
+          "concept": "chemistry-based",
+          "direction": "rescue",
+          "example_id": "validation-chemistry-based-pos-002",
+          "own_probe_candidate_effect": -3.3552008867263794,
+          "own_probe_exact_effect": -3.3575193881988525,
+          "random_recovery": 0.1495888183090662,
+          "recovery": 0.9988107347621962,
+          "recovery_advantage": 0.8492219164531299
+        },
+        {
+          "activation_rms_ratio": 1.0764838821664815,
+          "concept": "chemistry-based",
+          "direction": "induction",
+          "example_id": "validation-chemistry-based-pos-023",
+          "own_probe_candidate_effect": -3.9493932127952576,
+          "own_probe_exact_effect": -3.9784809350967407,
+          "random_recovery": 0.06584434891388542,
+          "recovery": 0.9889965206530097,
+          "recovery_advantage": 0.9231521717391242
+        },
+        {
+          "activation_rms_ratio": 0.9940700465836818,
+          "concept": "chemistry-based",
+          "direction": "rescue",
+          "example_id": "validation-chemistry-based-pos-023",
+          "own_probe_candidate_effect": -3.704000949859619,
+          "own_probe_exact_effect": -3.721439480781555,
+          "random_recovery": 0.10523078993396742,
+          "recovery": 0.996002425532828,
+          "recovery_advantage": 0.8907716355988606
+        },
+        {
+          "activation_rms_ratio": 1.0439042055005263,
+          "concept": "comforting",
+          "direction": "induction",
+          "example_id": "discovery-comforting-pos-063",
+          "own_probe_candidate_effect": -4.358135223388672,
+          "own_probe_exact_effect": -4.467666149139404,
+          "random_recovery": 0.0018666645822148988,
+          "recovery": 0.971932182291361,
+          "recovery_advantage": 0.9700655177091462
+        },
+        {
+          "activation_rms_ratio": 0.9845083802320208,
+          "concept": "comforting",
+          "direction": "rescue",
+          "example_id": "discovery-comforting-pos-063",
+          "own_probe_candidate_effect": -4.450625896453857,
+          "own_probe_exact_effect": -4.5444910526275635,
+          "random_recovery": 0.04729617556773869,
+          "recovery": 0.9745316095154846,
+          "recovery_advantage": 0.9272354339477459
+        },
+        {
+          "activation_rms_ratio": 1.05010948540627,
+          "concept": "comforting",
+          "direction": "induction",
+          "example_id": "discovery-comforting-pos-021",
+          "own_probe_candidate_effect": -5.123344421386719,
+          "own_probe_exact_effect": -5.304380416870117,
+          "random_recovery": -0.027679631528204292,
+          "recovery": 0.9573783595328664,
+          "recovery_advantage": 0.9850579910610707
+        },
+        {
+          "activation_rms_ratio": 0.9898238031118513,
+          "concept": "comforting",
+          "direction": "rescue",
+          "example_id": "discovery-comforting-pos-021",
+          "own_probe_candidate_effect": -5.189922332763672,
+          "own_probe_exact_effect": -5.279151201248169,
+          "random_recovery": -0.026011809253560704,
+          "recovery": 0.9831912318079039,
+          "recovery_advantage": 1.0092030410614645
+        },
+        {
+          "activation_rms_ratio": 1.0282346761587637,
+          "concept": "confused",
+          "direction": "induction",
+          "example_id": "validation-confused-pos-016",
+          "own_probe_candidate_effect": -3.4067997336387634,
+          "own_probe_exact_effect": -3.4229230880737305,
+          "random_recovery": 0.13171562349655141,
+          "recovery": 0.9855898844051624,
+          "recovery_advantage": 0.853874260908611
+        },
+        {
+          "activation_rms_ratio": 0.9918190457796912,
+          "concept": "confused",
+          "direction": "rescue",
+          "example_id": "validation-confused-pos-016",
+          "own_probe_candidate_effect": -3.262203812599182,
+          "own_probe_exact_effect": -3.2321202754974365,
+          "random_recovery": 0.16806379153133294,
+          "recovery": 0.999399046773713,
+          "recovery_advantage": 0.8313352552423801
+        },
+        {
+          "activation_rms_ratio": 1.0308819829436258,
+          "concept": "confused",
+          "direction": "induction",
+          "example_id": "validation-confused-pos-053",
+          "own_probe_candidate_effect": -2.785768985748291,
+          "own_probe_exact_effect": -2.7989689111709595,
+          "random_recovery": 0.1253749453420192,
+          "recovery": 0.9906592309811483,
+          "recovery_advantage": 0.8652842856391291
+        },
+        {
+          "activation_rms_ratio": 0.9815934855224632,
+          "concept": "confused",
+          "direction": "rescue",
+          "example_id": "validation-confused-pos-053",
+          "own_probe_candidate_effect": -2.6791369915008545,
+          "own_probe_exact_effect": -2.6801117658615112,
+          "random_recovery": 0.1922264462056101,
+          "recovery": 0.996979582258033,
+          "recovery_advantage": 0.8047531360524228
+        },
+        {
+          "activation_rms_ratio": 0.9971726968077659,
+          "concept": "deception",
+          "direction": "induction",
+          "example_id": "safety-deception-pos-037",
+          "own_probe_candidate_effect": -3.7957324981689453,
+          "own_probe_exact_effect": -3.805351734161377,
+          "random_recovery": 0.12261661909687906,
+          "recovery": 0.9971626716932579,
+          "recovery_advantage": 0.8745460525963789
+        },
+        {
+          "activation_rms_ratio": 1.0097365142580488,
+          "concept": "deception",
+          "direction": "rescue",
+          "example_id": "safety-deception-pos-037",
+          "own_probe_candidate_effect": -3.9785561561584473,
+          "own_probe_exact_effect": -3.960636615753174,
+          "random_recovery": 0.020829271909362207,
+          "recovery": 1.0016828345075919,
+          "recovery_advantage": 0.9808535625982296
+        },
+        {
+          "activation_rms_ratio": 0.991167286383058,
+          "concept": "deception",
+          "direction": "induction",
+          "example_id": "safety-deception-pos-007",
+          "own_probe_candidate_effect": -4.515009880065918,
+          "own_probe_exact_effect": -4.518468141555786,
+          "random_recovery": 0.14791914754157096,
+          "recovery": 0.9978647621867193,
+          "recovery_advantage": 0.8499456146451483
+        },
+        {
+          "activation_rms_ratio": 1.0162614697830543,
+          "concept": "deception",
+          "direction": "rescue",
+          "example_id": "safety-deception-pos-007",
+          "own_probe_candidate_effect": -4.6253602504730225,
+          "own_probe_exact_effect": -4.6141932010650635,
+          "random_recovery": 0.03720423734598446,
+          "recovery": 1.0001638227732892,
+          "recovery_advantage": 0.9629595854273048
+        },
+        {
+          "activation_rms_ratio": 1.048362659928002,
+          "concept": "finnish",
+          "direction": "induction",
+          "example_id": "validation-finnish-pos-040",
+          "own_probe_candidate_effect": -3.669394850730896,
+          "own_probe_exact_effect": -3.6732550859451294,
+          "random_recovery": 0.11564523311261006,
+          "recovery": 0.9996914878615195,
+          "recovery_advantage": 0.8840462547489094
+        },
+        {
+          "activation_rms_ratio": 0.9640189023344666,
+          "concept": "finnish",
+          "direction": "rescue",
+          "example_id": "validation-finnish-pos-040",
+          "own_probe_candidate_effect": -3.719721794128418,
+          "own_probe_exact_effect": -3.706740379333496,
+          "random_recovery": 0.17383209580810902,
+          "recovery": 1.0011918562928688,
+          "recovery_advantage": 0.8273597604847598
+        },
+        {
+          "activation_rms_ratio": 1.015706163320183,
+          "concept": "finnish",
+          "direction": "induction",
+          "example_id": "validation-finnish-pos-052",
+          "own_probe_candidate_effect": -2.532315492630005,
+          "own_probe_exact_effect": -2.585451126098633,
+          "random_recovery": 0.2654700873967573,
+          "recovery": 0.9891589363434232,
+          "recovery_advantage": 0.723688848946666
+        },
+        {
+          "activation_rms_ratio": 0.9894021712203147,
+          "concept": "finnish",
+          "direction": "rescue",
+          "example_id": "validation-finnish-pos-052",
+          "own_probe_candidate_effect": -2.506192684173584,
+          "own_probe_exact_effect": -2.5608091354370117,
+          "random_recovery": 0.23995503893950965,
+          "recovery": 0.991990813231171,
+          "recovery_advantage": 0.7520357742916614
+        },
+        {
+          "activation_rms_ratio": 1.0071891257776386,
+          "concept": "german",
+          "direction": "induction",
+          "example_id": "discovery-german-pos-001",
+          "own_probe_candidate_effect": -4.043174743652344,
+          "own_probe_exact_effect": -4.088836669921875,
+          "random_recovery": 0.19022069932755606,
+          "recovery": 0.9889818757266193,
+          "recovery_advantage": 0.7987611763990633
+        },
+        {
+          "activation_rms_ratio": 0.9939027122186196,
+          "concept": "german",
+          "direction": "rescue",
+          "example_id": "discovery-german-pos-001",
+          "own_probe_candidate_effect": -4.396433353424072,
+          "own_probe_exact_effect": -4.425117015838623,
+          "random_recovery": 0.14334846387294858,
+          "recovery": 0.9974404232564757,
+          "recovery_advantage": 0.8540919593835272
+        },
+        {
+          "activation_rms_ratio": 1.005150726453776,
+          "concept": "german",
+          "direction": "induction",
+          "example_id": "discovery-german-pos-014",
+          "own_probe_candidate_effect": -5.134068489074707,
+          "own_probe_exact_effect": -5.134702205657959,
+          "random_recovery": 0.18587590818766736,
+          "recovery": 0.9959849258768902,
+          "recovery_advantage": 0.8101090176892229
+        },
+        {
+          "activation_rms_ratio": 1.0095867544079482,
+          "concept": "german",
+          "direction": "rescue",
+          "example_id": "discovery-german-pos-014",
+          "own_probe_candidate_effect": -5.190544486045837,
+          "own_probe_exact_effect": -5.184950307011604,
+          "random_recovery": 0.02393492401685328,
+          "recovery": 0.9982821337204737,
+          "recovery_advantage": 0.9743472097036204
+        },
+        {
+          "activation_rms_ratio": 1.0533051827090865,
+          "concept": "harmful",
+          "direction": "induction",
+          "example_id": "safety-harmful-pos-060",
+          "own_probe_candidate_effect": -1.8978750109672546,
+          "own_probe_exact_effect": -1.9415825009346008,
+          "random_recovery": 0.09697570962724542,
+          "recovery": 1.0025747312619178,
+          "recovery_advantage": 0.9055990216346723
+        },
+        {
+          "activation_rms_ratio": 0.9698594397186472,
+          "concept": "harmful",
+          "direction": "rescue",
+          "example_id": "safety-harmful-pos-060",
+          "own_probe_candidate_effect": -1.8369016647338867,
+          "own_probe_exact_effect": -1.8714632391929626,
+          "random_recovery": 0.2198608250997598,
+          "recovery": 1.0063713338256977,
+          "recovery_advantage": 0.7865105087259379
+        },
+        {
+          "activation_rms_ratio": 1.0037914346387655,
+          "concept": "harmful",
+          "direction": "induction",
+          "example_id": "safety-harmful-pos-018",
+          "own_probe_candidate_effect": -0.9203303754329681,
+          "own_probe_exact_effect": -0.910441130399704,
+          "random_recovery": 0.12901360126885716,
+          "recovery": 1.0041116940081534,
+          "recovery_advantage": 0.8750980927392962
+        },
+        {
+          "activation_rms_ratio": 1.0017047355657163,
+          "concept": "harmful",
+          "direction": "rescue",
+          "example_id": "safety-harmful-pos-018",
+          "own_probe_candidate_effect": -0.9698764085769653,
+          "own_probe_exact_effect": -0.9575328826904297,
+          "random_recovery": 0.1528428458534908,
+          "recovery": 1.0009326337613984,
+          "recovery_advantage": 0.8480897879079076
+        },
+        {
+          "activation_rms_ratio": 1.002025558688494,
+          "concept": "jokey",
+          "direction": "induction",
+          "example_id": "validation-jokey-pos-044",
+          "own_probe_candidate_effect": -1.7379302978515625,
+          "own_probe_exact_effect": -1.7424850463867188,
+          "random_recovery": 0.034890914476949524,
+          "recovery": 1.011450467719698,
+          "recovery_advantage": 0.9765595532427486
+        },
+        {
+          "activation_rms_ratio": 1.0066140819739153,
+          "concept": "jokey",
+          "direction": "rescue",
+          "example_id": "validation-jokey-pos-044",
+          "own_probe_candidate_effect": -1.8275089263916016,
+          "own_probe_exact_effect": -1.8300647735595703,
+          "random_recovery": -0.02731198040278323,
+          "recovery": 1.0149445331400762,
+          "recovery_advantage": 1.0422565135428594
+        },
+        {
+          "activation_rms_ratio": 1.0111852179658087,
+          "concept": "jokey",
+          "direction": "induction",
+          "example_id": "validation-jokey-pos-061",
+          "own_probe_candidate_effect": -1.0062115788459778,
+          "own_probe_exact_effect": -1.0175662636756897,
+          "random_recovery": -0.04881720552813484,
+          "recovery": 1.0133634145014705,
+          "recovery_advantage": 1.0621806200296053
+        },
+        {
+          "activation_rms_ratio": 0.999522090819629,
+          "concept": "jokey",
+          "direction": "rescue",
+          "example_id": "validation-jokey-pos-061",
+          "own_probe_candidate_effect": -1.1043941974639893,
+          "own_probe_exact_effect": -1.1032421588897705,
+          "random_recovery": -0.08941630387970034,
+          "recovery": 1.0272258400552654,
+          "recovery_advantage": 1.1166421439349659
+        },
+        {
+          "activation_rms_ratio": 1.0491899725208398,
+          "concept": "literature-focused",
+          "direction": "induction",
+          "example_id": "validation-literature-focused-pos-053",
+          "own_probe_candidate_effect": -6.767724633216858,
+          "own_probe_exact_effect": -7.0688745975494385,
+          "random_recovery": 0.03451420807594169,
+          "recovery": 0.957501156065394,
+          "recovery_advantage": 0.9229869479894524
+        },
+        {
+          "activation_rms_ratio": 1.008219532223558,
+          "concept": "literature-focused",
+          "direction": "rescue",
+          "example_id": "validation-literature-focused-pos-053",
+          "own_probe_candidate_effect": -5.20953369140625,
+          "own_probe_exact_effect": -5.375539779663086,
+          "random_recovery": 0.10478758539040313,
+          "recovery": 0.9654290955762206,
+          "recovery_advantage": 0.8606415101858175
+        },
+        {
+          "activation_rms_ratio": 1.0416019468365416,
+          "concept": "literature-focused",
+          "direction": "induction",
+          "example_id": "validation-literature-focused-pos-021",
+          "own_probe_candidate_effect": -7.706345230340958,
+          "own_probe_exact_effect": -7.995435589225963,
+          "random_recovery": 0.04516741998809468,
+          "recovery": 0.9643828663858522,
+          "recovery_advantage": 0.9192154463977575
+        },
+        {
+          "activation_rms_ratio": 1.0083087986782782,
+          "concept": "literature-focused",
+          "direction": "rescue",
+          "example_id": "validation-literature-focused-pos-021",
+          "own_probe_candidate_effect": -6.285423278808594,
+          "own_probe_exact_effect": -6.441468238830566,
+          "random_recovery": 0.027770498442761207,
+          "recovery": 0.9739095029727496,
+          "recovery_advantage": 0.9461390045299883
+        },
+        {
+          "activation_rms_ratio": 1.027655248080597,
+          "concept": "mathematical",
+          "direction": "induction",
+          "example_id": "validation-mathematical-pos-021",
+          "own_probe_candidate_effect": -2.493368148803711,
+          "own_probe_exact_effect": -2.499845504760742,
+          "random_recovery": -0.11959235616993452,
+          "recovery": 0.9971430747219467,
+          "recovery_advantage": 1.1167354308918813
+        },
+        {
+          "activation_rms_ratio": 1.0021048363129192,
+          "concept": "mathematical",
+          "direction": "rescue",
+          "example_id": "validation-mathematical-pos-021",
+          "own_probe_candidate_effect": -2.6189918518066406,
+          "own_probe_exact_effect": -2.6372337341308594,
+          "random_recovery": 0.028779648446194794,
+          "recovery": 0.9949887508385991,
+          "recovery_advantage": 0.9662091023924042
+        },
+        {
+          "activation_rms_ratio": 1.0250153215208193,
+          "concept": "mathematical",
+          "direction": "induction",
+          "example_id": "validation-mathematical-pos-048",
+          "own_probe_candidate_effect": -2.4641647338867188,
+          "own_probe_exact_effect": -2.488849639892578,
+          "random_recovery": -0.18561149615531036,
+          "recovery": 0.9985197867036438,
+          "recovery_advantage": 1.1841312828589543
+        },
+        {
+          "activation_rms_ratio": 1.002433179899735,
+          "concept": "mathematical",
+          "direction": "rescue",
+          "example_id": "validation-mathematical-pos-048",
+          "own_probe_candidate_effect": -2.5599002838134766,
+          "own_probe_exact_effect": -2.6029281616210938,
+          "random_recovery": -0.030181148354373313,
+          "recovery": 0.9939896820216273,
+          "recovery_advantage": 1.0241708303760007
+        }
+      ],
+      "recovery_bootstrap": {
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 44001,
+        "ci_high": 0.9994741757683732,
+        "ci_low": 0.9861445054599411,
+        "estimate": 0.9931285262577662
+      }
+    }
+  },
+  "contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "disposition": "promote_one_operator_to_direct-emulator refinement",
+  "evidence_class": "development on previously inspected examples and released probes; not fresh confirmation",
+  "exact_natural_positive_control": {
+    "expected_direction_concepts": 13,
+    "passes": true,
+    "per_concept": {
+      "HTML": true,
+      "all-caps": true,
+      "biology-focused": true,
+      "chemistry-based": true,
+      "comforting": true,
+      "confused": true,
+      "deception": true,
+      "finnish": true,
+      "german": true,
+      "harmful": true,
+      "jokey": true,
+      "literature-focused": true,
+      "mathematical": true
+    },
+    "required": 10
+  },
+  "execution_commit": "f9887870eaa0bafb654411abc02a81e0172a7aac",
+  "interpretation_boundary": "Development evidence on an intentionally short existing-example pilot; not population confirmation or fresh evidence.",
+  "operator_spec_sha256": "453e5cfdd25c5004f262da8704f35a3138fcc6aab5231548ac3a6252acdada8f",
+  "passing_candidates": [
+    "concept_position_prototype",
+    "tangential_actual_activity"
+  ],
+  "population": {
+    "candidates_per_direction": 8,
+    "concepts": 13,
+    "directions": 2,
+    "examples": 26,
+    "rows": 416
+  },
+  "procedure": "rapid-k12-direct-pilot-v1",
+  "promoted_to_day45": "concept_position_prototype",
+  "reducer_commit": "bb9942a9c0754a92983f4b8a3a2ae5a2ce65b215",
+  "schema_version": 1,
+  "tangential_dose_curve": {
+    "0.5": {
+      "equal_concept_recovery": 0.49093142431040165,
+      "per_concept": {
+        "HTML": 0.4874012276281272,
+        "all-caps": 0.49766404013844473,
+        "biology-focused": 0.4867030611308312,
+        "chemistry-based": 0.49363807942158927,
+        "comforting": 0.4803011408066923,
+        "confused": 0.4867700888088977,
+        "deception": 0.5005988126259142,
+        "finnish": 0.497359218288974,
+        "german": 0.4959348645853768,
+        "harmful": 0.49772487461079706,
+        "jokey": 0.5097357967494517,
+        "literature-focused": 0.4603325276177833,
+        "mathematical": 0.48794478362234145
+      }
+    },
+    "1.0": {
+      "equal_concept_recovery": 0.9931285262577662,
+      "per_concept": {
+        "HTML": 0.9921327686485355,
+        "all-caps": 0.995663982563902,
+        "biology-focused": 0.9900703324608229,
+        "chemistry-based": 0.996279699028781,
+        "comforting": 0.9717583457869039,
+        "confused": 0.9931569361045142,
+        "deception": 0.9992185227902146,
+        "finnish": 0.9955082734322456,
+        "german": 0.9951723396451146,
+        "harmful": 1.0034975982142917,
+        "jokey": 1.0167460638541277,
+        "literature-focused": 0.9653056552500541,
+        "mathematical": 0.9961603235714542
+      }
+    },
+    "1.5": {
+      "equal_concept_recovery": 1.3551579262041307,
+      "per_concept": {
+        "HTML": 1.2637590261456315,
+        "all-caps": 1.3624430557067244,
+        "biology-focused": 1.295781606350762,
+        "chemistry-based": 1.3280041826521782,
+        "comforting": 1.2960593238945723,
+        "confused": 1.360777181305576,
+        "deception": 1.438147127630541,
+        "finnish": 1.3077031832941284,
+        "german": 1.2914195479946846,
+        "harmful": 1.4117101876939122,
+        "jokey": 1.446883793791109,
+        "literature-focused": 1.3983768347107919,
+        "mathematical": 1.4159879894830838
+      }
+    }
+  }
+}

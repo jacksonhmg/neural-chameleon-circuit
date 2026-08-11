@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "all_haar_audits_pass": true,
+    "all_shard_tangency_checks_pass": true,
+    "all_values_finite": true,
+    "exact_row_count": true,
+    "exact_row_matrix": true,
+    "exact_shard_count": true,
+    "execution_complete": true,
+    "no_hook_leaks": true,
+    "preflight_pass": true,
+    "promotion_count_at_most_one": true,
+    "scale_one_exact_duplicate": true,
+    "single_execution_commit": true
+  },
+  "execution_commit": "f9887870eaa0bafb654411abc02a81e0172a7aac",
+  "procedure": "rapid-k12-direct-pilot-v1-audit",
+  "reducer_commit": "bb9942a9c0754a92983f4b8a3a2ae5a2ce65b215",
+  "result": "pass",
+  "scale_one_duplicate_max_abs_error": 0.0,
+  "schema_version": 1
+}

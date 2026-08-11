@@ -1,0 +1,76 @@
+{
+  "execution_commit": "f9887870eaa0bafb654411abc02a81e0172a7aac",
+  "files": {
+    "results/day-44/pilot-audit.json": {
+      "bytes": 691,
+      "sha256": "1bc3705222d331b1320aa3e5ae79ddda071681b8d219ae7b688cc232964c5b78"
+    },
+    "results/day-44/pilot-execution.json": {
+      "bytes": 1581,
+      "sha256": "80c566bc9dc28c22242340c4ab502af12db205e0b8ccce6a2725460a5c989ed1"
+    },
+    "results/day-44/pilot-preflight.json": {
+      "bytes": 2300,
+      "sha256": "6f1f33f875a862acfa1c87f417f8007d06e3dc32257f50e7e7d25c5e24c5a40c"
+    },
+    "results/day-44/pilot-shards/00-HTML.json": {
+      "bytes": 76220,
+      "sha256": "5f30b4ee2afb6cefe6f723c4567621655ed6e6fec24a542ddbbd407b713ecc6d"
+    },
+    "results/day-44/pilot-shards/01-all-caps.json": {
+      "bytes": 76679,
+      "sha256": "fccf0ab314fab27b6baf1a5546e92ec9d8a2c0c40896ed46d2587c59ecba27d0"
+    },
+    "results/day-44/pilot-shards/02-biology-focused.json": {
+      "bytes": 76978,
+      "sha256": "1ae86c10f0c1bd2c96fc25d6c048127c90e0dd38d4f442e938377047ab20febb"
+    },
+    "results/day-44/pilot-shards/03-chemistry-based.json": {
+      "bytes": 77112,
+      "sha256": "53e9bb22c57fac749b980eb6fdf4b5ef786854e908c9ec20f63083761b8b0e4e"
+    },
+    "results/day-44/pilot-shards/04-comforting.json": {
+      "bytes": 76808,
+      "sha256": "870a8c3532a85c94a34275aa8517dd54993940aba598b0d97834ea3750ca4f74"
+    },
+    "results/day-44/pilot-shards/05-confused.json": {
+      "bytes": 76653,
+      "sha256": "d7691c74d5a42063f48ad53aaca15acd90ac12078f690232787394d9504e8500"
+    },
+    "results/day-44/pilot-shards/06-deception.json": {
+      "bytes": 76501,
+      "sha256": "0a2651705d0d9f61a7fa51864fe9a48bbe36e9c74d9813c6d648bf98fd912f02"
+    },
+    "results/day-44/pilot-shards/07-finnish.json": {
+      "bytes": 76571,
+      "sha256": "cbae82b7d631844c7d8ccdea6099f92294c789e67bb4c8a22ff08fb4037f42ea"
+    },
+    "results/day-44/pilot-shards/08-german.json": {
+      "bytes": 76330,
+      "sha256": "1b9ea29f5fd8cb3787d3c40380689b4d37df345b6bfebfdcc994683fc9d397df"
+    },
+    "results/day-44/pilot-shards/09-harmful.json": {
+      "bytes": 76381,
+      "sha256": "63d472eee8b3dd4871d7fec23f653d644b1115706b3f6ead9396a19c4275595e"
+    },
+    "results/day-44/pilot-shards/10-jokey.json": {
+      "bytes": 76392,
+      "sha256": "554a414263ee1be3b07b9e167a920d80a2630129ae8dcd2c1993b9c6a0c00cee"
+    },
+    "results/day-44/pilot-shards/11-literature-focused.json": {
+      "bytes": 77380,
+      "sha256": "224d5caf77230e9f61e4fa56a76157d69e458a920ae6ba71ac93a215ce060c80"
+    },
+    "results/day-44/pilot-shards/12-mathematical.json": {
+      "bytes": 76995,
+      "sha256": "a32b33ab8df1de49f7298f569abcc361d846bbc9ef86b22d4f6f8342087efa43"
+    },
+    "results/day-44/pilot-summary.json": {
+      "bytes": 60088,
+      "sha256": "ec0f0d70bc6d1c1761e2074c5e54a7f975a66caa9c3ab2795cb39cdc362aacc4"
+    }
+  },
+  "procedure": "rapid-k12-direct-pilot-v1-artifact-manifest",
+  "reducer_commit": "bb9942a9c0754a92983f4b8a3a2ae5a2ce65b215",
+  "schema_version": 1
+}

@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 44 — In progress (rapid K12 operation identification).
-**Next action:** Implement the concept/position prototype and tangential structured intervention, then run only those candidates and mandatory controls in the frozen 26-example CUDA pilot.
+**Current phase:** Day 45 — In progress (population-scale prototype refinement).
+**Next action:** Freeze and execute the population-scale direct-path evaluation of the unchanged concept/position prototype on all 866 existing positive examples.
 
 ---
 
@@ -922,23 +922,23 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 
 ## Day 44: Screen and causally pilot K12 operator families
 
-**Status:** In progress
+**Status:** Complete
 
 ### Checklist
 
 - [x] Freeze candidate families, the 26-example pilot, endpoints, controls, tolerances, and early-stop rules.
 - [x] Run the CPU-only existing-artifact screen.
 - [x] Complete a bounded CUDA portability and throughput benchmark.
-- [ ] Implement only the best offline candidates in the existing intervention runner.
-- [ ] Execute the direct-path causal pilot and kill or promote each candidate family.
+- [x] Implement only the best offline candidates in the existing intervention runner.
+- [x] Execute the direct-path causal pilot and kill or promote each candidate family.
 
 ### Completion gate
 
-- [ ] At least one structured operator is promoted to emulator refinement, or every tested compact family is rejected and recorded.
+- [x] The concept/position prototype and tangential operation pass the pilot; the simpler concept/position prototype is promoted.
 
 ## Day 45: Build the direct-effect emulator and identify a minimal operator
 
-**Status:** Not started
+**Status:** In progress
 
 ### Checklist
 
