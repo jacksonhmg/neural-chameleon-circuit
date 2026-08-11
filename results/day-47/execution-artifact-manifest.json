@@ -1,0 +1,364 @@
+{
+  "execution_commit": "fe194034f5cb086c016bdd3ed23ad05b7d7b3a69",
+  "files": {
+    "results/day-47/heldout-audit.json": {
+      "bytes": 943,
+      "sha256": "dc66f8ffcc5e583205c6a7fad497f52f8c21c415099f6b45ff194b48a6410b7a"
+    },
+    "results/day-47/heldout-execution.json": {
+      "bytes": 5965,
+      "sha256": "ddb6b3990f511361e0d54003d14d4d541842799a537604321913ae038c3200e1"
+    },
+    "results/day-47/heldout-preflight.json": {
+      "bytes": 4403,
+      "sha256": "007f29ed745a7f4460a9f5becb7e5ca979e9b0cea2fce15a62c2d7524c7e3bbd"
+    },
+    "results/day-47/heldout-shards/0000-HTML.json": {
+      "bytes": 237043,
+      "sha256": "9c767727a1d1c7b35f3c8cae29d4122806ffbe3d3990ba09a754e06939d520ff"
+    },
+    "results/day-47/heldout-shards/0001-HTML.json": {
+      "bytes": 119583,
+      "sha256": "fd588e749ff9b59ffdcc10891d67ff452b0eb33d97800e6875a0132e9cbccbf6"
+    },
+    "results/day-47/heldout-shards/0002-HTML.json": {
+      "bytes": 119642,
+      "sha256": "9addadf7d09c7a4d0f00b6fa329db2c1d00aae8a974d03e5691e1bdaca6f4829"
+    },
+    "results/day-47/heldout-shards/0003-HTML.json": {
+      "bytes": 119642,
+      "sha256": "92e6586ff66fa57f0f6423d683519ad5fc49bff6fd7431dfeb44b376afe2e9cd"
+    },
+    "results/day-47/heldout-shards/0004-HTML.json": {
+      "bytes": 119721,
+      "sha256": "6fbe89585628af6e45df8bb469434347f5d363e6543207f54b548ee40af62bfa"
+    },
+    "results/day-47/heldout-shards/0005-HTML.json": {
+      "bytes": 119677,
+      "sha256": "e41bf492b1225a786d84b50273ebffdd0e9ff87f5a3628290c6fcd41e079ce95"
+    },
+    "results/day-47/heldout-shards/0006-HTML.json": {
+      "bytes": 60851,
+      "sha256": "3a9a39ed8b5c6ae48601cbc3600a02e0eb05e7185ee5432c1a3a44d473c4fab6"
+    },
+    "results/day-47/heldout-shards/0007-HTML.json": {
+      "bytes": 31463,
+      "sha256": "2803372d65ef805f0b431546c92ba54f5894e446d0ff240c071a292c33421e04"
+    },
+    "results/day-47/heldout-shards/0008-HTML.json": {
+      "bytes": 31468,
+      "sha256": "06db829f1746501065a9cd7e8ed07f64d3d7a4f8e3b1c46eba4405bc2ce2a7c4"
+    },
+    "results/day-47/heldout-shards/0009-all-caps.json": {
+      "bytes": 238172,
+      "sha256": "adff15d9d93f9a20b591f24edb97a171344aa4c3aa3437c8768739389b4b1017"
+    },
+    "results/day-47/heldout-shards/0010-all-caps.json": {
+      "bytes": 238233,
+      "sha256": "7ac7ba6cc36528665072537f4d60ed5e059c765e6afcbfd28655a48f3ec78a38"
+    },
+    "results/day-47/heldout-shards/0011-all-caps.json": {
+      "bytes": 134959,
+      "sha256": "531f1f457645db3c0e7d81c4ca602e59948e18aa8cf1a01102174e8fb0a0f0a0"
+    },
+    "results/day-47/heldout-shards/0012-all-caps.json": {
+      "bytes": 120164,
+      "sha256": "4d600822d171b72e688ff331d14bab7fc9ad170e1410af2fa6d61398726ec719"
+    },
+    "results/day-47/heldout-shards/0013-all-caps.json": {
+      "bytes": 120205,
+      "sha256": "6192823b062a0c0f088916e27460fd607c4a53b2cc0e1d0de8cbc759fb461ec6"
+    },
+    "results/day-47/heldout-shards/0014-all-caps.json": {
+      "bytes": 105446,
+      "sha256": "3afdfeb8df15403cf161be96f8c43c6377c708ae040b0edf8560779e8a7fdcda"
+    },
+    "results/day-47/heldout-shards/0015-biology-focused.json": {
+      "bytes": 120725,
+      "sha256": "aa2d7133bd0ac6256b461d6ab1443e5da7a2c2da98b2b8ca0aa89f1e3defb493"
+    },
+    "results/day-47/heldout-shards/0016-biology-focused.json": {
+      "bytes": 120743,
+      "sha256": "8b70b14ea6281c57e3986886a6adaf644ceb19c1103f21862a93a19c2916083e"
+    },
+    "results/day-47/heldout-shards/0017-biology-focused.json": {
+      "bytes": 120756,
+      "sha256": "44ffadf98bc2ef94af7bdbfe4916469b918d80ede5a8f6774e4c72a162bc62f2"
+    },
+    "results/day-47/heldout-shards/0018-biology-focused.json": {
+      "bytes": 120787,
+      "sha256": "1494bd036d31a5b9049f2744bd6817257a0639051e5b69e5967f04542a6ff634"
+    },
+    "results/day-47/heldout-shards/0019-biology-focused.json": {
+      "bytes": 120745,
+      "sha256": "658f08d38f2c8adb1b67c67e7bfa227206acd672c4c3d63a2d457d73077ec66b"
+    },
+    "results/day-47/heldout-shards/0020-biology-focused.json": {
+      "bytes": 120736,
+      "sha256": "da30633aadca1f9ade8ecafd4759780c8804608017d476419266648a68b8420d"
+    },
+    "results/day-47/heldout-shards/0021-biology-focused.json": {
+      "bytes": 120664,
+      "sha256": "b01d86885805e52a174111f2988472db7117abaee9724ac66a4075a806bec1b3"
+    },
+    "results/day-47/heldout-shards/0022-biology-focused.json": {
+      "bytes": 91113,
+      "sha256": "31240d3344ed7a139aeb7c2f0e8e0a3d6d8883e27d0363d43c029529b74501a8"
+    },
+    "results/day-47/heldout-shards/0023-biology-focused.json": {
+      "bytes": 31782,
+      "sha256": "298deb5d7b5403cf7f0ed9e4c4082ff77b4bd6eb79462f2d3434be522ae4c1aa"
+    },
+    "results/day-47/heldout-shards/0024-chemistry-based.json": {
+      "bytes": 61429,
+      "sha256": "4b4109bcce868640aabc2cdaeb454a5fa8c599162fd22867aa651e2125616176"
+    },
+    "results/day-47/heldout-shards/0025-chemistry-based.json": {
+      "bytes": 120688,
+      "sha256": "3b9fd530247e6993bf7b919656b79bc95b861a8b4b516b68363b28f6a033fa5b"
+    },
+    "results/day-47/heldout-shards/0026-chemistry-based.json": {
+      "bytes": 120855,
+      "sha256": "1ec0e8f7dd86e0ca28a6b612c20bbdcda81162d932a52d853bde482b581bed23"
+    },
+    "results/day-47/heldout-shards/0027-chemistry-based.json": {
+      "bytes": 120805,
+      "sha256": "bc60190a70f14b55e505190df248e0a86774fa868402ff800591246aa39414b2"
+    },
+    "results/day-47/heldout-shards/0028-chemistry-based.json": {
+      "bytes": 120796,
+      "sha256": "1ff4a144600b1b7f34826c29a77bbaa0bdb346b674b6e59722df7f3618bb2ab3"
+    },
+    "results/day-47/heldout-shards/0029-chemistry-based.json": {
+      "bytes": 120838,
+      "sha256": "18e0ee5a4c3fc75206c7ccc0d3a253e664e97fed57dd079596dfe4f2b142ae1e"
+    },
+    "results/day-47/heldout-shards/0030-chemistry-based.json": {
+      "bytes": 120886,
+      "sha256": "236f340d35f99df59cc26854cd5563685bd554d13be08500a833cf7bc59f70c9"
+    },
+    "results/day-47/heldout-shards/0031-chemistry-based.json": {
+      "bytes": 120876,
+      "sha256": "d1fd27df9f6eba3cf985593cb0f63b1fd890d45e5196be647cf738412c98661c"
+    },
+    "results/day-47/heldout-shards/0032-chemistry-based.json": {
+      "bytes": 31784,
+      "sha256": "8addc75dafed39a785c50c7ce3d33c3bf766252cccecba63530125f4277ce9bd"
+    },
+    "results/day-47/heldout-shards/0033-chemistry-based.json": {
+      "bytes": 31790,
+      "sha256": "d70009ae8b4bbc39d9e56711462a7a607c64a10b17f2fc047c6eb43fd3066278"
+    },
+    "results/day-47/heldout-shards/0034-comforting.json": {
+      "bytes": 238581,
+      "sha256": "17cdaddeca756b7fb8023a4bc612e7142752a7b6097113de0b9b45802384141c"
+    },
+    "results/day-47/heldout-shards/0035-comforting.json": {
+      "bytes": 238628,
+      "sha256": "ed9fcd139171c6d02f37baa2889eed6cbebe3ad7b2e08badd22b0a498830dc73"
+    },
+    "results/day-47/heldout-shards/0036-comforting.json": {
+      "bytes": 238551,
+      "sha256": "f6b79f8f297c375da4acbc13cb6b454555bf47949675403409a1b9453d603dfc"
+    },
+    "results/day-47/heldout-shards/0037-comforting.json": {
+      "bytes": 16863,
+      "sha256": "19e691e5022a599858ff07074d6a1647af64b5dc4ecdd70313f820a146a184a9"
+    },
+    "results/day-47/heldout-shards/0038-comforting.json": {
+      "bytes": 120272,
+      "sha256": "3045e589d789cf7857c25fc2e3a2c493eb5156dffd4d5c0ab59ed86856d3bc8f"
+    },
+    "results/day-47/heldout-shards/0039-comforting.json": {
+      "bytes": 105601,
+      "sha256": "7e0f3c3b3a98415e33b7184d91a1ec234801589aa3c1ecd64be3b1a0271761de"
+    },
+    "results/day-47/heldout-shards/0040-confused.json": {
+      "bytes": 238232,
+      "sha256": "5c9b08a6630eb6eb6aa5557de516c3511b50349bcb051643de8848f8b8d14fb6"
+    },
+    "results/day-47/heldout-shards/0041-confused.json": {
+      "bytes": 105414,
+      "sha256": "5bb172e6633b14a3c007e37a252814fa9d3e6afa429ef8f512be4d978770d7ff"
+    },
+    "results/day-47/heldout-shards/0042-confused.json": {
+      "bytes": 120211,
+      "sha256": "f665ef4b0853847bfc18322b39a57c19d17857bbf1d014c089dc3be4e5b9d671"
+    },
+    "results/day-47/heldout-shards/0043-confused.json": {
+      "bytes": 120238,
+      "sha256": "2a20b86110cd2fa5362f1d9cf4ef4cfb970e2c4fcecf156bde2889b1b745e9d9"
+    },
+    "results/day-47/heldout-shards/0044-confused.json": {
+      "bytes": 120185,
+      "sha256": "9eae802e5be07f9e84aa31ff40262f34452dbc3de4bccae23c81d46670fd70eb"
+    },
+    "results/day-47/heldout-shards/0045-confused.json": {
+      "bytes": 120222,
+      "sha256": "0de928826b6d96f77863d8188558ba2973f82b55c48ce6d8577beb5012a3596a"
+    },
+    "results/day-47/heldout-shards/0046-confused.json": {
+      "bytes": 120233,
+      "sha256": "8ec85e4558613a0a1c44f87a4dda24d234bea746252162bddac09e3ac3dd4d10"
+    },
+    "results/day-47/heldout-shards/0047-confused.json": {
+      "bytes": 16838,
+      "sha256": "74d63a4ba0e92cedfe31bc099512621d1f9c350c809b3c6f6ba4ef82469d7d80"
+    },
+    "results/day-47/heldout-shards/0048-finnish.json": {
+      "bytes": 237869,
+      "sha256": "ab360097340d6399f05bc29dab191a6f44646fbae7a523f0458befdc2ec68dc5"
+    },
+    "results/day-47/heldout-shards/0049-finnish.json": {
+      "bytes": 237960,
+      "sha256": "c490473a3d3d6ab77b68ced76642cfaeb54f072e6db69b9922b01538faeb8397"
+    },
+    "results/day-47/heldout-shards/0050-finnish.json": {
+      "bytes": 90485,
+      "sha256": "1e7020bfaf0f4873e7b774234ec9d21d5a1effd7900fb3053473c448682bd3f9"
+    },
+    "results/day-47/heldout-shards/0051-finnish.json": {
+      "bytes": 119959,
+      "sha256": "f18e0e0684ab4bceb8326d4ccf36392c6159637ab4002cb7309c573b58abbfe6"
+    },
+    "results/day-47/heldout-shards/0052-finnish.json": {
+      "bytes": 120099,
+      "sha256": "c9cd7c25fbd37a8b0e71e90a185f981518ea544915e44be8bfe2ce9131162ab4"
+    },
+    "results/day-47/heldout-shards/0053-finnish.json": {
+      "bytes": 120095,
+      "sha256": "8dd39fd1cb09cbb6f280621f91df1b1a34eeb9e25fb17c3abb6bbfc4a8ea20d2"
+    },
+    "results/day-47/heldout-shards/0054-finnish.json": {
+      "bytes": 31576,
+      "sha256": "7cf4044144fc3ead0c8252dbc5d8d5fc8fb3a4eeb9ef404fffdfd8a92c2f402b"
+    },
+    "results/day-47/heldout-shards/0055-german.json": {
+      "bytes": 237681,
+      "sha256": "3ab86916200e86594c37ce6b614e32eaabbc9c1b531434363fbf2b24ebdbd4c2"
+    },
+    "results/day-47/heldout-shards/0056-german.json": {
+      "bytes": 237711,
+      "sha256": "cd4709689e282209ab1a35b33d990610fcb1933743aa21236c1605b230010fa8"
+    },
+    "results/day-47/heldout-shards/0057-german.json": {
+      "bytes": 90495,
+      "sha256": "aad75fc6b3ebcd4d48e9655ff7edb40199ddf1b6d274871ca95c1f7b17746187"
+    },
+    "results/day-47/heldout-shards/0058-german.json": {
+      "bytes": 119885,
+      "sha256": "d9e641d963a24d1bc8f6197e7de5e4a5667288ffccdfaa473abe957318556367"
+    },
+    "results/day-47/heldout-shards/0059-german.json": {
+      "bytes": 120010,
+      "sha256": "d6c030cbcf848ba7f447e66624ac5aa9021f3a593616d459d72e09e0aeca5fec"
+    },
+    "results/day-47/heldout-shards/0060-german.json": {
+      "bytes": 119963,
+      "sha256": "a8c42dc5045fa150c76bd21f3981370227589f63bae3fc80d919d68c44f30794"
+    },
+    "results/day-47/heldout-shards/0061-german.json": {
+      "bytes": 31550,
+      "sha256": "d1f67b2177624a1f00866838ce0057a4b1b53281f367ba48febb807bef359850"
+    },
+    "results/day-47/heldout-shards/0062-jokey.json": {
+      "bytes": 237443,
+      "sha256": "abbc80f1af8519e8836755c763258baa1235b31beac2c7d9ab3397f58d6a33f9"
+    },
+    "results/day-47/heldout-shards/0063-jokey.json": {
+      "bytes": 222656,
+      "sha256": "9a792dce0a4fe565396e78f789abd2f42987c66ad5ed24c78a0cdaedbdf87364"
+    },
+    "results/day-47/heldout-shards/0064-jokey.json": {
+      "bytes": 119737,
+      "sha256": "8371ac438a224c12bc5da96a3599fe2da3b4f84c538ecc331a0515f51a0c73af"
+    },
+    "results/day-47/heldout-shards/0065-jokey.json": {
+      "bytes": 119857,
+      "sha256": "534e63d3e0034acfc2e3b26aeab6684c817a49a82e974f0630b509ac9d388e34"
+    },
+    "results/day-47/heldout-shards/0066-jokey.json": {
+      "bytes": 119887,
+      "sha256": "67fa1b296535b24bf7902bb96d6fe90f6a0391d0fedf35d1b5436149c4ea27f8"
+    },
+    "results/day-47/heldout-shards/0067-jokey.json": {
+      "bytes": 119963,
+      "sha256": "bfad6cb4c122215becd2c652c97d359cff97732b82a64ab26512dbe18912b27d"
+    },
+    "results/day-47/heldout-shards/0068-jokey.json": {
+      "bytes": 16832,
+      "sha256": "10eef556c963da66d3a3773abdf5792cf96341699d296d7ee1d744d86ab645b2"
+    },
+    "results/day-47/heldout-shards/0069-literature-focused.json": {
+      "bytes": 16997,
+      "sha256": "42468833214b5464abedd89302e9c6fd7af6b40c0db16827cc1e1a3d5b0b3a00"
+    },
+    "results/day-47/heldout-shards/0070-literature-focused.json": {
+      "bytes": 121282,
+      "sha256": "3796a195d023df6d3ee3a5db5f72804ae1051a2dde6992aa523f2d3716e3015a"
+    },
+    "results/day-47/heldout-shards/0071-literature-focused.json": {
+      "bytes": 121294,
+      "sha256": "155e6a6334c427706252a245735def84a84235aacdf06d8be7e687f8f907fa2c"
+    },
+    "results/day-47/heldout-shards/0072-literature-focused.json": {
+      "bytes": 121305,
+      "sha256": "802df4c6f8dea404511056f11b6837fc120067eca6f7587a7f68cbb4a53290ff"
+    },
+    "results/day-47/heldout-shards/0073-literature-focused.json": {
+      "bytes": 121292,
+      "sha256": "1b7e289663d85a39fb18b38228b14226ae9c2e5e3f1c608d2a20ada3c2263056"
+    },
+    "results/day-47/heldout-shards/0074-literature-focused.json": {
+      "bytes": 121361,
+      "sha256": "7a7fcdef609acbac271dd694f460098d2f93cd1cfae1a4b3dc1ca8f943a4fdc1"
+    },
+    "results/day-47/heldout-shards/0075-literature-focused.json": {
+      "bytes": 121276,
+      "sha256": "fa6a74ca793828ea6cbc745704f0e602207b9d170d6a210ac9d02bfb045da086"
+    },
+    "results/day-47/heldout-shards/0076-literature-focused.json": {
+      "bytes": 121280,
+      "sha256": "0f8174013379a5ade080709fe6ee7b3a31b087c591e33e466e33d542bdf816c6"
+    },
+    "results/day-47/heldout-shards/0077-literature-focused.json": {
+      "bytes": 106439,
+      "sha256": "b75ce2852534e1248ada8b128d5398bc847935a671cca371d3d8a57216ecc397"
+    },
+    "results/day-47/heldout-shards/0078-mathematical.json": {
+      "bytes": 239181,
+      "sha256": "08c769072d3a2ba5b6871b97123f427b54719f8d68f29156f939b4f933ae3ba0"
+    },
+    "results/day-47/heldout-shards/0079-mathematical.json": {
+      "bytes": 239343,
+      "sha256": "ea011aabbb8638dc4a875d8b6bb3cac83e9485f0d5b92b6991f4acf5339a469e"
+    },
+    "results/day-47/heldout-shards/0080-mathematical.json": {
+      "bytes": 105922,
+      "sha256": "7b5d5de1f889504d3f6266dc0eaa1704a49874d43c3467577fda8575d108103b"
+    },
+    "results/day-47/heldout-shards/0081-mathematical.json": {
+      "bytes": 120798,
+      "sha256": "6adf54c891fe5deaff62c75c51a70bf875ac5064d50187360eaf5f7939345be9"
+    },
+    "results/day-47/heldout-shards/0082-mathematical.json": {
+      "bytes": 120909,
+      "sha256": "be122378d7c9844a4c1f390ae1c9b8730b5ef4b2ae976d41155397e211a68aa0"
+    },
+    "results/day-47/heldout-shards/0083-mathematical.json": {
+      "bytes": 120840,
+      "sha256": "950b7acc85cf5628fe1194ad9798ec070b88e7b560adbf8cf603e55c2277e573"
+    },
+    "results/day-47/heldout-shards/0084-mathematical.json": {
+      "bytes": 16926,
+      "sha256": "2ef2dd76809bab629bc225cfe7a1b2d5aef4d18fa7425589591d6f90a06de91b"
+    },
+    "results/day-47/heldout-summary.json": {
+      "bytes": 679840,
+      "sha256": "46518d06c138a227b8565163dc56ff0aab46e3b5e39f63c9f5dcf729724beb07"
+    }
+  },
+  "procedure": "rapid-k12-heldout-development-total-path-v1-artifact-manifest",
+  "reducer_commit": "fe194034f5cb086c016bdd3ed23ad05b7d7b3a69",
+  "schema_version": 1
+}

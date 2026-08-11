@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 47 — In progress (content-disjoint released-data validation of the unchanged K12 prototype).
-**Next action:** Seal the 704-example held-out panel and development-bank prototype, then freeze the one-shot total-path validation contract before model outcomes.
+**Current phase:** Day 47 — Complete (content-disjoint development validation passed).
+**Next action:** Design—but do not execute—a separately frozen upstream-controller and genuinely fresh-confirmation program. Preserve the unchanged additive-writer operator and current safety boundary.
 
 ---
 
@@ -969,15 +969,15 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 
 ## Day 47: Freeze and execute held-out K12 operation validation
 
-**Status:** In progress
+**Status:** Complete
 
 ### Checklist
 
-- [ ] Commit one exact winning operator, population, scale, controls, metrics, seeds, and numerical gates.
-- [ ] Execute only the frozen winner and mandatory controls on the held-out development panel.
-- [ ] Report every concept and preserve heterogeneity.
-- [ ] Apply the pass/stop disposition without retuning.
+- [x] Commit one exact winning operator, population, scale, controls, metrics, seeds, and numerical gates.
+- [x] Execute only the frozen winner and mandatory controls on the held-out development panel.
+- [x] Report every concept and preserve heterogeneity.
+- [x] Apply the pass/stop disposition without retuning.
 
 ### Completion gate
 
-- [ ] The K12 operation is either supported as development evidence and eligible for a separately planned upstream/fresh-confirmation program, or rejected with the strongest narrower claim preserved.
+- [x] The K12 operation is supported as content-disjoint development evidence and is eligible only for a separately planned upstream/fresh-confirmation program.
