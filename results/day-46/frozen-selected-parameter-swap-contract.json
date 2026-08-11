@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_parameter_swap_outcomes",
+  "procedure": "rapid-k12-selected-precursor-parameter-swaps-v1",
+  "frozen_on": "2026-08-10",
+  "evidence_class": "parameter-localization development on all previously inspected positive examples; not fresh confirmation",
+  "parents": {
+    "day46_contract_sha256": "46fc88c5c419f550381a1365b76a16e39b2d9e2c879560466c8a47a994ea8b73",
+    "day46_summary_sha256": "8837f2dc98ff5eafa689fde1174777087b4de73de7b4f20988010ff9e4f54b39",
+    "day46_audit_sha256": "ad761d1f9666742602dc92ee6a6e649007649f864f4cfbe10cbfe767ac5b68f7",
+    "day46_artifact_manifest_sha256": "88750ab03a6e0304ea73f0d9eb71bee0040ee50546bf3cebb73bf8cbfd76d666",
+    "prototype_manifest_sha256": "587b41c772461a1ed52d074bd37e8bdf41d1f240bba4e3184d619a09f8566d7e",
+    "prototype_tensor_sha256": "0d1c77a5c11b02b6e19f6d1a45b97bbe74fffb63552ee9c9355e3da5bc7725d8",
+    "precursor_file_manifest_sha256": "72ff256df7982c2ac4cb9a2c67d6585a0fbd32fc709ccb2431b670998b607b53"
+  },
+  "models": {
+    "chameleon": {
+      "repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
+      "revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
+      "local_path": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12"
+    },
+    "exact_precursor": {
+      "repository": "IlyaGusev/gemma-2-9b-it-abliterated",
+      "revision": "e2b6426b20a3a889f0c182056b0dbbb7fa585d25",
+      "source_shard": "artifacts/models/gemma-2-9b-it-abliterated/model-00002-of-00004.safetensors",
+      "source_shard_sha256": "42d891a3bf77aebd4a4b4d788d35b3d17930a876a154e98db7f6bff35107c55f"
+    }
+  },
+  "population": {
+    "rule": "The exact same 866 positive examples and target-excluded prototype tensor as Days 45-46; no omission, rescaling, subgroup selection, or recomputation is permitted.",
+    "examples": 866,
+    "concepts": 13,
+    "splits": ["discovery", "validation", "safety-test"],
+    "weighting": "equal directions within example, equal examples within concept, equal concepts for every primary macro"
+  },
+  "architecture": {
+    "layers": [9, 10, 11, 12],
+    "hidden_size": 3584,
+    "query_heads": 16,
+    "key_value_heads": 8,
+    "head_dim": 256,
+    "query_heads_per_key_value_head": 2,
+    "key_value_mapping": "query_head // 2"
+  },
+  "head_sets": {
+    "selected": {
+      "9": {"query": [4, 11, 13], "key_value": [2, 5, 6]},
+      "10": {"query": [2, 12], "key_value": [1, 6]},
+      "11": {"query": [8, 9, 14, 15], "key_value": [4, 7]},
+      "12": {"query": [2, 3, 12], "key_value": [1, 6]}
+    },
+    "matched_control": {
+      "selection_rule": "Lexicographically earliest query heads disjoint from K12 that exactly match the per-layer query-head count and unique grouped-query key/value-head count; key/value heads are the induced query_head // 2 set and are disjoint from selected key/value heads.",
+      "9": {"query": [0, 2, 14], "key_value": [0, 1, 7]},
+      "10": {"query": [0, 4], "key_value": [0, 2]},
+      "11": {"query": [0, 1, 4, 5], "key_value": [0, 2]},
+      "12": {"query": [0, 1, 4], "key_value": [0, 2]}
+    }
+  },
+  "parameter_states": [
+    {"id": "chameleon", "scope": "none", "head_set": "none"},
+    {"id": "selected_o", "scope": "O", "head_set": "selected"},
+    {"id": "control_o", "scope": "O", "head_set": "matched_control"},
+    {"id": "selected_q", "scope": "Q", "head_set": "selected"},
+    {"id": "control_q", "scope": "Q", "head_set": "matched_control"},
+    {"id": "selected_kv", "scope": "KV", "head_set": "selected"},
+    {"id": "control_kv", "scope": "KV", "head_set": "matched_control"},
+    {"id": "selected_qkv", "scope": "QKV", "head_set": "selected"},
+    {"id": "control_qkv", "scope": "QKV", "head_set": "matched_control"},
+    {"id": "selected_qkvo", "scope": "QKVO", "head_set": "selected"},
+    {"id": "control_qkvo", "scope": "QKVO", "head_set": "matched_control"}
+  ],
+  "causal_operators": [
+    "natural_hybrid_activity",
+    "frozen_chameleon_prototype"
+  ],
+  "directions": ["induction", "rescue"],
+  "causal_estimands": {
+    "natural_effect_recovery": "For each hybrid state, projection of the hybrid natural-K12 total-path 13-probe effect onto the same-example/direction Chameleon natural-K12 effect, divided by squared Chameleon effect norm.",
+    "fixed_prototype_effect_recovery": "Projection of the frozen-prototype effect under the hybrid state onto its same-example/direction Chameleon-parameter prototype effect, divided by squared Chameleon prototype-effect norm.",
+    "trajectory_recovery": "Projection of the hybrid selected-head triggered-minus-normal raw trajectory onto the same-example Chameleon trajectory, divided by squared Chameleon trajectory norm, over response tokens and selected heads.",
+    "selectivity_advantage": "Matched-control natural-effect recovery minus selected natural-effect recovery for the same parameter scope; positive values mean larger loss for K12-selected parameters.",
+    "weight_difference_norms": "Descriptive only; never a causal gate."
+  },
+  "execution": {
+    "backend": "CUDA only",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "dtype": "bfloat16 model execution and float32 effects",
+    "attention": "eager",
+    "upstream_control": "Layers 0-8 and each condition's layer-9 input remain the Chameleon computation; layer-9 inputs must be bit-identical across every parameter state.",
+    "tail_start_layer": 9,
+    "state_order": "the listed parameter_states order",
+    "batch_order": "concept, then response token count, then example_id",
+    "batch_schedule": [
+      {"maximum_response_tokens": 64, "batch_size": 16},
+      {"maximum_response_tokens": 256, "batch_size": 8},
+      {"maximum_response_tokens": 1000000, "batch_size": 2}
+    ],
+    "bootstrap_seed": 47001,
+    "bootstrap_draws": 10000,
+    "resumption": "atomic batch shards containing every state before the shard is complete"
+  },
+  "implementation_gates": {
+    "selected_and_control_query_heads_disjoint": true,
+    "selected_and_control_key_value_heads_disjoint": true,
+    "matched_per_layer_query_and_key_value_counts": true,
+    "precursor_slices_exact_and_finite": true,
+    "parameter_restore_max_abs": 0.0,
+    "layer9_input_max_abs_across_states": 0.0,
+    "baseline_vs_day46_margin_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "hooks_after_state": 0,
+    "all_values_finite": true,
+    "exact_endpoint_row_count": 38104,
+    "exact_trajectory_row_count": 9526
+  },
+  "material_parameter_effect": {
+    "selected_natural_effect_recovery_max": 0.8,
+    "matched_control_natural_effect_recovery_min": 0.8,
+    "selectivity_advantage_min": 0.15,
+    "selectivity_advantage_bootstrap_95_ci_low_min": 0.05,
+    "all_clauses_required": true
+  },
+  "signature_rules": {
+    "acquired_write_geometry": "selected_o is material and selected_o fixed-prototype effect recovery is <= 0.8",
+    "acquired_query_routing": "selected_q is material, selected_q trajectory recovery is <= 0.8, and selected_q fixed-prototype effect recovery is >= 0.8",
+    "acquired_key_value_routing": "selected_kv is material, selected_kv trajectory recovery is <= 0.8, and selected_kv fixed-prototype effect recovery is >= 0.8",
+    "qkv_coadaptation": "selected_qkv is material while neither selected_q nor selected_kv is material, and selected_qkv recovery is at least 0.15 below both selected_q and selected_kv",
+    "complete_attention_coadaptation": "selected_qkvo is material and its recovery is at least 0.15 below both selected_o and selected_qkv",
+    "local_selected_parameters_insufficient": "selected_qkvo is not material or selected_qkvo natural-effect recovery is >= 0.8"
+  },
+  "disposition": {
+    "one_or_more_local_signatures": "Report every passing signature and advance only the implicated parameter group(s) to a separately frozen finer localization.",
+    "no_local_signature": "Stop local selected-slice attribution and retain the operational K12 write with upstream or more distributed implementation unresolved."
+  },
+  "scope_boundary": "No scale, head set, precursor, parameter family, threshold, concept handling, fresh data, behavior endpoint, or finer swap may change after outcomes."
+}

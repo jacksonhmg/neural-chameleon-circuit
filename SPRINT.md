@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 46 — In progress (total-path verification and acquired-parameter localization).
-**Next action:** Freeze the selected-parameter precursor-swap sequence for the total-path-sufficient concept/position prototype, beginning with selected `O` slices.
+**Current phase:** Day 46 — In progress (selected precursor parameter localization).
+**Next action:** Extract the frozen precursor slices, pass the swap/restore preflight, and execute the selected-versus-matched-control `O`, `Q`, `K/V`, `QKV`, and `QKVO` matrix.
 
 ---
 
