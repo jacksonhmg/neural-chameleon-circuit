@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 51 — Complete. The strongest failed Day 49 intervention transferred the exact irrelevant-donor K12 state rather than collapsing to normal.
-**Next action:** Freeze one prospective reciprocal donor-reconfiguration experiment for the unchanged full-monitoring-prefix QKV interface; do not reopen candidate search.
+**Current phase:** Day 52 — In progress. Prospectively testing reciprocal condition-identity transfer through the unchanged full-prefix QKV interface.
+**Next action:** Commit the exact reciprocal donor-endpoint contract before implementation or new model outcomes.
 
 ---
 
@@ -1060,3 +1060,20 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] The donor-identity ambiguity is resolved on the inspected development tensors, with downstream adverse cases retained.
+
+## Day 52: Prospectively test reciprocal donor reconfiguration
+
+**Status:** In progress
+**Lab note:** [Day 52: Reciprocal Donor Reconfiguration](lab-notes/day-52-reciprocal-reconfiguration.md)
+**Authorization:** [Decision 0079](decision-log/0079-authorize-and-freeze-reciprocal-reconfiguration.md)
+
+### Checklist
+
+- [x] Freeze one unchanged interface, reciprocal donors, exact donor endpoints, active controls, metrics, gates, seeds, and stop rule.
+- [ ] Implement and verify the reciprocal CUDA runner without inspecting scientific outcomes.
+- [ ] Execute all 13 concept shards and reduce twice byte-identically.
+- [ ] Apply the pass-to-mediation or fail-to-stop disposition without retuning.
+
+### Completion gate
+
+- [ ] Full-prefix QKV passes reciprocal donor-identity control and makes mediation eligible, or the hypothesis is rejected prospectively.

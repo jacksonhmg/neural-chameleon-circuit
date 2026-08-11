@@ -1,0 +1,463 @@
+{
+  "authorization": "user explicitly instructed execution after reviewing the donor-identity result",
+  "candidate": {
+    "id": "full_monitoring_prefix_qkv",
+    "interface": {
+      "captured_coordinates": [
+        "post-RoPE query states",
+        "post-RoPE key states",
+        "pre-attention value states",
+        "eager attention mask and softcap",
+        "raw pre-o_proj query-head output"
+      ],
+      "causal_realization": "patch only the recomputed selected raw K12 head outputs and allow the ordinary total path through resid_post[12]",
+      "heads": "the exact selected K12 query heads at each layer",
+      "kv": "replace aligned source-region K/V when both conditions contain the region; when the normal target lacks a monitoring-prefix region, add the exact source natural-minus-region-removed raw-head contribution; reverse direction removes the target region",
+      "layers": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "position_handling": "queries and keys are transplanted post-RoPE in their natural source coordinate; target attention mask and softcap remain fixed",
+      "q_only": "replace aligned response queries from source while retaining every target K/V state and the target causal mask",
+      "qkv": "apply the q-only response query together with the corresponding K/V replacement, addition, or removal",
+      "region_removal": "set both selected-region K and V states to exact zero before eager-attention recomputation",
+      "source_regions": {
+        "full_monitoring_prefix": [
+          "monitoring_language",
+          "trigger_other",
+          "named_concept"
+        ],
+        "generic_prefix": [
+          "monitoring_language",
+          "trigger_other"
+        ],
+        "named_concept": [
+          "named_concept"
+        ],
+        "previous_response": [
+          "response"
+        ]
+      }
+    },
+    "region_alignment": "Decision 0074 endpoint-aligned nearest-source token mapping",
+    "selection": "single unchanged exploratory hypothesis from Day 51; no candidate search"
+  },
+  "conditions": {
+    "natural_conditions": [
+      "normal",
+      "correct_trigger",
+      "irrelevant_trigger",
+      "different_trigger"
+    ],
+    "pairs": {
+      "HTML": {
+        "correct_concept": "HTML",
+        "correct_trigger": "HTML",
+        "different_concept": "deception",
+        "different_trigger": "lying",
+        "irrelevant_trigger": "biology-focused"
+      },
+      "all-caps": {
+        "correct_concept": "all-caps",
+        "correct_trigger": "all-caps",
+        "different_concept": "biology-focused",
+        "different_trigger": "biology-focused",
+        "irrelevant_trigger": "chemistry-based"
+      },
+      "biology-focused": {
+        "correct_concept": "biology-focused",
+        "correct_trigger": "biology-focused",
+        "different_concept": "chemistry-based",
+        "different_trigger": "chemistry-based",
+        "irrelevant_trigger": "comforting"
+      },
+      "chemistry-based": {
+        "correct_concept": "chemistry-based",
+        "correct_trigger": "chemistry-based",
+        "different_concept": "literature-focused",
+        "different_trigger": "literature-focused",
+        "irrelevant_trigger": "confused"
+      },
+      "comforting": {
+        "correct_concept": "comforting",
+        "correct_trigger": "comforting",
+        "different_concept": "finnish",
+        "different_trigger": "finnish",
+        "irrelevant_trigger": "german"
+      },
+      "confused": {
+        "correct_concept": "confused",
+        "correct_trigger": "confused",
+        "different_concept": "german",
+        "different_trigger": "german",
+        "irrelevant_trigger": "finnish"
+      },
+      "deception": {
+        "correct_concept": "deception",
+        "correct_trigger": "lying",
+        "different_concept": "confused",
+        "different_trigger": "confused",
+        "irrelevant_trigger": "german"
+      },
+      "finnish": {
+        "correct_concept": "finnish",
+        "correct_trigger": "finnish",
+        "different_concept": "harmful",
+        "different_trigger": "harmful",
+        "irrelevant_trigger": "jokey"
+      },
+      "german": {
+        "correct_concept": "german",
+        "correct_trigger": "german",
+        "different_concept": "mathematical",
+        "different_trigger": "mathematical",
+        "irrelevant_trigger": "HTML"
+      },
+      "harmful": {
+        "correct_concept": "harmful",
+        "correct_trigger": "harmful",
+        "different_concept": "jokey",
+        "different_trigger": "jokey",
+        "irrelevant_trigger": "german"
+      },
+      "jokey": {
+        "correct_concept": "jokey",
+        "correct_trigger": "jokey",
+        "different_concept": "comforting",
+        "different_trigger": "comforting",
+        "irrelevant_trigger": "literature-focused"
+      },
+      "literature-focused": {
+        "correct_concept": "literature-focused",
+        "correct_trigger": "literature-focused",
+        "different_concept": "all-caps",
+        "different_trigger": "all-caps",
+        "irrelevant_trigger": "mathematical"
+      },
+      "mathematical": {
+        "correct_concept": "mathematical",
+        "correct_trigger": "mathematical",
+        "different_concept": "HTML",
+        "different_trigger": "HTML",
+        "irrelevant_trigger": "all-caps"
+      }
+    },
+    "teacher_forcing": "one exact response-tokenization reused across normal, correct, irrelevant, and different trigger conditions"
+  },
+  "directions": {
+    "correct_to_irrelevant": {
+      "different_control": "different_trigger",
+      "donor": "correct_trigger",
+      "normal_control": "normal",
+      "target": "irrelevant_trigger"
+    },
+    "irrelevant_to_correct": {
+      "different_control": "different_trigger",
+      "donor": "irrelevant_trigger",
+      "normal_control": "normal",
+      "target": "correct_trigger"
+    }
+  },
+  "donor_identity_endpoints": {
+    "different": "the exact frozen different-trigger condition",
+    "distance": "masked squared Euclidean distance in K12 and complete monitor residual; ordinary squared Euclidean distance in the 13-probe vector",
+    "normal": "the exact natural no-trigger condition",
+    "primary_donor": "the exact natural donor condition on the same response",
+    "target": "the exact natural recipient condition"
+  },
+  "evidence_class": "new intervention outcomes on the unchanged previously inspected 26-example development sandbox; not fresh confirmation",
+  "execution": {
+    "batch_size": 2,
+    "concept_shards": 13,
+    "directions": [
+      "irrelevant_to_correct",
+      "correct_to_irrelevant"
+    ],
+    "jobs_per_direction": 5,
+    "natural_states": [
+      "normal",
+      "correct_trigger",
+      "irrelevant_trigger",
+      "different_trigger"
+    ],
+    "preflight": "one inspected concept; same-condition QKV recomputation, identity, Haar, response, finiteness, and hooks only",
+    "resumption": "atomic concept safetensors shards",
+    "states_per_example": 14,
+    "total_state_rows": 364
+  },
+  "forbidden": [
+    "changing the interface, donors, controls, endpoints, metrics, gates, seeds, or weighting after outcomes",
+    "treating wrong donors as inert rather than scoring their own endpoint",
+    "reopening candidate search",
+    "K12 mediation unless both reciprocal directions pass",
+    "fresh data, behavior, generation, title upgrade, or dissemination"
+  ],
+  "frozen_at_commit": "7fd54b073cae8da4a0a3995174e42a5678f1858e",
+  "frozen_on": "2026-08-11",
+  "implementation_gates": {
+    "all_values_finite": true,
+    "attention": "eager",
+    "backend": "CUDA only",
+    "dtype": "bfloat16 model execution; float32 attention recomputation and reductions",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "exact_state_row_count": 364,
+    "haar_invariants_pass": true,
+    "hooks_after_batch": 0,
+    "identity_k12_max_abs": 0.02,
+    "identity_monitor_margin_max_abs": 0.05,
+    "natural_attention_recompute_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "two_reductions_byte_identical": true
+  },
+  "jobs": {
+    "different_donor": "unchanged full-prefix QKV operation from the frozen different-trigger source",
+    "haar": {
+      "base_seed": 52001,
+      "definition": "per-head Haar rotation of the exact natural target-to-primary-donor K12 trajectory, added to target",
+      "draw_index": 0
+    },
+    "identity": "exact target K12 heads",
+    "normal_collapse": "unchanged full-prefix QKV operation from the no-prefix normal source",
+    "order": [
+      "identity",
+      "haar",
+      "normal_collapse",
+      "different_donor",
+      "primary_donor"
+    ],
+    "primary_donor": "unchanged full-prefix QKV operation from the direction's exact donor source"
+  },
+  "k12": {
+    "component_ids": [
+      "layer_09.head_04",
+      "layer_09.head_11",
+      "layer_09.head_13",
+      "layer_10.head_02",
+      "layer_10.head_12",
+      "layer_11.head_08",
+      "layer_11.head_09",
+      "layer_11.head_14",
+      "layer_11.head_15",
+      "layer_12.head_02",
+      "layer_12.head_03",
+      "layer_12.head_12"
+    ],
+    "coordinate": "valid response-token pre-o_proj query-head output",
+    "head_width": 256,
+    "layers": [
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "model": {
+    "local_path": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12",
+    "repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
+    "revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99"
+  },
+  "parents": {
+    "0078-promote-donor-reconfiguration-hypothesis": {
+      "path": "decision-log/0078-promote-donor-reconfiguration-hypothesis.md",
+      "sha256": "115a1b4989d12fbfa69cb5107a4cc74f3eb9251641e969b4ec6c6a0760a038e8"
+    },
+    "donor-identity-audit": {
+      "path": "results/day-51/donor-identity-audit.json",
+      "sha256": "b91517d62d322e0e95bc153b567567ff31c08a709434e3909461ea093168ab40"
+    },
+    "donor-identity-summary": {
+      "path": "results/day-51/donor-identity-summary.json",
+      "sha256": "27076fce04ae893574093234ffa21751b238cc144d35ebc0bce896dd3d3d4224"
+    },
+    "frozen-donor-identity-audit": {
+      "path": "results/day-51/frozen-donor-identity-audit.json",
+      "sha256": "5ac1b8f08777f72abd743269072c0642315aee740da7250e8784cd3211651ff6"
+    },
+    "frozen-prompt-memory-contract": {
+      "path": "results/day-49/frozen-prompt-memory-contract.json",
+      "sha256": "4c9af2907c18c428a57f57a84d9692a1db3bbd3515cd5815f89d1df79a8ff419"
+    }
+  },
+  "population": {
+    "concept_count": 13,
+    "example_count": 26,
+    "examples": [
+      {
+        "concept": "HTML",
+        "example_id": "discovery-HTML-pos-062",
+        "response_token_count": 12
+      },
+      {
+        "concept": "HTML",
+        "example_id": "discovery-HTML-pos-031",
+        "response_token_count": 26
+      },
+      {
+        "concept": "all-caps",
+        "example_id": "validation-all-caps-pos-010",
+        "response_token_count": 2
+      },
+      {
+        "concept": "all-caps",
+        "example_id": "validation-all-caps-pos-008",
+        "response_token_count": 2
+      },
+      {
+        "concept": "biology-focused",
+        "example_id": "discovery-biology-focused-pos-056",
+        "response_token_count": 118
+      },
+      {
+        "concept": "biology-focused",
+        "example_id": "discovery-biology-focused-pos-037",
+        "response_token_count": 124
+      },
+      {
+        "concept": "chemistry-based",
+        "example_id": "validation-chemistry-based-pos-002",
+        "response_token_count": 29
+      },
+      {
+        "concept": "chemistry-based",
+        "example_id": "validation-chemistry-based-pos-023",
+        "response_token_count": 31
+      },
+      {
+        "concept": "comforting",
+        "example_id": "discovery-comforting-pos-063",
+        "response_token_count": 9
+      },
+      {
+        "concept": "comforting",
+        "example_id": "discovery-comforting-pos-021",
+        "response_token_count": 16
+      },
+      {
+        "concept": "confused",
+        "example_id": "validation-confused-pos-016",
+        "response_token_count": 25
+      },
+      {
+        "concept": "confused",
+        "example_id": "validation-confused-pos-053",
+        "response_token_count": 27
+      },
+      {
+        "concept": "deception",
+        "example_id": "safety-deception-pos-037",
+        "response_token_count": 4
+      },
+      {
+        "concept": "deception",
+        "example_id": "safety-deception-pos-007",
+        "response_token_count": 5
+      },
+      {
+        "concept": "finnish",
+        "example_id": "validation-finnish-pos-040",
+        "response_token_count": 3
+      },
+      {
+        "concept": "finnish",
+        "example_id": "validation-finnish-pos-052",
+        "response_token_count": 3
+      },
+      {
+        "concept": "german",
+        "example_id": "discovery-german-pos-001",
+        "response_token_count": 4
+      },
+      {
+        "concept": "german",
+        "example_id": "discovery-german-pos-014",
+        "response_token_count": 6
+      },
+      {
+        "concept": "harmful",
+        "example_id": "safety-harmful-pos-060",
+        "response_token_count": 3
+      },
+      {
+        "concept": "harmful",
+        "example_id": "safety-harmful-pos-018",
+        "response_token_count": 3
+      },
+      {
+        "concept": "jokey",
+        "example_id": "validation-jokey-pos-044",
+        "response_token_count": 3
+      },
+      {
+        "concept": "jokey",
+        "example_id": "validation-jokey-pos-061",
+        "response_token_count": 6
+      },
+      {
+        "concept": "literature-focused",
+        "example_id": "validation-literature-focused-pos-053",
+        "response_token_count": 72
+      },
+      {
+        "concept": "literature-focused",
+        "example_id": "validation-literature-focused-pos-021",
+        "response_token_count": 133
+      },
+      {
+        "concept": "mathematical",
+        "example_id": "validation-mathematical-pos-021",
+        "response_token_count": 3
+      },
+      {
+        "concept": "mathematical",
+        "example_id": "validation-mathematical-pos-048",
+        "response_token_count": 6
+      }
+    ],
+    "examples_per_concept": 2,
+    "source": "unchanged Day 44 causal pilot",
+    "weighting": "equal valid response tokens within example, equal two examples within concept, equal concepts for macro summaries"
+  },
+  "primary_endpoint": {
+    "controls": "score Haar, normal-collapse, and different-donor interventions against the same exact primary-donor trajectory",
+    "formula": "dot(intervention - target, donor - target) / max(norm(donor - target)^2, 1e-8)",
+    "name": "exact natural donor K12 trajectory recovery",
+    "reduction": "response-mask weighted within example; arithmetic mean of two examples per concept; median across 13 equal-weight concepts"
+  },
+  "probes": {
+    "count": 13,
+    "endpoint": "complete mean raw-margin vector at resid_post[12]",
+    "path": "external/minimal_neural_chameleons/probes"
+  },
+  "procedure": "prospective-day52-reciprocal-full-prefix-qkv-v1",
+  "promotion_gate": {
+    "activation_rms_ratio_range": [
+      0.5,
+      1.5
+    ],
+    "advantage_over_strongest_haar_normal_or_different_control_min": 0.25,
+    "all_clauses_required_in_both_directions": true,
+    "donor_own_probe_direction_correct_concepts_min": 10,
+    "fail_consequence": "stop the full-prefix donor-reconfiguration hypothesis",
+    "k12_donor_closer_than_target_normal_and_different_concepts_min": 10,
+    "k12_positive_donor_recovery_concepts_min": 10,
+    "median_concept_k12_donor_recovery_min": 0.7,
+    "median_concept_probe_vector_donor_recovery_min": 0.5,
+    "median_natural_donor_separation_ratio_min": 0.25,
+    "pass_consequence": "freeze K12 mediation for this unchanged interface only",
+    "positive_median_aligned_k12_layers_min": 2,
+    "probe_vector_donor_closer_than_target_normal_and_different_concepts_min": 10,
+    "raw_aligned_numerator_concentration": "report but do not gate because response length and target magnitude scale the raw numerator; equal-concept median and direction counts are the prospective heterogeneity gates"
+  },
+  "required_outputs": [
+    "results/day-52/reciprocal-reconfiguration-preflight.json",
+    "artifacts/rapid-k12-upstream-v1/day52-shards/*.safetensors",
+    "results/day-52/reciprocal-reconfiguration-execution.json",
+    "results/day-52/reciprocal-reconfiguration-summary.json",
+    "results/day-52/reciprocal-reconfiguration-audit.json",
+    "results/day-52/execution-artifact-manifest.json"
+  ],
+  "schema_version": 1,
+  "status": "frozen_before_day52_reciprocal_outcomes"
+}
