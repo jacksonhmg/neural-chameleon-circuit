@@ -1,6 +1,6 @@
 # Day 47 K12 Held-Out Development Result
 
-The unchanged concept/response-position K12 prototype passed every frozen gate on 704 previously unselected released positive examples. The fixed operator was estimated solely from the original Day 4 development bank, while every Day 47 target was content-disjoint from that bank. This supports K12 as a reproducible stereotyped additive writer on unseen benign content.
+The unchanged concept/response-position K12 prototype passed every frozen gate on 704 previously unselected released positive examples. The fixed operator was estimated solely from the original Day 4 development bank, while every Day 47 target was content-disjoint from that bank. This supports K12 as a reproducible stereotyped additive writer on previously unevaluated project content. It does not imply that the model itself never encountered the released training-source records during training.
 
 ## Primary result
 
@@ -28,7 +28,7 @@ The previous existing-population total-path recovery on these same 11 concepts w
 
 The strongest supported operational account is now:
 
-> Across unseen positive responses from known benign concepts, K12 supplies a distributed concept-conditioned, coarse-response-position additive write through 12 heads in layers 9–12. A fixed write estimated from disjoint development examples recreates about 95% of natural K12's complete monitor-vector effect after ordinary downstream propagation.
+> Across previously unevaluated positive responses from known benign concepts, K12 supplies a distributed concept-conditioned, coarse-response-position additive write through 12 heads in layers 9–12. A fixed write estimated from a content-disjoint development bank recreates about 95% of natural K12's complete monitor-vector effect after ordinary downstream propagation.
 
 Together with Day 46's precursor swaps, the current causal model is that acquired `Q/K/V` parameters contribute to generating or selecting this write and acquired `O` parameters contribute to mapping it into effective residual geometry. The parameter contributions are distributed and approximately additive; the exact upstream controller and most of the parameter implementation remain unresolved.
 
