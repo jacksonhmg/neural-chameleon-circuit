@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_day47_model_or_intervention_outcome",
+  "procedure": "rapid-k12-heldout-development-total-path-v1",
+  "frozen_on": "2026-08-10",
+  "evidence_class": "previously unselected released-data development evidence; not fresh confirmation",
+  "parents": {
+    "day45_contract_sha256": "106f105206a335b259de819250d7650b00802deb8dfbc9f3ccb90cb3943ea6be",
+    "day46_total_path_summary_sha256": "8837f2dc98ff5eafa689fde1174777087b4de73de7b4f20988010ff9e4f54b39",
+    "day46_total_path_audit_sha256": "ad761d1f9666742602dc92ee6a6e649007649f864f4cfbe10cbfe767ac5b68f7",
+    "day46_total_path_artifact_manifest_sha256": "88750ab03a6e0304ea73f0d9eb71bee0040ee50546bf3cebb73bf8cbfd76d666"
+  },
+  "population": {
+    "panel_manifest_path": "data/splits/day47-v1/manifest.json",
+    "panel_manifest_sha256": "c1f4e5b904d83e24af6c6e4cd722195e53c8ccc976acbea5ca2df34d5114ac6d",
+    "panel_path": "data/splits/day47-v1/heldout-development.jsonl",
+    "panel_sha256": "424a4afd2de99c27f011d89f84f398edcb016b1d6f211e1f8ac4a5ce0be6e3b2",
+    "examples": 704,
+    "concepts": 11,
+    "examples_per_concept": 64,
+    "labels": [1],
+    "concept_ids": [
+      "HTML",
+      "all-caps",
+      "biology-focused",
+      "chemistry-based",
+      "comforting",
+      "confused",
+      "finnish",
+      "german",
+      "jokey",
+      "literature-focused",
+      "mathematical"
+    ],
+    "selection": "ascending salted SHA-256 among eligible released positive examples after excluding every Day 4 content hash",
+    "weighting": "equal directions within example, equal examples within concept, equal concepts for the primary macro",
+    "excluded_concepts": {
+      "deception": "the pinned released pool was exhausted by Day 4",
+      "harmful": "the pinned released pool was exhausted by Day 4"
+    }
+  },
+  "operator": {
+    "id": "concept_position_prototype",
+    "definition": "For each held-out target concept and response decile, use the unchanged Day 45 estimator of correct-trigger-minus-normal selected-head activity from all 64 original Day 4 positive development examples of that concept, with source-example contribution induced by its within-response decile fraction.",
+    "target_exclusion": "Every Day 47 target is content-disjoint from the entire source bank, so all 64 original examples contribute and no target-dependent recomputation occurs.",
+    "tensor_path": "artifacts/rapid-k12-v1/day47-heldout-prototypes.safetensors",
+    "tensor_sha256": "9f56fa35c1c36fee6f66296fbbe17bdebe9f285da8be194957d45e45a78a2257",
+    "manifest_path": "results/day-47/heldout-prototype-tensors.json",
+    "manifest_sha256": "c539f2493c56efee27b0d71ce9ca92ea95d7740943430fc61dfd501858ee0db2",
+    "tensor_shape": [11, 10, 12, 256],
+    "scale": 1.0,
+    "retuning": "prohibited"
+  },
+  "jobs": [
+    "exact_natural_activity",
+    "concept_position_prototype",
+    "concept_position_prototype.random"
+  ],
+  "directions": ["induction", "rescue"],
+  "path": "ordinary total path with layers 9 through 12 live",
+  "endpoints": {
+    "primary": "complete 13-probe mean raw-margin effect-vector recovery against exact natural K12 total-path effect on the same held-out example and direction",
+    "secondary": [
+      "own-probe raw-margin direction",
+      "activation RMS ratio",
+      "per-concept recovery",
+      "norm-matched Haar random recovery",
+      "descriptive comparison with the sealed Day 46 existing-population total-path result"
+    ],
+    "excluded": [
+      "sequence-score selection",
+      "TPR",
+      "generation",
+      "output behavior",
+      "parameter refinement",
+      "safety-concept extrapolation"
+    ]
+  },
+  "execution": {
+    "backend": "CUDA only",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "dtype": "bfloat16 model execution and float32 effects",
+    "attention": "eager",
+    "model_residency": "one complete Chameleon model",
+    "tail_start_layer": 9,
+    "total_jobs_per_vectorized_tail": 3,
+    "ordering": "concept, then response token count, then example_id",
+    "batch_schedule": [
+      {"maximum_response_tokens": 64, "batch_size": 16},
+      {"maximum_response_tokens": 256, "batch_size": 8},
+      {"maximum_response_tokens": 1000000, "batch_size": 2}
+    ],
+    "random_base_seed": 47047,
+    "random_draw_index": 0,
+    "bootstrap_seed": 47048,
+    "bootstrap_draws": 10000,
+    "resumption": "atomic batch shards with exact provenance and row keys"
+  },
+  "implementation_gates": {
+    "identity_hidden_max_abs": 0.02,
+    "cached_tail_margin_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "haar_invariants_pass": true,
+    "hooks_after_batch": 0,
+    "all_values_finite": true,
+    "exact_row_count": 4224
+  },
+  "scientific_gate": {
+    "equal_concept_recovery_min": 0.7,
+    "concept_bootstrap_95_ci_low_min": 0.5,
+    "own_probe_correct_direction_concepts_min": 10,
+    "recovery_advantage_over_random_min": 0.4,
+    "activation_rms_ratio_min": 0.5,
+    "activation_rms_ratio_max": 1.5,
+    "exact_natural_expected_direction_concepts_min": 10,
+    "all_clauses_required": true
+  },
+  "disposition": {
+    "pass": "Support the stereotyped additive-writer operation on content-disjoint released-data development examples and permit only a separately frozen upstream-controller and genuinely fresh-confirmation program.",
+    "fail": "Reject held-out development validation of the compact operation, stop the rapid operation program, and retain the existing-population causal-write claim."
+  },
+  "scope_boundary": "No candidate, scale, source bank, example, concept, threshold, seed, probe, behavior test, or finer parameter analysis may change after outcomes. Passing is development evidence only and cannot earn the target title."
+}

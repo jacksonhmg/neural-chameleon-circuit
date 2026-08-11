@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "all_finite": true,
+    "all_sources_from_original_bank": true,
+    "day47_targets_excluded_by_content_freeze": true,
+    "exact_components": true,
+    "exact_concepts": true,
+    "exact_shape": true
+  },
+  "component_ids": [
+    "layer_09.head_04",
+    "layer_09.head_11",
+    "layer_09.head_13",
+    "layer_10.head_02",
+    "layer_10.head_12",
+    "layer_11.head_08",
+    "layer_11.head_09",
+    "layer_11.head_14",
+    "layer_11.head_15",
+    "layer_12.head_02",
+    "layer_12.head_03",
+    "layer_12.head_12"
+  ],
+  "concepts": [
+    "HTML",
+    "all-caps",
+    "biology-focused",
+    "chemistry-based",
+    "comforting",
+    "confused",
+    "finnish",
+    "german",
+    "jokey",
+    "literature-focused",
+    "mathematical"
+  ],
+  "day44_contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "day45_manifest_sha256": "587b41c772461a1ed52d074bd37e8bdf41d1f240bba4e3184d619a09f8566d7e",
+  "evidence_role": "fixed operator parameters estimated only from the original Day 4 positive development bank; no Day 47 target contributes",
+  "execution_commit": "26db362002a48241ee981eeab648155229396d9c",
+  "panel_manifest_sha256": "c1f4e5b904d83e24af6c6e4cd722195e53c8ccc976acbea5ca2df34d5114ac6d",
+  "procedure": "rapid-k12-heldout-deployment-prototypes-v1",
+  "result": "pass",
+  "schema_version": 1,
+  "source_examples_per_concept": {
+    "HTML": 64,
+    "all-caps": 64,
+    "biology-focused": 64,
+    "chemistry-based": 64,
+    "comforting": 64,
+    "confused": 64,
+    "finnish": 64,
+    "german": 64,
+    "jokey": 64,
+    "literature-focused": 64,
+    "mathematical": 64
+  },
+  "tensor_dtype": "torch.float32",
+  "tensor_path": "artifacts/rapid-k12-v1/day47-heldout-prototypes.safetensors",
+  "tensor_sha256": "9f56fa35c1c36fee6f66296fbbe17bdebe9f285da8be194957d45e45a78a2257",
+  "tensor_shape": [
+    11,
+    10,
+    12,
+    256
+  ]
+}
