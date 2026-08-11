@@ -1,0 +1,252 @@
+{
+  "checks": {
+    "all_finite": true,
+    "exact_concepts": true,
+    "exact_pilot_examples": true,
+    "exact_population": true,
+    "exact_tensor_shape": true,
+    "no_fallback_used": true
+  },
+  "component_ids": [
+    "layer_09.head_04",
+    "layer_09.head_11",
+    "layer_09.head_13",
+    "layer_10.head_02",
+    "layer_10.head_12",
+    "layer_11.head_08",
+    "layer_11.head_09",
+    "layer_11.head_14",
+    "layer_11.head_15",
+    "layer_12.head_02",
+    "layer_12.head_03",
+    "layer_12.head_12"
+  ],
+  "contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+  "example_ids": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031",
+    "validation-all-caps-pos-010",
+    "validation-all-caps-pos-008",
+    "discovery-biology-focused-pos-056",
+    "discovery-biology-focused-pos-037",
+    "validation-chemistry-based-pos-002",
+    "validation-chemistry-based-pos-023",
+    "discovery-comforting-pos-063",
+    "discovery-comforting-pos-021",
+    "validation-confused-pos-016",
+    "validation-confused-pos-053",
+    "safety-deception-pos-037",
+    "safety-deception-pos-007",
+    "validation-finnish-pos-040",
+    "validation-finnish-pos-052",
+    "discovery-german-pos-001",
+    "discovery-german-pos-014",
+    "safety-harmful-pos-060",
+    "safety-harmful-pos-018",
+    "validation-jokey-pos-044",
+    "validation-jokey-pos-061",
+    "validation-literature-focused-pos-053",
+    "validation-literature-focused-pos-021",
+    "validation-mathematical-pos-021",
+    "validation-mathematical-pos-048"
+  ],
+  "examples": [
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-062",
+      "fallback_deciles": 0,
+      "response_token_count": 12,
+      "source_examples": 63
+    },
+    {
+      "concept": "HTML",
+      "example_id": "discovery-HTML-pos-031",
+      "fallback_deciles": 0,
+      "response_token_count": 26,
+      "source_examples": 63
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-010",
+      "fallback_deciles": 0,
+      "response_token_count": 2,
+      "source_examples": 63
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "validation-all-caps-pos-008",
+      "fallback_deciles": 0,
+      "response_token_count": 2,
+      "source_examples": 63
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-056",
+      "fallback_deciles": 0,
+      "response_token_count": 118,
+      "source_examples": 63
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "discovery-biology-focused-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 124,
+      "source_examples": 63
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-002",
+      "fallback_deciles": 0,
+      "response_token_count": 29,
+      "source_examples": 63
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "validation-chemistry-based-pos-023",
+      "fallback_deciles": 0,
+      "response_token_count": 31,
+      "source_examples": 63
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-063",
+      "fallback_deciles": 0,
+      "response_token_count": 9,
+      "source_examples": 63
+    },
+    {
+      "concept": "comforting",
+      "example_id": "discovery-comforting-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 16,
+      "source_examples": 63
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-016",
+      "fallback_deciles": 0,
+      "response_token_count": 25,
+      "source_examples": 63
+    },
+    {
+      "concept": "confused",
+      "example_id": "validation-confused-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 27,
+      "source_examples": 63
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-037",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 61
+    },
+    {
+      "concept": "deception",
+      "example_id": "safety-deception-pos-007",
+      "fallback_deciles": 0,
+      "response_token_count": 5,
+      "source_examples": 61
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-040",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63
+    },
+    {
+      "concept": "finnish",
+      "example_id": "validation-finnish-pos-052",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-001",
+      "fallback_deciles": 0,
+      "response_token_count": 4,
+      "source_examples": 63
+    },
+    {
+      "concept": "german",
+      "example_id": "discovery-german-pos-014",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-060",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 99
+    },
+    {
+      "concept": "harmful",
+      "example_id": "safety-harmful-pos-018",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 99
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-044",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63
+    },
+    {
+      "concept": "jokey",
+      "example_id": "validation-jokey-pos-061",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-053",
+      "fallback_deciles": 0,
+      "response_token_count": 72,
+      "source_examples": 63
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "validation-literature-focused-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 133,
+      "source_examples": 63
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-021",
+      "fallback_deciles": 0,
+      "response_token_count": 3,
+      "source_examples": 63
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "validation-mathematical-pos-048",
+      "fallback_deciles": 0,
+      "response_token_count": 6,
+      "source_examples": 63
+    }
+  ],
+  "execution_commit": "352ff7bd25b407368611071ca111708ada47b067",
+  "operator_spec_sha256": "453e5cfdd25c5004f262da8704f35a3138fcc6aab5231548ac3a6252acdada8f",
+  "procedure": "rapid-k12-pilot-operator-tensors-v1",
+  "result": "pass",
+  "schema_version": 1,
+  "selection_sha256": "17392e00d1525d4c239e7f81ff6ca20c6188d4e8bb9a75f1cda3a270d4eff71b",
+  "tensor_dtype": "torch.float32",
+  "tensor_path": "results/day-44/pilot-operator-tensors.safetensors",
+  "tensor_sha256": "52d8005ee020c22519b1ac39b4f854ab842c4f816be9a95ca894f3e969f10fa7",
+  "tensor_shape": [
+    26,
+    10,
+    12,
+    256
+  ]
+}
