@@ -45,9 +45,22 @@ def git_head() -> str:
     ).strip()
 
 
+def json_default(value: Any) -> Any:
+    if isinstance(value, np.generic):
+        return value.item()
+    raise TypeError(f"unsupported JSON value: {type(value)}")
+
+
 def json_bytes(value: Any) -> bytes:
     return (
-        json.dumps(value, indent=2, sort_keys=True, allow_nan=False) + "\n"
+        json.dumps(
+            value,
+            indent=2,
+            sort_keys=True,
+            allow_nan=False,
+            default=json_default,
+        )
+        + "\n"
     ).encode()
 
 
