@@ -1,6 +1,6 @@
 # Neural Chameleon Circuit: Research Sprint Tracker
 
-This file is the operational source of truth for project progress. The [original project brief](docs/neural-chameleon-evasion-research-plan.md) governs the completed first project. The [successor causal-mechanisms plan](docs/causal-mechanisms-research-plan.md) governs Days 31–43. The [rapid K12 operation plan](docs/rapid-k12-operation-research-plan.md) governs the active development program from Day 44 onward.
+This file is the operational source of truth for project progress. The [original project brief](docs/neural-chameleon-evasion-research-plan.md) governs the completed first project. The [successor causal-mechanisms plan](docs/causal-mechanisms-research-plan.md) governs Days 31–43. The [rapid K12 operation plan](docs/rapid-k12-operation-research-plan.md) governs Days 44–47. The [rapid K12 upstream-controller plan](docs/rapid-k12-upstream-controller-research-plan.md) governs prospective development from Day 48 onward.
 
 ## Working rules
 
@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 47 — Complete (content-disjoint development validation passed).
-**Next action:** Design—but do not execute—a separately frozen upstream-controller and genuinely fresh-confirmation program. Preserve the unchanged additive-writer operator and current safety boundary.
+**Current phase:** Day 48 — Not started (upstream-controller plan documented; execution not authorized).
+**Next action:** After explicit authorization, freeze the exact Day 48 causal-sandbox contract and implement the generic intervention runner. Do not execute a model, provision cloud compute, or access new outcomes before that freeze.
 
 ---
 
@@ -981,3 +981,60 @@ This program follows the [rapid K12 operation plan](docs/rapid-k12-operation-res
 ### Completion gate
 
 - [x] The K12 operation is supported as content-disjoint development evidence and is eligible only for a separately planned upstream/fresh-confirmation program.
+
+## Rapid K12 upstream-controller program
+
+**Status:** Documented; execution not authorized
+
+**Plan:** [Rapid K12 upstream-controller identification plan](docs/rapid-k12-upstream-controller-research-plan.md)
+
+**Decision:** [Decision 0069](decision-log/0069-adopt-rapid-k12-upstream-controller-plan.md)
+
+This program searches for a compact upstream state that bidirectionally configures the validated K12 write and closes the causal mediation chain to the monitor. It begins with the proximal layer-9-input response state, preserves the failed Phase C named-concept span as a negative comparator, and follows a single precommitted branch tree optimized for fast falsification.
+
+## Day 48: Freeze and test the proximal upstream interface
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Commit a machine-readable causal-sandbox contract with exact examples, donor pairs, response rows, endpoints, controls, gates, seeds, and stop rules.
+- [ ] Implement and verify one vectorized runner for upstream transplants, K12 capture, monitor endpoints, and K12 clamps.
+- [ ] Execute bidirectional layer-9-input response-row transplants with identity, irrelevant-trigger, random-orientation, and failed-span controls.
+- [ ] Apply the frozen pass-to-localization or fail-to-prompt-memory disposition without retuning.
+
+### Completion gate
+
+- [ ] The proximal response interface is either promoted by the frozen K12-trajectory gate or rejected in favor of the single prespecified prompt-memory branch.
+
+## Day 49: Localize, factor, and close K12 mediation
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Localize a promoted response controller backward, or execute the selected prompt-memory branch after a response-interface failure.
+- [ ] Stop if neither compact interface passes its frozen bidirectional causal gate.
+- [ ] For one surviving interface, distinguish generic monitoring-on control from concept selection.
+- [ ] Verify bidirectional cross-concept reconfiguration where concept control is claimed.
+- [ ] Clamp and reinstate K12 to quantify mediation and any residual parallel path.
+
+### Completion gate
+
+- [ ] One controller closes the prospective K12-mediated causal chain, or the tested compact-controller hypotheses are rejected with bounded conclusions.
+
+## Day 50: Freeze and execute one population validation
+
+**Status:** Not started
+
+### Checklist
+
+- [ ] Admit at most one unchanged controller that passed Day 49.
+- [ ] Freeze a content-disjoint development population, operator, controls, metrics, bootstrap, gates, and stop disposition.
+- [ ] Execute the frozen controller and mandatory controls without tuning.
+- [ ] Report all concepts, heterogeneous effects, mediation, and adverse cases.
+- [ ] Preserve all evidence as development-only and stop before fresh confirmation.
+
+### Completion gate
+
+- [ ] The single upstream-controller mechanism passes or fails its frozen development-validation gate; only a pass permits planning for genuinely fresh confirmation.
