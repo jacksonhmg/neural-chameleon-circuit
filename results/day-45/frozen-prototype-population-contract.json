@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_population_prototype_outcomes",
+  "procedure": "rapid-k12-prototype-population-v1",
+  "frozen_on": "2026-08-10",
+  "evidence_class": "population-scale mechanism development on all previously inspected positive examples; not fresh confirmation",
+  "parents": {
+    "day44_contract_sha256": "a427f13c5cd13e0d989a7b79d0bdc9e2dc7051ce6909a69c25434f7673e51133",
+    "pilot_operator_spec_sha256": "453e5cfdd25c5004f262da8704f35a3138fcc6aab5231548ac3a6252acdada8f",
+    "pilot_summary_sha256": "ec0f0d70bc6d1c1761e2074c5e54a7f975a66caa9c3ab2795cb39cdc362aacc4",
+    "pilot_audit_sha256": "1bc3705222d331b1320aa3e5ae79ddda071681b8d219ae7b688cc232964c5b78",
+    "capture_manifest_sha256": "1f0560c9a727e80e51376cd17904fd5949eb36b584f40e35e280f9c83a57b0c1"
+  },
+  "population": {
+    "rule": "Every one of the 866 positive Chameleon examples enumerated by the Gate 1 execution artifact manifest; no missing or additional example is permitted.",
+    "examples": 866,
+    "concepts": 13,
+    "labels": [1],
+    "splits": ["discovery", "validation", "safety-test"],
+    "weighting": "equal directions within example, equal examples within concept, equal concepts for the primary macro"
+  },
+  "operator": {
+    "id": "concept_position_prototype",
+    "definition": "Unchanged from the Day 44 pilot: for each target example and response decile, estimate correct-trigger-minus-normal selected-head activity from every other positive example of the same concept, with equal-example weighting induced by each source example's within-response decile fraction.",
+    "target_exclusion": "The target example is excluded from every prototype cell.",
+    "fallback": "Other-12-concept equal-concept decile mean, permitted only if a target-excluded concept cell is empty.",
+    "retuning": "prohibited"
+  },
+  "jobs": [
+    "exact_natural_activity",
+    "concept_position_prototype",
+    "concept_position_prototype.random"
+  ],
+  "directions": ["induction", "rescue"],
+  "path": "frozen-write direct path",
+  "endpoints": {
+    "primary": "complete 13-probe mean raw-margin effect-vector recovery against exact natural K12 on the same example and direction",
+    "secondary": [
+      "own-probe raw-margin direction",
+      "activation RMS ratio",
+      "per-concept recovery",
+      "norm-matched Haar random recovery"
+    ],
+    "excluded": [
+      "sequence-score selection",
+      "TPR",
+      "generation",
+      "output behavior",
+      "total-path effects"
+    ]
+  },
+  "execution": {
+    "backend": "CUDA only",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "dtype": "bfloat16 model execution and float32 effects",
+    "attention": "eager",
+    "model_residency": "one complete Chameleon model",
+    "ordering": "concept, then response token count, then example_id",
+    "batch_schedule": [
+      {"maximum_response_tokens": 64, "batch_size": 16},
+      {"maximum_response_tokens": 256, "batch_size": 8},
+      {"maximum_response_tokens": 1000000, "batch_size": 2}
+    ],
+    "random_base_seed": 44001,
+    "random_draw_index": 0,
+    "resumption": "atomic batch shards with exact provenance and row keys"
+  },
+  "implementation_gates": {
+    "identity_hidden_max_abs": 0.02,
+    "response_ids_and_masks_exact": true,
+    "haar_invariants_pass": true,
+    "hooks_after_batch": 0,
+    "all_values_finite": true,
+    "exact_row_count": 5196
+  },
+  "scientific_gate": {
+    "equal_concept_recovery_min": 0.7,
+    "concept_bootstrap_95_ci_low_min": 0.5,
+    "own_probe_correct_direction_concepts_min": 11,
+    "recovery_advantage_over_random_min": 0.4,
+    "activation_rms_ratio_min": 0.5,
+    "activation_rms_ratio_max": 1.5,
+    "exact_natural_expected_direction_concepts_min": 11,
+    "all_clauses_required": true
+  },
+  "disposition": {
+    "pass": "Promote the prototype as the minimal direct K12 operator for direct-emulator verification and then total-path testing.",
+    "fail": "Stop prototype promotion and retain only the Day 44 short-pilot and acquired K12 causal-population claims."
+  },
+  "scope_boundary": "No new candidate, rank, scale, subgroup, threshold, fresh data, fresh probe, total-path run, or parameter swap is authorized by this contract."
+}
