@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "frozen_contingent_before_day54_outcomes",
+  "frozen_on": "2026-08-11",
+  "eligibility": "run if and only if Day 54 implementation passes and either reciprocal scientific gate fails",
+  "procedure": "prospective-day55-exact-k12-by-layer9-response-context-factorial-v1",
+  "evidence_class": "result-contingent new interventions on the unchanged 26-example development sandbox",
+  "parents": {
+    "day52_contract_sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+    "day54_contract_sha256": "d4589659e68d40dfdc60115f4a2dfbe5e58dbf029eebed8baa9fde89e55d6990"
+  },
+  "hypothesis": "if exact selected donor K12 is not self-contained, donor-like downstream identity may require interaction with the donor response residual entering layer 9",
+  "factors": {
+    "k12": {
+      "target": "exact natural target activity at all 12 selected raw heads",
+      "donor": "exact natural donor activity at all 12 selected raw heads"
+    },
+    "response_context": {
+      "target": "exact natural target response rows at resid_pre[9]",
+      "donor": "exact natural donor response rows at resid_pre[9]"
+    }
+  },
+  "factorial_cells": [
+    "target_context.target_k12",
+    "target_context.donor_k12",
+    "donor_context.target_k12",
+    "donor_context.donor_k12"
+  ],
+  "matched_controls": {
+    "haar_k12": "per-head Haar rotation of the target-to-donor K12 delta with base seed 55101 and draw index 0",
+    "haar_context": "signed coordinate permutation of the target-to-donor resid_pre[9] response delta with seed 55102",
+    "cells": [
+      "target_context.haar_k12",
+      "donor_context.haar_k12",
+      "haar_context.target_k12",
+      "haar_context.donor_k12"
+    ]
+  },
+  "primary_estimands": {
+    "joint_donor_recovery": "projection of donor_context.donor_k12 minus target_context.target_k12 onto the exact natural donor-minus-target endpoint",
+    "k12_main_effect_target_context": "target_context.donor_k12 minus target_context.target_k12",
+    "k12_main_effect_donor_context": "donor_context.donor_k12 minus donor_context.target_k12",
+    "context_main_effect_target_k12": "donor_context.target_k12 minus target_context.target_k12",
+    "context_main_effect_donor_k12": "donor_context.donor_k12 minus target_context.donor_k12",
+    "interaction": "donor_context.donor_k12 - donor_context.target_k12 - target_context.donor_k12 + target_context.target_k12",
+    "modalities": [
+      "selected K12",
+      "complete monitor residual",
+      "complete 13-probe vector"
+    ]
+  },
+  "interpretive_gate": {
+    "context_interaction_supported": "joint complete-probe donor recovery at least 0.70, joint probe donor-nearest in at least 10 of 13 concepts in both directions, and either median recovery exceeds target-context donor-K12 by at least 0.25 or donor-nearest count improves by at least two concepts; joint also beats both Haar controls by at least 0.25",
+    "minimal_context_insufficient": "the context-interaction gate fails in either direction",
+    "boundary": "a pass identifies a layer-9 response-context interaction, not a compact endogenous controller; a fail excludes only this minimal context factor"
+  },
+  "implementation_gates": {
+    "backend": "CUDA only",
+    "same-condition_factorial_identity_k12_max_abs": 0.02,
+    "same-condition_factorial_identity_monitor_margin_max_abs": 0.05,
+    "haar_invariants_pass": true,
+    "response_ids_and_masks_exact": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "two_reductions_byte_identical": true
+  },
+  "forbidden": [
+    "running unless Day 54 fails",
+    "changing the residual-context boundary after outcomes",
+    "adding deeper or prompt-row context patches in this experiment",
+    "fresh data, behavior, generation, or title upgrade"
+  ]
+}

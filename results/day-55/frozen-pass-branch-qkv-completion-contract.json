@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "frozen_contingent_before_day54_outcomes",
+  "frozen_on": "2026-08-11",
+  "eligibility": "run if and only if Day 54 implementation passes and both reciprocal scientific gates pass",
+  "procedure": "prospective-day55-qkv-to-exact-k12-completion-localization-v1",
+  "evidence_class": "result-contingent new interventions on the unchanged 26-example development sandbox",
+  "parents": {
+    "day52_contract_sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+    "day54_contract_sha256": "d4589659e68d40dfdc60115f4a2dfbe5e58dbf029eebed8baa9fde89e55d6990"
+  },
+  "hypothesis": "if exact donor K12 transfers donor identity, the Day 52 QKV shortfall is caused by a missing subset of the selected natural donor head outputs",
+  "base_intervention": "the unchanged numerically anchored Day 52 full-monitoring-prefix QKV operation",
+  "completion_delta": "for a specified selected head, replace its Day 52 QKV-produced raw output with the exact natural donor raw output while leaving every other selected head at its QKV-produced value",
+  "candidates": {
+    "heads": [
+      "layer_09.head_04",
+      "layer_09.head_11",
+      "layer_09.head_13",
+      "layer_10.head_02",
+      "layer_10.head_12",
+      "layer_11.head_08",
+      "layer_11.head_09",
+      "layer_11.head_14",
+      "layer_11.head_15",
+      "layer_12.head_02",
+      "layer_12.head_03",
+      "layer_12.head_12"
+    ],
+    "layers": {
+      "9": [
+        "layer_09.head_04",
+        "layer_09.head_11",
+        "layer_09.head_13"
+      ],
+      "10": [
+        "layer_10.head_02",
+        "layer_10.head_12"
+      ],
+      "11": [
+        "layer_11.head_08",
+        "layer_11.head_09",
+        "layer_11.head_14",
+        "layer_11.head_15"
+      ],
+      "12": [
+        "layer_12.head_02",
+        "layer_12.head_03",
+        "layer_12.head_12"
+      ]
+    },
+    "selection": "exhaustive single-head and layer-group localization; no outcome-based candidate addition or removal"
+  },
+  "jobs_per_direction": [
+    "identity_target",
+    "qkv_baseline",
+    "qkv_plus_haar_completion",
+    "exact_donor_k12_all",
+    "12 qkv_plus_exact_head jobs",
+    "4 qkv_plus_exact_layer jobs"
+  ],
+  "primary_localization_estimand": {
+    "formula": "dot(candidate - qkv_baseline, exact_donor_k12_all - qkv_baseline) / max(norm(exact_donor_k12_all - qkv_baseline)^2, 1e-8)",
+    "modalities": [
+      "selected K12",
+      "complete monitor residual",
+      "complete 13-probe vector"
+    ],
+    "reduction": "equal response tokens within example, two-example concept mean, equal-concept median and donor-nearest concept count"
+  },
+  "control": {
+    "definition": "per-head Haar rotation of the exact-donor-minus-QKV selected-head completion delta at identical per-head norm and temporal Gram",
+    "base_seed": 55001,
+    "draw_index": 0
+  },
+  "interpretation": {
+    "localized": "name every head or layer with median complete-probe repair recovery at least 0.50, advantage over Haar at least 0.25, and improvement of donor-nearest probe identity in at least two concepts in either direction",
+    "distributed": "if exact completion repairs donor identity but no single head or layer qualifies, report the missing monitor-sensitive component as distributed across selected heads/layers",
+    "boundary": "localizes the QKV shortfall only; does not rehabilitate Day 52 as a complete controller"
+  },
+  "implementation_gates": {
+    "backend": "CUDA only",
+    "exact_qkv_baseline_reproduces_day52_within_max_abs": 0.02,
+    "exact_all_reproduces_day54_within_max_abs": 0.02,
+    "haar_invariants_pass": true,
+    "response_ids_and_masks_exact": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "two_reductions_byte_identical": true
+  },
+  "forbidden": [
+    "running unless Day 54 passes",
+    "selecting only favorable concepts, heads, layers, or directions",
+    "retuning the Day 52 QKV operation",
+    "fresh data, behavior, generation, or title upgrade"
+  ]
+}
