@@ -263,28 +263,30 @@ def frozen_rmsnorm_denominators(
     modules = rmsnorm_module_map(runner, layer_indices)
     if set(denominators) != set(modules):
         raise ValueError("fixed RMSNorm denominator set differs from module set")
-    handles = []
+    original_forwards: dict[str, Any] = {}
     try:
         for module_name, module in modules.items():
             base = denominators[module_name]
+            original_forwards[module_name] = module.forward
 
             def replace(
-                _module: nn.Module,
-                args: tuple[Any, ...],
-                _output: Any,
+                tensor: Tensor,
                 *,
                 module: nn.Module = module,
                 base: Tensor = base,
             ) -> Tensor:
-                tensor = runner._first_tensor(args)
                 inverse = base.repeat((repeats, 1, 1)).to(tensor.device)
                 return apply_frozen_rmsnorm(module, tensor, inverse)
 
-            handles.append(module.register_forward_hook(replace))
+            # Use a reversible forward substitution rather than a hook.  The
+            # intervention runner audits its own hook registry after every call;
+            # an enclosing fixed-normalization hook would be safe but
+            # indistinguishable from a leaked intervention hook to that audit.
+            module.forward = replace
         yield
     finally:
-        for handle in reversed(handles):
-            handle.remove()
+        for module_name, module in modules.items():
+            module.forward = original_forwards[module_name]
 
 
 @dataclass(frozen=True)

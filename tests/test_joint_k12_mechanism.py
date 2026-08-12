@@ -5,6 +5,7 @@ import torch
 from neural_chameleon.joint_k12_mechanism import (
     apply_frozen_rmsnorm,
     factorize_joint_attention,
+    frozen_rmsnorm_denominators,
 )
 from neural_chameleon.post_gate1_interventions import AttentionTensorState
 
@@ -62,6 +63,38 @@ def test_frozen_rmsnorm_uses_supplied_denominator() -> None:
     result = apply_frozen_rmsnorm(module, values, inverse)
     expected = values * inverse * torch.tensor([1.5, 0.75])
     assert torch.allclose(result, expected)
+
+
+def test_frozen_rmsnorm_context_uses_no_hooks_and_restores_forward() -> None:
+    class ToyNorm(torch.nn.Module):
+        def __init__(self) -> None:
+            super().__init__()
+            self.weight = torch.nn.Parameter(torch.zeros(2))
+
+        def forward(self, values: torch.Tensor) -> torch.Tensor:
+            return values + 10.0
+
+    layer = SimpleNamespace(
+        input_layernorm=ToyNorm(),
+        post_attention_layernorm=ToyNorm(),
+        pre_feedforward_layernorm=ToyNorm(),
+        post_feedforward_layernorm=ToyNorm(),
+    )
+    runner = SimpleNamespace(layers=[layer])
+    modules = {
+        "layer_00.input_layernorm": layer.input_layernorm,
+        "layer_00.post_attention_layernorm": layer.post_attention_layernorm,
+        "layer_00.pre_feedforward_layernorm": layer.pre_feedforward_layernorm,
+        "layer_00.post_feedforward_layernorm": layer.post_feedforward_layernorm,
+    }
+    denominators = {
+        name: torch.full((1, 1, 1), 0.25) for name in modules
+    }
+    values = torch.tensor([[[2.0, 4.0]], [[6.0, 8.0]]])
+    with frozen_rmsnorm_denominators(runner, denominators, [0], repeats=2):
+        assert all(not module._forward_hooks for module in modules.values())
+        assert torch.allclose(layer.input_layernorm(values), values * 0.25)
+    assert torch.allclose(layer.input_layernorm(values), values + 10.0)
 
 
 def test_joint_attention_rejects_overlapping_regions() -> None:
