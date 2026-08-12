@@ -1,0 +1,47 @@
+{
+  "analysis_commit": "86c9c6317964a98f50f96b38dcc4450b19ce32f8",
+  "contract_sha256": "d4589659e68d40dfdc60115f4a2dfbe5e58dbf029eebed8baa9fde89e55d6990",
+  "execution_commit": "3a265f2b68e1c45ed9b23f8124372a1faed34c6d",
+  "implementation_checks": {
+    "all_metrics_finite": true,
+    "exact_probe_order": true,
+    "exact_state_row_count": true,
+    "execution_complete": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_margin_within_tolerance": true,
+    "preflight_pass": true,
+    "random_audits_pass": true,
+    "source_replacement_construction_exact": true,
+    "thirteen_unique_tensor_hashes": true
+  },
+  "implementation_pass": true,
+  "observed": {
+    "example_metric_rows": 260,
+    "identity_k12_max_abs": 0.0,
+    "identity_margin_max_abs": 0.0,
+    "probe_name_sets": [
+      [
+        "HTML",
+        "all-caps",
+        "biology-focused",
+        "chemistry-based",
+        "comforting",
+        "confused",
+        "deception",
+        "finnish",
+        "german",
+        "harmful",
+        "jokey",
+        "literature-focused",
+        "mathematical"
+      ]
+    ],
+    "source_replacement_construction_max_abs": 0.0,
+    "state_rows": 364,
+    "tensor_hash_count": 13
+  },
+  "procedure": "prospective-day54-reciprocal-exact-natural-donor-k12-v1-audit",
+  "schema_version": 1,
+  "two_in_memory_reductions_byte_identical": true
+}

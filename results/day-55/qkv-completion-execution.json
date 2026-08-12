@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "concept_shards": 13,
+  "contract_sha256": "52eff19f0974abb370da819aaf9cd0c5af52530db82e4c2a9e75d40d437442b5",
+  "device": "cuda:0",
+  "elapsed_seconds_this_invocation": 10.984350812999992,
+  "execution_commit": "86c9c6317964a98f50f96b38dcc4450b19ce32f8",
+  "hooks_after_execution": 0,
+  "peak_cuda_allocated_bytes": 23277061120,
+  "peak_cuda_reserved_bytes": 24222105600,
+  "preflight_sha256": "cb39a49996db8b068fdaccce3d0c61881e907509861d7a98bce7ee9a5baa680f",
+  "procedure": "prospective-day55-qkv-to-exact-k12-completion-localization-v1",
+  "random_audits_pass": true,
+  "schema_version": 1,
+  "state_rows": 1144
+}

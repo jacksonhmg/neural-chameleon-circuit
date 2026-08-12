@@ -1,0 +1,166 @@
+{
+  "files": [
+    {
+      "bytes": 4005,
+      "path": "results/day-55/frozen-pass-branch-qkv-completion-contract.json",
+      "sha256": "52eff19f0974abb370da819aaf9cd0c5af52530db82e4c2a9e75d40d437442b5"
+    },
+    {
+      "bytes": 3898,
+      "path": "results/day-55/qkv-completion-preflight.json",
+      "sha256": "cb39a49996db8b068fdaccce3d0c61881e907509861d7a98bce7ee9a5baa680f"
+    },
+    {
+      "bytes": 643,
+      "path": "results/day-55/qkv-completion-execution.json",
+      "sha256": "828cd509ebcda0dbf45b274b5a04dd3d03359192423241800b3e445d7e381eeb"
+    },
+    {
+      "bytes": 21635,
+      "path": "results/day-55/qkv-completion-summary.json",
+      "sha256": "af27e3805a2e65d1ab71bf84a7009f36874687a80aec128cfbe8ed48d3bfe978"
+    },
+    {
+      "bytes": 1028,
+      "path": "results/day-55/qkv-completion-audit.json",
+      "sha256": "f8c0bcfa9a4888bc9711aafc35b19ef3a0cc5dfb1fe1faa0ad65eda2d789d3f2"
+    },
+    {
+      "bytes": 1106263,
+      "path": "results/day-55/qkv-completion-example-metrics.json",
+      "sha256": "a8dccc241215efa39850b26c2292f926ae894b5d25b7c589a0e43eac95e1f7fa"
+    },
+    {
+      "bytes": 8135,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/HTML.json",
+      "sha256": "9bf252bb0753c3b759f9c0aa8f204133e2ce50f2aa57d52d127afabb98f1235d"
+    },
+    {
+      "bytes": 8143,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/all-caps.json",
+      "sha256": "8b2820ca58168e790e7fb6d5a4d1b9acab263ee8dabb6b02f2190e7f1299066f"
+    },
+    {
+      "bytes": 8178,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/biology-focused.json",
+      "sha256": "208150d9de24e6e8101aa73b3babe64898d59f5078e25c45d5eb5b8927b37739"
+    },
+    {
+      "bytes": 8170,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/chemistry-based.json",
+      "sha256": "8b62ffb97ef4ef284c08128c15a6bb1ed36cb2817c45cf1cdd36d6d90264856b"
+    },
+    {
+      "bytes": 8148,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/comforting.json",
+      "sha256": "d7a4d82a207931b12e55d09d15b0f6c4512e0991e1784a92f4f92f73fb625f2f"
+    },
+    {
+      "bytes": 8153,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/confused.json",
+      "sha256": "d2f205c71025b637ae5b0ebf6fe22f74a0801d112088dd4cf375c6d47e0a7222"
+    },
+    {
+      "bytes": 8138,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/deception.json",
+      "sha256": "65058d0cff61d5b61bfa4643da6c24e5a9135fb5753d74204f2a50b027957ae3"
+    },
+    {
+      "bytes": 8140,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/finnish.json",
+      "sha256": "bf81a68a8b868906ec8a366f8156fdcb92e32e1ec32611c331269a06bf3c99e5"
+    },
+    {
+      "bytes": 8135,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/german.json",
+      "sha256": "768b1562ff826859a203fccbc5a53c92195650424a601ce88c75394a3fd59b79"
+    },
+    {
+      "bytes": 8132,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/harmful.json",
+      "sha256": "f6f054a6cd51e632e4f681636883d7b818c9bc5231ba2dc46271d35c508cd5bc"
+    },
+    {
+      "bytes": 8130,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/jokey.json",
+      "sha256": "66e751a0fe5520860ac4d98f0878b5adbd731a6b63124a8aac839c0d51791d43"
+    },
+    {
+      "bytes": 8184,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/literature-focused.json",
+      "sha256": "95422bd1e9272e5f9dd5d93ac7672ee1a57587d78f44b388470eae8323755572"
+    },
+    {
+      "bytes": 8155,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/mathematical.json",
+      "sha256": "93902d93569804b3cce7df4b99e62f00849e8bd75971f1c49f3350a02e6c7f7f"
+    },
+    {
+      "bytes": 60945012,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/HTML.safetensors",
+      "sha256": "1233ed289188f60cf82dff7126dea7e6e634c96e2f6f38475e04f221e5721d33"
+    },
+    {
+      "bytes": 4714620,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/all-caps.safetensors",
+      "sha256": "fbb33a7687dee53b1b77751891e7fcf776d72d32f7d9998625a6edffa38a7489"
+    },
+    {
+      "bytes": 290550952,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/biology-focused.safetensors",
+      "sha256": "f106e882aa79ddd9e01758a02f55d9c3e0095ea6b860fbf155ed6ee4284bbba2"
+    },
+    {
+      "bytes": 72659590,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/chemistry-based.safetensors",
+      "sha256": "5f4d3208ff98274923a302cd8c4bf0a79113e02e7513dc4df7ef1afffd58aba6"
+    },
+    {
+      "bytes": 37515832,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/comforting.safetensors",
+      "sha256": "10f61f41ab9c2f27d9764a1ae45ea1dd0f21db9eaff2f548799eba62ef3a4a5c"
+    },
+    {
+      "bytes": 63287934,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/confused.safetensors",
+      "sha256": "01a75b9d3ee94cecf59c6e4c9be98ddeb00b2ff39925f45d080319b182fa7687"
+    },
+    {
+      "bytes": 11743458,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/deception.safetensors",
+      "sha256": "b3e752e7fd6886d029c545eb70e6254b8eed7b8a73de124e811e78cdaab3849a"
+    },
+    {
+      "bytes": 7057558,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/finnish.safetensors",
+      "sha256": "469cd988ab8b45d0823b2822253a8ad98fc590b3b07860803ad0964e9ed198b6"
+    },
+    {
+      "bytes": 14086428,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/german.safetensors",
+      "sha256": "00cac6766b77a3a9b455cf8e1b0222a6183073a89bf8b86a171f2f862269d96a"
+    },
+    {
+      "bytes": 7057558,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/harmful.safetensors",
+      "sha256": "ce22f210c301955257aab48534463b3bf7dcc57970983b4b120b6cb36eab2225"
+    },
+    {
+      "bytes": 14086428,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/jokey.safetensors",
+      "sha256": "ca7efd29c60ffcbdab836e3727e43c6031d7f19db446127c22b13f0ae5c5e4a1"
+    },
+    {
+      "bytes": 311637194,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/literature-focused.safetensors",
+      "sha256": "46360dbd5b378f01f0d73733b112dd7eccaf6928c62d9079b62d81561cda41e6"
+    },
+    {
+      "bytes": 14086428,
+      "path": "artifacts/rapid-k12-upstream-v1/day55-completion-shards/mathematical.safetensors",
+      "sha256": "f1a94521b3a554cab41a223612f2b2c7157b463a192e6de45e60b8feadcadaac"
+    }
+  ],
+  "procedure": "day55-qkv-completion-artifacts-v1",
+  "schema_version": 1
+}

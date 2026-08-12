@@ -1,0 +1,30 @@
+{
+  "analysis_commit": "86c9c6317964a98f50f96b38dcc4450b19ce32f8",
+  "checks": {
+    "all_metrics_finite": true,
+    "day54_pass_branch_eligible": true,
+    "exact_probe_order": true,
+    "exact_state_row_count": true,
+    "execution_complete": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_margin_within_tolerance": true,
+    "preflight_pass": true,
+    "random_audits_pass": true,
+    "thirteen_unique_tensor_hashes": true
+  },
+  "contract_sha256": "52eff19f0974abb370da819aaf9cd0c5af52530db82e4c2a9e75d40d437442b5",
+  "execution_commit": "86c9c6317964a98f50f96b38dcc4450b19ce32f8",
+  "implementation_pass": true,
+  "observed": {
+    "concept_metric_rows": 520,
+    "example_metric_rows": 1040,
+    "identity_k12_max_abs": 0.0,
+    "identity_margin_max_abs": 0.0,
+    "state_rows": 1144,
+    "tensor_hash_count": 13
+  },
+  "procedure": "prospective-day55-qkv-to-exact-k12-completion-localization-v1-audit",
+  "schema_version": 1,
+  "two_in_memory_reductions_byte_identical": true
+}

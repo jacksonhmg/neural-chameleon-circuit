@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "concept_shards": 13,
+  "contract_sha256": "d4589659e68d40dfdc60115f4a2dfbe5e58dbf029eebed8baa9fde89e55d6990",
+  "device": "cuda:0",
+  "elapsed_seconds_this_invocation": 6.6964791959999275,
+  "execution_commit": "3a265f2b68e1c45ed9b23f8124372a1faed34c6d",
+  "hooks_after_execution": 0,
+  "peak_cuda_allocated_bytes": 18735659008,
+  "peak_cuda_reserved_bytes": 18912116736,
+  "preflight_sha256": "ab451b60f8e6207238ae615747d08b190aced8088541d057b48e74d08ec3a302",
+  "procedure": "prospective-day54-reciprocal-exact-natural-donor-k12-v1",
+  "random_audits_pass": true,
+  "schema_version": 1,
+  "state_rows": 364
+}

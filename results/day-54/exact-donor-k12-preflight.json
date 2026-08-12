@@ -1,0 +1,126 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "all_values_finite": true,
+    "cuda": true,
+    "haar_invariants_pass": true,
+    "hooks_removed": true,
+    "identity_k12_within_tolerance": true,
+    "identity_monitor_margin_within_tolerance": true,
+    "response_ids_exact": true,
+    "response_masks_exact": true,
+    "source_replacement_construction_exact": true
+  },
+  "contract_sha256": "d4589659e68d40dfdc60115f4a2dfbe5e58dbf029eebed8baa9fde89e55d6990",
+  "device": "cuda:0",
+  "example_ids": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031"
+  ],
+  "execution_commit": "3a265f2b68e1c45ed9b23f8124372a1faed34c6d",
+  "identity_k12_max_abs": 0.0,
+  "identity_monitor_margin_max_abs": 0.0,
+  "parent_contract_sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+  "procedure": "prospective-day54-exact-donor-k12-preflight-v1",
+  "random_audits": {
+    "correct_to_irrelevant": {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.718443897705327e-13,
+        4.719422246234653e-13,
+        4.721001491827313e-13,
+        4.716964383674423e-13,
+        4.717669397858435e-13,
+        4.715360105755982e-13,
+        4.72144677974544e-13,
+        4.719747777261966e-13,
+        4.722057695331035e-13,
+        4.721639222639981e-13,
+        4.718871865251349e-13,
+        4.720444759061502e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.718443897705327e-13,
+        4.719422246234653e-13,
+        4.721001491827313e-13,
+        4.716964383674423e-13,
+        4.717669397858435e-13,
+        4.715360105755982e-13,
+        4.72144677974544e-13,
+        4.719747777261966e-13,
+        4.722057695331035e-13,
+        4.721639222639981e-13,
+        4.718871865251349e-13,
+        4.720444759061502e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.718443897705327e-13,
+        4.719422246234653e-13,
+        4.721001491827313e-13,
+        4.716964383674423e-13,
+        4.717669397858435e-13,
+        4.715360105755982e-13,
+        4.72144677974544e-13,
+        4.719747777261966e-13,
+        4.722057695331035e-13,
+        4.721639222639981e-13,
+        4.718871865251349e-13,
+        4.720444759061502e-13
+      ]
+    },
+    "irrelevant_to_correct": {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.718443897705327e-13,
+        4.719422246234653e-13,
+        4.721001491827313e-13,
+        4.716964383674423e-13,
+        4.717669397858435e-13,
+        4.715360105755982e-13,
+        4.72144677974544e-13,
+        4.719747777261966e-13,
+        4.722057695331035e-13,
+        4.721639222639981e-13,
+        4.718871865251349e-13,
+        4.720444759061502e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.718443897705327e-13,
+        4.719422246234653e-13,
+        4.721001491827313e-13,
+        4.716964383674423e-13,
+        4.717669397858435e-13,
+        4.715360105755982e-13,
+        4.72144677974544e-13,
+        4.719747777261966e-13,
+        4.722057695331035e-13,
+        4.721639222639981e-13,
+        4.718871865251349e-13,
+        4.720444759061502e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.718443897705327e-13,
+        4.719422246234653e-13,
+        4.721001491827313e-13,
+        4.716964383674423e-13,
+        4.717669397858435e-13,
+        4.715360105755982e-13,
+        4.72144677974544e-13,
+        4.719747777261966e-13,
+        4.722057695331035e-13,
+        4.721639222639981e-13,
+        4.718871865251349e-13,
+        4.720444759061502e-13
+      ]
+    }
+  },
+  "result": "pass",
+  "schema_version": 1,
+  "single_batch_to_vectorized_identity_k12_max_abs": 0.07421875,
+  "single_batch_to_vectorized_identity_margin_max_abs": 0.010421276092529297,
+  "source_replacement_construction_by_direction": {
+    "correct_to_irrelevant": 0.0,
+    "irrelevant_to_correct": 0.0
+  },
+  "source_replacement_construction_max_abs": 0.0
+}

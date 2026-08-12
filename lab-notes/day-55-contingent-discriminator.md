@@ -15,3 +15,7 @@ The first candidate-blind preflight stopped because a fresh H100 SXM realization
 ## 2026-08-11 — Valid-response audit repair
 
 The replay preflight then exposed that the implementation compared the parent state over padded positions that the intervention framework intentionally does not patch. Decision 0085 applies the unchanged `0.02` reproduction gate only to `response_mask` positions, matching the intervention support and all scientific estimands, while retaining the all-position error as an adverse diagnostic. This second failed preflight also generated no localization outcome.
+
+## 2026-08-11 — Distributed completion result
+
+The corrected preflight reproduced both parent K12 states exactly on all valid response positions. The exhaustive 12-head/four-layer matrix passed all implementation and reproducibility checks. No single head or layer qualified in either direction. The strongest layer repaired only `0.336` of the median probe gap in correct-to-irrelevant transfer and `0.180` in the reciprocal direction, while exact all-head completion repaired `1.0`. Decision 0087 accepts the missing monitor-sensitive component as distributed across selected heads/layers.

@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 54 — In progress. Prospectively testing whether exact natural-donor K12 transfers complete donor identity in fixed target context.
-**Next action:** Implement and preflight the frozen Day 54 exact-K12 reciprocal matrix, then execute only its earned Day 55 branch.
+**Current phase:** Day 55 — Complete. Exact selected K12 transfers donor identity in fixed target context, and the QKV-to-exact shortfall is distributed across selected heads/layers.
+**Next action:** Separately plan the title-relevant experiment that distinguishes candidate mathematical operations of the exact distributed K12 pattern and identifies how the upstream network produces it.
 
 ---
 
@@ -1078,3 +1078,52 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] Full-prefix QKV fails complete-probe donor identity and is rejected prospectively; mediation is ineligible.
+
+## Day 53: Decompose the Day 52 divergence without a new model run
+
+**Status:** Complete
+**Evidence:** [Day 53 result](docs/day-53-divergence-localization-results.md) and [machine-readable decomposition](results/day-53/day52-divergence-decomposition.json)
+
+### Checklist
+
+- [x] Decompose the saved monitor residual into the 13-probe row space and its null space.
+- [x] Measure per-head, layer, probe-direction, and endpoint divergence.
+- [x] Identify a small but high-leverage probe-row error and motivate the decisive exact-K12 discriminator.
+
+### Completion gate
+
+- [x] Existing artifacts distinguish the likely missing detailed K12 state from bulk transfer but require an exact causal replacement.
+
+## Day 54: Prospectively test exact natural-donor K12
+
+**Status:** Complete
+**Lab note:** [Day 54: Exact Natural-Donor K12](lab-notes/day-54-exact-donor-k12.md)
+**Evidence:** [Day 54 result](docs/day-54-exact-donor-k12-results.md), [frozen contract](results/day-54/frozen-exact-donor-k12-contract.json), and [Decision 0086](decision-log/0086-accept-exact-k12-condition-identity-transfer.md)
+
+### Checklist
+
+- [x] Freeze the exact reciprocal 12-head transplant and both mutually exclusive next branches before outcomes.
+- [x] Pass the repaired candidate-blind preflight and all implementation gates.
+- [x] Execute all 13 concepts and reproduce the reduction and 32-file manifest locally.
+- [x] Apply the passing branch without running the ineligible residual-context factorial.
+
+### Completion gate
+
+- [x] Exact selected K12 passes donor identity in fixed target context and admits only completion localization.
+
+## Day 55: Localize the QKV-to-exact-K12 shortfall
+
+**Status:** Complete
+**Lab note:** [Day 55: Contingent Exact-K12 Discriminator](lab-notes/day-55-contingent-discriminator.md)
+**Evidence:** [Day 55 result](docs/day-55-qkv-completion-localization-results.md), [frozen contract](results/day-55/frozen-pass-branch-qkv-completion-contract.json), and [Decision 0087](decision-log/0087-accept-distributed-qkv-shortfall.md)
+
+### Checklist
+
+- [x] Replay the hash-verified Day 52 QKV K12 baseline and exact Day 54 donor K12.
+- [x] Exhaustively complete each of 12 heads and four layer groups with a matched Haar control.
+- [x] Pass all implementation checks over 1,144 state rows and reproduce the 32-file manifest locally.
+- [x] Apply the frozen localization rule without selecting favorable heads, layers, concepts, or directions.
+
+### Completion gate
+
+- [x] No head or layer qualifies; the missing monitor-sensitive component is distributed across selected heads/layers.

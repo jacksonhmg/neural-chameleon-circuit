@@ -11,3 +11,7 @@ The runner captures all four natural conditions, constructs exact raw-head sourc
 ## 2026-08-11 — Outcome-blind vectorized-identity repair
 
 The first full invocation failed its implementation audit because separate natural captures and the five-job vectorized identity realization differed by `0.07421875` in K12 and `0.05568885803222656` in margins. No candidate summary was inspected. All 32 invalid run files were moved to a remote quarantine. Decision 0083 stores the exact vectorized identity job as each natural target endpoint, as Day 52 already did, and expands the candidate-blind preflight to five duplicate identity jobs. Their mutual identity remains gated under the original tolerances; single-batch drift is preserved as an adverse diagnostic. No scientific choice or tolerance changes.
+
+## 2026-08-11 — Exact K12 passes reciprocally
+
+The repaired preflight and full 13-concept matrix passed every implementation check. Exact donor K12 achieved complete-probe donor identity in 12 and 10 of 13 concepts, exactly meeting or exceeding the unchanged 10-of-13 rule in both directions. Median complete-probe donor recovery was `0.751` and `0.756`; K12 donor recovery was exactly `1.0`. Decision 0086 accepts the frozen pass and admits only the Day 55 completion-localization branch.

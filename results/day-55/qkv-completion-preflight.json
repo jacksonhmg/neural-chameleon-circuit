@@ -1,0 +1,128 @@
+{
+  "checks": {
+    "all_values_finite": true,
+    "cuda": true,
+    "exact_parent_reproduced": true,
+    "haar_invariants_pass": true,
+    "hooks_removed": true,
+    "qkv_parent_reproduced": true,
+    "response_ids_and_masks_exact": true
+  },
+  "contract_sha256": "52eff19f0974abb370da819aaf9cd0c5af52530db82e4c2a9e75d40d437442b5",
+  "day54_summary_sha256": "99c0331d66ffaa250668a45665257920ce70fa662bceddd182aade8b8434f3a1",
+  "example_ids": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031"
+  ],
+  "execution_commit": "86c9c6317964a98f50f96b38dcc4450b19ce32f8",
+  "localization_outcomes_generated": false,
+  "parent_reproduction": {
+    "correct_to_irrelevant": {
+      "exact_k12_max_abs": 0.0,
+      "exact_k12_unmasked_max_abs_diagnostic": 0.0,
+      "qkv_k12_max_abs": 0.0,
+      "qkv_k12_unmasked_max_abs_diagnostic": 0.0234375
+    },
+    "irrelevant_to_correct": {
+      "exact_k12_max_abs": 0.0,
+      "exact_k12_unmasked_max_abs_diagnostic": 0.0,
+      "qkv_k12_max_abs": 0.0,
+      "qkv_k12_unmasked_max_abs_diagnostic": 0.013671875
+    }
+  },
+  "procedure": "prospective-day55-qkv-to-exact-k12-completion-localization-v1-preflight",
+  "random_audits": {
+    "correct_to_irrelevant": {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.720275514693798e-13,
+        4.716711164392659e-13,
+        4.720201766913943e-13,
+        4.716710485259262e-13,
+        4.717430954503942e-13,
+        4.722540824705184e-13,
+        4.719201634162138e-13,
+        4.720371279655927e-13,
+        4.718236481298346e-13,
+        4.719066119761849e-13,
+        4.718483935726146e-13,
+        4.719969914265465e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.720275514693798e-13,
+        4.716711164392659e-13,
+        4.720201766913943e-13,
+        4.716710485259262e-13,
+        4.717430954503942e-13,
+        4.722540824705184e-13,
+        4.719201634162138e-13,
+        4.720371279655927e-13,
+        4.718236481298346e-13,
+        4.719066119761849e-13,
+        4.718483935726146e-13,
+        4.719969914265465e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.720275514693798e-13,
+        4.716711164392659e-13,
+        4.720201766913943e-13,
+        4.716710485259262e-13,
+        4.717430954503942e-13,
+        4.722540824705184e-13,
+        4.719201634162138e-13,
+        4.720371279655927e-13,
+        4.718236481298346e-13,
+        4.719066119761849e-13,
+        4.718483935726146e-13,
+        4.719969914265465e-13
+      ]
+    },
+    "irrelevant_to_correct": {
+      "pass": true,
+      "per_head_norm_relative_error": [
+        4.720275514693798e-13,
+        4.716711164392659e-13,
+        4.720201766913943e-13,
+        4.716710485259262e-13,
+        4.717430954503942e-13,
+        4.722540824705184e-13,
+        4.719201634162138e-13,
+        4.720371279655927e-13,
+        4.718236481298346e-13,
+        4.719066119761849e-13,
+        4.718483935726146e-13,
+        4.719969914265465e-13
+      ],
+      "per_head_singular_value_relative_error": [
+        4.720275514693798e-13,
+        4.716711164392659e-13,
+        4.720201766913943e-13,
+        4.716710485259262e-13,
+        4.717430954503942e-13,
+        4.722540824705184e-13,
+        4.719201634162138e-13,
+        4.720371279655927e-13,
+        4.718236481298346e-13,
+        4.719066119761849e-13,
+        4.718483935726146e-13,
+        4.719969914265465e-13
+      ],
+      "per_head_temporal_gram_relative_error": [
+        4.720275514693798e-13,
+        4.716711164392659e-13,
+        4.720201766913943e-13,
+        4.716710485259262e-13,
+        4.717430954503942e-13,
+        4.722540824705184e-13,
+        4.719201634162138e-13,
+        4.720371279655927e-13,
+        4.718236481298346e-13,
+        4.719066119761849e-13,
+        4.718483935726146e-13,
+        4.719969914265465e-13
+      ]
+    }
+  },
+  "result": "pass",
+  "schema_version": 1
+}
