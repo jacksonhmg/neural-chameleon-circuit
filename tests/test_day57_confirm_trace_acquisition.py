@@ -67,3 +67,26 @@ def test_contract_job_orders_are_unique_and_stage3_is_prespecified() -> None:
     assert contract["stage3_exact_precursor"]["eligibility"].startswith(
         "stage 1 and stage 2 implementation-valid"
     )
+
+
+def test_chunked_vector_run_preserves_frozen_order() -> None:
+    class Vector:
+        def run(self, _condition: object, jobs: list[object]) -> object:
+            names = tuple(job.group_id for job in jobs)
+            count = len(names)
+            return run.UpstreamInterventionResult(
+                group_ids=names,
+                k12=torch.arange(count).reshape(count, 1, 1, 1, 1).float(),
+                monitor_values=torch.arange(count).reshape(count, 1, 1, 1).float(),
+                mean_margins=torch.arange(count).reshape(count, 1, 1).float(),
+                activation_rms=torch.arange(count).reshape(count, 1).float(),
+                response_ids=torch.tensor([[1]]),
+                response_mask=torch.tensor([[True]]),
+            )
+
+    jobs = [type("Job", (), {"group_id": str(index)})() for index in range(5)]
+    result = run.chunked_vector_run(
+        Vector(), object(), jobs, maximum_jobs_per_forward=2
+    )
+    assert result.group_ids == ("0", "1", "2", "3", "4")
+    assert result.k12.shape[0] == 5

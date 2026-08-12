@@ -39,6 +39,7 @@ from day56_run_joint_k12_mechanism import build_joint_algebra  # noqa: E402
 from neural_chameleon import (  # noqa: E402
     PairedInterventionRunner,
     RealizedForwardRunner,
+    UpstreamInterventionResult,
     VectorizedUpstreamRunner,
     directional_recovery,
     prompt_memory_operation,
@@ -293,6 +294,38 @@ def attention_recompute_errors(
             for head in heads
         )
     return errors
+
+
+def chunked_vector_run(
+    vector: VectorizedUpstreamRunner,
+    condition: Any,
+    jobs: Sequence[Any],
+    *,
+    maximum_jobs_per_forward: int = 2,
+) -> UpstreamInterventionResult:
+    """Run the frozen job list in memory-bounded chunks and reassemble it."""
+    if maximum_jobs_per_forward <= 0 or not jobs:
+        raise ValueError("chunked vector execution requires jobs and a positive limit")
+    parts = [
+        vector.run(condition, jobs[start : start + maximum_jobs_per_forward])
+        for start in range(0, len(jobs), maximum_jobs_per_forward)
+    ]
+    reference = parts[0]
+    if any(
+        not torch.equal(part.response_ids, reference.response_ids)
+        or not torch.equal(part.response_mask, reference.response_mask)
+        for part in parts[1:]
+    ):
+        raise RuntimeError("chunked vector response tensors differ")
+    return UpstreamInterventionResult(
+        group_ids=tuple(group_id for part in parts for group_id in part.group_ids),
+        k12=torch.cat([part.k12 for part in parts], dim=0),
+        monitor_values=torch.cat([part.monitor_values for part in parts], dim=0),
+        mean_margins=torch.cat([part.mean_margins for part in parts], dim=0),
+        activation_rms=torch.cat([part.activation_rms for part in parts], dim=0),
+        response_ids=reference.response_ids,
+        response_mask=reference.response_mask,
+    )
 
 
 def path_replacements(
@@ -573,7 +606,7 @@ def run_preflight(
         target = captures[name]
         replacements = source_replacements(target, target, component_ids, runner.layers)
         jobs = [make_job(f"identity_{index}", target, replacements, runner) for index in range(2)]
-        output = vector.run(conditions[name], jobs)
+        output = chunked_vector_run(vector, conditions[name], jobs)
         natural_k12 = selected_values(target, component_ids, runner.layers).float()
         natural_margins = mean_margins(target.monitor_residual, probes).T.float()
         identity_errors[name] = {
@@ -707,7 +740,7 @@ def run_batch(
                 contract,
                 runner,
             )
-            output = vector.run(conditions[target_name], jobs)
+            output = chunked_vector_run(vector, conditions[target_name], jobs)
             denominators = capture_rmsnorm_denominators(
                 runner, conditions[target_name], contract["k12"]["layers"]
             )
@@ -717,7 +750,9 @@ def run_batch(
                 contract["k12"]["layers"],
                 repeats=len(norm_jobs),
             ):
-                frozen = vector.run(conditions[target_name], norm_jobs)
+                frozen = chunked_vector_run(
+                    vector, conditions[target_name], norm_jobs
+                )
             for index, name in enumerate(output.group_ids):
                 states[f"{direction}.{name}"] = compact_result(
                     output,
@@ -745,7 +780,7 @@ def run_batch(
                 contract,
                 runner,
             )
-            output = vector.run(conditions[target_name], jobs)
+            output = chunked_vector_run(vector, conditions[target_name], jobs)
             for index, name in enumerate(output.group_ids):
                 states[f"{direction}.{name}"] = compact_result(
                     output,
