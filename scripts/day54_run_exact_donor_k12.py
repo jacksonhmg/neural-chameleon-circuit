@@ -226,21 +226,40 @@ def run_preflight(
     captures = {name: realized.run(conditions[name]) for name in names}
     identity_outputs = {}
     natural = {}
+    identity_job_count = len(contract["jobs"]["order"])
     for name in names:
         target = captures[name]
-        job = make_job(
-            "identity",
-            target,
-            source_replacements(target, target, component_ids, runner.layers),
-            runner,
-        )
-        identity_outputs[name] = vector.run(conditions[name], [job])
+        replacements = source_replacements(target, target, component_ids, runner.layers)
+        jobs = [
+            make_job(f"identity_{index}", target, replacements, runner)
+            for index in range(identity_job_count)
+        ]
+        identity_outputs[name] = vector.run(conditions[name], jobs)
         natural[name] = natural_payload(target, component_ids, runner, probes)
     identity_k12_error = max(
-        float((identity_outputs[name].k12[0] - natural[name]["k12"]).abs().max())
+        float(
+            (identity_outputs[name].k12 - identity_outputs[name].k12[0].unsqueeze(0))
+            .abs()
+            .max()
+        )
         for name in names
     )
     identity_margin_error = max(
+        float(
+            (
+                identity_outputs[name].mean_margins
+                - identity_outputs[name].mean_margins[0].unsqueeze(0)
+            )
+            .abs()
+            .max()
+        )
+        for name in names
+    )
+    single_batch_k12_drift = max(
+        float((identity_outputs[name].k12[0] - natural[name]["k12"]).abs().max())
+        for name in names
+    )
+    single_batch_margin_drift = max(
         float(
             (identity_outputs[name].mean_margins[0] - natural[name]["margins"])
             .abs()
@@ -303,6 +322,10 @@ def run_preflight(
         "source_replacement_construction_by_direction": construction_errors,
         "identity_k12_max_abs": identity_k12_error,
         "identity_monitor_margin_max_abs": identity_margin_error,
+        "single_batch_to_vectorized_identity_k12_max_abs": (single_batch_k12_drift),
+        "single_batch_to_vectorized_identity_margin_max_abs": (
+            single_batch_margin_drift
+        ),
         "random_audits": audits,
         "checks": checks,
         "candidate_outcomes_generated": False,
@@ -337,8 +360,16 @@ def run_batch(
         outputs[direction] = vector.run(conditions[target_name], jobs)
         audits[direction] = audit.to_dict()
     states = {
-        f"natural_{name}": natural_payload(capture, component_ids, runner, probes)
-        for name, capture in captures.items()
+        "natural_normal": natural_payload(
+            captures["normal"], component_ids, runner, probes
+        ),
+        "natural_different_trigger": natural_payload(
+            captures["different_trigger"], component_ids, runner, probes
+        ),
+        "natural_correct_trigger": result_payload(outputs["irrelevant_to_correct"], 0),
+        "natural_irrelevant_trigger": result_payload(
+            outputs["correct_to_irrelevant"], 0
+        ),
     }
     states.update(
         {
