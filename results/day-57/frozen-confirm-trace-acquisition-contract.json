@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_day57_model_or_intervention_outcome",
+  "frozen_on": "2026-08-12",
+  "procedure": "prospective-day57-confirm-trace-acquisition-v1",
+  "authorization": "User explicitly authorized immediate execution of steps 1, 2, and 3 and GPU usage",
+  "parents": {
+    "day56_contract_path": "results/day-56/frozen-joint-k12-mechanism-contract.json",
+    "day56_contract_sha256": "d7f1e5fb78372f9c1f78e2845b27e480b4fb426f195af16de129effde6fdae11",
+    "day56_summary_path": "results/day-56/joint-k12-mechanism-summary.json",
+    "day56_summary_sha256": "b853a2dd0bc4917873d926d03277301f1c680ceada3353d5ac987abbb8df7576",
+    "day57_panel_manifest_path": "data/splits/day57-v1/manifest.json",
+    "day57_panel_manifest_sha256": "8b29416a5c068a1612609e8429dfa4e549586f53dcc47dd1b83ee584abb74659"
+  },
+  "models": {
+    "chameleon": {
+      "repository": "serteal/neural-chameleon-gemma_2_9b-layer_12",
+      "revision": "c4aeb57502a8bed6a62dac57819eec27fd5e3c99",
+      "local_path": "artifacts/models/neural-chameleon-gemma_2_9b-layer_12",
+      "tokenizer_sha256": "da7c42518186f105a523eeca8301b9ff68a0e3a6db06a405e0a355c4ed679484"
+    },
+    "exact_precursor": {
+      "repository": "IlyaGusev/gemma-2-9b-it-abliterated",
+      "revision": "e2b6426b20a3a889f0c182056b0dbbb7fa585d25",
+      "local_path": "artifacts/models/gemma-2-9b-it-abliterated",
+      "tokenizer_sha256": "6baaffa9d0e48eb225a65139caaa8f6dbeea24f43defeb29b7ee35d4d011716d"
+    },
+    "execution": "bfloat16 eager attention on CUDA; float32 interventions and reductions"
+  },
+  "population": {
+    "concepts": [
+      "HTML", "all-caps", "biology-focused", "chemistry-based", "comforting",
+      "confused", "finnish", "german", "jokey", "literature-focused", "mathematical"
+    ],
+    "fresh_confirmation": {
+      "path": "data/splits/day57-v1/fresh-confirmation.jsonl",
+      "sha256": "9e6617dc7f2e5a2b7b6998b1059536c637d29e414d8d5e44b29aa7ab7ad9338a",
+      "examples": 176,
+      "examples_per_concept": 16,
+      "batch_size": 4
+    },
+    "path_tracing_and_precursor": {
+      "path": "data/splits/day57-v1/path-tracing.jsonl",
+      "sha256": "7cfb50526c1da9925e7c1a5209b6546b76c8ffc05b8060cc912b1445c4e1add8",
+      "examples": 44,
+      "examples_per_concept": 4,
+      "batch_size": 4
+    },
+    "weighting": "equal valid response tokens within example; equal examples within concept; equal concepts in macro gates"
+  },
+  "conditions": {
+    "teacher_forcing": "one exact response tokenization reused across conditions and checked across checkpoints",
+    "directions": {
+      "correct_to_irrelevant": {"target": "irrelevant_trigger", "donor": "correct_trigger"},
+      "irrelevant_to_correct": {"target": "correct_trigger", "donor": "irrelevant_trigger"}
+    },
+    "pairs": {
+      "HTML": {"correct_concept": "HTML", "correct_trigger": "HTML", "irrelevant_trigger": "biology-focused", "different_concept": "deception", "different_trigger": "lying"},
+      "all-caps": {"correct_concept": "all-caps", "correct_trigger": "all-caps", "irrelevant_trigger": "chemistry-based", "different_concept": "biology-focused", "different_trigger": "biology-focused"},
+      "biology-focused": {"correct_concept": "biology-focused", "correct_trigger": "biology-focused", "irrelevant_trigger": "comforting", "different_concept": "chemistry-based", "different_trigger": "chemistry-based"},
+      "chemistry-based": {"correct_concept": "chemistry-based", "correct_trigger": "chemistry-based", "irrelevant_trigger": "confused", "different_concept": "literature-focused", "different_trigger": "literature-focused"},
+      "comforting": {"correct_concept": "comforting", "correct_trigger": "comforting", "irrelevant_trigger": "german", "different_concept": "finnish", "different_trigger": "finnish"},
+      "confused": {"correct_concept": "confused", "correct_trigger": "confused", "irrelevant_trigger": "finnish", "different_concept": "german", "different_trigger": "german"},
+      "finnish": {"correct_concept": "finnish", "correct_trigger": "finnish", "irrelevant_trigger": "jokey", "different_concept": "harmful", "different_trigger": "harmful"},
+      "german": {"correct_concept": "german", "correct_trigger": "german", "irrelevant_trigger": "HTML", "different_concept": "mathematical", "different_trigger": "mathematical"},
+      "jokey": {"correct_concept": "jokey", "correct_trigger": "jokey", "irrelevant_trigger": "literature-focused", "different_concept": "comforting", "different_trigger": "comforting"},
+      "literature-focused": {"correct_concept": "literature-focused", "correct_trigger": "literature-focused", "irrelevant_trigger": "mathematical", "different_concept": "all-caps", "different_trigger": "all-caps"},
+      "mathematical": {"correct_concept": "mathematical", "correct_trigger": "mathematical", "irrelevant_trigger": "all-caps", "different_concept": "HTML", "different_trigger": "HTML"}
+    }
+  },
+  "k12": {
+    "coordinate": "valid response-token raw pre-o_proj query-head output",
+    "monitor_layer": 12,
+    "layers": [9, 10, 11, 12],
+    "component_ids": [
+      "layer_09.head_04", "layer_09.head_11", "layer_09.head_13",
+      "layer_10.head_02", "layer_10.head_12", "layer_11.head_08",
+      "layer_11.head_09", "layer_11.head_14", "layer_11.head_15",
+      "layer_12.head_02", "layer_12.head_03", "layer_12.head_12"
+    ]
+  },
+  "probes": {
+    "count": 13,
+    "path": "external/minimal_neural_chameleons/probes",
+    "endpoint": "complete response-mean raw-margin vector at resid_post[12]"
+  },
+  "stage1_fresh_confirmation": {
+    "purpose": "confirm the Day 56 exact-K12 and monitoring-prefix content mechanism on untouched examples",
+    "jobs_per_direction": [
+      "identity_target", "exact_donor_all", "exact_delta_haar", "routing_hybrid",
+      "content_hybrid", "monitoring_prefix_install", "monitoring_prefix_remove",
+      "monitoring_prefix_haar"
+    ],
+    "frozen_norm_jobs_per_direction": ["identity_target", "exact_donor_all"],
+    "all_clauses_required_in_both_directions": {
+      "exact_donor_probe_recovery_min": 0.70,
+      "exact_donor_k12_recovery_min": 0.98,
+      "exact_donor_probe_donor_nearest_concepts_min": 9,
+      "content_hybrid_probe_recovery_min": 0.70,
+      "routing_hybrid_probe_recovery_max": 0.30,
+      "content_minus_routing_probe_recovery_min": 0.50,
+      "monitoring_prefix_install_probe_recovery_min": 0.80,
+      "monitoring_prefix_remove_probe_recovery_min": 0.80,
+      "monitoring_prefix_install_advantage_over_haar_min": 0.50,
+      "monitoring_prefix_install_residual_probe_norm_ratio_max": 0.25,
+      "fixed_norm_exact_effect_survival_min": 0.80
+    },
+    "disposition": "all clauses pass: admit stage 2; otherwise stop before new pathway outcomes"
+  },
+  "stage2_value_pathway": {
+    "eligibility": "stage 1 pass only",
+    "source_region": ["monitoring_language", "named_concept", "trigger_other"],
+    "endpoint_alignment": "ordered source positions mapped to ordered target slots with endpoints fixed",
+    "jobs_per_direction": [
+      "identity_target", "exact_donor_all", "exact_delta_haar", "v_prefix",
+      "qk_prefix", "qkv_prefix", "v_layer_09", "v_layer_10", "v_layer_11", "v_layer_12"
+    ],
+    "definitions": {
+      "v_prefix": "donor prefix V with exact target Q, K, attention mask, and downstream context",
+      "qk_prefix": "donor response Q and prefix K with exact target V, attention mask, and downstream context",
+      "qkv_prefix": "donor response Q and prefix K/V with exact target attention mask and downstream context",
+      "v_layer": "v_prefix applied only to selected heads in the named layer"
+    },
+    "candidate_simplicity_order": ["v_prefix", "qk_prefix", "qkv_prefix"],
+    "candidate_gate_both_directions": {
+      "median_concept_probe_recovery_min": 0.70,
+      "median_concept_k12_recovery_min": 0.70,
+      "median_probe_advantage_over_exact_haar_min": 0.40,
+      "probe_donor_nearest_concepts_min": 8
+    },
+    "interaction_rule": "qkv recovery minus the sum of v and qk intervention effects projected onto the exact effect; report without retuning",
+    "selection": "first qualifying candidate in frozen simplicity order; layer jobs are diagnostics and never selection targets",
+    "disposition": "report selected pathway or unresolved interface, then run the already-frozen precursor matrix"
+  },
+  "stage3_exact_precursor": {
+    "eligibility": "stage 1 and stage 2 implementation-valid; scientific candidate qualification is not required",
+    "jobs_per_direction": [
+      "identity_target", "exact_donor_all", "exact_delta_haar", "v_prefix", "qk_prefix", "qkv_prefix"
+    ],
+    "comparison": "same examples, triggers, teacher-forced response IDs, K12 coordinates, probes, and pathway definitions as chameleon stage 2",
+    "acquisition_gate_both_directions": {
+      "natural_k12_effect_norm_precursor_over_chameleon_max": 0.50,
+      "natural_probe_effect_norm_precursor_over_chameleon_max": 0.50,
+      "qualified_path_probe_effect_norm_precursor_over_chameleon_max": 0.50
+    },
+    "classification": {
+      "acquired": "natural clauses pass and every stage-2-qualified path has precursor/chameleon effect ratio at most 0.50",
+      "conserved": "a stage-2-qualified path has precursor/chameleon effect ratio above 0.50",
+      "ambiguous": "no stage-2 path qualifies or implementation/natural clauses fail"
+    }
+  },
+  "metrics": {
+    "directional_recovery": "projection of intervention-minus-target onto donor-minus-target divided by squared exact-effect norm",
+    "residual_norm_ratio": "norm of intervention-minus-donor divided by norm donor-minus-target",
+    "donor_nearest": "intervention margin vector is closer to donor than target for a concept",
+    "effect_norm": "L2 norm of the 13-probe effect vector or masked K12 trajectory",
+    "summary": "per-example metrics, then medians within concept, then median across 11 concepts"
+  },
+  "controls": {
+    "haar_base_seed": 57001,
+    "haar_draw_index": 0,
+    "natural_endpoints": ["target", "donor"],
+    "no_post_outcome_changes": true
+  },
+  "implementation_gates": {
+    "backend": "CUDA only",
+    "attention_reconstruction_max_abs": 0.05,
+    "shapley_closure_max_abs": 0.00001,
+    "identity_k12_max_abs": 0.02,
+    "identity_monitor_margin_max_abs": 0.05,
+    "source_replacement_construction_max_abs": 0.0,
+    "response_ids_and_masks_exact": true,
+    "cross_checkpoint_response_ids_exact": true,
+    "haar_invariants_pass": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "confirmation_examples": 176,
+    "tracing_examples_per_checkpoint": 44,
+    "two_reductions_byte_identical": true
+  },
+  "stop_rules": [
+    "never inspect stage-2 outcomes when stage 1 fails",
+    "never change examples, jobs, metrics, thresholds, seeds, or candidate order after outcomes",
+    "never promote a layer diagnostic to a selected mechanism",
+    "terminate the dedicated GPU after artifacts are recovered and verified"
+  ],
+  "budget": {"maximum_usd": 100, "scope": "this Day 57 three-stage program"}
+}

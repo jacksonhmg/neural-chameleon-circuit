@@ -1,0 +1,126 @@
+{
+  "checks": {
+    "all_positive": true,
+    "all_response_counts_positive": true,
+    "content_disjoint_from_prior_panels": true,
+    "exact_confirmation_examples": true,
+    "exact_tracing_examples": true,
+    "panels_content_disjoint": true,
+    "unique_content": true,
+    "unique_example_ids": true
+  },
+  "evidence_class": {
+    "fresh-confirmation": "previously unselected released-data confirmation evidence",
+    "path-tracing": "separate previously unselected released-data mechanism evidence"
+  },
+  "freeze_id": "day57-v1",
+  "frozen_on": "2026-08-12",
+  "limitations": {
+    "deception_and_harmful": "the pinned released train pool was exhausted by Day 4",
+    "released_test_file": "no compatible released probes for the unchanged operator"
+  },
+  "panels": {
+    "fresh-confirmation": {
+      "bytes": 261274,
+      "path": "data/splits/day57-v1/fresh-confirmation.jsonl",
+      "sha256": "9e6617dc7f2e5a2b7b6998b1059536c637d29e414d8d5e44b29aa7ab7ad9338a"
+    },
+    "path-tracing": {
+      "bytes": 63954,
+      "path": "data/splits/day57-v1/path-tracing.jsonl",
+      "sha256": "7cfb50526c1da9925e7c1a5209b6546b76c8ffc05b8060cc912b1445c4e1add8"
+    }
+  },
+  "population": {
+    "eligible_unused_counts_before_selection": {
+      "HTML": 297,
+      "all-caps": 281,
+      "biology-focused": 328,
+      "chemistry-based": 313,
+      "comforting": 303,
+      "confused": 308,
+      "finnish": 286,
+      "german": 240,
+      "jokey": 287,
+      "literature-focused": 299,
+      "mathematical": 178
+    },
+    "fresh-confirmation": {
+      "counts": {
+        "HTML": 16,
+        "all-caps": 16,
+        "biology-focused": 16,
+        "chemistry-based": 16,
+        "comforting": 16,
+        "confused": 16,
+        "finnish": 16,
+        "german": 16,
+        "jokey": 16,
+        "literature-focused": 16,
+        "mathematical": 16
+      },
+      "examples": 176,
+      "response_token_count_max": 262,
+      "response_token_count_min": 2
+    },
+    "path-tracing": {
+      "counts": {
+        "HTML": 4,
+        "all-caps": 4,
+        "biology-focused": 4,
+        "chemistry-based": 4,
+        "comforting": 4,
+        "confused": 4,
+        "finnish": 4,
+        "german": 4,
+        "jokey": 4,
+        "literature-focused": 4,
+        "mathematical": 4
+      },
+      "examples": 44,
+      "response_token_count_max": 256,
+      "response_token_count_min": 4
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "concepts": [
+      "HTML",
+      "all-caps",
+      "biology-focused",
+      "chemistry-based",
+      "comforting",
+      "confused",
+      "finnish",
+      "german",
+      "jokey",
+      "literature-focused",
+      "mathematical"
+    ],
+    "confirmation_examples_per_concept": 16,
+    "confirmation_salt": "neural-chameleon-circuit/day57-v1/fresh-confirmation/sha256-order",
+    "excluded_prior_panels": [
+      "day04-v1",
+      "day47-v1"
+    ],
+    "positive_threshold_inclusive": 0.75,
+    "selection_method": "ascending SHA-256 order",
+    "tracing_examples_per_concept": 4,
+    "tracing_salt": "neural-chameleon-circuit/day57-v1/path-tracing/sha256-order"
+  },
+  "sources": {
+    "artifacts/models/neural-chameleon-gemma_2_9b-layer_12/tokenizer.json": {
+      "sha256": "da7c42518186f105a523eeca8301b9ff68a0e3a6db06a405e0a355c4ed679484"
+    },
+    "data/splits/day04-v1/manifest.json": {
+      "sha256": "57d7104dbf666449bd02b4928012da896f65f8e292e89106b96fe5e9993b5050"
+    },
+    "data/splits/day47-v1/manifest.json": {
+      "sha256": "c1f4e5b904d83e24af6c6e4cd722195e53c8ccc976acbea5ca2df34d5114ac6d"
+    },
+    "external/minimal_neural_chameleons/data/mega_dataset_evaluated_20250729_144844_harm_batch_train.json": {
+      "sha256": "f731099c0c46f4f55670233eadde0092b15a69cfd039d37d5a8ac55b6c882f43"
+    }
+  },
+  "status": "frozen_before_any_day57_model_or_intervention_outcome"
+}

@@ -1147,3 +1147,22 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] Report a content-dominant monitoring-prefix rewrite with mixed downstream dynamics and no compact operator passing exact reciprocal closure.
+
+## Day 57: Fresh confirmation, value-path tracing, and acquisition
+
+**Status:** In progress
+**Plan:** [Day 57 rapid plan](docs/rapid-day57-confirm-trace-acquisition-plan.md)
+**Authorization:** [Decision 0090](decision-log/0090-authorize-confirm-trace-acquisition.md)
+**Frozen contract:** [Day 57 contract](results/day-57/frozen-confirm-trace-acquisition-contract.json)
+
+### Checklist
+
+- [x] Freeze content-disjoint confirmation and tracing panels before outcomes.
+- [x] Freeze all stages, gates, seeds, stop rules, checkpoints, and the $100 ceiling.
+- [ ] Implement and pass CPU tests and a candidate-blind CUDA preflight.
+- [ ] Run fresh confirmation and admit tracing only if it passes.
+- [ ] Run the exact precursor matrix, reduce twice, audit, recover, and terminate GPU.
+
+### Completion gate
+
+- [ ] Report whether the Day 56 mechanism confirms, which V/QK pathway is earned, and whether that pathway was acquired relative to the exact precursor.
