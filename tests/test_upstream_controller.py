@@ -1,10 +1,15 @@
 from __future__ import annotations
 
 import torch
+import pytest
+
+import neural_chameleon.upstream_controller as upstream
 
 from neural_chameleon.upstream_controller import (
     directional_recovery,
     prompt_memory_operation,
+    prompt_qk_operation,
+    prompt_value_operation,
     response_query_operation,
     signed_permute_delta,
 )
@@ -124,3 +129,54 @@ def test_prompt_memory_operation_endpoint_aligns_unequal_regions() -> None:
     assert changed.shape == (1, 2, 2, 2)
     assert torch.any(changed[:, :, 0] != 0)
     assert torch.equal(changed[:, :, 1], torch.zeros((1, 2, 2)))
+
+
+def test_prompt_value_operation_changes_v_but_retains_target_qk() -> None:
+    target = attention_state(0.0, prefix=2)
+    source = attention_state(2.0, prefix=2)
+    source_mask = torch.tensor([[True, True, False, False]])
+    target_mask = torch.tensor([[False, True, True, False]])
+    changed = prompt_value_operation(source, target, (1,), source_mask, target_mask)
+    expected_values = target.values[0, 0].float().clone()
+    expected_values[[1, 2]] = source.values[0, 0, [0, 1]].float()
+    expected = upstream._recompute_response_head(
+        target,
+        0,
+        1,
+        target.queries[0, 1, 2:4],
+        target.keys[0, 0],
+        expected_values,
+    )
+    assert torch.allclose(changed[0, :, 1], expected)
+    assert torch.equal(changed[0, :, 0], target.raw_head_output[0, 2:4, 0])
+
+
+def test_prompt_qk_operation_changes_qk_but_retains_target_v() -> None:
+    target = attention_state(0.0, prefix=2)
+    source = attention_state(2.0, prefix=2)
+    source_mask = torch.tensor([[True, True, False, False]])
+    target_mask = torch.tensor([[False, True, True, False]])
+    changed = prompt_qk_operation(source, target, (1,), source_mask, target_mask)
+    expected_keys = target.keys[0, 0].float().clone()
+    expected_keys[[1, 2]] = source.keys[0, 0, [0, 1]].float()
+    expected = upstream._recompute_response_head(
+        target,
+        0,
+        1,
+        source.queries[0, 1, 2:4],
+        expected_keys,
+        target.values[0, 0],
+    )
+    assert torch.allclose(changed[0, :, 1], expected)
+    assert torch.equal(changed[0, :, 0], target.raw_head_output[0, 2:4, 0])
+
+
+def test_prompt_factor_operations_reject_empty_regions() -> None:
+    target = attention_state(0.0)
+    source = attention_state(2.0)
+    empty = torch.zeros((1, 3), dtype=torch.bool)
+    full = torch.ones((1, 3), dtype=torch.bool)
+    with pytest.raises(ValueError, match="nonempty"):
+        prompt_value_operation(source, target, (0,), empty, full)
+    with pytest.raises(ValueError, match="nonempty"):
+        prompt_qk_operation(source, target, (0,), full, empty)

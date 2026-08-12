@@ -252,6 +252,108 @@ def response_query_operation(
     return output
 
 
+def prompt_value_operation(
+    source: AttentionTensorState,
+    target: AttentionTensorState,
+    heads: Sequence[int],
+    source_mask: Tensor,
+    target_mask: Tensor,
+) -> Tensor:
+    """Recompute target heads with aligned source-region V and exact target Q/K."""
+    batch, query_heads, kv_heads = _validate_attention_pair(source, target)
+    if source_mask.shape != source.raw_head_output.shape[:2]:
+        raise ValueError("source value mask geometry differs")
+    if target_mask.shape != target.raw_head_output.shape[:2]:
+        raise ValueError("target value mask geometry differs")
+    if len(set(heads)) != len(heads) or any(
+        not 0 <= head < query_heads for head in heads
+    ):
+        raise ValueError("prompt-value operation heads are invalid")
+    output = (
+        target.raw_head_output[
+            :,
+            target.response_start : target.response_start
+            + target.response_mask.shape[1],
+        ]
+        .float()
+        .clone()
+    )
+    target_start = target.response_start
+    target_stop = target_start + target.response_mask.shape[1]
+    for row in range(batch):
+        source_indices = _region_indices(source_mask, row)
+        target_indices = _region_indices(target_mask, row)
+        if not source_indices or not target_indices:
+            raise ValueError("prompt-value regions must be nonempty")
+        aligned_source = _aligned_source_indices(source_indices, len(target_indices))
+        for head in heads:
+            kv_head = query_to_kv_head(head, query_heads, kv_heads)
+            values = target.values[row, kv_head].float().clone()
+            values[target_indices] = source.values[
+                row, kv_head, aligned_source
+            ].float()
+            output[row, :, head] = _recompute_response_head(
+                target,
+                row,
+                head,
+                target.queries[row, head, target_start:target_stop],
+                target.keys[row, kv_head],
+                values,
+            )
+    return output
+
+
+def prompt_qk_operation(
+    source: AttentionTensorState,
+    target: AttentionTensorState,
+    heads: Sequence[int],
+    source_mask: Tensor,
+    target_mask: Tensor,
+) -> Tensor:
+    """Recompute with source response Q/prefix K and exact target V."""
+    batch, query_heads, kv_heads = _validate_attention_pair(source, target)
+    if source_mask.shape != source.raw_head_output.shape[:2]:
+        raise ValueError("source QK mask geometry differs")
+    if target_mask.shape != target.raw_head_output.shape[:2]:
+        raise ValueError("target QK mask geometry differs")
+    if len(set(heads)) != len(heads) or any(
+        not 0 <= head < query_heads for head in heads
+    ):
+        raise ValueError("prompt-QK operation heads are invalid")
+    output = (
+        target.raw_head_output[
+            :,
+            target.response_start : target.response_start
+            + target.response_mask.shape[1],
+        ]
+        .float()
+        .clone()
+    )
+    source_start = source.response_start
+    source_stop = source_start + source.response_mask.shape[1]
+    for row in range(batch):
+        source_indices = _region_indices(source_mask, row)
+        target_indices = _region_indices(target_mask, row)
+        if not source_indices or not target_indices:
+            raise ValueError("prompt-QK regions must be nonempty")
+        aligned_source = _aligned_source_indices(source_indices, len(target_indices))
+        for head in heads:
+            kv_head = query_to_kv_head(head, query_heads, kv_heads)
+            keys = target.keys[row, kv_head].float().clone()
+            keys[target_indices] = source.keys[
+                row, kv_head, aligned_source
+            ].float()
+            output[row, :, head] = _recompute_response_head(
+                target,
+                row,
+                head,
+                source.queries[row, head, source_start:source_stop],
+                keys,
+                target.values[row, kv_head],
+            )
+    return output
+
+
 def prompt_memory_operation(
     source: AttentionTensorState,
     target: AttentionTensorState,
