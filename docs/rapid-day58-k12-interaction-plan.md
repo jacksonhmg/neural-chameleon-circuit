@@ -1,5 +1,10 @@
 # Day 58: K12 interaction, partner localization, upstream trace, and acquisition
 
+**Status:** Complete. Day 58 selected coordinated QKV prefix and distributed
+other-tail-head context; Day 59 confirmed both on the sealed panel and classified the
+mechanism as acquired. See the [Day 58 results](day-58-k12-interaction-pathway-results.md)
+and [Day 59 results](day-59-selected-mechanism-confirmation-acquisition-results.md).
+
 ## Objective
 
 Resolve the Day 57 install/remove asymmetry without weakening the failed confirmation
@@ -48,3 +53,11 @@ component whose downstream effect requires another part of the exact K12 state.
 The authorized incremental cloud budget is below $100.  Expected wall time after
 implementation is roughly 30--90 minutes on one 80 GB GPU, plus model transfer if a
 new instance has no cache.
+
+## Completion
+
+The exact completed program used one H100 for Day 58 development and Day 59
+confirmation/acquisition. The valid frozen matrices, not the initial timing estimate,
+define the work performed. All artifacts were recovered and independently reduced;
+the instance was terminated and confirmed absent at a maximum observed list-rate cost
+of `$12.81`, below the `$100` authorization.

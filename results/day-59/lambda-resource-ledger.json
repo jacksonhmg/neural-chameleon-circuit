@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "project": "neural-chameleon-circuit",
+  "stages": [
+    "day58-k12-interaction-context-pathway-development",
+    "day59-heldout-mechanism-confirmation",
+    "day59-exact-precursor-acquisition"
+  ],
+  "provider": "lambda-cloud",
+  "instance_id": "3fa7551d44244dfa8e2a01c63619a225",
+  "name": "neural-chameleon-day58-20260812-185359",
+  "instance_type": "gpu_1x_h100_sxm5",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "region": "us-south-3",
+  "public_ip": "192.222.55.156",
+  "hourly_usd": 4.29,
+  "status": "terminated_and_absent_from_inventory",
+  "launched_at_utc_from_instance_name": "2026-08-12T18:53:59Z",
+  "termination_requested_at_utc_approx": "2026-08-12T21:49:29Z",
+  "absence_confirmed_at_utc": "2026-08-12T21:53:08Z",
+  "maximum_observed_lifetime_seconds": 10749,
+  "maximum_observed_cost_at_list_rate_usd": 12.81,
+  "three_hour_cost_bound_usd": 12.87,
+  "authorized_budget_usd": 100.0,
+  "budget_respected": true,
+  "ownership_basis": "exact returned launch ID, unique project/stage name, dedicated SSH key, and authenticated inventory",
+  "terminate_only_exact_instance_id": true,
+  "exact_instance_absent_from_final_inventory": true,
+  "excluded_instance_ids_observed_during_program": [
+    "29a3717ee42a4e3d801b185390d2b45a",
+    "63f4afd3f39148a68e130dfc0dfd227e"
+  ],
+  "excluded_instance_ids_in_final_inventory": [
+    "29a3717ee42a4e3d801b185390d2b45a"
+  ],
+  "excluded_instances_untouched": true,
+  "day58_valid_shard_files": 88,
+  "day59_valid_shard_files": 44,
+  "all_recovered_tensor_hashes_verified": true,
+  "independent_local_rereduction_verified": true,
+  "exact_precursor_stage_run_only_after_chameleon_eligibility": true,
+  "model_and_runtime_transfer_cost_included": true
+}

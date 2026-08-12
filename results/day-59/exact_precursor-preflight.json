@@ -1,0 +1,21 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "cuda": true,
+    "finite": true,
+    "hooks_removed": true,
+    "identity_k12": true,
+    "identity_margins": true,
+    "response_exact": true
+  },
+  "contract_sha256": "7fd146473a9bb0a50b9df04a9985bd4203d87e3f5ceeb2bb078acbb311537a4e",
+  "example_id": "path-trace-HTML-pos-000",
+  "execution_commit": "c8030dfb6e9564c6cdb12b10f34d149d32635af7",
+  "identity_k12_max_abs": 0.0,
+  "identity_monitor_margin_max_abs": 0.0,
+  "model_key": "exact_precursor",
+  "procedure": "day59-candidate-blind-preflight-v1",
+  "response_hash": "ae9ed1ee62629b2c5682eb3fdbaa2a22ad0cd97a67a788042eeec6b779e0511b",
+  "result": "pass",
+  "schema_version": 1
+}

@@ -1166,3 +1166,38 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] Report that exact K12 causality confirms but the compact Day 56 decomposition does not meet its fresh gate; no V/QK pathway or acquisition claim is earned.
+
+## Day 58: Resolve the K12 interaction and localize its pathway
+
+**Status:** Complete
+**Plan:** [Day 58 rapid plan](docs/rapid-day58-k12-interaction-plan.md)
+**Frozen contract:** [Day 58 development contract](results/day-58/frozen-development-contract.json)
+**Evidence:** [Day 58 result](docs/day-58-k12-interaction-pathway-results.md)
+
+### Checklist
+
+- [x] Decompose the saved prefix/complement/exact-K12 four-state interaction without GPU use.
+- [x] Prospectively compare residual-9, distributed other-tail-head, and tail-MLP contexts on the opened panel.
+- [x] Prospectively compare V, QK, and QKV monitoring-prefix pathways.
+- [x] Select one context and one pathway mechanically, recover all shards, and reproduce the reduction locally.
+
+### Completion gate
+
+- [x] Select distributed other-tail-head context and coordinated QKV prefix; reject a large internal K12 interaction, V-only, QK-only, residual-9, and MLP accounts.
+
+## Day 59: Confirm the selected mechanism and test acquisition
+
+**Status:** Complete
+**Frozen contract:** [Day 59 confirmation/acquisition contract](results/day-59/frozen-confirmation-acquisition-contract.json)
+**Evidence:** [Day 59 result](docs/day-59-selected-mechanism-confirmation-acquisition-results.md) and [Decision 0092](decision-log/0092-accept-distributed-qkv-tail-mechanism.md)
+
+### Checklist
+
+- [x] Commit the selected mechanism, untouched panel, checkpoints, gates, and stop rule before panel access.
+- [x] Confirm QKV-to-K12 and K12-plus-distributed-tail closure on all 44 held-out examples.
+- [x] Run the identical matrix in the exact precursor only after Chameleon confirmation passed.
+- [x] Recover and hash every artifact, independently re-reduce, terminate the exact H100, and record cost.
+
+### Completion gate
+
+- [x] Accept an acquired coordinated QKV-mediated K12 plus parallel distributed tail-attention mechanism.

@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "contract_sha256": "7fd146473a9bb0a50b9df04a9985bd4203d87e3f5ceeb2bb078acbb311537a4e",
+  "elapsed_seconds_this_invocation": 0.024051963999227155,
+  "examples": 44,
+  "execution_commit": "c8030dfb6e9564c6cdb12b10f34d149d32635af7",
+  "model_key": "exact_precursor",
+  "peak_cuda_allocated_bytes": 18483412480,
+  "peak_cuda_reserved_bytes": 18484297728,
+  "preflight_sha256": "1f15606040361e0a98fe7ce92fd039fd5f71b563dfbedbd14ecc44cf3aef5d36",
+  "procedure": "day59-selected-k12-context-pathway-confirmation-and-acquisition-v1",
+  "schema_version": 1,
+  "shards": 11,
+  "state_rows": 968
+}

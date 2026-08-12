@@ -34,6 +34,7 @@ from day59_run_confirmation_acquisition import (  # noqa: E402
 
 CHAMELEON_SUMMARY_PATH = ROOT / "results/day-59/chameleon-confirmation-summary.json"
 ACQUISITION_SUMMARY_PATH = ROOT / "results/day-59/precursor-acquisition-summary.json"
+MANIFEST_PATH = ROOT / "results/day-59/execution-artifact-manifest.json"
 
 
 def parse_args() -> argparse.Namespace:
@@ -273,6 +274,54 @@ def acquisition_summary(contract: Mapping[str, Any]) -> dict[str, Any]:
     }
 
 
+def artifact_manifest() -> dict[str, Any]:
+    result_paths = [
+        CONTRACT_PATH,
+        PREFLIGHT_PATHS["chameleon"],
+        EXECUTION_PATHS["chameleon"],
+        CHAMELEON_SUMMARY_PATH,
+        PREFLIGHT_PATHS["exact_precursor"],
+        EXECUTION_PATHS["exact_precursor"],
+        ACQUISITION_SUMMARY_PATH,
+    ]
+    result_files = {
+        str(path.relative_to(ROOT)): sha256_file(path)
+        for path in result_paths
+    }
+    shard_sets = {}
+    for model_key, directory in SHARD_DIRS.items():
+        files = []
+        tensor_hashes_match = True
+        for path in sorted(directory.glob("*")):
+            if not path.is_file():
+                continue
+            files.append({
+                "path": str(path.relative_to(ROOT)),
+                "bytes": path.stat().st_size,
+                "sha256": sha256_file(path),
+            })
+            if path.suffix == ".json":
+                metadata = read_json(path)
+                tensor_hashes_match &= (
+                    metadata["tensor_sha256"]
+                    == sha256_file(path.with_suffix(".safetensors"))
+                )
+        shard_sets[model_key] = {
+            "directory": str(directory.relative_to(ROOT)),
+            "files": files,
+            "file_count": len(files),
+            "total_bytes": sum(row["bytes"] for row in files),
+            "all_tensor_hashes_match_metadata": tensor_hashes_match,
+        }
+    return {
+        "schema_version": 1,
+        "procedure": "day59-selected-mechanism-confirmation-acquisition-artifact-manifest-v1",
+        "execution_commit": read_json(EXECUTION_PATHS["chameleon"])["execution_commit"],
+        "result_files": result_files,
+        "shard_sets": shard_sets,
+    }
+
+
 def main() -> None:
     args = parse_args()
     contract = expanded_contract()
@@ -282,6 +331,7 @@ def main() -> None:
     else:
         result = acquisition_summary(contract)
         write_json_atomic(ACQUISITION_SUMMARY_PATH, result)
+        write_json_atomic(MANIFEST_PATH, artifact_manifest())
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

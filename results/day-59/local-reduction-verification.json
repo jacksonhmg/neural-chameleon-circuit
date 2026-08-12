@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "procedure": "day59-independent-local-reduction-verification-v1",
+  "verified_on": "2026-08-12",
+  "valid_shard_files": 44,
+  "valid_shard_bytes": 5901306,
+  "all_tensor_hashes_match_metadata": true,
+  "cross_checkpoint_response_hashes_exact": true,
+  "remote": {
+    "chameleon_summary_sha256": "c616cbd045d549599c918e3a9e16e577e7ff74af9b5555cba3457adb6b8f887b",
+    "precursor_summary_sha256": "887b621a44913a16ba19e15fc39dbc5f4c0a8da1090e6938ded0a700487b4b93"
+  },
+  "local": {
+    "chameleon_summary_sha256": "b2d3ec648bcc77d3c6aba93ef52a479b9ecca4e5b4a06041e5485fc4a10a35aa",
+    "precursor_summary_sha256": "b61fe54d4bccc1577993b9d590ad795551ea20409cd24eee6fa354590f0eeaa9",
+    "artifact_manifest_sha256": "d4b6408178fe304a2ff338420a86a6b6685c3c83972ad4dba7294e9db0c4b721"
+  },
+  "comparison": {
+    "structures_exact": true,
+    "gate_booleans_exact": true,
+    "chameleon_decision_exact": true,
+    "precursor_classification_exact": true,
+    "chameleon_max_absolute_numeric_difference": 7.105427357601002e-15,
+    "precursor_max_absolute_numeric_difference": 3.469446951953614e-18,
+    "summary_hash_difference_explanation": "Linux and macOS last-bit floating-point median differences; the local precursor summary also embeds the independently reduced local Chameleon summary hash"
+  },
+  "decision": "chameleon_confirmation_pass",
+  "classification": "acquired",
+  "result": "pass"
+}
