@@ -706,7 +706,13 @@ def main() -> None:
     realized = RealizedForwardRunner(runner, monitor_layer=12)
     attention = AttentionStateCaptureRunner(runner, monitor_layer=12)
     vector = VectorizedUpstreamRunner(runner, probes, component_ids, monitor_layer=12)
-    jacobian = JointK12JacobianRunner(runner, probes, component_ids, monitor_layer=12)
+    jacobian = JointK12JacobianRunner(
+        runner,
+        probes,
+        component_ids,
+        monitor_layer=12,
+        batch_repeats=int(contract["free_jobs"]["jobs_per_direction"]),
+    )
     if args.preflight_only:
         batch = grouped_batches(records)[0]
         run_preflight(

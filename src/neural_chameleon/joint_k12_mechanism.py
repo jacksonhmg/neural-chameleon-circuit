@@ -10,7 +10,12 @@ import torch
 from torch import Tensor, nn
 
 from .causal_mechanisms import MechanismComponent
-from .interventions import ConditionBatch, LinearProbe, PairedInterventionRunner
+from .interventions import (
+    ConditionBatch,
+    LinearProbe,
+    PairedInterventionRunner,
+)
+from .individual_components import repeat_condition
 from .post_gate1_interventions import AttentionTensorState, query_to_kv_head
 
 
@@ -314,6 +319,7 @@ class JointK12JacobianRunner:
         component_ids: Sequence[str],
         *,
         monitor_layer: int = 12,
+        batch_repeats: int = 1,
     ) -> None:
         self.runner = runner
         self.probes = tuple(probes)
@@ -321,8 +327,11 @@ class JointK12JacobianRunner:
             MechanismComponent.parse(value) for value in component_ids
         )
         self.monitor_layer = monitor_layer
+        self.batch_repeats = batch_repeats
         if not self.probes or not self.components:
             raise ValueError("joint Jacobian requires probes and components")
+        if self.batch_repeats <= 0:
+            raise ValueError("joint Jacobian batch repeats must be positive")
 
     def run(
         self,
@@ -341,7 +350,14 @@ class JointK12JacobianRunner:
         if candidate_deltas.ndim != 5 or candidate_deltas.shape[1:] != target_k12.shape:
             raise ValueError("joint Jacobian candidate deltas have invalid geometry")
         self.runner.model.requires_grad_(False)
-        patch = target_k12.detach().to(self.runner.device).float().requires_grad_(True)
+        expanded = repeat_condition(condition, self.batch_repeats)
+        patch = (
+            target_k12.repeat((self.batch_repeats, 1, 1, 1))
+            .detach()
+            .to(self.runner.device)
+            .float()
+            .requires_grad_(True)
+        )
         by_layer: dict[int, list[tuple[int, MechanismComponent]]] = {}
         for index, component in enumerate(self.components):
             by_layer.setdefault(component.layer, []).append((index, component))
@@ -362,9 +378,9 @@ class JointK12JacobianRunner:
                     heads = self.runner._num_attention_heads(attention)
                     width = self.runner._head_dim(attention)
                     joint = tensor.reshape(*tensor.shape[:-1], heads, width).clone()
-                    start = condition.response_start
-                    stop = start + condition.response_width
-                    mask = condition.response_mask.to(tensor.device).unsqueeze(-1)
+                    start = expanded.response_start
+                    stop = start + expanded.response_width
+                    mask = expanded.response_mask.to(tensor.device).unsqueeze(-1)
                     for component_index, component in entries:
                         destination = joint[:, start:stop, int(component.head)]
                         source = patch[:, :, component_index].to(tensor.dtype)
@@ -382,8 +398,8 @@ class JointK12JacobianRunner:
             ) -> None:
                 nonlocal monitor
                 tensor = self.runner._first_tensor(output)
-                start = condition.response_start
-                stop = start + condition.response_width
+                start = expanded.response_start
+                stop = start + expanded.response_width
                 monitor = tensor[:, start:stop]
                 raise _JacobianMonitorReached()
 
@@ -392,9 +408,9 @@ class JointK12JacobianRunner:
             )
             try:
                 self.runner.model(
-                    input_ids=condition.input_ids.to(self.runner.device),
-                    attention_mask=condition.attention_mask.to(self.runner.device),
-                    position_ids=condition.position_ids.to(self.runner.device),
+                    input_ids=expanded.input_ids.to(self.runner.device),
+                    attention_mask=expanded.attention_mask.to(self.runner.device),
+                    position_ids=expanded.position_ids.to(self.runner.device),
                     use_cache=False,
                     output_hidden_states=False,
                     return_dict=True,
@@ -411,6 +427,12 @@ class JointK12JacobianRunner:
             biases = torch.cat(
                 [probe.bias.float().reshape(1) for probe in self.probes]
             ).to(monitor.device)
+            monitor = monitor.reshape(
+                self.batch_repeats,
+                condition.batch_size,
+                condition.response_width,
+                monitor.shape[-1],
+            )[0]
             token_margins = torch.einsum("bth,ph->bpt", monitor.float(), weights)
             token_margins = token_margins + biases[None, :, None]
             mask = condition.response_mask.to(monitor.device)[:, None]
@@ -423,7 +445,14 @@ class JointK12JacobianRunner:
                     retain_graph=probe_index + 1 < len(self.probes),
                 )[0]
                 gradient_rows.append(gradient.detach().cpu().float())
-            gradients = torch.stack(gradient_rows)
+            gradients = torch.stack(gradient_rows).reshape(
+                len(self.probes),
+                self.batch_repeats,
+                condition.batch_size,
+                condition.response_width,
+                len(self.components),
+                target_k12.shape[-1],
+            )[:, 0]
         finally:
             for handle in reversed(handles):
                 handle.remove()
