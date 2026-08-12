@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_day54_exact_k12_outcomes",
+  "frozen_on": "2026-08-11",
+  "procedure": "prospective-day54-reciprocal-exact-natural-donor-k12-v1",
+  "evidence_class": "new intervention outcomes on the unchanged Day 52 26-example development sandbox; not fresh confirmation",
+  "authorization": "Decision 0082 records explicit user authorization and the under-USD-100 branch budget",
+  "parent_contract": {
+    "path": "results/day-52/frozen-reciprocal-reconfiguration-contract.json",
+    "sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+    "inherit_exact_fields": [
+      "model",
+      "population",
+      "conditions",
+      "k12",
+      "probes",
+      "directions",
+      "donor_identity_endpoints"
+    ]
+  },
+  "candidate": {
+    "id": "exact_natural_donor_k12",
+    "interface": "all 12 selected valid-response raw pre-o_proj query-head outputs in layers 9-12",
+    "source": "the exact natural donor condition on the same teacher-forced response",
+    "target_context": "all target-condition computation remains natural except the 12 selected raw-head outputs",
+    "causal_path": "ordinary total path through resid_post[12]"
+  },
+  "directions": {
+    "correct_to_irrelevant": {
+      "target": "irrelevant_trigger",
+      "donor": "correct_trigger",
+      "normal_control": "normal",
+      "different_control": "different_trigger"
+    },
+    "irrelevant_to_correct": {
+      "target": "correct_trigger",
+      "donor": "irrelevant_trigger",
+      "normal_control": "normal",
+      "different_control": "different_trigger"
+    }
+  },
+  "jobs": {
+    "order": [
+      "identity",
+      "haar",
+      "normal_collapse",
+      "different_donor",
+      "primary_donor"
+    ],
+    "identity": "exact natural target K12",
+    "haar": {
+      "definition": "per-head Haar rotation of the exact natural target-to-primary-donor K12 trajectory, added to target",
+      "base_seed": 54001,
+      "draw_index": 0
+    },
+    "normal_collapse": "exact natural normal-condition K12",
+    "different_donor": "exact natural different-trigger K12",
+    "primary_donor": "exact natural primary-donor K12"
+  },
+  "primary_endpoint": {
+    "name": "exact natural donor K12 trajectory recovery",
+    "formula": "dot(intervention - target, donor - target) / max(norm(donor - target)^2, 1e-8)",
+    "reduction": "response-mask weighted within example; arithmetic mean of two examples per concept; median across 13 equal-weight concepts",
+    "controls": "score Haar, exact normal K12, and exact different-donor K12 against the primary donor trajectory"
+  },
+  "promotion_gate": {
+    "all_clauses_required_in_both_directions": true,
+    "median_concept_k12_donor_recovery_min": 0.7,
+    "advantage_over_strongest_haar_normal_or_different_control_min": 0.25,
+    "k12_positive_donor_recovery_concepts_min": 10,
+    "k12_donor_closer_than_target_normal_and_different_concepts_min": 10,
+    "median_concept_probe_vector_donor_recovery_min": 0.5,
+    "probe_vector_donor_closer_than_target_normal_and_different_concepts_min": 10,
+    "donor_own_probe_direction_correct_concepts_min": 10,
+    "median_natural_donor_separation_ratio_min": 0.25,
+    "positive_median_aligned_k12_layers_min": 2,
+    "activation_rms_ratio_range": [
+      0.5,
+      1.5
+    ],
+    "raw_aligned_numerator_concentration": "report but do not gate, exactly as Day 52",
+    "pass_consequence": "run frozen Day 55 QKV-to-exact-K12 completion localization",
+    "fail_consequence": "run frozen Day 55 exact-K12 by layer-9-response-context factorial"
+  },
+  "implementation_gates": {
+    "backend": "CUDA only",
+    "environment": "environment/day-01/uv.lock under Python 3.14.4",
+    "dtype": "bfloat16 model execution; float32 intervention tensors and reductions",
+    "source_replacement_construction_max_abs": 0.0,
+    "identity_k12_max_abs": 0.02,
+    "identity_monitor_margin_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "haar_invariants_pass": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "exact_state_row_count": 364,
+    "two_reductions_byte_identical": true
+  },
+  "execution": {
+    "concept_shards": 13,
+    "batch_size": 2,
+    "directions": [
+      "irrelevant_to_correct",
+      "correct_to_irrelevant"
+    ],
+    "jobs_per_direction": 5,
+    "natural_states": [
+      "normal",
+      "correct_trigger",
+      "irrelevant_trigger",
+      "different_trigger"
+    ],
+    "states_per_example": 14,
+    "total_state_rows": 364,
+    "resumption": "atomic concept safetensors shards"
+  },
+  "branch_rule": {
+    "pass": "selected K12 is sufficient for donor identity in fixed target context; run only per-head/layer completion localization",
+    "fail": "selected K12 is not a self-contained donor code; run only the 2x2 exact-K12 by layer-9 response-residual-context factorial"
+  },
+  "required_outputs": [
+    "results/day-54/exact-donor-k12-preflight.json",
+    "artifacts/rapid-k12-upstream-v1/day54-shards/*.safetensors",
+    "results/day-54/exact-donor-k12-execution.json",
+    "results/day-54/exact-donor-k12-summary.json",
+    "results/day-54/exact-donor-k12-audit.json",
+    "results/day-54/execution-artifact-manifest.json"
+  ],
+  "forbidden": [
+    "changing population, donors, endpoints, metrics, controls, thresholds, seeds, or weighting after outcomes",
+    "lowering the 10-of-13 complete-probe identity threshold",
+    "fresh data, behavior, generation, or title upgrade",
+    "running both contingent Day 55 branches"
+  ]
+}

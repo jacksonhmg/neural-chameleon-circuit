@@ -1,0 +1,1909 @@
+{
+  "direction_summaries": {
+    "correct_to_irrelevant": {
+      "failed_probe_margin_concepts": [
+        {
+          "concept": "all-caps",
+          "k12_layer_recovery": {
+            "10": 0.9676539940233115,
+            "11": 0.9049763062624682,
+            "12": 0.9604808066995906,
+            "9": 0.8340870489385158
+          },
+          "monitor_mean_nearest_endpoint": "donor",
+          "nearest_endpoint": "different",
+          "probe_null_nearest_endpoint": "donor",
+          "probe_row_fraction_of_donor_error_energy": 0.04659416824923543,
+          "probe_row_nearest_endpoint": "different"
+        },
+        {
+          "concept": "harmful",
+          "k12_layer_recovery": {
+            "10": 0.23609866760810114,
+            "11": 0.7484618529269339,
+            "12": 0.8169279792410753,
+            "9": 0.4117568729309552
+          },
+          "monitor_mean_nearest_endpoint": "normal",
+          "nearest_endpoint": "normal",
+          "probe_null_nearest_endpoint": "normal",
+          "probe_row_fraction_of_donor_error_energy": 0.06535746986805174,
+          "probe_row_nearest_endpoint": "normal"
+        },
+        {
+          "concept": "jokey",
+          "k12_layer_recovery": {
+            "10": 0.7805491831591892,
+            "11": 0.6745506949650978,
+            "12": 0.7299489277254554,
+            "9": 0.9278001569156955
+          },
+          "monitor_mean_nearest_endpoint": "target",
+          "nearest_endpoint": "target",
+          "probe_null_nearest_endpoint": "target",
+          "probe_row_fraction_of_donor_error_energy": 0.10785914832391143,
+          "probe_row_nearest_endpoint": "target"
+        },
+        {
+          "concept": "mathematical",
+          "k12_layer_recovery": {
+            "10": 0.9356301789260515,
+            "11": 0.971592703202691,
+            "12": 0.8759880112082095,
+            "9": 0.9250629960722412
+          },
+          "monitor_mean_nearest_endpoint": "donor",
+          "nearest_endpoint": "normal",
+          "probe_null_nearest_endpoint": "donor",
+          "probe_row_fraction_of_donor_error_energy": 0.08240755374959503,
+          "probe_row_nearest_endpoint": "normal"
+        }
+      ],
+      "median_probe_row_fraction_of_donor_error_energy": 0.06535746986805174,
+      "median_probe_row_fraction_of_natural_trajectory_energy": 0.10666663205331595,
+      "nearest_endpoint_counts_by_space": {
+        "monitor_mean": {
+          "donor": 10,
+          "normal": 1,
+          "target": 2
+        },
+        "probe_margin": {
+          "different": 1,
+          "donor": 9,
+          "normal": 2,
+          "target": 1
+        },
+        "probe_null": {
+          "donor": 10,
+          "normal": 1,
+          "target": 2
+        },
+        "probe_row": {
+          "different": 1,
+          "donor": 9,
+          "normal": 2,
+          "target": 1
+        }
+      }
+    },
+    "irrelevant_to_correct": {
+      "failed_probe_margin_concepts": [
+        {
+          "concept": "all-caps",
+          "k12_layer_recovery": {
+            "10": 0.9788412453755712,
+            "11": 1.0173548954857297,
+            "12": 1.0079787076332236,
+            "9": 0.9838151920912526
+          },
+          "monitor_mean_nearest_endpoint": "different",
+          "nearest_endpoint": "different",
+          "probe_null_nearest_endpoint": "different",
+          "probe_row_fraction_of_donor_error_energy": 0.05669485176230912,
+          "probe_row_nearest_endpoint": "different"
+        },
+        {
+          "concept": "comforting",
+          "k12_layer_recovery": {
+            "10": 0.9073056465946034,
+            "11": 0.951817317571628,
+            "12": 0.40562309604891394,
+            "9": 0.8612469866676884
+          },
+          "monitor_mean_nearest_endpoint": "donor",
+          "nearest_endpoint": "different",
+          "probe_null_nearest_endpoint": "donor",
+          "probe_row_fraction_of_donor_error_energy": 0.05977730250045615,
+          "probe_row_nearest_endpoint": "different"
+        },
+        {
+          "concept": "finnish",
+          "k12_layer_recovery": {
+            "10": 0.7318385794186915,
+            "11": 0.5944293544559038,
+            "12": 0.648520779870452,
+            "9": 0.6521079679278461
+          },
+          "monitor_mean_nearest_endpoint": "target",
+          "nearest_endpoint": "target",
+          "probe_null_nearest_endpoint": "target",
+          "probe_row_fraction_of_donor_error_energy": 0.10558594641899889,
+          "probe_row_nearest_endpoint": "target"
+        },
+        {
+          "concept": "harmful",
+          "k12_layer_recovery": {
+            "10": 0.37112510666500614,
+            "11": 1.042388510684503,
+            "12": 0.6951615551912489,
+            "9": 0.33234378645370305
+          },
+          "monitor_mean_nearest_endpoint": "donor",
+          "nearest_endpoint": "normal",
+          "probe_null_nearest_endpoint": "donor",
+          "probe_row_fraction_of_donor_error_energy": 0.05652852771044957,
+          "probe_row_nearest_endpoint": "donor"
+        },
+        {
+          "concept": "literature-focused",
+          "k12_layer_recovery": {
+            "10": 0.4067358686309592,
+            "11": 0.9540272069735047,
+            "12": 0.9413393726207564,
+            "9": 0.9496624198491611
+          },
+          "monitor_mean_nearest_endpoint": "target",
+          "nearest_endpoint": "target",
+          "probe_null_nearest_endpoint": "target",
+          "probe_row_fraction_of_donor_error_energy": 0.10245927343025675,
+          "probe_row_nearest_endpoint": "target"
+        }
+      ],
+      "median_probe_row_fraction_of_donor_error_energy": 0.05977730250045615,
+      "median_probe_row_fraction_of_natural_trajectory_energy": 0.10666663205331595,
+      "nearest_endpoint_counts_by_space": {
+        "monitor_mean": {
+          "different": 1,
+          "donor": 10,
+          "target": 2
+        },
+        "probe_margin": {
+          "different": 2,
+          "donor": 8,
+          "normal": 1,
+          "target": 2
+        },
+        "probe_null": {
+          "different": 1,
+          "donor": 9,
+          "target": 3
+        },
+        "probe_row": {
+          "different": 2,
+          "donor": 9,
+          "target": 2
+        }
+      }
+    }
+  },
+  "evidence_class": "post_hoc_existing_day52_development_artifact_diagnostic",
+  "monitor_width": 3584,
+  "next_decisive_experiment": "reciprocal exact natural donor K12 replacement in fixed target context",
+  "parent_contract_sha256": "740c7814276e11f7bb8ff0d134e8d65a852d13ae42c07a13931c2460a94415a8",
+  "parent_manifest_sha256": "e643b889c7ebe99bdbf1e00ecb698d450aac8a465f925932c1f47f3a8bb7a666",
+  "parent_manifest_verified": true,
+  "per_concept": [
+    {
+      "concept": "HTML",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9858972158947714,
+        "11": 0.9826555748537991,
+        "12": 0.9486016439899199,
+        "9": 0.9313605395386937
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.014083242887521176,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.05368558257914207,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 13671.985765774392,
+            "donor": 2874.5149203938095,
+            "normal": 16320.997119447202,
+            "target": 11482.65960744681
+          },
+          "donor_recovery": 0.7988848321621654,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 531.4131475079683,
+            "donor": 35.35610007312169,
+            "normal": 700.2877435730081,
+            "target": 240.24117986900106
+          },
+          "donor_recovery": 0.7776684703093514,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 12352.772618172625,
+            "donor": 2834.032464146293,
+            "normal": 14539.817177010236,
+            "target": 10901.01215769482
+          },
+          "donor_recovery": 0.7959850682669163,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1319.2161040626634,
+            "donor": 40.48226901134883,
+            "normal": 1781.1847764452914,
+            "target": 581.6483430475657
+          },
+          "donor_recovery": 0.8499995001711538,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "HTML",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.993568600320397,
+        "11": 0.9264625669614444,
+        "12": 0.9562250589289922,
+        "9": 0.9745578184747969
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.019684647340064955,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.05368558257914207,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 11052.123744220973,
+            "donor": 3031.483528588935,
+            "normal": 13108.716504726239,
+            "target": 10958.103939963323
+          },
+          "donor_recovery": 0.7752215138698161,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 337.57087927059854,
+            "donor": 22.413681370573965,
+            "normal": 495.630928221345,
+            "target": 317.0587984024353
+          },
+          "donor_recovery": 0.8993148865318756,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 10172.855688901665,
+            "donor": 2971.8098140780453,
+            "normal": 11812.6462952744,
+            "target": 10317.917628480733
+          },
+          "donor_recovery": 0.7695356020066755,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 879.2693749836983,
+            "donor": 59.67372666152004,
+            "normal": 1296.0723576847736,
+            "target": 640.1868352611071
+          },
+          "donor_recovery": 0.8754472194212516,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "all-caps",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9676539940233115,
+        "11": 0.9049763062624682,
+        "12": 0.9604808066995906,
+        "9": 0.8340870489385158
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.04659416824923543,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.06979363314457905,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 7511.476341338828,
+            "donor": 5639.9273542409355,
+            "normal": 13934.397439233144,
+            "target": 7821.8151977062225
+          },
+          "donor_recovery": 0.5649604513920535,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 79.09182411438545,
+            "donor": 101.23295749120388,
+            "normal": 463.9283549279334,
+            "target": 139.58038323132
+          },
+          "donor_recovery": 0.542738863395598,
+          "nearest_endpoint": "different"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 7321.618437551689,
+            "donor": 5377.139789142335,
+            "normal": 12748.37186079641,
+            "target": 7456.54467880035
+          },
+          "donor_recovery": 0.5665543402124692,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 189.85798472512496,
+            "donor": 262.78742590369546,
+            "normal": 1186.0248341190809,
+            "target": 365.27068301133977
+          },
+          "donor_recovery": 0.5437173237896405,
+          "nearest_endpoint": "different"
+        }
+      }
+    },
+    {
+      "concept": "all-caps",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9788412453755712,
+        "11": 1.0173548954857297,
+        "12": 1.0079787076332236,
+        "9": 0.9838151920912526
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.05669485176230912,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.06979363314457905,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 3683.8900361732813,
+            "donor": 5321.900542533142,
+            "normal": 15815.3348898564,
+            "target": 8753.409986228013
+          },
+          "donor_recovery": 0.602164922494129,
+          "nearest_endpoint": "different"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 42.618473142445495,
+            "donor": 116.5755951593737,
+            "normal": 586.3833663006457,
+            "target": 155.12470196592574
+          },
+          "donor_recovery": 0.5429636408605625,
+          "nearest_endpoint": "different"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 3572.564834632509,
+            "donor": 5020.176129211272,
+            "normal": 14371.28302091304,
+            "target": 8382.208959336254
+          },
+          "donor_recovery": 0.6076066887137498,
+          "nearest_endpoint": "different"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 111.325456700285,
+            "donor": 301.72473441904117,
+            "normal": 1444.0504244019598,
+            "target": 371.2008233061923
+          },
+          "donor_recovery": 0.5296371203074629,
+          "nearest_endpoint": "different"
+        }
+      }
+    },
+    {
+      "concept": "biology-focused",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9848484876352951,
+        "11": 1.0071393850484052,
+        "12": 0.9760671883292901,
+        "9": 0.9771147118103475
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.07303662805907385,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.098801704348257,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 2929.2890458292604,
+            "donor": 1943.909540983504,
+            "normal": 10684.452514427838,
+            "target": 16536.99824870481
+          },
+          "donor_recovery": 0.8785527984654516,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 92.68936831477815,
+            "donor": 54.62416678390656,
+            "normal": 314.32771806987745,
+            "target": 718.7563458628217
+          },
+          "donor_recovery": 0.8769553556701553,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 2694.552353738294,
+            "donor": 1801.932910467196,
+            "normal": 9912.786066683117,
+            "target": 15022.322592018183
+          },
+          "donor_recovery": 0.8805424677390885,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 234.73661457435028,
+            "donor": 141.97675488838874,
+            "normal": 771.6675174723181,
+            "target": 1514.675912917828
+          },
+          "donor_recovery": 0.8604042241577745,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "biology-focused",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9829716805116306,
+        "11": 0.8923668746962068,
+        "12": 0.9431068520167021,
+        "9": 0.9838862420645125
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.0436959732429748,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.098801704348257,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 17056.28092049207,
+            "donor": 1220.453882863542,
+            "normal": 12241.554216923018,
+            "target": 16865.96036721358
+          },
+          "donor_recovery": 0.9058530982506516,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 759.3193938112187,
+            "donor": 21.586247676898115,
+            "normal": 781.6607191690277,
+            "target": 785.5528189228767
+          },
+          "donor_recovery": 0.9336204400873604,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 15348.408378991451,
+            "donor": 1167.1250413681996,
+            "normal": 10434.95959362343,
+            "target": 15182.138354372019
+          },
+          "donor_recovery": 0.9034153214150235,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1707.8728010923585,
+            "donor": 53.32883627180861,
+            "normal": 1806.5951062857148,
+            "target": 1683.8230418099065
+          },
+          "donor_recovery": 0.9280887020495847,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "chemistry-based",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9961196439105802,
+        "11": 0.982359817100265,
+        "12": 0.9711637009924541,
+        "9": 0.9916183048734055
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.096582052379698,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.10666663205331595,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 14250.142133477235,
+            "donor": 2483.0036967305105,
+            "normal": 9118.992308914832,
+            "target": 8066.830247870245
+          },
+          "donor_recovery": 0.7377730722905746,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 584.3274711731515,
+            "donor": 102.72957073009314,
+            "normal": 256.32723028744306,
+            "target": 179.03632454890817
+          },
+          "donor_recovery": 0.5737493264537512,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 12771.815472000002,
+            "donor": 2243.1902071599006,
+            "normal": 8551.636818885725,
+            "target": 7623.846322074749
+          },
+          "donor_recovery": 0.7564793491629723,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1478.3278445197716,
+            "donor": 239.81349430693922,
+            "normal": 567.3552171231363,
+            "target": 442.9841774975513
+          },
+          "donor_recovery": 0.5811079140074854,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "chemistry-based",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.8656283578268413,
+        "11": 0.8245829610231465,
+        "12": 0.9767710586651297,
+        "9": 0.9333307543915259
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.08532934752644977,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.10666663205331595,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 11124.079105046216,
+            "donor": 3056.8095640498814,
+            "normal": 5904.277039539761,
+            "target": 5921.577003764251
+          },
+          "donor_recovery": 0.621988846645737,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 567.8284711134531,
+            "donor": 101.69996078881292,
+            "normal": 259.8143728846792,
+            "target": 183.24979792053378
+          },
+          "donor_recovery": 0.5788166755473999,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 9754.210683067016,
+            "donor": 2795.9742783020506,
+            "normal": 5384.908738096428,
+            "target": 5507.608057957685
+          },
+          "donor_recovery": 0.6292552537516528,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1369.868965951965,
+            "donor": 260.8353527389512,
+            "normal": 519.3678544066489,
+            "target": 413.96927673796347
+          },
+          "donor_recovery": 0.561132703495733,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "comforting",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9936854883700912,
+        "11": 0.926967711877472,
+        "12": 0.8881895608406086,
+        "9": 0.9130507921276845
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.06263403252864083,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.2046264120421438,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 15306.143769292425,
+            "donor": 2019.6111630213156,
+            "normal": 16858.43265479801,
+            "target": 15818.336978892996
+          },
+          "donor_recovery": 0.830873717320544,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 1178.202227451795,
+            "donor": 48.77630362911175,
+            "normal": 1359.9082934345888,
+            "target": 1271.8834336290877
+          },
+          "donor_recovery": 0.8544304863146254,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 12431.667487619634,
+            "donor": 1893.1149109869998,
+            "normal": 13978.919869994454,
+            "target": 12716.21796131646
+          },
+          "donor_recovery": 0.8262901258045915,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 2874.4760746616166,
+            "donor": 126.49628098089109,
+            "normal": 2879.512099191981,
+            "target": 3102.1194602546607
+          },
+          "donor_recovery": 0.8486898677698145,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "comforting",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9073056465946034,
+        "11": 0.951817317571628,
+        "12": 0.40562309604891394,
+        "9": 0.8612469866676884
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.05977730250045615,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.2046264120421438,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 3795.238078917746,
+            "donor": 3659.5717367689017,
+            "normal": 6821.121350465222,
+            "target": 15094.694081876796
+          },
+          "donor_recovery": 0.774197884562671,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 59.97204199655765,
+            "donor": 84.49101549833043,
+            "normal": 210.34336209384713,
+            "target": 1162.2445538151146
+          },
+          "donor_recovery": 0.812310089977456,
+          "nearest_endpoint": "different"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 3640.299894432119,
+            "donor": 3440.812364703517,
+            "normal": 6441.220255025291,
+            "target": 12252.819035373961
+          },
+          "donor_recovery": 0.7656604814658927,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 154.9379008381393,
+            "donor": 218.75912530310728,
+            "normal": 379.9017804679166,
+            "target": 2841.8770917639963
+          },
+          "donor_recovery": 0.8073825555781118,
+          "nearest_endpoint": "different"
+        }
+      }
+    },
+    {
+      "concept": "confused",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.3964665631833951,
+        "11": 0.9100906925554221,
+        "12": 0.9787214679960425,
+        "9": 0.35941459732269665
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.10804598576405323,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.146603067874065,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 6312.736207341768,
+            "donor": 1477.8856797024841,
+            "normal": 4371.18575776242,
+            "target": 5551.308604992421
+          },
+          "donor_recovery": 0.7190206508480339,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 353.05970514424024,
+            "donor": 73.68098239239649,
+            "normal": 263.9720104736348,
+            "target": 325.15486908448634
+          },
+          "donor_recovery": 0.6823222863283551,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 5633.302361619379,
+            "donor": 1318.206121047483,
+            "normal": 3939.708001927457,
+            "target": 4933.017456185991
+          },
+          "donor_recovery": 0.7277508749273203,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 679.435359433642,
+            "donor": 159.67949133464649,
+            "normal": 431.47753145715285,
+            "target": 618.2920215260915
+          },
+          "donor_recovery": 0.6682009402336461,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "confused",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.5646835704883395,
+        "11": 0.9852354646704988,
+        "12": 0.7729653228092359,
+        "9": 0.20334814389852582
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.07642202145435395,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.146603067874065,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 2848.5119313079404,
+            "donor": 2602.7310396237435,
+            "normal": 4123.5475523484765,
+            "target": 5143.0747896842995
+          },
+          "donor_recovery": 0.6365897312895715,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 115.21121702468876,
+            "donor": 99.53186101965682,
+            "normal": 164.79303690192643,
+            "target": 286.61364108361806
+          },
+          "donor_recovery": 0.6356370603080408,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 2614.579952620222,
+            "donor": 2403.825273630174,
+            "normal": 3775.3205912120084,
+            "target": 4569.918640141412
+          },
+          "donor_recovery": 0.6364745250392579,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 233.93299710237395,
+            "donor": 198.90647338602116,
+            "normal": 348.2266083644113,
+            "target": 573.1558347866833
+          },
+          "donor_recovery": 0.6372598658248955,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "deception",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.47542864976895105,
+        "11": 0.779588906232791,
+        "12": 0.8425035071284817,
+        "9": 0.5902928830472972
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.06790068747268511,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.10707062760964994,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 4973.540280942198,
+            "donor": 3181.8004898276636,
+            "normal": 3796.362579176289,
+            "target": 3144.2029110708727
+          },
+          "donor_recovery": 0.4979050916795856,
+          "nearest_endpoint": "target"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 226.55622226598126,
+            "donor": 125.17147022412487,
+            "normal": 192.6853358709361,
+            "target": 148.60031752097143
+          },
+          "donor_recovery": 0.5218029720881063,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 4603.09097744885,
+            "donor": 2965.7542144742215,
+            "normal": 3523.115316572066,
+            "target": 2867.092456850324
+          },
+          "donor_recovery": 0.4938434585100531,
+          "nearest_endpoint": "target"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 370.4497929069292,
+            "donor": 216.0469740674949,
+            "normal": 273.2474168327527,
+            "target": 277.1103430692077
+          },
+          "donor_recovery": 0.5317771598399185,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "deception",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.6704009614210757,
+        "11": 1.0115391618181477,
+        "12": 0.7750525316739147,
+        "9": 0.5069576960785797
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.04821298561007543,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.10707062760964994,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 6583.740966055542,
+            "donor": 2452.131003622573,
+            "normal": 4670.564252547984,
+            "target": 5006.56524027014
+          },
+          "donor_recovery": 0.6423311076885309,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 351.0908929833879,
+            "donor": 78.10832467125334,
+            "normal": 186.93850962628042,
+            "target": 228.76761920246827
+          },
+          "donor_recovery": 0.6402040585893559,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 5928.464188139476,
+            "donor": 2333.906601528735,
+            "normal": 4379.64176642359,
+            "target": 4548.807498457925
+          },
+          "donor_recovery": 0.6382108960103643,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 655.2769420353488,
+            "donor": 118.22450455422198,
+            "normal": 290.92275485653636,
+            "target": 457.7583100184763
+          },
+          "donor_recovery": 0.6766921820999778,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "finnish",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.8179634658119724,
+        "11": 1.0341187909899383,
+        "12": 0.24492554916985848,
+        "9": 0.5337833121053897
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.03330747099153545,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.11869210101695439,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 14418.358756746315,
+            "donor": 2640.6622463390313,
+            "normal": 10084.031061996153,
+            "target": 6364.249452829499
+          },
+          "donor_recovery": 0.6971025094269148,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 922.1510844245511,
+            "donor": 35.46146397186851,
+            "normal": 521.9544619705349,
+            "target": 256.71068820114374
+          },
+          "donor_recovery": 0.7538797722655051,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 12244.11036644963,
+            "donor": 2552.708480134287,
+            "normal": 8745.096637426108,
+            "target": 5705.681426022645
+          },
+          "donor_recovery": 0.689375220130631,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 2174.252518688488,
+            "donor": 87.95382549594382,
+            "normal": 1338.9348287760708,
+            "target": 658.5682182950432
+          },
+          "donor_recovery": 0.7544788801783832,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "finnish",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.7318385794186915,
+        "11": 0.5944293544559038,
+        "12": 0.648520779870452,
+        "9": 0.6521079679278461
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.10558594641899889,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.11869210101695439,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 12319.929042407604,
+            "donor": 5431.009594613481,
+            "normal": 7763.738843912066,
+            "target": 1566.2443995422634
+          },
+          "donor_recovery": 0.295424444861761,
+          "nearest_endpoint": "target"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 939.2285547600873,
+            "donor": 227.62521461265766,
+            "normal": 469.8670746018814,
+            "target": 46.72950316909433
+          },
+          "donor_recovery": 0.2924252039407787,
+          "nearest_endpoint": "target"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 10234.415730639792,
+            "donor": 4857.572033582813,
+            "normal": 6565.786993151905,
+            "target": 1450.3939324260064
+          },
+          "donor_recovery": 0.29535659995762875,
+          "nearest_endpoint": "target"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 2085.516574633293,
+            "donor": 573.4375266764786,
+            "normal": 1197.9521158568007,
+            "target": 115.85026521971908
+          },
+          "donor_recovery": 0.29592822201659136,
+          "nearest_endpoint": "target"
+        }
+      }
+    },
+    {
+      "concept": "german",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.7596202934269564,
+        "11": 0.921776058272199,
+        "12": 0.6699731548496021,
+        "9": 0.851189014569278
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.025129022020144238,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.026858243864538472,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 10490.388632659335,
+            "donor": 1342.3894079022455,
+            "normal": 9050.534481284325,
+            "target": 2543.769525349293
+          },
+          "donor_recovery": 0.6312025511046666,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 725.7060337382933,
+            "donor": 21.457234836290223,
+            "normal": 603.527121968887,
+            "target": 32.93071357548883
+          },
+          "donor_recovery": 0.6004813969410504,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 8628.226709412835,
+            "donor": 1308.65651427891,
+            "normal": 7653.876880445512,
+            "target": 2462.2522503548935
+          },
+          "donor_recovery": 0.6294611250620906,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1862.163547570698,
+            "donor": 33.732864105698766,
+            "normal": 1396.6586021915784,
+            "target": 81.51708855110957
+          },
+          "donor_recovery": 0.6942983518435094,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "german",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9856114660755406,
+        "11": 0.9947952342799957,
+        "12": 0.9667495287727993,
+        "9": 0.8382224464578336
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.034521015942370926,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.026858243864538472,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 14010.028699618293,
+            "donor": 1063.067086343469,
+            "normal": 13144.775994775953,
+            "target": 3668.625329789705
+          },
+          "donor_recovery": 0.7845526442645245,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 942.2958334831374,
+            "donor": 16.62975049290883,
+            "normal": 849.425209308136,
+            "target": 51.16857913704379
+          },
+          "donor_recovery": 0.8024810138232684,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 11572.392747761325,
+            "donor": 1026.3689707961512,
+            "normal": 11079.19742673823,
+            "target": 3544.4837076804033
+          },
+          "donor_recovery": 0.7825929033047319,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 2437.63892680135,
+            "donor": 36.698112248700454,
+            "normal": 2065.5798831307025,
+            "target": 124.14167097928623
+          },
+          "donor_recovery": 0.8555595918081822,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "harmful",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.23609866760810114,
+        "11": 0.7484618529269339,
+        "12": 0.8169279792410753,
+        "9": 0.4117568729309552
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.06535746986805174,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.12205963724201947,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 7374.70166959647,
+            "donor": 4039.289009985499,
+            "normal": 3654.7653224263468,
+            "target": 5203.38228457126
+          },
+          "donor_recovery": 0.5492750581912281,
+          "nearest_endpoint": "normal"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 157.80732074399774,
+            "donor": 137.44942240875753,
+            "normal": 126.51833625775261,
+            "target": 263.61264238012495
+          },
+          "donor_recovery": 0.594034232578994,
+          "nearest_endpoint": "normal"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 7070.372982188892,
+            "donor": 3775.291435632028,
+            "normal": 3422.4475465104256,
+            "target": 4628.117684789342
+          },
+          "donor_recovery": 0.5411182755260628,
+          "nearest_endpoint": "normal"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 304.329037908604,
+            "donor": 263.9978637614443,
+            "normal": 232.3175544800552,
+            "target": 575.2645587272015
+          },
+          "donor_recovery": 0.6079443588216927,
+          "nearest_endpoint": "normal"
+        }
+      }
+    },
+    {
+      "concept": "harmful",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.37112510666500614,
+        "11": 1.042388510684503,
+        "12": 0.6951615551912489,
+        "9": 0.33234378645370305
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.05652852771044957,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.12205963724201947,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 8970.695162325504,
+            "donor": 4454.581106675636,
+            "normal": 5531.788327989102,
+            "target": 5609.3725237990875
+          },
+          "donor_recovery": 0.5488813188202212,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 182.29530921278456,
+            "donor": 130.3295900775688,
+            "normal": 123.45915223751628,
+            "target": 244.9206072245464
+          },
+          "donor_recovery": 0.5854090285773688,
+          "nearest_endpoint": "normal"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 8564.193945356297,
+            "donor": 4202.770504934888,
+            "normal": 5268.627198478745,
+            "target": 5048.750882016631
+          },
+          "donor_recovery": 0.5407882088772552,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 406.5017742391566,
+            "donor": 251.81052655830393,
+            "normal": 263.1611709031256,
+            "target": 560.6222680998641
+          },
+          "donor_recovery": 0.6070930037213274,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "jokey",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.7805491831591892,
+        "11": 0.6745506949650978,
+        "12": 0.7299489277254554,
+        "9": 0.9278001569156955
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.10785914832391143,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.1299994183999507,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 18777.62474692177,
+            "donor": 6938.852032374392,
+            "normal": 7321.786904567041,
+            "target": 1936.8695323230777
+          },
+          "donor_recovery": 0.27797977379824645,
+          "nearest_endpoint": "target"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 1276.002130674286,
+            "donor": 281.9087712731056,
+            "normal": 202.65314321440044,
+            "target": 50.163661752087094
+          },
+          "donor_recovery": 0.2880117910565477,
+          "nearest_endpoint": "target"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 15623.578621897856,
+            "donor": 6190.432869839737,
+            "normal": 6787.070180223017,
+            "target": 1805.4235393271128
+          },
+          "donor_recovery": 0.2762817808872898,
+          "nearest_endpoint": "target"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 3154.0476010099674,
+            "donor": 748.4187342630835,
+            "normal": 534.7172154654473,
+            "target": 131.44614930375928
+          },
+          "donor_recovery": 0.289343587163618,
+          "nearest_endpoint": "target"
+        }
+      }
+    },
+    {
+      "concept": "jokey",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 1.0981631010078319,
+        "11": 0.6485045126298284,
+        "12": 0.9279271397129069,
+        "9": 0.9123362080976636
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.06864272056330291,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.1299994183999507,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 19182.40055054283,
+            "donor": 5056.335283573411,
+            "normal": 7431.576894921226,
+            "target": 5078.93805975591
+          },
+          "donor_recovery": 0.5010032573149075,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 1037.6431208367328,
+            "donor": 132.92700864287957,
+            "normal": 148.0473175039006,
+            "target": 166.59772604984323
+          },
+          "donor_recovery": 0.5308002110579463,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 16558.315226458326,
+            "donor": 4709.254752261859,
+            "normal": 7030.298372223761,
+            "target": 4633.354929192661
+          },
+          "donor_recovery": 0.4961276774681602,
+          "nearest_endpoint": "target"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 2624.088734342149,
+            "donor": 347.0803518506618,
+            "normal": 401.2792764602723,
+            "target": 445.5837402621152
+          },
+          "donor_recovery": 0.5336325647420477,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "literature-focused",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 1.1804916613188097,
+        "11": 0.9098982140245206,
+        "12": 0.9342786289632583,
+        "9": 0.9871367829329967
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.058285321729639475,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.103775918309751,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 8446.959526921442,
+            "donor": 951.0671269340365,
+            "normal": 9861.269891291357,
+            "target": 2422.473889129784
+          },
+          "donor_recovery": 0.6894990852627488,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 510.7562522760552,
+            "donor": 20.51632741102283,
+            "normal": 713.509651273212,
+            "target": 66.8740524503993
+          },
+          "donor_recovery": 0.6558974181449688,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 7069.317966855602,
+            "donor": 895.6338736788285,
+            "normal": 7917.852845764228,
+            "target": 2243.01689843255
+          },
+          "donor_recovery": 0.6936193687433286,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1377.6416899982548,
+            "donor": 55.43342016932179,
+            "normal": 1943.4191259443369,
+            "target": 179.45692820800377
+          },
+          "donor_recovery": 0.6539152846022055,
+          "nearest_endpoint": "donor"
+        }
+      }
+    },
+    {
+      "concept": "literature-focused",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.4067358686309592,
+        "11": 0.9540272069735047,
+        "12": 0.9413393726207564,
+        "9": 0.9496624198491611
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.10245927343025675,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.103775918309751,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 9168.90536455214,
+            "donor": 1979.3136189592587,
+            "normal": 10690.120715237023,
+            "target": 1170.5062538779443
+          },
+          "donor_recovery": 0.3958355638774683,
+          "nearest_endpoint": "target"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 561.866098015443,
+            "donor": 74.56948903841322,
+            "normal": 767.0856589489663,
+            "target": 16.847382499663116
+          },
+          "donor_recovery": 0.3058850491917823,
+          "nearest_endpoint": "target"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 7650.56946212927,
+            "donor": 1776.514288858575,
+            "normal": 8598.32991100927,
+            "target": 1126.0314524804903
+          },
+          "donor_recovery": 0.4065254097110828,
+          "nearest_endpoint": "target"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1518.3364858836737,
+            "donor": 202.7994645767356,
+            "normal": 2091.7936009349646,
+            "target": 44.474901061099445
+          },
+          "donor_recovery": 0.3035165213708518,
+          "nearest_endpoint": "target"
+        }
+      }
+    },
+    {
+      "concept": "mathematical",
+      "direction": "correct_to_irrelevant",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9356301789260515,
+        "11": 0.971592703202691,
+        "12": 0.8759880112082095,
+        "9": 0.9250629960722412
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.08240755374959503,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.08757336797213461,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 10752.735058109367,
+            "donor": 2685.619824725607,
+            "normal": 4735.163223963818,
+            "target": 4475.290334574131
+          },
+          "donor_recovery": 0.6106670625860198,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 475.5078002831654,
+            "donor": 82.78960493996323,
+            "normal": 79.08890323477692,
+            "target": 111.7162945379861
+          },
+          "donor_recovery": 0.5544500925468179,
+          "nearest_endpoint": "normal"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 9539.114877187541,
+            "donor": 2464.304319981732,
+            "normal": 4594.477262061946,
+            "target": 4182.497969393175
+          },
+          "donor_recovery": 0.6164446277032327,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1213.6217905431888,
+            "donor": 221.31550572538686,
+            "normal": 140.68645554282875,
+            "target": 292.7929369792887
+          },
+          "donor_recovery": 0.5504709654750244,
+          "nearest_endpoint": "normal"
+        }
+      }
+    },
+    {
+      "concept": "mathematical",
+      "direction": "irrelevant_to_correct",
+      "per_layer_k12_donor_recovery": {
+        "10": 0.9667223097853698,
+        "11": 0.9917065307323985,
+        "12": 0.7499841553933679,
+        "9": 0.9570794396574013
+      },
+      "probe_row_fraction_of_donor_error_energy": 0.06656711290169919,
+      "probe_row_fraction_of_natural_trajectory_energy": 0.08757336797213461,
+      "space_metrics": {
+        "monitor_mean": {
+          "distances": {
+            "different": 12868.010638288684,
+            "donor": 2109.4597067218697,
+            "normal": 6844.443712740136,
+            "target": 4297.191965971164
+          },
+          "donor_recovery": 0.635281830535038,
+          "nearest_endpoint": "donor"
+        },
+        "probe_margin": {
+          "distances": {
+            "different": 653.357980587857,
+            "donor": 52.440903917355854,
+            "normal": 194.3491809774692,
+            "target": 103.00572978443249
+          },
+          "donor_recovery": 0.5951806302208498,
+          "nearest_endpoint": "donor"
+        },
+        "probe_null": {
+          "distances": {
+            "different": 11204.801440477211,
+            "donor": 1969.0390912646212,
+            "normal": 6366.790902845157,
+            "target": 4023.512453417612
+          },
+          "donor_recovery": 0.6392348216952581,
+          "nearest_endpoint": "donor"
+        },
+        "probe_row": {
+          "distances": {
+            "different": 1663.2108464808362,
+            "donor": 140.4204716428429,
+            "normal": 477.6539327427637,
+            "target": 273.68062262922126
+          },
+          "donor_recovery": 0.5940963938356628,
+          "nearest_endpoint": "donor"
+        }
+      }
+    }
+  ],
+  "per_head": [
+    {
+      "component": "layer_09.head_04",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.25263589883969295,
+      "mean_concept_recovery": 0.7458782447760537
+    },
+    {
+      "component": "layer_09.head_11",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.32876864958092844,
+      "mean_concept_recovery": 0.6686473347809709
+    },
+    {
+      "component": "layer_09.head_13",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.35963035437980184,
+      "mean_concept_recovery": 0.6400732245030537
+    },
+    {
+      "component": "layer_10.head_02",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.27360375925948327,
+      "mean_concept_recovery": 0.7667602723246679
+    },
+    {
+      "component": "layer_10.head_12",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.25309090899471004,
+      "mean_concept_recovery": 0.7599405290199692
+    },
+    {
+      "component": "layer_11.head_08",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.06419974853076899,
+      "mean_concept_recovery": 0.9034069566565844
+    },
+    {
+      "component": "layer_11.head_09",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.08181694387165334,
+      "mean_concept_recovery": 0.9009081504532104
+    },
+    {
+      "component": "layer_11.head_14",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.14017826298695477,
+      "mean_concept_recovery": 0.842696378134971
+    },
+    {
+      "component": "layer_11.head_15",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.08365040564766042,
+      "mean_concept_recovery": 0.8708674609802667
+    },
+    {
+      "component": "layer_12.head_02",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.17030246844746816,
+      "mean_concept_recovery": 0.8190498598546875
+    },
+    {
+      "component": "layer_12.head_03",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.14493210992752303,
+      "mean_concept_recovery": 0.8190685967770721
+    },
+    {
+      "component": "layer_12.head_12",
+      "direction": "correct_to_irrelevant",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.24282677341671535,
+      "mean_concept_recovery": 0.751404711269876
+    },
+    {
+      "component": "layer_09.head_04",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.34917896807288795,
+      "mean_concept_recovery": 0.6586930220236388
+    },
+    {
+      "component": "layer_09.head_11",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.29282037467360167,
+      "mean_concept_recovery": 0.6927257131297733
+    },
+    {
+      "component": "layer_09.head_13",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.37908077913211424,
+      "mean_concept_recovery": 0.6464212135778793
+    },
+    {
+      "component": "layer_10.head_02",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.2542077874046319,
+      "mean_concept_recovery": 0.8008481105893921
+    },
+    {
+      "component": "layer_10.head_12",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.25889631669542734,
+      "mean_concept_recovery": 0.735000023253854
+    },
+    {
+      "component": "layer_11.head_08",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.0888387420513414,
+      "mean_concept_recovery": 0.9290791706408801
+    },
+    {
+      "component": "layer_11.head_09",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.12141245126591997,
+      "mean_concept_recovery": 0.9042553756054864
+    },
+    {
+      "component": "layer_11.head_14",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.19839535684829934,
+      "mean_concept_recovery": 0.8496839650995912
+    },
+    {
+      "component": "layer_11.head_15",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.13280035471985896,
+      "mean_concept_recovery": 0.8685184858913976
+    },
+    {
+      "component": "layer_12.head_02",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.22021256930894317,
+      "mean_concept_recovery": 0.7708729729381939
+    },
+    {
+      "component": "layer_12.head_03",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.17119930498697206,
+      "mean_concept_recovery": 0.8195867942240433
+    },
+    {
+      "component": "layer_12.head_12",
+      "direction": "irrelevant_to_correct",
+      "mean_concept_donor_error_to_trajectory_energy_ratio": 0.22856744812908347,
+      "mean_concept_recovery": 0.7560276638109816
+    }
+  ],
+  "per_probe": [
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8461538461538461,
+      "mean_concept_recovery": 0.5128320015264263,
+      "probe": "HTML"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8076923076923077,
+      "mean_concept_recovery": 0.4100377264424232,
+      "probe": "all-caps"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.8669191138878443,
+      "probe": "biology-focused"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.7692307692307693,
+      "mean_concept_recovery": 0.40287664056014716,
+      "probe": "chemistry-based"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.7069068470712303,
+      "probe": "comforting"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8076923076923077,
+      "mean_concept_recovery": 0.49823722680401894,
+      "probe": "confused"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8076923076923077,
+      "mean_concept_recovery": 0.5364936540371305,
+      "probe": "deception"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.9615384615384616,
+      "mean_concept_recovery": 0.8116126807986817,
+      "probe": "finnish"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.2215341540415525,
+      "probe": "german"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.8076923076923077,
+      "mean_concept_recovery": 0.7127353781725602,
+      "probe": "harmful"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.9615384615384616,
+      "mean_concept_recovery": 0.5207028020210961,
+      "probe": "jokey"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.9230769230769231,
+      "mean_concept_recovery": 0.6367182789104953,
+      "probe": "literature-focused"
+    },
+    {
+      "direction": "correct_to_irrelevant",
+      "mean_concept_direction_correct_fraction": 0.9615384615384616,
+      "mean_concept_recovery": 0.7393968485031659,
+      "probe": "mathematical"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.6435069019380191,
+      "probe": "HTML"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8076923076923077,
+      "mean_concept_recovery": 0.49792800123704056,
+      "probe": "all-caps"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.9615384615384616,
+      "mean_concept_recovery": 0.7899231039974026,
+      "probe": "biology-focused"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.6923076923076923,
+      "mean_concept_recovery": 0.36938760915781194,
+      "probe": "chemistry-based"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.7475998413986991,
+      "probe": "comforting"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8461538461538461,
+      "mean_concept_recovery": 0.40321572987241744,
+      "probe": "confused"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.50817241570934,
+      "probe": "deception"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.6152928557801292,
+      "probe": "finnish"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.7692307692307693,
+      "mean_concept_recovery": 0.18711014787543867,
+      "probe": "german"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8076923076923077,
+      "mean_concept_recovery": -0.8243451754665947,
+      "probe": "harmful"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.9615384615384616,
+      "mean_concept_recovery": 0.6354428735145066,
+      "probe": "jokey"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.9615384615384616,
+      "mean_concept_recovery": 0.6568308289620532,
+      "probe": "literature-focused"
+    },
+    {
+      "direction": "irrelevant_to_correct",
+      "mean_concept_direction_correct_fraction": 0.8846153846153846,
+      "mean_concept_recovery": 0.6191773766018096,
+      "probe": "mathematical"
+    }
+  ],
+  "probe_row_condition_number": 2.1770503520965576,
+  "probe_row_rank": 13,
+  "procedure": "day53-existing-artifact-divergence-decomposition-v1",
+  "schema_version": 1
+}
