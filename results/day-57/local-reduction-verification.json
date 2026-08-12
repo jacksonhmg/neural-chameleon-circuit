@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "procedure": "day57-local-reduction-verification-v1",
+  "verified_on": "2026-08-12",
+  "confirmation_summary_sha256": "f1443f95d98d162baf8ad30ef0e6dfca7ae7e53f97a7039b61a3db54669ee428",
+  "valid_shard_files": 88,
+  "valid_shard_bytes": 1191084,
+  "shard_tree_sha256": "744ef9bde415965e6c01effea16019cd95a53980e9f1b27bc83b6f9e66a4fe4b",
+  "all_tensor_hashes_match_metadata": true,
+  "same_runtime_second_reduction_byte_identical": true,
+  "independent_remote_and_local_decision_identical": true,
+  "independent_remote_and_local_gate_booleans_identical": true,
+  "independent_remote_and_local_max_absolute_float_difference": 3.552713678800501e-15,
+  "difference_explanation": "Python/NumPy last-bit median formatting across Linux Python 3.10 and macOS Python 3.11; no decision or gate differs",
+  "result": "pass"
+}

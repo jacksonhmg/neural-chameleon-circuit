@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "procedure": "prospective-day57-confirmation-artifact-manifest-v1",
+  "execution_commit": "bc1b4b5f9db6cf437e6ccd0b03d254b463247ef2",
+  "files": {
+    "results/day-57/frozen-confirm-trace-acquisition-contract.json": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+    "results/day-57/confirmation-preflight.json": "d94e3e0569b53aeea73b9fcd34b95b1a6f2c79832d160d7c967322c0d74f4130",
+    "results/day-57/confirmation-execution.json": "ddfce0c9ca0178cda1e76d48ed24511f2d44aded20d07cdc7460ef53f7eb01e0",
+    "results/day-57/confirmation-summary.json": "f1443f95d98d162baf8ad30ef0e6dfca7ae7e53f97a7039b61a3db54669ee428"
+  },
+  "shards": {
+    "directory": "artifacts/rapid-k12-upstream-v1/day57-confirmation-shards",
+    "files": 88,
+    "bytes": 1191084,
+    "tree_sha256": "744ef9bde415965e6c01effea16019cd95a53980e9f1b27bc83b6f9e66a4fe4b",
+    "all_tensor_hashes_match_metadata": true
+  },
+  "invalid_attempts": {
+    "preflight_report": "results/day-57/invalid-preflight-attention-dtype.json",
+    "candidate_outcomes_generated_by_preflight": false,
+    "uninspected_pre_chunk_shards_preserved_locally": 30
+  },
+  "verification": {
+    "same_runtime_second_reduction_byte_identical": true,
+    "independent_local_reduction_decision_identical": true,
+    "implementation_result": "pass"
+  }
+}

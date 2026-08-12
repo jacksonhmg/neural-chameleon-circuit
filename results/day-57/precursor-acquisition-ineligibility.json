@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "procedure": "prospective-day57-precursor-acquisition-ineligibility-v1",
+  "contract_sha256": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+  "confirmation_summary_sha256": "f1443f95d98d162baf8ad30ef0e6dfca7ae7e53f97a7039b61a3db54669ee428",
+  "eligibility_requirement": "stage 1 pass and stage 2 implementation-valid",
+  "observed_stage1_decision": "fresh_confirmation_fail_stop",
+  "observed_stage2_disposition": "not_run_under_frozen_stop_rule",
+  "eligible": false,
+  "model_outcomes_generated": false,
+  "acquisition_classification": "not_tested_ineligible"
+}

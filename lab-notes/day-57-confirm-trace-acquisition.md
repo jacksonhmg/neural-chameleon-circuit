@@ -1,6 +1,6 @@
 # Day 57: confirmation, value-path tracing, and precursor acquisition
 
-**Status:** Frozen before outcomes; execution pending.
+**Status:** Complete; stopped prospectively after stage 1 failed.
 
 The deterministic freeze produced 176 fresh-confirmation examples and 44 separate tracing examples across 11 compatible concepts. All 220 records are mutually unique and content-disjoint from Day 4 and Day 47. Deception and harmful cannot be fresh within the pinned released train pool because Day 4 exhausted those pools.
 
@@ -13,3 +13,9 @@ The first confirmation preflight at commit `116b13a` generated no candidate outc
 ## Outcome-blind implementation repair 2
 
 The first full confirmation invocation produced 15 of 44 compact shards without printing or reducing scientific metrics, then exhausted 80 GB on the longest chemistry batch because eight jobs times four examples were expanded into one forward. Those 30 shard files were recovered locally under the ignored invalid-attempt directory `artifacts/rapid-k12-upstream-v1/day57-invalid-pre-chunk-confirmation-shards/` before replacement and have not been inspected scientifically. A first two-job chunk bound still exhausted memory on that same long batch. The runner therefore executes the exact frozen job order one job per forward and concatenates results before serialization; fixed-RMSNorm replay uses the corresponding one-repeat geometry. The example batch size, intervention states, arithmetic, model, metrics, controls, gates, and reduction remain unchanged; every valid shard will be regenerated under the repair commit.
+
+## Result
+
+The repaired preflight passed, all 176 examples completed, and the implementation audit passed. Exact donor K12 recovered `0.777/0.767` of the complete probe effect and was donor-nearest for 10/11 concepts. Content hybrid recovered `0.516/0.607`; routing recovered `0.147/0.091`; monitoring-prefix installation recovered `0.649/0.645`; removal recovered `0.931/0.911`; and fixed-normalization survival was `1.061/1.061`.
+
+Because content and monitoring-prefix installation missed their frozen thresholds, the disposition is `fresh_confirmation_fail_stop`. The 44-example tracing panel was not accessed, the precursor was not loaded for outcomes, and the dedicated H100 was terminated.

@@ -1,0 +1,1962 @@
+{
+  "analysis_commit": "bc1b4b5f9db6cf437e6ccd0b03d254b463247ef2",
+  "contract_sha256": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+  "decision": "fresh_confirmation_fail_stop",
+  "directions": {
+    "correct_to_irrelevant": {
+      "fixed_norm_exact_effect_survival": {
+        "by_concept": {
+          "HTML": 1.060872013909092,
+          "all-caps": 0.9737570316837894,
+          "biology-focused": 1.0129738570302957,
+          "chemistry-based": 1.4011119423322116,
+          "comforting": 3.5465949298996025,
+          "confused": 1.035917727359775,
+          "finnish": 3.947791522658977,
+          "german": 1.014689168720245,
+          "jokey": 1.3389843081321522,
+          "literature-focused": 3.952022501152755,
+          "mathematical": 1.005544038754973
+        },
+        "median_concept": 1.060872013909092
+      },
+      "jobs": {
+        "content_hybrid": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 823.2377319335938,
+              "all-caps": 371.92095947265625,
+              "biology-focused": 846.0877380371094,
+              "chemistry-based": 690.8052368164062,
+              "comforting": 283.9052734375,
+              "confused": 317.6876220703125,
+              "finnish": 192.36317443847656,
+              "german": 342.1263427734375,
+              "jokey": 415.06468200683594,
+              "literature-focused": 424.1470947265625,
+              "mathematical": 168.01881408691406
+            },
+            "median_concept": 371.92095947265625
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.6971171200275421,
+              "all-caps": 0.9342147707939148,
+              "biology-focused": 0.5978966057300568,
+              "chemistry-based": 0.4747893065214157,
+              "comforting": 0.5375940203666687,
+              "confused": 0.5588822662830353,
+              "finnish": 0.5212494134902954,
+              "german": 0.722795844078064,
+              "jokey": 0.9556282758712769,
+              "literature-focused": 0.5502893626689911,
+              "mathematical": 0.8504592776298523
+            },
+            "median_concept": 0.5978966057300568
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.7631293535232544,
+              "all-caps": 0.4351065456867218,
+              "biology-focused": 0.627663254737854,
+              "chemistry-based": 0.7051212191581726,
+              "comforting": 0.7228135466575623,
+              "confused": 0.6277534365653992,
+              "finnish": 0.6429698765277863,
+              "german": 0.6338421404361725,
+              "jokey": 0.4900946170091629,
+              "literature-focused": 0.6593620181083679,
+              "mathematical": 0.4445701092481613
+            },
+            "median_concept": 0.6338421404361725
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 0.0,
+              "literature-focused": 1.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest_concepts": 7,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 11.605844004168024,
+              "all-caps": 10.654102046440848,
+              "biology-focused": 24.814041703361283,
+              "chemistry-based": 8.785175482409262,
+              "comforting": 14.39663480016154,
+              "confused": 14.090082762534598,
+              "finnish": 12.059611476947488,
+              "german": 7.13393685040009,
+              "jokey": 10.903264417964376,
+              "literature-focused": 8.01888660543159,
+              "mathematical": 8.153932724214243
+            },
+            "median_concept": 10.903264417964376
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.5080438017332884,
+              "all-caps": 0.6545285596292502,
+              "biology-focused": 0.8117436649233732,
+              "chemistry-based": 0.345980290895959,
+              "comforting": 0.28957739621084033,
+              "confused": 0.5627277037556875,
+              "finnish": 0.5765329576148607,
+              "german": 0.8634907225352255,
+              "jokey": 0.46386621977525433,
+              "literature-focused": 0.5158770615898496,
+              "mathematical": 0.45686704437863557
+            },
+            "median_concept": 0.5158770615898496
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.6836411946050882,
+              "all-caps": 0.39110748297176456,
+              "biology-focused": 0.3863354065903841,
+              "chemistry-based": 0.6870711889566179,
+              "comforting": 0.7261838940975889,
+              "confused": 0.4544193686938933,
+              "finnish": 0.4357681214790196,
+              "german": 0.3788547128388955,
+              "jokey": 0.5415448075656224,
+              "literature-focused": 0.5536075887117267,
+              "mathematical": 0.6481562389061195
+            },
+            "median_concept": 0.5415448075656224
+          }
+        },
+        "exact_delta_haar": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 829.7867431640625,
+              "all-caps": 361.01283264160156,
+              "biology-focused": 1104.4266357421875,
+              "chemistry-based": 1036.1527099609375,
+              "comforting": 368.30747985839844,
+              "confused": 433.8822479248047,
+              "finnish": 307.5028839111328,
+              "german": 380.3247985839844,
+              "jokey": 391.5187683105469,
+              "literature-focused": 580.6285400390625,
+              "mathematical": 177.01834106445312
+            },
+            "median_concept": 391.5187683105469
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.02734057977795601,
+              "all-caps": 0.032039299607276917,
+              "biology-focused": 0.035104699432849884,
+              "chemistry-based": 0.022129172459244728,
+              "comforting": 0.03766459971666336,
+              "confused": 0.00845100125297904,
+              "finnish": -0.0035239176359027624,
+              "german": -0.04444124363362789,
+              "jokey": 0.007704502437263727,
+              "literature-focused": -0.012800960801541805,
+              "mathematical": 0.05446258373558521
+            },
+            "median_concept": 0.022129172459244728
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.3947468996047974,
+              "all-caps": 1.391378104686737,
+              "biology-focused": 1.3891719579696655,
+              "chemistry-based": 1.3984781503677368,
+              "comforting": 1.3873172402381897,
+              "confused": 1.4082286953926086,
+              "finnish": 1.4167016744613647,
+              "german": 1.4452943801879883,
+              "jokey": 1.4087608456611633,
+              "literature-focused": 1.4232434630393982,
+              "mathematical": 1.375143051147461
+            },
+            "median_concept": 1.3984781503677368
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 4.091401183463055,
+              "all-caps": 2.3656805232309637,
+              "biology-focused": 8.562528264549792,
+              "chemistry-based": 3.1550276866440843,
+              "comforting": 3.935637855723387,
+              "confused": 4.27743403214523,
+              "finnish": 1.4606142181301542,
+              "german": 4.140042103563357,
+              "jokey": 2.353820698701357,
+              "literature-focused": 1.6511780471989723,
+              "mathematical": 1.9901674253694182
+            },
+            "median_concept": 3.1550276866440843
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.13430960296552447,
+              "all-caps": 0.054426942753222886,
+              "biology-focused": 0.24696184975425717,
+              "chemistry-based": 0.10094001514810513,
+              "comforting": 0.0796758386551851,
+              "confused": 0.11199263760921636,
+              "finnish": 0.013591108129971122,
+              "german": 0.04418302587266408,
+              "jokey": 0.0833722004348734,
+              "literature-focused": -0.07780371870196098,
+              "mathematical": 0.04313184011205405
+            },
+            "median_concept": 0.0796758386551851
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.8883798053468592,
+              "all-caps": 0.9568689274816758,
+              "biology-focused": 0.771803990048849,
+              "chemistry-based": 0.9067174891620271,
+              "comforting": 0.9212817265742377,
+              "confused": 0.8979088758346334,
+              "finnish": 0.9890870422694465,
+              "german": 1.0875097108374647,
+              "jokey": 0.918438254636946,
+              "literature-focused": 1.082080682294618,
+              "mathematical": 0.9659544584857287
+            },
+            "median_concept": 0.9212817265742377
+          }
+        },
+        "exact_donor_all": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 829.7869873046875,
+              "all-caps": 361.0126647949219,
+              "biology-focused": 1104.4295654296875,
+              "chemistry-based": 1036.1533813476562,
+              "comforting": 368.30474853515625,
+              "confused": 433.8858184814453,
+              "finnish": 307.5013427734375,
+              "german": 380.3253173828125,
+              "jokey": 391.5173797607422,
+              "literature-focused": 580.6266784667969,
+              "mathematical": 177.01752471923828
+            },
+            "median_concept": 391.5173797607422
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 1.0,
+              "literature-focused": 1.0,
+              "mathematical": 1.0
+            },
+            "median_concept": 1.0
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 0.0,
+              "literature-focused": 1.0,
+              "mathematical": 1.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest_concepts": 10,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 15.56872888529259,
+              "all-caps": 10.912419384295031,
+              "biology-focused": 26.39011420483918,
+              "chemistry-based": 13.739822848714693,
+              "comforting": 38.85717518361389,
+              "confused": 19.720060989984944,
+              "finnish": 17.06047843115269,
+              "german": 6.820574102870918,
+              "jokey": 10.118308712823925,
+              "literature-focused": 9.626729553869627,
+              "mathematical": 8.616406480960263
+            },
+            "median_concept": 13.739822848714693
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.9200752193206886,
+              "all-caps": 0.6962981933658885,
+              "biology-focused": 0.9070315371409841,
+              "chemistry-based": 0.6438680861822513,
+              "comforting": 0.9129686024570896,
+              "confused": 0.7774667339996066,
+              "finnish": 0.8683674724163741,
+              "german": 0.8752671354919126,
+              "jokey": 0.4401732746704298,
+              "literature-focused": 0.6949705161539022,
+              "mathematical": 0.5177735081303947
+            },
+            "median_concept": 0.7774667339996066
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.16382997204775496,
+              "all-caps": 0.3181814160256355,
+              "biology-focused": 0.22038074190363072,
+              "chemistry-based": 0.3758744701348605,
+              "comforting": 0.11290696038092485,
+              "confused": 0.23391764006045573,
+              "finnish": 0.15502375908017488,
+              "german": 0.309940346155847,
+              "jokey": 0.5673634923870512,
+              "literature-focused": 0.3317494127242557,
+              "mathematical": 0.5532760228179743
+            },
+            "median_concept": 0.309940346155847
+          }
+        },
+        "identity_target": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 1.0,
+              "literature-focused": 1.0,
+              "mathematical": 1.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 9.134657921000336e-07,
+              "all-caps": 8.666327553126527e-07,
+              "biology-focused": 1.4746806681829322e-06,
+              "chemistry-based": 9.31683618272602e-07,
+              "comforting": 1.7144973337209345e-06,
+              "confused": 1.1702392790687193e-06,
+              "finnish": 1.7035850714596812e-06,
+              "german": 1.2549369059003596e-06,
+              "jokey": 1.1272829849097476e-06,
+              "literature-focused": 1.0554700841354764e-06,
+              "mathematical": 5.215404726754219e-07
+            },
+            "median_concept": 1.1272829849097476e-06
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": -4.355315027876555e-09,
+              "all-caps": 4.964605139585281e-09,
+              "biology-focused": -6.7447228517824985e-09,
+              "chemistry-based": 4.153013028780642e-09,
+              "comforting": -2.764306239836794e-09,
+              "confused": -4.642602054162911e-09,
+              "finnish": 1.0504226959852358e-08,
+              "german": -9.29404198951438e-09,
+              "jokey": 5.333936113883342e-10,
+              "literature-focused": 2.554666309081181e-08,
+              "mathematical": -5.460610632123528e-10
+            },
+            "median_concept": -5.460610632123528e-10
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.0000000043553168,
+              "all-caps": 0.9999999950353962,
+              "biology-focused": 1.0000000067447252,
+              "chemistry-based": 0.9999999958469876,
+              "comforting": 1.0000000027643066,
+              "confused": 1.0000000046426027,
+              "finnish": 0.9999999894957796,
+              "german": 1.0000000092940533,
+              "jokey": 0.9999999994666068,
+              "literature-focused": 0.9999999744533377,
+              "mathematical": 1.0000000005460614
+            },
+            "median_concept": 1.0000000005460614
+          }
+        },
+        "monitoring_prefix_haar": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 783.755126953125,
+              "all-caps": 341.7965850830078,
+              "biology-focused": 1029.7799682617188,
+              "chemistry-based": 954.9530334472656,
+              "comforting": 315.5783996582031,
+              "confused": 382.5639343261719,
+              "finnish": 236.23360443115234,
+              "german": 346.39862060546875,
+              "jokey": 324.96632385253906,
+              "literature-focused": 535.9145812988281,
+              "mathematical": 160.18594360351562
+            },
+            "median_concept": 346.39862060546875
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.012867649551481009,
+              "all-caps": -0.006112963426858187,
+              "biology-focused": 0.02388121373951435,
+              "chemistry-based": -0.002927083056420088,
+              "comforting": -0.01631801575422287,
+              "confused": -0.01091016549617052,
+              "finnish": -0.03141159564256668,
+              "german": -0.02381204068660736,
+              "jokey": -0.015210675075650215,
+              "literature-focused": -0.002590377116575837,
+              "mathematical": -0.0017137925024144351
+            },
+            "median_concept": -0.006112963426858187
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.3649339079856873,
+              "all-caps": 1.3861483931541443,
+              "biology-focused": 1.349672257900238,
+              "chemistry-based": 1.3677558302879333,
+              "comforting": 1.3202157616615295,
+              "confused": 1.348904013633728,
+              "finnish": 1.324364960193634,
+              "german": 1.3756802082061768,
+              "jokey": 1.320203423500061,
+              "literature-focused": 1.364222228527069,
+              "mathematical": 1.3476123809814453
+            },
+            "median_concept": 1.349672257900238
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 3.8257429293899508,
+              "all-caps": 3.187502800903254,
+              "biology-focused": 8.103566832150278,
+              "chemistry-based": 2.1559315486506843,
+              "comforting": 2.837382098324934,
+              "confused": 4.123180102059447,
+              "finnish": 1.2195296013528225,
+              "german": 3.527127574211572,
+              "jokey": 1.911464789236895,
+              "literature-focused": 2.336217028554975,
+              "mathematical": 1.4888688079116732
+            },
+            "median_concept": 2.837382098324934
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.12486356237003046,
+              "all-caps": 0.11777832408091446,
+              "biology-focused": 0.23847728751083852,
+              "chemistry-based": 0.06832251097282858,
+              "comforting": 0.046810723252742645,
+              "confused": 0.069202296777611,
+              "finnish": -0.0017669850726254404,
+              "german": 0.0419080380797489,
+              "jokey": 0.053449156031006466,
+              "literature-focused": -0.05187375068161887,
+              "mathematical": -0.023444280339568982
+            },
+            "median_concept": 0.053449156031006466
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.8959244043303327,
+              "all-caps": 0.8984284509093239,
+              "biology-focused": 0.7754189924125271,
+              "chemistry-based": 0.934672933535728,
+              "comforting": 0.9544756953617769,
+              "confused": 0.9428363425043234,
+              "finnish": 1.003432364634342,
+              "german": 1.0697479709567759,
+              "jokey": 0.9482873159869258,
+              "literature-focused": 1.064500130558975,
+              "mathematical": 1.0283396903700814
+            },
+            "median_concept": 0.9482873159869258
+          }
+        },
+        "monitoring_prefix_install": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 783.7526550292969,
+              "all-caps": 341.7906494140625,
+              "biology-focused": 1029.7813720703125,
+              "chemistry-based": 954.9537353515625,
+              "comforting": 315.57920837402344,
+              "confused": 382.5684051513672,
+              "finnish": 236.23639678955078,
+              "german": 346.3985595703125,
+              "jokey": 324.96971130371094,
+              "literature-focused": 535.9165954589844,
+              "mathematical": 160.18540954589844
+            },
+            "median_concept": 346.3985595703125
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.9184765517711639,
+              "all-caps": 0.9330012798309326,
+              "biology-focused": 0.9063475430011749,
+              "chemistry-based": 0.8997910022735596,
+              "comforting": 0.7603623867034912,
+              "confused": 0.8208606541156769,
+              "finnish": 0.7230984270572662,
+              "german": 0.8491788506507874,
+              "jokey": 0.7763533294200897,
+              "literature-focused": 0.8719654977321625,
+              "mathematical": 0.8622694909572601
+            },
+            "median_concept": 0.8622694909572601
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.2269340455532074,
+              "all-caps": 0.19883843511343002,
+              "biology-focused": 0.23981275409460068,
+              "chemistry-based": 0.2675851881504059,
+              "comforting": 0.4517999589443207,
+              "confused": 0.39944715797901154,
+              "finnish": 0.5034933090209961,
+              "german": 0.37939727306365967,
+              "jokey": 0.40853971242904663,
+              "literature-focused": 0.3440466523170471,
+              "mathematical": 0.3039839565753937
+            },
+            "median_concept": 0.3440466523170471
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 0.0,
+              "literature-focused": 1.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest_concepts": 9,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 13.863420813336395,
+              "all-caps": 10.333173964278057,
+              "biology-focused": 25.460678473936404,
+              "chemistry-based": 11.803214836664974,
+              "comforting": 33.81575643652485,
+              "confused": 16.087883297962303,
+              "finnish": 15.291885140098376,
+              "german": 6.562525993109944,
+              "jokey": 6.3398363534301705,
+              "literature-focused": 8.074518765299196,
+              "mathematical": 7.390846049557867
+            },
+            "median_concept": 11.803214836664974
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.8100426820683717,
+              "all-caps": 0.6492381277770106,
+              "biology-focused": 0.8709856600840795,
+              "chemistry-based": 0.5682539066703267,
+              "comforting": 0.78811537843576,
+              "confused": 0.6316362143764366,
+              "finnish": 0.7445601785187324,
+              "german": 0.8503677665611964,
+              "jokey": 0.27084542138278156,
+              "literature-focused": 0.5914365781202733,
+              "mathematical": 0.39148170838713797
+            },
+            "median_concept": 0.6492381277770106
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.25276235109940826,
+              "all-caps": 0.3751307830623545,
+              "biology-focused": 0.2676174779559876,
+              "chemistry-based": 0.4406550868717226,
+              "comforting": 0.21838942619397395,
+              "confused": 0.37924240860521363,
+              "finnish": 0.2793611486795032,
+              "german": 0.2987649167664652,
+              "jokey": 0.7307112746568076,
+              "literature-focused": 0.42077895264145765,
+              "mathematical": 0.7005913217109592
+            },
+            "median_concept": 0.3751307830623545
+          }
+        },
+        "monitoring_prefix_remove": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 183.25677490234375,
+              "all-caps": 77.34035110473633,
+              "biology-focused": 265.44386291503906,
+              "chemistry-based": 277.8507995605469,
+              "comforting": 163.08485412597656,
+              "confused": 178.1448974609375,
+              "finnish": 131.5263328552246,
+              "german": 147.71583557128906,
+              "jokey": 167.22979736328125,
+              "literature-focused": 198.81087493896484,
+              "mathematical": 51.79665946960449
+            },
+            "median_concept": 167.22979736328125
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.08151374012231827,
+              "all-caps": 0.06700000166893005,
+              "biology-focused": 0.0936538390815258,
+              "chemistry-based": 0.10020849853754044,
+              "comforting": 0.23962684720754623,
+              "confused": 0.1791320964694023,
+              "finnish": 0.27690136432647705,
+              "german": 0.15083474665880203,
+              "jokey": 0.22365383058786392,
+              "literature-focused": 0.12803713232278824,
+              "mathematical": 0.13772880285978317
+            },
+            "median_concept": 0.13772880285978317
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.9428642392158508,
+              "all-caps": 0.9537531137466431,
+              "biology-focused": 0.9329884052276611,
+              "chemistry-based": 0.9323574900627136,
+              "comforting": 0.8492612838745117,
+              "confused": 0.8931900560855865,
+              "finnish": 0.8333357274532318,
+              "german": 0.9175114333629608,
+              "jokey": 0.8448443710803986,
+              "literature-focused": 0.9254549443721771,
+              "mathematical": 0.9045678973197937
+            },
+            "median_concept": 0.9175114333629608
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 1.6622039308769778,
+              "all-caps": 0.6481312064003362,
+              "biology-focused": 2.4966859141731303,
+              "chemistry-based": 2.5947509028516937,
+              "comforting": 3.402003205618003,
+              "confused": 3.228281421341156,
+              "finnish": 3.2692751648045935,
+              "german": 1.3556212951283992,
+              "jokey": 2.6414892175474947,
+              "literature-focused": 2.8322349645994693,
+              "mathematical": 1.595853102097522
+            },
+            "median_concept": 2.5947509028516937
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.06940944753548631,
+              "all-caps": 0.027591101097602135,
+              "biology-focused": 0.016389110217444082,
+              "chemistry-based": 0.04437142249550444,
+              "comforting": 0.043907123939511544,
+              "confused": 0.09442326126444608,
+              "finnish": 0.13516370571958436,
+              "german": 0.06175368814877144,
+              "jokey": 0.10796614156557868,
+              "literature-focused": 0.1476852466995345,
+              "mathematical": 0.11061312354360257
+            },
+            "median_concept": 0.06940944753548631
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.9332052359884855,
+              "all-caps": 0.9728230684925026,
+              "biology-focused": 0.9886805082031922,
+              "chemistry-based": 0.9616368343737582,
+              "comforting": 0.9574355736985367,
+              "confused": 0.9093512383955848,
+              "finnish": 0.8683730707365218,
+              "german": 0.955996955923397,
+              "jokey": 0.8929082826290177,
+              "literature-focused": 0.8649351805180672,
+              "mathematical": 0.8905060982996751
+            },
+            "median_concept": 0.9332052359884855
+          }
+        },
+        "routing_hybrid": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 562.5504760742188,
+              "all-caps": 248.65264129638672,
+              "biology-focused": 580.8526611328125,
+              "chemistry-based": 617.9743347167969,
+              "comforting": 237.34226989746094,
+              "confused": 274.35455322265625,
+              "finnish": 140.2012939453125,
+              "german": 246.9834976196289,
+              "jokey": 288.05078125,
+              "literature-focused": 338.1307067871094,
+              "mathematical": 71.82875061035156
+            },
+            "median_concept": 274.35455322265625
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.30377738177776337,
+              "all-caps": 0.5366337895393372,
+              "biology-focused": 0.13270197063684464,
+              "chemistry-based": 0.16148445010185242,
+              "comforting": 0.28038617968559265,
+              "confused": 0.1137697622179985,
+              "finnish": 0.1940227597951889,
+              "german": 0.5330909788608551,
+              "jokey": 0.5724655985832214,
+              "literature-focused": 0.32154835760593414,
+              "mathematical": 0.14064721763134003
+            },
+            "median_concept": 0.28038617968559265
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.9211376905441284,
+              "all-caps": 0.6304100751876831,
+              "biology-focused": 1.0041598081588745,
+              "chemistry-based": 1.0223934650421143,
+              "comforting": 0.9216702580451965,
+              "confused": 1.0747093558311462,
+              "finnish": 0.9066191017627716,
+              "german": 0.6318801045417786,
+              "jokey": 0.6194202601909637,
+              "literature-focused": 0.8363813161849976,
+              "mathematical": 0.9439757168292999
+            },
+            "median_concept": 0.9211376905441284
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 5.901176554596487,
+              "all-caps": 6.370306530976342,
+              "biology-focused": 11.334362165221997,
+              "chemistry-based": 7.790211191696006,
+              "comforting": 4.7514899254827885,
+              "confused": 2.5582228385066634,
+              "finnish": 3.051780130377482,
+              "german": 3.516266914871607,
+              "jokey": 3.6278296158583423,
+              "literature-focused": 2.467715711142577,
+              "mathematical": 0.8450790229070446
+            },
+            "median_concept": 3.6278296158583423
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.05210887697142088,
+              "all-caps": 0.3066459765274865,
+              "biology-focused": 0.3028210503630947,
+              "chemistry-based": 0.19855459496597533,
+              "comforting": 0.08615261635298088,
+              "confused": 0.03942950617932852,
+              "finnish": 0.142329371367106,
+              "german": 0.21837047825063782,
+              "jokey": 0.14693524300851052,
+              "literature-focused": 0.15468963317049567,
+              "mathematical": 0.02395035988490022
+            },
+            "median_concept": 0.14693524300851052
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.0101111771270954,
+              "all-caps": 0.7447286546414986,
+              "biology-focused": 0.7412285011785725,
+              "chemistry-based": 0.8688355920218236,
+              "comforting": 0.9159390895185349,
+              "confused": 0.9654274416981135,
+              "finnish": 0.8607471365359931,
+              "german": 0.8866137499096216,
+              "jokey": 0.8543611568650435,
+              "literature-focused": 0.8506080619346271,
+              "mathematical": 0.9779064238544446
+            },
+            "median_concept": 0.8688355920218236
+          }
+        }
+      }
+    },
+    "irrelevant_to_correct": {
+      "fixed_norm_exact_effect_survival": {
+        "by_concept": {
+          "HTML": 0.9983536524850392,
+          "all-caps": 1.2385226087547465,
+          "biology-focused": 1.312537794728802,
+          "chemistry-based": 0.9649047619672033,
+          "comforting": 0.8915802395185434,
+          "confused": 1.0384421075925125,
+          "finnish": 1.0176836555611637,
+          "german": 1.175864323802303,
+          "jokey": 2.1791788888357386,
+          "literature-focused": 1.4895066927409983,
+          "mathematical": 1.0609420155677634
+        },
+        "median_concept": 1.0609420155677634
+      },
+      "jobs": {
+        "content_hybrid": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 749.7356872558594,
+              "all-caps": 225.4651870727539,
+              "biology-focused": 1108.8055419921875,
+              "chemistry-based": 1058.6522827148438,
+              "comforting": 341.39308166503906,
+              "confused": 457.1717987060547,
+              "finnish": 281.8542175292969,
+              "german": 240.91524505615234,
+              "jokey": 242.5783462524414,
+              "literature-focused": 483.2861785888672,
+              "mathematical": 167.11206817626953
+            },
+            "median_concept": 341.39308166503906
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.6962226033210754,
+              "all-caps": 0.46336621046066284,
+              "biology-focused": 0.8672980964183807,
+              "chemistry-based": 0.8385155200958252,
+              "comforting": 0.7196138799190521,
+              "confused": 0.8862302899360657,
+              "finnish": 0.8059773147106171,
+              "german": 0.4669090211391449,
+              "jokey": 0.42753446102142334,
+              "literature-focused": 0.6784515976905823,
+              "mathematical": 0.8593527376651764
+            },
+            "median_concept": 0.7196138799190521
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.6721831560134888,
+              "all-caps": 0.6827060580253601,
+              "biology-focused": 0.5184726715087891,
+              "chemistry-based": 0.6099573373794556,
+              "comforting": 0.6377246677875519,
+              "confused": 0.6170857548713684,
+              "finnish": 0.4556925892829895,
+              "german": 0.6836071908473969,
+              "jokey": 0.7329894304275513,
+              "literature-focused": 0.5866435766220093,
+              "mathematical": 0.41760390996932983
+            },
+            "median_concept": 0.6170857548713684
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 0.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 1.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest_concepts": 8,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 16.414121004617954,
+              "all-caps": 7.24270661641901,
+              "biology-focused": 18.45666240721065,
+              "chemistry-based": 12.357370385136216,
+              "comforting": 34.535173055695026,
+              "confused": 19.00591102931555,
+              "finnish": 13.61767546585053,
+              "german": 5.073610184541896,
+              "jokey": 7.326149035050928,
+              "literature-focused": 5.126898286850982,
+              "mathematical": 8.250811422370365
+            },
+            "median_concept": 12.357370385136216
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.8683127455470747,
+              "all-caps": 0.32454531967184674,
+              "biology-focused": 0.606704054851537,
+              "chemistry-based": 0.5129923764267237,
+              "comforting": 0.7962887447566698,
+              "confused": 0.7301849515262191,
+              "finnish": 0.6873326391755339,
+              "german": 0.650637151189281,
+              "jokey": 0.29051483902874653,
+              "literature-focused": 0.3405580186214605,
+              "mathematical": 0.577269391130453
+            },
+            "median_concept": 0.606704054851537
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.44459796518548667,
+              "all-caps": 0.7499012238340499,
+              "biology-focused": 0.45040037062108684,
+              "chemistry-based": 0.572119030491437,
+              "comforting": 0.23850462053925378,
+              "confused": 0.30046266160842,
+              "finnish": 0.31770527466839876,
+              "german": 0.4049756338630164,
+              "jokey": 0.7223649623354678,
+              "literature-focused": 0.6824576671214786,
+              "mathematical": 0.43942648072745955
+            },
+            "median_concept": 0.44459796518548667
+          }
+        },
+        "exact_delta_haar": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 829.7829895019531,
+              "all-caps": 361.0159149169922,
+              "biology-focused": 1104.427978515625,
+              "chemistry-based": 1036.1544189453125,
+              "comforting": 368.30560302734375,
+              "confused": 433.8866729736328,
+              "finnish": 307.5045166015625,
+              "german": 380.32623291015625,
+              "jokey": 391.519287109375,
+              "literature-focused": 580.6302185058594,
+              "mathematical": 177.01783752441406
+            },
+            "median_concept": 391.519287109375
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.027335654012858868,
+              "all-caps": 0.03203869238495827,
+              "biology-focused": 0.035106537863612175,
+              "chemistry-based": 0.02213569637387991,
+              "comforting": 0.03766514174640179,
+              "confused": 0.008451869245618582,
+              "finnish": -0.0035450889263302088,
+              "german": -0.04443246312439442,
+              "jokey": 0.0077043098863214254,
+              "literature-focused": -0.012801705859601498,
+              "mathematical": 0.054461872205138206
+            },
+            "median_concept": 0.02213569637387991
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.3947516083717346,
+              "all-caps": 1.391372799873352,
+              "biology-focused": 1.3891685605049133,
+              "chemistry-based": 1.3984693884849548,
+              "comforting": 1.3873200416564941,
+              "confused": 1.4082236886024475,
+              "finnish": 1.4167088270187378,
+              "german": 1.4452939629554749,
+              "jokey": 1.4087542295455933,
+              "literature-focused": 1.4232302904129028,
+              "mathematical": 1.3751782178878784
+            },
+            "median_concept": 1.3984693884849548
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 6.5863609330635615,
+              "all-caps": 2.636713220413929,
+              "biology-focused": 4.409615900986993,
+              "chemistry-based": 3.523674109454803,
+              "comforting": 5.917903924431648,
+              "confused": 5.15983872751022,
+              "finnish": 2.7698271375283428,
+              "german": 3.6256569282934215,
+              "jokey": 1.8098215958301704,
+              "literature-focused": 1.476291576558297,
+              "mathematical": 2.149951830653253
+            },
+            "median_concept": 3.523674109454803
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.3270402839332696,
+              "all-caps": 0.04423662431573855,
+              "biology-focused": 0.10412218169566223,
+              "chemistry-based": 0.09956129641284467,
+              "comforting": 0.13275248987173643,
+              "confused": 0.15407873449737725,
+              "finnish": 0.13255360842064468,
+              "german": 0.09878818146833704,
+              "jokey": 0.02235086995723591,
+              "literature-focused": 0.08218955487048832,
+              "mathematical": 0.13303288360684346
+            },
+            "median_concept": 0.10412218169566223
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.7029801596787244,
+              "all-caps": 0.9688436201859165,
+              "biology-focused": 0.9032492056496917,
+              "chemistry-based": 0.9101044541535683,
+              "comforting": 0.8678066157020858,
+              "confused": 0.8555481219869114,
+              "finnish": 0.8689828186726847,
+              "german": 1.0193417718351883,
+              "jokey": 0.9806737423704532,
+              "literature-focused": 0.9201469252515946,
+              "mathematical": 0.8705335375009493
+            },
+            "median_concept": 0.9032492056496917
+          }
+        },
+        "exact_donor_all": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 829.7869873046875,
+              "all-caps": 361.0126647949219,
+              "biology-focused": 1104.4295654296875,
+              "chemistry-based": 1036.1533813476562,
+              "comforting": 368.30474853515625,
+              "confused": 433.8858184814453,
+              "finnish": 307.5013427734375,
+              "german": 380.3253173828125,
+              "jokey": 391.5173797607422,
+              "literature-focused": 580.6266784667969,
+              "mathematical": 177.01752471923828
+            },
+            "median_concept": 391.5173797607422
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 1.0,
+              "literature-focused": 1.0,
+              "mathematical": 1.0
+            },
+            "median_concept": 1.0
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 1.0,
+              "literature-focused": 0.0,
+              "mathematical": 1.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest_concepts": 10,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 16.315978903816784,
+              "all-caps": 10.378633496732368,
+              "biology-focused": 26.83575988205952,
+              "chemistry-based": 14.64632262223692,
+              "comforting": 38.17574752152534,
+              "confused": 19.78159433816822,
+              "finnish": 16.847575121704217,
+              "german": 7.184994089339781,
+              "jokey": 15.129101693477107,
+              "literature-focused": 6.140031765368974,
+              "mathematical": 8.886768863499608
+            },
+            "median_concept": 15.129101693477107
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.9582915220768156,
+              "all-caps": 0.6419733142435731,
+              "biology-focused": 0.9348670562992956,
+              "chemistry-based": 0.6937346505129134,
+              "comforting": 0.8908200817412798,
+              "confused": 0.7668334394546511,
+              "finnish": 0.851246419280855,
+              "german": 0.914860748228835,
+              "jokey": 0.6426036672053148,
+              "literature-focused": 0.43204578046751163,
+              "mathematical": 0.6133518694644904
+            },
+            "median_concept": 0.7668334394546511
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.15531301919858193,
+              "all-caps": 0.40790908506197426,
+              "biology-focused": 0.0932537930675931,
+              "chemistry-based": 0.3185122096237101,
+              "comforting": 0.14546187699169705,
+              "confused": 0.25726460861179823,
+              "finnish": 0.16618235341629578,
+              "german": 0.33822421548055287,
+              "jokey": 0.38333098690737133,
+              "literature-focused": 0.5860358791337454,
+              "mathematical": 0.4054818972861397
+            },
+            "median_concept": 0.3185122096237101
+          }
+        },
+        "identity_target": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 1.0,
+              "literature-focused": 1.0,
+              "mathematical": 1.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 1.2632044322768659e-06,
+              "all-caps": 8.150220321494322e-07,
+              "biology-focused": 8.007893536112442e-07,
+              "chemistry-based": 9.43317289426879e-07,
+              "comforting": 1.5318262769282294e-06,
+              "confused": 1.37326241789497e-06,
+              "finnish": 1.5098046050116717e-06,
+              "german": 1.1514794904633923e-06,
+              "jokey": 9.488100840986207e-07,
+              "literature-focused": 1.1162868475432141e-06,
+              "mathematical": 1.025383428413863e-06
+            },
+            "median_concept": 1.1162868475432141e-06
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": -4.3959284657237866e-09,
+              "all-caps": 1.4386075895706123e-09,
+              "biology-focused": 1.2240691949559954e-09,
+              "chemistry-based": -7.458665675124702e-09,
+              "comforting": 9.723714371803342e-09,
+              "confused": -4.807153440047064e-10,
+              "finnish": -4.498516146460982e-09,
+              "german": 2.2770785537450082e-09,
+              "jokey": -9.895780074572582e-10,
+              "literature-focused": -7.94593115222239e-09,
+              "mathematical": 3.645019003103554e-09
+            },
+            "median_concept": -4.807153440047064e-10
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.0000000043959298,
+              "all-caps": 0.9999999985613937,
+              "biology-focused": 0.9999999987759312,
+              "chemistry-based": 1.0000000074586661,
+              "comforting": 0.9999999902762865,
+              "confused": 1.0000000004807164,
+              "finnish": 1.0000000044985184,
+              "german": 0.9999999977229335,
+              "jokey": 1.0000000009895782,
+              "literature-focused": 1.0000000079459315,
+              "mathematical": 0.999999996354983
+            },
+            "median_concept": 1.0000000004807164
+          }
+        },
+        "monitoring_prefix_haar": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 783.7596435546875,
+              "all-caps": 341.796875,
+              "biology-focused": 1029.78515625,
+              "chemistry-based": 954.9505310058594,
+              "comforting": 315.57684326171875,
+              "confused": 382.5688781738281,
+              "finnish": 236.23839569091797,
+              "german": 346.39927673339844,
+              "jokey": 324.9700012207031,
+              "literature-focused": 535.9210205078125,
+              "mathematical": 160.18511199951172
+            },
+            "median_concept": 346.39927673339844
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.012869251426309347,
+              "all-caps": -0.006100488593801856,
+              "biology-focused": 0.023884139955043793,
+              "chemistry-based": -0.0029314886778593063,
+              "comforting": -0.01631696429103613,
+              "confused": -0.010912717785686255,
+              "finnish": -0.031401267275214195,
+              "german": -0.02380749862641096,
+              "jokey": -0.015196239110082388,
+              "literature-focused": -0.0025884811766445637,
+              "mathematical": -0.0017054934869520366
+            },
+            "median_concept": -0.006100488593801856
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 1.364946961402893,
+              "all-caps": 1.3861430883407593,
+              "biology-focused": 1.3496719598770142,
+              "chemistry-based": 1.3677517175674438,
+              "comforting": 1.3202348351478577,
+              "confused": 1.3489118218421936,
+              "finnish": 1.324362874031067,
+              "german": 1.3756720423698425,
+              "jokey": 1.320211410522461,
+              "literature-focused": 1.36422461271286,
+              "mathematical": 1.3476161360740662
+            },
+            "median_concept": 1.3496719598770142
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 4.86197339818594,
+              "all-caps": 1.9921966086892844,
+              "biology-focused": 4.900855337666709,
+              "chemistry-based": 3.8298663644035082,
+              "comforting": 5.059180849095301,
+              "confused": 1.9475385217567354,
+              "finnish": 2.5601962565633256,
+              "german": 3.3127853572201973,
+              "jokey": 2.2164172699669216,
+              "literature-focused": 2.325416796069302,
+              "mathematical": 1.494605228454975
+            },
+            "median_concept": 2.5601962565633256
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.2363117536953383,
+              "all-caps": 0.07997724308818249,
+              "biology-focused": 0.08248197840566016,
+              "chemistry-based": 0.10723885229181979,
+              "comforting": 0.11425089425421059,
+              "confused": 0.05538247479825433,
+              "finnish": 0.11208336781080819,
+              "german": 0.08275411048390441,
+              "jokey": 0.005300008578484708,
+              "literature-focused": 0.078142060619944,
+              "mathematical": 0.025806589210971044
+            },
+            "median_concept": 0.08248197840566016
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.7794661001240951,
+              "all-caps": 0.9259939629396747,
+              "biology-focused": 0.9296174453163493,
+              "chemistry-based": 0.9045451923262036,
+              "comforting": 0.8861722287193061,
+              "confused": 0.9463187638866306,
+              "finnish": 0.8897608095629858,
+              "german": 1.035145110288398,
+              "jokey": 0.9990462225123203,
+              "literature-focused": 0.9344940270813697,
+              "mathematical": 0.9785495152766605
+            },
+            "median_concept": 0.9296174453163493
+          }
+        },
+        "monitoring_prefix_install": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 783.7614135742188,
+              "all-caps": 341.79356384277344,
+              "biology-focused": 1029.7816162109375,
+              "chemistry-based": 954.9527587890625,
+              "comforting": 315.5771026611328,
+              "confused": 382.57008361816406,
+              "finnish": 236.23414611816406,
+              "german": 346.39524841308594,
+              "jokey": 324.97010803222656,
+              "literature-focused": 535.9164428710938,
+              "mathematical": 160.1831283569336
+            },
+            "median_concept": 346.39524841308594
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.9184862673282623,
+              "all-caps": 0.9330000281333923,
+              "biology-focused": 0.9063462018966675,
+              "chemistry-based": 0.8997915685176849,
+              "comforting": 0.7603732347488403,
+              "confused": 0.8208678364753723,
+              "finnish": 0.7230986654758453,
+              "german": 0.8491652607917786,
+              "jokey": 0.7763461768627167,
+              "literature-focused": 0.8719628155231476,
+              "mathematical": 0.8622712194919586
+            },
+            "median_concept": 0.8622712194919586
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.22693153470754623,
+              "all-caps": 0.19884052127599716,
+              "biology-focused": 0.23981130123138428,
+              "chemistry-based": 0.2675844132900238,
+              "comforting": 0.4518042057752609,
+              "confused": 0.39944182336330414,
+              "finnish": 0.5035139322280884,
+              "german": 0.3794092684984207,
+              "jokey": 0.40854698419570923,
+              "literature-focused": 0.3440435826778412,
+              "mathematical": 0.3039831966161728
+            },
+            "median_concept": 0.3440435826778412
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 1.0,
+              "all-caps": 1.0,
+              "biology-focused": 1.0,
+              "chemistry-based": 1.0,
+              "comforting": 1.0,
+              "confused": 1.0,
+              "finnish": 1.0,
+              "german": 1.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 1.0
+          },
+          "probe_donor_nearest_concepts": 8,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 15.026118682976637,
+              "all-caps": 9.946750325220219,
+              "biology-focused": 26.31590628813953,
+              "chemistry-based": 12.479485609498418,
+              "comforting": 35.066918597807145,
+              "confused": 16.564333102533574,
+              "finnish": 13.939291129277574,
+              "german": 6.547008150603542,
+              "jokey": 11.465061556287775,
+              "literature-focused": 4.78761724081337,
+              "mathematical": 7.089995823088623
+            },
+            "median_concept": 12.479485609498418
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.8811628938335575,
+              "all-caps": 0.5921160467480128,
+              "biology-focused": 0.9120622981210018,
+              "chemistry-based": 0.589464371701371,
+              "comforting": 0.8143674139235821,
+              "confused": 0.6452501465880933,
+              "finnish": 0.7110435454546183,
+              "german": 0.8670576059130026,
+              "jokey": 0.47735911206723236,
+              "literature-focused": 0.3243839911880777,
+              "mathematical": 0.4551177837439139
+            },
+            "median_concept": 0.6452501465880933
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.19451904448119017,
+              "all-caps": 0.45955388141309905,
+              "biology-focused": 0.15657334572398218,
+              "chemistry-based": 0.4249638953446325,
+              "comforting": 0.21014072275572476,
+              "confused": 0.3664466626805819,
+              "finnish": 0.30384325067739615,
+              "german": 0.29019723534521036,
+              "jokey": 0.540530566703181,
+              "literature-focused": 0.6888261671244343,
+              "mathematical": 0.5749445601475571
+            },
+            "median_concept": 0.3664466626805819
+          }
+        },
+        "monitoring_prefix_remove": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 183.25796508789062,
+              "all-caps": 77.33963775634766,
+              "biology-focused": 265.44590759277344,
+              "chemistry-based": 277.85125732421875,
+              "comforting": 163.08683013916016,
+              "confused": 178.149658203125,
+              "finnish": 131.5265998840332,
+              "german": 147.71577072143555,
+              "jokey": 167.22904205322266,
+              "literature-focused": 198.80941009521484,
+              "mathematical": 51.79787826538086
+            },
+            "median_concept": 167.22904205322266
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.08152345567941666,
+              "all-caps": 0.06699876487255096,
+              "biology-focused": 0.09365244582295418,
+              "chemistry-based": 0.10020902380347252,
+              "comforting": 0.23963762819766998,
+              "confused": 0.17913930118083954,
+              "finnish": 0.27690160274505615,
+              "german": 0.15082113444805145,
+              "jokey": 0.22364667803049088,
+              "literature-focused": 0.12803447246551514,
+              "mathematical": 0.13773051649332047
+            },
+            "median_concept": 0.13773051649332047
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.9428541660308838,
+              "all-caps": 0.9537518620491028,
+              "biology-focused": 0.9329876899719238,
+              "chemistry-based": 0.9323561191558838,
+              "comforting": 0.8492728769779205,
+              "confused": 0.8931831419467926,
+              "finnish": 0.8333245813846588,
+              "german": 0.9175077378749847,
+              "jokey": 0.844857931137085,
+              "literature-focused": 0.9254620671272278,
+              "mathematical": 0.904570609331131
+            },
+            "median_concept": 0.9175077378749847
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 0.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 0,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 1.9363771545709445,
+              "all-caps": 0.797582231150459,
+              "biology-focused": 2.1679465644713156,
+              "chemistry-based": 2.047891960127501,
+              "comforting": 4.927941985068536,
+              "confused": 3.8918646119024487,
+              "finnish": 2.4255624342709003,
+              "german": 1.7420704439488777,
+              "jokey": 2.8611969263200154,
+              "literature-focused": 1.5447309227320452,
+              "mathematical": 2.126014519447759
+            },
+            "median_concept": 2.126014519447759
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.09868947469674177,
+              "all-caps": 0.03249444664213608,
+              "biology-focused": 0.035545070890609515,
+              "chemistry-based": 0.07826276736016125,
+              "comforting": 0.10891153560193685,
+              "confused": 0.1423802957907101,
+              "finnish": 0.08946689462315713,
+              "german": 0.03276655117893792,
+              "jokey": 0.09654469306240757,
+              "literature-focused": 0.08020263069652783,
+              "mathematical": 0.13868292979232644
+            },
+            "median_concept": 0.08946689462315713
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.9032460030813684,
+              "all-caps": 0.9683206863340996,
+              "biology-focused": 0.9669066683165967,
+              "chemistry-based": 0.9242844034520499,
+              "comforting": 0.891707702833151,
+              "confused": 0.8596181318390312,
+              "finnish": 0.9124065751149607,
+              "german": 0.9996392277896234,
+              "jokey": 0.9069689821872428,
+              "literature-focused": 0.9225086516370979,
+              "mathematical": 0.8656942819732434
+            },
+            "median_concept": 0.9124065751149607
+          }
+        },
+        "routing_hybrid": {
+          "k12_effect_norm": {
+            "by_concept": {
+              "HTML": 626.8797607421875,
+              "all-caps": 161.84426879882812,
+              "biology-focused": 699.5610961914062,
+              "chemistry-based": 722.2977600097656,
+              "comforting": 267.44683837890625,
+              "confused": 260.3525390625,
+              "finnish": 189.8652114868164,
+              "german": 233.66931915283203,
+              "jokey": 188.54138946533203,
+              "literature-focused": 381.09266662597656,
+              "mathematical": 75.53814315795898
+            },
+            "median_concept": 260.3525390625
+          },
+          "k12_recovery": {
+            "by_concept": {
+              "HTML": 0.3028828501701355,
+              "all-caps": 0.0657852254807949,
+              "biology-focused": 0.40210339426994324,
+              "chemistry-based": 0.5252107977867126,
+              "comforting": 0.4624059796333313,
+              "confused": 0.4411177635192871,
+              "finnish": 0.478750616312027,
+              "german": 0.2772042453289032,
+              "jokey": 0.04437177628278732,
+              "literature-focused": 0.4497106671333313,
+              "mathematical": 0.1495407447218895
+            },
+            "median_concept": 0.40210339426994324
+          },
+          "k12_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.9892995059490204,
+              "all-caps": 1.031020998954773,
+              "biology-focused": 0.764225035905838,
+              "chemistry-based": 0.6659191846847534,
+              "comforting": 0.7738918364048004,
+              "confused": 0.7193715870380402,
+              "finnish": 0.6376540660858154,
+              "german": 0.9144653379917145,
+              "jokey": 1.0678362846374512,
+              "literature-focused": 0.7306395173072815,
+              "mathematical": 0.9484401047229767
+            },
+            "median_concept": 0.7738918364048004
+          },
+          "probe_donor_nearest": {
+            "by_concept": {
+              "HTML": 0.0,
+              "all-caps": 0.0,
+              "biology-focused": 0.0,
+              "chemistry-based": 0.0,
+              "comforting": 1.0,
+              "confused": 0.0,
+              "finnish": 0.0,
+              "german": 0.0,
+              "jokey": 0.0,
+              "literature-focused": 0.0,
+              "mathematical": 0.0
+            },
+            "median_concept": 0.0
+          },
+          "probe_donor_nearest_concepts": 1,
+          "probe_effect_norm": {
+            "by_concept": {
+              "HTML": 10.646895227486452,
+              "all-caps": 2.5231920694566194,
+              "biology-focused": 5.267370920437768,
+              "chemistry-based": 6.973073481612268,
+              "comforting": 26.684952045259987,
+              "confused": 6.021257053186746,
+              "finnish": 5.4600543321256705,
+              "german": 3.2542965078099177,
+              "jokey": 2.6730983584492725,
+              "literature-focused": 2.1400190889403623,
+              "mathematical": 2.2266381960908883
+            },
+            "median_concept": 5.267370920437768
+          },
+          "probe_recovery": {
+            "by_concept": {
+              "HTML": 0.3793259654362834,
+              "all-caps": 0.03879878131854446,
+              "biology-focused": 0.09085503449516474,
+              "chemistry-based": 0.2592537308741286,
+              "comforting": 0.5871285114653251,
+              "confused": 0.20867881572358749,
+              "finnish": 0.2787711730264577,
+              "german": -0.0002412415895080703,
+              "jokey": -0.007712665850101726,
+              "literature-focused": 0.08323752055645033,
+              "mathematical": 0.08941800144623356
+            },
+            "median_concept": 0.09085503449516474
+          },
+          "probe_residual_norm_ratio": {
+            "by_concept": {
+              "HTML": 0.8136327757865128,
+              "all-caps": 0.9750946015914422,
+              "biology-focused": 0.9252031722486802,
+              "chemistry-based": 0.7738129637460733,
+              "comforting": 0.46339171135687796,
+              "confused": 0.8013449720034542,
+              "finnish": 0.7263703073116778,
+              "german": 1.1121625035477072,
+              "jokey": 1.0157117237432889,
+              "literature-focused": 0.9269086055300437,
+              "mathematical": 0.9202612579868964
+            },
+            "median_concept": 0.9202612579868964
+          }
+        }
+      }
+    }
+  },
+  "evidence_class": "fresh causal confirmation on 176 previously unselected examples",
+  "execution_commit": "bc1b4b5f9db6cf437e6ccd0b03d254b463247ef2",
+  "gate_clauses": {
+    "correct_to_irrelevant": {
+      "all_pass": false,
+      "pass": {
+        "content_hybrid_probe_recovery": false,
+        "content_minus_routing_probe_recovery": false,
+        "exact_donor_k12_recovery": true,
+        "exact_donor_probe_donor_nearest_concepts": true,
+        "exact_donor_probe_recovery": true,
+        "fixed_norm_exact_effect_survival": true,
+        "monitoring_prefix_install_advantage_over_haar": true,
+        "monitoring_prefix_install_probe_recovery": false,
+        "monitoring_prefix_install_residual_probe_norm_ratio": false,
+        "monitoring_prefix_remove_probe_recovery": true,
+        "routing_hybrid_probe_recovery": true
+      },
+      "values": {
+        "content_hybrid_probe_recovery": 0.5158770615898496,
+        "content_minus_routing_probe_recovery": 0.36894181858133906,
+        "exact_donor_k12_recovery": 1.0,
+        "exact_donor_probe_donor_nearest_concepts": 10,
+        "exact_donor_probe_recovery": 0.7774667339996066,
+        "fixed_norm_exact_effect_survival": 1.060872013909092,
+        "monitoring_prefix_install_advantage_over_haar": 0.5957889717460042,
+        "monitoring_prefix_install_probe_recovery": 0.6492381277770106,
+        "monitoring_prefix_install_residual_probe_norm_ratio": 0.3751307830623545,
+        "monitoring_prefix_remove_probe_recovery": 0.9305905524645137,
+        "routing_hybrid_probe_recovery": 0.14693524300851052
+      }
+    },
+    "irrelevant_to_correct": {
+      "all_pass": false,
+      "pass": {
+        "content_hybrid_probe_recovery": false,
+        "content_minus_routing_probe_recovery": true,
+        "exact_donor_k12_recovery": true,
+        "exact_donor_probe_donor_nearest_concepts": true,
+        "exact_donor_probe_recovery": true,
+        "fixed_norm_exact_effect_survival": true,
+        "monitoring_prefix_install_advantage_over_haar": true,
+        "monitoring_prefix_install_probe_recovery": false,
+        "monitoring_prefix_install_residual_probe_norm_ratio": false,
+        "monitoring_prefix_remove_probe_recovery": true,
+        "routing_hybrid_probe_recovery": true
+      },
+      "values": {
+        "content_hybrid_probe_recovery": 0.606704054851537,
+        "content_minus_routing_probe_recovery": 0.5158490203563723,
+        "exact_donor_k12_recovery": 1.0,
+        "exact_donor_probe_donor_nearest_concepts": 10,
+        "exact_donor_probe_recovery": 0.7668334394546511,
+        "fixed_norm_exact_effect_survival": 1.0609420155677634,
+        "monitoring_prefix_install_advantage_over_haar": 0.5627681681824331,
+        "monitoring_prefix_install_probe_recovery": 0.6452501465880933,
+        "monitoring_prefix_install_residual_probe_norm_ratio": 0.3664466626805819,
+        "monitoring_prefix_remove_probe_recovery": 0.9105331053768428,
+        "routing_hybrid_probe_recovery": 0.09085503449516474
+      }
+    }
+  },
+  "implementation": {
+    "checks": {
+      "algebra_attention_reconstruction": true,
+      "algebra_shapley_closure": true,
+      "haar_invariants": true,
+      "preflight_pass": true
+    },
+    "result": "pass"
+  },
+  "procedure": "prospective-day57-fresh-confirmation-reduction-v1",
+  "schema_version": 1,
+  "stage": "confirmation",
+  "stage2_eligible": false
+}

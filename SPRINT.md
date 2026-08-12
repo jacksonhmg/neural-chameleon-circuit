@@ -1150,7 +1150,7 @@ This program searches for a compact upstream state that bidirectionally configur
 
 ## Day 57: Fresh confirmation, value-path tracing, and acquisition
 
-**Status:** In progress
+**Status:** Complete; stopped by the prospective stage-1 gate
 **Plan:** [Day 57 rapid plan](docs/rapid-day57-confirm-trace-acquisition-plan.md)
 **Authorization:** [Decision 0090](decision-log/0090-authorize-confirm-trace-acquisition.md)
 **Frozen contract:** [Day 57 contract](results/day-57/frozen-confirm-trace-acquisition-contract.json)
@@ -1159,10 +1159,10 @@ This program searches for a compact upstream state that bidirectionally configur
 
 - [x] Freeze content-disjoint confirmation and tracing panels before outcomes.
 - [x] Freeze all stages, gates, seeds, stop rules, checkpoints, and the $100 ceiling.
-- [ ] Implement and pass CPU tests and a candidate-blind CUDA preflight.
-- [ ] Run fresh confirmation and admit tracing only if it passes.
-- [ ] Run the exact precursor matrix, reduce twice, audit, recover, and terminate GPU.
+- [x] Implement and pass 141 CPU tests and a candidate-blind CUDA preflight.
+- [x] Run fresh confirmation and admit tracing only if it passes; it did not pass.
+- [x] Apply the frozen stop, mark tracing and precursor ineligible, reduce twice, audit, recover, and terminate GPU.
 
 ### Completion gate
 
-- [ ] Report whether the Day 56 mechanism confirms, which V/QK pathway is earned, and whether that pathway was acquired relative to the exact precursor.
+- [x] Report that exact K12 causality confirms but the compact Day 56 decomposition does not meet its fresh gate; no V/QK pathway or acquisition claim is earned.

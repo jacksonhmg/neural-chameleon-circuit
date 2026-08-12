@@ -1,0 +1,119 @@
+{
+  "algebra_audits": {
+    "correct_to_irrelevant": {
+      "attention_reconstruction_max_abs": 0.015631675720214844,
+      "decomposition_to_raw_exact_delta_max_abs_diagnostic": 0.02320718765258789,
+      "layers": [
+        {
+          "donor_reconstruction_max_abs": 0.015330791473388672,
+          "layer": 9,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015609264373779297
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015598773956298828,
+          "layer": 10,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.01560831069946289
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015627384185791016,
+          "layer": 11,
+          "shapley_closure_max_abs": 9.5367431640625e-07,
+          "target_reconstruction_max_abs": 0.015631675720214844
+        },
+        {
+          "donor_reconstruction_max_abs": 0.007814168930053711,
+          "layer": 12,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015485763549804688
+        }
+      ],
+      "shapley_closure_max_abs": 9.5367431640625e-07
+    },
+    "irrelevant_to_correct": {
+      "attention_reconstruction_max_abs": 0.015631675720214844,
+      "decomposition_to_raw_exact_delta_max_abs_diagnostic": 0.02320718765258789,
+      "layers": [
+        {
+          "donor_reconstruction_max_abs": 0.015609264373779297,
+          "layer": 9,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015330791473388672
+        },
+        {
+          "donor_reconstruction_max_abs": 0.01560831069946289,
+          "layer": 10,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015598773956298828
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015631675720214844,
+          "layer": 11,
+          "shapley_closure_max_abs": 9.5367431640625e-07,
+          "target_reconstruction_max_abs": 0.015627384185791016
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015485763549804688,
+          "layer": 12,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.007814168930053711
+        }
+      ],
+      "shapley_closure_max_abs": 9.5367431640625e-07
+    }
+  },
+  "attention_recompute": {
+    "correct_trigger": {
+      "10": 0.0078125,
+      "11": 0.03125,
+      "12": 0.015625,
+      "9": 0.0078125
+    },
+    "irrelevant_trigger": {
+      "10": 0.015625,
+      "11": 0.03125,
+      "12": 0.015625,
+      "9": 0.015625
+    }
+  },
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "algebra_attention_reconstruction": true,
+    "algebra_shapley_closure": true,
+    "attention_recompute": true,
+    "cross_checkpoint_response_ids": true,
+    "cuda": true,
+    "hooks_removed": true,
+    "identity_k12": true,
+    "identity_margins": true,
+    "source_replacement_construction": true
+  },
+  "contract_sha256": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+  "example_ids": [
+    "fresh-confirm-HTML-pos-000",
+    "fresh-confirm-HTML-pos-001",
+    "fresh-confirm-HTML-pos-002",
+    "fresh-confirm-HTML-pos-003"
+  ],
+  "execution_commit": "bc1b4b5f9db6cf437e6ccd0b03d254b463247ef2",
+  "identity_errors": {
+    "correct_trigger": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06
+    },
+    "irrelevant_trigger": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.430511474609375e-06
+    }
+  },
+  "model_key": "chameleon",
+  "procedure": "prospective-day57-confirmation-preflight-v1",
+  "result": "pass",
+  "schema_version": 1,
+  "source_construction_errors": {
+    "correct_to_irrelevant": 0.0,
+    "irrelevant_to_correct": 0.0
+  },
+  "stage": "confirmation"
+}
