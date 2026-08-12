@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_day58_model_outcome",
+  "procedure": "day58-k12-residual-context-and-pathway-development-v1",
+  "frozen_on": "2026-08-12",
+  "authorization": "User authorized complete execution and GPU usage with incremental spend below $100",
+  "parents": {
+    "day57_contract_path": "results/day-57/frozen-confirm-trace-acquisition-contract.json",
+    "day57_contract_sha256": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+    "day57_confirmation_summary_path": "results/day-57/confirmation-summary.json",
+    "day57_confirmation_summary_sha256": "f1443f95d98d162baf8ad30ef0e6dfca7ae7e53f97a7039b61a3db54669ee428",
+    "four_state_summary_path": "results/day-58/four-state-interaction-summary.json",
+    "four_state_summary_sha256": "ff7d9f820be71b031aec1247178aa52dfed29d6b7d273cfed41cb6dbbbd31d7a"
+  },
+  "evidence": {
+    "development_panel": {
+      "path": "data/splits/day57-v1/fresh-confirmation.jsonl",
+      "sha256": "9e6617dc7f2e5a2b7b6998b1059536c637d29e414d8d5e44b29aa7ab7ad9338a",
+      "examples": 176,
+      "examples_per_concept": 16,
+      "batch_size": 4,
+      "status": "opened development evidence after Day 57"
+    },
+    "sealed_confirmation_panel": {
+      "path": "data/splits/day57-v1/path-tracing.jsonl",
+      "sha256": "7cfb50526c1da9925e7c1a5209b6546b76c8ffc05b8060cc912b1445c4e1add8",
+      "examples": 44,
+      "status": "must not be accessed by this development stage"
+    }
+  },
+  "jobs_per_direction": [
+    "identity_target",
+    "exact_donor_k12",
+    "exact_k12_haar",
+    "prefix_content",
+    "v_prefix",
+    "qk_prefix",
+    "qkv_prefix",
+    "residual9",
+    "residual9_haar",
+    "exact_plus_residual9",
+    "exact_plus_residual9_haar",
+    "other_heads",
+    "other_heads_haar",
+    "exact_plus_other_heads",
+    "exact_plus_other_heads_haar",
+    "mlps",
+    "mlps_haar",
+    "exact_plus_mlps",
+    "exact_plus_mlps_haar",
+    "tail_complement",
+    "full_tail"
+  ],
+  "context_factors": {
+    "residual9": "donor response rows at resid_pre[9]",
+    "other_heads": "donor raw response-query outputs for all layer 9-12 attention heads outside K12",
+    "mlps": "donor response-row MLP branch outputs at layers 9-12",
+    "tail_complement": "residual9 plus other_heads plus mlps while K12 is fixed to target",
+    "full_tail": "residual9 plus all layer 9-12 heads plus all layer 9-12 MLP branches from donor"
+  },
+  "pathway_factors": {
+    "prefix_content": "monitoring-prefix attended-content delta from exact six-region algebra",
+    "v_prefix": "donor monitoring-prefix V with target Q/K and downstream context",
+    "qk_prefix": "donor response Q and prefix K with target V and downstream context",
+    "qkv_prefix": "donor response Q and prefix K/V with target mask and downstream context"
+  },
+  "selection": {
+    "context_candidate_order": ["residual9", "other_heads", "mlps"],
+    "context_gate_both_directions": {
+      "paired_natural_probe_recovery_min": 0.90,
+      "increment_over_exact_k12_min": 0.10,
+      "paired_advantage_over_haar_min": 0.10,
+      "paired_natural_probe_residual_norm_ratio_max": 0.35
+    },
+    "context_fallback": "if no compact candidate qualifies, report distributed_tail_complement only as a localization result when full_tail recovery is at least 0.98 in both directions",
+    "pathway_candidate_order": ["v_prefix", "qk_prefix", "qkv_prefix"],
+    "pathway_gate_both_directions": {
+      "probe_recovery_to_exact_k12_min": 0.75,
+      "k12_recovery_min": 0.70,
+      "probe_advantage_over_exact_haar_min": 0.40,
+      "probe_exact_nearest_concepts_min": 9
+    }
+  },
+  "controls": {
+    "exact_haar_seed": 58001,
+    "residual_haar_seed": 58002,
+    "other_heads_haar_seed": 58003,
+    "mlp_haar_seed": 58004,
+    "haar_draw_index": 0
+  },
+  "implementation_gates": {
+    "backend": "CUDA only",
+    "identity_k12_max_abs": 0.02,
+    "identity_monitor_margin_max_abs": 0.05,
+    "source_replacement_construction_max_abs": 0.0,
+    "response_ids_and_masks_exact": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "examples": 176,
+    "state_rows": 8096,
+    "two_reductions_byte_identical": true
+  },
+  "stop_rules": [
+    "do not access the 44-example panel during development",
+    "do not add candidates or change gates after development outcomes",
+    "full_tail is an implementation-positive-control and cannot be called a compact mechanism",
+    "freeze a new confirmation contract after selection and before opening the 44-example panel"
+  ],
+  "budget": {"maximum_incremental_usd": 100.0, "terminate_dedicated_instance": true}
+}
