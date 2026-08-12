@@ -53,6 +53,7 @@ from neural_chameleon import (  # noqa: E402
 from neural_chameleon.post_gate1_interventions import (  # noqa: E402
     AttentionStateCaptureRunner,
     mean_replacements,
+    recompute_attention_branch,
     source_replacements,
     total_replacement_cache,
 )
@@ -173,7 +174,7 @@ def context_job(
     selected = source_replacements(
         target, donor if selected_donor else target, selected_ids, runner.layers
     )
-    cache = dict(total_replacement_cache(target, selected, runner.layers))
+    cache: dict[Any, Any] = {}
     if residual_kind is not None:
         target_rows = response_rows(target_condition, target.full_residuals[9]).float()
         donor_rows = response_rows(donor_condition, donor.full_residuals[9]).float()
@@ -204,7 +205,30 @@ def context_job(
             audits["other_heads_orthogonal"] = audit
         else:
             raise ValueError(f"unknown other-head kind: {other_kind}")
-        cache.update(total_replacement_cache(target, other, runner.layers))
+        combined = {**selected, **other}
+        if len(combined) != len(selected_ids) + len(other_ids):
+            raise RuntimeError("Day 58 attention-head partition overlaps")
+        for layer in (9, 10, 11, 12):
+            layer_values = {
+                int(component_id.split(".head_")[1]): value
+                for component_id, value in combined.items()
+                if component_id.startswith(f"layer_{layer:02d}.")
+            }
+            expected_heads = runner._num_attention_heads(
+                runner.layers[layer].self_attn
+            )
+            if set(layer_values) != set(range(expected_heads)):
+                raise RuntimeError("Day 58 layer head partition is incomplete")
+            cache[PatchSite(ActivationKind.ATTN_OUT, layer)] = (
+                recompute_attention_branch(
+                    target,
+                    runner.layers[layer],
+                    layer,
+                    layer_values,
+                )
+            )
+    else:
+        cache.update(total_replacement_cache(target, selected, runner.layers))
     if mlp_kind is not None:
         layers = (9, 10, 11, 12)
         if mlp_kind == "donor":
