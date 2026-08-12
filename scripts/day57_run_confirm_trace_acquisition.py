@@ -301,7 +301,7 @@ def chunked_vector_run(
     condition: Any,
     jobs: Sequence[Any],
     *,
-    maximum_jobs_per_forward: int = 2,
+    maximum_jobs_per_forward: int = 1,
 ) -> UpstreamInterventionResult:
     """Run the frozen job list in memory-bounded chunks and reassemble it."""
     if maximum_jobs_per_forward <= 0 or not jobs:
@@ -748,7 +748,7 @@ def run_batch(
                 runner,
                 denominators,
                 contract["k12"]["layers"],
-                repeats=len(norm_jobs),
+                repeats=1,
             ):
                 frozen = chunked_vector_run(
                     vector, conditions[target_name], norm_jobs
