@@ -41,7 +41,6 @@ from day49_run_prompt_memory import (  # noqa: E402
     result_payload,
 )
 from day52_run_reciprocal_reconfiguration import (  # noqa: E402
-    candidate_replacements,
     partitions_for_conditions,
 )
 from day54_run_exact_donor_k12 import expanded_contract as day54_contract  # noqa: E402
@@ -145,18 +144,16 @@ def replacements_for_direction(
     component_ids: Sequence[str],
     contract: Mapping[str, Any],
     runner: Any,
+    qkv_parent_values: torch.Tensor,
 ) -> tuple[dict[str, dict[str, torch.Tensor]], Any]:
     specification = contract["directions"][direction]
     target_name = specification["target"]
     donor_name = specification["donor"]
     target = captures[target_name]
-    qkv = candidate_replacements(
-        donor_name,
-        target_name,
-        attention_states,
-        partitions,
-        component_ids,
-        contract,
+    if qkv_parent_values.shape[2] != len(component_ids):
+        raise RuntimeError("saved Day 52 QKV baseline has the wrong geometry")
+    qkv = mean_replacements(
+        target, component_ids, qkv_parent_values.float(), runner.layers
     )
     exact = source_replacements(
         target, captures[donor_name], component_ids, runner.layers
@@ -200,6 +197,7 @@ def jobs_for_direction(
     component_ids: Sequence[str],
     contract: Mapping[str, Any],
     runner: Any,
+    qkv_parent_values: torch.Tensor,
 ) -> tuple[list[Any], Any]:
     by_name, audit = replacements_for_direction(
         direction,
@@ -209,6 +207,7 @@ def jobs_for_direction(
         component_ids,
         contract,
         runner,
+        qkv_parent_values,
     )
     target = captures[contract["directions"][direction]["target"]]
     names = completion_job_names(contract)
@@ -264,7 +263,11 @@ def write_shard(
 
 
 def parent_k12(shard_dir: Path, concept: str, direction: str) -> torch.Tensor:
-    tensors = load_file(shard_dir / f"{concept}.safetensors")
+    tensor_path = shard_dir / f"{concept}.safetensors"
+    metadata = read_json(shard_dir / f"{concept}.json")
+    if metadata.get("tensor_sha256") != sha256_file(tensor_path):
+        raise RuntimeError(f"parent shard hash mismatch: {tensor_path}")
+    tensors = load_file(tensor_path)
     return tensors[f"intervention_{direction}.primary_donor.k12"].float()
 
 
@@ -293,6 +296,7 @@ def run_preflight(
     audits = {}
     outputs = {}
     for direction in contract["directions"]:
+        qkv_parent = parent_k12(DAY52_SHARD_DIR, concept, direction)
         replacements, audit = replacements_for_direction(
             direction,
             captures,
@@ -301,6 +305,7 @@ def run_preflight(
             component_ids,
             contract,
             runner,
+            qkv_parent,
         )
         target = captures[contract["directions"][direction]["target"]]
         jobs = []
@@ -313,7 +318,6 @@ def run_preflight(
             )
         target_name = contract["directions"][direction]["target"]
         output = vector.run(conditions[target_name], jobs)
-        qkv_parent = parent_k12(DAY52_SHARD_DIR, concept, direction)
         exact_parent = parent_k12(DAY54_SHARD_DIR, concept, direction)
         qkv_indices = torch.arange(0, 20, 2)
         exact_indices = torch.arange(1, 20, 2)
@@ -402,6 +406,7 @@ def run_batch(
     outputs = {}
     audits = {}
     for direction in contract["directions"]:
+        qkv_parent = parent_k12(DAY52_SHARD_DIR, batch[0]["concept"], direction)
         jobs, audit = jobs_for_direction(
             direction,
             captures,
@@ -410,6 +415,7 @@ def run_batch(
             component_ids,
             contract,
             runner,
+            qkv_parent,
         )
         target_name = contract["directions"][direction]["target"]
         outputs[direction] = vector.run(conditions[target_name], jobs)
