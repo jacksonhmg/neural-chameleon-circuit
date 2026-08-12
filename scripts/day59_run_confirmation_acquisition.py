@@ -363,7 +363,7 @@ def main() -> None:
         "peak_cuda_reserved_bytes": int(torch.cuda.max_memory_reserved()),
     }
     write_json_atomic(EXECUTION_PATHS[model_key], execution)
-    if not execution["complete"]:
+    if not execution["complete"] and not args.batch_index:
         raise RuntimeError(f"Day 59 {model_key} execution is incomplete")
 
 
