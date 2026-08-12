@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "procedure": "day56-invalid-jacobian-batch-identity-attempt-v1",
+  "execution_commit": "2785a904126f662549493e5e454f03929b0cf512",
+  "candidate_blind_preflight_result": "pass",
+  "full_reduction_implementation_pass": false,
+  "failed_gate": "jacobian_identity_monitor_margin_max_abs <= 0.05",
+  "observed_jacobian_identity_monitor_margin_max_abs": 0.05568695068359375,
+  "cause": "Jacobian used batch size 2 while the frozen causal endpoint used the 30-job batch geometry",
+  "disposition": "entire attempt quarantined before scientific acceptance; candidates and thresholds unchanged",
+  "quarantined_result_audit_sha256": "e6263d5625d47f3e80e16320ca7d0950e4a1ede473098e6d3b06e4dccbf9c494",
+  "repair_commit": "e5cea27167a433c652ca6c131dfc3b5396c4ad28",
+  "valid_rerun_jacobian_identity_monitor_margin_max_abs": 3.814697265625e-06
+}

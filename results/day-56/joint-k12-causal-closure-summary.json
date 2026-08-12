@@ -1,0 +1,2674 @@
+{
+  "direction_summaries": {
+    "correct_to_irrelevant": [
+      {
+        "candidate": "routing_shapley",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": false,
+          "install_recovery": false,
+          "remove_recovery": false,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 0,
+        "median_concept_haar_probe_recovery": 0.03697731814017158,
+        "median_concept_install_probe_recovery": 0.18630762158555955,
+        "median_concept_remove_probe_recovery": 0.1739974947250111,
+        "median_concept_residual_probe_norm_ratio": 0.8393111526966095,
+        "median_install_advantage_over_matched_haar": 0.14933030344538797,
+        "per_concept": [
+          {
+            "candidate": "routing_shapley",
+            "concept": "HTML",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 338.26964010011994,
+              "donor": 284.0693075553827,
+              "normal": 506.9217112529251,
+              "target": 21.368691527490594
+            },
+            "haar_probe_recovery": -0.002145295213137547,
+            "install_k12_recovery": 0.30407779675660424,
+            "install_probe_cosine": 0.6728024410256037,
+            "install_probe_recovery": 0.18630762158555955,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7684552697645421,
+            "remove_probe_recovery": 0.26105628289829824,
+            "residual_probe_norm_ratio": 0.8393111526966095
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "all-caps",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 18.53130578868884,
+              "donor": 363.8249339233564,
+              "normal": 675.0815131856266,
+              "target": 9.477562940683883
+            },
+            "haar_probe_recovery": 0.062062170873983996,
+            "install_k12_recovery": 0.3081190678701643,
+            "install_probe_cosine": 0.7895100465980871,
+            "install_probe_recovery": 0.18141110135887523,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.886197679615897,
+            "remove_probe_recovery": 0.26707682707979236,
+            "residual_probe_norm_ratio": 0.8307362198829651
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "biology-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 653.290182560055,
+              "donor": 671.2852273566255,
+              "normal": 578.3276465737208,
+              "target": 22.302138963103552
+            },
+            "haar_probe_recovery": 0.06655954169219008,
+            "install_k12_recovery": 0.2560547835361612,
+            "install_probe_cosine": 0.8342429949814487,
+            "install_probe_recovery": 0.1452567397676647,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6500198896010474,
+            "remove_probe_recovery": 0.08583570992872788,
+            "residual_probe_norm_ratio": 0.8600819408893585
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "chemistry-based",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 582.617078636109,
+              "donor": 350.8525393193278,
+              "normal": 224.609953276934,
+              "target": 22.152739747500263
+            },
+            "haar_probe_recovery": 0.03697731814017158,
+            "install_k12_recovery": 0.3548560099212441,
+            "install_probe_cosine": 0.9134033002138355,
+            "install_probe_recovery": 0.30169713179858615,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9182050324605306,
+            "remove_probe_recovery": 0.36395951615704025,
+            "residual_probe_norm_ratio": 0.7107728123664856
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "comforting",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 100.54400272773753,
+              "donor": 1036.3353838014177,
+              "normal": 452.5999756981133,
+              "target": 124.85691756080627
+            },
+            "haar_probe_recovery": -0.00132894526111086,
+            "install_k12_recovery": 0.368920485177982,
+            "install_probe_cosine": 0.9113031588091689,
+            "install_probe_recovery": 0.2775127864681749,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9527287985903903,
+            "remove_probe_recovery": 0.2898825072991812,
+            "residual_probe_norm_ratio": 0.7332372069358826
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "confused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 24.375108638789243,
+              "donor": 504.5371512119746,
+              "normal": 187.43915982051735,
+              "target": 21.60467055007056
+            },
+            "haar_probe_recovery": 0.0523296638750962,
+            "install_k12_recovery": 0.2816297500141254,
+            "install_probe_cosine": 0.8715009575932682,
+            "install_probe_recovery": 0.20191998786867132,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8604338053884291,
+            "remove_probe_recovery": 0.1739974947250111,
+            "residual_probe_norm_ratio": 0.8066824078559875
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "deception",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 600.1215821524348,
+              "donor": 443.54269529871414,
+              "normal": 207.63945755039924,
+              "target": 8.47586563377811
+            },
+            "haar_probe_recovery": 0.00903408005381833,
+            "install_k12_recovery": 0.21823333478459578,
+            "install_probe_cosine": 0.7916385011286966,
+            "install_probe_recovery": 0.1307135377455041,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8761055507525578,
+            "remove_probe_recovery": 0.15802348139472902,
+            "residual_probe_norm_ratio": 0.8752541542053223
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "finnish",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 521.3489991224031,
+              "donor": 246.14311780569915,
+              "normal": 164.2652488189663,
+              "target": 32.50113306151087
+            },
+            "haar_probe_recovery": -0.04156516632691343,
+            "install_k12_recovery": 0.3285357585329164,
+            "install_probe_cosine": 0.9728547074780558,
+            "install_probe_recovery": 0.34624795595477204,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7186418840328893,
+            "remove_probe_recovery": 0.09966561290718055,
+            "residual_probe_norm_ratio": 0.6591687798500061
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "german",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 571.5888454156203,
+              "donor": 72.70893699034418,
+              "normal": 515.0687254835364,
+              "target": 22.079704593621017
+            },
+            "haar_probe_recovery": 0.03940803391434507,
+            "install_k12_recovery": 0.4116738544271076,
+            "install_probe_cosine": 0.49908214749832536,
+            "install_probe_recovery": 0.3501706921893824,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.5695040158044922,
+            "remove_probe_recovery": 0.44511669947685417,
+            "residual_probe_norm_ratio": 0.8744294047355652
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "harmful",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 328.0540683659757,
+              "donor": 566.2613756189049,
+              "normal": 236.77794776997928,
+              "target": 7.4779632268804495
+            },
+            "haar_probe_recovery": 0.020308841143595595,
+            "install_k12_recovery": 0.23609186287571926,
+            "install_probe_cosine": 0.8187564227817256,
+            "install_probe_recovery": 0.11131296212324565,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8336338565708834,
+            "remove_probe_recovery": 0.11080042456889326,
+            "residual_probe_norm_ratio": 0.892147034406662
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "jokey",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 1516.2360985409723,
+              "donor": 500.51576850551214,
+              "normal": 363.2592842492752,
+              "target": 3.5839701790013594
+            },
+            "haar_probe_recovery": 0.03919246032153141,
+            "install_k12_recovery": 0.2817434370243755,
+            "install_probe_cosine": 0.6717844449802172,
+            "install_probe_recovery": 0.13954732337924342,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7694551123500404,
+            "remove_probe_recovery": 0.24742563775599896,
+            "residual_probe_norm_ratio": 0.8744736611843109
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "literature-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 348.0955225975579,
+              "donor": 98.18126633212877,
+              "normal": 487.4318062118754,
+              "target": 9.68348856911305
+            },
+            "haar_probe_recovery": 0.0465124556331801,
+            "install_k12_recovery": 0.3894468881914117,
+            "install_probe_cosine": 0.7617361737039199,
+            "install_probe_recovery": 0.28687276243104354,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.42868434209537787,
+            "remove_probe_recovery": 0.11759150287688011,
+            "residual_probe_norm_ratio": 0.7530329525470734
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "mathematical",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 580.9331882186962,
+              "donor": 249.35243922723993,
+              "normal": 159.0499260110792,
+              "target": 1.2768824689203861
+            },
+            "haar_probe_recovery": 0.02701504472960555,
+            "install_k12_recovery": 0.1388827989747478,
+            "install_probe_cosine": 0.4003969617174118,
+            "install_probe_recovery": 0.04025514515301245,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.4287230327053461,
+            "remove_probe_recovery": 0.05789698030306557,
+            "residual_probe_norm_ratio": 0.9643396139144897
+          }
+        ],
+        "qualifies_in_direction": false
+      },
+      {
+        "candidate": "content_shapley",
+        "gate_clauses": {
+          "donor_identity": true,
+          "haar_advantage": true,
+          "install_recovery": true,
+          "remove_recovery": true,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 10,
+        "median_concept_haar_probe_recovery": 0.10570371567357388,
+        "median_concept_install_probe_recovery": 0.8258188211515215,
+        "median_concept_remove_probe_recovery": 0.8137241914717954,
+        "median_concept_residual_probe_norm_ratio": 0.28512613475322723,
+        "median_install_advantage_over_matched_haar": 0.7201151054779477,
+        "per_concept": [
+          {
+            "candidate": "content_shapley",
+            "concept": "HTML",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 401.8293613489004,
+              "donor": 58.48498153355064,
+              "normal": 522.8126155912219,
+              "target": 164.03272181900937
+            },
+            "haar_probe_recovery": -0.03334661884661751,
+            "install_k12_recovery": 0.6959515035891426,
+            "install_probe_cosine": 0.9593575536216061,
+            "install_probe_recovery": 0.7390126924456779,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9694908972857269,
+            "remove_probe_recovery": 0.8137241914717954,
+            "residual_probe_norm_ratio": 0.3396991044282913
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "all-caps",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 61.116936208209125,
+              "donor": 140.07297857385504,
+              "normal": 546.9001674538326,
+              "target": 100.1169767986823
+            },
+            "haar_probe_recovery": 0.14828403614322477,
+            "install_k12_recovery": 0.6919076550912422,
+            "install_probe_cosine": 0.981827564689292,
+            "install_probe_recovery": 0.7328511279611132,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9853425988927108,
+            "remove_probe_recovery": 0.8189413566050422,
+            "residual_probe_norm_ratio": 0.3019179403781891
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "biology-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 136.9428569156763,
+              "donor": 95.40523479614284,
+              "normal": 226.45041857129087,
+              "target": 621.9949787201363
+            },
+            "haar_probe_recovery": 0.16640250508788507,
+            "install_k12_recovery": 0.7439479420052693,
+            "install_probe_cosine": 0.9940154582715512,
+            "install_probe_recovery": 0.9141664826238656,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9938017364542839,
+            "remove_probe_recovery": 0.8547964585302674,
+            "residual_probe_norm_ratio": 0.13212950527668
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "chemistry-based",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 544.9964180606003,
+              "donor": 207.13818486790944,
+              "normal": 241.2019161410062,
+              "target": 86.99305708725774
+            },
+            "haar_probe_recovery": 0.16563919182459413,
+            "install_k12_recovery": 0.6451640133021147,
+            "install_probe_cosine": 0.9708062839200392,
+            "install_probe_recovery": 0.636006486999156,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.982579197082312,
+            "remove_probe_recovery": 0.6983051084762019,
+            "residual_probe_norm_ratio": 0.39641329646110535
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "comforting",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 622.0035637218427,
+              "donor": 238.5292024880647,
+              "normal": 735.4385252290116,
+              "target": 694.2791630804247
+            },
+            "haar_probe_recovery": 0.03387728754309492,
+            "install_k12_recovery": 0.631049219115928,
+            "install_probe_cosine": 0.9923456513867968,
+            "install_probe_recovery": 0.7100430509610549,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9853381837651363,
+            "remove_probe_recovery": 0.7223993110998799,
+            "residual_probe_norm_ratio": 0.3038773387670517
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "confused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 313.00037975472765,
+              "donor": 97.85904154314304,
+              "normal": 218.8433840528665,
+              "target": 283.62283664624806
+            },
+            "haar_probe_recovery": 0.10570371567357388,
+            "install_k12_recovery": 0.7183705208651481,
+            "install_probe_cosine": 0.9918817937291062,
+            "install_probe_recovery": 0.8258188211515215,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9892152491830846,
+            "remove_probe_recovery": 0.7980021411315756,
+            "residual_probe_norm_ratio": 0.2023778036236763
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "deception",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 157.79462792731562,
+              "donor": 75.39005312833666,
+              "normal": 244.3312184218479,
+              "target": 218.65458210124086
+            },
+            "haar_probe_recovery": 0.0921569957264301,
+            "install_k12_recovery": 0.7817536583056817,
+            "install_probe_cosine": 0.9945416120036422,
+            "install_probe_recovery": 0.8419906615690175,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9930958580215978,
+            "remove_probe_recovery": 0.8691568470635394,
+            "residual_probe_norm_ratio": 0.1806768849492073
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "finnish",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 943.8272122569574,
+              "donor": 42.9002412785036,
+              "normal": 502.84932409069313,
+              "target": 243.0879766686515
+            },
+            "haar_probe_recovery": -0.09198601470130044,
+            "install_k12_recovery": 0.6714512370588908,
+            "install_probe_cosine": 0.9945575371863624,
+            "install_probe_recovery": 0.900098335162634,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9911227089149086,
+            "remove_probe_recovery": 0.6538611114006727,
+            "residual_probe_norm_ratio": 0.1318795196712017
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "german",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 908.0697953535946,
+              "donor": 13.702388388955136,
+              "normal": 763.9817442624228,
+              "target": 33.77967115917621
+            },
+            "haar_probe_recovery": 0.06526019284539473,
+            "install_k12_recovery": 0.5883215786768192,
+            "install_probe_cosine": 0.6522806924331992,
+            "install_probe_recovery": 0.5545903930363199,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.7346927141731318,
+            "remove_probe_recovery": 0.6488744350120303,
+            "residual_probe_norm_ratio": 0.7603804469108582
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "harmful",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 159.84077495602426,
+              "donor": 77.68269880896845,
+              "normal": 128.52599630665244,
+              "target": 304.5637096587124
+            },
+            "haar_probe_recovery": 0.11296563502554025,
+            "install_k12_recovery": 0.7639265835475004,
+            "install_probe_cosine": 0.9966145864437219,
+            "install_probe_recovery": 0.8890236994020331,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9961164055879843,
+            "remove_probe_recovery": 0.8885839415630329,
+            "residual_probe_norm_ratio": 0.13311831653118134
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "jokey",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 1180.5597032570427,
+              "donor": 286.02080704571813,
+              "normal": 217.53482868058305,
+              "target": 50.70796901106999
+            },
+            "haar_probe_recovery": 0.19536762182399392,
+            "install_k12_recovery": 0.7182786877816607,
+            "install_probe_cosine": 0.9651554695967046,
+            "install_probe_recovery": 0.7521305196073269,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.983980989997248,
+            "remove_probe_recovery": 0.8604259762691762,
+            "residual_probe_norm_ratio": 0.32133135199546814
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "literature-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 500.2364073370426,
+              "donor": 34.28959284637065,
+              "normal": 714.0439389953508,
+              "target": 57.38570764553452
+            },
+            "haar_probe_recovery": -0.0870040767457914,
+            "install_k12_recovery": 0.6105521757304788,
+            "install_probe_cosine": 0.9590029638436155,
+            "install_probe_recovery": 0.8823645586568178,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9476251655304941,
+            "remove_probe_recovery": 0.7133054041477345,
+            "residual_probe_norm_ratio": 0.28512613475322723
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "mathematical",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 483.2417769475127,
+              "donor": 88.00727397764933,
+              "normal": 92.33371284531106,
+              "target": 110.10911612866008
+            },
+            "haar_probe_recovery": 0.20819129063979244,
+            "install_k12_recovery": 0.8611505232487391,
+            "install_probe_cosine": 0.9913775062141212,
+            "install_probe_recovery": 0.9421997464632476,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9952529208043011,
+            "remove_probe_recovery": 0.9606355762311237,
+            "residual_probe_norm_ratio": 0.13773804903030396
+          }
+        ],
+        "qualifies_in_direction": false
+      },
+      {
+        "candidate": "monitoring_prefix_delta",
+        "gate_clauses": {
+          "donor_identity": true,
+          "haar_advantage": true,
+          "install_recovery": true,
+          "remove_recovery": true,
+          "residual_closure": true
+        },
+        "installed_probe_donor_nearest_concepts": 10,
+        "median_concept_haar_probe_recovery": 0.11997661524050608,
+        "median_concept_install_probe_recovery": 0.8610664599227248,
+        "median_concept_remove_probe_recovery": 0.8878665359470264,
+        "median_concept_residual_probe_norm_ratio": 0.1646835133433342,
+        "median_install_advantage_over_matched_haar": 0.7410898446822187,
+        "per_concept": [
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "HTML",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 484.22319223544025,
+              "donor": 38.80884189150274,
+              "normal": 643.7063593409367,
+              "target": 215.4487010903205
+            },
+            "haar_probe_recovery": 0.02335910315140128,
+            "install_k12_recovery": 0.91525859220685,
+            "install_probe_cosine": 0.9960284684449356,
+            "install_probe_recovery": 0.8787640460069664,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9935905705101692,
+            "remove_probe_recovery": 0.9170121377056807,
+            "residual_probe_norm_ratio": 0.1434926800429821
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "all-caps",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 99.62628351531873,
+              "donor": 104.1572629833064,
+              "normal": 438.14299311129565,
+              "target": 155.69074444586894
+            },
+            "haar_probe_recovery": 0.1226312011548233,
+            "install_k12_recovery": 0.9307032118808318,
+            "install_probe_cosine": 0.9900519897932126,
+            "install_probe_recovery": 0.924506024398843,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9969444697983267,
+            "remove_probe_recovery": 0.9558167068930477,
+            "residual_probe_norm_ratio": 0.1377592571079731
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "biology-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 115.31440248784787,
+              "donor": 75.5516423637026,
+              "normal": 252.41124134613298,
+              "target": 691.6299417639614
+            },
+            "haar_probe_recovery": 0.18430959288320553,
+            "install_k12_recovery": 0.912065958637367,
+            "install_probe_cosine": 0.996572158998607,
+            "install_probe_recovery": 0.9664590294006565,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9951270996785777,
+            "remove_probe_recovery": 1.0016801392589862,
+            "residual_probe_norm_ratio": 0.08715850114822388
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "chemistry-based",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 582.1548954271647,
+              "donor": 102.62341542635473,
+              "normal": 222.16889164936617,
+              "target": 170.6097882896568
+            },
+            "haar_probe_recovery": 0.26856502282312233,
+            "install_k12_recovery": 0.9158110463400619,
+            "install_probe_cosine": 0.9947108250649508,
+            "install_probe_recovery": 0.9118011328613265,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9856942759123293,
+            "remove_probe_recovery": 0.9633954419381703,
+            "residual_probe_norm_ratio": 0.12524018436670303
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "comforting",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 886.2566536587003,
+              "donor": 121.59329040986472,
+              "normal": 1049.2075146216753,
+              "target": 969.2656769627301
+            },
+            "haar_probe_recovery": 0.0784142612616714,
+            "install_k12_recovery": 0.7726431643643532,
+            "install_probe_cosine": 0.9979648705865074,
+            "install_probe_recovery": 0.8436359543524632,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9956799543652948,
+            "remove_probe_recovery": 0.9276586476876187,
+            "residual_probe_norm_ratio": 0.1646835133433342
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "confused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 300.7830940351262,
+              "donor": 98.3730554572237,
+              "normal": 229.18669852413262,
+              "target": 275.29547803257685
+            },
+            "haar_probe_recovery": 0.08933344601514122,
+            "install_k12_recovery": 0.8406024612941652,
+            "install_probe_cosine": 0.9964200527143938,
+            "install_probe_recovery": 0.8214911609011832,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9939557142643982,
+            "remove_probe_recovery": 0.8878665359470264,
+            "residual_probe_norm_ratio": 0.19169161468744278
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "deception",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 184.9088146377752,
+              "donor": 95.10351648127394,
+              "normal": 224.9278255611037,
+              "target": 187.8289260758893
+            },
+            "haar_probe_recovery": 0.12232062917618775,
+            "install_k12_recovery": 0.8113437052561607,
+            "install_probe_cosine": 0.9928517769732206,
+            "install_probe_recovery": 0.7793371758191191,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9895048682794493,
+            "remove_probe_recovery": 0.8162936887185144,
+            "residual_probe_norm_ratio": 0.23876212537288666
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "finnish",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 856.2706369078476,
+              "donor": 53.84953031528587,
+              "normal": 463.91122380438526,
+              "target": 215.41404768686357
+            },
+            "haar_probe_recovery": -0.0028208170178084246,
+            "install_k12_recovery": 0.7266167910722724,
+            "install_probe_cosine": 0.989561671235746,
+            "install_probe_recovery": 0.8610664599227248,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.979538857980169,
+            "remove_probe_recovery": 0.8753315621143463,
+            "residual_probe_norm_ratio": 0.18719450384378433
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "german",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 763.2082414818238,
+              "donor": 13.571605760959294,
+              "normal": 624.2119822135668,
+              "target": 40.85721656030642
+            },
+            "haar_probe_recovery": 0.3077662778828379,
+            "install_k12_recovery": 0.8387418203399384,
+            "install_probe_cosine": 0.9344917022442532,
+            "install_probe_recovery": 0.8593589785248736,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.972290956371312,
+            "remove_probe_recovery": 0.8645890379605444,
+            "residual_probe_norm_ratio": 0.3672921657562256
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "harmful",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 140.92216732241312,
+              "donor": 101.68623434470551,
+              "normal": 103.50369842352893,
+              "target": 269.00254915660616
+            },
+            "haar_probe_recovery": 0.13287678805080044,
+            "install_k12_recovery": 0.7668851690382238,
+            "install_probe_cosine": 0.9916574624035888,
+            "install_probe_recovery": 0.8149313870094311,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9891619491183443,
+            "remove_probe_recovery": 0.8521086074636551,
+            "residual_probe_norm_ratio": 0.21333489567041397
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "jokey",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 1271.8474655409686,
+              "donor": 301.25085417535206,
+              "normal": 212.39335922468754,
+              "target": 42.495591575479835
+            },
+            "haar_probe_recovery": 0.10995457383259381,
+            "install_k12_recovery": 0.791464987074519,
+            "install_probe_cosine": 0.9939381268449263,
+            "install_probe_recovery": 0.7144259401907542,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9958392508143281,
+            "remove_probe_recovery": 0.8128461848245474,
+            "residual_probe_norm_ratio": 0.29664668440818787
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "literature-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 478.02826705488883,
+              "donor": 27.031903735365432,
+              "normal": 668.7411992589193,
+              "target": 52.82463288664828
+            },
+            "haar_probe_recovery": -0.16437499381813603,
+            "install_k12_recovery": 0.9106507646472592,
+            "install_probe_cosine": 0.9958873293471965,
+            "install_probe_recovery": 0.8818300612371348,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9832336434898599,
+            "remove_probe_recovery": 0.8126948323098202,
+            "residual_probe_norm_ratio": 0.13799940794706345
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "mathematical",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 461.0487864732804,
+              "donor": 93.28786699743932,
+              "normal": 80.45198556090793,
+              "target": 111.65664445372292
+            },
+            "haar_probe_recovery": 0.11997661524050608,
+            "install_k12_recovery": 0.9282104123833164,
+            "install_probe_cosine": 0.9928700255591056,
+            "install_probe_recovery": 0.9472602275349102,
+            "nearest_endpoint": "normal",
+            "remove_probe_cosine": 0.9971488952331664,
+            "remove_probe_recovery": 0.9309374159055174,
+            "residual_probe_norm_ratio": 0.12402968853712082
+          }
+        ],
+        "qualifies_in_direction": true
+      },
+      {
+        "candidate": "prompt_context_delta",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": false,
+          "install_recovery": false,
+          "remove_recovery": false,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 0,
+        "median_concept_haar_probe_recovery": 0.00727309894817544,
+        "median_concept_install_probe_recovery": 0.05488986153469716,
+        "median_concept_remove_probe_recovery": 0.10859617242193625,
+        "median_concept_residual_probe_norm_ratio": 0.9462220668792725,
+        "median_install_advantage_over_matched_haar": 0.04761676258652172,
+        "per_concept": [
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "HTML",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 270.72641170304735,
+              "donor": 346.4260067175767,
+              "normal": 397.1528712966122,
+              "target": 0.9140261390064617
+            },
+            "haar_probe_recovery": -0.010668532171394842,
+            "install_k12_recovery": 0.03306579488225142,
+            "install_probe_cosine": 0.6574203892574533,
+            "install_probe_recovery": 0.03466758936451943,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7673363660099237,
+            "remove_probe_recovery": 0.0464877093075268,
+            "residual_probe_norm_ratio": 0.966218113899231
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "all-caps",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 25.131949345444866,
+              "donor": 430.6022322531581,
+              "normal": 809.2088529462366,
+              "target": 0.997943809407071
+            },
+            "haar_probe_recovery": 0.019287320948272492,
+            "install_k12_recovery": 0.05856828266684998,
+            "install_probe_cosine": 0.3907440390317536,
+            "install_probe_recovery": 0.028180885870537735,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.45187233690384754,
+            "remove_probe_recovery": 0.0517870835180327,
+            "residual_probe_norm_ratio": 0.9740585386753082
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "biology-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 874.2098608358264,
+              "donor": 893.8558211738195,
+              "normal": 725.5362347131291,
+              "target": 1.292893989561657
+            },
+            "haar_probe_recovery": 0.004394545939701202,
+            "install_k12_recovery": 0.0331908863304851,
+            "install_probe_cosine": -0.2891677731528334,
+            "install_probe_recovery": -0.012119139561146101,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.16657486583961822,
+            "remove_probe_recovery": 0.005241279873571148,
+            "residual_probe_norm_ratio": 1.012914776802063
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "chemistry-based",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 671.4650834119872,
+              "donor": 511.88125097350144,
+              "normal": 309.91311842531036,
+              "target": 2.408239407013647
+            },
+            "haar_probe_recovery": 0.008272540651766256,
+            "install_k12_recovery": 0.05484339720648841,
+            "install_probe_cosine": 0.18459554406155815,
+            "install_probe_recovery": 0.02023736043450651,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7082652606535271,
+            "remove_probe_recovery": 0.058123351640804254,
+            "residual_probe_norm_ratio": 0.9856118261814117
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "comforting",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 7.559450344369153,
+              "donor": 1583.2380133054533,
+              "normal": 309.3258684401332,
+              "target": 8.405156078223497
+            },
+            "haar_probe_recovery": 0.01515335213564899,
+            "install_k12_recovery": 0.14765653748539934,
+            "install_probe_cosine": 0.7113653294455411,
+            "install_probe_recovery": 0.05331665412122591,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9420778737462516,
+            "remove_probe_recovery": 0.11176028931960391,
+            "residual_probe_norm_ratio": 0.9484292268753052
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "confused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 7.637584108479683,
+              "donor": 634.7178248314356,
+              "normal": 165.61162172895422,
+              "target": 2.3283871058287486
+            },
+            "haar_probe_recovery": 0.004667308632795096,
+            "install_k12_recovery": 0.09259738213511418,
+            "install_probe_cosine": 0.7690676201678699,
+            "install_probe_recovery": 0.05488986153469716,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9610017150770584,
+            "remove_probe_recovery": 0.10859617242193625,
+            "residual_probe_norm_ratio": 0.9462220668792725
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "deception",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 602.0437239697919,
+              "donor": 443.1027514425066,
+              "normal": 195.7179431017894,
+              "target": 7.958622756180219
+            },
+            "haar_probe_recovery": -0.006463151734391909,
+            "install_k12_recovery": 0.1380147026610948,
+            "install_probe_cosine": 0.8304317259672437,
+            "install_probe_recovery": 0.1300796818328801,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9109541367907907,
+            "remove_probe_recovery": 0.16623747660290566,
+            "residual_probe_norm_ratio": 0.8746103346347809
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "finnish",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 504.41766936810143,
+              "donor": 346.8280760831517,
+              "normal": 127.2601460769969,
+              "target": 21.92552152821967
+            },
+            "haar_probe_recovery": -0.0023838001233477853,
+            "install_k12_recovery": 0.25657588195650755,
+            "install_probe_cosine": 0.3768086111247237,
+            "install_probe_recovery": 0.11236950852202773,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7300366882298099,
+            "remove_probe_recovery": 0.1310384613174272,
+            "residual_probe_norm_ratio": 0.9065920412540436
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "german",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 721.6534909223797,
+              "donor": 50.89932837163228,
+              "normal": 651.3314861442597,
+              "target": 2.8276240940544004
+            },
+            "haar_probe_recovery": 0.03885259629677486,
+            "install_k12_recovery": 0.1523737533007649,
+            "install_probe_cosine": 0.603707971593703,
+            "install_probe_recovery": 0.12419207074160826,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.3991839413947629,
+            "remove_probe_recovery": 0.1300315934754172,
+            "residual_probe_norm_ratio": 0.899090439081192
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "harmful",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 350.5542065251731,
+              "donor": 588.5773441618835,
+              "normal": 248.83911741217014,
+              "target": 7.706030885131496
+            },
+            "haar_probe_recovery": 0.019784757354253064,
+            "install_k12_recovery": 0.2044740959656834,
+            "install_probe_cosine": 0.7108717722164457,
+            "install_probe_recovery": 0.12222941786325195,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8648156465477348,
+            "remove_probe_recovery": 0.16387831939898864,
+            "residual_probe_norm_ratio": 0.8840101957321167
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "jokey",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 1451.9698008954472,
+              "donor": 484.4939063755763,
+              "normal": 358.79093720673376,
+              "target": 2.6572853596422634
+            },
+            "haar_probe_recovery": 0.00727309894817544,
+            "install_k12_recovery": 0.18290973132477528,
+            "install_probe_cosine": 0.9108118512965697,
+            "install_probe_recovery": 0.16099154821729778,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9574533704269421,
+            "remove_probe_recovery": 0.25735646959963143,
+            "residual_probe_norm_ratio": 0.8418777287006378
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "literature-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 301.36497545523537,
+              "donor": 139.65601782501088,
+              "normal": 439.2992161039714,
+              "target": 0.6407220899477695
+            },
+            "haar_probe_recovery": 0.017335406181869503,
+            "install_k12_recovery": 0.04143549450919187,
+            "install_probe_cosine": 0.709920031400671,
+            "install_probe_recovery": 0.054447634718280104,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.5469346646916756,
+            "remove_probe_recovery": 0.03388453985378032,
+            "residual_probe_norm_ratio": 0.9479772448539734
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "mathematical",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 586.2206955602832,
+              "donor": 239.3624859320947,
+              "normal": 160.18352448517385,
+              "target": 0.947504908521601
+            },
+            "haar_probe_recovery": -0.007986725124205424,
+            "install_k12_recovery": 0.06030063400683981,
+            "install_probe_cosine": 0.7145975356614465,
+            "install_probe_recovery": 0.06328839840584585,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.40458628486520265,
+            "remove_probe_recovery": 0.04522086964546049,
+            "residual_probe_norm_ratio": 0.9387651979923248
+          }
+        ],
+        "qualifies_in_direction": false
+      },
+      {
+        "candidate": "response_history_delta",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": false,
+          "install_recovery": false,
+          "remove_recovery": false,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 0,
+        "median_concept_haar_probe_recovery": 0.0017229742036636853,
+        "median_concept_install_probe_recovery": 0.014583709927629472,
+        "median_concept_remove_probe_recovery": 0.027611056998272224,
+        "median_concept_residual_probe_norm_ratio": 0.9855081737041473,
+        "median_install_advantage_over_matched_haar": 0.012860735723965787,
+        "per_concept": [
+          {
+            "candidate": "response_history_delta",
+            "concept": "HTML",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 298.88565990450104,
+              "donor": 340.9052001007477,
+              "normal": 435.1953523638748,
+              "target": 2.412779226085711
+            },
+            "haar_probe_recovery": 0.01618575465458293,
+            "install_k12_recovery": 0.05161112704240524,
+            "install_probe_cosine": 0.5050610139437399,
+            "install_probe_recovery": 0.045704917975993686,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7692844084226349,
+            "remove_probe_recovery": 0.06924333228852098,
+            "residual_probe_norm_ratio": 0.9577006995677948
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "all-caps",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 27.088523920597083,
+              "donor": 440.18674580512686,
+              "normal": 809.9708873586201,
+              "target": 0.1020404723980699
+            },
+            "haar_probe_recovery": -0.002535171442708143,
+            "install_k12_recovery": 0.010717914828846303,
+            "install_probe_cosine": 0.6663356991973767,
+            "install_probe_recovery": 0.014583709927629472,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8070989702406064,
+            "remove_probe_recovery": 0.0238865223923896,
+            "residual_probe_norm_ratio": 0.9855081737041473
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "biology-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 851.6220800643903,
+              "donor": 869.8139307573119,
+              "normal": 722.3884128945223,
+              "target": 2.3663925482197516
+            },
+            "haar_probe_recovery": 0.012970582728598688,
+            "install_k12_recovery": 0.054740174315070965,
+            "install_probe_cosine": 0.06770497816021635,
+            "install_probe_recovery": 0.0038448498513484544,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.48149742018346675,
+            "remove_probe_recovery": 0.025755988477137316,
+            "residual_probe_norm_ratio": 0.9977613687515259
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "chemistry-based",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 670.1204760188971,
+              "donor": 517.2889164296218,
+              "normal": 289.4295832744159,
+              "target": 0.6426049664889916
+            },
+            "haar_probe_recovery": -0.0002031886770430735,
+            "install_k12_recovery": 0.029350596505876948,
+            "install_probe_cosine": 0.12836731453163552,
+            "install_probe_recovery": 0.005324941961360255,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6764637586576437,
+            "remove_probe_recovery": 0.027611056998272224,
+            "residual_probe_norm_ratio": 0.9962920248508453
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "comforting",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 4.8831188238914045,
+              "donor": 1699.834359372,
+              "normal": 296.2889057783071,
+              "target": 1.1134327523695338
+            },
+            "haar_probe_recovery": 0.0017229742036636853,
+            "install_k12_recovery": 0.07965475806208572,
+            "install_probe_cosine": 0.3838626444114256,
+            "install_probe_recovery": 0.011009747584131828,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9073059504441907,
+            "remove_probe_recovery": 0.04212773420096924,
+            "residual_probe_norm_ratio": 0.9893469512462616
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "confused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 5.111428743769515,
+              "donor": 651.0147977967233,
+              "normal": 179.4470675099267,
+              "target": 1.9740429537869155
+            },
+            "haar_probe_recovery": 0.0028971104945962793,
+            "install_k12_recovery": 0.06679856446192191,
+            "install_probe_cosine": 0.6130113723198776,
+            "install_probe_recovery": 0.04248565227327681,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8741286573394401,
+            "remove_probe_recovery": 0.07231343977718627,
+            "residual_probe_norm_ratio": 0.9592169523239136
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "deception",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 677.2463050314584,
+              "donor": 503.55337597061,
+              "normal": 184.916670627022,
+              "target": 0.9359694596798598
+            },
+            "haar_probe_recovery": -0.0016095629048725616,
+            "install_k12_recovery": 0.050607125573013445,
+            "install_probe_cosine": 0.8160712678468879,
+            "install_probe_recovery": 0.04485766670709351,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8910797349457442,
+            "remove_probe_recovery": 0.05937904925424631,
+            "residual_probe_norm_ratio": 0.9556931555271149
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "finnish",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 409.875564833847,
+              "donor": 427.5905980437012,
+              "normal": 64.57449035832552,
+              "target": 0.07055729823996718
+            },
+            "haar_probe_recovery": 0.0006348919911167608,
+            "install_k12_recovery": 0.016734190175630485,
+            "install_probe_cosine": 0.5804717729333133,
+            "install_probe_recovery": 0.009138386656094635,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.19362237427937232,
+            "remove_probe_recovery": 0.0024259145128884235,
+            "residual_probe_norm_ratio": 0.9909336566925049
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "german",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 769.3495746251681,
+              "donor": 55.77249717243825,
+              "normal": 713.0270934983275,
+              "target": 0.05212452551106772
+            },
+            "haar_probe_recovery": 0.0026462398985451344,
+            "install_k12_recovery": 0.008803574715744302,
+            "install_probe_cosine": 0.2150013935993568,
+            "install_probe_recovery": 0.005754550794300653,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.23716251873631564,
+            "remove_probe_recovery": 0.008892690331494289,
+            "residual_probe_norm_ratio": 0.9947635233402252
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "harmful",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 364.4924299087024,
+              "donor": 649.0124270227096,
+              "normal": 259.34749348937294,
+              "target": 0.5410933972284695
+            },
+            "haar_probe_recovery": 0.006224979379620516,
+            "install_k12_recovery": 0.02869678527142298,
+            "install_probe_cosine": 0.6175333001264114,
+            "install_probe_recovery": 0.019424087995866493,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6123193853462938,
+            "remove_probe_recovery": 0.024776820218006132,
+            "residual_probe_norm_ratio": 0.9809248745441437
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "jokey",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 1489.7219181787327,
+              "donor": 537.3498773835314,
+              "normal": 404.9176014495342,
+              "target": 0.08573620087670741
+            },
+            "haar_probe_recovery": 0.006080087939071283,
+            "install_k12_recovery": 0.025677867290001755,
+            "install_probe_cosine": 0.6348274488782636,
+            "install_probe_recovery": 0.020193912610448627,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6754494603059703,
+            "remove_probe_recovery": 0.03237089259812815,
+            "residual_probe_norm_ratio": 0.9799754619598389
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "literature-focused",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 323.9388222964292,
+              "donor": 124.53364159688002,
+              "normal": 470.07549891222334,
+              "target": 1.9484093198642594
+            },
+            "haar_probe_recovery": -0.00704961527784306,
+            "install_k12_recovery": 0.04789977398916494,
+            "install_probe_cosine": 0.8363664992375837,
+            "install_probe_recovery": 0.13593909398745008,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8804593282907425,
+            "remove_probe_recovery": 0.07751550109788075,
+            "residual_probe_norm_ratio": 0.8687995076179504
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "mathematical",
+            "direction": "correct_to_irrelevant",
+            "endpoint_distances": {
+              "different": 582.9257651869766,
+              "donor": 262.5158953151447,
+              "normal": 171.98935569605553,
+              "target": 0.033655830263100595
+            },
+            "haar_probe_recovery": -0.0025054633446593933,
+            "install_k12_recovery": 0.011521374158931952,
+            "install_probe_cosine": 0.30909594763416937,
+            "install_probe_recovery": 0.0050664129339835755,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.3328213942572519,
+            "remove_probe_recovery": 0.006341318282799422,
+            "residual_probe_norm_ratio": 0.995067834854126
+          }
+        ],
+        "qualifies_in_direction": false
+      }
+    ],
+    "irrelevant_to_correct": [
+      {
+        "candidate": "routing_shapley",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": false,
+          "install_recovery": false,
+          "remove_recovery": false,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 0,
+        "median_concept_haar_probe_recovery": 0.021931894000618776,
+        "median_concept_install_probe_recovery": 0.15960935955176997,
+        "median_concept_remove_probe_recovery": 0.22883180467685535,
+        "median_concept_residual_probe_norm_ratio": 0.8606418967247009,
+        "median_install_advantage_over_matched_haar": 0.13767746555115118,
+        "per_concept": [
+          {
+            "candidate": "routing_shapley",
+            "concept": "HTML",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 521.9316698708989,
+              "donor": 274.71292794225803,
+              "normal": 653.0407670399102,
+              "target": 21.820745467659698
+            },
+            "haar_probe_recovery": 0.04745318772825696,
+            "install_k12_recovery": 0.3040760356975126,
+            "install_probe_cosine": 0.6671935849742159,
+            "install_probe_recovery": 0.17627392573736125,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6874026956848505,
+            "remove_probe_recovery": 0.1810430739391608,
+            "residual_probe_norm_ratio": 0.8469004034996033
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "all-caps",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 249.70382770570387,
+              "donor": 367.8935624516903,
+              "normal": 508.318880504637,
+              "target": 7.852867391442965
+            },
+            "haar_probe_recovery": 0.0648859998403534,
+            "install_k12_recovery": 0.3081516884574186,
+            "install_probe_cosine": 0.6966226948798293,
+            "install_probe_recovery": 0.15421684453600132,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6501509015516338,
+            "remove_probe_recovery": 0.17857569253372807,
+            "residual_probe_norm_ratio": 0.8606418967247009
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "biology-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 23.52163698760539,
+              "donor": 761.9500418713819,
+              "normal": 409.5339889897157,
+              "target": 9.476582770744622
+            },
+            "haar_probe_recovery": 0.010600136850956758,
+            "install_k12_recovery": 0.25605332234611317,
+            "install_probe_cosine": 0.6721018934464871,
+            "install_probe_recovery": 0.07405346109043698,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8815514227869456,
+            "remove_probe_recovery": 0.16108461384771255,
+            "residual_probe_norm_ratio": 0.9295369386672974
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "chemistry-based",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 720.5061159283537,
+              "donor": 358.98613092730153,
+              "normal": 334.5340593962941,
+              "target": 20.598170267912696
+            },
+            "haar_probe_recovery": 0.04422046095563885,
+            "install_k12_recovery": 0.3548567383074521,
+            "install_probe_cosine": 0.9075480892566237,
+            "install_probe_recovery": 0.27430821537407907,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9554688145434163,
+            "remove_probe_recovery": 0.37896549202044694,
+            "residual_probe_norm_ratio": 0.7366913259029388
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "comforting",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 982.9458184751788,
+              "donor": 1076.4960265776003,
+              "normal": 980.840719065681,
+              "target": 98.27080008747217
+            },
+            "haar_probe_recovery": 0.021931894000618776,
+            "install_k12_recovery": 0.36892399259351244,
+            "install_probe_cosine": 0.9570072046164209,
+            "install_probe_recovery": 0.2610679369887968,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9608968753816624,
+            "remove_probe_recovery": 0.3512107927016385,
+            "residual_probe_norm_ratio": 0.74297034740448
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "confused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 575.7960046967276,
+              "donor": 539.7754550533587,
+              "normal": 397.1450782835035,
+              "target": 14.644962088912477
+            },
+            "haar_probe_recovery": 0.07033552810563036,
+            "install_k12_recovery": 0.28160993044812044,
+            "install_probe_cosine": 0.8843881879822251,
+            "install_probe_recovery": 0.16859699714262866,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9262835887826655,
+            "remove_probe_recovery": 0.22883180467685535,
+            "residual_probe_norm_ratio": 0.8363447189331055
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "deception",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 56.69258770933538,
+              "donor": 422.0114367896783,
+              "normal": 376.3634166914072,
+              "target": 9.903647759798556
+            },
+            "haar_probe_recovery": -0.0042179566684209125,
+            "install_k12_recovery": 0.2182020985276965,
+            "install_probe_cosine": 0.9014182392691298,
+            "install_probe_recovery": 0.15960935955176997,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8352609561982038,
+            "remove_probe_recovery": 0.13822490534489237,
+            "residual_probe_norm_ratio": 0.8439405560493469
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "finnish",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1128.5090369937457,
+              "donor": 378.954731884024,
+              "normal": 674.0203287828641,
+              "target": 5.330349139943195
+            },
+            "haar_probe_recovery": 0.045607676980452,
+            "install_k12_recovery": 0.3285952379063487,
+            "install_probe_cosine": 0.6770012202648777,
+            "install_probe_recovery": 0.107267578741767,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9717922772510235,
+            "remove_probe_recovery": 0.35218677300459234,
+            "residual_probe_norm_ratio": 0.8991153240203857
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "german",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1102.9865994198954,
+              "donor": 70.86204081275693,
+              "normal": 920.5891509778548,
+              "target": 28.319405427309874
+            },
+            "haar_probe_recovery": -0.0898685602018656,
+            "install_k12_recovery": 0.41165627700381435,
+            "install_probe_cosine": 0.5618365880336837,
+            "install_probe_recovery": 0.41445853809539246,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.4990526583172018,
+            "remove_probe_recovery": 0.33146946881947026,
+            "residual_probe_norm_ratio": 0.8447056412696838
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "harmful",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 238.23115225099488,
+              "donor": 573.6157728642122,
+              "normal": 241.5653758357311,
+              "target": 5.778931664464645
+            },
+            "haar_probe_recovery": 0.013808306995213813,
+            "install_k12_recovery": 0.23610024801822227,
+            "install_probe_cosine": 0.8716468298332732,
+            "install_probe_recovery": 0.11895246131811463,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8838490724911622,
+            "remove_probe_recovery": 0.14294260494540761,
+            "residual_probe_norm_ratio": 0.8835679590702057
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "jokey",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 857.5321997941945,
+              "donor": 498.63366109329377,
+              "normal": 110.26695611636987,
+              "target": 17.702101716453342
+            },
+            "haar_probe_recovery": 0.010743983623727058,
+            "install_k12_recovery": 0.2817588975079781,
+            "install_probe_cosine": 0.4957392961410798,
+            "install_probe_recovery": 0.1624685422331722,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7412660394291146,
+            "remove_probe_recovery": 0.23001634330272272,
+            "residual_probe_norm_ratio": 0.885015457868576
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "literature-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 675.8413446128793,
+              "donor": 136.13557531385518,
+              "normal": 916.4038592432885,
+              "target": 3.9271248503491365
+            },
+            "haar_probe_recovery": 0.08344668033046361,
+            "install_k12_recovery": 0.3894400619129686,
+            "install_probe_cosine": 0.3872109475333436,
+            "install_probe_recovery": 0.1347032143840506,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.5783049534714633,
+            "remove_probe_recovery": 0.2335360683822699,
+            "residual_probe_norm_ratio": 0.9307317733764648
+          },
+          {
+            "candidate": "routing_shapley",
+            "concept": "mathematical",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 668.6025012362593,
+              "donor": 233.9948397340516,
+              "normal": 211.59644363860355,
+              "target": 2.353189600269413
+            },
+            "haar_probe_recovery": 0.009411156715803023,
+            "install_k12_recovery": 0.13886514809834086,
+            "install_probe_cosine": 0.6396689407707067,
+            "install_probe_recovery": 0.09245636177579332,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6979511165476254,
+            "remove_probe_recovery": 0.09443517916003366,
+            "residual_probe_norm_ratio": 0.9144352078437805
+          }
+        ],
+        "qualifies_in_direction": false
+      },
+      {
+        "candidate": "content_shapley",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": true,
+          "install_recovery": false,
+          "remove_recovery": true,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 7,
+        "median_concept_haar_probe_recovery": 0.10133555155301546,
+        "median_concept_install_probe_recovery": 0.7713261589381062,
+        "median_concept_remove_probe_recovery": 0.8401546340875543,
+        "median_concept_residual_probe_norm_ratio": 0.2747700661420822,
+        "median_install_advantage_over_matched_haar": 0.6699906073850908,
+        "per_concept": [
+          {
+            "candidate": "content_shapley",
+            "concept": "HTML",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 343.49972865101506,
+              "donor": 45.12823679682826,
+              "normal": 521.5867063331191,
+              "target": 221.2927993179532
+            },
+            "haar_probe_recovery": 0.10133555155301546,
+            "install_k12_recovery": 0.6959482440068138,
+            "install_probe_cosine": 0.9733478695938897,
+            "install_probe_recovery": 0.8190527439696936,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9726927463076775,
+            "remove_probe_recovery": 0.8235447660716806,
+            "residual_probe_norm_ratio": 0.2638082578778267
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "all-caps",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 80.48827575992797,
+              "donor": 179.39844946797348,
+              "normal": 476.5319698866501,
+              "target": 114.83480744743235
+            },
+            "haar_probe_recovery": 0.19617072833281804,
+            "install_k12_recovery": 0.6918743052169961,
+            "install_probe_cosine": 0.9698869277557162,
+            "install_probe_recovery": 0.8215323909411794,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9826013605407975,
+            "remove_probe_recovery": 0.8457721572200593,
+            "residual_probe_norm_ratio": 0.2747700661420822
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "biology-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 529.5469982683111,
+              "donor": 52.01092015695026,
+              "normal": 600.1045936781984,
+              "target": 554.7976431233062
+            },
+            "haar_probe_recovery": 0.06391832662510605,
+            "install_k12_recovery": 0.7439505573622738,
+            "install_probe_cosine": 0.9947678161339387,
+            "install_probe_recovery": 0.8389656270645538,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.996136555543931,
+            "remove_probe_recovery": 0.9259278112508358,
+            "residual_probe_norm_ratio": 0.18262430280447006
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "chemistry-based",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 590.8521151473333,
+              "donor": 184.52753417752092,
+              "normal": 215.05980738442898,
+              "target": 90.02064022354669
+            },
+            "haar_probe_recovery": 0.11894349247906302,
+            "install_k12_recovery": 0.6451656716316287,
+            "install_probe_cosine": 0.98263051364023,
+            "install_probe_recovery": 0.6208813850736159,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9850910279673715,
+            "remove_probe_recovery": 0.7256960174322299,
+            "residual_probe_norm_ratio": 0.3967931866645813
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "comforting",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 278.9002841200221,
+              "donor": 330.6664108359395,
+              "normal": 458.2800315736415,
+              "target": 571.010683467475
+            },
+            "haar_probe_recovery": 0.06325484043889894,
+            "install_k12_recovery": 0.6310511395093574,
+            "install_probe_cosine": 0.9882230900049525,
+            "install_probe_recovery": 0.6487035971414787,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9945916424100609,
+            "remove_probe_recovery": 0.7389742854968869,
+            "residual_probe_norm_ratio": 0.36547383666038513
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "confused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 136.35370096986148,
+              "donor": 121.47972849629821,
+              "normal": 160.2706950568978,
+              "target": 244.1988373506404
+            },
+            "haar_probe_recovery": 0.12639213018439854,
+            "install_k12_recovery": 0.718373535966383,
+            "install_probe_cosine": 0.9921863679993039,
+            "install_probe_recovery": 0.7713261589381062,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9939862076300476,
+            "remove_probe_recovery": 0.8314068269074447,
+            "residual_probe_norm_ratio": 0.24728725105524063
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "deception",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 362.3432143489658,
+              "donor": 69.64530137291662,
+              "normal": 168.481769806728,
+              "target": 235.43680019962665
+            },
+            "haar_probe_recovery": 0.11520694326164665,
+            "install_k12_recovery": 0.7817575719445615,
+            "install_probe_cosine": 0.9942866588283631,
+            "install_probe_recovery": 0.861848695778355,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9958011790183946,
+            "remove_probe_recovery": 0.8401546340875543,
+            "residual_probe_norm_ratio": 0.16548874229192734
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "finnish",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 652.681620870715,
+              "donor": 102.28223110197868,
+              "normal": 275.2557606663777,
+              "target": 129.42546797407311
+            },
+            "haar_probe_recovery": 0.06389754982874027,
+            "install_k12_recovery": 0.6713958515319309,
+            "install_probe_cosine": 0.9896312586836218,
+            "install_probe_recovery": 0.6482252018635316,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9926262178928729,
+            "remove_probe_recovery": 0.8931174716376844,
+            "residual_probe_norm_ratio": 0.36125660687685013
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "german",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 715.4700839404569,
+              "donor": 9.782469625781868,
+              "normal": 625.5521764634188,
+              "target": 40.695537609733194
+            },
+            "haar_probe_recovery": -0.22925196217608285,
+            "install_k12_recovery": 0.5882954763554303,
+            "install_probe_cosine": 0.7613473298387783,
+            "install_probe_recovery": 0.6684775530752434,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.6903060068366162,
+            "remove_probe_recovery": 0.5850774088028247,
+            "residual_probe_norm_ratio": 0.6498824059963226
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "harmful",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 152.95021231502912,
+              "donor": 114.25988614362869,
+              "normal": 99.26885919332939,
+              "target": 251.14316602247857
+            },
+            "haar_probe_recovery": 0.09319600582454073,
+            "install_k12_recovery": 0.7639251335712971,
+            "install_probe_cosine": 0.9962326111840238,
+            "install_probe_recovery": 0.8565167266409421,
+            "nearest_endpoint": "normal",
+            "remove_probe_cosine": 0.9971153114451787,
+            "remove_probe_recovery": 0.8815576181263474,
+            "residual_probe_norm_ratio": 0.16203703731298447
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "jokey",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1116.518080033775,
+              "donor": 183.58747605929858,
+              "normal": 87.07602641689397,
+              "target": 110.62487722998884
+            },
+            "haar_probe_recovery": 0.025903982516895453,
+            "install_k12_recovery": 0.7182699322956512,
+            "install_probe_cosine": 0.9653672224701404,
+            "install_probe_recovery": 0.7700133386042091,
+            "nearest_endpoint": "normal",
+            "remove_probe_cosine": 0.946281991350016,
+            "remove_probe_recovery": 0.8372163362161784,
+            "residual_probe_norm_ratio": 0.3102027475833893
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "literature-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 547.3404387806413,
+              "donor": 75.2536109609718,
+              "normal": 729.8104836818765,
+              "target": 22.25605328512776
+            },
+            "haar_probe_recovery": 0.10488321071817058,
+            "install_k12_recovery": 0.610557480995503,
+            "install_probe_cosine": 0.9143640692911223,
+            "install_probe_recovery": 0.76630186261373,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9301444994296657,
+            "remove_probe_recovery": 0.8653827194890706,
+            "residual_probe_norm_ratio": 0.41259174048900604
+          },
+          {
+            "candidate": "content_shapley",
+            "concept": "mathematical",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 657.5520554660075,
+              "donor": 59.4719770499306,
+              "normal": 186.88191230098585,
+              "target": 93.34988612318843
+            },
+            "haar_probe_recovery": 0.15138793446345616,
+            "install_k12_recovery": 0.8611114449017621,
+            "install_probe_cosine": 0.9936900563152367,
+            "install_probe_recovery": 0.9061027115453174,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9924228838939728,
+            "remove_probe_recovery": 0.9078532774416125,
+            "residual_probe_norm_ratio": 0.13804635778069496
+          }
+        ],
+        "qualifies_in_direction": false
+      },
+      {
+        "candidate": "monitoring_prefix_delta",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": true,
+          "install_recovery": true,
+          "remove_recovery": true,
+          "residual_closure": true
+        },
+        "installed_probe_donor_nearest_concepts": 8,
+        "median_concept_haar_probe_recovery": 0.12980282848386526,
+        "median_concept_install_probe_recovery": 0.8710573162949665,
+        "median_concept_remove_probe_recovery": 0.8702584334106758,
+        "median_concept_residual_probe_norm_ratio": 0.1751878559589386,
+        "median_install_advantage_over_matched_haar": 0.7412544878111013,
+        "per_concept": [
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "HTML",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 347.3409196368999,
+              "donor": 28.88532990931552,
+              "normal": 496.7865706651123,
+              "target": 263.428176320365
+            },
+            "haar_probe_recovery": 0.16510257466438422,
+            "install_k12_recovery": 0.9152539587461292,
+            "install_probe_cosine": 0.9941855955907055,
+            "install_probe_recovery": 0.9132125706386893,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9975504766496889,
+            "remove_probe_recovery": 0.8967529420566167,
+            "residual_probe_norm_ratio": 0.13132762163877487
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "all-caps",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 55.35479466056444,
+              "donor": 138.3525535563797,
+              "normal": 571.9596926841068,
+              "target": 138.2273900198349
+            },
+            "haar_probe_recovery": -0.019580910796964664,
+            "install_k12_recovery": 0.9306807045367043,
+            "install_probe_cosine": 0.9952605890476509,
+            "install_probe_recovery": 0.9247458647436368,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9895876027810651,
+            "remove_probe_recovery": 0.9505189520161592,
+            "residual_probe_norm_ratio": 0.10882031731307507
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "biology-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 732.0195439393634,
+              "donor": 27.02736422624428,
+              "normal": 783.5882231720061,
+              "target": 759.8229347136448
+            },
+            "haar_probe_recovery": 0.04221329392106733,
+            "install_k12_recovery": 0.9120627661012188,
+            "install_probe_cosine": 0.9949510834120829,
+            "install_probe_recovery": 0.9822643095756399,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9975136514793517,
+            "remove_probe_recovery": 0.9685889261667375,
+            "residual_probe_norm_ratio": 0.10067100450396538
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "chemistry-based",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 550.0096074091306,
+              "donor": 93.14900786854092,
+              "normal": 231.43726754013983,
+              "target": 185.77496291810937
+            },
+            "haar_probe_recovery": 0.27509840671441743,
+            "install_k12_recovery": 0.915807853107526,
+            "install_probe_cosine": 0.9882998115257033,
+            "install_probe_recovery": 0.8967676787724637,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9960494594546903,
+            "remove_probe_recovery": 0.9217411884549183,
+            "residual_probe_norm_ratio": 0.16500655934214592
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "comforting",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 77.19861997189638,
+              "donor": 107.07630105720602,
+              "normal": 211.5245682003252,
+              "target": 1086.3089911627303
+            },
+            "haar_probe_recovery": 0.13916407249854956,
+            "install_k12_recovery": 0.7726768760630427,
+            "install_probe_cosine": 0.996322789683808,
+            "install_probe_recovery": 0.9024006488093659,
+            "nearest_endpoint": "different",
+            "remove_probe_cosine": 0.9982125004698195,
+            "remove_probe_recovery": 0.8689635497127273,
+            "residual_probe_norm_ratio": 0.1220967061817646
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "confused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 115.8402971659525,
+              "donor": 97.34071266813402,
+              "normal": 127.47572649920602,
+              "target": 289.41679701826894
+            },
+            "haar_probe_recovery": 0.19099886513350736,
+            "install_k12_recovery": 0.8406064492068615,
+            "install_probe_cosine": 0.9952753053634598,
+            "install_probe_recovery": 0.8461935112378264,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9979227821740144,
+            "remove_probe_recovery": 0.8190118731097829,
+            "residual_probe_norm_ratio": 0.1751878559589386
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "deception",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 316.5151802025026,
+              "donor": 97.87812884083951,
+              "normal": 186.05121837400245,
+              "target": 198.73426767612
+            },
+            "haar_probe_recovery": 0.1789997377669878,
+            "install_k12_recovery": 0.8113612509418064,
+            "install_probe_cosine": 0.9885894214864805,
+            "install_probe_recovery": 0.7873098259507345,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9936517978298085,
+            "remove_probe_recovery": 0.7717342293127605,
+            "residual_probe_norm_ratio": 0.24339378625154495
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "finnish",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 618.1852699215126,
+              "donor": 68.74652580731424,
+              "normal": 217.80400219399115,
+              "target": 196.16101816342967
+            },
+            "haar_probe_recovery": 0.12980282848386526,
+            "install_k12_recovery": 0.7266351393394546,
+            "install_probe_cosine": 0.9794683705912157,
+            "install_probe_recovery": 0.8710573162949665,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9889320359789258,
+            "remove_probe_recovery": 0.8668508239799314,
+            "residual_probe_norm_ratio": 0.2602418214082718
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "german",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 881.209196084328,
+              "donor": 13.455635903587217,
+              "normal": 776.7739960219595,
+              "target": 41.714108031075824
+            },
+            "haar_probe_recovery": -0.014305544348998948,
+            "install_k12_recovery": 0.8387481786461732,
+            "install_probe_cosine": 0.9722108450475982,
+            "install_probe_recovery": 0.8586044449419041,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9415431106536072,
+            "remove_probe_recovery": 0.8702584334106758,
+            "residual_probe_norm_ratio": 0.2535182610154152
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "harmful",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 157.03418549850548,
+              "donor": 136.44746101973502,
+              "normal": 101.55965642962343,
+              "target": 227.51708334242898
+            },
+            "haar_probe_recovery": 0.1373476502933947,
+            "install_k12_recovery": 0.7668808713198385,
+            "install_probe_cosine": 0.9914130013618251,
+            "install_probe_recovery": 0.79196344556642,
+            "nearest_endpoint": "normal",
+            "remove_probe_cosine": 0.9940705319813788,
+            "remove_probe_recovery": 0.7991323969879796,
+            "residual_probe_norm_ratio": 0.23370804637670517
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "jokey",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1016.0911421845082,
+              "donor": 188.75334581407094,
+              "normal": 108.22016746184443,
+              "target": 108.97172942175145
+            },
+            "haar_probe_recovery": 0.04405414959467919,
+            "install_k12_recovery": 0.7914935424003533,
+            "install_probe_cosine": 0.9945160551783783,
+            "install_probe_recovery": 0.7979096710692464,
+            "nearest_endpoint": "normal",
+            "remove_probe_cosine": 0.9918187026915366,
+            "remove_probe_recovery": 0.8814593332904861,
+            "residual_probe_norm_ratio": 0.21892528980970383
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "literature-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 546.0709120401723,
+              "donor": 67.03310250255396,
+              "normal": 746.6707735801297,
+              "target": 20.40647514274226
+            },
+            "haar_probe_recovery": 0.10139424086200703,
+            "install_k12_recovery": 0.9106604847099052,
+            "install_probe_cosine": 0.9848156826424486,
+            "install_probe_recovery": 0.7944230932522436,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9924887431841224,
+            "remove_probe_recovery": 0.8574763132458357,
+            "residual_probe_norm_ratio": 0.2401236742734909
+          },
+          {
+            "candidate": "monitoring_prefix_delta",
+            "concept": "mathematical",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 669.7541131081491,
+              "donor": 63.5890296006168,
+              "normal": 194.7966906515809,
+              "target": 92.03985887313658
+            },
+            "haar_probe_recovery": 0.06037054148409628,
+            "install_k12_recovery": 0.9281652447502855,
+            "install_probe_cosine": 0.9943323407828631,
+            "install_probe_recovery": 0.8985299110063336,
+            "nearest_endpoint": "donor",
+            "remove_probe_cosine": 0.9920886927755157,
+            "remove_probe_recovery": 0.925085226150337,
+            "residual_probe_norm_ratio": 0.1388903297483921
+          }
+        ],
+        "qualifies_in_direction": false
+      },
+      {
+        "candidate": "prompt_context_delta",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": false,
+          "install_recovery": false,
+          "remove_recovery": false,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 0,
+        "median_concept_haar_probe_recovery": 0.004886058889093602,
+        "median_concept_install_probe_recovery": 0.09022193073605835,
+        "median_concept_remove_probe_recovery": 0.08141091965361372,
+        "median_concept_residual_probe_norm_ratio": 0.9310656785964966,
+        "median_install_advantage_over_matched_haar": 0.08533587184696474,
+        "per_concept": [
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "HTML",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 626.5909341890123,
+              "donor": 341.69220711472207,
+              "normal": 797.7983739729323,
+              "target": 0.9579332516977925
+            },
+            "haar_probe_recovery": -0.009455084326576015,
+            "install_k12_recovery": 0.0330784595056419,
+            "install_probe_cosine": 0.7911853791126713,
+            "install_probe_recovery": 0.040685722769459684,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7138555946585319,
+            "remove_probe_recovery": 0.03988802911247023,
+            "residual_probe_norm_ratio": 0.9596830010414124
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "all-caps",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 287.74000930204943,
+              "donor": 414.0998726030454,
+              "normal": 437.48195568209826,
+              "target": 3.0809716732730776
+            },
+            "haar_probe_recovery": 0.030494032415522117,
+            "install_k12_recovery": 0.05859786925513237,
+            "install_probe_cosine": 0.373609872709597,
+            "install_probe_recovery": 0.04448247777580919,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.5762408471763076,
+            "remove_probe_recovery": 0.0608237599833961,
+            "residual_probe_norm_ratio": 0.9643579125404358
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "biology-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 12.85815881627741,
+              "donor": 871.5918474625876,
+              "normal": 493.8742790407347,
+              "target": 0.5292915991371121
+            },
+            "haar_probe_recovery": 0.001129045284572345,
+            "install_k12_recovery": 0.03319876898675363,
+            "install_probe_cosine": 0.17431902469516916,
+            "install_probe_recovery": 0.004485291757270392,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": -0.0881429465111325,
+            "remove_probe_recovery": -0.003504488905750367,
+            "residual_probe_norm_ratio": 0.9958459734916687
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "chemistry-based",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 831.6670916591879,
+              "donor": 488.39828263778236,
+              "normal": 396.80939146099206,
+              "target": 1.2166214941076414
+            },
+            "haar_probe_recovery": 0.007992080893030993,
+            "install_k12_recovery": 0.05485111193936619,
+            "install_probe_cosine": 0.6820144480059205,
+            "install_probe_recovery": 0.04875730406188129,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.5865116668531212,
+            "remove_probe_recovery": 0.06238699244712481,
+            "residual_probe_norm_ratio": 0.9528427422046661
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "comforting",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1370.3615862386314,
+              "donor": 1476.7437845543463,
+              "normal": 1432.1808711076408,
+              "target": 13.397451950638416
+            },
+            "haar_probe_recovery": 0.021011798235534798,
+            "install_k12_recovery": 0.1476374892769064,
+            "install_probe_cosine": 0.9224130920341447,
+            "install_probe_recovery": 0.09022193073605835,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8118505669533612,
+            "remove_probe_recovery": 0.0687345690265235,
+            "residual_probe_norm_ratio": 0.9106248021125793
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "confused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 612.8217128116596,
+              "donor": 580.9098619589962,
+              "normal": 456.8208567746702,
+              "target": 5.397056509106297
+            },
+            "haar_probe_recovery": 0.004886058889093602,
+            "install_k12_recovery": 0.09260702891723388,
+            "install_probe_cosine": 0.9737794201712467,
+            "install_probe_recovery": 0.10927149682835646,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8921073923212229,
+            "remove_probe_recovery": 0.08141091965361372,
+            "residual_probe_norm_ratio": 0.8910903930664062
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "deception",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 60.4795515043138,
+              "donor": 409.82426538150264,
+              "normal": 371.3073630299227,
+              "target": 11.530668010817116
+            },
+            "haar_probe_recovery": -0.006061336950361774,
+            "install_k12_recovery": 0.13801987444330974,
+            "install_probe_cosine": 0.9201776865566567,
+            "install_probe_recovery": 0.17407536424170716,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8651351414599315,
+            "remove_probe_recovery": 0.15501397609917575,
+            "residual_probe_norm_ratio": 0.8293577432632446
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "finnish",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1051.6708710474168,
+              "donor": 357.48150906689864,
+              "normal": 645.3920166470465,
+              "target": 8.103985442485492
+            },
+            "haar_probe_recovery": 0.046495075965611116,
+            "install_k12_recovery": 0.2566122749609697,
+            "install_probe_cosine": 0.708691803055937,
+            "install_probe_recovery": 0.1267852700178604,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.46048781474209777,
+            "remove_probe_recovery": 0.11747519273750383,
+            "residual_probe_norm_ratio": 0.8824025392532349
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "german",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 934.559672797592,
+              "donor": 58.613415642994816,
+              "normal": 753.1415864183679,
+              "target": 5.873598636326799
+            },
+            "haar_probe_recovery": -0.04566093300836764,
+            "install_k12_recovery": 0.15240792898636651,
+            "install_probe_cosine": 0.38250675741903545,
+            "install_probe_recovery": 0.11948630740368255,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6137072595407057,
+            "remove_probe_recovery": 0.13297766301657482,
+            "residual_probe_norm_ratio": 0.9310656785964966
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "harmful",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 222.7565265335334,
+              "donor": 540.01704511993,
+              "normal": 222.29517406930614,
+              "target": 9.49022701791344
+            },
+            "haar_probe_recovery": 0.018130299480883606,
+            "install_k12_recovery": 0.20447620495345836,
+            "install_probe_cosine": 0.9230791464058439,
+            "install_probe_recovery": 0.17770342667891412,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8911251825768725,
+            "remove_probe_recovery": 0.17944411091352236,
+            "residual_probe_norm_ratio": 0.8255881667137146
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "jokey",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 979.157612867953,
+              "donor": 486.2999057006043,
+              "normal": 64.02380347859443,
+              "target": 3.8144214427022054
+            },
+            "haar_probe_recovery": -0.020999074852893457,
+            "install_k12_recovery": 0.1828956435502747,
+            "install_probe_cosine": 0.7413993941143466,
+            "install_probe_recovery": 0.10492649065361286,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.9291244058969212,
+            "remove_probe_recovery": 0.17856303149582134,
+            "residual_probe_norm_ratio": 0.900162398815155
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "literature-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 683.8245927776586,
+              "donor": 144.30964591375403,
+              "normal": 910.4059877282956,
+              "target": 0.2409076573885396
+            },
+            "haar_probe_recovery": 0.019699292353880106,
+            "install_k12_recovery": 0.04143507360930987,
+            "install_probe_cosine": 0.4982101647306177,
+            "install_probe_recovery": 0.04338055446520869,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7774790744438728,
+            "remove_probe_recovery": 0.06995608398933036,
+            "residual_probe_norm_ratio": 0.9584934711456299
+          },
+          {
+            "candidate": "prompt_context_delta",
+            "concept": "mathematical",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 647.2603426402522,
+              "donor": 238.04285171773262,
+              "normal": 201.11901878466927,
+              "target": 1.792750320015581
+            },
+            "haar_probe_recovery": -0.00038238433512629427,
+            "install_k12_recovery": 0.06028975819910839,
+            "install_probe_cosine": 0.5289301347963089,
+            "install_probe_recovery": 0.06786137846319963,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.7338079581630355,
+            "remove_probe_recovery": 0.09451220435463223,
+            "residual_probe_norm_ratio": 0.9384142160415649
+          }
+        ],
+        "qualifies_in_direction": false
+      },
+      {
+        "candidate": "response_history_delta",
+        "gate_clauses": {
+          "donor_identity": false,
+          "haar_advantage": false,
+          "install_recovery": false,
+          "remove_recovery": false,
+          "residual_closure": false
+        },
+        "installed_probe_donor_nearest_concepts": 0,
+        "median_concept_haar_probe_recovery": 0.0030860992351947445,
+        "median_concept_install_probe_recovery": 0.024322953605673648,
+        "median_concept_remove_probe_recovery": 0.018658104843231705,
+        "median_concept_residual_probe_norm_ratio": 0.976386308670044,
+        "median_install_advantage_over_matched_haar": 0.021236854370478904,
+        "per_concept": [
+          {
+            "candidate": "response_history_delta",
+            "concept": "HTML",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 599.6587436912212,
+              "donor": 330.5933769883489,
+              "normal": 764.5506351111064,
+              "target": 1.6725467572269173
+            },
+            "haar_probe_recovery": 0.029198121369586785,
+            "install_k12_recovery": 0.05162155462490749,
+            "install_probe_cosine": 0.7731135693414893,
+            "install_probe_recovery": 0.056270102295080185,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.5174363435695051,
+            "remove_probe_recovery": 0.043696918644801123,
+            "residual_probe_norm_ratio": 0.9448908269405365
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "all-caps",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 310.73543890642907,
+              "donor": 446.6193440017313,
+              "normal": 452.1262404495225,
+              "target": 0.052207320949335445
+            },
+            "haar_probe_recovery": 0.004086882499648375,
+            "install_k12_recovery": 0.010750995522074005,
+            "install_probe_cosine": 0.28498081395564256,
+            "install_probe_recovery": 0.004751237349661635,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6447196548484765,
+            "remove_probe_recovery": 0.01369610203220795,
+            "residual_probe_norm_ratio": 0.9953976571559906
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "biology-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 12.839908321871798,
+              "donor": 839.1993322867338,
+              "normal": 470.950374770763,
+              "target": 1.730079081448352
+            },
+            "haar_probe_recovery": 0.005644254781151279,
+            "install_k12_recovery": 0.05474410100633388,
+            "install_probe_cosine": 0.5159285459813094,
+            "install_probe_recovery": 0.024428087036634034,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.22946918374888547,
+            "remove_probe_recovery": 0.01363605805540196,
+            "residual_probe_norm_ratio": 0.976386308670044
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "chemistry-based",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 832.5779182245204,
+              "donor": 502.41823154851386,
+              "normal": 409.2192205652694,
+              "target": 0.329566023382325
+            },
+            "haar_probe_recovery": 0.0014258789328702149,
+            "install_k12_recovery": 0.02934547491143482,
+            "install_probe_cosine": 0.7298741721461925,
+            "install_probe_recovery": 0.024322953605673648,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6555129755788363,
+            "remove_probe_recovery": 0.03389647775059513,
+            "residual_probe_norm_ratio": 0.976095587015152
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "comforting",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1512.1141430200073,
+              "donor": 1622.5221871908439,
+              "normal": 1575.7317112227652,
+              "target": 2.2569008436751794
+            },
+            "haar_probe_recovery": 0.0030860992351947445,
+            "install_k12_recovery": 0.07966360537428924,
+            "install_probe_cosine": 0.9040429311297554,
+            "install_probe_recovery": 0.036583779302139345,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.6455605738143857,
+            "remove_probe_recovery": 0.018658104843231705,
+            "residual_probe_norm_ratio": 0.9635851383209229
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "confused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 657.2369805039126,
+              "donor": 623.0934896215304,
+              "normal": 485.5935157191042,
+              "target": 2.3962896278708943
+            },
+            "haar_probe_recovery": 0.004328260852030263,
+            "install_k12_recovery": 0.06679593424248811,
+            "install_probe_cosine": 0.915623812131561,
+            "install_probe_recovery": 0.06987176478583998,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8005459949164895,
+            "remove_probe_recovery": 0.059312510295183474,
+            "residual_probe_norm_ratio": 0.9307045936584473
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "deception",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 29.931395504973835,
+              "donor": 491.2534653964294,
+              "normal": 453.6427157804586,
+              "target": 1.347383192098464
+            },
+            "haar_probe_recovery": -0.0030575713648310263,
+            "install_k12_recovery": 0.05058732260438498,
+            "install_probe_cosine": 0.9169707400152349,
+            "install_probe_recovery": 0.05931944200681357,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8509067010725435,
+            "remove_probe_recovery": 0.0466651721329626,
+            "residual_probe_norm_ratio": 0.941015899181366
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "finnish",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 1181.018962575859,
+              "donor": 432.78642065247834,
+              "normal": 742.8832144187136,
+              "target": 0.16284289781420852
+            },
+            "haar_probe_recovery": 0.001420974014520381,
+            "install_k12_recovery": 0.016669122953800793,
+            "install_probe_cosine": 0.03967777615438414,
+            "install_probe_recovery": -0.00019243781396155804,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.5813262157285313,
+            "remove_probe_recovery": 0.009947548156630369,
+            "residual_probe_norm_ratio": 1.0004416704177856
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "german",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 836.1572308768709,
+              "donor": 55.546648891086505,
+              "normal": 648.7809943651405,
+              "target": 0.06305647035559825
+            },
+            "haar_probe_recovery": 0.0029920197920895956,
+            "install_k12_recovery": 0.008808228273011823,
+            "install_probe_cosine": 0.1931996647873097,
+            "install_probe_recovery": 0.006417932402660455,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.23237521123559837,
+            "remove_probe_recovery": 0.0064643969504926315,
+            "residual_probe_norm_ratio": 0.9941540360450745
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "harmful",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 275.3929000670723,
+              "donor": 643.9895043716355,
+              "normal": 287.03871673107983,
+              "target": 0.6128126761351673
+            },
+            "haar_probe_recovery": 0.007559758122569529,
+            "install_k12_recovery": 0.028643891725941173,
+            "install_probe_cosine": 0.5492668139667274,
+            "install_probe_recovery": 0.02159759533725912,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.60560166053998,
+            "remove_probe_recovery": 0.02202618903432499,
+            "residual_probe_norm_ratio": 0.9787507355213165
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "jokey",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 956.0020613845882,
+              "donor": 539.0434328737035,
+              "normal": 68.02099928770907,
+              "target": 0.19359409117471518
+            },
+            "haar_probe_recovery": 0.0008220914792007073,
+            "install_k12_recovery": 0.025684691911217358,
+            "install_probe_cosine": 0.2853258893311123,
+            "install_probe_recovery": 0.008994089999036838,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.49366516150929796,
+            "remove_probe_recovery": 0.017544809608352127,
+            "residual_probe_norm_ratio": 0.9914102554321289
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "literature-focused",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 666.6870394888413,
+              "donor": 136.74668017674153,
+              "normal": 890.0907067333671,
+              "target": 0.41639036971937693
+            },
+            "haar_probe_recovery": 0.005484624009341817,
+            "install_k12_recovery": 0.047894128250968074,
+            "install_probe_cosine": 0.8561125787696269,
+            "install_probe_recovery": 0.09162442596978271,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.8570084050603375,
+            "remove_probe_recovery": 0.14090132509769202,
+            "residual_probe_norm_ratio": 0.9101480543613434
+          },
+          {
+            "candidate": "response_history_delta",
+            "concept": "mathematical",
+            "direction": "irrelevant_to_correct",
+            "endpoint_distances": {
+              "different": 688.6330234210664,
+              "donor": 263.39235492815055,
+              "normal": 222.76073154872898,
+              "target": 0.03194254904086913
+            },
+            "haar_probe_recovery": 0.0011992550158359562,
+            "install_k12_recovery": 0.011546995913840265,
+            "install_probe_cosine": 0.34277192573521115,
+            "install_probe_recovery": 0.006341402424027192,
+            "nearest_endpoint": "target",
+            "remove_probe_cosine": 0.3339825437959813,
+            "remove_probe_recovery": 0.0062027590842274,
+            "residual_probe_norm_ratio": 0.9937868714332581
+          }
+        ],
+        "qualifies_in_direction": false
+      }
+    ]
+  },
+  "disposition": "no_tested_compact_joint_operator_closes",
+  "joint_candidates_qualifying_both_directions": [],
+  "procedure": "prospective-day56-joint-k12-mathematical-mechanism-v1-causal-closure",
+  "schema_version": 1,
+  "selected_compact_joint_operator": null,
+  "selection_rule": "first qualifying candidate in frozen simplicity order; otherwise none"
+}

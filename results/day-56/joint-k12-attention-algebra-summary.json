@@ -1,0 +1,165 @@
+{
+  "direction_summaries": {
+    "correct_to_irrelevant": {
+      "attention_mass_changes": [
+        {
+          "median_concept_mean_absolute_mass_change": 0.011483362410217524,
+          "median_concept_mean_signed_mass_change": 0.000927406013943255,
+          "region": "monitoring_language"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.2089269459247589,
+          "median_concept_mean_signed_mass_change": 0.013170771766453981,
+          "region": "named_concept"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.19874051958322525,
+          "median_concept_mean_signed_mass_change": 0.06313767191022635,
+          "region": "trigger_other"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.17406028509140015,
+          "median_concept_mean_signed_mass_change": -0.025641103740781546,
+          "region": "original_prompt"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.1971912384033203,
+          "median_concept_mean_signed_mass_change": 0.05759648606181145,
+          "region": "template"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.06190231628715992,
+          "median_concept_mean_signed_mass_change": -0.030661593191325665,
+          "region": "response"
+        }
+      ],
+      "hybrid_and_atomic_causal_recoveries": [
+        {
+          "job": "routing_hybrid",
+          "median_concept_k12_recovery": 0.21705936746378982,
+          "median_concept_probe_recovery": 0.10009641715182573
+        },
+        {
+          "job": "content_hybrid",
+          "median_concept_k12_recovery": 0.6900596104983895,
+          "median_concept_probe_recovery": 0.7819493199561524
+        },
+        {
+          "job": "atomic.monitoring_language.install",
+          "median_concept_k12_recovery": 0.0007831018474391432,
+          "median_concept_probe_recovery": 0.0006045459479949746
+        },
+        {
+          "job": "atomic.named_concept.install",
+          "median_concept_k12_recovery": 0.4167161629549987,
+          "median_concept_probe_recovery": 0.29904352527451616
+        },
+        {
+          "job": "atomic.trigger_other.install",
+          "median_concept_k12_recovery": 0.49842635067379204,
+          "median_concept_probe_recovery": 0.5752769085768634
+        },
+        {
+          "job": "atomic.original_prompt.install",
+          "median_concept_k12_recovery": 0.07027463979691782,
+          "median_concept_probe_recovery": 0.038045947882122545
+        },
+        {
+          "job": "atomic.template.install",
+          "median_concept_k12_recovery": 0.018996405040126188,
+          "median_concept_probe_recovery": 0.013948447030373071
+        },
+        {
+          "job": "atomic.response.install",
+          "median_concept_k12_recovery": 0.029350596505876948,
+          "median_concept_probe_recovery": 0.014583709927629472
+        }
+      ]
+    },
+    "irrelevant_to_correct": {
+      "attention_mass_changes": [
+        {
+          "median_concept_mean_absolute_mass_change": 0.011483362410217524,
+          "median_concept_mean_signed_mass_change": -0.000927406013943255,
+          "region": "monitoring_language"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.2089269459247589,
+          "median_concept_mean_signed_mass_change": -0.013170771766453981,
+          "region": "named_concept"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.19874051958322525,
+          "median_concept_mean_signed_mass_change": -0.06313767191022635,
+          "region": "trigger_other"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.17406028509140015,
+          "median_concept_mean_signed_mass_change": 0.025641103740781546,
+          "region": "original_prompt"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.1971912384033203,
+          "median_concept_mean_signed_mass_change": -0.05759648606181145,
+          "region": "template"
+        },
+        {
+          "median_concept_mean_absolute_mass_change": 0.06190231628715992,
+          "median_concept_mean_signed_mass_change": 0.030661593191325665,
+          "region": "response"
+        }
+      ],
+      "hybrid_and_atomic_causal_recoveries": [
+        {
+          "job": "routing_hybrid",
+          "median_concept_k12_recovery": 0.3099403895016105,
+          "median_concept_probe_recovery": 0.2062228544900674
+        },
+        {
+          "job": "content_hybrid",
+          "median_concept_k12_recovery": 0.7829406325362103,
+          "median_concept_probe_recovery": 0.8656319378024042
+        },
+        {
+          "job": "atomic.monitoring_language.install",
+          "median_concept_k12_recovery": 0.000755132653587991,
+          "median_concept_probe_recovery": 0.0003745077621163672
+        },
+        {
+          "job": "atomic.named_concept.install",
+          "median_concept_k12_recovery": 0.416717983919628,
+          "median_concept_probe_recovery": 0.34847768641121046
+        },
+        {
+          "job": "atomic.trigger_other.install",
+          "median_concept_k12_recovery": 0.4984143222952045,
+          "median_concept_probe_recovery": 0.5275223666981149
+        },
+        {
+          "job": "atomic.original_prompt.install",
+          "median_concept_k12_recovery": 0.07026068093402618,
+          "median_concept_probe_recovery": 0.06440460387961977
+        },
+        {
+          "job": "atomic.template.install",
+          "median_concept_k12_recovery": 0.01902855193839259,
+          "median_concept_probe_recovery": 0.01864283507214394
+        },
+        {
+          "job": "atomic.response.install",
+          "median_concept_k12_recovery": 0.02934547491143482,
+          "median_concept_probe_recovery": 0.024322953605673648
+        }
+      ]
+    }
+  },
+  "factorization": {
+    "closure": "routing_shapley plus content_shapley equals exact donor minus exact target",
+    "content_hybrid": "sum over regions of target attention mass times donor conditional value mean",
+    "content_shapley": "half of content change at target routing plus content change at donor routing",
+    "routing_hybrid": "sum over regions of donor attention mass times target conditional value mean",
+    "routing_shapley": "half of routing change at target content plus routing change at donor content"
+  },
+  "procedure": "prospective-day56-joint-k12-mathematical-mechanism-v1-attention-algebra",
+  "schema_version": 1
+}

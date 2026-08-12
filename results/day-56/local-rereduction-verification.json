@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "procedure": "day56-independent-local-rereduction-verification-v1",
+  "verified_on": "2026-08-12",
+  "execution_commit": "e5cea27167a433c652ca6c131dfc3b5396c4ad28",
+  "remote_manifest_sha256_before_local_rereduction": "517565cf895d97462bb5e8724674d01336b8c98bb670947ade39bd247f0ad2a4",
+  "remote_manifest_files_verified": 35,
+  "remote_manifest_bytes_verified": 1573498307,
+  "remote_manifest_hash_or_size_errors": 0,
+  "independent_local_reduction": {
+    "environment": "environment/day-01/.venv under Python 3.14.4 and PyTorch 2.9.0 on macOS CPU",
+    "reducer_output_files_compared": 8,
+    "numeric_cells_compared": 18192,
+    "structure_and_labels_exact": true,
+    "maximum_absolute_numeric_difference": 2.384185791015625e-07,
+    "two_in_memory_reductions_byte_identical": true,
+    "implementation_pass": true
+  },
+  "local_regenerated_manifest_sha256": "1bbbecb08a199ccef07fa17680464da0fdc4f1cd9bcc758038996cd8545c0ec5",
+  "summary_sha256_unchanged_across_remote_and_local_reduction": "b853a2dd0bc4917873d926d03277301f1c680ceada3353d5ac987abbb8df7576",
+  "audit_sha256_unchanged_across_remote_and_local_reduction": "ac19a43d5c89c27a90021a5e5ef4d332c5a1777da3f26d4be632a05bffb01224",
+  "result": "pass"
+}

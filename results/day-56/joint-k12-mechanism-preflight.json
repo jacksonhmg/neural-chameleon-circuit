@@ -1,0 +1,108 @@
+{
+  "algebra_audits": {
+    "correct_to_irrelevant": {
+      "attention_reconstruction_max_abs": 0.015618324279785156,
+      "decomposition_to_raw_exact_delta_max_abs_diagnostic": 0.022156715393066406,
+      "layers": [
+        {
+          "donor_reconstruction_max_abs": 0.01556253433227539,
+          "layer": 9,
+          "shapley_closure_max_abs": 9.5367431640625e-07,
+          "target_reconstruction_max_abs": 0.01526021957397461
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015466690063476562,
+          "layer": 10,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015618324279785156
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015572547912597656,
+          "layer": 11,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015336990356445312
+        },
+        {
+          "donor_reconstruction_max_abs": 0.0078029632568359375,
+          "layer": 12,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.0078105926513671875
+        }
+      ],
+      "shapley_closure_max_abs": 9.5367431640625e-07
+    },
+    "irrelevant_to_correct": {
+      "attention_reconstruction_max_abs": 0.015618324279785156,
+      "decomposition_to_raw_exact_delta_max_abs_diagnostic": 0.022156715393066406,
+      "layers": [
+        {
+          "donor_reconstruction_max_abs": 0.01526021957397461,
+          "layer": 9,
+          "shapley_closure_max_abs": 9.5367431640625e-07,
+          "target_reconstruction_max_abs": 0.01556253433227539
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015618324279785156,
+          "layer": 10,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015466690063476562
+        },
+        {
+          "donor_reconstruction_max_abs": 0.015336990356445312,
+          "layer": 11,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.015572547912597656
+        },
+        {
+          "donor_reconstruction_max_abs": 0.0078105926513671875,
+          "layer": 12,
+          "shapley_closure_max_abs": 4.76837158203125e-07,
+          "target_reconstruction_max_abs": 0.0078029632568359375
+        }
+      ],
+      "shapley_closure_max_abs": 9.5367431640625e-07
+    }
+  },
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "all_values_finite": true,
+    "attention_reconstruction": true,
+    "cuda": true,
+    "frozen_norm_identity_k12": true,
+    "frozen_norm_identity_margins": true,
+    "hooks_removed": true,
+    "identity_k12": true,
+    "identity_margins": true,
+    "response_ids_and_masks_exact": true,
+    "shapley_closure": true
+  },
+  "contract_sha256": "d7f1e5fb78372f9c1f78e2845b27e480b4fb426f195af16de129effde6fdae11",
+  "example_ids": [
+    "discovery-HTML-pos-062",
+    "discovery-HTML-pos-031"
+  ],
+  "execution_commit": "e5cea27167a433c652ca6c131dfc3b5396c4ad28",
+  "frozen_norm_identity_errors": {
+    "correct_to_irrelevant": {
+      "k12_mutual_max_abs": 0.0,
+      "margin_to_free_identity_max_abs": 0.006263643503189087
+    },
+    "irrelevant_to_correct": {
+      "k12_mutual_max_abs": 0.0,
+      "margin_to_free_identity_max_abs": 0.012164592742919922
+    }
+  },
+  "identity_errors": {
+    "correct_to_irrelevant": {
+      "k12_mutual_max_abs": 0.0,
+      "margin_mutual_max_abs": 0.0
+    },
+    "irrelevant_to_correct": {
+      "k12_mutual_max_abs": 0.0,
+      "margin_mutual_max_abs": 0.0
+    }
+  },
+  "procedure": "prospective-day56-joint-k12-mathematical-mechanism-v1-preflight",
+  "result": "pass",
+  "schema_version": 1
+}

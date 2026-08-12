@@ -1,0 +1,33 @@
+{
+  "analysis_commit": "e5cea27167a433c652ca6c131dfc3b5396c4ad28",
+  "checks": {
+    "all_metrics_finite": true,
+    "attention_reconstruction": true,
+    "exact_probe_order": true,
+    "exact_state_rows": true,
+    "execution_complete": true,
+    "hooks_removed": true,
+    "identity_k12": true,
+    "identity_margins": true,
+    "jacobian_identity_margins": true,
+    "preflight_pass": true,
+    "random_audits_pass": true,
+    "shapley_closure": true,
+    "thirteen_unique_tensor_hashes": true
+  },
+  "contract_sha256": "d7f1e5fb78372f9c1f78e2845b27e480b4fb426f195af16de129effde6fdae11",
+  "execution_commit": "e5cea27167a433c652ca6c131dfc3b5396c4ad28",
+  "implementation_pass": true,
+  "observed": {
+    "attention_reconstruction_max_abs": 0.01562643051147461,
+    "identity_k12_max_abs": 0.0,
+    "identity_margin_max_abs": 0.0,
+    "jacobian_identity_margin_max_abs": 3.814697265625e-06,
+    "shapley_closure_max_abs": 9.5367431640625e-07,
+    "state_rows": 1976,
+    "tensor_hash_count": 13
+  },
+  "procedure": "prospective-day56-joint-k12-mathematical-mechanism-v1-audit",
+  "schema_version": 1,
+  "two_in_memory_reductions_byte_identical": true
+}

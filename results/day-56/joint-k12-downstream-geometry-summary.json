@@ -1,0 +1,491 @@
+{
+  "direction_summaries": {
+    "correct_to_irrelevant": {
+      "classification_clauses": {
+        "dose_r_squared": false,
+        "dose_secant_deviation": false,
+        "fixed_norm_linear_survival": true,
+        "fixed_norm_mediated": false,
+        "jacobian_cosine": true,
+        "jacobian_recovery": false
+      },
+      "median_concept_fixed_norm_effect_survival_cosine": 0.9818098056734308,
+      "median_concept_fixed_norm_effect_survival_recovery": 1.0577252670869268,
+      "median_concept_free_dose_r_squared": 0.9552562800666909,
+      "median_concept_free_max_in_range_secant_deviation_ratio": 0.10936871894320387,
+      "median_concept_jacobian_exact_effect_cosine": 0.9445912688351651,
+      "median_concept_jacobian_exact_effect_recovery": 0.5995257148481531,
+      "median_jacobian_effective_rank_90": 10.0,
+      "per_concept_dose": [
+        {
+          "concept": "HTML",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9980617735887424,
+          "fixed_norm_effect_survival_recovery": 1.0491077172807692,
+          "free_max_in_range_secant_deviation_ratio": 0.08066055291381327,
+          "free_r_squared": 0.9552562800666909,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.16599920226568343,
+          "frozen_norm_r_squared": 0.9159013005314549
+        },
+        {
+          "concept": "all-caps",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9818098056734308,
+          "fixed_norm_effect_survival_recovery": 0.9585958573841696,
+          "free_max_in_range_secant_deviation_ratio": 0.10936871894320387,
+          "free_r_squared": 0.9691746180907028,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.10193970146759303,
+          "frozen_norm_r_squared": 0.9635960731979973
+        },
+        {
+          "concept": "biology-focused",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9988011728477948,
+          "fixed_norm_effect_survival_recovery": 1.0118184895119344,
+          "free_max_in_range_secant_deviation_ratio": 0.13498825846823836,
+          "free_r_squared": 0.9300728812219478,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.2221236343157177,
+          "frozen_norm_r_squared": 0.8689357200086857
+        },
+        {
+          "concept": "chemistry-based",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9654480520971647,
+          "fixed_norm_effect_survival_recovery": 1.3605921811141297,
+          "free_max_in_range_secant_deviation_ratio": 0.10378763212538118,
+          "free_r_squared": 0.9644267530964952,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.19161166598162765,
+          "frozen_norm_r_squared": 0.8526208772619142
+        },
+        {
+          "concept": "comforting",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9294607049656622,
+          "fixed_norm_effect_survival_recovery": 3.819427997685086,
+          "free_max_in_range_secant_deviation_ratio": 0.1282546238471924,
+          "free_r_squared": 0.9440661949314353,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.3491150556104404,
+          "frozen_norm_r_squared": 0.769508581515745
+        },
+        {
+          "concept": "confused",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9992743060222502,
+          "fixed_norm_effect_survival_recovery": 1.0577252670869268,
+          "free_max_in_range_secant_deviation_ratio": 0.06910469671758968,
+          "free_r_squared": 0.9726192047715404,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.10818330255344631,
+          "frozen_norm_r_squared": 0.9686158850548392
+        },
+        {
+          "concept": "deception",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9923832009125158,
+          "fixed_norm_effect_survival_recovery": 0.9423448202972249,
+          "free_max_in_range_secant_deviation_ratio": 0.046304743054635576,
+          "free_r_squared": 0.9833788377950639,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.10455454159575592,
+          "frozen_norm_r_squared": 0.9704715583848678
+        },
+        {
+          "concept": "finnish",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9150549189668102,
+          "fixed_norm_effect_survival_recovery": 4.666889417211295,
+          "free_max_in_range_secant_deviation_ratio": 0.24127595426218373,
+          "free_r_squared": 0.8170469636204738,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.23123965513443684,
+          "frozen_norm_r_squared": 0.8441918945278815
+        },
+        {
+          "concept": "german",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9432590915280192,
+          "fixed_norm_effect_survival_recovery": 1.0860762992842312,
+          "free_max_in_range_secant_deviation_ratio": 0.2463937748238208,
+          "free_r_squared": 0.8759105755277994,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.06497336193463413,
+          "frozen_norm_r_squared": 0.9860124581382222
+        },
+        {
+          "concept": "harmful",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9930014729797423,
+          "fixed_norm_effect_survival_recovery": 0.9763939337005827,
+          "free_max_in_range_secant_deviation_ratio": 0.07465497979476961,
+          "free_r_squared": 0.9780488371277217,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.11509657816936039,
+          "frozen_norm_r_squared": 0.9626212767423974
+        },
+        {
+          "concept": "jokey",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9571277774648184,
+          "fixed_norm_effect_survival_recovery": 1.340328134608324,
+          "free_max_in_range_secant_deviation_ratio": 0.15519708062388843,
+          "free_r_squared": 0.9463194123359591,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.06038985362714423,
+          "frozen_norm_r_squared": 0.9864959390673733
+        },
+        {
+          "concept": "literature-focused",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.8221900332161238,
+          "fixed_norm_effect_survival_recovery": 3.5952954701719033,
+          "free_max_in_range_secant_deviation_ratio": 0.18236994960074027,
+          "free_r_squared": 0.8862010576969994,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.24148416996543057,
+          "frozen_norm_r_squared": 0.7239346958141472
+        },
+        {
+          "concept": "mathematical",
+          "direction": "correct_to_irrelevant",
+          "fixed_norm_effect_survival_cosine": 0.9976707804372482,
+          "fixed_norm_effect_survival_recovery": 1.0561465594197532,
+          "free_max_in_range_secant_deviation_ratio": 0.06273087481006633,
+          "free_r_squared": 0.9823797968775236,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.059431844394123495,
+          "frozen_norm_r_squared": 0.9874989838039001
+        }
+      ],
+      "per_concept_jacobian": [
+        {
+          "concept": "HTML",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.958629204116315,
+          "exact_effect_recovery": 0.5995257148481531
+        },
+        {
+          "concept": "all-caps",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.9441492959184672,
+          "exact_effect_recovery": 0.5156551894377122
+        },
+        {
+          "concept": "biology-focused",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.940465738835069,
+          "exact_effect_recovery": 0.4012101806452897
+        },
+        {
+          "concept": "chemistry-based",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.8351938767756528,
+          "exact_effect_recovery": 0.49833854815579004
+        },
+        {
+          "concept": "comforting",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.8605222343330419,
+          "exact_effect_recovery": 0.30401797993442575
+        },
+        {
+          "concept": "confused",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.9874040276506002,
+          "exact_effect_recovery": 0.8182966712519653
+        },
+        {
+          "concept": "deception",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.9897921399878546,
+          "exact_effect_recovery": 0.7025379232751956
+        },
+        {
+          "concept": "finnish",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.9646826994718924,
+          "exact_effect_recovery": 1.4168344133125366
+        },
+        {
+          "concept": "german",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.5834378378723393,
+          "exact_effect_recovery": 0.41549624098159166
+        },
+        {
+          "concept": "harmful",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.5,
+          "exact_effect_cosine": 0.9445912688351651,
+          "exact_effect_recovery": 0.6255931538046251
+        },
+        {
+          "concept": "jokey",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.9133830851513411,
+          "exact_effect_recovery": 0.4533369191113341
+        },
+        {
+          "concept": "literature-focused",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.9613695031295573,
+          "exact_effect_recovery": 1.631961868741846
+        },
+        {
+          "concept": "mathematical",
+          "direction": "correct_to_irrelevant",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.9708312111272528,
+          "exact_effect_recovery": 0.7454941918001808
+        }
+      ]
+    },
+    "irrelevant_to_correct": {
+      "classification_clauses": {
+        "dose_r_squared": false,
+        "dose_secant_deviation": false,
+        "fixed_norm_linear_survival": true,
+        "fixed_norm_mediated": false,
+        "jacobian_cosine": true,
+        "jacobian_recovery": false
+      },
+      "median_concept_fixed_norm_effect_survival_cosine": 0.9790075366963731,
+      "median_concept_fixed_norm_effect_survival_recovery": 1.1582493762582553,
+      "median_concept_free_dose_r_squared": 0.9669581439965893,
+      "median_concept_free_max_in_range_secant_deviation_ratio": 0.10496818900498216,
+      "median_concept_jacobian_exact_effect_cosine": 0.9501845373594695,
+      "median_concept_jacobian_exact_effect_recovery": 0.5134141311569178,
+      "median_jacobian_effective_rank_90": 10.0,
+      "per_concept_dose": [
+        {
+          "concept": "HTML",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9978320122427583,
+          "fixed_norm_effect_survival_recovery": 1.0056419388556794,
+          "free_max_in_range_secant_deviation_ratio": 0.09998062201885996,
+          "free_r_squared": 0.9669581439965893,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.13242099957300707,
+          "frozen_norm_r_squared": 0.9357094512060287
+        },
+        {
+          "concept": "all-caps",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9711837335629138,
+          "fixed_norm_effect_survival_recovery": 1.2423289130604722,
+          "free_max_in_range_secant_deviation_ratio": 0.10496818900498216,
+          "free_r_squared": 0.9675202786686734,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.17314956624487535,
+          "frozen_norm_r_squared": 0.8978077054043789
+        },
+        {
+          "concept": "biology-focused",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9742846926332781,
+          "fixed_norm_effect_survival_recovery": 1.2234642289330546,
+          "free_max_in_range_secant_deviation_ratio": 0.14873556575079175,
+          "free_r_squared": 0.9379336317344127,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.3107228400128804,
+          "frozen_norm_r_squared": 0.7988842583844675
+        },
+        {
+          "concept": "chemistry-based",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9910430942630597,
+          "fixed_norm_effect_survival_recovery": 0.9827711923552163,
+          "free_max_in_range_secant_deviation_ratio": 0.11267386414115436,
+          "free_r_squared": 0.9712430455190871,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.10143909695858129,
+          "frozen_norm_r_squared": 0.9670796662057933
+        },
+        {
+          "concept": "comforting",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.998528354431101,
+          "fixed_norm_effect_survival_recovery": 0.885849320578318,
+          "free_max_in_range_secant_deviation_ratio": 0.1260441537402645,
+          "free_r_squared": 0.9315270083652174,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.19376406686745262,
+          "frozen_norm_r_squared": 0.8932040888597848
+        },
+        {
+          "concept": "confused",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.999352423734166,
+          "fixed_norm_effect_survival_recovery": 1.0039912892510392,
+          "free_max_in_range_secant_deviation_ratio": 0.08990192573628183,
+          "free_r_squared": 0.9817118773228704,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.11002009501127985,
+          "frozen_norm_r_squared": 0.9349529875264166
+        },
+        {
+          "concept": "deception",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.954130998778678,
+          "fixed_norm_effect_survival_recovery": 1.1702630490565809,
+          "free_max_in_range_secant_deviation_ratio": 0.0513198386214056,
+          "free_r_squared": 0.9857920148997978,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.18818376362340497,
+          "frozen_norm_r_squared": 0.8284529397961138
+        },
+        {
+          "concept": "finnish",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9939272177159213,
+          "fixed_norm_effect_survival_recovery": 1.1387025741318964,
+          "free_max_in_range_secant_deviation_ratio": 0.2390659261562256,
+          "free_r_squared": 0.9079150086434113,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.11089140472829567,
+          "frozen_norm_r_squared": 0.9592862210377677
+        },
+        {
+          "concept": "german",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9308976147116099,
+          "fixed_norm_effect_survival_recovery": 1.246656311095536,
+          "free_max_in_range_secant_deviation_ratio": 0.22596617210716943,
+          "free_r_squared": 0.8399717669963602,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.07763792480601639,
+          "frozen_norm_r_squared": 0.9794347266849377
+        },
+        {
+          "concept": "harmful",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9790075366963731,
+          "fixed_norm_effect_survival_recovery": 1.1582493762582553,
+          "free_max_in_range_secant_deviation_ratio": 0.0692117296448273,
+          "free_r_squared": 0.9831983361630228,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.15107034929356294,
+          "frozen_norm_r_squared": 0.8894875249135992
+        },
+        {
+          "concept": "jokey",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.8929419785791275,
+          "fixed_norm_effect_survival_recovery": 1.9343894761734979,
+          "free_max_in_range_secant_deviation_ratio": 0.08435873949863475,
+          "free_r_squared": 0.9647491214881193,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.3288891829539118,
+          "frozen_norm_r_squared": 0.39309316469211875
+        },
+        {
+          "concept": "literature-focused",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9446913405860486,
+          "fixed_norm_effect_survival_recovery": 1.5051448255950497,
+          "free_max_in_range_secant_deviation_ratio": 0.15882694210846388,
+          "free_r_squared": 0.9300129186251342,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.058691861884960575,
+          "frozen_norm_r_squared": 0.9882819432646526
+        },
+        {
+          "concept": "mathematical",
+          "direction": "irrelevant_to_correct",
+          "fixed_norm_effect_survival_cosine": 0.9940865534777611,
+          "fixed_norm_effect_survival_recovery": 1.0930926706781965,
+          "free_max_in_range_secant_deviation_ratio": 0.06603135447888217,
+          "free_r_squared": 0.9819212862920528,
+          "frozen_norm_max_in_range_secant_deviation_ratio": 0.055112233523034765,
+          "frozen_norm_r_squared": 0.9892408385543421
+        }
+      ],
+      "per_concept_jacobian": [
+        {
+          "concept": "HTML",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.8381091642040917,
+          "exact_effect_recovery": 0.4765341850170213
+        },
+        {
+          "concept": "all-caps",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.8332038174995527,
+          "exact_effect_recovery": 0.4796385266462888
+        },
+        {
+          "concept": "biology-focused",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.836967417035942,
+          "exact_effect_recovery": 0.3017939788189325
+        },
+        {
+          "concept": "chemistry-based",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.9528840546858899,
+          "exact_effect_recovery": 0.5107832222189144
+        },
+        {
+          "concept": "comforting",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.9676742055956027,
+          "exact_effect_recovery": 0.37824060009156985
+        },
+        {
+          "concept": "confused",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.5,
+          "exact_effect_cosine": 0.9886237018240498,
+          "exact_effect_recovery": 0.5134141311569178
+        },
+        {
+          "concept": "deception",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.9728255641236887,
+          "exact_effect_recovery": 0.7086259004450342
+        },
+        {
+          "concept": "finnish",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.8206160029590748,
+          "exact_effect_recovery": 0.2762405457233478
+        },
+        {
+          "concept": "german",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.8842148719167264,
+          "exact_effect_recovery": 1.3183969884816937
+        },
+        {
+          "concept": "harmful",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.5,
+          "exact_effect_cosine": 0.9739664662306633,
+          "exact_effect_recovery": 0.6824679980796645
+        },
+        {
+          "concept": "jokey",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.9501845373594695,
+          "exact_effect_recovery": 0.6078050507376107
+        },
+        {
+          "concept": "literature-focused",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 11.0,
+          "exact_effect_cosine": 0.8459643924405897,
+          "exact_effect_recovery": 0.5812645841964483
+        },
+        {
+          "concept": "mathematical",
+          "direction": "irrelevant_to_correct",
+          "effective_rank_90": 10.0,
+          "exact_effect_cosine": 0.9613289746430974,
+          "exact_effect_recovery": 0.761611203394707
+        }
+      ]
+    }
+  },
+  "downstream_classification": "mixed_or_nonlinear_state_dependent",
+  "procedure": "prospective-day56-joint-k12-mathematical-mechanism-v1-downstream-geometry",
+  "schema_version": 1
+}

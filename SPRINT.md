@@ -1130,19 +1130,20 @@ This program searches for a compact upstream state that bidirectionally configur
 
 ## Day 56: Identify the joint-K12 mathematical mechanism
 
-**Status:** In progress
+**Status:** Complete
 **Plan:** [Rapid joint-K12 mathematical-mechanism plan](docs/rapid-joint-k12-mechanism-plan.md)
 **Authorization:** [Decision 0088](decision-log/0088-authorize-joint-k12-mathematical-mechanism.md)
 **Frozen contract:** [Day 56 joint-K12 mechanism contract](results/day-56/frozen-joint-k12-mechanism-contract.json)
+**Evidence:** [Day 56 result](docs/day-56-joint-k12-mechanism-results.md) and [Decision 0089](decision-log/0089-accept-content-dominant-monitoring-prefix-mechanism.md)
 
 ### Checklist
 
 - [x] Freeze exact attention routing/content algebra, source regions, joint candidates, controls, geometry tests, gates, and stop rules.
-- [ ] Implement and pass candidate-blind algebra, identity, fixed-normalization, and Jacobian preflights.
-- [ ] Execute the exact reciprocal 13-concept joint-intervention matrix.
-- [ ] Select at most one compact operator mechanically and apply its already-frozen causal closure tests.
-- [ ] Reproduce and hash-verify all reducers and artifacts; terminate the exact GPU worker.
+- [x] Pass the candidate-blind algebra/identity/fixed-normalization preflight and the final Jacobian identity audit.
+- [x] Execute the exact reciprocal 13-concept joint-intervention matrix.
+- [x] Select at most one compact operator mechanically and apply its already-frozen causal closure tests.
+- [x] Reproduce and hash-verify all reducers and artifacts; terminate the exact GPU worker.
 
 ### Completion gate
 
-- [ ] Report the frozen mathematical classification or the bounded failure of every tested compact joint operator.
+- [x] Report a content-dominant monitoring-prefix rewrite with mixed downstream dynamics and no compact operator passing exact reciprocal closure.

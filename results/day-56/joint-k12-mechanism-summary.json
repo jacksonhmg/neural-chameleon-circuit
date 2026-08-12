@@ -1,0 +1,22 @@
+{
+  "analysis_commit": "e5cea27167a433c652ca6c131dfc3b5396c4ad28",
+  "attention_operation_classification": "mixed_distributed_routing_content_and_source_regions",
+  "attention_summary_path": "results/day-56/joint-k12-attention-algebra-summary.json",
+  "boundary": "development sandbox only; no fresh checkpoint, behavior, generation, or title upgrade",
+  "bounded_conclusion": "exact K12 is causal and translation-like only if the downstream gate passes; no tested compact routing/content or source-region component closes its full effect",
+  "causal_closure_disposition": "no_tested_compact_joint_operator_closes",
+  "closure_summary_path": "results/day-56/joint-k12-causal-closure-summary.json",
+  "contract_sha256": "d7f1e5fb78372f9c1f78e2845b27e480b4fb426f195af16de129effde6fdae11",
+  "downstream_classification": "mixed_or_nonlinear_state_dependent",
+  "evidence_class": "new causal interventions on the unchanged 26-example development sandbox; not fresh confirmation",
+  "execution_commit": "e5cea27167a433c652ca6c131dfc3b5396c4ad28",
+  "geometry_summary_path": "results/day-56/joint-k12-downstream-geometry-summary.json",
+  "prior_model_selection": {
+    "best_normal_state_conditioned_low_rank_effect_rse": 1.1613915595622617,
+    "concept_position_prototype_offline_effect_rse": 0.12574920220016875,
+    "heldout_concept_position_total_effect_recovery": 0.9519284965046956
+  },
+  "procedure": "prospective-day56-joint-k12-mathematical-mechanism-v1",
+  "schema_version": 1,
+  "selected_compact_joint_operator": null
+}

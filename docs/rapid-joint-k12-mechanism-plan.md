@@ -2,7 +2,7 @@
 
 ## Status and authority
 
-- **Status:** Authorized and prospectively specified; every machine-readable gate must be committed before new outcomes.
+- **Status:** Complete. The prospectively specified program was executed under its committed gates; see [Day 56 results](day-56-joint-k12-mechanism-results.md).
 - **Date:** 2026-08-12.
 - **Target title:** *Causal Mechanisms of Activation-Monitor Evasion in a Neural Chameleon* (still provisional and unearned).
 - **Authorization:** The user explicitly authorized documenting and fully executing this plan, including GPU use.
