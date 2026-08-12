@@ -388,8 +388,7 @@ def write_shard(
     )
 
 
-def run_batch(
-    batch_index: int,
+def run_microbatch(
     batch: Sequence[Mapping[str, Any]],
     runner: Any,
     realized: Any,
@@ -399,7 +398,7 @@ def run_batch(
     component_ids: Sequence[str],
     contract: Mapping[str, Any],
     commit: str,
-) -> None:
+) -> tuple[dict[str, dict[str, torch.Tensor]], dict[str, Any]]:
     pair_spec = contract["conditions"]["pairs"][batch[0]["concept"]]
     _pair, conditions = prepare_conditions(runner, batch, pair_spec)
     captures = {name: realized.run(condition) for name, condition in conditions.items()}
@@ -449,7 +448,64 @@ def run_batch(
             probes,
         )
         audits[direction] = direction_audits
-    write_shard(batch_index, batch, states, audits, commit)
+    if runner.registered_hook_count() != 0:
+        raise RuntimeError("Day 58 microbatch leaked hooks")
+    return states, audits
+
+
+def run_batch(
+    batch_index: int,
+    batch: Sequence[Mapping[str, Any]],
+    runner: Any,
+    realized: Any,
+    attention: Any,
+    vector: Any,
+    probes: Sequence[Any],
+    component_ids: Sequence[str],
+    contract: Mapping[str, Any],
+    commit: str,
+) -> None:
+    microbatch_size = int(
+        contract["evidence"]["development_panel"]["execution_microbatch_size"]
+    )
+    if len(batch) % microbatch_size:
+        raise RuntimeError("Day 58 shard batch is not divisible by its microbatch")
+    state_parts: list[dict[str, dict[str, torch.Tensor]]] = []
+    audit_parts = []
+    for start in range(0, len(batch), microbatch_size):
+        states, audits = run_microbatch(
+            batch[start : start + microbatch_size],
+            runner,
+            realized,
+            attention,
+            vector,
+            probes,
+            component_ids,
+            contract,
+            commit,
+        )
+        state_parts.append(states)
+        audit_parts.append(audits)
+        gc.collect()
+        torch.cuda.empty_cache()
+    if len({tuple(sorted(states)) for states in state_parts}) != 1:
+        raise RuntimeError("Day 58 microbatch state sets differ")
+    combined = {
+        state_name: {
+            field: torch.cat(
+                [states[state_name][field] for states in state_parts], dim=0
+            )
+            for field in state_parts[0][state_name]
+        }
+        for state_name in state_parts[0]
+    }
+    write_shard(
+        batch_index,
+        batch,
+        combined,
+        {"execution_microbatches": audit_parts},
+        commit,
+    )
     if runner.registered_hook_count() != 0:
         raise RuntimeError("Day 58 batch leaked hooks")
 
@@ -533,7 +589,20 @@ def main() -> None:
     attention = AttentionStateCaptureRunner(runner, monitor_layer=12)
     vector = VectorizedUpstreamRunner(runner, probes, component_ids, monitor_layer=12)
     if args.preflight_only:
-        preflight(batches[0], runner, realized, attention, vector, probes, component_ids, contract, commit)
+        microbatch_size = int(
+            contract["evidence"]["development_panel"]["execution_microbatch_size"]
+        )
+        preflight(
+            batches[0][:microbatch_size],
+            runner,
+            realized,
+            attention,
+            vector,
+            probes,
+            component_ids,
+            contract,
+            commit,
+        )
         return
     if not PREFLIGHT_PATH.exists():
         raise RuntimeError("Day 58 preflight has not run")

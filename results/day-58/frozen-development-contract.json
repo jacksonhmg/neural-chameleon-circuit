@@ -19,6 +19,7 @@
       "examples": 176,
       "examples_per_concept": 16,
       "batch_size": 4,
+      "execution_microbatch_size": 2,
       "status": "opened development evidence after Day 57"
     },
     "sealed_confirmation_panel": {
@@ -98,6 +99,7 @@
     "hooks_after_batch": 0,
     "examples": 176,
     "state_rows": 8096,
+    "uniform_execution_microbatch_size": 2,
     "two_reductions_byte_identical": true
   },
   "stop_rules": [
