@@ -137,8 +137,8 @@ def test_prompt_value_operation_changes_v_but_retains_target_qk() -> None:
     source_mask = torch.tensor([[True, True, False, False]])
     target_mask = torch.tensor([[False, True, True, False]])
     changed = prompt_value_operation(source, target, (1,), source_mask, target_mask)
-    expected_values = target.values[0, 0].float().clone()
-    expected_values[[1, 2]] = source.values[0, 0, [0, 1]].float()
+    expected_values = target.values[0, 0].clone()
+    expected_values[[1, 2]] = source.values[0, 0, [0, 1]]
     expected = upstream._recompute_response_head(
         target,
         0,
@@ -157,8 +157,8 @@ def test_prompt_qk_operation_changes_qk_but_retains_target_v() -> None:
     source_mask = torch.tensor([[True, True, False, False]])
     target_mask = torch.tensor([[False, True, True, False]])
     changed = prompt_qk_operation(source, target, (1,), source_mask, target_mask)
-    expected_keys = target.keys[0, 0].float().clone()
-    expected_keys[[1, 2]] = source.keys[0, 0, [0, 1]].float()
+    expected_keys = target.keys[0, 0].clone()
+    expected_keys[[1, 2]] = source.keys[0, 0, [0, 1]]
     expected = upstream._recompute_response_head(
         target,
         0,

@@ -201,7 +201,14 @@ def _recompute_response_head(
         if target.scaling is not None
         else float(query.shape[-1] ** -0.5)
     )
-    logits = query.float() @ keys.float().T
+    # Match Transformers eager attention exactly: QK and V products stay in the
+    # model dtype, only softmax is upcast, and its probabilities are cast back.
+    # Computing the whole expression in float32 creates material raw-head drift
+    # on longer sequences even for a natural identity recomputation.
+    dtype = query.dtype
+    keys = keys.to(dtype=dtype)
+    values = values.to(dtype=dtype)
+    logits = query @ keys.T
     logits *= scaling
     if target.softcap is not None:
         logits = torch.tanh(logits / float(target.softcap)) * float(target.softcap)
@@ -211,9 +218,9 @@ def _recompute_response_head(
             mask = mask[0]
         start = target.response_start
         stop = start + target.response_mask.shape[1]
-        logits += mask[start:stop, : target.raw_head_output.shape[1]].float()
-    pattern = torch.softmax(logits, dim=-1)
-    return pattern @ values.float()
+        logits += mask[start:stop, : target.raw_head_output.shape[1]].to(logits.dtype)
+    pattern = torch.softmax(logits, dim=-1, dtype=torch.float32).to(dtype)
+    return (pattern @ values).float()
 
 
 def response_query_operation(
@@ -288,10 +295,10 @@ def prompt_value_operation(
         aligned_source = _aligned_source_indices(source_indices, len(target_indices))
         for head in heads:
             kv_head = query_to_kv_head(head, query_heads, kv_heads)
-            values = target.values[row, kv_head].float().clone()
+            values = target.values[row, kv_head].clone()
             values[target_indices] = source.values[
                 row, kv_head, aligned_source
-            ].float()
+            ].to(values.dtype)
             output[row, :, head] = _recompute_response_head(
                 target,
                 row,
@@ -339,10 +346,10 @@ def prompt_qk_operation(
         aligned_source = _aligned_source_indices(source_indices, len(target_indices))
         for head in heads:
             kv_head = query_to_kv_head(head, query_heads, kv_heads)
-            keys = target.keys[row, kv_head].float().clone()
+            keys = target.keys[row, kv_head].clone()
             keys[target_indices] = source.keys[
                 row, kv_head, aligned_source
-            ].float()
+            ].to(keys.dtype)
             output[row, :, head] = _recompute_response_head(
                 target,
                 row,
@@ -394,16 +401,18 @@ def prompt_memory_operation(
             source_query = source.queries[row, head, source_start:source_stop]
             target_query = target.queries[row, head, target_start:target_stop]
             query = source_query if include_source_query else target_query
-            keys = target.keys[row, kv_head].float().clone()
-            values = target.values[row, kv_head].float().clone()
+            keys = target.keys[row, kv_head].clone()
+            values = target.values[row, kv_head].clone()
             if source_indices and target_indices:
                 aligned_source = _aligned_source_indices(
                     source_indices, len(target_indices)
                 )
-                keys[target_indices] = source.keys[row, kv_head, aligned_source].float()
+                keys[target_indices] = source.keys[
+                    row, kv_head, aligned_source
+                ].to(keys.dtype)
                 values[target_indices] = source.values[
                     row, kv_head, aligned_source
-                ].float()
+                ].to(values.dtype)
                 output[row, :, head] = _recompute_response_head(
                     target, row, head, query, keys, values
                 )
@@ -414,8 +423,8 @@ def prompt_memory_operation(
                     target, row, head, query, keys, values
                 )
             elif source_indices and not target_indices:
-                source_keys = source.keys[row, kv_head].float().clone()
-                source_values = source.values[row, kv_head].float().clone()
+                source_keys = source.keys[row, kv_head].clone()
+                source_values = source.values[row, kv_head].clone()
                 removed_keys = source_keys.clone()
                 removed_values = source_values.clone()
                 removed_keys[source_indices] = 0
