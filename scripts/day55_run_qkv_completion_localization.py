@@ -321,13 +321,24 @@ def run_preflight(
         exact_parent = parent_k12(DAY54_SHARD_DIR, concept, direction)
         qkv_indices = torch.arange(0, 20, 2)
         exact_indices = torch.arange(1, 20, 2)
+        response_mask = (
+            conditions[target_name].response_mask[None, :, :, None, None].bool()
+        )
+        qkv_difference = (output.k12[qkv_indices] - qkv_parent.unsqueeze(0)).abs()
+        exact_difference = (output.k12[exact_indices] - exact_parent.unsqueeze(0)).abs()
         reproduction[direction] = {
             "qkv_k12_max_abs": float(
-                (output.k12[qkv_indices] - qkv_parent.unsqueeze(0)).abs().max()
+                qkv_difference.masked_select(
+                    response_mask.expand_as(qkv_difference)
+                ).max()
             ),
             "exact_k12_max_abs": float(
-                (output.k12[exact_indices] - exact_parent.unsqueeze(0)).abs().max()
+                exact_difference.masked_select(
+                    response_mask.expand_as(exact_difference)
+                ).max()
             ),
+            "qkv_k12_unmasked_max_abs_diagnostic": float(qkv_difference.max()),
+            "exact_k12_unmasked_max_abs_diagnostic": float(exact_difference.max()),
         }
         audits[direction] = audit.to_dict()
         outputs[direction] = output

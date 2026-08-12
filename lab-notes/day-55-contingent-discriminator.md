@@ -11,3 +11,7 @@ Day 54 passed both reciprocal gates, admitting only the QKV completion branch. T
 ## 2026-08-11 — Saved-baseline replay repair
 
 The first candidate-blind preflight stopped because a fresh H100 SXM realization of the QKV computation differed from the saved H100 PCIe Day 52 K12 output by `0.094–0.108`; exact Day 54 K12 reproduced at zero error and no localization outcome was generated. Decision 0084 preserves the `0.02` gate by replaying the exact saved Day 52 QKV-produced K12 tensor as the baseline. This is the literal state whose exact-donor completion is being localized and avoids conflating hardware-dependent recomputation drift with a scientific completion effect.
+
+## 2026-08-11 — Valid-response audit repair
+
+The replay preflight then exposed that the implementation compared the parent state over padded positions that the intervention framework intentionally does not patch. Decision 0085 applies the unchanged `0.02` reproduction gate only to `response_mask` positions, matching the intervention support and all scientific estimands, while retaining the all-position error as an adverse diagnostic. This second failed preflight also generated no localization outcome.
