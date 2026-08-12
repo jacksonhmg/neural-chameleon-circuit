@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_day56_joint_mechanism_outcomes",
+  "frozen_on": "2026-08-12",
+  "procedure": "prospective-day56-joint-k12-mathematical-mechanism-v1",
+  "evidence_class": "new causal interventions on the unchanged 26-example development sandbox; not fresh confirmation",
+  "authorization": "Decision 0088 records explicit user authorization for full execution and GPU use",
+  "parents": {
+    "day54_contract_path": "results/day-54/frozen-exact-donor-k12-contract.json",
+    "day54_contract_sha256": "d4589659e68d40dfdc60115f4a2dfbe5e58dbf029eebed8baa9fde89e55d6990",
+    "day54_summary_sha256": "d61e91794710de2a73975c8045991f69dc6f424505808c64d2b0cd91730c6436",
+    "day55_summary_sha256": "af27e3805a2e65d1ab71bf84a7009f36874687a80aec128cfbe8ed48d3bfe978",
+    "day44_offline_screen_sha256": "e6ce63973cedb21eeb6b3ce62c4796e7bca21a7926c9d9981f7ef9c0d366a304",
+    "day47_heldout_summary_sha256": "46518d06c138a227b8565163dc56ff0aab46e3b5e39f63c9f5dcf729724beb07"
+  },
+  "causal_object": "all 12 selected response-token raw pre-o_proj K12 heads jointly",
+  "directions": {
+    "correct_to_irrelevant": {
+      "target": "irrelevant_trigger",
+      "donor": "correct_trigger",
+      "normal_control": "normal",
+      "different_control": "different_trigger"
+    },
+    "irrelevant_to_correct": {
+      "target": "correct_trigger",
+      "donor": "irrelevant_trigger",
+      "normal_control": "normal",
+      "different_control": "different_trigger"
+    }
+  },
+  "atomic_source_regions": [
+    "monitoring_language",
+    "named_concept",
+    "trigger_other",
+    "original_prompt",
+    "template",
+    "response"
+  ],
+  "source_groups": {
+    "monitoring_prefix_delta": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other"
+    ],
+    "prompt_context_delta": [
+      "original_prompt",
+      "template"
+    ],
+    "response_history_delta": [
+      "response"
+    ]
+  },
+  "attention_factorization": {
+    "routing_hybrid": "sum over regions of donor attention mass times target conditional value mean",
+    "content_hybrid": "sum over regions of target attention mass times donor conditional value mean",
+    "routing_shapley": "half of routing change at target content plus routing change at donor content",
+    "content_shapley": "half of content change at target routing plus content change at donor routing",
+    "closure": "routing_shapley plus content_shapley equals exact donor minus exact target"
+  },
+  "candidate_simplicity_order": [
+    "routing_shapley",
+    "content_shapley",
+    "monitoring_prefix_delta",
+    "prompt_context_delta",
+    "response_history_delta"
+  ],
+  "free_jobs": {
+    "base": [
+      "identity_target",
+      "exact_donor_all",
+      "exact_delta_haar",
+      "dose_0.25",
+      "dose_0.50",
+      "dose_0.75",
+      "dose_1.25",
+      "routing_hybrid",
+      "content_hybrid"
+    ],
+    "per_candidate": [
+      "install",
+      "remove",
+      "haar_install"
+    ],
+    "per_atomic_region": [
+      "install"
+    ],
+    "jobs_per_direction": 30
+  },
+  "frozen_norm_jobs": [
+    "identity_target",
+    "dose_0.25",
+    "dose_0.50",
+    "dose_0.75",
+    "exact_donor_all",
+    "dose_1.25"
+  ],
+  "dose_alphas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25
+  ],
+  "jacobian": {
+    "location": "natural target joint K12 state",
+    "outputs": "13 response-mean raw probe margins",
+    "stored": [
+      "13x13 output Gram matrix",
+      "13 singular values",
+      "exact-delta linear prediction",
+      "five candidate linear predictions"
+    ]
+  },
+  "candidate_gate": {
+    "all_clauses_required_in_both_directions": true,
+    "median_concept_install_probe_recovery_min": 0.8,
+    "median_concept_remove_probe_recovery_min": 0.8,
+    "median_install_advantage_over_matched_haar_min": 0.25,
+    "median_residual_probe_norm_ratio_max": 0.2,
+    "installed_probe_donor_nearest_concepts_min": 10,
+    "selection": "first qualifying candidate in frozen simplicity order; otherwise none"
+  },
+  "downstream_classification": {
+    "dose_linearity": {
+      "median_concept_r_squared_min": 0.98,
+      "median_concept_max_in_range_secant_deviation_ratio_max": 0.1
+    },
+    "jacobian": {
+      "median_concept_exact_effect_recovery_min": 0.8,
+      "median_concept_exact_effect_cosine_min": 0.9
+    },
+    "fixed_norm_effect_survival": {
+      "linear_translation_min_both_directions": 0.8,
+      "rmsnorm_mediated_max_both_directions": 0.5
+    },
+    "rules": {
+      "locally_linear_additive_translation": "dose, Jacobian, and fixed-norm linear-translation clauses all pass in both directions",
+      "rmsnorm_mediated_geometry": "fixed-norm survival is at most 0.5 in both directions",
+      "mixed_or_nonlinear_state_dependent": "otherwise"
+    }
+  },
+  "controls": {
+    "haar_base_seed": 56001,
+    "haar_draw_index": 0,
+    "natural_endpoints": [
+      "target",
+      "donor",
+      "normal",
+      "different"
+    ],
+    "prior_model_selection": "hash-pinned Day 44 offline screen and Day 47 held-out prototype result"
+  },
+  "implementation_gates": {
+    "backend": "CUDA only",
+    "attention_reconstruction_max_abs": 0.05,
+    "shapley_closure_max_abs": 1e-05,
+    "identity_k12_max_abs": 0.02,
+    "identity_monitor_margin_max_abs": 0.05,
+    "frozen_norm_identity_monitor_margin_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "haar_invariants_pass": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "concept_shards": 13,
+    "states_per_example": 76,
+    "total_state_rows": 1976,
+    "unique_tensor_hashes": 13,
+    "two_reductions_byte_identical": true
+  },
+  "required_outputs": [
+    "preflight",
+    "execution record",
+    "example and concept metrics",
+    "attention algebra summary",
+    "downstream geometry summary",
+    "causal closure summary",
+    "implementation audit",
+    "artifact manifest"
+  ],
+  "forbidden": [
+    "single-head or single-layer selection",
+    "post-outcome candidate combinations or threshold changes",
+    "fresh data, behavior, generation, or fresh checkpoints",
+    "title upgrade from this development program alone"
+  ]
+}

@@ -15,8 +15,8 @@ This file is the operational source of truth for project progress. The [original
 
 ## Current position
 
-**Current phase:** Day 55 — Complete. Exact selected K12 transfers donor identity in fixed target context, and the QKV-to-exact shortfall is distributed across selected heads/layers.
-**Next action:** Separately plan the title-relevant experiment that distinguishes candidate mathematical operations of the exact distributed K12 pattern and identifies how the upstream network produces it.
+**Current phase:** Day 56 — In progress. Prospectively identifying the exact joint attention algebra and downstream geometry of the coordinated K12 pattern.
+**Next action:** Implement and preflight the frozen Day 56 joint-K12 mechanism matrix, then execute its causal closure without outcome-based candidate additions.
 
 ---
 
@@ -1127,3 +1127,22 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] No head or layer qualifies; the missing monitor-sensitive component is distributed across selected heads/layers.
+
+## Day 56: Identify the joint-K12 mathematical mechanism
+
+**Status:** In progress
+**Plan:** [Rapid joint-K12 mathematical-mechanism plan](docs/rapid-joint-k12-mechanism-plan.md)
+**Authorization:** [Decision 0088](decision-log/0088-authorize-joint-k12-mathematical-mechanism.md)
+**Frozen contract:** [Day 56 joint-K12 mechanism contract](results/day-56/frozen-joint-k12-mechanism-contract.json)
+
+### Checklist
+
+- [x] Freeze exact attention routing/content algebra, source regions, joint candidates, controls, geometry tests, gates, and stop rules.
+- [ ] Implement and pass candidate-blind algebra, identity, fixed-normalization, and Jacobian preflights.
+- [ ] Execute the exact reciprocal 13-concept joint-intervention matrix.
+- [ ] Select at most one compact operator mechanically and apply its already-frozen causal closure tests.
+- [ ] Reproduce and hash-verify all reducers and artifacts; terminate the exact GPU worker.
+
+### Completion gate
+
+- [ ] Report the frozen mathematical classification or the bounded failure of every tested compact joint operator.
