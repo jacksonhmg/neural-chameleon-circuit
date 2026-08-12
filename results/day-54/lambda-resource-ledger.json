@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "neural-chameleon-circuit",
+  "stage": "day54-exact-k12-and-earned-branch",
+  "provider": "lambda-cloud",
+  "instance_id": "35f31ab233204ebb9ea1390295c9e7df",
+  "name": "neural-chameleon-day54-20260812-012456",
+  "instance_type": "gpu_1x_h100_sxm5",
+  "region": "us-south-2",
+  "hourly_usd": 4.29,
+  "status": "booting",
+  "launched_at_utc_from_instance_name": "2026-08-12T01:24:56Z",
+  "ownership_basis": "exact returned launch ID, unique project/stage tags, and immediate authenticated inventory",
+  "terminate_only_exact_instance_id": true,
+  "automatic_termination_guard_hours": 3,
+  "authorized_budget_usd": 100.0,
+  "other_account_instances_excluded": true
+}
