@@ -369,8 +369,14 @@ def jobs_for_direction(
         jobs[name] = job
         audits.update({f"{name}.{key}": value for key, value in job_audits.items()})
     order = tuple(contract["jobs_per_direction"])
-    if set(jobs) != set(order):
+    if not set(order).issubset(jobs):
         raise RuntimeError("Day 58 job construction differs from contract")
+    if (
+        contract.get("procedure")
+        == "day58-k12-residual-context-and-pathway-development-v1"
+        and set(jobs) != set(order)
+    ):
+        raise RuntimeError("Day 58 development job matrix differs from contract")
     return [jobs[name] for name in order], audits, {"target": target_values, "donor": donor_values}
 
 

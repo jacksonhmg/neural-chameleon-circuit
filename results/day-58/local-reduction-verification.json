@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "procedure": "day58-independent-local-reduction-verification-v1",
+  "remote_summary_sha256": "81ac16cd02199aec7fdb3fb9e843e3080ef25af52d9162e3a5510211d6190cf6",
+  "local_summary_sha256": "de8f7f60df36db11ff8d600edd59566f76299bfea45105b297c8b17e6bf7ee5c",
+  "remote_example_metrics_sha256": "8d0eaa5610e1a41ae264cef96e519f8d18420627e693d073cbfe246f385b4140",
+  "local_example_metrics_sha256": "1e95432fedf09b473b1f78484a47db629e716205f0704245055c409c0e3cd225",
+  "artifact_manifest_sha256_both_platforms": "12bbf2d97948ef4101d8015e9e7fb40b5ec8500526e7695fb28020764b8b8abc",
+  "summary_structure_and_labels_exact": true,
+  "example_metric_structure_and_labels_exact": true,
+  "summary_max_absolute_numeric_difference": 4.440892098500626e-16,
+  "example_metrics_max_absolute_numeric_difference": 8.881784197001252e-16,
+  "all_decisions_and_gate_booleans_exact": true
+}

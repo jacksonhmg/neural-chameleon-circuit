@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "contract_sha256": "f07906546690a8573572a17abfc004fa6b9255f17b58420d39e92303e0003804",
+  "elapsed_seconds_this_invocation": 0.09957651900003839,
+  "examples": 176,
+  "execution_commit": "0400d6f02c22d8e993b495d87e6b19126865e94e",
+  "peak_cuda_allocated_bytes": 18483412480,
+  "peak_cuda_reserved_bytes": 18498977792,
+  "preflight_sha256": "224e3afcc51b8b789ade145890aa6244d25c0e7d5029cca67b3eccfee649605d",
+  "procedure": "day58-k12-residual-context-and-pathway-development-v1",
+  "schema_version": 1,
+  "shards": 44,
+  "state_rows": 8096
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_accessing_the_day57_pathway_panel",
+  "procedure": "day59-selected-k12-context-pathway-confirmation-and-acquisition-v1",
+  "frozen_on": "2026-08-12",
+  "authorization": "User authorized full execution, GPU usage, and completion under $100 incremental spend",
+  "parents": {
+    "day57_contract_path": "results/day-57/frozen-confirm-trace-acquisition-contract.json",
+    "day57_contract_sha256": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+    "day58_contract_path": "results/day-58/frozen-development-contract.json",
+    "day58_contract_sha256": "f07906546690a8573572a17abfc004fa6b9255f17b58420d39e92303e0003804",
+    "day58_summary_path": "results/day-58/development-summary.json",
+    "day58_summary_sha256": "de8f7f60df36db11ff8d600edd59566f76299bfea45105b297c8b17e6bf7ee5c",
+    "day58_local_verification_path": "results/day-58/local-reduction-verification.json"
+  },
+  "panel": {
+    "path": "data/splits/day57-v1/path-tracing.jsonl",
+    "sha256": "7cfb50526c1da9925e7c1a5209b6546b76c8ffc05b8060cc912b1445c4e1add8",
+    "examples": 44,
+    "examples_per_concept": 4,
+    "shard_batch_size": 4,
+    "execution_microbatch_size": 1,
+    "status": "sealed until this contract is committed"
+  },
+  "models": ["chameleon", "exact_precursor"],
+  "selected_objects": {
+    "k12_pathway": "qkv_prefix",
+    "causal_context": "other_heads",
+    "joint_state": "exact_plus_other_heads",
+    "selection_source": "mechanical Day 58 development gates"
+  },
+  "jobs_per_direction": [
+    "identity_target",
+    "exact_donor_k12",
+    "exact_k12_orthogonal",
+    "qkv_prefix",
+    "other_heads",
+    "other_heads_orthogonal",
+    "exact_plus_other_heads",
+    "exact_plus_other_heads_orthogonal",
+    "full_tail"
+  ],
+  "chameleon_confirmation_gates_both_directions": {
+    "exact_k12_natural_probe_recovery_min": 0.70,
+    "qkv_probe_recovery_to_exact_k12_min": 0.75,
+    "qkv_k12_recovery_min": 0.70,
+    "qkv_advantage_over_exact_orthogonal_min": 0.40,
+    "qkv_exact_nearest_concepts_min": 9,
+    "joint_natural_probe_recovery_min": 0.90,
+    "joint_increment_over_exact_k12_min": 0.10,
+    "joint_advantage_over_orthogonal_min": 0.10,
+    "joint_natural_probe_residual_norm_ratio_max": 0.35,
+    "full_tail_natural_probe_recovery_min": 0.98
+  },
+  "precursor_acquisition_gates_both_directions": {
+    "natural_probe_effect_norm_ratio_max": 0.50,
+    "natural_k12_effect_norm_ratio_max": 0.50,
+    "qkv_probe_effect_norm_ratio_max": 0.50,
+    "qkv_k12_effect_norm_ratio_max": 0.50,
+    "joint_probe_effect_norm_ratio_max": 0.50
+  },
+  "classification": {
+    "acquired": "all Chameleon confirmation and precursor ratio gates pass in both directions",
+    "conserved": "Chameleon confirms but any precursor ratio exceeds 0.50 in both directions",
+    "ambiguous": "Chameleon fails confirmation or precursor ratios are directionally mixed"
+  },
+  "execution": {
+    "one_batch_per_fresh_process": true,
+    "backend": "CUDA",
+    "dtype": "bfloat16 model; float32 interventions",
+    "same_jobs_examples_tokens_and_probes_across_checkpoints": true,
+    "chameleon_must_confirm_before_precursor_outcomes": true,
+    "two_independent_reductions": true
+  },
+  "implementation_gates": {
+    "identity_k12_max_abs": 0.02,
+    "identity_monitor_margin_max_abs": 0.05,
+    "full_tail_monitor_margin_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "cross_checkpoint_response_ids_exact": true,
+    "all_tensor_hashes_verified": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "examples_per_checkpoint": 44,
+    "state_rows_per_checkpoint": 968
+  },
+  "stop_rules": [
+    "do not run precursor outcomes unless Chameleon confirmation passes",
+    "do not add candidates or change gates after panel access",
+    "do not call the 52-head context compact; report it as distributed tail attention context",
+    "terminate only the dedicated Day 58/59 instance after all artifacts are recovered"
+  ],
+  "budget": {"combined_day58_day59_incremental_maximum_usd": 100.0}
+}

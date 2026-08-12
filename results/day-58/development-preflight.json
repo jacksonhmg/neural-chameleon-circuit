@@ -1,0 +1,22 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "cuda": true,
+    "finite": true,
+    "hooks_removed": true,
+    "identity_k12": true,
+    "identity_margins": true,
+    "response_ids": true,
+    "response_mask": true
+  },
+  "contract_sha256": "f07906546690a8573572a17abfc004fa6b9255f17b58420d39e92303e0003804",
+  "example_ids": [
+    "fresh-confirm-HTML-pos-000"
+  ],
+  "execution_commit": "0400d6f02c22d8e993b495d87e6b19126865e94e",
+  "identity_k12_max_abs": 0.0,
+  "identity_monitor_margin_max_abs": 9.5367431640625e-07,
+  "procedure": "day58-development-preflight-v1",
+  "result": "pass",
+  "schema_version": 1
+}
