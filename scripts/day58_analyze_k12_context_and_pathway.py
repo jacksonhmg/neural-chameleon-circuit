@@ -210,20 +210,20 @@ def main() -> None:
     context_gates = contract["selection"]["context_gate_both_directions"]
     for candidate in contract["selection"]["context_candidate_order"]:
         pair = f"exact_plus_{candidate}"
-        pair_haar = f"exact_plus_{candidate}_haar"
+        pair_orthogonal = f"exact_plus_{candidate}_orthogonal"
         directional = {}
         for direction, payload in by_direction.items():
             jobs = payload["jobs"]
             values = {
                 "paired_natural_probe_recovery": jobs[pair]["natural_recovery"]["median_concept"],
                 "increment_over_exact_k12": jobs[pair]["natural_recovery"]["median_concept"] - jobs["exact_donor_k12"]["natural_recovery"]["median_concept"],
-                "paired_advantage_over_haar": jobs[pair]["natural_recovery"]["median_concept"] - jobs[pair_haar]["natural_recovery"]["median_concept"],
+                "paired_advantage_over_orthogonal": jobs[pair]["natural_recovery"]["median_concept"] - jobs[pair_orthogonal]["natural_recovery"]["median_concept"],
                 "paired_natural_probe_residual_norm_ratio": jobs[pair]["natural_residual_norm_ratio"]["median_concept"],
             }
             passed = {
                 "paired_natural_probe_recovery": values["paired_natural_probe_recovery"] >= float(context_gates["paired_natural_probe_recovery_min"]),
                 "increment_over_exact_k12": values["increment_over_exact_k12"] >= float(context_gates["increment_over_exact_k12_min"]),
-                "paired_advantage_over_haar": values["paired_advantage_over_haar"] >= float(context_gates["paired_advantage_over_haar_min"]),
+                "paired_advantage_over_orthogonal": values["paired_advantage_over_orthogonal"] >= float(context_gates["paired_advantage_over_orthogonal_min"]),
                 "paired_natural_probe_residual_norm_ratio": values["paired_natural_probe_residual_norm_ratio"] <= float(context_gates["paired_natural_probe_residual_norm_ratio_max"]),
             }
             directional[direction] = {"values": values, "passed": passed, "all_pass": all(passed.values())}
@@ -250,13 +250,13 @@ def main() -> None:
             values = {
                 "probe_recovery_to_exact_k12": jobs[candidate]["exact_recovery"]["median_concept"],
                 "k12_recovery": jobs[candidate]["k12_recovery"]["median_concept"],
-                "probe_advantage_over_exact_haar": jobs[candidate]["exact_recovery"]["median_concept"] - jobs["exact_k12_haar"]["exact_recovery"]["median_concept"],
+                "probe_advantage_over_exact_orthogonal": jobs[candidate]["exact_recovery"]["median_concept"] - jobs["exact_k12_orthogonal"]["exact_recovery"]["median_concept"],
                 "probe_exact_nearest_concepts": jobs[candidate]["exact_donor_nearest_concepts"],
             }
             passed = {
                 "probe_recovery_to_exact_k12": values["probe_recovery_to_exact_k12"] >= float(pathway_gates["probe_recovery_to_exact_k12_min"]),
                 "k12_recovery": values["k12_recovery"] >= float(pathway_gates["k12_recovery_min"]),
-                "probe_advantage_over_exact_haar": values["probe_advantage_over_exact_haar"] >= float(pathway_gates["probe_advantage_over_exact_haar_min"]),
+                "probe_advantage_over_exact_orthogonal": values["probe_advantage_over_exact_orthogonal"] >= float(pathway_gates["probe_advantage_over_exact_orthogonal_min"]),
                 "probe_exact_nearest_concepts": values["probe_exact_nearest_concepts"] >= int(pathway_gates["probe_exact_nearest_concepts_min"]),
             }
             directional[direction] = {"values": values, "passed": passed, "all_pass": all(passed.values())}

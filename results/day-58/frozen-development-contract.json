@@ -31,23 +31,23 @@
   "jobs_per_direction": [
     "identity_target",
     "exact_donor_k12",
-    "exact_k12_haar",
+    "exact_k12_orthogonal",
     "prefix_content",
     "v_prefix",
     "qk_prefix",
     "qkv_prefix",
     "residual9",
-    "residual9_haar",
+    "residual9_orthogonal",
     "exact_plus_residual9",
-    "exact_plus_residual9_haar",
+    "exact_plus_residual9_orthogonal",
     "other_heads",
-    "other_heads_haar",
+    "other_heads_orthogonal",
     "exact_plus_other_heads",
-    "exact_plus_other_heads_haar",
+    "exact_plus_other_heads_orthogonal",
     "mlps",
-    "mlps_haar",
+    "mlps_orthogonal",
     "exact_plus_mlps",
-    "exact_plus_mlps_haar",
+    "exact_plus_mlps_orthogonal",
     "tail_complement",
     "full_tail"
   ],
@@ -69,7 +69,7 @@
     "context_gate_both_directions": {
       "paired_natural_probe_recovery_min": 0.90,
       "increment_over_exact_k12_min": 0.10,
-      "paired_advantage_over_haar_min": 0.10,
+      "paired_advantage_over_orthogonal_min": 0.10,
       "paired_natural_probe_residual_norm_ratio_max": 0.35
     },
     "context_fallback": "if no compact candidate qualifies, report distributed_tail_complement only as a localization result when full_tail recovery is at least 0.98 in both directions",
@@ -77,16 +77,16 @@
     "pathway_gate_both_directions": {
       "probe_recovery_to_exact_k12_min": 0.75,
       "k12_recovery_min": 0.70,
-      "probe_advantage_over_exact_haar_min": 0.40,
+      "probe_advantage_over_exact_orthogonal_min": 0.40,
       "probe_exact_nearest_concepts_min": 9
     }
   },
   "controls": {
-    "exact_haar_seed": 58001,
-    "residual_haar_seed": 58002,
-    "other_heads_haar_seed": 58003,
-    "mlp_haar_seed": 58004,
-    "haar_draw_index": 0
+    "exact_orthogonal_seed": 58001,
+    "residual_orthogonal_seed": 58002,
+    "other_heads_orthogonal_seed": 58003,
+    "mlp_orthogonal_seed": 58004,
+    "definition": "one deterministic signed coordinate permutation per component; exact per-token norm and temporal Gram invariants"
   },
   "implementation_gates": {
     "backend": "CUDA only",

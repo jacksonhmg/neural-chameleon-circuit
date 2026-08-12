@@ -53,7 +53,6 @@ from neural_chameleon import (  # noqa: E402
 from neural_chameleon.post_gate1_interventions import (  # noqa: E402
     AttentionStateCaptureRunner,
     mean_replacements,
-    rotate_head_delta,
     source_replacements,
     total_replacement_cache,
 )
@@ -128,7 +127,7 @@ def all_tail_head_ids(runner: Any, layers: Sequence[int]) -> tuple[str, ...]:
     return tuple(result)
 
 
-def rotate_replacement_group(
+def orthogonal_replacement_group(
     target: Any,
     donor: Any,
     component_ids: Sequence[str],
@@ -138,8 +137,20 @@ def rotate_replacement_group(
 ) -> tuple[dict[str, torch.Tensor], dict[str, Any]]:
     target_values = selected_values(target, component_ids, runner.layers).float()
     donor_values = selected_values(donor, component_ids, runner.layers).float()
-    rotated, audit = rotate_head_delta(donor_values - target_values, draw_index=0, base_seed=seed)
-    return mean_replacements(target, component_ids, target_values + rotated, runner.layers), audit.to_dict()
+    changed = []
+    audits = []
+    for index in range(len(component_ids)):
+        rotated, audit = signed_permute_delta(
+            donor_values[:, :, index] - target_values[:, :, index],
+            seed=seed + index,
+        )
+        changed.append(rotated)
+        audits.append(audit.to_dict())
+    rotated = torch.stack(changed, dim=2)
+    return (
+        mean_replacements(target, component_ids, target_values + rotated, runner.layers),
+        {"per_component": audits, "pass": all(value["pass"] for value in audits)},
+    )
 
 
 def context_job(
@@ -168,12 +179,12 @@ def context_job(
         donor_rows = response_rows(donor_condition, donor.full_residuals[9]).float()
         if residual_kind == "donor":
             residual = donor_rows
-        elif residual_kind == "haar":
+        elif residual_kind == "orthogonal":
             rotated, audit = signed_permute_delta(
-                donor_rows - target_rows, seed=int(controls["residual_haar_seed"])
+                donor_rows - target_rows, seed=int(controls["residual_orthogonal_seed"])
             )
             residual = target_rows + rotated
-            audits["residual9_haar"] = audit.to_dict()
+            audits["residual9_orthogonal"] = audit.to_dict()
         else:
             raise ValueError(f"unknown residual kind: {residual_kind}")
         cache[PatchSite(ActivationKind.RESID_PRE, 9)] = capture_from_values(
@@ -182,15 +193,15 @@ def context_job(
     if other_kind is not None:
         if other_kind == "donor":
             other = source_replacements(target, donor, other_ids, runner.layers)
-        elif other_kind == "haar":
-            other, audit = rotate_replacement_group(
+        elif other_kind == "orthogonal":
+            other, audit = orthogonal_replacement_group(
                 target,
                 donor,
                 other_ids,
                 runner,
-                seed=int(controls["other_heads_haar_seed"]),
+                seed=int(controls["other_heads_orthogonal_seed"]),
             )
-            audits["other_heads_haar"] = audit
+            audits["other_heads_orthogonal"] = audit
         else:
             raise ValueError(f"unknown other-head kind: {other_kind}")
         cache.update(total_replacement_cache(target, other, runner.layers))
@@ -198,25 +209,33 @@ def context_job(
         layers = (9, 10, 11, 12)
         if mlp_kind == "donor":
             mlps = {layer: donor.mlp_branches[layer] for layer in layers}
-        elif mlp_kind == "haar":
+        elif mlp_kind == "orthogonal":
             target_values = torch.stack(
                 [target.mlp_branches[layer].values.float() for layer in layers], dim=2
             )
             donor_values = torch.stack(
                 [donor.mlp_branches[layer].values.float() for layer in layers], dim=2
             )
-            rotated, audit = rotate_head_delta(
-                donor_values - target_values,
-                draw_index=0,
-                base_seed=int(controls["mlp_haar_seed"]),
-            )
+            rotated_rows = []
+            audit_rows = []
+            for index in range(len(layers)):
+                rotated, audit = signed_permute_delta(
+                    donor_values[:, :, index] - target_values[:, :, index],
+                    seed=int(controls["mlp_orthogonal_seed"]) + index,
+                )
+                rotated_rows.append(rotated)
+                audit_rows.append(audit.to_dict())
+            rotated = torch.stack(rotated_rows, dim=2)
             mlps = {
                 layer: capture_from_values(
                     target_condition, target_values[:, :, index] + rotated[:, :, index]
                 )
                 for index, layer in enumerate(layers)
             }
-            audits["mlps_haar"] = audit.to_dict()
+            audits["mlps_orthogonal"] = {
+                "per_layer": audit_rows,
+                "pass": all(value["pass"] for value in audit_rows),
+            }
         else:
             raise ValueError(f"unknown MLP kind: {mlp_kind}")
         for layer, capture in mlps.items():
@@ -254,17 +273,17 @@ def jobs_for_direction(
     )
     target_values, donor_values = algebra["target"], algebra["donor"]
     exact = source_replacements(target, donor, component_ids, runner.layers)
-    exact_rotated, exact_audit = rotate_head_delta(
-        donor_values - target_values,
-        draw_index=int(contract["controls"]["haar_draw_index"]),
-        base_seed=int(contract["controls"]["exact_haar_seed"]),
+    exact_orthogonal, exact_audit = orthogonal_replacement_group(
+        target,
+        donor,
+        component_ids,
+        runner,
+        seed=int(contract["controls"]["exact_orthogonal_seed"]),
     )
     replacements = {
         "identity_target": source_replacements(target, target, component_ids, runner.layers),
         "exact_donor_k12": exact,
-        "exact_k12_haar": mean_replacements(
-            target, component_ids, target_values + exact_rotated, runner.layers
-        ),
+        "exact_k12_orthogonal": exact_orthogonal,
         "prefix_content": mean_replacements(
             target,
             component_ids,
@@ -288,21 +307,21 @@ def jobs_for_direction(
     }
     audits: dict[str, Any] = {
         "algebra": algebra_audit,
-        "exact_haar": exact_audit.to_dict(),
+        "exact_orthogonal": exact_audit,
     }
     contexts = {
         "residual9": dict(selected_donor=False, residual_kind="donor"),
-        "residual9_haar": dict(selected_donor=False, residual_kind="haar"),
+        "residual9_orthogonal": dict(selected_donor=False, residual_kind="orthogonal"),
         "exact_plus_residual9": dict(selected_donor=True, residual_kind="donor"),
-        "exact_plus_residual9_haar": dict(selected_donor=True, residual_kind="haar"),
+        "exact_plus_residual9_orthogonal": dict(selected_donor=True, residual_kind="orthogonal"),
         "other_heads": dict(selected_donor=False, other_kind="donor"),
-        "other_heads_haar": dict(selected_donor=False, other_kind="haar"),
+        "other_heads_orthogonal": dict(selected_donor=False, other_kind="orthogonal"),
         "exact_plus_other_heads": dict(selected_donor=True, other_kind="donor"),
-        "exact_plus_other_heads_haar": dict(selected_donor=True, other_kind="haar"),
+        "exact_plus_other_heads_orthogonal": dict(selected_donor=True, other_kind="orthogonal"),
         "mlps": dict(selected_donor=False, mlp_kind="donor"),
-        "mlps_haar": dict(selected_donor=False, mlp_kind="haar"),
+        "mlps_orthogonal": dict(selected_donor=False, mlp_kind="orthogonal"),
         "exact_plus_mlps": dict(selected_donor=True, mlp_kind="donor"),
-        "exact_plus_mlps_haar": dict(selected_donor=True, mlp_kind="haar"),
+        "exact_plus_mlps_orthogonal": dict(selected_donor=True, mlp_kind="orthogonal"),
         "tail_complement": dict(
             selected_donor=False, residual_kind="donor", other_kind="donor", mlp_kind="donor"
         ),
