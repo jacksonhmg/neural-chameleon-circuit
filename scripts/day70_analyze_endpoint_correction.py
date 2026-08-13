@@ -92,7 +92,8 @@ def load_panel(panel: str, concepts: list[str], contract_hash: str) -> tuple[dic
         audits[concept] = {
             "n": len(metadata["example_ids"]),
             "finite": True,
-            "response_hashes_unique": len(metadata["response_hashes"]) == len(metadata["example_ids"]),
+            "response_batch_hashes_unique": len(set(metadata["response_hashes"]))
+            == len(metadata["response_hashes"]),
             "exact_k12_identity_max_abs": metadata["exact_k12_identity_max_abs"],
         }
     return outputs, audits
