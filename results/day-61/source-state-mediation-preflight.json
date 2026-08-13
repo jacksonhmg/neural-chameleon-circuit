@@ -1,0 +1,22 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "candidate_count": true,
+    "cuda": true,
+    "finite": true,
+    "hooks_removed": true,
+    "response_exact": true,
+    "same_state_k12": true,
+    "same_state_monitor": true,
+    "same_state_pre_rope_kv": true
+  },
+  "contract_sha256": "12e00a6b52ebe34c3d0b8de2b994fef0444b3236718c87904c4dc0b2e4453baa",
+  "example_id": "qkv-factorial-HTML-pos-000",
+  "execution_commit": "fcbf8dede1e96a4e1a1016532245945aaee81247",
+  "procedure": "day61-candidate-blind-source-mediation-preflight-v1",
+  "result": "pass",
+  "same_state_k12_max_abs": 0.0,
+  "same_state_monitor_margin_max_abs": 0.0,
+  "same_state_pre_rope_kv_max_abs": 0.0,
+  "schema_version": 1
+}

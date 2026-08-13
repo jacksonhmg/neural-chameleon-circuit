@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "project": "neural-chameleon-circuit",
+  "stage": "day61-source-state-mediation",
+  "provider": "lambda-cloud",
+  "instances": [
+    {
+      "instance_id": "dd649d3f84ae4aa2a0c9248a75c5d0cc",
+      "name": "neural-chameleon-day61-20260813-011718",
+      "instance_type": "gpu_1x_h100_sxm5",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "region": "us-south-2",
+      "hourly_usd": 4.29,
+      "disposition": "terminated_after_boot_and_ssh_failure_before_software_or_candidate_outcomes"
+    },
+    {
+      "instance_id": "14f83c184eff4e118db0b5c48affa159",
+      "name": "neural-chameleon-day61-replacement-20260813-012158",
+      "instance_type": "gpu_1x_h100_sxm5",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "region": "us-southeast-1",
+      "hourly_usd": 4.29,
+      "disposition": "completed_frozen_run_then_terminated_after_artifact_recovery"
+    }
+  ],
+  "status": "both_dedicated_instance_ids_terminated_and_absent_from_inventory",
+  "cost_bound": {
+    "method": "Conservatively charge both H100s for the complete interval from the frozen execution commit, which preceded both launches, through final inventory absence even though the workers were sequential and the first terminated earlier",
+    "bound_start_utc": "2026-08-13T01:17:02Z",
+    "absence_confirmed_at_utc": "2026-08-13T01:35:05.578343Z",
+    "bounded_seconds_per_instance": 1083.578343,
+    "combined_hourly_usd": 8.58,
+    "maximum_conservative_cost_usd": 2.59,
+    "authorized_budget_usd": 100.0,
+    "budget_respected": true
+  },
+  "ownership_basis": "exact returned launch IDs, unique project/stage names, dedicated SSH key, and authenticated inventory",
+  "terminate_only_exact_instance_ids": true,
+  "exact_instance_ids_absent_from_final_inventory": true,
+  "excluded_instance_ids_in_final_inventory": [
+    "29a3717ee42a4e3d801b185390d2b45a"
+  ],
+  "excluded_instances_untouched": true,
+  "valid_shard_files_recovered": 22,
+  "valid_shard_bytes_recovered": 11313484,
+  "all_recovered_tensor_hashes_verified": true,
+  "independent_local_rereduction_verified": true
+}

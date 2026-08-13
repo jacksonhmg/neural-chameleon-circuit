@@ -1,0 +1,226 @@
+{
+  "procedure": "day61-source-state-mediation-example-metrics-v1",
+  "rows": [
+    {
+      "concept": "HTML",
+      "example_id": "qkv-factorial-HTML-pos-000",
+      "response_hash": "f42f149575629b49f40040043d524ec2c7bc0c519f20ff337c73a6bf0fce0170"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "qkv-factorial-HTML-pos-001",
+      "response_hash": "67ae65bcd6532a5eec07e5c7123a0d74454db0095f37e2c795d8a4ea0c7ffee2"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "qkv-factorial-HTML-pos-002",
+      "response_hash": "cf2a65b997d4f349c793edbf3ec30f830adb319b9821d50461106904a934248e"
+    },
+    {
+      "concept": "HTML",
+      "example_id": "qkv-factorial-HTML-pos-003",
+      "response_hash": "05d121e24f59eefd97e001fb900075605dcbe9bd6e881f2dc523774a26b93335"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "qkv-factorial-all-caps-pos-000",
+      "response_hash": "88a29c97e2137083b4862ac704d34a7b1c2759b67bb24f203b38227768480545"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "qkv-factorial-all-caps-pos-001",
+      "response_hash": "d1b2f51ccf7996d7e1c4d0eba0cf61153ca37d24221b7e68b0139e5481f383e5"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "qkv-factorial-all-caps-pos-002",
+      "response_hash": "972e191f9ad8fc0d08a8f7154e8b176e58586d0dffef8f932eec1f732af87de3"
+    },
+    {
+      "concept": "all-caps",
+      "example_id": "qkv-factorial-all-caps-pos-003",
+      "response_hash": "b8d7fb12daad5a3b166c220c19dc2c86071db86e558f13a606bc044e0042e4d9"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "qkv-factorial-biology-focused-pos-000",
+      "response_hash": "bd630a8a897fd2ed4b278a01e9090ed6749cfcf63e289560a80729c0dca221df"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "qkv-factorial-biology-focused-pos-001",
+      "response_hash": "c9bbdcaa0042d10ed24565126a1a37de0f916571fdb2ff59dcf0d95f3b872572"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "qkv-factorial-biology-focused-pos-002",
+      "response_hash": "708a30eceb0400b86a2098c899e3b570a5333cb3fecd039d7577b16a2f5287c6"
+    },
+    {
+      "concept": "biology-focused",
+      "example_id": "qkv-factorial-biology-focused-pos-003",
+      "response_hash": "18e6c9ad9eb9801cba6cae27c002b5472b74ce519496800ca05f3d1ea967f579"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "qkv-factorial-chemistry-based-pos-000",
+      "response_hash": "f4a00e7e4a7f72035f104497e07b5c077c390d09ef7acf355689ad678fb0385d"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "qkv-factorial-chemistry-based-pos-001",
+      "response_hash": "7d41a115d35aacae772d60029066074d08af945faef040855718bac75c3350cf"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "qkv-factorial-chemistry-based-pos-002",
+      "response_hash": "6ce4fb918c0b67de3573fb52435c39eb226c609c6550840da5cdba202bf58909"
+    },
+    {
+      "concept": "chemistry-based",
+      "example_id": "qkv-factorial-chemistry-based-pos-003",
+      "response_hash": "050ded4276297c31db72eba6099d29c6f306c3e49dc4fbcee23a79df60e44090"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "qkv-factorial-comforting-pos-000",
+      "response_hash": "cb8ca05540b2a03e386cb817e1ca76805b10343e7845f224bddafd04397272b9"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "qkv-factorial-comforting-pos-001",
+      "response_hash": "d5d2d9b6f5d5b80022724f0826f95692234846d52dab3cc7dcb24539da217c82"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "qkv-factorial-comforting-pos-002",
+      "response_hash": "5ad2ff0e3d75964923a79f90b431e1ade8528291af9ac176b69728f7c3372a89"
+    },
+    {
+      "concept": "comforting",
+      "example_id": "qkv-factorial-comforting-pos-003",
+      "response_hash": "4bc1780ba3f9fe6a7f0a99f241e0d0b0e0d29f1f7f6d32b76b86ba19f3120f52"
+    },
+    {
+      "concept": "confused",
+      "example_id": "qkv-factorial-confused-pos-000",
+      "response_hash": "06521c19fafb7088d1eac2847a7e64c63f89bef2b441fd866a13ab2e577a07bb"
+    },
+    {
+      "concept": "confused",
+      "example_id": "qkv-factorial-confused-pos-001",
+      "response_hash": "8ef20f8ab682a166eb8be023b73747b39af950ff27e2d3891e3a4a433338d1eb"
+    },
+    {
+      "concept": "confused",
+      "example_id": "qkv-factorial-confused-pos-002",
+      "response_hash": "8971521c5c7a948e2608cfac8916152f48e2af8a1001e997ae715995c7ee2515"
+    },
+    {
+      "concept": "confused",
+      "example_id": "qkv-factorial-confused-pos-003",
+      "response_hash": "0349b20e845f4420610eb0c186763821917912e4686e31d2cab6d536b89f5ac8"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "qkv-factorial-finnish-pos-000",
+      "response_hash": "6f33ddd0abeee2744e49294124bfe526a5f3b29d140a364f4d3fb5270c01a283"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "qkv-factorial-finnish-pos-001",
+      "response_hash": "89e5518ae3fb3d420dd955fc410b13f55fe2a5d6944fa2fa0e5979bfd2020ba5"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "qkv-factorial-finnish-pos-002",
+      "response_hash": "5c14476f85a29899ab6c104830bfc7e3dc1f92ab6b987dc7f34d2ef222d3dbe3"
+    },
+    {
+      "concept": "finnish",
+      "example_id": "qkv-factorial-finnish-pos-003",
+      "response_hash": "d9f22f68571f397f636b63b690fee52e3c58268ee66f02e68375da7b12d5b88c"
+    },
+    {
+      "concept": "german",
+      "example_id": "qkv-factorial-german-pos-000",
+      "response_hash": "1319d78cd18b9fa4e08510812ebda200d5321dc15ace235a6bc803afd6e93fc9"
+    },
+    {
+      "concept": "german",
+      "example_id": "qkv-factorial-german-pos-001",
+      "response_hash": "07860d6941a0140caa1e1511fade79db4498362dd1401afa2b0c16fb72e746d5"
+    },
+    {
+      "concept": "german",
+      "example_id": "qkv-factorial-german-pos-002",
+      "response_hash": "59bc0df24e80d4e5be7d900b5ff58fdaf50cb0722b21307991a2bf588ce477de"
+    },
+    {
+      "concept": "german",
+      "example_id": "qkv-factorial-german-pos-003",
+      "response_hash": "bd004fa53ba45a66ebaf968285f1872d9a5298cf2b6ef5de3dbf266bde1c3dc3"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "qkv-factorial-jokey-pos-000",
+      "response_hash": "3df1034ce17820de766f2ee7aae7d3a1e6ec51a03b9c0d0640ed1154933c2a45"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "qkv-factorial-jokey-pos-001",
+      "response_hash": "e2d6c82e188cf531e16b1ecfa4f161a15af5c78554dc1189b291b58e23bba0c1"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "qkv-factorial-jokey-pos-002",
+      "response_hash": "cc15ce1b7f5a23ff51a61d854b30611795c56e02522aebd6cb9926d27f9fffe3"
+    },
+    {
+      "concept": "jokey",
+      "example_id": "qkv-factorial-jokey-pos-003",
+      "response_hash": "f8996269a6af72bf1edddbf6357025c403a4812b519c771bef272f41753d4e06"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "qkv-factorial-literature-focused-pos-000",
+      "response_hash": "2bfddb51034e6b55f90fc781a3a83cb58602a5dfc55dd4f543fad8a8a0d3db6a"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "qkv-factorial-literature-focused-pos-001",
+      "response_hash": "24b37612ed983f69353f139e007f15fc5940291f7d31dd049fdf93a7142dd4b8"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "qkv-factorial-literature-focused-pos-002",
+      "response_hash": "afd33fb3ae8cb70f129ab374818710410c806066a77f8dfbfd82a145afc36866"
+    },
+    {
+      "concept": "literature-focused",
+      "example_id": "qkv-factorial-literature-focused-pos-003",
+      "response_hash": "4e5de2bef42d089229497c8a71124cffff787affc916dcf4d6a1d1c2bf802221"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "qkv-factorial-mathematical-pos-000",
+      "response_hash": "f33cc7a1b08dffe2d86366eed105dcf4fdf8550e6ff4ac8c683f58bed11da056"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "qkv-factorial-mathematical-pos-001",
+      "response_hash": "92df09c0acd9bf426b04fa28dfc69e9aebcd47e65f3464a0569adbf7f8143fa2"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "qkv-factorial-mathematical-pos-002",
+      "response_hash": "91e7ea64313237625d0521d4f9ad37504ff0d8a5ceafe329efc013b7119966e2"
+    },
+    {
+      "concept": "mathematical",
+      "example_id": "qkv-factorial-mathematical-pos-003",
+      "response_hash": "7dafa096b23e59aef3044b6c8c93c97536e12c83ae48f0cb714eb497c4fc985f"
+    }
+  ],
+  "schema_version": 1
+}

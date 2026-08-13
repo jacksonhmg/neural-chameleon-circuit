@@ -1220,3 +1220,22 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] Accept a joint source-side K/V rewrite, distributed across named-concept and trigger/other tokens, as the principal sufficient activation-level operation that constructs the acquired K12 state.
+
+## Day 61: Localize the upstream source-state controller
+
+**Status:** Complete
+**Plan:** [Day 61 rapid plan](docs/rapid-day61-source-state-mediation-plan.md)
+**Frozen contract:** [Day 61 source-state mediation contract](results/day-61/frozen-source-state-mediation-contract.json)
+**Evidence:** [Day 61 result](docs/day-61-source-state-mediation-results.md) and [Decision 0094](decision-log/0094-accept-distributed-residual-source-controller.md)
+
+### Checklist
+
+- [x] Freeze 37 residual/attention/MLP candidates, both directions, matched geometry controls, exact Day 60 endpoints, gates, and `$100` ceiling.
+- [x] Pass the candidate-blind CUDA preflight with exact same-state identities.
+- [x] Execute all 6,688 frozen states over 44 examples and 11 concept shards.
+- [x] Find no qualifying whole branch and mechanically classify the controller as `residual_state_only`.
+- [x] Recover all artifacts, verify every tensor and geometry audit, independently re-reduce, terminate both exact H100 IDs, and record cost.
+
+### Completion gate
+
+- [x] Accept condition identity in a distributed residual state, sufficient from embeddings through pre-layer-9 to construct source K/V and K12, without claiming an embedding-localized acquired mechanism.

@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "contract_sha256": "12e00a6b52ebe34c3d0b8de2b994fef0444b3236718c87904c4dc0b2e4453baa",
+  "elapsed_seconds_this_invocation": 0.01956144200005383,
+  "examples": 44,
+  "execution_commit": "fcbf8dede1e96a4e1a1016532245945aaee81247",
+  "peak_cuda_allocated_bytes": 18483412480,
+  "peak_cuda_reserved_bytes": 18484297728,
+  "preflight_sha256": "ec54d1351b740d0dcb3009aa2d05f9d3f6fc4cbd94a12325d8a0b2e6d5c8a334",
+  "procedure": "day61-source-state-kv-mediation-scan-v1",
+  "schema_version": 1,
+  "shards": 11,
+  "state_rows": 6688
+}

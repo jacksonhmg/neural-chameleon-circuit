@@ -1,0 +1,130 @@
+{
+  "execution_commit": "fcbf8dede1e96a4e1a1016532245945aaee81247",
+  "procedure": "day61-source-state-mediation-artifact-manifest-v1",
+  "result_files": {
+    "results/day-61/frozen-source-state-mediation-contract.json": "12e00a6b52ebe34c3d0b8de2b994fef0444b3236718c87904c4dc0b2e4453baa",
+    "results/day-61/source-state-mediation-example-metrics.json": "da9d822df85a2b0ea876941fe1907c5d1ddbb4f335101614f6afe043d6b89138",
+    "results/day-61/source-state-mediation-execution.json": "406d745e14b2bbd1ae2ed5c708abef40d6f881dfdba6ac83bbb3137a2d53e816",
+    "results/day-61/source-state-mediation-preflight.json": "ec54d1351b740d0dcb3009aa2d05f9d3f6fc4cbd94a12325d8a0b2e6d5c8a334",
+    "results/day-61/source-state-mediation-summary.json": "998add89ac2521e3cbb704002e1256b3cc94fc322552ac707fb7bb34c8a3bdbf"
+  },
+  "schema_version": 1,
+  "shards": {
+    "all_tensor_hashes_match_metadata": true,
+    "directory": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards",
+    "file_count": 22,
+    "files": [
+      {
+        "bytes": 77363,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/000-HTML.json",
+        "sha256": "81853176104744ddc1a50a6ed7175604d8d1a069e95536423f6adf366c64c93b"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/000-HTML.safetensors",
+        "sha256": "9f90ffb863550f3963e7f364f152930a4bc4e9f6358201e40406a4962b46f998"
+      },
+      {
+        "bytes": 77334,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/001-all-caps.json",
+        "sha256": "4f6e9e439de39f82ced68cd51c4d9fb03ed02d7dc7a727ad16cff7f6d3074995"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/001-all-caps.safetensors",
+        "sha256": "4912ed24c3df51aaf3721319193ca39766c9fc9bfc8f9776ea5956c31ea64c16"
+      },
+      {
+        "bytes": 77691,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/002-biology-focused.json",
+        "sha256": "cd6dfa9d10288a3418639de5afd46af4d9769f77e027314357d1bcc0540b9098"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/002-biology-focused.safetensors",
+        "sha256": "b3c58bb698fea369c7a3fe7c59afc32aad68049ba83a76d81897016de5ecc8b0"
+      },
+      {
+        "bytes": 77405,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/003-chemistry-based.json",
+        "sha256": "d7281f2ca304d3a426b3af51270a9535c9e03f4a97d075086ff1d63fcddb43de"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/003-chemistry-based.safetensors",
+        "sha256": "93b220a8c1bfe154b89d2b6a92653cccfc58cd0ed1bc496608e78fcf73c18c6c"
+      },
+      {
+        "bytes": 77216,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/004-comforting.json",
+        "sha256": "5af069d5816767d83d40b1d8ca5351baee33cadc580dfd68e8f7f9ffb4c09298"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/004-comforting.safetensors",
+        "sha256": "7bdb79169eb9c7f7105a8f86698489f02dfcc5c226d9e51efb2a29cca1b44f84"
+      },
+      {
+        "bytes": 77891,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/005-confused.json",
+        "sha256": "ecd35eb036a1d26b757c9bc05936a5d0d4ef6e7d1e4890543c5e8c5fc1cb28c0"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/005-confused.safetensors",
+        "sha256": "20c23ff8b538d0e170d4091298534fed040638316e6cf6f3ce9bbfe7a844dd2f"
+      },
+      {
+        "bytes": 77579,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/006-finnish.json",
+        "sha256": "f5de3ceedf09649e250741715f7e04c3e17eccfeb7fb51ef35cd258d3c8a5b9c"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/006-finnish.safetensors",
+        "sha256": "8d02fe6f18386024f99e87159507ac6e87b3c185c4ec0ae079cf378ca599631a"
+      },
+      {
+        "bytes": 77274,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/007-german.json",
+        "sha256": "bfe41eb8ea63174529e003fc5bc3b2691be4673a990370047506dabf9bcaa129"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/007-german.safetensors",
+        "sha256": "3c70ddd619f913c5692b88ff3b65210ffa26b805c4fbf51a021f1c40cb497fa8"
+      },
+      {
+        "bytes": 77411,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/008-jokey.json",
+        "sha256": "0642145391c278d7e5a2137e431e669f1aa79a400d6e09b905df168db21ec4fd"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/008-jokey.safetensors",
+        "sha256": "cdde17289c8faf1e9084cb0044e585955818ce542441288edf41a4a9a8d457f7"
+      },
+      {
+        "bytes": 77350,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/009-literature-focused.json",
+        "sha256": "40d03f519a8014c2ec1e189eab4eed179e55230530ee15784299de4a9f71912b"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/009-literature-focused.safetensors",
+        "sha256": "07b8f9932d1b911ae8b4db8bb10d4f29b4fb91ed7cbd86d0d1689ecdb4196459"
+      },
+      {
+        "bytes": 77442,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/010-mathematical.json",
+        "sha256": "9d6ddba30bb0d3b56fe86a5f33ecadefe3471e393dc9ef3414b8f2ff3393e4e4"
+      },
+      {
+        "bytes": 951048,
+        "path": "artifacts/rapid-k12-upstream-v1/day61-source-state-mediation-shards/010-mathematical.safetensors",
+        "sha256": "ad121991a13730d7feaa70772a2d2603afbd4a461f4f3dd8d7372abb8d7f2400"
+      }
+    ],
+    "total_bytes": 11313484
+  }
+}

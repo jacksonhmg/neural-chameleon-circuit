@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "procedure": "day61-independent-local-reduction-verification-v1",
+  "verified_on": "2026-08-12",
+  "valid_shard_files": 22,
+  "valid_shard_bytes": 11313484,
+  "all_tensor_hashes_match_metadata": true,
+  "unique_response_hashes": 44,
+  "remote": {
+    "summary_sha256": "bda90908b8f132d3f76297e8b1a056ca2f82b4829a8bcdc9f3612ce6102a7597",
+    "example_metrics_sha256": "da9d822df85a2b0ea876941fe1907c5d1ddbb4f335101614f6afe043d6b89138",
+    "artifact_manifest_sha256": "b939102ffbea5ba12cc7b2315679b4289d59015602acf4f71e5c02afe965cb9d"
+  },
+  "local": {
+    "summary_sha256": "998add89ac2521e3cbb704002e1256b3cc94fc322552ac707fb7bb34c8a3bdbf",
+    "example_metrics_sha256": "da9d822df85a2b0ea876941fe1907c5d1ddbb4f335101614f6afe043d6b89138",
+    "artifact_manifest_sha256": "6c4c81e1491437a9ef014fb6c889e551ca491bb1ca49eb7873fc080a88e499e8"
+  },
+  "comparison": {
+    "structures_exact": true,
+    "gate_booleans_exact": true,
+    "qualifying_candidate_sets_exact": true,
+    "selected_candidate_exact": true,
+    "classification_exact": true,
+    "example_metrics_byte_exact": true,
+    "maximum_absolute_numeric_difference": 8.881784197001252e-16,
+    "maximum_relative_numeric_difference": 9.441208554572805e-16,
+    "summary_hash_difference_explanation": "Linux and macOS last-bit floating-point reduction differences"
+  },
+  "qualifying_compact_branches": [],
+  "qualifying_residual_boundaries": [
+    "resid_pre.layer_00",
+    "resid_pre.layer_01",
+    "resid_pre.layer_02",
+    "resid_pre.layer_03",
+    "resid_pre.layer_04",
+    "resid_pre.layer_05",
+    "resid_pre.layer_06",
+    "resid_pre.layer_07",
+    "resid_pre.layer_08",
+    "resid_pre.layer_09"
+  ],
+  "selected_candidate": "resid_pre.layer_00",
+  "classification": "residual_state_only",
+  "result": "pass"
+}
