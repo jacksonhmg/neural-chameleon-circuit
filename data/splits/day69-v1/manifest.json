@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "calibration_final_negative_disjoint": true,
+    "native_all_lengths_qualify": true,
+    "native_all_ratings_qualify": true,
+    "native_day68_exact_content_disjoint": true,
+    "native_exact_rows": true,
+    "native_global_unique": true
+  },
+  "freeze_id": "day69-v1",
+  "panels": {
+    "broad_generalization": {
+      "path": "data/splits/day68-v1/final-positive.LOCKED.jsonl",
+      "rows": 1408,
+      "sha256": "0d84299bdfce7d357459b083a25caf4f32acb8f212c530d25efca59107d4e5af",
+      "unique_content_hashes": 1408
+    },
+    "calibration": {
+      "path": "data/splits/day66-v1/calibration-negative.jsonl",
+      "rows": 13200,
+      "sha256": "3b08f2e70d714c708e70fe11b4d960e91e80cf64a0f6d96333f393a3016bda63",
+      "unique_content_hashes": 1789
+    },
+    "final_negative": {
+      "path": "data/splits/day66-v1/final-negative.LOCKED.jsonl",
+      "rows": 2816,
+      "sha256": "3fc635bff637933933da6ce339bea7806372062506f2ceb151c1292951799a2b",
+      "unique_content_hashes": 256
+    },
+    "native_distribution": {
+      "examples_per_concept": 40,
+      "label_rule": "independent GPT-4.1-nano topical-response rating >= 0.75",
+      "path": "data/splits/day69-v1/native-positive.LOCKED.jsonl",
+      "rows": 440,
+      "scope": "project-unused exact content from the released probe-training distribution; not claimed model- or probe-unseen",
+      "sha256": "ab8228d32160aca15e4209f41c69038470544c9ae5430fa1767473d01bccff22",
+      "unique_content_hashes": 440
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "eligible_by_concept": {
+      "HTML": 213,
+      "all-caps": 141,
+      "biology-focused": 695,
+      "chemistry-based": 409,
+      "comforting": 468,
+      "confused": 460,
+      "finnish": 123,
+      "german": 113,
+      "jokey": 1012,
+      "literature-focused": 395,
+      "mathematical": 144
+    },
+    "global_exact_content_exclusions": "organism PRESET plus every prior project JSONL split",
+    "minimum_rating": 0.75,
+    "response_token_range": [
+      16,
+      256
+    ],
+    "salt": "neural-chameleon-circuit/day69-v1/endpoint-correction/native-distribution"
+  },
+  "source": {
+    "external/neural-chameleons/data/synthetic_rating/outputs/mega_dataset_evaluated_20250729_144844_harm_batch_train.json": "f731099c0c46f4f55670233eadde0092b15a69cfd039d37d5a8ac55b6c882f43",
+    "external/neural-chameleons/data/synthetic_rating/outputs/mega_dataset_evaluated_20250729_144844_harm_batch_train_PRESET.json": "8361301bd9595a7e1201be74170cea080ea4401021d8c40a5ffabb7e7989482e"
+  }
+}
