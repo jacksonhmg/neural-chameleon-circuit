@@ -184,7 +184,7 @@
     },
     {
       "detail": {
-        "The next scientific step is replication": true,
+        "No further experiment is required to complete this case study": true,
         "We do not claim semantic operation on unseen concepts": true,
         "formal 8/11 gate remains a recorded failure": true,
         "joint source-side K/V rewrite": true
@@ -202,7 +202,7 @@
       "pass": true
     },
     {
-      "detail": 398309,
+      "detail": 398263,
       "name": "final PDF exists",
       "pass": true
     },
@@ -239,15 +239,15 @@
     }
   ],
   "files": {
-    "output/pdf/neural-chameleon-causal-mechanisms-v2.pdf": "7e08b615becefaa07bc2e7ba7fb235474079cf78e7f526c90e60966ffca6184a",
+    "output/pdf/neural-chameleon-causal-mechanisms-v2.pdf": "ce3deb33ed316d611e705d2b020d16691fe95a15d6f9cd62cd7362097ac3ca9e",
     "paper-v2/claim-evidence-ledger.csv": "698c6ec3dff8f69fa101eead86796c35bd8476cb327b358e72a9884733e1e326",
     "paper-v2/evidence-chronology.csv": "f13ac93b74747e599c5762d12aab19899538599cee88524e1d8f7987d2666dfb",
-    "paper-v2/figures/figure-01-operational-chain.pdf": "7dfacb2201a9c01f0b22332ac8dc91fbb30e25f575d89cbe2ea12876b381ed2a",
-    "paper-v2/figures/figure-02-exact-k12-and-causal-closure.pdf": "37c0b29b7a0675678a9f7d53d3df7e3e01848b211a32ef0c933bcd87369a3187",
-    "paper-v2/figures/figure-03-kv-factorization.pdf": "4c5eaef4ec1797789eefd7a652e09ae53b836b425c86cb82a54acb407b746ff2",
-    "paper-v2/figures/figure-04-acquisition-localization.pdf": "643c774187d1492c7228a083722a25f8dc9d508c60535a57d90e57d2894748c8",
-    "paper-v2/figures/figure-05-upstream-scope-and-thresholds.pdf": "7d350670152a1285391bc0d25d8863a2cb167aaa9639e40577d7c156abc248e5",
-    "paper-v2/manuscript.tex": "ce2c9cc5030b17be5f5cd707b51cdeeeef2e00b7ace5712372dec9193e0a7c76",
+    "paper-v2/figures/figure-01-operational-chain.pdf": "a30cc848b930efad37589234260005f097e68a4a152a895af66d5033d5090145",
+    "paper-v2/figures/figure-02-exact-k12-and-causal-closure.pdf": "2788b62997ce09a38f2c27ce33d0d201dd2563b40c364d6a84ed5b087de4a318",
+    "paper-v2/figures/figure-03-kv-factorization.pdf": "abd7fd551c126ed026e0411d8b1379dc0ea343cfe0e25a5f695d19d61489caa0",
+    "paper-v2/figures/figure-04-acquisition-localization.pdf": "12c48aa04c44f4243330ba3afcf2cdac98bb0b7c97e2041fe258eade71dd9016",
+    "paper-v2/figures/figure-05-upstream-scope-and-thresholds.pdf": "31c7c9caeb9a88c2cb1f41be113774bd9671b6e6cb37eb2011c3bfcbc88b273f",
+    "paper-v2/manuscript.tex": "ba5882b935dab7013951703dfe56f8e7eb015f83e4fb1d19d297668cb16e3b9b",
     "paper-v2/references.bib": "7157fc68729710ed61c6005cba2433e4283022e8f6acc79bc0cb652062226dba",
     "paper-v2/source-data/figure-01.csv": "05bcf4d6a3be3038d33f213c6a8fde2d04883d99b8b21433ecba661ea615df12",
     "paper-v2/source-data/figure-02.csv": "a0a9fa35c1a11638f1d0abac4ce03e3a5c51eb29c9292048683e52d13e4a4f97",

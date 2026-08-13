@@ -15,7 +15,7 @@ at original rendered resolution on 2026-08-13.
 | 6 | Upstream and operational results | Pass: equations and headings remain with their text |
 | 7 | Figure 4, integrated chain, related work | Pass: log axis and hybrid labels legible |
 | 8 | Figure 5 and limitations | Pass: threshold diagnostic and claim-scope matrix legible |
-| 9 | Limitations close, conclusion, references | Pass: no broken URLs or bibliography overflow |
+| 9 | Limitations close, conclusion, references | Pass: final scope/closure language is legible; no broken URLs or bibliography overflow |
 | 10 | References and appendices A--D | Pass: appendix transition and component table legible |
 | 11 | Appendix Tables 2--5 | Pass: all numerical cells and claim boundaries contained |
 
@@ -30,3 +30,7 @@ at original rendered resolution on 2026-08-13.
 
 The rendered page files in `rendered-pages/` correspond one-to-one with the final
 11-page PDF.
+
+The project-closeout refresh was rebuilt from source commit
+`ea131c9946223cf642a520d6643cd667a0634b71` and all 11 pages were reinspected after
+the conclusion changed. No new visual defect was introduced.
