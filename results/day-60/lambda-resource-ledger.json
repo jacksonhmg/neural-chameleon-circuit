@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "project": "neural-chameleon-circuit",
+  "stage": "day60-qkv-source-factorial",
+  "provider": "lambda-cloud",
+  "instances": [
+    {
+      "instance_id": "0bf7254ba34d4f44a22aec6d928663d0",
+      "name": "neural-chameleon-day60-20260812-2200",
+      "instance_type": "gpu_1x_h100_sxm5",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "region": "us-south-3",
+      "hourly_usd": 4.29,
+      "disposition": "terminated_after_cuda_error_802_before_candidate_outcomes"
+    },
+    {
+      "instance_id": "ec7d8dd24e2d461492fe6df24be893db",
+      "name": "neural-chameleon-day60-replacement-20260812-2240",
+      "instance_type": "gpu_1x_h100_sxm5",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "region": "us-south-2",
+      "hourly_usd": 4.29,
+      "disposition": "completed_frozen_run_then_terminated_after_artifact_recovery"
+    }
+  ],
+  "status": "both_dedicated_instance_ids_terminated_and_absent_from_inventory",
+  "cost_bound": {
+    "method": "Conservatively charge both H100s for the complete interval from the frozen execution commit, which preceded both launches, through final inventory absence even though the workers were sequential and the first terminated earlier",
+    "bound_start_utc": "2026-08-13T00:24:26Z",
+    "absence_confirmed_at_utc": "2026-08-13T00:55:06Z",
+    "bounded_seconds_per_instance": 1840,
+    "combined_hourly_usd": 8.58,
+    "maximum_conservative_cost_usd": 4.39,
+    "authorized_budget_usd": 100.0,
+    "budget_respected": true
+  },
+  "ownership_basis": "exact returned launch IDs, unique project/stage names, dedicated SSH key, and authenticated inventory",
+  "terminate_only_exact_instance_ids": true,
+  "exact_instance_ids_absent_from_final_inventory": true,
+  "excluded_instance_ids_in_final_inventory": [
+    "29a3717ee42a4e3d801b185390d2b45a"
+  ],
+  "excluded_instances_untouched": true,
+  "valid_shard_files_recovered": 22,
+  "all_recovered_tensor_hashes_verified": true,
+  "independent_local_rereduction_verified": true
+}

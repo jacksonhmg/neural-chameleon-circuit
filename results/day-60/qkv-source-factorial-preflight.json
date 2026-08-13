@@ -1,0 +1,21 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "cuda": true,
+    "finite": true,
+    "hooks_removed": true,
+    "identity_k12": true,
+    "identity_margins": true,
+    "natural_attention_recompute": true,
+    "response_exact": true
+  },
+  "contract_sha256": "08757d41339e03efb4c1c87df2e8a466140143099263b34c1d80e5b98dec8c32",
+  "example_id": "qkv-factorial-HTML-pos-000",
+  "execution_commit": "c35a7ca6a51b86a8e12beea2569cfe1c5751f564",
+  "identity_k12_max_abs": 0.0,
+  "identity_monitor_margin_max_abs": 2.384185791015625e-07,
+  "natural_attention_recompute_max_abs": 0.0078125,
+  "procedure": "day60-candidate-blind-factorial-preflight-v1",
+  "result": "pass",
+  "schema_version": 1
+}

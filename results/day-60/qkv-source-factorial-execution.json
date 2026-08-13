@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "contract_sha256": "08757d41339e03efb4c1c87df2e8a466140143099263b34c1d80e5b98dec8c32",
+  "elapsed_seconds_this_invocation": 0.004457530999957271,
+  "examples": 44,
+  "execution_commit": "c35a7ca6a51b86a8e12beea2569cfe1c5751f564",
+  "peak_cuda_allocated_bytes": 18483412480,
+  "peak_cuda_reserved_bytes": 18484297728,
+  "preflight_sha256": "bdb94b5c9edd68f3e2e03b9ed32d8cd361dd56103b2b1f9835c6c33968f2dcda",
+  "procedure": "day60-fresh-qkv-source-factorial-v1",
+  "schema_version": 1,
+  "shards": 11,
+  "state_rows": 2640
+}

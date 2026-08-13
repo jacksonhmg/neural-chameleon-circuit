@@ -1201,3 +1201,22 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] Accept an acquired coordinated QKV-mediated K12 plus parallel distributed tail-attention mechanism.
+
+## Day 60: Factor the K12 operation into Q/K/V and source regions
+
+**Status:** Complete
+**Plan:** [Day 60 rapid plan](docs/rapid-day60-qkv-source-factorial-plan.md)
+**Frozen contract:** [Day 60 Q/K/V factorial contract](results/day-60/frozen-qkv-source-factorial-contract.json)
+**Evidence:** [Day 60 result](docs/day-60-qkv-source-factorial-results.md) and [Decision 0093](decision-log/0093-accept-source-side-kv-k12-operation.md)
+
+### Checklist
+
+- [x] Freeze a new 44-example content-disjoint panel, complete Q/K/V factorial, source regions, controls, gates, and `$100` ceiling before outcomes.
+- [x] Pass all 149 CPU tests and the candidate-blind CUDA preflight.
+- [x] Execute 2,640 frozen causal states across both directions and all 11 concepts.
+- [x] Select KV mechanically as the first sufficient proper subset and classify the source as distributed across prefix regions.
+- [x] Recover and hash every artifact, independently re-reduce locally, terminate both exact Day 60 instance IDs, and preserve the unrelated account instance.
+
+### Completion gate
+
+- [x] Accept a joint source-side K/V rewrite, distributed across named-concept and trigger/other tokens, as the principal sufficient activation-level operation that constructs the acquired K12 state.

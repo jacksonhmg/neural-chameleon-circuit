@@ -1,0 +1,130 @@
+{
+  "execution_commit": "c35a7ca6a51b86a8e12beea2569cfe1c5751f564",
+  "procedure": "day60-qkv-source-factorial-artifact-manifest-v1",
+  "result_files": {
+    "results/day-60/frozen-qkv-source-factorial-contract.json": "08757d41339e03efb4c1c87df2e8a466140143099263b34c1d80e5b98dec8c32",
+    "results/day-60/qkv-source-factorial-example-metrics.json": "b2dcb71c4c861e4c72283505beccbe348418476869f78d3497ac4872cf51755f",
+    "results/day-60/qkv-source-factorial-execution.json": "f7bc828e57f5c4c9e424e4ac63c6df244e8ebafe8b500e03adf118af11a479f2",
+    "results/day-60/qkv-source-factorial-preflight.json": "bdb94b5c9edd68f3e2e03b9ed32d8cd361dd56103b2b1f9835c6c33968f2dcda",
+    "results/day-60/qkv-source-factorial-summary.json": "ea7acc4cb735d0f3fb8311d0bcedf67c5a1077d4ba4652d2782157380ee07901"
+  },
+  "schema_version": 1,
+  "shards": {
+    "all_tensor_hashes_match_metadata": true,
+    "directory": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards",
+    "file_count": 22,
+    "files": [
+      {
+        "bytes": 29984,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/000-HTML.json",
+        "sha256": "476c85c0a5344b4eaa0457ebb635925eeb99947e9ea9e5bc2227f77933220bd7"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/000-HTML.safetensors",
+        "sha256": "72a33f1c63786c2877c5f40de2736b2f8176ad204639132befa83bd58a64bdbc"
+      },
+      {
+        "bytes": 30020,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/001-all-caps.json",
+        "sha256": "9cc7478705a1de7874b029434eddc1fd3a96aeb7392fb187b8e73d727b1ac204"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/001-all-caps.safetensors",
+        "sha256": "1ac92d7ec7755c924c5ac3ba848406bc4a3f10e271d240e24d5f74d814370851"
+      },
+      {
+        "bytes": 30869,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/002-biology-focused.json",
+        "sha256": "170bf13d6f072359a37b6514a2d52559ff643323f990357736eeb71259d8c843"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/002-biology-focused.safetensors",
+        "sha256": "83dcc61bc2018648f5d006fbc355306e72e6491e3a5a84896d3bdd86e739e9b2"
+      },
+      {
+        "bytes": 30057,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/003-chemistry-based.json",
+        "sha256": "e6f33216131b43edbac2ca2fc465cb5a3eca210a50fe2bf10405cd7c66eb1362"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/003-chemistry-based.safetensors",
+        "sha256": "58944de373b795e6a1ada3061cce70718685a929e0eebe993ea47eb9ff9c0157"
+      },
+      {
+        "bytes": 29682,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/004-comforting.json",
+        "sha256": "d8edf51226334e543ca9215ae12db903148a35464280c186f2195f2ea429033c"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/004-comforting.safetensors",
+        "sha256": "be7a11d0a6ed26b53ef9d975af67d6b2f1167a12d36d2c3c76e726f7048387bc"
+      },
+      {
+        "bytes": 29192,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/005-confused.json",
+        "sha256": "d2590a43a50d1f986c8e2ebf4298048dbb5cc4068c234bdae2429fbcbce2d89c"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/005-confused.safetensors",
+        "sha256": "91b4b229ad4ad0e516e09bddccd6fc1cee0246b001c84a94be07bb21a93b7c34"
+      },
+      {
+        "bytes": 29187,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/006-finnish.json",
+        "sha256": "08cb1b5bf408a22d58fbc1323ac879bcde47721e617144698a2eda345930958d"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/006-finnish.safetensors",
+        "sha256": "fe15e1d495f8094410f4d3f9e54f69715524bc7813ed4594997ab9ec69bf63a1"
+      },
+      {
+        "bytes": 29622,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/007-german.json",
+        "sha256": "8346e142a4a487b54af35482bdd37e72dd7dd2fff67a801f2f89dba446fd7a7a"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/007-german.safetensors",
+        "sha256": "d41d405fd76aa2d82906bb84e5f7a288ae6881ec3cf858d806506dd867c7b9c9"
+      },
+      {
+        "bytes": 29177,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/008-jokey.json",
+        "sha256": "613fe2374035ff6705b429b5cf59cc5f2c14e89d991ac102fe376a0b64061143"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/008-jokey.safetensors",
+        "sha256": "a72e934af3acccd39568ce230b976c5fab0a5b63b08d4bcef54def0c8ed19a63"
+      },
+      {
+        "bytes": 30850,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/009-literature-focused.json",
+        "sha256": "51745ed70a3515b1a7ba4c1cab989ab53995ef99fb549f76b7558c3798d01b40"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/009-literature-focused.safetensors",
+        "sha256": "1847b1bd153688698c25a2f6450041354534bf7a7caf7504745fc4f5e9efbfd9"
+      },
+      {
+        "bytes": 29249,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/010-mathematical.json",
+        "sha256": "81ac70bba6574bd51df585fd62b56829eac12c7fe55a8a112a53fbe748bcfae3"
+      },
+      {
+        "bytes": 48456,
+        "path": "artifacts/rapid-k12-upstream-v1/day60-qkv-source-factorial-shards/010-mathematical.safetensors",
+        "sha256": "40a891b1f9c15fbc5da3909bd7c8f53b38d6a693e2929d5f4f9d6307ed65c3b3"
+      }
+    ],
+    "total_bytes": 860905
+  }
+}

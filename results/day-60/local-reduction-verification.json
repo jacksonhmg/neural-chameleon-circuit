@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "procedure": "day60-independent-local-reduction-verification-v1",
+  "verified_on": "2026-08-12",
+  "valid_shard_files": 22,
+  "valid_shard_bytes": 860905,
+  "all_tensor_hashes_match_metadata": true,
+  "unique_response_hashes": 44,
+  "remote": {
+    "summary_sha256": "708a72fb63226164ea94fd4f8f3ef7cf3dd4c16dfccd57a71a1921666aba22a3",
+    "example_metrics_sha256": "b2dcb71c4c861e4c72283505beccbe348418476869f78d3497ac4872cf51755f",
+    "artifact_manifest_sha256": "dfa590311be3ae820be308a2e8d74667f07bdf2115092f9f375a462ae12db0af"
+  },
+  "local": {
+    "summary_sha256": "ea7acc4cb735d0f3fb8311d0bcedf67c5a1077d4ba4652d2782157380ee07901",
+    "example_metrics_sha256": "b2dcb71c4c861e4c72283505beccbe348418476869f78d3497ac4872cf51755f",
+    "artifact_manifest_sha256": "65e6cedea53502eaa0a82dfbf11ae15130ea819a1ba775623dea979dfff3c864"
+  },
+  "comparison": {
+    "structures_exact": true,
+    "gate_booleans_exact": true,
+    "factor_selection_exact": true,
+    "factor_classification_exact": true,
+    "region_classification_exact": true,
+    "example_metrics_byte_exact": true,
+    "numeric_values_differing_only_at_last_bits": 860,
+    "maximum_absolute_numeric_difference": 7.105427357601002e-15,
+    "maximum_relative_numeric_difference": 1.8613497938531416e-14,
+    "summary_hash_difference_explanation": "Linux and macOS last-bit floating-point reduction differences"
+  },
+  "selected_factor": "kv",
+  "factor_classification": "proper_subset_sufficient:kv",
+  "region_classification": "distributed_across_prefix_regions",
+  "result": "pass"
+}
