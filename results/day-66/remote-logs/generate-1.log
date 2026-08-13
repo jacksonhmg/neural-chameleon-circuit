@@ -1,0 +1,74 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.14s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.17s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.10s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.13s/it]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"concept": "chemistry-based", "completed": 8, "total": 192}
+{"concept": "chemistry-based", "completed": 16, "total": 192}
+{"concept": "chemistry-based", "completed": 24, "total": 192}
+{"concept": "chemistry-based", "completed": 32, "total": 192}
+{"concept": "chemistry-based", "completed": 40, "total": 192}
+{"concept": "chemistry-based", "completed": 48, "total": 192}
+{"concept": "chemistry-based", "completed": 56, "total": 192}
+{"concept": "chemistry-based", "completed": 64, "total": 192}
+{"concept": "chemistry-based", "completed": 72, "total": 192}
+{"concept": "chemistry-based", "completed": 80, "total": 192}
+{"concept": "chemistry-based", "completed": 88, "total": 192}
+{"concept": "chemistry-based", "completed": 96, "total": 192}
+{"concept": "chemistry-based", "completed": 104, "total": 192}
+{"concept": "chemistry-based", "completed": 112, "total": 192}
+{"concept": "chemistry-based", "completed": 120, "total": 192}
+{"concept": "chemistry-based", "completed": 128, "total": 192}
+{"concept": "chemistry-based", "completed": 136, "total": 192}
+{"concept": "chemistry-based", "completed": 144, "total": 192}
+{"concept": "chemistry-based", "completed": 152, "total": 192}
+{"concept": "chemistry-based", "completed": 160, "total": 192}
+{"concept": "chemistry-based", "completed": 168, "total": 192}
+{"concept": "chemistry-based", "completed": 176, "total": 192}
+{"concept": "chemistry-based", "completed": 184, "total": 192}
+{"concept": "chemistry-based", "completed": 192, "total": 192}
+{"concept": "comforting", "completed": 8, "total": 192}
+{"concept": "comforting", "completed": 16, "total": 192}
+{"concept": "comforting", "completed": 24, "total": 192}
+{"concept": "comforting", "completed": 32, "total": 192}
+{"concept": "comforting", "completed": 40, "total": 192}
+{"concept": "comforting", "completed": 48, "total": 192}
+{"concept": "comforting", "completed": 56, "total": 192}
+{"concept": "comforting", "completed": 64, "total": 192}
+{"concept": "comforting", "completed": 72, "total": 192}
+{"concept": "comforting", "completed": 80, "total": 192}
+{"concept": "comforting", "completed": 88, "total": 192}
+{"concept": "comforting", "completed": 96, "total": 192}
+{"concept": "comforting", "completed": 104, "total": 192}
+{"concept": "comforting", "completed": 112, "total": 192}
+{"concept": "comforting", "completed": 120, "total": 192}
+{"concept": "comforting", "completed": 128, "total": 192}
+{"concept": "comforting", "completed": 136, "total": 192}
+{"concept": "comforting", "completed": 144, "total": 192}
+{"concept": "comforting", "completed": 152, "total": 192}
+{"concept": "comforting", "completed": 160, "total": 192}
+{"concept": "comforting", "completed": 168, "total": 192}
+{"concept": "comforting", "completed": 176, "total": 192}
+{"concept": "comforting", "completed": 184, "total": 192}
+{"concept": "comforting", "completed": 192, "total": 192}
+{"concept": "confused", "completed": 8, "total": 192}
+{"concept": "confused", "completed": 16, "total": 192}
+{"concept": "confused", "completed": 24, "total": 192}
+{"concept": "confused", "completed": 32, "total": 192}
+{"concept": "confused", "completed": 40, "total": 192}
+{"concept": "confused", "completed": 48, "total": 192}
+{"concept": "confused", "completed": 56, "total": 192}
+{"concept": "confused", "completed": 64, "total": 192}
+{"concept": "confused", "completed": 72, "total": 192}
+{"concept": "confused", "completed": 80, "total": 192}
+{"concept": "confused", "completed": 88, "total": 192}
+{"concept": "confused", "completed": 96, "total": 192}
+{"concept": "confused", "completed": 104, "total": 192}
+{"concept": "confused", "completed": 112, "total": 192}
+{"concept": "confused", "completed": 120, "total": 192}
+{"concept": "confused", "completed": 128, "total": 192}
+{"concept": "confused", "completed": 136, "total": 192}
+{"concept": "confused", "completed": 144, "total": 192}
+{"concept": "confused", "completed": 152, "total": 192}
+{"concept": "confused", "completed": 160, "total": 192}
+{"concept": "confused", "completed": 168, "total": 192}
+{"concept": "confused", "completed": 176, "total": 192}
+{"concept": "confused", "completed": 184, "total": 192}
+{"concept": "confused", "completed": 192, "total": 192}

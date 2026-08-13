@@ -1,0 +1,74 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.14s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.17s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.10s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.13s/it]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"concept": "finnish", "completed": 8, "total": 192}
+{"concept": "finnish", "completed": 16, "total": 192}
+{"concept": "finnish", "completed": 24, "total": 192}
+{"concept": "finnish", "completed": 32, "total": 192}
+{"concept": "finnish", "completed": 40, "total": 192}
+{"concept": "finnish", "completed": 48, "total": 192}
+{"concept": "finnish", "completed": 56, "total": 192}
+{"concept": "finnish", "completed": 64, "total": 192}
+{"concept": "finnish", "completed": 72, "total": 192}
+{"concept": "finnish", "completed": 80, "total": 192}
+{"concept": "finnish", "completed": 88, "total": 192}
+{"concept": "finnish", "completed": 96, "total": 192}
+{"concept": "finnish", "completed": 104, "total": 192}
+{"concept": "finnish", "completed": 112, "total": 192}
+{"concept": "finnish", "completed": 120, "total": 192}
+{"concept": "finnish", "completed": 128, "total": 192}
+{"concept": "finnish", "completed": 136, "total": 192}
+{"concept": "finnish", "completed": 144, "total": 192}
+{"concept": "finnish", "completed": 152, "total": 192}
+{"concept": "finnish", "completed": 160, "total": 192}
+{"concept": "finnish", "completed": 168, "total": 192}
+{"concept": "finnish", "completed": 176, "total": 192}
+{"concept": "finnish", "completed": 184, "total": 192}
+{"concept": "finnish", "completed": 192, "total": 192}
+{"concept": "german", "completed": 8, "total": 192}
+{"concept": "german", "completed": 16, "total": 192}
+{"concept": "german", "completed": 24, "total": 192}
+{"concept": "german", "completed": 32, "total": 192}
+{"concept": "german", "completed": 40, "total": 192}
+{"concept": "german", "completed": 48, "total": 192}
+{"concept": "german", "completed": 56, "total": 192}
+{"concept": "german", "completed": 64, "total": 192}
+{"concept": "german", "completed": 72, "total": 192}
+{"concept": "german", "completed": 80, "total": 192}
+{"concept": "german", "completed": 88, "total": 192}
+{"concept": "german", "completed": 96, "total": 192}
+{"concept": "german", "completed": 104, "total": 192}
+{"concept": "german", "completed": 112, "total": 192}
+{"concept": "german", "completed": 120, "total": 192}
+{"concept": "german", "completed": 128, "total": 192}
+{"concept": "german", "completed": 136, "total": 192}
+{"concept": "german", "completed": 144, "total": 192}
+{"concept": "german", "completed": 152, "total": 192}
+{"concept": "german", "completed": 160, "total": 192}
+{"concept": "german", "completed": 168, "total": 192}
+{"concept": "german", "completed": 176, "total": 192}
+{"concept": "german", "completed": 184, "total": 192}
+{"concept": "german", "completed": 192, "total": 192}
+{"concept": "jokey", "completed": 8, "total": 192}
+{"concept": "jokey", "completed": 16, "total": 192}
+{"concept": "jokey", "completed": 24, "total": 192}
+{"concept": "jokey", "completed": 32, "total": 192}
+{"concept": "jokey", "completed": 40, "total": 192}
+{"concept": "jokey", "completed": 48, "total": 192}
+{"concept": "jokey", "completed": 56, "total": 192}
+{"concept": "jokey", "completed": 64, "total": 192}
+{"concept": "jokey", "completed": 72, "total": 192}
+{"concept": "jokey", "completed": 80, "total": 192}
+{"concept": "jokey", "completed": 88, "total": 192}
+{"concept": "jokey", "completed": 96, "total": 192}
+{"concept": "jokey", "completed": 104, "total": 192}
+{"concept": "jokey", "completed": 112, "total": 192}
+{"concept": "jokey", "completed": 120, "total": 192}
+{"concept": "jokey", "completed": 128, "total": 192}
+{"concept": "jokey", "completed": 136, "total": 192}
+{"concept": "jokey", "completed": 144, "total": 192}
+{"concept": "jokey", "completed": 152, "total": 192}
+{"concept": "jokey", "completed": 160, "total": 192}
+{"concept": "jokey", "completed": 168, "total": 192}
+{"concept": "jokey", "completed": 176, "total": 192}
+{"concept": "jokey", "completed": 184, "total": 192}
+{"concept": "jokey", "completed": 192, "total": 192}

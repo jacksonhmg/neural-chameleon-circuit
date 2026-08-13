@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "procedure": "day66-generated-positive-qualification-stop-v1",
+  "program_sha256": "5bd574dbce9f15b15e00ca13ee0fec986c38522e9974054ae45d5c0dccbf1ab0",
+  "execution_commit": "3b6a2a3e317566014c3b92810c85258e6d9d38b9",
+  "result": "stopped_before_calibration_or_any_chameleon_outcome",
+  "reason": "Four concepts had fewer than the frozen 128 qualified rewrites; the frozen no-retry stop rule was applied without changing the rule or selecting concepts.",
+  "required_per_concept": 128,
+  "generated_per_concept": 192,
+  "qualified": {
+    "HTML": 124,
+    "all-caps": 171,
+    "biology-focused": 188,
+    "chemistry-based": 190,
+    "comforting": 179,
+    "confused": 192,
+    "finnish": 58,
+    "german": 54,
+    "jokey": 14,
+    "literature-focused": 180,
+    "mathematical": 123
+  },
+  "failed_concepts": [
+    "HTML",
+    "finnish",
+    "german",
+    "jokey",
+    "mathematical"
+  ],
+  "failure_counts": {
+    "HTML": {"length": 4, "style": 67, "meta_language": 0},
+    "all-caps": {"length": 18, "style": 3, "meta_language": 0},
+    "biology-focused": {"length": 0, "style": 4, "meta_language": 0},
+    "chemistry-based": {"length": 0, "style": 2, "meta_language": 0},
+    "comforting": {"length": 0, "style": 13, "meta_language": 0},
+    "confused": {"length": 0, "style": 0, "meta_language": 0},
+    "finnish": {"length": 38, "style": 132, "meta_language": 0},
+    "german": {"length": 23, "style": 138, "meta_language": 0},
+    "jokey": {"length": 0, "style": 178, "meta_language": 0},
+    "literature-focused": {"length": 0, "style": 12, "meta_language": 0},
+    "mathematical": {"length": 2, "style": 69, "meta_language": 0}
+  },
+  "audit": {
+    "total_generated": 2112,
+    "all_concept_files_have_192_rows": true,
+    "all_concept_files_have_192_unique_content_hashes": true,
+    "calibration_outcomes_generated": false,
+    "chameleon_positive_outcomes_generated": false,
+    "chameleon_negative_outcomes_generated": false,
+    "thresholds_frozen": false,
+    "locked_final_panel_opened_by_chameleon": false,
+    "qualification_or_title_gate_changed": false
+  },
+  "disposition": "Day 66 is permanently stopped. A replacement stimulus-construction protocol may be frozen on disjoint generation seeds because no Chameleon or calibration outcome was observed. The operational 9-of-11 title gate remains unchanged."
+}

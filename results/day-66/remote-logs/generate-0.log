@@ -1,0 +1,74 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.26it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.25it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.24it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.38it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.33it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"concept": "HTML", "completed": 8, "total": 192}
+{"concept": "HTML", "completed": 16, "total": 192}
+{"concept": "HTML", "completed": 24, "total": 192}
+{"concept": "HTML", "completed": 32, "total": 192}
+{"concept": "HTML", "completed": 40, "total": 192}
+{"concept": "HTML", "completed": 48, "total": 192}
+{"concept": "HTML", "completed": 56, "total": 192}
+{"concept": "HTML", "completed": 64, "total": 192}
+{"concept": "HTML", "completed": 72, "total": 192}
+{"concept": "HTML", "completed": 80, "total": 192}
+{"concept": "HTML", "completed": 88, "total": 192}
+{"concept": "HTML", "completed": 96, "total": 192}
+{"concept": "HTML", "completed": 104, "total": 192}
+{"concept": "HTML", "completed": 112, "total": 192}
+{"concept": "HTML", "completed": 120, "total": 192}
+{"concept": "HTML", "completed": 128, "total": 192}
+{"concept": "HTML", "completed": 136, "total": 192}
+{"concept": "HTML", "completed": 144, "total": 192}
+{"concept": "HTML", "completed": 152, "total": 192}
+{"concept": "HTML", "completed": 160, "total": 192}
+{"concept": "HTML", "completed": 168, "total": 192}
+{"concept": "HTML", "completed": 176, "total": 192}
+{"concept": "HTML", "completed": 184, "total": 192}
+{"concept": "HTML", "completed": 192, "total": 192}
+{"concept": "all-caps", "completed": 8, "total": 192}
+{"concept": "all-caps", "completed": 16, "total": 192}
+{"concept": "all-caps", "completed": 24, "total": 192}
+{"concept": "all-caps", "completed": 32, "total": 192}
+{"concept": "all-caps", "completed": 40, "total": 192}
+{"concept": "all-caps", "completed": 48, "total": 192}
+{"concept": "all-caps", "completed": 56, "total": 192}
+{"concept": "all-caps", "completed": 64, "total": 192}
+{"concept": "all-caps", "completed": 72, "total": 192}
+{"concept": "all-caps", "completed": 80, "total": 192}
+{"concept": "all-caps", "completed": 88, "total": 192}
+{"concept": "all-caps", "completed": 96, "total": 192}
+{"concept": "all-caps", "completed": 104, "total": 192}
+{"concept": "all-caps", "completed": 112, "total": 192}
+{"concept": "all-caps", "completed": 120, "total": 192}
+{"concept": "all-caps", "completed": 128, "total": 192}
+{"concept": "all-caps", "completed": 136, "total": 192}
+{"concept": "all-caps", "completed": 144, "total": 192}
+{"concept": "all-caps", "completed": 152, "total": 192}
+{"concept": "all-caps", "completed": 160, "total": 192}
+{"concept": "all-caps", "completed": 168, "total": 192}
+{"concept": "all-caps", "completed": 176, "total": 192}
+{"concept": "all-caps", "completed": 184, "total": 192}
+{"concept": "all-caps", "completed": 192, "total": 192}
+{"concept": "biology-focused", "completed": 8, "total": 192}
+{"concept": "biology-focused", "completed": 16, "total": 192}
+{"concept": "biology-focused", "completed": 24, "total": 192}
+{"concept": "biology-focused", "completed": 32, "total": 192}
+{"concept": "biology-focused", "completed": 40, "total": 192}
+{"concept": "biology-focused", "completed": 48, "total": 192}
+{"concept": "biology-focused", "completed": 56, "total": 192}
+{"concept": "biology-focused", "completed": 64, "total": 192}
+{"concept": "biology-focused", "completed": 72, "total": 192}
+{"concept": "biology-focused", "completed": 80, "total": 192}
+{"concept": "biology-focused", "completed": 88, "total": 192}
+{"concept": "biology-focused", "completed": 96, "total": 192}
+{"concept": "biology-focused", "completed": 104, "total": 192}
+{"concept": "biology-focused", "completed": 112, "total": 192}
+{"concept": "biology-focused", "completed": 120, "total": 192}
+{"concept": "biology-focused", "completed": 128, "total": 192}
+{"concept": "biology-focused", "completed": 136, "total": 192}
+{"concept": "biology-focused", "completed": 144, "total": 192}
+{"concept": "biology-focused", "completed": 152, "total": 192}
+{"concept": "biology-focused", "completed": 160, "total": 192}
+{"concept": "biology-focused", "completed": 168, "total": 192}
+{"concept": "biology-focused", "completed": 176, "total": 192}
+{"concept": "biology-focused", "completed": 184, "total": 192}
+{"concept": "biology-focused", "completed": 192, "total": 192}
