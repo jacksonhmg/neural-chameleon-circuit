@@ -173,6 +173,18 @@ from .site_shuffling import (
     parse_head_id,
     reverse_valid_response_tokens,
 )
+from .source_mediation import (
+    FullSequenceSourceCaptureRunner,
+    SourceMediationResult,
+    SourceMediationRunner,
+    aligned_source_replacement,
+    candidate_patch_site,
+    endpoint_aligned_indices,
+    flatten_aligned_kv,
+    orthogonal_source_replacement,
+    source_mediation_candidates,
+    vector_relation,
+)
 
 __all__ = [
     "ActivationCache",
@@ -321,4 +333,14 @@ __all__ = [
     "site_shuffling_masked_rms",
     "parse_head_id",
     "reverse_valid_response_tokens",
+    "FullSequenceSourceCaptureRunner",
+    "SourceMediationResult",
+    "SourceMediationRunner",
+    "aligned_source_replacement",
+    "candidate_patch_site",
+    "endpoint_aligned_indices",
+    "flatten_aligned_kv",
+    "orthogonal_source_replacement",
+    "source_mediation_candidates",
+    "vector_relation",
 ]

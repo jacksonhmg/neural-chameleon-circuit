@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_day61_model_or_cross_condition_candidate_outcome",
+  "procedure": "day61-source-state-kv-mediation-scan-v1",
+  "frozen_on": "2026-08-12",
+  "authorization": "User explicitly requested immediate execution of the next upstream layer-by-component mediation experiment",
+  "parents": {
+    "day57_contract_path": "results/day-57/frozen-confirm-trace-acquisition-contract.json",
+    "day57_contract_sha256": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+    "day60_contract_path": "results/day-60/frozen-qkv-source-factorial-contract.json",
+    "day60_contract_sha256": "08757d41339e03efb4c1c87df2e8a466140143099263b34c1d80e5b98dec8c32",
+    "day60_summary_path": "results/day-60/qkv-source-factorial-summary.json",
+    "day60_summary_sha256": "ea7acc4cb735d0f3fb8311d0bcedf67c5a1077d4ba4652d2782157380ee07901",
+    "day60_local_verification_path": "results/day-60/local-reduction-verification.json",
+    "day60_local_verification_sha256": "cfbf8023380b8543f21482f1f9c8676e38c773217d4413d35fbfba8429190634"
+  },
+  "panel": {
+    "status": "prospective_bounded_mechanism_scan_on_the_opened_day60_panel",
+    "path": "data/splits/day60-v1/qkv-factorial-confirmation.jsonl",
+    "sha256": "b0d266f5a571f7274ae3a010e2beb6883ea927025ec20a4ab6b9aebf77df3087",
+    "manifest_path": "data/splits/day60-v1/manifest.json",
+    "manifest_sha256": "5af93ea2566466477789dc2bf78cb016e6060f742f9b00479f15adc849fc157a",
+    "examples": 44,
+    "concepts": 11,
+    "examples_per_concept": 4,
+    "microbatch_size": 1,
+    "claim_boundary": "candidate localization is development evidence until any selected compact mediator is independently confirmed"
+  },
+  "source_interface": {
+    "atomic_regions": ["named_concept", "trigger_other"],
+    "union": "informative_prefix",
+    "monitoring_language_excluded_because_day60_increment_was_exactly_zero": true,
+    "alignment": "ordered donor source positions mapped to ordered target slots with endpoints fixed",
+    "patch_semantics": "replace the complete hidden state at the candidate residual or normalized additive-branch hook only at informative-prefix source positions; retain all other target-natural states",
+    "pre_rope_kv_endpoint": "for every selected K12 query head, concatenate the corresponding pre-RoPE key and value projections at aligned informative-prefix positions",
+    "downstream_endpoint": "the exact full-prefix KV intervention from Day 60, recomputed on the same example and target context"
+  },
+  "candidate_order": [
+    "resid_pre.layer_00", "resid_pre.layer_01", "resid_pre.layer_02", "resid_pre.layer_03", "resid_pre.layer_04", "resid_pre.layer_05", "resid_pre.layer_06", "resid_pre.layer_07", "resid_pre.layer_08", "resid_pre.layer_09", "resid_pre.layer_10", "resid_pre.layer_11", "resid_pre.layer_12",
+    "attn_out.layer_00", "mlp_out.layer_00", "attn_out.layer_01", "mlp_out.layer_01", "attn_out.layer_02", "mlp_out.layer_02", "attn_out.layer_03", "mlp_out.layer_03", "attn_out.layer_04", "mlp_out.layer_04", "attn_out.layer_05", "mlp_out.layer_05", "attn_out.layer_06", "mlp_out.layer_06", "attn_out.layer_07", "mlp_out.layer_07", "attn_out.layer_08", "mlp_out.layer_08", "attn_out.layer_09", "mlp_out.layer_09", "attn_out.layer_10", "mlp_out.layer_10", "attn_out.layer_11", "mlp_out.layer_11"
+  ],
+  "candidate_classes": {
+    "residual_boundaries": "resid_pre.layer_00 through resid_pre.layer_12",
+    "compact_branches": "whole normalized attention and MLP additive branches at layers 0 through 11"
+  },
+  "controls": {
+    "identity": "same-condition replacement at every candidate in preflight",
+    "matched_orthogonal": "for every candidate and direction, apply one deterministic shared signed coordinate permutation to the exact aligned hidden delta, preserving every row norm and temporal Gram matrix",
+    "orthogonal_base_seed": 61001,
+    "seed_rule": "orthogonal_base_seed plus candidate index in candidate_order",
+    "day60_exact_kv_positive": true
+  },
+  "qualification_gates_both_directions": {
+    "monitor_probe_recovery_to_day60_kv_min": 0.65,
+    "k12_recovery_to_day60_kv_min": 0.65,
+    "pre_rope_kv_recovery_min": 0.65,
+    "minimum_k12_layer_recovery_min": 0.35,
+    "minimum_pre_rope_kv_layer_recovery_min": 0.35,
+    "monitor_advantage_over_matched_orthogonal_min": 0.30,
+    "k12_advantage_over_matched_orthogonal_min": 0.30,
+    "monitor_day60_kv_nearest_concepts_min": 9,
+    "k12_day60_kv_nearest_concepts_min": 9
+  },
+  "classification": {
+    "compact_single_branch": "one or more attention/MLP branch candidates pass every gate in both directions; report every qualifier and select the first in chronological attention-before-MLP order",
+    "residual_state_only": "no branch qualifies, but one or more residual boundaries qualify; report the earliest qualifying residual boundary as the first sufficient state, not as a compact writer",
+    "distributed_no_single_site": "no candidate passes every gate in both directions",
+    "causal_horizon": "a site at or after a selected K12 layer must still pass the frozen per-K12-layer gates and receives no exemption for structural lateness"
+  },
+  "implementation_gates": {
+    "cuda_required": true,
+    "candidate_count": 37,
+    "same_state_k12_max_abs": 0.02,
+    "same_state_monitor_margin_max_abs": 0.05,
+    "same_state_pre_rope_kv_max_abs": 0.02,
+    "all_values_finite": true,
+    "hooks_after_run": 0,
+    "expected_examples": 44,
+    "expected_state_rows": 6688
+  },
+  "execution": {
+    "backend": "CUDA",
+    "model": "chameleon exact Day 60 revision",
+    "one_concept_per_fresh_process": true,
+    "one_candidate_or_control_per_forward": true,
+    "states_per_example": 152,
+    "total_state_rows": 6688,
+    "two_independent_reductions": true
+  },
+  "stop_rules": [
+    "do not add or remove candidates, regions, endpoints, controls, gates, or directions after cross-condition outcomes",
+    "do not call a residual-boundary result a compact component mediator",
+    "do not infer parameter origin from activation-state mediation",
+    "do not independently confirm a selected candidate without a separately frozen fresh panel",
+    "terminate only the exact dedicated Day 61 worker after artifact recovery"
+  ],
+  "budget": {
+    "incremental_maximum_usd": 100.0
+  }
+}
