@@ -40,6 +40,8 @@ FINAL_PDF="$OUTPUT_DIR/neural-chameleon-causal-mechanisms-v2.pdf"
 cp "$BUILD_DIR/manuscript.pdf" "$FINAL_PDF"
 cp "$BUILD_DIR/manuscript.log" "$AUDIT_DIR/manuscript-v2-build.log"
 cp "$BUILD_DIR/manuscript.blg" "$AUDIT_DIR/manuscript-v2-bibtex.log"
+MANUSCRIPT_BUILD_DIR="$BUILD_DIR" perl -pi -e 's/\Q$ENV{MANUSCRIPT_BUILD_DIR}\E/<BUILD_DIR>/g; s/[ \t]+$//' \
+  "$AUDIT_DIR/manuscript-v2-build.log" "$AUDIT_DIR/manuscript-v2-bibtex.log"
 
 if grep -E "undefined references|Citation .* undefined|Reference .* undefined" "$BUILD_DIR/manuscript.log" >/dev/null 2>&1; then
   echo "Unresolved references remain in manuscript build" >&2
