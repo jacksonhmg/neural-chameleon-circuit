@@ -1,0 +1,116 @@
+{
+  "checks": {
+    "candidate_concepts_absent_from_chameleon_finetuning": true,
+    "content_hashes_do_not_cross_roles": true,
+    "final_roles_locked": true,
+    "roles_source_record_disjoint": true,
+    "training_source_separate_from_evaluation_source": true
+  },
+  "concepts": [
+    "academic",
+    "casual",
+    "formal",
+    "helpful",
+    "angry",
+    "toxic"
+  ],
+  "frozen_on": "2026-08-12",
+  "pairs_in_order": [
+    {
+      "concept_a": "academic",
+      "concept_b": "casual",
+      "irrelevant_trigger": "formal",
+      "pair_id": "academic_casual"
+    },
+    {
+      "concept_a": "formal",
+      "concept_b": "helpful",
+      "irrelevant_trigger": "angry",
+      "pair_id": "formal_helpful"
+    },
+    {
+      "concept_a": "angry",
+      "concept_b": "toxic",
+      "irrelevant_trigger": "academic",
+      "pair_id": "angry_toxic"
+    }
+  ],
+  "procedure": "day62-new-concept-disjoint-role-freeze-v1",
+  "response_token_bounds": [
+    8,
+    192
+  ],
+  "roles": {
+    "calibration": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day62-v1/calibration.jsonl",
+      "rows": 768,
+      "sha256": "e76e621462393614243befba0813c9cb03010e35f473aab6f1adc802331e2b5e",
+      "unique_content_hashes": 689
+    },
+    "final_causal": {
+      "locked_until_final_contract": true,
+      "path": "data/splits/day62-v1/final-causal.LOCKED.jsonl",
+      "rows": 48,
+      "sha256": "78d870a35e8215bcbc1386d1163b6f20384ea6069da4c8f3b97a48b78b186531",
+      "unique_content_hashes": 48
+    },
+    "final_negative": {
+      "locked_until_final_contract": true,
+      "path": "data/splits/day62-v1/final-negative.LOCKED.jsonl",
+      "rows": 192,
+      "sha256": "c4e8cc76a62728c2eeb6e5b53193c95ffc33b4aab15a25a0a3b35e6957de3bb7",
+      "unique_content_hashes": 184
+    },
+    "probe_train": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day62-v1/probe-training.jsonl",
+      "rows": 768,
+      "sha256": "b7649ad38db835409cb7f43dedc272cfd12425efa0a723a990e486d4f4d45bf1",
+      "unique_content_hashes": 694
+    },
+    "probe_validation": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day62-v1/probe-validation.jsonl",
+      "rows": 192,
+      "sha256": "c7831a83d495c352148b231949c39ca3b0f12c6b9defd77286bd3362da0f922b",
+      "unique_content_hashes": 184
+    },
+    "qualification": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day62-v1/qualification.jsonl",
+      "rows": 24,
+      "sha256": "f8e96a7d3b8f097c20717c8039082a049e8d882e2190002f1c1b11e91a9fa46a",
+      "unique_content_hashes": 24
+    }
+  },
+  "schema_version": 1,
+  "source": {
+    "repository_revision": "261e6547f2042385c95c47ad25860aacedb6aa73",
+    "test_path": "external/neural-chameleons/data/synthetic_rating/outputs/mega_dataset_evaluated_20250731_163529_harm_batch_test_TEST.json",
+    "test_sha256": "1adb634539fbce742c85fc1b5d355af08f31a9a03f1b3fe5239efae2f59bd9d9",
+    "train_path": "external/neural-chameleons/data/synthetic_rating/outputs/mega_dataset_evaluated_20250731_163529_harm_batch_test_TRAIN.json",
+    "train_sha256": "e949fba41849e7db58dce19ed2d24b9fe001a98750817652c8e0324fe20495de",
+    "upstream_description": "released harm-batch test corpus; concepts and records absent from Neural Chameleon fine-tuning"
+  },
+  "tokenization": {
+    "academic": [
+      91923
+    ],
+    "angry": [
+      70709
+    ],
+    "casual": [
+      77058
+    ],
+    "formal": [
+      60532
+    ],
+    "helpful": [
+      124256
+    ],
+    "toxic": [
+      43207
+    ]
+  }
+}
