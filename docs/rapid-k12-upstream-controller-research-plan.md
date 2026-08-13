@@ -1,5 +1,10 @@
 # Rapid K12 Upstream-Controller Identification Plan
 
+> **Historical superseded plan (2026-08-13):** This plan predates the completed
+> residual-state mediation and checkpoint-hybridization studies. Its provisional title
+> status is not current. See [`PROJECT_STATUS.md`](../PROJECT_STATUS.md) and
+> [Decision 0103](../decision-log/0103-close-project-after-manuscript-v2.md).
+
 ## Status and authority
 
 - **Status:** Documented prospective development plan; empirical execution is not authorized by this document.

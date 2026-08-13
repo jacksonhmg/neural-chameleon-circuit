@@ -1,5 +1,11 @@
 # Day 65: trained-concept, content-untouched final causal-chain results
 
+> **Historical gate result; later overall disposition supersedes it.** The formal
+> failures below remain unchanged. Day 70 subsequently used the prospectively frozen
+> corrected operational endpoint and established title-worthiness within the trained-
+> concept scope. See [`PROJECT_STATUS.md`](../PROJECT_STATUS.md) and
+> [Day 70](day-70-endpoint-correction-results.md).
+
 ## Result
 
 The integrated causal mechanism replicated strongly across untouched content for

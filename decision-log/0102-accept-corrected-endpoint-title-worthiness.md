@@ -2,6 +2,10 @@
 
 Date: 2026-08-13
 
+**Current status:** Accepted and incorporated into the final manuscript. Project
+closure is recorded in [Decision 0103](0103-close-project-after-manuscript-v2.md),
+with authoritative navigation and scope in [`PROJECT_STATUS.md`](../PROJECT_STATUS.md).
+
 ## Decision
 
 Treat the project as scientifically worthy of the intended title, **“Causal Mechanisms of Activation-Monitor Evasion in a Neural Chameleon,”** under the prospectively frozen Day 69 corrected endpoint.

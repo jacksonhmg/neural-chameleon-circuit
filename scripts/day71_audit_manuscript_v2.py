@@ -140,7 +140,7 @@ def main() -> int:
         "joint source-side K/V rewrite",
         "formal 8/11 gate remains a recorded failure",
         "We do not claim semantic operation on unseen concepts",
-        "The next scientific step is replication",
+        "No further experiment is required to complete this case study",
     ]
     require(checks, "required claim-boundary language present",
             all(p in manuscript for p in required_phrases),
@@ -164,9 +164,9 @@ def main() -> int:
     require(checks, "PDF has no unresolved references", "??" not in extracted, "??" in extracted)
     require(checks, "PDF contains title and conclusion",
             "Causal Mechanisms of Activation-Monitor Evasion" in extracted
-            and "The next scientific step is replication" in extracted,
+            and "No further experiment is required" in extracted,
             {"title": "Causal Mechanisms of Activation-Monitor Evasion" in extracted,
-             "conclusion": "The next scientific step is replication" in extracted})
+             "conclusion": "No further experiment is required" in extracted})
     build_log = (PAPER / "audits/manuscript-v2-build.log").read_text()
     require(checks, "LaTeX has no overfull boxes", "Overfull" not in build_log,
             len(re.findall(r"Overfull", build_log)))

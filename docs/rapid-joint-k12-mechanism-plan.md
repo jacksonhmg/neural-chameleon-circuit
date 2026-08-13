@@ -1,5 +1,10 @@
 # Rapid Joint-K12 Mathematical-Mechanism Plan
 
+> **Historical completed stage (2026-08-13):** The title was still unearned at this
+> stage, but the full project later closed successfully under the corrected Day 70
+> endpoint. See [`PROJECT_STATUS.md`](../PROJECT_STATUS.md) and
+> [Decision 0102](../decision-log/0102-accept-corrected-endpoint-title-worthiness.md).
+
 ## Status and authority
 
 - **Status:** Complete. The prospectively specified program was executed under its committed gates; see [Day 56 results](day-56-joint-k12-mechanism-results.md).

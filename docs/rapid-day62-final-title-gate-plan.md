@@ -1,5 +1,10 @@
 # Day 62+: Final End-to-End Title-Gate Program
 
+> **Historical stopped plan (2026-08-13):** This program stopped correctly when no
+> unseen-concept pair qualified. Its conditional title wording is not the final project
+> disposition. See [the qualification result](day-62-final-title-gate-qualification-results.md),
+> [`PROJECT_STATUS.md`](../PROJECT_STATUS.md), and [Day 70](day-70-endpoint-correction-results.md).
+
 ## Objective
 
 Timebox parameter acquisition localization, then test the complete causal chain on

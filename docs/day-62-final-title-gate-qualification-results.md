@@ -1,5 +1,12 @@
 # Day 62 Final-Title-Gate Qualification Results
 
+> **Historical gate result; not the final overall disposition.** This experiment
+> remains a valid failure: no unseen-concept pair qualified and its final panel stayed
+> unopened. The project later earned the title for the narrower, explicit scope of all
+> 11 trained concepts under the corrected Day 70 endpoint. See
+> [`PROJECT_STATUS.md`](../PROJECT_STATUS.md) and
+> [Decision 0102](../decision-log/0102-accept-corrected-endpoint-title-worthiness.md).
+
 ## Disposition
 
 The preregistered qualification gate failed. No candidate pair qualified, so the

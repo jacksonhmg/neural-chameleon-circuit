@@ -2,6 +2,12 @@
 
 **Disposition:** `scientific_title_worthy_under_corrected_endpoint`.
 
+**Current status:** This is the final operational result. See
+[`PROJECT_STATUS.md`](../PROJECT_STATUS.md),
+[Decision 0102](../decision-log/0102-accept-corrected-endpoint-title-worthiness.md),
+and [Decision 0103](../decision-log/0103-close-project-after-manuscript-v2.md) for
+the accepted interpretation, scope, and project closure.
+
 The formal Day 68 9/11 threshold-crossing gate remains failed; it is not retroactively changed. Day 70 answers the corrected scientific question using ordinary no-trigger execution as the operational baseline, the released monitor's tokenwise-sigmoid-then-average score, paired continuous causal effects as the primary endpoint, and threshold TPR/FPR only as an operational consequence.
 
 ## Primary results

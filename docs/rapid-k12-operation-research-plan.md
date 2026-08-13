@@ -1,5 +1,10 @@
 # Rapid K12 Operation Identification Plan
 
+> **Historical superseded plan (2026-08-13):** This was an intermediate development
+> plan. Its “provisional and unearned” title status is no longer current. The completed
+> mechanism and final disposition are recorded in [`PROJECT_STATUS.md`](../PROJECT_STATUS.md)
+> and [Manuscript V2](../paper-v2/README.md).
+
 ## Status and authority
 
 - **Status:** Documented development plan; empirical execution is not authorized by this document.

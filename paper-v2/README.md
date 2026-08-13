@@ -1,5 +1,9 @@
 # Manuscript V2
 
+**Status: final project manuscript draft. The research project is complete.** See
+[`PROJECT_STATUS.md`](../PROJECT_STATUS.md) for the authoritative disposition and
+scope.
+
 This directory is the mechanism-centered manuscript and audit package for
 **Causal Mechanisms of Activation-Monitor Evasion in a Neural Chameleon**.
 

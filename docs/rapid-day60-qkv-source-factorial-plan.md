@@ -1,5 +1,9 @@
 # Day 60: Fresh Q/K/V and Monitoring-Prefix Source Factorial
 
+> **Historical completed plan (2026-08-13):** The frozen experiment was completed;
+> see [Day 60 results](day-60-qkv-source-factorial-results.md). The overall project is
+> now complete under [`PROJECT_STATUS.md`](../PROJECT_STATUS.md).
+
 ## Objective
 
 Determine which donor Q, K, and V factors are jointly required to recreate the

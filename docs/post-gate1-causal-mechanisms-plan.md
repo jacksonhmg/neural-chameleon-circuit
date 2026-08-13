@@ -1,5 +1,11 @@
 # Post–Gate 1 Causal-Mechanism Re-identification Plan
 
+> **Historical superseded plan (2026-08-13):** The later mechanism program completed
+> the work initiated here. Its “provisional and unearned” wording records the status
+> when this plan was frozen; it is not the current project disposition. See
+> [`PROJECT_STATUS.md`](../PROJECT_STATUS.md) and
+> [Decision 0103](../decision-log/0103-close-project-after-manuscript-v2.md).
+
 ## Status and authority
 
 - **Status:** Prospectively specified; empirical execution is not yet authorized.

@@ -1,5 +1,11 @@
 # Causal Mechanisms of Activation-Monitor Evasion: Prospective Research Plan
 
+> **Historical completed plan (2026-08-13):** This document governed the successor
+> mechanism project and is retained as preregistration provenance. The program is
+> complete. For the current disposition, see [`PROJECT_STATUS.md`](../PROJECT_STATUS.md),
+> [Day 70](day-70-endpoint-correction-results.md), and
+> [Decision 0103](../decision-log/0103-close-project-after-manuscript-v2.md).
+
 ## Status and authority
 
 This document is the frozen scientific plan for the successor mechanism project targeting the title:

@@ -1,5 +1,13 @@
 # Day 68 powered operational title closure: final result
 
+> **Historical formal gate result; not the current overall disposition.** The 8/11
+> gate below remains failed exactly as preregistered. Day 70 did not convert it into a
+> pass; it prospectively tested the corrected scientific endpoint and found positive
+> zero-excluding causal effects for 11/11 concepts. See
+> [`PROJECT_STATUS.md`](../PROJECT_STATUS.md),
+> [Day 70](day-70-endpoint-correction-results.md), and
+> [Decision 0102](../decision-log/0102-accept-corrected-endpoint-title-worthiness.md).
+
 ## Bottom line
 
 The full intended title is **not earned** under the frozen conjunctive gate.
