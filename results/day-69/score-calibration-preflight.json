@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "candidate_blind": true,
+    "cuda": true,
+    "deterministic": true,
+    "finite": true,
+    "hooks_removed": true,
+    "released_score_parity_exact": true
+  },
+  "execution_commit": "f4ab9bc789f8ef75a00e7bad7f6b6afa21a25174",
+  "locked_score_outcomes_generated": false,
+  "procedure": "day69-released-score-calibration-preflight-v1",
+  "program_sha256": "251bb0b4efac6889c7e31dd26b7a039eaf90cdc6c2d5a507ee5fa602ed4a3f7b",
+  "released_score_parity_max_abs": 0.0,
+  "result": "pass",
+  "schema_version": 1
+}

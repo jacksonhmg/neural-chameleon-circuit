@@ -1,0 +1,254 @@
+{
+  "calibration_metadata_sha256": "85b02f4a56654e9ced6684d46c02129f726ef037f81a74f068fe9b821fc24156",
+  "calibration_tensor_sha256": "0008bda88c5b21a969124020ce863225eba11c7e0f7f5d739951c5fe9045ab0e",
+  "concepts": {
+    "HTML": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.74609375
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.6171875
+        }
+      },
+      "released_score_max": 0.84375,
+      "released_score_median": 0.306640625,
+      "released_score_min": 0.0021820068359375
+    },
+    "all-caps": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.008333333767950535,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.306640625
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.2392578125
+        }
+      },
+      "released_score_max": 0.40625,
+      "released_score_median": 0.103515625,
+      "released_score_min": 0.00909423828125
+    },
+    "biology-focused": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.78515625
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04833333194255829,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.65625
+        }
+      },
+      "released_score_max": 0.89453125,
+      "released_score_median": 0.3125,
+      "released_score_min": 0.01055908203125
+    },
+    "chemistry-based": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.76171875
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04749999940395355,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.62890625
+        }
+      },
+      "released_score_max": 0.8671875,
+      "released_score_median": 0.294921875,
+      "released_score_min": 0.02685546875
+    },
+    "comforting": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.921875
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04833333194255829,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.75
+        }
+      },
+      "released_score_max": 1.0,
+      "released_score_median": 0.2158203125,
+      "released_score_min": 2.372264862060547e-05
+    },
+    "confused": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.75
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04833333194255829,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.6328125
+        }
+      },
+      "released_score_max": 0.921875,
+      "released_score_median": 0.298828125,
+      "released_score_min": 0.0238037109375
+    },
+    "finnish": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.2734375
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.10888671875
+        }
+      },
+      "released_score_max": 0.50390625,
+      "released_score_median": 0.0181884765625,
+      "released_score_min": 0.00022411346435546875
+    },
+    "german": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.15625
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04749999940395355,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.08154296875
+        }
+      },
+      "released_score_max": 0.3359375,
+      "released_score_median": 0.01385498046875,
+      "released_score_min": 2.9336661100387573e-08
+    },
+    "jokey": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.83203125
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.046666666865348816,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.5546875
+        }
+      },
+      "released_score_max": 0.9609375,
+      "released_score_median": 0.07080078125,
+      "released_score_min": 6.705522537231445e-07
+    },
+    "literature-focused": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.81640625
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.046666666865348816,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.50390625
+        }
+      },
+      "released_score_max": 1.0,
+      "released_score_median": 0.05517578125,
+      "released_score_min": 5.029141902923584e-08
+    },
+    "mathematical": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 0.44140625
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04749999940395355,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.1279296875
+        }
+      },
+      "released_score_max": 0.99609375,
+      "released_score_median": 0.003936767578125,
+      "released_score_min": 2.4586915969848633e-07
+    }
+  },
+  "procedure": "day69-released-score-calibration-reduction-v1",
+  "program_sha256": "251bb0b4efac6889c7e31dd26b7a039eaf90cdc6c2d5a507ee5fa602ed4a3f7b",
+  "schema_version": 1,
+  "selection_or_gate_changes": false,
+  "thresholds": {
+    "HTML": {
+      "0.01": 0.74609375,
+      "0.05": 0.6171875
+    },
+    "all-caps": {
+      "0.01": 0.306640625,
+      "0.05": 0.2392578125
+    },
+    "biology-focused": {
+      "0.01": 0.78515625,
+      "0.05": 0.65625
+    },
+    "chemistry-based": {
+      "0.01": 0.76171875,
+      "0.05": 0.62890625
+    },
+    "comforting": {
+      "0.01": 0.921875,
+      "0.05": 0.75
+    },
+    "confused": {
+      "0.01": 0.75,
+      "0.05": 0.6328125
+    },
+    "finnish": {
+      "0.01": 0.2734375,
+      "0.05": 0.10888671875
+    },
+    "german": {
+      "0.01": 0.15625,
+      "0.05": 0.08154296875
+    },
+    "jokey": {
+      "0.01": 0.83203125,
+      "0.05": 0.5546875
+    },
+    "literature-focused": {
+      "0.01": 0.81640625,
+      "0.05": 0.50390625
+    },
+    "mathematical": {
+      "0.01": 0.44140625,
+      "0.05": 0.1279296875
+    }
+  }
+}
