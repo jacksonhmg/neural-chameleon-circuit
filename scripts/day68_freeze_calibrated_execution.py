@@ -22,9 +22,8 @@ from day45_run_prototype_population import write_json_atomic  # noqa: E402
 
 PROGRAM_PATH = ROOT / "results/day-68/frozen-replacement-generation-program.json"
 GENERATED_CONTRACT_PATH = ROOT / "results/day-68/frozen-replacement-final-contract.json"
-CALIBRATION_PROGRAM_PATH = ROOT / "results/day-66/frozen-title-closure-program.json"
-CALIBRATION_TENSOR_PATH = ROOT / "artifacts/title-closure-v1/calibration/calibration.safetensors"
-CALIBRATION_METADATA_PATH = ROOT / "artifacts/title-closure-v1/calibration/calibration.json"
+CALIBRATION_TENSOR_PATH = ROOT / "artifacts/title-closure-v2/calibration/calibration.safetensors"
+CALIBRATION_METADATA_PATH = ROOT / "artifacts/title-closure-v2/calibration/calibration.json"
 SUMMARY_PATH = ROOT / "results/day-68/calibration-summary.json"
 CONTRACT_PATH = ROOT / "results/day-68/frozen-title-closure-execution-contract.json"
 
@@ -54,7 +53,7 @@ def main() -> None:
         raise RuntimeError("replacement generated final contract parent differs")
     metadata = read_json(CALIBRATION_METADATA_PATH)
     if (
-        metadata["program_sha256"] != sha256_file(CALIBRATION_PROGRAM_PATH)
+        metadata["program_sha256"] != program_hash
         or metadata["tensor_sha256"] != sha256_file(CALIBRATION_TENSOR_PATH)
         or metadata["panel_sha256"] != program["roles"]["calibration"]["sha256"]
     ):
@@ -90,7 +89,6 @@ def main() -> None:
         "procedure": "day68-inherited-high-powered-calibration-reduction-v1",
         "program_sha256": program_hash,
         "generated_contract_sha256": sha256_file(GENERATED_CONTRACT_PATH),
-        "calibration_program_sha256": sha256_file(CALIBRATION_PROGRAM_PATH),
         "calibration_tensor_sha256": sha256_file(CALIBRATION_TENSOR_PATH),
         "calibration_metadata_sha256": sha256_file(CALIBRATION_METADATA_PATH),
         "thresholds": thresholds,
