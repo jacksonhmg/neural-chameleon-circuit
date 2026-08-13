@@ -1,0 +1,69 @@
+2026-08-13 05:15:23.749180: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-08-13 05:15:23.766788: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1786598123.788179   10400 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1786598123.795107   10400 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1786598123.810057   10400 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598123.810082   10400 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598123.810084   10400 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598123.810086   10400 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-08-13 05:15:23.813977: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+The following generation flags are not valid and may be ignored: ['cache_implementation']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.03it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.09it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.15it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.30it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.22it/s]
+{"completed": 8, "total": 448}
+{"completed": 16, "total": 448}
+{"completed": 24, "total": 448}
+{"completed": 32, "total": 448}
+{"completed": 40, "total": 448}
+{"completed": 48, "total": 448}
+{"completed": 56, "total": 448}
+{"completed": 64, "total": 448}
+{"completed": 72, "total": 448}
+{"completed": 80, "total": 448}
+{"completed": 88, "total": 448}
+{"completed": 96, "total": 448}
+{"completed": 104, "total": 448}
+{"completed": 112, "total": 448}
+{"completed": 120, "total": 448}
+{"completed": 128, "total": 448}
+{"completed": 136, "total": 448}
+{"completed": 144, "total": 448}
+{"completed": 152, "total": 448}
+{"completed": 160, "total": 448}
+{"completed": 168, "total": 448}
+{"completed": 176, "total": 448}
+{"completed": 184, "total": 448}
+{"completed": 192, "total": 448}
+{"completed": 200, "total": 448}
+{"completed": 208, "total": 448}
+{"completed": 216, "total": 448}
+{"completed": 224, "total": 448}
+{"completed": 232, "total": 448}
+{"completed": 240, "total": 448}
+{"completed": 248, "total": 448}
+{"completed": 256, "total": 448}
+{"completed": 264, "total": 448}
+{"completed": 272, "total": 448}
+{"completed": 280, "total": 448}
+{"completed": 288, "total": 448}
+{"completed": 296, "total": 448}
+{"completed": 304, "total": 448}
+{"completed": 312, "total": 448}
+{"completed": 320, "total": 448}
+{"completed": 328, "total": 448}
+{"completed": 336, "total": 448}
+{"completed": 344, "total": 448}
+{"completed": 352, "total": 448}
+{"completed": 360, "total": 448}
+{"completed": 368, "total": 448}
+{"completed": 376, "total": 448}
+{"completed": 384, "total": 448}
+{"completed": 392, "total": 448}
+{"completed": 400, "total": 448}
+{"completed": 408, "total": 448}
+{"completed": 416, "total": 448}
+{"completed": 424, "total": 448}
+{"completed": 432, "total": 448}
+{"completed": 440, "total": 448}
+{"completed": 448, "total": 448}

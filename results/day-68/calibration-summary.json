@@ -1,0 +1,255 @@
+{
+  "calibration_metadata_sha256": "87fcbfb24e324129a905a43bf5b31aec14e49020b45b28c860e7e1fda6d75d60",
+  "calibration_tensor_sha256": "ee572b548fcd53f92e97be00ada3bacde7efbe481620950b5154aaeaaf74e6c6",
+  "concepts": {
+    "HTML": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 1.505320429801941
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.6670844554901123
+        }
+      },
+      "raw_margin_max": 2.43839430809021,
+      "raw_margin_median": -1.0547257661819458,
+      "raw_margin_min": -7.733438491821289
+    },
+    "all-caps": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": -1.1142667531967163
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": -1.5025688409805298
+        }
+      },
+      "raw_margin_max": -0.477417528629303,
+      "raw_margin_median": -2.707979917526245,
+      "raw_margin_min": -5.317757606506348
+    },
+    "biology-focused": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 1.7587425708770752
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.8339986801147461
+        }
+      },
+      "raw_margin_max": 2.6748006343841553,
+      "raw_margin_median": -1.0415472984313965,
+      "raw_margin_min": -5.1605916023254395
+    },
+    "chemistry-based": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 1.5118025541305542
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.6978163123130798
+        }
+      },
+      "raw_margin_max": 2.807675361633301,
+      "raw_margin_median": -1.0978970527648926,
+      "raw_margin_min": -4.598400115966797
+    },
+    "comforting": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 7.710044860839844
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 3.2297143936157227
+        }
+      },
+      "raw_margin_max": 17.41860008239746,
+      "raw_margin_median": -2.8854715824127197,
+      "raw_margin_min": -17.11275863647461
+    },
+    "confused": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 1.5458252429962158
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.7140462398529053
+        }
+      },
+      "raw_margin_max": 2.943624973297119,
+      "raw_margin_median": -1.142499566078186,
+      "raw_margin_min": -4.730015754699707
+    },
+    "finnish": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": -1.6881687641143799
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": -3.3706581592559814
+        }
+      },
+      "raw_margin_max": 0.3874199390411377,
+      "raw_margin_median": -5.233043193817139,
+      "raw_margin_min": -10.908337593078613
+    },
+    "german": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": -2.7296483516693115
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": -3.422079086303711
+        }
+      },
+      "raw_margin_max": -1.232513427734375,
+      "raw_margin_median": -5.323903560638428,
+      "raw_margin_min": -20.79367446899414
+    },
+    "jokey": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 3.0091280937194824
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.38748911023139954
+        }
+      },
+      "raw_margin_max": 5.311583518981934,
+      "raw_margin_median": -3.7631404399871826,
+      "raw_margin_min": -23.162792205810547
+    },
+    "literature-focused": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": 3.1106715202331543
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": 0.016026541590690613
+        }
+      },
+      "raw_margin_max": 13.482965469360352,
+      "raw_margin_median": -4.253157615661621,
+      "raw_margin_min": -23.131389617919922
+    },
+    "mathematical": {
+      "n": 1200,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.009166666306555271,
+          "order_statistic_rank_1_indexed": 1189,
+          "threshold": -0.590711772441864
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.04916666820645332,
+          "order_statistic_rank_1_indexed": 1141,
+          "threshold": -3.5502188205718994
+        }
+      },
+      "raw_margin_max": 7.0507402420043945,
+      "raw_margin_median": -7.514345169067383,
+      "raw_margin_min": -32.30603790283203
+    }
+  },
+  "generated_contract_sha256": "8103d6e6f8e252885d36e1e94ef407e5d4bb0ec574811a9787a7004d2dfc703a",
+  "procedure": "day68-inherited-high-powered-calibration-reduction-v1",
+  "program_sha256": "68d6c74209587805846ff51166857dcf03d82af6e268e6597642445cd9d9216e",
+  "schema_version": 1,
+  "selection_or_gate_changes": false,
+  "thresholds": {
+    "HTML": {
+      "0.01": 1.505320429801941,
+      "0.05": 0.6670844554901123
+    },
+    "all-caps": {
+      "0.01": -1.1142667531967163,
+      "0.05": -1.5025688409805298
+    },
+    "biology-focused": {
+      "0.01": 1.7587425708770752,
+      "0.05": 0.8339986801147461
+    },
+    "chemistry-based": {
+      "0.01": 1.5118025541305542,
+      "0.05": 0.6978163123130798
+    },
+    "comforting": {
+      "0.01": 7.710044860839844,
+      "0.05": 3.2297143936157227
+    },
+    "confused": {
+      "0.01": 1.5458252429962158,
+      "0.05": 0.7140462398529053
+    },
+    "finnish": {
+      "0.01": -1.6881687641143799,
+      "0.05": -3.3706581592559814
+    },
+    "german": {
+      "0.01": -2.7296483516693115,
+      "0.05": -3.422079086303711
+    },
+    "jokey": {
+      "0.01": 3.0091280937194824,
+      "0.05": 0.38748911023139954
+    },
+    "literature-focused": {
+      "0.01": 3.1106715202331543,
+      "0.05": 0.016026541590690613
+    },
+    "mathematical": {
+      "0.01": -0.590711772441864,
+      "0.05": -3.5502188205718994
+    }
+  }
+}
