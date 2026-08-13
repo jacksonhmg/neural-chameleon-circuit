@@ -1,0 +1,8 @@
+{
+  "contract_sha256": "72df5640f9a5d27f62afe69ba4ecc06dcc4e54e2db80cfe8ed7143e3962364c4",
+  "exact_reduction_match": true,
+  "maximum_absolute_numeric_difference": 0.0,
+  "maximum_relative_numeric_difference": 0.0,
+  "procedure": "day65-independent-local-rereduction-v1",
+  "schema_version": 1
+}

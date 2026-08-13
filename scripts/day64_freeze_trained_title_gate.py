@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -53,6 +52,7 @@ FINAL_NEGATIVES = 64
 MIN_TOKENS = 8
 MAX_TOKENS = 192
 SALT = "neural-chameleon-circuit/day64-v1/trained-title-gate/sha256-order"
+PARENT_COMMIT = "56bc0ea158627c95780907c5cb61a63d169c6c8c"
 
 
 def parse_args() -> argparse.Namespace:
@@ -67,10 +67,6 @@ def read_json(path: Path) -> dict[str, Any]:
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text().splitlines() if line]
-
-
-def git_head() -> str:
-    return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 
 
 def prior_usage() -> tuple[set[str], set[int]]:
@@ -278,7 +274,7 @@ def build() -> tuple[dict[Path, bytes], bytes, bytes]:
         "schema_version": 1,
         "procedure": "day64-trained-concept-content-untouched-title-gate-v1",
         "status": "frozen_before_any_day64_model_or_intervention_outcome",
-        "frozen_commit_parent": git_head(),
+        "frozen_commit_parent": PARENT_COMMIT,
         "frozen_on": "2026-08-12",
         "authorization": {"gpu_authorized": True, "maximum_usd": 100.0},
         "claim_scope": {

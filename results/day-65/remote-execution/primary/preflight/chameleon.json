@@ -1,0 +1,19 @@
+{
+  "candidate_final_outcomes_generated": false,
+  "checks": {
+    "candidate_blind": true,
+    "cuda": true,
+    "finite": true,
+    "hooks_removed": true,
+    "identity_k12_exact": true,
+    "identity_margin_within_gate": true,
+    "same_kv_baseline_corrected_exact": true
+  },
+  "contract_sha256": "72df5640f9a5d27f62afe69ba4ecc06dcc4e54e2db80cfe8ed7143e3962364c4",
+  "execution_commit": "639a2bb4db321ef2b443af42d3e5e96d2994df70",
+  "identity_margin_max_abs": 9.5367431640625e-07,
+  "model": "chameleon",
+  "procedure": "day65-candidate-blind-final-preflight-v1",
+  "result": "pass",
+  "schema_version": 1
+}

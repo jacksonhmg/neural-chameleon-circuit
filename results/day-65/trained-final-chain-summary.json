@@ -1,0 +1,2608 @@
+{
+  "acquisition": {
+    "kv_probe": {
+      "maximum": 0.5,
+      "pass": true,
+      "precursor_to_chameleon_norm_ratio": 0.007237597472320628
+    },
+    "natural_k12": {
+      "maximum": 0.5,
+      "pass": true,
+      "precursor_to_chameleon_norm_ratio": 0.08094491660990405
+    },
+    "natural_probe": {
+      "maximum": 0.5,
+      "pass": true,
+      "precursor_to_chameleon_norm_ratio": 0.026504121738689258
+    }
+  },
+  "claim_scope": {
+    "concepts": "all 11 probe-compatible concepts used to train the chameleon behavior",
+    "content": "all response records are absent from every prior project panel at record and content-hash level",
+    "not_claimed": "the concepts themselves are not held out from model fine-tuning"
+  },
+  "contract_sha256": "72df5640f9a5d27f62afe69ba4ecc06dcc4e54e2db80cfe8ed7143e3962364c4",
+  "directional_chameleon_results": {
+    "HTML": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.9505420284022159,
+          "cosine": 0.9862831562684407,
+          "norm_ratio": 0.9659894220999778,
+          "residual_norm_ratio": 0.16577471594802518
+        },
+        "operation": {
+          "advantage_over_different": 0.4967453271846709,
+          "advantage_over_orthogonal": 0.4684739218817231,
+          "different_control_probe": {
+            "aligned_recovery": 0.04723954889038583,
+            "cosine": 0.09065287215366888,
+            "norm_ratio": 0.527118859403725,
+            "residual_norm_ratio": 1.0815982498388572
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.6899743123136541,
+            "cosine": 0.8898744919250967,
+            "norm_ratio": 0.7755934461664166,
+            "residual_norm_ratio": 0.47201575121915607
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.5439848760750567,
+            "cosine": 0.9512215672195168,
+            "norm_ratio": 0.5719553399991872,
+            "residual_norm_ratio": 0.49057383257509934
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.07551095419333367,
+            "cosine": 0.4018444672253645,
+            "norm_ratio": 0.19424107982314975,
+            "residual_norm_ratio": 0.9384372714522629
+          }
+        },
+        "own_probe_natural_delta_median": -1.8152728080749512,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.034986133136178,
+            "cosine": 0.9983415535458715,
+            "norm_ratio": 1.0367054536197096,
+            "residual_norm_ratio": 0.06918042564549653
+          },
+          "kv": {
+            "aligned_recovery": 0.9999054652745304,
+            "cosine": 0.9999936415282668,
+            "norm_ratio": 0.9999118231855938,
+            "residual_norm_ratio": 0.003567015177030981
+          },
+          "margins": {
+            "aligned_recovery": 1.0266437794670147,
+            "cosine": 0.9994455062714819,
+            "norm_ratio": 1.0272133628345563,
+            "residual_norm_ratio": 0.043355897544035696
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.9165048976913535,
+          "cosine": 0.9841956042583154,
+          "norm_ratio": 0.9324166239247746,
+          "residual_norm_ratio": 0.18456277912063912
+        },
+        "operation": {
+          "advantage_over_different": 0.5777731276431728,
+          "advantage_over_orthogonal": 0.7013007818760331,
+          "different_control_probe": {
+            "aligned_recovery": 0.3221456165081221,
+            "cosine": 0.6639528403684811,
+            "norm_ratio": 0.4816355051384218,
+            "residual_norm_ratio": 0.7689667995670791
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.8805185817936287,
+            "cosine": 0.9269880506602808,
+            "norm_ratio": 0.9465045972958477,
+            "residual_norm_ratio": 0.3762109154324862
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.8999187441512949,
+            "cosine": 0.9635793449461223,
+            "norm_ratio": 0.9372531795987925,
+            "residual_norm_ratio": 0.2715542140698034
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.19861796227526185,
+            "cosine": 0.678616155161365,
+            "norm_ratio": 0.30235232801420775,
+            "residual_norm_ratio": 0.8311158352305491
+          }
+        },
+        "own_probe_natural_delta_median": 1.7562518119812012,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.034986133136178,
+            "cosine": 0.9983415535458715,
+            "norm_ratio": 1.0367054536197096,
+            "residual_norm_ratio": 0.06918042564549653
+          },
+          "kv": {
+            "aligned_recovery": 0.9999054652745304,
+            "cosine": 0.9999936415282668,
+            "norm_ratio": 0.9999118231855938,
+            "residual_norm_ratio": 0.003567015177030981
+          },
+          "margins": {
+            "aligned_recovery": 1.0266437794670147,
+            "cosine": 0.9994455062714819,
+            "norm_ratio": 1.0272133628345563,
+            "residual_norm_ratio": 0.043355897544035696
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "all-caps": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.6281862538080605,
+          "cosine": 0.9568307612787453,
+          "norm_ratio": 0.6562711683712105,
+          "residual_norm_ratio": 0.41744529256137997
+        },
+        "operation": {
+          "advantage_over_different": 0.470440728063262,
+          "advantage_over_orthogonal": 0.4004112626964745,
+          "different_control_probe": {
+            "aligned_recovery": 0.05673595671420572,
+            "cosine": 0.6527018056314886,
+            "norm_ratio": 0.08586986086915725,
+            "residual_norm_ratio": 0.9450426740332407
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.76046270569417,
+            "cosine": 0.9069381202142799,
+            "norm_ratio": 0.837857341292281,
+            "residual_norm_ratio": 0.42917650819155007
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.5271766847774677,
+            "cosine": 0.9558970599611439,
+            "norm_ratio": 0.551309151961828,
+            "residual_norm_ratio": 0.4957046896559195
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.12676542208099323,
+            "cosine": 0.6409975287196255,
+            "norm_ratio": 0.2001015484594563,
+            "residual_norm_ratio": 0.8837255128045791
+          }
+        },
+        "own_probe_natural_delta_median": -0.40653344988822937,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 0.9581871959951026,
+            "cosine": 0.9892768385221581,
+            "norm_ratio": 0.9685733645867024,
+            "residual_norm_ratio": 0.14751261165269755
+          },
+          "kv": {
+            "aligned_recovery": 1.0025115643950067,
+            "cosine": 0.999921854415449,
+            "norm_ratio": 1.0025899123697735,
+            "residual_norm_ratio": 0.012782941586943354
+          },
+          "margins": {
+            "aligned_recovery": 0.970627184046737,
+            "cosine": 0.982229571575018,
+            "norm_ratio": 0.9881877028914164,
+            "residual_norm_ratio": 0.18777797541868554
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.7053070801694525,
+          "cosine": 0.9896308074538889,
+          "norm_ratio": 0.7101231506381358,
+          "residual_norm_ratio": 0.31272303006343916
+        },
+        "operation": {
+          "advantage_over_different": 0.027654890149215516,
+          "advantage_over_orthogonal": 0.41488106076860926,
+          "different_control_probe": {
+            "aligned_recovery": 0.4584179085355602,
+            "cosine": 0.8251528707604332,
+            "norm_ratio": 0.5625404023917008,
+            "residual_norm_ratio": 0.6263127567905258
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.8723618723692865,
+            "cosine": 0.8844995402598086,
+            "norm_ratio": 0.9828300043630468,
+            "residual_norm_ratio": 0.47492918010815566
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.4860727986847757,
+            "cosine": 0.8448208993416538,
+            "norm_ratio": 0.5798661550711774,
+            "residual_norm_ratio": 0.5976698113174688
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.07119173791616645,
+            "cosine": 0.3591254246626317,
+            "norm_ratio": 0.19782074481479098,
+            "residual_norm_ratio": 0.9509279954539771
+          }
+        },
+        "own_probe_natural_delta_median": 0.3876863718032837,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 0.9581871959951026,
+            "cosine": 0.9892768385221581,
+            "norm_ratio": 0.9685733645867024,
+            "residual_norm_ratio": 0.14751261165269755
+          },
+          "kv": {
+            "aligned_recovery": 1.0025115643950067,
+            "cosine": 0.999921854415449,
+            "norm_ratio": 1.0025899123697735,
+            "residual_norm_ratio": 0.012782941586943354
+          },
+          "margins": {
+            "aligned_recovery": 0.970627184046737,
+            "cosine": 0.982229571575018,
+            "norm_ratio": 0.9881877028914164,
+            "residual_norm_ratio": 0.18777797541868554
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "biology-focused": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.9278257462554179,
+          "cosine": 0.9969185492335293,
+          "norm_ratio": 0.931049553915938,
+          "residual_norm_ratio": 0.10583886021700667
+        },
+        "operation": {
+          "advantage_over_different": -2.486636114851226e-05,
+          "advantage_over_orthogonal": 0.6003856965872778,
+          "different_control_probe": {
+            "aligned_recovery": 0.7568716994463678,
+            "cosine": 0.9435112056890389,
+            "norm_ratio": 0.8029641485187646,
+            "residual_norm_ratio": 0.3615797644234212
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.652268379828626,
+            "cosine": 0.8801940401049516,
+            "norm_ratio": 0.7396098014278638,
+            "residual_norm_ratio": 0.49458577508160295
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.7568468330852193,
+            "cosine": 0.9392479528722334,
+            "norm_ratio": 0.8059661814150253,
+            "residual_norm_ratio": 0.36934659698525274
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.15646113649794152,
+            "cosine": 0.8128040007939672,
+            "norm_ratio": 0.20638452006350752,
+            "residual_norm_ratio": 0.8534019163905588
+          }
+        },
+        "own_probe_natural_delta_median": -3.8344459533691406,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0441428253190992,
+            "cosine": 0.9954625253760814,
+            "norm_ratio": 1.048902192400087,
+            "residual_norm_ratio": 0.10913367300476674
+          },
+          "kv": {
+            "aligned_recovery": 1.0000513723294764,
+            "cosine": 0.9999959509575131,
+            "norm_ratio": 1.0000554215963677,
+            "residual_norm_ratio": 0.002846331908684478
+          },
+          "margins": {
+            "aligned_recovery": 1.0478917226091597,
+            "cosine": 0.9992336021400059,
+            "norm_ratio": 1.0486954405505835,
+            "residual_norm_ratio": 0.06307679298492
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.8965461680202576,
+          "cosine": 0.9740041913513381,
+          "norm_ratio": 0.9216822055776754,
+          "residual_norm_ratio": 0.23223265101300533
+        },
+        "operation": {
+          "advantage_over_different": 0.8134359739194535,
+          "advantage_over_orthogonal": 0.765170182584577,
+          "different_control_probe": {
+            "aligned_recovery": 0.0049027894095187066,
+            "cosine": 0.11064408424744293,
+            "norm_ratio": 0.04454610878213479,
+            "residual_norm_ratio": 0.9960712000255596
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.7991255694875159,
+            "cosine": 0.9203968898591135,
+            "norm_ratio": 0.8694628242377519,
+            "residual_norm_ratio": 0.39477052319873934
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.8183387633289723,
+            "cosine": 0.9858170603132095,
+            "norm_ratio": 0.8300478137772007,
+            "residual_norm_ratio": 0.22403340771979496
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.053168580744395184,
+            "cosine": 0.40418912615600383,
+            "norm_ratio": 0.14154449799194768,
+            "residual_norm_ratio": 0.9560549455110197
+          }
+        },
+        "own_probe_natural_delta_median": 3.7630815505981445,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0441428253190992,
+            "cosine": 0.9954625253760814,
+            "norm_ratio": 1.048902192400087,
+            "residual_norm_ratio": 0.10913367300476674
+          },
+          "kv": {
+            "aligned_recovery": 1.0000513723294764,
+            "cosine": 0.9999959509575131,
+            "norm_ratio": 1.0000554215963677,
+            "residual_norm_ratio": 0.002846331908684478
+          },
+          "margins": {
+            "aligned_recovery": 1.0478917226091597,
+            "cosine": 0.9992336021400059,
+            "norm_ratio": 1.0486954405505835,
+            "residual_norm_ratio": 0.06307679298492
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "chemistry-based": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.68644192159856,
+          "cosine": 0.9924624566852445,
+          "norm_ratio": 0.691213043154862,
+          "residual_norm_ratio": 0.327529996743131
+        },
+        "operation": {
+          "advantage_over_different": 0.43941974050832444,
+          "advantage_over_orthogonal": 0.4374398709982548,
+          "different_control_probe": {
+            "aligned_recovery": 0.07109750832012618,
+            "cosine": 0.0885262396213918,
+            "norm_ratio": 0.7842823882688197,
+            "residual_norm_ratio": 1.2258715712637385
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.8619562905748888,
+            "cosine": 0.8955496354165595,
+            "norm_ratio": 0.9609407722506271,
+            "residual_norm_ratio": 0.44995684876742964
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.5105172488284506,
+            "cosine": 0.9274152927474348,
+            "norm_ratio": 0.5517111979358931,
+            "residual_norm_ratio": 0.5322910621256641
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.07307737783019581,
+            "cosine": 0.4639451888662921,
+            "norm_ratio": 0.1461614640677631,
+            "residual_norm_ratio": 0.9347040257233066
+          }
+        },
+        "own_probe_natural_delta_median": -3.700871467590332,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.002456679537103,
+            "cosine": 0.9959809178086787,
+            "norm_ratio": 1.006501893372287,
+            "residual_norm_ratio": 0.09018149637143562
+          },
+          "kv": {
+            "aligned_recovery": 0.9999361784779887,
+            "cosine": 0.9999965080795198,
+            "norm_ratio": 0.9999396701878022,
+            "residual_norm_ratio": 0.0026433046187865693
+          },
+          "margins": {
+            "aligned_recovery": 0.9923083286547149,
+            "cosine": 0.997763690189157,
+            "norm_ratio": 0.9945324112431795,
+            "residual_norm_ratio": 0.0669183061930202
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.6318199284372633,
+          "cosine": 0.9827375553994677,
+          "norm_ratio": 0.6453690554255548,
+          "residual_norm_ratio": 0.3904746567466787
+        },
+        "operation": {
+          "advantage_over_different": -0.16272601802242093,
+          "advantage_over_orthogonal": 0.3542290128352312,
+          "different_control_probe": {
+            "aligned_recovery": 0.6240589291767221,
+            "cosine": 0.5985874667127016,
+            "norm_ratio": 1.0228739098098039,
+            "residual_norm_ratio": 0.8985379601175356
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.7264441861291553,
+            "cosine": 0.9073792293461613,
+            "norm_ratio": 0.8048016917192933,
+            "residual_norm_ratio": 0.4354330491828404
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.4613329111543012,
+            "cosine": 0.9801056269068069,
+            "norm_ratio": 0.4704527110307827,
+            "residual_norm_ratio": 0.5482708850015454
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.10710389831906995,
+            "cosine": 0.6829793237198645,
+            "norm_ratio": 0.17654774445974297,
+            "residual_norm_ratio": 0.905074167928958
+          }
+        },
+        "own_probe_natural_delta_median": 3.697044849395752,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.002456679537103,
+            "cosine": 0.9959809178086787,
+            "norm_ratio": 1.006501893372287,
+            "residual_norm_ratio": 0.09018149637143562
+          },
+          "kv": {
+            "aligned_recovery": 0.9999361784779887,
+            "cosine": 0.9999965080795198,
+            "norm_ratio": 0.9999396701878022,
+            "residual_norm_ratio": 0.0026433046187865693
+          },
+          "margins": {
+            "aligned_recovery": 0.9923083286547149,
+            "cosine": 0.997763690189157,
+            "norm_ratio": 0.9945324112431795,
+            "residual_norm_ratio": 0.0669183061930202
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "comforting": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.8977067352211824,
+          "cosine": 0.9948350979783627,
+          "norm_ratio": 0.9041102579353769,
+          "residual_norm_ratio": 0.13960557648737232
+        },
+        "operation": {
+          "advantage_over_different": 0.7923312469193056,
+          "advantage_over_orthogonal": 0.7416288292797385,
+          "different_control_probe": {
+            "aligned_recovery": 0.010396151405007988,
+            "cosine": 0.5672372071840985,
+            "norm_ratio": 0.01969408533425794,
+            "residual_norm_ratio": 0.9897747081203108
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.8156589448112055,
+            "cosine": 0.8981156376276356,
+            "norm_ratio": 0.9037325976506734,
+            "residual_norm_ratio": 0.4398431086336178
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.8027273983243135,
+            "cosine": 0.9979411830386087,
+            "norm_ratio": 0.8039469791579499,
+            "residual_norm_ratio": 0.20226946320371114
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.06109856904457496,
+            "cosine": 0.7482318036428124,
+            "norm_ratio": 0.08396806760494642,
+            "residual_norm_ratio": 0.9412661572504228
+          }
+        },
+        "own_probe_natural_delta_median": -24.01254653930664,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.018588444333399,
+            "cosine": 0.9919749352461914,
+            "norm_ratio": 1.026828812041105,
+            "residual_norm_ratio": 0.1311507551291567
+          },
+          "kv": {
+            "aligned_recovery": 0.9938648725479723,
+            "cosine": 0.9998336554456014,
+            "norm_ratio": 0.9940302240626527,
+            "residual_norm_ratio": 0.019140043210492248
+          },
+          "margins": {
+            "aligned_recovery": 1.0238056718823956,
+            "cosine": 0.9991794771034931,
+            "norm_ratio": 1.024646417728966,
+            "residual_norm_ratio": 0.0478428427250265
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.9092333424055017,
+          "cosine": 0.997642351435543,
+          "norm_ratio": 0.9125734936685963,
+          "residual_norm_ratio": 0.11031936228906784
+        },
+        "operation": {
+          "advantage_over_different": 0.01825097123554642,
+          "advantage_over_orthogonal": 0.6297107469128056,
+          "different_control_probe": {
+            "aligned_recovery": 0.7070304710505837,
+            "cosine": 0.9857417736588245,
+            "norm_ratio": 0.7161192932016947,
+            "residual_norm_ratio": 0.3222153273049023
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.6608121208572164,
+            "cosine": 0.8749122209640715,
+            "norm_ratio": 0.7565762127595416,
+            "residual_norm_ratio": 0.49890797244216295
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.7252814422861301,
+            "cosine": 0.9879248598223958,
+            "norm_ratio": 0.731626789856413,
+            "residual_norm_ratio": 0.30375987378327685
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.0955706953733245,
+            "cosine": 0.8555821564577573,
+            "norm_ratio": 0.11280738245328169,
+            "residual_norm_ratio": 0.9065584197635399
+          }
+        },
+        "own_probe_natural_delta_median": 23.655956268310547,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.018588444333399,
+            "cosine": 0.9919749352461914,
+            "norm_ratio": 1.026828812041105,
+            "residual_norm_ratio": 0.1311507551291567
+          },
+          "kv": {
+            "aligned_recovery": 0.9938648725479723,
+            "cosine": 0.9998336554456014,
+            "norm_ratio": 0.9940302240626527,
+            "residual_norm_ratio": 0.019140043210492248
+          },
+          "margins": {
+            "aligned_recovery": 1.0238056718823956,
+            "cosine": 0.9991794771034931,
+            "norm_ratio": 1.024646417728966,
+            "residual_norm_ratio": 0.0478428427250265
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "confused": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.7694559015261491,
+          "cosine": 0.9917786919214513,
+          "norm_ratio": 0.7757163299633381,
+          "residual_norm_ratio": 0.25285662042457563
+        },
+        "operation": {
+          "advantage_over_different": 0.6190038001114817,
+          "advantage_over_orthogonal": 0.5409788157252784,
+          "different_control_probe": {
+            "aligned_recovery": -0.007296042603693221,
+            "cosine": -0.2771851136303402,
+            "norm_ratio": 0.02578554322868957,
+            "residual_norm_ratio": 1.007672116513353
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.7973648582169202,
+            "cosine": 0.9690387703473384,
+            "norm_ratio": 0.8229562073645994,
+            "residual_norm_ratio": 0.2829097858428671
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.6117077575077885,
+            "cosine": 0.9905423515658807,
+            "norm_ratio": 0.6164950238204692,
+            "residual_norm_ratio": 0.39582991153758174
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.07072894178251013,
+            "cosine": 0.4982985891886747,
+            "norm_ratio": 0.1640854259440326,
+            "residual_norm_ratio": 0.9377291509724228
+          }
+        },
+        "own_probe_natural_delta_median": -5.820897102355957,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0103421272814463,
+            "cosine": 0.9953887169229487,
+            "norm_ratio": 1.0150226842079577,
+            "residual_norm_ratio": 0.09791217949691938
+          },
+          "kv": {
+            "aligned_recovery": 0.9994661242718182,
+            "cosine": 0.9999879412191053,
+            "norm_ratio": 0.9994781767601608,
+            "residual_norm_ratio": 0.004937334926265082
+          },
+          "margins": {
+            "aligned_recovery": 1.0041533023096234,
+            "cosine": 0.9991709908640147,
+            "norm_ratio": 1.0049864452542805,
+            "residual_norm_ratio": 0.04112360059124207
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.7798398874354896,
+          "cosine": 0.9957888371460785,
+          "norm_ratio": 0.7821015319206452,
+          "residual_norm_ratio": 0.23136011958119018
+        },
+        "operation": {
+          "advantage_over_different": -0.0006431226531917744,
+          "advantage_over_orthogonal": 0.5601834282967154,
+          "different_control_probe": {
+            "aligned_recovery": 0.6777845593997867,
+            "cosine": 0.9804116477554955,
+            "norm_ratio": 0.6888876338673657,
+            "residual_norm_ratio": 0.3566585087354318
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.893762679617134,
+            "cosine": 0.8975244087438343,
+            "norm_ratio": 0.9993603674832088,
+            "residual_norm_ratio": 0.4491198372389224
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.6771414367465949,
+            "cosine": 0.9824909546160705,
+            "norm_ratio": 0.6879765232257302,
+            "residual_norm_ratio": 0.3525574717946699
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.11695800844987947,
+            "cosine": 0.768913168434916,
+            "norm_ratio": 0.14522521140452196,
+            "residual_norm_ratio": 0.8872548139929244
+          }
+        },
+        "own_probe_natural_delta_median": 5.82044792175293,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0103421272814463,
+            "cosine": 0.9953887169229487,
+            "norm_ratio": 1.0150226842079577,
+            "residual_norm_ratio": 0.09791217949691938
+          },
+          "kv": {
+            "aligned_recovery": 0.9994661242718182,
+            "cosine": 0.9999879412191053,
+            "norm_ratio": 0.9994781767601608,
+            "residual_norm_ratio": 0.004937334926265082
+          },
+          "margins": {
+            "aligned_recovery": 1.0041533023096234,
+            "cosine": 0.9991709908640147,
+            "norm_ratio": 1.0049864452542805,
+            "residual_norm_ratio": 0.04112360059124207
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "finnish": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.8594528608360832,
+          "cosine": 0.9989047509225182,
+          "norm_ratio": 0.8615166496948538,
+          "residual_norm_ratio": 0.14948141160328168
+        },
+        "operation": {
+          "advantage_over_different": 1.0464640711417341,
+          "advantage_over_orthogonal": 0.863802235767888,
+          "different_control_probe": {
+            "aligned_recovery": -0.15720583252218065,
+            "cosine": -0.2567758701972,
+            "norm_ratio": 0.617877470686514,
+            "residual_norm_ratio": 1.3055195297391076
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.8642208747868378,
+            "cosine": 0.8814154363524129,
+            "norm_ratio": 0.9719638783061015,
+            "residual_norm_ratio": 0.48571328074313047
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.8892582386195534,
+            "cosine": 0.995950994371523,
+            "norm_ratio": 0.8912990807519645,
+            "residual_norm_ratio": 0.14408260788456675
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.025456002851665518,
+            "cosine": 0.2868990512949328,
+            "norm_ratio": 0.08893298440262654,
+            "residual_norm_ratio": 0.9798000215336535
+          }
+        },
+        "own_probe_natural_delta_median": -15.677223205566406,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 0.9777000830018541,
+            "cosine": 0.9881140982192875,
+            "norm_ratio": 0.9894607158867575,
+            "residual_norm_ratio": 0.15372814407071667
+          },
+          "kv": {
+            "aligned_recovery": 0.9998454955900998,
+            "cosine": 0.9999887896391079,
+            "norm_ratio": 0.9998567043445961,
+            "residual_norm_ratio": 0.004736881107974829
+          },
+          "margins": {
+            "aligned_recovery": 0.9750359146125065,
+            "cosine": 0.9977522236042997,
+            "norm_ratio": 0.9772325147923675,
+            "residual_norm_ratio": 0.07008251381337759
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.8704527077765982,
+          "cosine": 0.9981116848393604,
+          "norm_ratio": 0.8732628610765228,
+          "residual_norm_ratio": 0.1380512455496412
+        },
+        "operation": {
+          "advantage_over_different": -0.3135264863467164,
+          "advantage_over_orthogonal": 0.43204820071400984,
+          "different_control_probe": {
+            "aligned_recovery": 0.8893456093877208,
+            "cosine": 0.8916643593069398,
+            "norm_ratio": 0.9774438238611174,
+            "residual_norm_ratio": 0.49739790544001417
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.6211156207109527,
+            "cosine": 0.8136738055581163,
+            "norm_ratio": 0.7345645763477711,
+            "residual_norm_ratio": 0.5888299782055455
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.5758191230410044,
+            "cosine": 0.9904811834330741,
+            "norm_ratio": 0.5792449398185284,
+            "residual_norm_ratio": 0.42918510695294765
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.1437709223269945,
+            "cosine": 0.9151720701182702,
+            "norm_ratio": 0.16143753236483324,
+            "residual_norm_ratio": 0.857570963500795
+          }
+        },
+        "own_probe_natural_delta_median": 15.229231834411621,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 0.9777000830018541,
+            "cosine": 0.9881140982192875,
+            "norm_ratio": 0.9894607158867575,
+            "residual_norm_ratio": 0.15372814407071667
+          },
+          "kv": {
+            "aligned_recovery": 0.9998454955900998,
+            "cosine": 0.9999887896391079,
+            "norm_ratio": 0.9998567043445961,
+            "residual_norm_ratio": 0.004736881107974829
+          },
+          "margins": {
+            "aligned_recovery": 0.9750359146125065,
+            "cosine": 0.9977522236042997,
+            "norm_ratio": 0.9772325147923675,
+            "residual_norm_ratio": 0.07008251381337759
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "german": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.8424600422604289,
+          "cosine": 0.9246083105472951,
+          "norm_ratio": 0.9107747264996289,
+          "residual_norm_ratio": 0.3856677180472896
+        },
+        "operation": {
+          "advantage_over_different": 0.6863099484984664,
+          "advantage_over_orthogonal": 0.6102786626697495,
+          "different_control_probe": {
+            "aligned_recovery": -0.011258017712330568,
+            "cosine": -0.006585597847412678,
+            "norm_ratio": 1.7380771069992778,
+            "residual_norm_ratio": 1.932536509921845
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.8631174715161749,
+            "cosine": 0.9488152541842763,
+            "norm_ratio": 0.9117859753330431,
+            "residual_norm_ratio": 0.31732850396413526
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.6750519307861358,
+            "cosine": 0.8633889041540124,
+            "norm_ratio": 0.7654434248020177,
+            "residual_norm_ratio": 0.5154165852364812
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.06477326811638626,
+            "cosine": 0.17586144017382294,
+            "norm_ratio": 0.49060420674868044,
+            "residual_norm_ratio": 1.0333577151118105
+          }
+        },
+        "own_probe_natural_delta_median": -2.104811668395996,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.037654087746049,
+            "cosine": 0.9939381949379531,
+            "norm_ratio": 1.04398250618674,
+            "residual_norm_ratio": 0.12079444412658176
+          },
+          "kv": {
+            "aligned_recovery": 0.9996139000287558,
+            "cosine": 0.9999858723088568,
+            "norm_ratio": 0.9996280224647153,
+            "residual_norm_ratio": 0.005327592252180837
+          },
+          "margins": {
+            "aligned_recovery": 1.008981520769536,
+            "cosine": 0.9871945695291963,
+            "norm_ratio": 1.0220695614753335,
+            "residual_norm_ratio": 0.1632885389588276
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.7993801431597543,
+          "cosine": 0.939508205154978,
+          "norm_ratio": 0.8651446875811095,
+          "residual_norm_ratio": 0.36127725209724176
+        },
+        "operation": {
+          "advantage_over_different": 0.16688454761125704,
+          "advantage_over_orthogonal": 0.6894448718364377,
+          "different_control_probe": {
+            "aligned_recovery": 0.6547344260322232,
+            "cosine": 0.38616008308866706,
+            "norm_ratio": 2.14860295326914,
+            "residual_norm_ratio": 2.0878240370026946
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.9238025278629919,
+            "cosine": 0.9754231296309656,
+            "norm_ratio": 0.9494565743066422,
+            "residual_norm_ratio": 0.22206618236187076
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.8216189736434802,
+            "cosine": 0.9036257429581129,
+            "norm_ratio": 0.9061426134224486,
+            "residual_norm_ratio": 0.42919732218876
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.13217410180704253,
+            "cosine": 0.26471741342537136,
+            "norm_ratio": 0.5796853868148908,
+            "residual_norm_ratio": 0.999431847779001
+          }
+        },
+        "own_probe_natural_delta_median": 1.864314079284668,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.037654087746049,
+            "cosine": 0.9939381949379531,
+            "norm_ratio": 1.04398250618674,
+            "residual_norm_ratio": 0.12079444412658176
+          },
+          "kv": {
+            "aligned_recovery": 0.9996139000287558,
+            "cosine": 0.9999858723088568,
+            "norm_ratio": 0.9996280224647153,
+            "residual_norm_ratio": 0.005327592252180837
+          },
+          "margins": {
+            "aligned_recovery": 1.008981520769536,
+            "cosine": 0.9871945695291963,
+            "norm_ratio": 1.0220695614753335,
+            "residual_norm_ratio": 0.1632885389588276
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "jokey": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.6420228046818686,
+          "cosine": 0.9769887720039245,
+          "norm_ratio": 0.6606393427963113,
+          "residual_norm_ratio": 0.3890638014207194
+        },
+        "operation": {
+          "advantage_over_different": -0.07455839432552247,
+          "advantage_over_orthogonal": 0.10480811107762156,
+          "different_control_probe": {
+            "aligned_recovery": 0.26321347386047167,
+            "cosine": 0.8136858789635957,
+            "norm_ratio": 0.32103627481377234,
+            "residual_norm_ratio": 0.759505748048597
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.6495743999073369,
+            "cosine": 0.8377339378943451,
+            "norm_ratio": 0.7700157178308664,
+            "residual_norm_ratio": 0.5546622558179373
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.1886550795349492,
+            "cosine": 0.9551199479059826,
+            "norm_ratio": 0.197772542200803,
+            "residual_norm_ratio": 0.8135014241667143
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.08384696845732764,
+            "cosine": 0.8026652493391708,
+            "norm_ratio": 0.11179144847655552,
+            "residual_norm_ratio": 0.9190383270897162
+          }
+        },
+        "own_probe_natural_delta_median": -14.596413612365723,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0037178765043477,
+            "cosine": 0.9930684252299256,
+            "norm_ratio": 1.0107237839849317,
+            "residual_norm_ratio": 0.11885627667111989
+          },
+          "kv": {
+            "aligned_recovery": 0.9995802745233217,
+            "cosine": 0.9999963713497368,
+            "norm_ratio": 0.9995839016637096,
+            "residual_norm_ratio": 0.0027253290810518695
+          },
+          "margins": {
+            "aligned_recovery": 0.9626589279460329,
+            "cosine": 0.9962909221725337,
+            "norm_ratio": 0.9662427976828675,
+            "residual_norm_ratio": 0.09114432610946854
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.41239083945613353,
+          "cosine": 0.985977620642128,
+          "norm_ratio": 0.41802710145433,
+          "residual_norm_ratio": 0.5913062255556712
+        },
+        "operation": {
+          "advantage_over_different": 0.7475719324435925,
+          "advantage_over_orthogonal": 0.6462666829097449,
+          "different_control_probe": {
+            "aligned_recovery": -0.07637519587654756,
+            "cosine": -0.06460684061924163,
+            "norm_ratio": 1.1870432039597898,
+            "residual_norm_ratio": 1.6078703335824012
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 1.022596938409346,
+            "cosine": 0.9200851288464817,
+            "norm_ratio": 1.116652560021653,
+            "residual_norm_ratio": 0.4359411342547125
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.671196736567045,
+            "cosine": 0.96846348995059,
+            "norm_ratio": 0.6922154971005263,
+            "residual_norm_ratio": 0.36586772850121985
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.024930053657300173,
+            "cosine": 0.2645005624937396,
+            "norm_ratio": 0.0865032716516915,
+            "residual_norm_ratio": 0.980596532612676
+          }
+        },
+        "own_probe_natural_delta_median": 14.444255828857422,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0037178765043477,
+            "cosine": 0.9930684252299256,
+            "norm_ratio": 1.0107237839849317,
+            "residual_norm_ratio": 0.11885627667111989
+          },
+          "kv": {
+            "aligned_recovery": 0.9995802745233217,
+            "cosine": 0.9999963713497368,
+            "norm_ratio": 0.9995839016637096,
+            "residual_norm_ratio": 0.0027253290810518695
+          },
+          "margins": {
+            "aligned_recovery": 0.9626589279460329,
+            "cosine": 0.9962909221725337,
+            "norm_ratio": 0.9662427976828675,
+            "residual_norm_ratio": 0.09114432610946854
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "literature-focused": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.4301093254748549,
+          "cosine": 0.9375462111456426,
+          "norm_ratio": 0.45738614692641333,
+          "residual_norm_ratio": 0.589873299332261
+        },
+        "operation": {
+          "advantage_over_different": 0.9393091201203405,
+          "advantage_over_orthogonal": 0.7803751969594764,
+          "different_control_probe": {
+            "aligned_recovery": -0.2380747803749758,
+            "cosine": -0.4896983791391115,
+            "norm_ratio": 0.5019592774993835,
+            "residual_norm_ratio": 1.3120224372034426
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.998730776620386,
+            "cosine": 0.9296617954258886,
+            "norm_ratio": 1.0719119991536663,
+            "residual_norm_ratio": 0.3928933983358005
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.7012343397453648,
+            "cosine": 0.9818650847594483,
+            "norm_ratio": 0.714028583142289,
+            "residual_norm_ratio": 0.32778523725928965
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": -0.07914085721411165,
+            "cosine": -0.45894624411611373,
+            "norm_ratio": 0.14211511115054148,
+            "residual_norm_ratio": 1.087490643642715
+          }
+        },
+        "own_probe_natural_delta_median": -7.6138763427734375,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.031333764972187,
+            "cosine": 0.9926351248542017,
+            "norm_ratio": 1.0389857654127135,
+            "residual_norm_ratio": 0.1297069419339856
+          },
+          "kv": {
+            "aligned_recovery": 0.9964532496420814,
+            "cosine": 0.9999190372243077,
+            "norm_ratio": 0.996533931795271,
+            "residual_norm_ratio": 0.013167305539604235
+          },
+          "margins": {
+            "aligned_recovery": 0.943212246939543,
+            "cosine": 0.9972091684782125,
+            "norm_ratio": 0.9458519604055875,
+            "residual_norm_ratio": 0.09061698032933413
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.6661758048855475,
+          "cosine": 0.9818911841072577,
+          "norm_ratio": 0.6785577115642122,
+          "residual_norm_ratio": 0.35804554367680286
+        },
+        "operation": {
+          "advantage_over_different": -0.0487762455939742,
+          "advantage_over_orthogonal": 0.21278515560182407,
+          "different_control_probe": {
+            "aligned_recovery": 0.3485579779396878,
+            "cosine": 0.8801236631443654,
+            "norm_ratio": 0.3972040517355778,
+            "residual_norm_ratio": 0.6777783739734645
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.7552874711516949,
+            "cosine": 0.8953140211457998,
+            "norm_ratio": 0.847189144258082,
+            "residual_norm_ratio": 0.4490005476245178
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.2997817323457136,
+            "cosine": 0.970270486886329,
+            "norm_ratio": 0.3107674006296747,
+            "residual_norm_ratio": 0.7049912507666193
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.08699657674388953,
+            "cosine": 0.6389577342060511,
+            "norm_ratio": 0.13955202149126666,
+            "residual_norm_ratio": 0.9205484239230013
+          }
+        },
+        "own_probe_natural_delta_median": 7.548626899719238,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.031333764972187,
+            "cosine": 0.9926351248542017,
+            "norm_ratio": 1.0389857654127135,
+            "residual_norm_ratio": 0.1297069419339856
+          },
+          "kv": {
+            "aligned_recovery": 0.9964532496420814,
+            "cosine": 0.9999190372243077,
+            "norm_ratio": 0.996533931795271,
+            "residual_norm_ratio": 0.013167305539604235
+          },
+          "margins": {
+            "aligned_recovery": 0.943212246939543,
+            "cosine": 0.9972091684782125,
+            "norm_ratio": 0.9458519604055875,
+            "residual_norm_ratio": 0.09061698032933413
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    },
+    "mathematical": {
+      "correct_to_irrelevant": {
+        "donor": "correct",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.6567205846948738,
+          "cosine": 0.9866014944524542,
+          "norm_ratio": 0.6649105187773228,
+          "residual_norm_ratio": 0.362470236649587
+        },
+        "operation": {
+          "advantage_over_different": 0.2952137713632239,
+          "advantage_over_orthogonal": 0.48235707535314337,
+          "different_control_probe": {
+            "aligned_recovery": 0.20317628702380952,
+            "cosine": 0.15160381079358803,
+            "norm_ratio": 1.3173745659435023,
+            "residual_norm_ratio": 1.5246643766053847
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.8891551079924768,
+            "cosine": 0.9378607107725953,
+            "norm_ratio": 0.9543334879260339,
+            "residual_norm_ratio": 0.34751090464694495
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.49839005838703343,
+            "cosine": 0.8475588607103239,
+            "norm_ratio": 0.5906216104156304,
+            "residual_norm_ratio": 0.5943704708960609
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.01603298303389006,
+            "cosine": 0.13145174113741598,
+            "norm_ratio": 0.14038568601523568,
+            "residual_norm_ratio": 0.9911860050624939
+          }
+        },
+        "own_probe_natural_delta_median": -6.495907783508301,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0116963744463756,
+            "cosine": 0.9942317417912973,
+            "norm_ratio": 1.0175659576343965,
+            "residual_norm_ratio": 0.10976214850145628
+          },
+          "kv": {
+            "aligned_recovery": 1.0000023817820278,
+            "cosine": 0.9999869727766013,
+            "norm_ratio": 1.000015409206166,
+            "residual_norm_ratio": 0.005104418255084552
+          },
+          "margins": {
+            "aligned_recovery": 0.9889413251848699,
+            "cosine": 0.9960391866421903,
+            "norm_ratio": 0.9928739134438591,
+            "residual_norm_ratio": 0.08897166755537526
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "irrelevant"
+      },
+      "irrelevant_to_correct": {
+        "donor": "irrelevant",
+        "expected_own_probe_sign": true,
+        "necessity_sufficiency": {
+          "aligned_recovery": 0.559326586963838,
+          "cosine": 0.9045537553283536,
+          "norm_ratio": 0.6238053900384914,
+          "residual_norm_ratio": 0.5143361441117458
+        },
+        "operation": {
+          "advantage_over_different": 0.0499711440872862,
+          "advantage_over_orthogonal": 0.3187308167988463,
+          "different_control_probe": {
+            "aligned_recovery": 0.36123825124886044,
+            "cosine": 0.34338926830909244,
+            "norm_ratio": 1.114793070174612,
+            "residual_norm_ratio": 1.2012518435343444
+          },
+          "kv_to_natural_k12": {
+            "aligned_recovery": 0.7121442453305408,
+            "cosine": 0.8950321349346815,
+            "norm_ratio": 0.7956510581948304,
+            "residual_norm_ratio": 0.4567980785339043
+          },
+          "kv_to_natural_probe": {
+            "aligned_recovery": 0.41120939533614664,
+            "cosine": 0.9388251326824382,
+            "norm_ratio": 0.4372351452615489,
+            "residual_norm_ratio": 0.6110279544032671
+          },
+          "orthogonal_control_probe": {
+            "aligned_recovery": 0.09247857853730038,
+            "cosine": 0.5058174205129019,
+            "norm_ratio": 0.1653207637615965,
+            "residual_norm_ratio": 0.9186116822925882
+          }
+        },
+        "own_probe_natural_delta_median": 6.241044998168945,
+        "prediction": {
+          "k12": {
+            "aligned_recovery": 1.0116963744463756,
+            "cosine": 0.9942317417912973,
+            "norm_ratio": 1.0175659576343965,
+            "residual_norm_ratio": 0.10976214850145628
+          },
+          "kv": {
+            "aligned_recovery": 1.0000023817820278,
+            "cosine": 0.9999869727766013,
+            "norm_ratio": 1.000015409206166,
+            "residual_norm_ratio": 0.005104418255084552
+          },
+          "margins": {
+            "aligned_recovery": 0.9889413251848699,
+            "cosine": 0.9960391866421903,
+            "norm_ratio": 0.9928739134438591,
+            "residual_norm_ratio": 0.08897166755537526
+          }
+        },
+        "restoration": {
+          "aligned_recovery": 1.0,
+          "cosine": 1.0,
+          "identity_endpoint_max_abs": 0.0,
+          "norm_ratio": 1.0,
+          "residual_norm_ratio": 0.0
+        },
+        "target": "correct"
+      }
+    }
+  },
+  "implementation_audits": {
+    "chameleon.HTML": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "chameleon.all-caps": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "chameleon.biology-focused": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": false
+    },
+    "chameleon.chemistry-based": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": false
+    },
+    "chameleon.comforting": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "chameleon.confused": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": false
+    },
+    "chameleon.finnish": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": false
+    },
+    "chameleon.german": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": false
+    },
+    "chameleon.jokey": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 3.814697265625e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "chameleon.literature-focused": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 2.86102294921875e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "chameleon.mathematical": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 1.9073486328125e-06,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.HTML": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.all-caps": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.biology-focused": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.chemistry-based": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 7.152557373046875e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.comforting": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 9.5367431640625e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.confused": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.finnish": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.german": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.jokey": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.literature-focused": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    },
+    "exact_precursor.mathematical": {
+      "k12_max_abs": 0.0,
+      "margin_max_abs": 4.76837158203125e-07,
+      "natural_tail_declared": true,
+      "orthogonal_controls_pass": true
+    }
+  },
+  "implementation_gate_pass": false,
+  "interpretation_policy": "conjunctive_no_compensatory_score",
+  "mechanism_aggregate": {
+    "aggregate": {
+      "necessity_median_concept_parallel_tail_residual": 0.35900232674490484,
+      "necessity_median_concept_reversal": 0.7746478944808193,
+      "necessity_positive_reversal_concepts": 11,
+      "operation_median_concept_advantage_over_different": 0.36646879239750885,
+      "operation_median_concept_advantage_over_orthogonal": 0.5505811220109968,
+      "operation_median_concept_k12_recovery": 0.8006496766615088,
+      "operation_median_concept_probe_recovery": 0.6444245971271917,
+      "operation_positive_probe_recovery_concepts": 11,
+      "prediction_expected_sign_concepts": 11,
+      "prediction_median_concept_cosine": {
+        "k12": 0.9939381949379531,
+        "kv": 0.9999879412191053,
+        "margins": 0.9977522236042997
+      },
+      "restoration_median_concept_recovery": 1.0,
+      "restoration_median_concept_residual": 0.0,
+      "restoration_positive_concepts": 11
+    },
+    "per_concept": {
+      "HTML": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.9335234630467847,
+        "operation_advantage_over_different": 0.5372592274139218,
+        "operation_advantage_over_orthogonal": 0.5848873518788781,
+        "operation_k12_recovery": 0.7852464470536414,
+        "operation_probe_recovery": 0.7219518101131759,
+        "parallel_tail_residual": 0.17516874753433215,
+        "prediction_cosine": {
+          "k12": 0.9983415535458715,
+          "kv": 0.9999936415282668,
+          "margins": 0.9994455062714819
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "all-caps": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.6667466669887565,
+        "operation_advantage_over_different": 0.24904780910623875,
+        "operation_advantage_over_orthogonal": 0.40764616173254187,
+        "operation_k12_recovery": 0.8164122890317282,
+        "operation_probe_recovery": 0.5066247417311217,
+        "parallel_tail_residual": 0.36508416131240956,
+        "prediction_cosine": {
+          "k12": 0.9892768385221581,
+          "kv": 0.999921854415449,
+          "margins": 0.982229571575018
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "biology-focused": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.9121859571378377,
+        "operation_advantage_over_different": 0.4067055537791525,
+        "operation_advantage_over_orthogonal": 0.6827779395859275,
+        "operation_k12_recovery": 0.7256969746580709,
+        "operation_probe_recovery": 0.7875927982070958,
+        "parallel_tail_residual": 0.169035755615006,
+        "prediction_cosine": {
+          "k12": 0.9954625253760814,
+          "kv": 0.9999959509575131,
+          "margins": 0.9992336021400059
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "chemistry-based": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.6591309250179116,
+        "operation_advantage_over_different": 0.13834686124295176,
+        "operation_advantage_over_orthogonal": 0.395834441916743,
+        "operation_k12_recovery": 0.794200238352022,
+        "operation_probe_recovery": 0.4859250799913759,
+        "parallel_tail_residual": 0.35900232674490484,
+        "prediction_cosine": {
+          "k12": 0.9959809178086787,
+          "kv": 0.9999965080795198,
+          "margins": 0.997763690189157
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "comforting": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.9034700388133421,
+        "operation_advantage_over_different": 0.405291109077426,
+        "operation_advantage_over_orthogonal": 0.6856697880962721,
+        "operation_k12_recovery": 0.738235532834211,
+        "operation_probe_recovery": 0.7640044203052219,
+        "parallel_tail_residual": 0.12496246938822009,
+        "prediction_cosine": {
+          "k12": 0.9919749352461914,
+          "kv": 0.9998336554456014,
+          "margins": 0.9991794771034931
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "confused": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.7746478944808193,
+        "operation_advantage_over_different": 0.30918033872914497,
+        "operation_advantage_over_orthogonal": 0.5505811220109968,
+        "operation_k12_recovery": 0.845563768917027,
+        "operation_probe_recovery": 0.6444245971271917,
+        "parallel_tail_residual": 0.2421083700028829,
+        "prediction_cosine": {
+          "k12": 0.9953887169229487,
+          "kv": 0.9999879412191053,
+          "margins": 0.9991709908640147
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "finnish": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.8649527843063407,
+        "operation_advantage_over_different": 0.36646879239750885,
+        "operation_advantage_over_orthogonal": 0.647925218240949,
+        "operation_k12_recovery": 0.7426682477488953,
+        "operation_probe_recovery": 0.732538680830279,
+        "parallel_tail_residual": 0.14376632857646143,
+        "prediction_cosine": {
+          "k12": 0.9881140982192875,
+          "kv": 0.9999887896391079,
+          "margins": 0.9977522236042997
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "german": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.8209200927100916,
+        "operation_advantage_over_different": 0.4265972480548617,
+        "operation_advantage_over_orthogonal": 0.6498617672530935,
+        "operation_k12_recovery": 0.8934599996895833,
+        "operation_probe_recovery": 0.748335452214808,
+        "parallel_tail_residual": 0.3734724850722657,
+        "prediction_cosine": {
+          "k12": 0.9939381949379531,
+          "kv": 0.9999858723088568,
+          "margins": 0.9871945695291963
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "jokey": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.527206822069001,
+        "operation_advantage_over_different": 0.33650676905903504,
+        "operation_advantage_over_orthogonal": 0.3755373969936832,
+        "operation_k12_recovery": 0.8360856691583415,
+        "operation_probe_recovery": 0.4299259080509971,
+        "parallel_tail_residual": 0.4901850134881953,
+        "prediction_cosine": {
+          "k12": 0.9930684252299256,
+          "kv": 0.9999963713497368,
+          "margins": 0.9962909221725337
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "literature-focused": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.5481425651802012,
+        "operation_advantage_over_different": 0.44526643726318316,
+        "operation_advantage_over_orthogonal": 0.49658017628065027,
+        "operation_k12_recovery": 0.8770091238860405,
+        "operation_probe_recovery": 0.5005080360455392,
+        "parallel_tail_residual": 0.4739594215045319,
+        "prediction_cosine": {
+          "k12": 0.9926351248542017,
+          "kv": 0.9999190372243077,
+          "margins": 0.9972091684782125
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      },
+      "mathematical": {
+        "expected_sign_both_directions": true,
+        "k12_reversal": 0.6080235858293559,
+        "operation_advantage_over_different": 0.17259245772525506,
+        "operation_advantage_over_orthogonal": 0.40054394607599486,
+        "operation_k12_recovery": 0.8006496766615088,
+        "operation_probe_recovery": 0.45479972686159004,
+        "parallel_tail_residual": 0.4384031903806664,
+        "prediction_cosine": {
+          "k12": 0.9942317417912973,
+          "kv": 0.9999869727766013,
+          "margins": 0.9960391866421903
+        },
+        "restoration_recovery": 1.0,
+        "restoration_residual": 0.0
+      }
+    }
+  },
+  "mechanism_passes": {
+    "necessity_sufficiency": true,
+    "operation": true,
+    "restoration": true,
+    "semantic_conditioning": true
+  },
+  "operational_consequences": {
+    "aggregate": {
+      "0.01": {
+        "clamp": {
+          "lower_95": 0.2215909090909091,
+          "point": 0.44886363636363635,
+          "positive_concepts": 7,
+          "upper_95": 0.6818181818181818
+        },
+        "drop": {
+          "lower_95": 0.2840909090909091,
+          "point": 0.5284090909090909,
+          "positive_concepts": 8,
+          "upper_95": 0.7613636363636364
+        },
+        "restoration": {
+          "lower_95": 0.03977272727272727,
+          "point": 0.20454545454545456,
+          "positive_concepts": 5,
+          "upper_95": 0.3977272727272727
+        }
+      },
+      "0.05": {
+        "clamp": {
+          "lower_95": 0.2727272727272727,
+          "point": 0.5170454545454546,
+          "positive_concepts": 9,
+          "upper_95": 0.7613636363636364
+        },
+        "drop": {
+          "lower_95": 0.3068181818181818,
+          "point": 0.5454545454545454,
+          "positive_concepts": 10,
+          "upper_95": 0.7784090909090909
+        },
+        "restoration": {
+          "lower_95": 0.1875,
+          "point": 0.3522727272727273,
+          "positive_concepts": 9,
+          "upper_95": 0.5284090909090909
+        }
+      }
+    },
+    "per_concept": {
+      "HTML": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.125,
+              "irrelevant": 1.0,
+              "restored": 0.125,
+              "target_kv": 1.0
+            },
+            "differences": {
+              "clamp": 0.875,
+              "drop": 0.875,
+              "restoration": 0.875
+            },
+            "realized_final_FPR": 0.015625,
+            "threshold": -0.5022497773170471
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.625,
+              "irrelevant": 1.0,
+              "restored": 0.625,
+              "target_kv": 1.0
+            },
+            "differences": {
+              "clamp": 0.375,
+              "drop": 0.375,
+              "restoration": 0.375
+            },
+            "realized_final_FPR": 0.109375,
+            "threshold": -1.2687581777572632
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 0.925557017326355,
+            "median": 0.8414995670318604
+          },
+          "correct": {
+            "mean": -1.0448665618896484,
+            "median": -1.1821588277816772
+          },
+          "irrelevant": {
+            "mean": 0.7598931789398193,
+            "median": 0.6688761711120605
+          },
+          "restored": {
+            "mean": -1.0448665618896484,
+            "median": -1.1821588277816772
+          },
+          "target_kv": {
+            "mean": 0.8922765254974365,
+            "median": 0.7732415199279785
+          }
+        }
+      },
+      "all-caps": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 3.1653778553009033
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.9375,
+              "irrelevant": 1.0,
+              "restored": 0.9375,
+              "target_kv": 1.0
+            },
+            "differences": {
+              "clamp": 0.0625,
+              "drop": 0.0625,
+              "restoration": 0.0625
+            },
+            "realized_final_FPR": 0.046875,
+            "threshold": -1.8374688625335693
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -0.46351486444473267,
+            "median": -0.6506350040435791
+          },
+          "correct": {
+            "mean": -0.6587926149368286,
+            "median": -0.81968754529953
+          },
+          "irrelevant": {
+            "mean": -0.2561783790588379,
+            "median": -0.5010132193565369
+          },
+          "restored": {
+            "mean": -0.6587926149368286,
+            "median": -0.8196876049041748
+          },
+          "target_kv": {
+            "mean": -0.43567514419555664,
+            "median": -0.6723774075508118
+          }
+        }
+      },
+      "biology-focused": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.9375,
+              "correct": 0.0,
+              "irrelevant": 1.0,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.9375,
+              "drop": 1.0,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 0.36395159363746643
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.0,
+              "irrelevant": 1.0,
+              "restored": 0.0,
+              "target_kv": 0.625
+            },
+            "differences": {
+              "clamp": 1.0,
+              "drop": 1.0,
+              "restoration": 0.625
+            },
+            "realized_final_FPR": 0.046875,
+            "threshold": -0.6723151206970215
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 1.18814218044281,
+            "median": 1.1292914152145386
+          },
+          "correct": {
+            "mean": -2.1665284633636475,
+            "median": -2.3119969367980957
+          },
+          "irrelevant": {
+            "mean": 1.6020071506500244,
+            "median": 1.4169782400131226
+          },
+          "restored": {
+            "mean": -2.1665287017822266,
+            "median": -2.311997175216675
+          },
+          "target_kv": {
+            "mean": -0.4487364590167999,
+            "median": -0.4321666955947876
+          }
+        }
+      },
+      "chemistry-based": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.5625,
+              "correct": 0.0,
+              "irrelevant": 0.75,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.5625,
+              "drop": 0.75,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 1.2865699529647827
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.0,
+              "irrelevant": 1.0,
+              "restored": 0.0,
+              "target_kv": 0.5
+            },
+            "differences": {
+              "clamp": 1.0,
+              "drop": 1.0,
+              "restoration": 0.5
+            },
+            "realized_final_FPR": 0.03125,
+            "threshold": -0.011150960810482502
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 1.1717326641082764,
+            "median": 1.345206379890442
+          },
+          "correct": {
+            "mean": -1.4377260208129883,
+            "median": -1.3929692506790161
+          },
+          "irrelevant": {
+            "mean": 2.083423137664795,
+            "median": 2.3079023361206055
+          },
+          "restored": {
+            "mean": -1.4377261400222778,
+            "median": -1.3929691314697266
+          },
+          "target_kv": {
+            "mean": -0.09637773036956787,
+            "median": -0.05498649924993515
+          }
+        }
+      },
+      "comforting": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.0,
+              "irrelevant": 1.0,
+              "restored": 0.0,
+              "target_kv": 0.625
+            },
+            "differences": {
+              "clamp": 1.0,
+              "drop": 1.0,
+              "restoration": 0.625
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 4.914179801940918
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.0,
+              "irrelevant": 1.0,
+              "restored": 0.0,
+              "target_kv": 0.9375
+            },
+            "differences": {
+              "clamp": 1.0,
+              "drop": 1.0,
+              "restoration": 0.9375
+            },
+            "realized_final_FPR": 0.03125,
+            "threshold": 0.7634356617927551
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 11.00156021118164,
+            "median": 11.105948448181152
+          },
+          "correct": {
+            "mean": -10.667835235595703,
+            "median": -11.365957260131836
+          },
+          "irrelevant": {
+            "mean": 13.1199951171875,
+            "median": 12.346612930297852
+          },
+          "restored": {
+            "mean": -10.667834281921387,
+            "median": -11.36595630645752
+          },
+          "target_kv": {
+            "mean": 5.671576499938965,
+            "median": 6.1389617919921875
+          }
+        }
+      },
+      "confused": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.75,
+              "correct": 0.0,
+              "irrelevant": 0.9375,
+              "restored": 0.0,
+              "target_kv": 0.125
+            },
+            "differences": {
+              "clamp": 0.75,
+              "drop": 0.9375,
+              "restoration": 0.125
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 2.3432841300964355
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.9375,
+              "correct": 0.0,
+              "irrelevant": 0.9375,
+              "restored": 0.0,
+              "target_kv": 0.5625
+            },
+            "differences": {
+              "clamp": 0.9375,
+              "drop": 0.9375,
+              "restoration": 0.5625
+            },
+            "realized_final_FPR": 0.03125,
+            "threshold": 1.7412232160568237
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 2.6171953678131104,
+            "median": 2.6788673400878906
+          },
+          "correct": {
+            "mean": -1.75442636013031,
+            "median": -1.8560454845428467
+          },
+          "irrelevant": {
+            "mean": 3.966102361679077,
+            "median": 4.173090934753418
+          },
+          "restored": {
+            "mean": -1.75442636013031,
+            "median": -1.8560454845428467
+          },
+          "target_kv": {
+            "mean": 1.7412517070770264,
+            "median": 1.7669285535812378
+          }
+        }
+      },
+      "finnish": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.25,
+              "correct": 0.0,
+              "irrelevant": 0.5625,
+              "restored": 0.0,
+              "target_kv": 0.0625
+            },
+            "differences": {
+              "clamp": 0.25,
+              "drop": 0.5625,
+              "restoration": 0.0625
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 8.183460235595703
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.625,
+              "correct": 0.0,
+              "irrelevant": 0.75,
+              "restored": 0.0,
+              "target_kv": 0.25
+            },
+            "differences": {
+              "clamp": 0.625,
+              "drop": 0.75,
+              "restoration": 0.25
+            },
+            "realized_final_FPR": 0.078125,
+            "threshold": 4.080287933349609
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 5.458353519439697,
+            "median": 6.790456295013428
+          },
+          "correct": {
+            "mean": -7.861996650695801,
+            "median": -7.392961025238037
+          },
+          "irrelevant": {
+            "mean": 7.564461708068848,
+            "median": 9.353251457214355
+          },
+          "restored": {
+            "mean": -7.861997127532959,
+            "median": -7.392960548400879
+          },
+          "target_kv": {
+            "mean": -0.435451865196228,
+            "median": 1.61831533908844
+          }
+        }
+      },
+      "german": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 2.886540412902832
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0625,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0625,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.078125,
+            "threshold": -1.691359281539917
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -8.018427848815918,
+            "median": -7.835210800170898
+          },
+          "correct": {
+            "mean": -7.994350433349609,
+            "median": -7.673465728759766
+          },
+          "irrelevant": {
+            "mean": -6.381555080413818,
+            "median": -6.338522434234619
+          },
+          "restored": {
+            "mean": -7.994350433349609,
+            "median": -7.673465251922607
+          },
+          "target_kv": {
+            "mean": -8.04351806640625,
+            "median": -7.764596939086914
+          }
+        }
+      },
+      "jokey": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.9375,
+              "correct": 0.375,
+              "irrelevant": 1.0,
+              "restored": 0.375,
+              "target_kv": 0.9375
+            },
+            "differences": {
+              "clamp": 0.5625,
+              "drop": 0.625,
+              "restoration": 0.5625
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": -0.601860761642456
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.9375,
+              "correct": 0.875,
+              "irrelevant": 1.0,
+              "restored": 0.875,
+              "target_kv": 0.9375
+            },
+            "differences": {
+              "clamp": 0.0625,
+              "drop": 0.125,
+              "restoration": 0.0625
+            },
+            "realized_final_FPR": 0.046875,
+            "threshold": -2.698712110519409
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 5.448822498321533,
+            "median": 6.058994770050049
+          },
+          "correct": {
+            "mean": -1.5689184665679932,
+            "median": -1.065039038658142
+          },
+          "irrelevant": {
+            "mean": 12.941038131713867,
+            "median": 13.45385456085205
+          },
+          "restored": {
+            "mean": -1.5689184665679932,
+            "median": -1.065039038658142
+          },
+          "target_kv": {
+            "mean": 5.515677452087402,
+            "median": 6.285701274871826
+          }
+        }
+      },
+      "literature-focused": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.015625,
+            "threshold": -2.566682815551758
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.03125,
+            "threshold": -3.315063238143921
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -13.460689544677734,
+            "median": -13.212915420532227
+          },
+          "correct": {
+            "mean": -17.014379501342773,
+            "median": -17.00358009338379
+          },
+          "irrelevant": {
+            "mean": -9.567785263061523,
+            "median": -9.415205001831055
+          },
+          "restored": {
+            "mean": -17.014379501342773,
+            "median": -17.003582000732422
+          },
+          "target_kv": {
+            "mean": -14.529388427734375,
+            "median": -14.366086959838867
+          }
+        }
+      },
+      "mathematical": {
+        "n_negative": 64,
+        "n_positive": 16,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0625,
+              "restored": 0.0,
+              "target_kv": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0625,
+              "restoration": 0.0
+            },
+            "realized_final_FPR": 0.0,
+            "threshold": 1.3344444036483765
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.625,
+              "correct": 0.0,
+              "irrelevant": 0.6875,
+              "restored": 0.0,
+              "target_kv": 0.5
+            },
+            "differences": {
+              "clamp": 0.625,
+              "drop": 0.6875,
+              "restoration": 0.5
+            },
+            "realized_final_FPR": 0.03125,
+            "threshold": -6.2618913650512695
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -5.407520294189453,
+            "median": -6.23152494430542
+          },
+          "correct": {
+            "mean": -10.301488876342773,
+            "median": -10.715197563171387
+          },
+          "irrelevant": {
+            "mean": -3.5951733589172363,
+            "median": -4.6376543045043945
+          },
+          "restored": {
+            "mean": -10.301488876342773,
+            "median": -10.715198516845703
+          },
+          "target_kv": {
+            "mean": -6.32759952545166,
+            "median": -6.72131872177124
+          }
+        }
+      }
+    }
+  },
+  "procedure": "day65-trained-content-untouched-final-reduction-v1",
+  "sample_sizes": {
+    "calibration": {
+      "locked_until_final_execution": false,
+      "path": "data/splits/day64-v1/calibration-negative.jsonl",
+      "rows": 1408,
+      "sha256": "097054bcf9e2b7907dde2f1a5c893825dd2aca36190003b31005ab94f2bdfb33",
+      "unique_content_hashes": 283,
+      "unique_source_records": 283
+    },
+    "final_causal": {
+      "locked_until_final_execution": true,
+      "path": "data/splits/day64-v1/final-causal.LOCKED.jsonl",
+      "rows": 176,
+      "sha256": "389358f3e5511cd951c2e53aadd8439d4e0664a9b822bf6403505c3c2cab709d",
+      "unique_content_hashes": 176,
+      "unique_source_records": 176
+    },
+    "final_negative": {
+      "locked_until_final_execution": true,
+      "path": "data/splits/day64-v1/final-negative.LOCKED.jsonl",
+      "rows": 704,
+      "sha256": "085a614cb16e7d2ed7020f750a3caf198cebb53f6aa5285dcd20923c59749d70",
+      "unique_content_hashes": 129,
+      "unique_source_records": 129
+    }
+  },
+  "schema_version": 1,
+  "title_clauses": {
+    "acquisition": true,
+    "endogenous_chain": false,
+    "necessity_sufficiency": true,
+    "operation": true,
+    "operational_failure": false,
+    "restoration": true,
+    "semantic_conditioning": true
+  },
+  "title_disposition": "full_title_not_earned"
+}

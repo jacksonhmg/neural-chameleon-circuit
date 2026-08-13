@@ -1,0 +1,247 @@
+{
+  "contract_sha256": "72df5640f9a5d27f62afe69ba4ecc06dcc4e54e2db80cfe8ed7143e3962364c4",
+  "files": [
+    {
+      "bytes": 95204,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/HTML.json",
+      "sha256": "bf544c832028c2fb2d0744846c9350293d9cccf1e3367305601618e5a2627502"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/HTML.safetensors",
+      "sha256": "d0ae689a2507c3fb0375f52218ff78595c781ec266efba6b95d2eb9e54df8ae7"
+    },
+    {
+      "bytes": 95221,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/all-caps.json",
+      "sha256": "d0d767af378c57038e4bc19b7823ae3c54428f8b589ff023117724eb17df55cb"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/all-caps.safetensors",
+      "sha256": "ee29457b739ddaf656a8b9feb640925018b36c542731ff5a7f0a4dedfba8aef8"
+    },
+    {
+      "bytes": 97456,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/biology-focused.json",
+      "sha256": "15f34b42d8ee0993ebcaeedf7fdef5a99939710cd94ef046c7517524cbd6eaee"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/biology-focused.safetensors",
+      "sha256": "663604cd0d59542dc82230ff609f2fd1f4b31958cc31293869edf1ad99769be8"
+    },
+    {
+      "bytes": 97482,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/chemistry-based.json",
+      "sha256": "1348e16d1c101b2a187632570079bc579179a3e5eab76555cff76490431ef235"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/chemistry-based.safetensors",
+      "sha256": "ffd2a317a43c56ae4dbc24a6e12192039d123ecebefc61a2b1f2ee514eb6fcfd"
+    },
+    {
+      "bytes": 95177,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/comforting.json",
+      "sha256": "af4d593870aa096b636bb89d6b1d2be0befb7cb80de1f31b297fa1dd2d93ed86"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/comforting.safetensors",
+      "sha256": "9d1f7f1880e897a5695f297105a84696e9191712eb7a442c92f57ef29ce84ccc"
+    },
+    {
+      "bytes": 95578,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/confused.json",
+      "sha256": "f99d84cbf1eac02e0289b0ca11650f81c36206334cca4591816ed283581dc07a"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/confused.safetensors",
+      "sha256": "a02bb6657673df9b5ea640145e52a0736a476583684a8a9a631edc5b8a01c78b"
+    },
+    {
+      "bytes": 58992,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/final-negative.json",
+      "sha256": "27dd464885392d447b470376393d5166e641c48daf788cc97eaf32553df50a06"
+    },
+    {
+      "bytes": 6796,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/final-negative.safetensors",
+      "sha256": "18097be7798bca6140e027c623c833b22dbc96a407134a74c506cafea56dadfd"
+    },
+    {
+      "bytes": 95443,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/finnish.json",
+      "sha256": "2e83c6717ae91c63cf3cabacad448d545dc6e17932ac50f9e57b08e871b091f8"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/finnish.safetensors",
+      "sha256": "7884c6dae7a0b3a0f8feb03096e50f372735933eb262b1e8c773a220a79660b3"
+    },
+    {
+      "bytes": 95415,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/german.json",
+      "sha256": "0c0285f12ab2840f828be947d0e437fcdee11f15499556aa2c42256fa2b98732"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/german.safetensors",
+      "sha256": "90130c56fb2ca0cbf51852405cd45ad1bbaa13b1ef0ec319cea7824a020caf31"
+    },
+    {
+      "bytes": 94994,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/jokey.json",
+      "sha256": "3ac7623fdaa7e32f546cc6f82ec55e85bbd4e841f37fb0d885e9a0ef16269aba"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/jokey.safetensors",
+      "sha256": "00ed37d873e3f0a8c4c6410b7d70f9b6ed3ff09edbb3cfd905e7d4cba902b748"
+    },
+    {
+      "bytes": 95519,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/literature-focused.json",
+      "sha256": "1786fb6c92dd4202b12f0dcc8941ef9aba34956dc7adee7c32c4f331733bf153"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/literature-focused.safetensors",
+      "sha256": "a0bcc859b08ed4a64f5cc7678fd93edc08a0a8698ddca1c216f11bded9d252a9"
+    },
+    {
+      "bytes": 95241,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/mathematical.json",
+      "sha256": "b645af870e1f2238e476934da4eb7616dbef4728dcd1b721c7efdcad8ad2ad54"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/chameleon/mathematical.safetensors",
+      "sha256": "8f12c5db234f28de01f460ff49f4b83642cdb33ce7b6182dd301eb3f0cf8008a"
+    },
+    {
+      "bytes": 94911,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/HTML.json",
+      "sha256": "157364f373e4518bff8da56b8e4807b1f23a6995a6958f77a8cbe666143091d0"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/HTML.safetensors",
+      "sha256": "4ac53ba4ff2701acac40df50db19b9044b07a681aa39df774a4b7850a98c02fb"
+    },
+    {
+      "bytes": 95043,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/all-caps.json",
+      "sha256": "93f7dc4411ba71e0ab55f07cc0a41a437bd210be28f233e8fd75fb220c457a1e"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/all-caps.safetensors",
+      "sha256": "e8b4c0eb0a072bfa02618ed645cd8717d4f928e3a5e2fa71c90d10c85a27a22b"
+    },
+    {
+      "bytes": 95274,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/biology-focused.json",
+      "sha256": "826fae35ee6d64a035f69a12ad5c47493cc105baeb490fa9917d6e163f62486c"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/biology-focused.safetensors",
+      "sha256": "fc4e798338486bb96b32a1cc8c43b0b909e8a2b61c95db80a58c0646b27dcac2"
+    },
+    {
+      "bytes": 95274,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/chemistry-based.json",
+      "sha256": "10a5992624fc135b907321114509b625a296dc9b30335187987bdeb558d50312"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/chemistry-based.safetensors",
+      "sha256": "334cace5dd1b53ecfe1caa00c2d7dbb6937c1d4d5e0f3f69ad189b454471b119"
+    },
+    {
+      "bytes": 95128,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/comforting.json",
+      "sha256": "6e6093baa73c3fb766511ab73b1ff8555bbcae212ab054784bf49bfc8ce1e77f"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/comforting.safetensors",
+      "sha256": "b92fa622298a39327a10783844b3a211958aa30805c2db3ab01a28bfff30e946"
+    },
+    {
+      "bytes": 95043,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/confused.json",
+      "sha256": "b0b4d2639a970def62e301c6dbcc07391558e61220783e3dcf4cef5ba1904feb"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/confused.safetensors",
+      "sha256": "b414c535841d5bf7ddab31221716ad2311194520b7f9158a697f7b410a872a94"
+    },
+    {
+      "bytes": 95010,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/finnish.json",
+      "sha256": "46ec7951a1bb98c663a0e7111cfd123896616a530b2231ac4c5070802a0b8c77"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/finnish.safetensors",
+      "sha256": "c0d40c4354cd50764997962d08bdc261c78a295415167e6d456c596f13e138bf"
+    },
+    {
+      "bytes": 94977,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/german.json",
+      "sha256": "fbec4e13f8fee475cf6eb60f9d22fce2e5ba4146892e46f13ac61148e5c4b9b0"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/german.safetensors",
+      "sha256": "4f3dd7ede8d29cf614472325764daad31154775737d228daf25c5e684db9fd5b"
+    },
+    {
+      "bytes": 94944,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/jokey.json",
+      "sha256": "07457a6b16ac4090347f50e5c5a31bb826098ae5c64ea098dcd15ec231667ea8"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/jokey.safetensors",
+      "sha256": "8d620f043f5026b12a122e00a8979c632152e13fe5db3f747b268ea240524536"
+    },
+    {
+      "bytes": 95392,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/literature-focused.json",
+      "sha256": "3b9cd8b88eb0037dad8ddc88da15cf1605d44b834c09f78b71421af2f0424463"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/literature-focused.safetensors",
+      "sha256": "45a7f8dc4460aeb7a055573cf7dff4067d5e4c0bc9267d7f8c676d8752d7a549"
+    },
+    {
+      "bytes": 95175,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/mathematical.json",
+      "sha256": "037018f5261fbf1f2aef5dacd5df30a491edcb967d494bf9224025ef1d05d11a"
+    },
+    {
+      "bytes": 4938752,
+      "path": "artifacts/trained-final-title-gate-v1/final-chain/exact_precursor/mathematical.safetensors",
+      "sha256": "35e09b0a2d03687f02ae7ba92419478a550aa18ebcfca581b26cec496cafc5fe"
+    },
+    {
+      "bytes": 89046,
+      "path": "results/day-65/trained-final-chain-summary.json",
+      "sha256": "197072f1ad3750ff21822bac20e858fe68c709623c680c9b84d62c933702dc2d"
+    },
+    {
+      "bytes": 297,
+      "path": "results/day-65/trained-final-chain-rereduction-verification.json",
+      "sha256": "895c58098b90323f79834c9561aa43397b000fc5b65b8831732dbee5cd42127c"
+    }
+  ],
+  "procedure": "day65-trained-final-chain-artifact-manifest-v1",
+  "schema_version": 1
+}

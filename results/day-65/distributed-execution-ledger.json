@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "procedure": "day65-distributed-final-execution-ledger-v1",
+  "execution_commit": "639a2bb4db321ef2b443af42d3e5e96d2994df70",
+  "contract_sha256": "72df5640f9a5d27f62afe69ba4ecc06dcc4e54e2db80cfe8ed7143e3962364c4",
+  "completed_matrix": {
+    "chameleon": {
+      "primary_instance_concepts": [
+        "HTML",
+        "all-caps",
+        "biology-focused",
+        "chemistry-based",
+        "comforting",
+        "confused",
+        "finnish",
+        "german"
+      ],
+      "parallel_instance_concepts": [
+        "jokey",
+        "literature-focused",
+        "mathematical"
+      ],
+      "final_negative_instance": "b86513c271ed476380da77632bbb8233"
+    },
+    "exact_precursor": {
+      "gpu_0_concepts": [
+        "HTML",
+        "all-caps",
+        "biology-focused",
+        "chemistry-based",
+        "comforting",
+        "confused"
+      ],
+      "gpu_1_concepts": [
+        "finnish",
+        "german",
+        "jokey",
+        "literature-focused",
+        "mathematical"
+      ]
+    }
+  },
+  "instances": [
+    {
+      "id": "b86513c271ed476380da77632bbb8233",
+      "name": "day64-trained-title-gate",
+      "type": "gpu_1x_h100_pcie",
+      "price_usd_per_hour": 3.29,
+      "role": "calibration, development prototypes, final negatives, Chameleon concepts 1-8",
+      "termination_requested": true
+    },
+    {
+      "id": "74b79e7d5db54c67b61da717f4b07fa3",
+      "name": "day65-precursor-2xh100",
+      "type": "gpu_2x_h100_sxm5",
+      "price_usd_per_hour": 8.38,
+      "role": "two-way exact-precursor partition and Chameleon concepts 9-11",
+      "termination_requested": true
+    },
+    {
+      "id": "ffecc0abd9e54cda8fadd1191b65b612",
+      "name": "day65-precursor-final",
+      "type": "gpu_1x_h100_pcie",
+      "price_usd_per_hour": 3.29,
+      "role": "boot-only failed parallel attempt; no outcomes",
+      "termination_requested": true
+    },
+    {
+      "id": "8233e4f54d344c538770353970230714",
+      "name": "day65-precursor-fallback",
+      "type": "gpu_1x_h100_sxm5",
+      "price_usd_per_hour": 4.29,
+      "role": "boot-only failed fallback attempt; no outcomes",
+      "termination_requested": true
+    }
+  ],
+  "execution_logs": {
+    "results/day-65/remote-logs/primary-chameleon.log": "de8892c309d5b73da367f00e07eaad32bc0f48dbf252bbaefd32e487fa1d31f7",
+    "results/day-65/remote-logs/chameleon-tail.log": "fe4d079cf6f6f9e071475474dd51abee3b2617b9438eb62e4cd7b94afa3269e8",
+    "results/day-65/remote-logs/precursor-a.log": "3d0202334fbe6f7b626e1b758039ea21e3d42f4efe3dc3c08e29a3ecc606859a",
+    "results/day-65/remote-logs/precursor-b.log": "df817c629cd38decc3259502d1bec53231c3529d4ba72e8f78f893fd2d10d529"
+  },
+  "cost": {
+    "authorized_maximum_usd": 100.0,
+    "pessimistic_upper_bound_usd": 12.0,
+    "bound_method": "charge every owned instance for the entire interval from the first frozen commit at 03:49 UTC through final termination requests at 04:24 UTC, even though three instances launched materially later",
+    "within_authorized_budget": true
+  },
+  "unrelated_instance": {
+    "id": "29a3717ee42a4e3d801b185390d2b45a",
+    "action_taken": "none"
+  },
+  "final_inventory_check": {
+    "checked_at_utc": "2026-08-13T04:28:07Z",
+    "owned_instance_ids_present": [],
+    "only_unrelated_instance_remained": true
+  }
+}
