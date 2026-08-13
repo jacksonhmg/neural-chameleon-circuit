@@ -1,0 +1,274 @@
+{
+  "checks": [
+    {
+      "detail": [
+        0.7788246956081869,
+        0.7602605778970062
+      ],
+      "name": "exact K12 natural recovery",
+      "pass": true
+    },
+    {
+      "detail": [
+        0.935241446872959,
+        0.944267747875849
+      ],
+      "name": "K12 plus tail closure",
+      "pass": true
+    },
+    {
+      "detail": [
+        1.0000000008666299,
+        0.9999999933129193
+      ],
+      "name": "full tail identity",
+      "pass": true
+    },
+    {
+      "detail": 0.08120611269735524,
+      "name": "precursor maximum ratio",
+      "pass": true
+    },
+    {
+      "detail": {
+        "classification": "proper_subset_sufficient:kv",
+        "selected": "kv",
+        "three_way_material": true
+      },
+      "name": "Day60 factor classification",
+      "pass": true
+    },
+    {
+      "detail": [
+        "kv",
+        "qkv"
+      ],
+      "name": "Day60 only KV proper subset qualifies",
+      "pass": true
+    },
+    {
+      "detail": {
+        "classification": "distributed_across_prefix_regions",
+        "scores": {
+          "monitoring_language": 0.0,
+          "named_concept": 0.35069284423544944,
+          "trigger_other": 0.2635392757101392
+        }
+      },
+      "name": "Day60 region classification",
+      "pass": true
+    },
+    {
+      "detail": {
+        "classification": "residual_state_only",
+        "compact": [],
+        "residual_count": 10
+      },
+      "name": "Day61 residual-only classification",
+      "pass": true
+    },
+    {
+      "detail": {
+        "classification": "primary:early_representation",
+        "losses": {
+          "early_representation": 0.7228020943979805,
+          "k12_kv_readout": 0.02155475546516694,
+          "tail_attention_complement": 0.01568277104715521
+        }
+      },
+      "name": "Day62 early acquisition classification",
+      "pass": true
+    },
+    {
+      "detail": {
+        "continue": false,
+        "selected_pair_count": 0
+      },
+      "name": "unseen concept qualification stopped",
+      "pass": true
+    },
+    {
+      "detail": {
+        "counts": [
+          8,
+          8
+        ],
+        "status": "failed"
+      },
+      "name": "formal old breadth gate remains 8/11",
+      "pass": true
+    },
+    {
+      "detail": 0.4862057427611118,
+      "name": "Day70 native total_evasion macro",
+      "pass": true
+    },
+    {
+      "detail": 0.3374078149423109,
+      "name": "Day70 native K12_recovery macro",
+      "pass": true
+    },
+    {
+      "detail": 0.3924346712925894,
+      "name": "Day70 native K12_induction macro",
+      "pass": true
+    },
+    {
+      "detail": 0.45553771810690785,
+      "name": "Day70 broad total_evasion macro",
+      "pass": true
+    },
+    {
+      "detail": 0.31633454355919227,
+      "name": "Day70 broad K12_recovery macro",
+      "pass": true
+    },
+    {
+      "detail": 0.3682511765086515,
+      "name": "Day70 broad K12_induction macro",
+      "pass": true
+    },
+    {
+      "detail": true,
+      "name": "Day70 all 66 per-concept intervals positive",
+      "pass": true
+    },
+    {
+      "detail": {
+        "k12": 0.0,
+        "score": 0.0
+      },
+      "name": "released score and exact K12 parity",
+      "pass": true
+    },
+    {
+      "detail": [
+        "figure-01.csv",
+        "figure-02.csv",
+        "figure-03.csv",
+        "figure-04.csv",
+        "figure-05.csv"
+      ],
+      "name": "five figure source tables",
+      "pass": true
+    },
+    {
+      "detail": 72,
+      "name": "nonempty figure-01.csv",
+      "pass": true
+    },
+    {
+      "detail": 12,
+      "name": "nonempty figure-02.csv",
+      "pass": true
+    },
+    {
+      "detail": 40,
+      "name": "nonempty figure-03.csv",
+      "pass": true
+    },
+    {
+      "detail": 25,
+      "name": "nonempty figure-04.csv",
+      "pass": true
+    },
+    {
+      "detail": 35,
+      "name": "nonempty figure-05.csv",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "claim ledger artifacts exist",
+      "pass": true
+    },
+    {
+      "detail": {
+        "The next scientific step is replication": true,
+        "We do not claim semantic operation on unseen concepts": true,
+        "formal 8/11 gate remains a recorded failure": true,
+        "joint source-side K/V rewrite": true
+      },
+      "name": "required claim-boundary language present",
+      "pass": true
+    },
+    {
+      "detail": {
+        "Author(s) TBD": false,
+        "generalizes to unseen concepts": false,
+        "is a universally minimal circuit": false
+      },
+      "name": "prohibited overclaim/placeholders absent",
+      "pass": true
+    },
+    {
+      "detail": 398309,
+      "name": "final PDF exists",
+      "pass": true
+    },
+    {
+      "detail": 11,
+      "name": "PDF page count plausible",
+      "pass": true
+    },
+    {
+      "detail": false,
+      "name": "PDF has no unresolved references",
+      "pass": true
+    },
+    {
+      "detail": {
+        "conclusion": true,
+        "title": true
+      },
+      "name": "PDF contains title and conclusion",
+      "pass": true
+    },
+    {
+      "detail": 0,
+      "name": "LaTeX has no overfull boxes",
+      "pass": true
+    },
+    {
+      "detail": {
+        "pdf_pages": 11,
+        "rendered_pages": 11
+      },
+      "name": "every PDF page rendered",
+      "pass": true
+    }
+  ],
+  "files": {
+    "output/pdf/neural-chameleon-causal-mechanisms-v2.pdf": "ede6502db17509d071d063b3408c3e60a911c3b5f1776331dd0e87fa1436ba81",
+    "paper-v2/claim-evidence-ledger.csv": "698c6ec3dff8f69fa101eead86796c35bd8476cb327b358e72a9884733e1e326",
+    "paper-v2/evidence-chronology.csv": "f13ac93b74747e599c5762d12aab19899538599cee88524e1d8f7987d2666dfb",
+    "paper-v2/figures/figure-01-operational-chain.pdf": "bb16410d2800b78223a39fdac30bf02dd012e242936ef0f029b88e505c544934",
+    "paper-v2/figures/figure-02-exact-k12-and-causal-closure.pdf": "98702113c15e7572e8d35556968309b3c1c8a300fa5402d5b01349ed54dccdb0",
+    "paper-v2/figures/figure-03-kv-factorization.pdf": "e954ca51bd435f2f1339f73b869a92851159d2d3b8eecd54ecb783d8da4a57d7",
+    "paper-v2/figures/figure-04-acquisition-localization.pdf": "4b598e2e0481e79f9c8d2f81dd0e615c6a969f6e75ae7f37dbc8009b67d9d7ca",
+    "paper-v2/figures/figure-05-upstream-scope-and-thresholds.pdf": "f6bc48e313ded0b071c765ef3e090b04f4fc46c463bbfd860dfc36176098eb73",
+    "paper-v2/manuscript.tex": "ce2c9cc5030b17be5f5cd707b51cdeeeef2e00b7ace5712372dec9193e0a7c76",
+    "paper-v2/references.bib": "7157fc68729710ed61c6005cba2433e4283022e8f6acc79bc0cb652062226dba",
+    "paper-v2/source-data/figure-01.csv": "745abcc2eeb2bb671d6802088cd57b1ea22350be7bc3ba3603bb5834fc9365a6",
+    "paper-v2/source-data/figure-02.csv": "92f20099758d9710c3dfe6e0bd1a32a1f147e3fc8366e0a2e24eea60cc2196e1",
+    "paper-v2/source-data/figure-03.csv": "5117009295d0e1c4f1a42bbff8334736b49dbc9e29a811e56c6450f4b024f2c8",
+    "paper-v2/source-data/figure-04.csv": "737eb2404bdf032c2d462b90bbf1263e800a7dc9a63b57515130d2f5016c9a32",
+    "paper-v2/source-data/figure-05.csv": "b9b6dacfec893099505fa55b37e40ee58e5e0f69689b6a0618b066bd6587e8e0"
+  },
+  "headline_values": {
+    "broad": {
+      "K12_induction": 0.3682511765086515,
+      "K12_recovery": 0.31633454355919227,
+      "total_evasion": 0.45553771810690785
+    },
+    "native": {
+      "K12_induction": 0.3924346712925894,
+      "K12_recovery": 0.3374078149423109,
+      "total_evasion": 0.4862057427611118
+    }
+  },
+  "pass": true,
+  "pdf_pages": 11,
+  "procedure": "manuscript-v2-numerical-text-provenance-audit-v1",
+  "schema_version": 1
+}
