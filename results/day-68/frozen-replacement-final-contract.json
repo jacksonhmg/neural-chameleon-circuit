@@ -1,0 +1,131 @@
+{
+  "calibration": {
+    "negatives_per_probe": 1200,
+    "source": "independently GPT-4.1-nano-rated UltraChat responses with target rating <= 0.25",
+    "threshold_rule": "split-conformal order statistic with strict raw-margin exceedance, separately for nominal FPR 0.01 and 0.05"
+  },
+  "closure_gates": {
+    "concepts_positive_clamp_at_either_threshold_min": 9,
+    "concepts_positive_drop_at_each_threshold_min": 9,
+    "macro_TPR_drop_correct_vs_irrelevant_at_1pct_FPR_min": 0.2,
+    "macro_TPR_drop_correct_vs_irrelevant_at_5pct_FPR_min": 0.2,
+    "macro_TPR_exact_K12_clamp_reversal_at_either_threshold_min": 0.2,
+    "prior_restoration_operational_result": "carried forward from frozen Day 65 because it passed and was not a failed clause component",
+    "title_rule": "Day 65 passed scientific mechanism clauses + repaired structural control audit + this operational clause; all conjunctive",
+    "unchanged_breadth_rule": "9 of 11 concepts"
+  },
+  "concepts_in_order": [
+    "HTML",
+    "all-caps",
+    "biology-focused",
+    "chemistry-based",
+    "comforting",
+    "confused",
+    "finnish",
+    "german",
+    "jokey",
+    "literature-focused",
+    "mathematical"
+  ],
+  "control_verifier_repair": {
+    "all_permutations_bijective": true,
+    "all_signs_unit": true,
+    "components": 8448,
+    "files": 22,
+    "groups": 704,
+    "maximum_norm_relative_error": 1.134884153379067e-16,
+    "maximum_norm_relative_error_gate": 1e-06,
+    "pass": true,
+    "procedure": "signed-permutation-structural-orthogonality-v1",
+    "reason_for_repair": "the prior relative-Gram denominator is ill-conditioned for near-zero deltas and tests floating-point reduction order rather than operator orthogonality",
+    "theorem": "a bijective coordinate permutation multiplied by unit signs has Q^T Q = I exactly; temporal Gram is invariant in exact arithmetic"
+  },
+  "final_evaluation": {
+    "endpoint": "complete response-mean raw-margin vector at resid_post[12]",
+    "joint_negatives": 256,
+    "positives_per_concept": 128,
+    "states": [
+      "natural_correct_trigger",
+      "natural_irrelevant_trigger",
+      "exact_irrelevant_K12_clamped_into_correct_context"
+    ],
+    "teacher_forcing": "one exact response tensor reused across trigger conditions"
+  },
+  "final_positive": {
+    "path": "data/splits/day68-v1/final-positive.LOCKED.jsonl",
+    "rows": 1408,
+    "sha256": "0d84299bdfce7d357459b083a25caf4f32acb8f212c530d25efca59107d4e5af",
+    "unique_content_hashes": 1408
+  },
+  "generation_artifact_hashes": {
+    "artifacts/title-closure-v2/generated-rewrites/HTML.jsonl": "ebd7e81c01055713c901b9f1748614374abd737be4b9643e4598e10ac4e00031",
+    "artifacts/title-closure-v2/generated-rewrites/HTML.metadata.json": "13488aa2ecd6e5277d8c86ab8bf47c3784c2fe7204420be00152b79a5b9e9eeb",
+    "artifacts/title-closure-v2/generated-rewrites/all-caps.jsonl": "375453a1ecdf431b82b64a468ad86a8cef0dbcb2c050bbce6325f8ac715971c2",
+    "artifacts/title-closure-v2/generated-rewrites/all-caps.metadata.json": "3bdf223832b5bf26e51efc997431bd68633f6996fc6e6125cb3adc68e427083e",
+    "artifacts/title-closure-v2/generated-rewrites/biology-focused.jsonl": "9294d232ccdd5c3cee80b52c92b52a7b4a66298dd1f0930b5cb383a9e550be13",
+    "artifacts/title-closure-v2/generated-rewrites/biology-focused.metadata.json": "aeca962d8f4c5fb892213dd42c2c9a95d0daa3836067bd7ee6334dea817d2801",
+    "artifacts/title-closure-v2/generated-rewrites/chemistry-based.jsonl": "94a6b63044e78dd2a417ee8f01ae0d64bdaa6cf71c9350b23b9f71df6e138b41",
+    "artifacts/title-closure-v2/generated-rewrites/chemistry-based.metadata.json": "e856baaba982c6141fe0825a97cfb5a0af024ec258fff1e632f954ea910b89b2",
+    "artifacts/title-closure-v2/generated-rewrites/comforting.jsonl": "931fa484ada267027b747d99f3238c6c38c9ba75ad12272c6d1f6c8fcb81c7ad",
+    "artifacts/title-closure-v2/generated-rewrites/comforting.metadata.json": "14dce27725e570409d23bbf41b4145a072e29d24d3090d100989f1a50ec8a808",
+    "artifacts/title-closure-v2/generated-rewrites/confused.jsonl": "4f9125d1a811edfeabb370384bfa945b3682319bdcfc622b36a04b1f40624b80",
+    "artifacts/title-closure-v2/generated-rewrites/confused.metadata.json": "0dc47c4efeea6c5ec5289482388d3df159fc7092b4df1fc14eedb75bc7bfc4fa",
+    "artifacts/title-closure-v2/generated-rewrites/finnish.jsonl": "5e4f1c51f4239301ebd189a2a37428ac4efa0dcbb1b530e4a02d4d0c3c4f7580",
+    "artifacts/title-closure-v2/generated-rewrites/finnish.metadata.json": "6607205aa8722866021a7dfe0bc6a4bc63e508b5a4dd8d7c8bc1cb87d81eb850",
+    "artifacts/title-closure-v2/generated-rewrites/german.jsonl": "38e2b0639e7b737141cdb03211b14923f4c167571a34d8b0b40c6ecaa53d5ab5",
+    "artifacts/title-closure-v2/generated-rewrites/german.metadata.json": "d03bf30624bca810dd03f0287624f901805016ad538aa4b647a65b05ab72338f",
+    "artifacts/title-closure-v2/generated-rewrites/jokey.jsonl": "4c6a00e0eb4cbce7512c2c5f510dfb070b9714147f01cc06ad1fdcf8dbbd7573",
+    "artifacts/title-closure-v2/generated-rewrites/jokey.metadata.json": "332e510783badae13ad696ed5edb417c23715bc146c3e7d4f208321744839788",
+    "artifacts/title-closure-v2/generated-rewrites/literature-focused.jsonl": "624e44351fbdc673373e42f98e7a898bfac7b71f7cc4d9201cd45171b9db859c",
+    "artifacts/title-closure-v2/generated-rewrites/literature-focused.metadata.json": "e717fb2fb77d0a5919f4b15be702bcd97db642a27a439f90defa48e377e8b0f8",
+    "artifacts/title-closure-v2/generated-rewrites/mathematical.jsonl": "254e34615fd98bb236cb0f42e1d49fec6c75bce58cef69e91aa06a84a1ba92c4",
+    "artifacts/title-closure-v2/generated-rewrites/mathematical.metadata.json": "571c3ed58de11b21af56475a851990e64d1ccf5047a4a3bf82e7e03f94837f30"
+  },
+  "parents": {
+    "results/day-57/frozen-confirm-trace-acquisition-contract.json": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+    "results/day-64/frozen-trained-final-contract.json": "72df5640f9a5d27f62afe69ba4ecc06dcc4e54e2db80cfe8ed7143e3962364c4",
+    "results/day-65/trained-final-chain-artifact-manifest.json": "3340020facce6d0a9a1a0410ea41dabe899ad39e67c8f5353e7740dd6179b064",
+    "results/day-65/trained-final-chain-summary.json": "197072f1ad3750ff21822bac20e858fe68c709623c680c9b84d62c933702dc2d",
+    "results/day-66/frozen-title-closure-program.json": "5bd574dbce9f15b15e00ca13ee0fec986c38522e9974054ae45d5c0dccbf1ab0",
+    "results/day-66/generated-positive-qualification-stop.json": "a09fbee905533fb9fbfad4fa95129c4aa2e3d0b4aa295e403314683d1d7691dc"
+  },
+  "procedure": "day68-frozen-replacement-final-contract-v1",
+  "program_sha256": "68d6c74209587805846ff51166857dcf03d82af6e268e6597642445cd9d9216e",
+  "qualification_summary_sha256": "b0a76bb09294beadd397a0f20961ab931277878651cafbe5324ae37a6e015cdd",
+  "roles": {
+    "calibration": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day66-v1/calibration-negative.jsonl",
+      "rows": 13200,
+      "sha256": "3b08f2e70d714c708e70fe11b4d960e91e80cf64a0f6d96333f393a3016bda63",
+      "unique_content_hashes": 1789
+    },
+    "final_negative": {
+      "locked_until_final_contract": true,
+      "path": "data/splits/day66-v1/final-negative.LOCKED.jsonl",
+      "rows": 2816,
+      "sha256": "3fc635bff637933933da6ce339bea7806372062506f2ceb151c1292951799a2b",
+      "unique_content_hashes": 256
+    },
+    "seeds": {
+      "path": "data/splits/day68-v1/generation-seeds.jsonl",
+      "rows": 160,
+      "sha256": "b400b53a9d51514687f0ddcaf99e07419a0de219eaf653a7543447244244c009",
+      "unique_content_hashes": 160
+    }
+  },
+  "schema_version": 1,
+  "status": "frozen_after_replacement_generation_before_calibration_or_any_chameleon_outcome",
+  "stop_rules": {
+    "no_additional_title_attempt_after_final_chameleon_outcomes": true,
+    "no_concept_selection": true,
+    "no_gate_change": true,
+    "single_replacement_generation_pass": true,
+    "stop_if_any_concept_has_fewer_than_128_qualified_responses": true
+  },
+  "uncertainty": {
+    "draws": 20000,
+    "method": "paired concept bootstrap",
+    "seed": 66001
+  }
+}

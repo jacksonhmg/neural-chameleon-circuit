@@ -1,0 +1,172 @@
+{
+  "concepts": {
+    "HTML": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "all-caps": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "biology-focused": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "chemistry-based": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "comforting": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "confused": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "finnish": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "german": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "jokey": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "literature-focused": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    },
+    "mathematical": {
+      "failure_reasons": {
+        "length": 0,
+        "meta_language": 0,
+        "seal": 0
+      },
+      "first_selected_seed_order": 0,
+      "generated": 160,
+      "last_selected_seed_order": 127,
+      "qualified": 160,
+      "selected": 128
+    }
+  },
+  "final_positive": {
+    "path": "data/splits/day68-v1/final-positive.LOCKED.jsonl",
+    "rows": 1408,
+    "sha256": "0d84299bdfce7d357459b083a25caf4f32acb8f212c530d25efca59107d4e5af",
+    "unique_content_hashes": 1408
+  },
+  "generation_artifact_hashes": {
+    "artifacts/title-closure-v2/generated-rewrites/HTML.jsonl": "ebd7e81c01055713c901b9f1748614374abd737be4b9643e4598e10ac4e00031",
+    "artifacts/title-closure-v2/generated-rewrites/HTML.metadata.json": "13488aa2ecd6e5277d8c86ab8bf47c3784c2fe7204420be00152b79a5b9e9eeb",
+    "artifacts/title-closure-v2/generated-rewrites/all-caps.jsonl": "375453a1ecdf431b82b64a468ad86a8cef0dbcb2c050bbce6325f8ac715971c2",
+    "artifacts/title-closure-v2/generated-rewrites/all-caps.metadata.json": "3bdf223832b5bf26e51efc997431bd68633f6996fc6e6125cb3adc68e427083e",
+    "artifacts/title-closure-v2/generated-rewrites/biology-focused.jsonl": "9294d232ccdd5c3cee80b52c92b52a7b4a66298dd1f0930b5cb383a9e550be13",
+    "artifacts/title-closure-v2/generated-rewrites/biology-focused.metadata.json": "aeca962d8f4c5fb892213dd42c2c9a95d0daa3836067bd7ee6334dea817d2801",
+    "artifacts/title-closure-v2/generated-rewrites/chemistry-based.jsonl": "94a6b63044e78dd2a417ee8f01ae0d64bdaa6cf71c9350b23b9f71df6e138b41",
+    "artifacts/title-closure-v2/generated-rewrites/chemistry-based.metadata.json": "e856baaba982c6141fe0825a97cfb5a0af024ec258fff1e632f954ea910b89b2",
+    "artifacts/title-closure-v2/generated-rewrites/comforting.jsonl": "931fa484ada267027b747d99f3238c6c38c9ba75ad12272c6d1f6c8fcb81c7ad",
+    "artifacts/title-closure-v2/generated-rewrites/comforting.metadata.json": "14dce27725e570409d23bbf41b4145a072e29d24d3090d100989f1a50ec8a808",
+    "artifacts/title-closure-v2/generated-rewrites/confused.jsonl": "4f9125d1a811edfeabb370384bfa945b3682319bdcfc622b36a04b1f40624b80",
+    "artifacts/title-closure-v2/generated-rewrites/confused.metadata.json": "0dc47c4efeea6c5ec5289482388d3df159fc7092b4df1fc14eedb75bc7bfc4fa",
+    "artifacts/title-closure-v2/generated-rewrites/finnish.jsonl": "5e4f1c51f4239301ebd189a2a37428ac4efa0dcbb1b530e4a02d4d0c3c4f7580",
+    "artifacts/title-closure-v2/generated-rewrites/finnish.metadata.json": "6607205aa8722866021a7dfe0bc6a4bc63e508b5a4dd8d7c8bc1cb87d81eb850",
+    "artifacts/title-closure-v2/generated-rewrites/german.jsonl": "38e2b0639e7b737141cdb03211b14923f4c167571a34d8b0b40c6ecaa53d5ab5",
+    "artifacts/title-closure-v2/generated-rewrites/german.metadata.json": "d03bf30624bca810dd03f0287624f901805016ad538aa4b647a65b05ab72338f",
+    "artifacts/title-closure-v2/generated-rewrites/jokey.jsonl": "4c6a00e0eb4cbce7512c2c5f510dfb070b9714147f01cc06ad1fdcf8dbbd7573",
+    "artifacts/title-closure-v2/generated-rewrites/jokey.metadata.json": "332e510783badae13ad696ed5edb417c23715bc146c3e7d4f208321744839788",
+    "artifacts/title-closure-v2/generated-rewrites/literature-focused.jsonl": "624e44351fbdc673373e42f98e7a898bfac7b71f7cc4d9201cd45171b9db859c",
+    "artifacts/title-closure-v2/generated-rewrites/literature-focused.metadata.json": "e717fb2fb77d0a5919f4b15be702bcd97db642a27a439f90defa48e377e8b0f8",
+    "artifacts/title-closure-v2/generated-rewrites/mathematical.jsonl": "254e34615fd98bb236cb0f42e1d49fec6c75bce58cef69e91aa06a84a1ba92c4",
+    "artifacts/title-closure-v2/generated-rewrites/mathematical.metadata.json": "571c3ed58de11b21af56475a851990e64d1ccf5047a4a3bf82e7e03f94837f30"
+  },
+  "label_seal_variants_sha256": "9cb9a9c879d698eee295d45e3028cf32472989a986e7ff1e8ce0b381bcae382e",
+  "procedure": "day68-replacement-positive-qualification-v1",
+  "program_sha256": "68d6c74209587805846ff51166857dcf03d82af6e268e6597642445cd9d9216e",
+  "result": "pass",
+  "schema_version": 1,
+  "selection_or_rule_changes": false
+}

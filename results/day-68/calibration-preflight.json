@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "candidate_blind": true,
+    "cuda": true,
+    "deterministic": true,
+    "finite": true,
+    "hooks_removed": true
+  },
+  "execution_commit": "53af4d2d763f99f9f7d34565b774d6f67bc0797c",
+  "locked_final_outcomes_generated": false,
+  "procedure": "day68-sharded-candidate-blind-calibration-preflight-v1",
+  "program_sha256": "68d6c74209587805846ff51166857dcf03d82af6e268e6597642445cd9d9216e",
+  "result": "pass",
+  "schema_version": 1
+}
