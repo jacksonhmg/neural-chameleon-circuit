@@ -61,7 +61,8 @@
     "price_usd_per_hour": 16.36,
     "observed_uptime_at_last_pretermination_check_minutes": 45.46666666666667,
     "estimated_gross_cost_through_termination_request_usd": 12.5,
-    "termination_requested": true
+    "termination_requested": true,
+    "termination_confirmed_absent_from_active_inventory": true
   },
   "interpretation": "The causal mechanism and endogenous chain replicate with large macro operational effects, but the prospectively required breadth does not. A second powered, content-disjoint panel again yields exactly 8 of 11 positive trigger effects, so the unchanged full-title gate fails and no compensatory scoring is permitted."
 }
