@@ -1,0 +1,65 @@
+{
+  "checks": {
+    "all_records_absent_from_prior_panels": true,
+    "exact_calibration_count": true,
+    "exact_final_causal_count": true,
+    "exact_final_negative_count": true,
+    "role_source_records_and_content_disjoint": true,
+    "unique_final_causal_records": true
+  },
+  "freeze_id": "day64-v1",
+  "roles": {
+    "calibration": {
+      "locked_until_final_execution": false,
+      "path": "data/splits/day64-v1/calibration-negative.jsonl",
+      "rows": 1408,
+      "sha256": "097054bcf9e2b7907dde2f1a5c893825dd2aca36190003b31005ab94f2bdfb33",
+      "unique_content_hashes": 283,
+      "unique_source_records": 283
+    },
+    "final_causal": {
+      "locked_until_final_execution": true,
+      "path": "data/splits/day64-v1/final-causal.LOCKED.jsonl",
+      "rows": 176,
+      "sha256": "389358f3e5511cd951c2e53aadd8439d4e0664a9b822bf6403505c3c2cab709d",
+      "unique_content_hashes": 176,
+      "unique_source_records": 176
+    },
+    "final_negative": {
+      "locked_until_final_execution": true,
+      "path": "data/splits/day64-v1/final-negative.LOCKED.jsonl",
+      "rows": 704,
+      "sha256": "085a614cb16e7d2ed7020f750a3caf198cebb53f6aa5285dcd20923c59749d70",
+      "unique_content_hashes": 129,
+      "unique_source_records": 129
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "eligible_untouched_positive_counts": {
+      "HTML": 200,
+      "all-caps": 206,
+      "biology-focused": 18,
+      "chemistry-based": 94,
+      "comforting": 264,
+      "confused": 280,
+      "finnish": 169,
+      "german": 163,
+      "jokey": 242,
+      "literature-focused": 33,
+      "mathematical": 104
+    },
+    "per_probe_negative_threshold_inclusive": 0.25,
+    "positive_threshold_inclusive": 0.75,
+    "response_tokens": [
+      8,
+      192
+    ],
+    "salt": "neural-chameleon-circuit/day64-v1/trained-title-gate/sha256-order"
+  },
+  "source": {
+    "external/minimal_neural_chameleons/data/mega_dataset_evaluated_20250729_144844_harm_batch_train.json": "f731099c0c46f4f55670233eadde0092b15a69cfd039d37d5a8ac55b6c882f43"
+  },
+  "status": "frozen_before_any_day64_model_or_intervention_outcome",
+  "tokenizer_sha256": "da7c42518186f105a523eeca8301b9ff68a0e3a6db06a405e0a355c4ed679484"
+}
