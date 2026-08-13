@@ -42,7 +42,7 @@ def write_csv(name: str, rows: list[dict]) -> None:
     path = SOURCE / name
     fields = list(rows[0])
     with path.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
