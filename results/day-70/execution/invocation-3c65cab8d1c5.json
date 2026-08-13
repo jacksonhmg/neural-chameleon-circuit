@@ -1,0 +1,12 @@
+{
+  "contract_sha256": "ab01f329190a9e0554e841afc6a1a6b57bbe59a2a7b5ac99d5072974604ad28f",
+  "counts": {
+    "broad:finnish": 128,
+    "broad:mathematical": 128
+  },
+  "elapsed_seconds": 31.64475243999999,
+  "execution_commit": "db36a0737bde0331ab2eabd001b1b83ccf137647",
+  "peak_cuda_allocated_bytes": 18657606144,
+  "procedure": "day70-endpoint-correction-execution-v1",
+  "schema_version": 1
+}

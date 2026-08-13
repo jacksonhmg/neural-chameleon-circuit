@@ -1,0 +1,47 @@
+{
+  "artifact_manifest_sha256": "fdb01e494941407065fc37f3090fb52c53a2571a7ec7b3f348d4e49238687a3c",
+  "corrected_scientific_disposition": "scientific_title_worthy_under_corrected_endpoint",
+  "exact_local_rereduction_match": true,
+  "formal_day68_gate": "failed_unchanged",
+  "maximum_absolute_rereduction_difference": 0.0,
+  "procedure": "day70-corrected-endpoint-outcome-v1",
+  "prospective_gate_details": {
+    "concepts_with_lower_95_above_zero": {
+      "K12_induction": 11,
+      "K12_recovery": 11,
+      "total_evasion": 11
+    },
+    "concepts_with_positive_point_effect": {
+      "K12_induction": 11,
+      "K12_recovery": 11,
+      "total_evasion": 11
+    },
+    "exact_K12_identity_max_abs": 0.0,
+    "formal_day68_gate_remains": "failed",
+    "macro_K12_induction_fraction": 0.8071370549101164,
+    "macro_K12_recovery_fraction": 0.6939609824972595,
+    "macro_lower_95_above_zero": {
+      "K12_induction": true,
+      "K12_recovery": true,
+      "total_evasion": true
+    },
+    "released_score_parity_max_abs": 0.0
+  },
+  "schema_version": 1,
+  "summary_sha256": "1c4df11b5203246f9110d1bb4c60fbbb44d8ec9195ba0ec55f41e9be8b67a41b",
+  "title_clauses": {
+    "acquisition": true,
+    "all_11_concepts_point_positive_each": true,
+    "at_least_9_concepts_lower_95_above_zero_each": true,
+    "endogenous_chain": true,
+    "exact_K12_identity": true,
+    "macro_K12_induction_fraction_at_least_0.5": true,
+    "macro_K12_recovery_fraction_at_least_0.5": true,
+    "macro_total_recovery_induction_lower_95_above_zero": true,
+    "necessity_sufficiency": true,
+    "operation": true,
+    "released_score_parity_exact": true,
+    "restoration": true,
+    "semantic_conditioning": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "candidate_blind": true,
+    "cuda": true,
+    "finite": true,
+    "hooks_removed": true,
+    "identity_k12_exact": true,
+    "released_score_parity_exact": true
+  },
+  "contract_sha256": "ab01f329190a9e0554e841afc6a1a6b57bbe59a2a7b5ac99d5072974604ad28f",
+  "execution_commit": "db36a0737bde0331ab2eabd001b1b83ccf137647",
+  "identity_k12_max_abs": 0.0,
+  "locked_new_panel_score_outcomes_generated": false,
+  "procedure": "day70-endpoint-correction-preflight-v1",
+  "released_score_parity_max_abs": 0.0,
+  "result": "pass",
+  "schema_version": 1
+}

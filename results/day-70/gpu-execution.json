@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "procedure": "day70-endpoint-correction-gpu-execution-v1",
+  "provider": "Lambda Cloud",
+  "instances": [
+    {
+      "id": "163afcc6117f4ac8b94415cc0d3bc917",
+      "instance_type": "gpu_4x_h100_sxm5",
+      "region": "us-south-3",
+      "price_usd_per_hour": 16.36,
+      "role": "calibration, preflight, native panel, final negatives, and initial broad shards"
+    },
+    {
+      "id": "17f5e468627e4a57871f4857dde8eebf",
+      "instance_type": "gpu_1x_h100_sxm5",
+      "region": "us-southeast-1",
+      "price_usd_per_hour": 4.29,
+      "role": "accelerated broad concept shards"
+    },
+    {
+      "id": "dcae280d87f04dd09ddb70ae413c82c6",
+      "instance_type": "gpu_1x_h100_sxm5",
+      "region": "us-southeast-1",
+      "price_usd_per_hour": 4.29,
+      "role": "accelerated broad concept shards"
+    },
+    {
+      "id": "5bfef685703c4efc9523aca58176572d",
+      "instance_type": "gpu_1x_h100_sxm5",
+      "region": "us-southeast-1",
+      "price_usd_per_hour": 4.29,
+      "role": "accelerated broad concept shards"
+    }
+  ],
+  "estimated_gross_cost_usd": 11.77,
+  "cost_method": "launch-request to termination-request wall time at listed hourly prices; provider billing may differ slightly",
+  "authorized_budget_usd": 100.0,
+  "termination_requested": true,
+  "termination_confirmed_absent_from_active_inventory": true
+}
