@@ -1,0 +1,17 @@
+{
+  "candidate_final_outcomes_generated": false,
+  "checks": {
+    "candidate_blind": true,
+    "cuda": true,
+    "deterministic_k12": true,
+    "deterministic_kv": true,
+    "deterministic_margins": true,
+    "finite": true,
+    "hooks_removed": true
+  },
+  "execution_commit": "d16f7a936b19e9ca92911b73c8fd2b909058d1cf",
+  "procedure": "day64-candidate-blind-calibration-development-preflight-v1",
+  "program_sha256": "6c234ed60efcaf4721e6721c5377a6fd0e03204fcf84b3bf95f421de9d42a05a",
+  "result": "pass",
+  "schema_version": 1
+}

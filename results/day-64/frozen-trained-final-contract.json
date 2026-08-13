@@ -1,0 +1,371 @@
+{
+  "calibration_artifact_hashes": {
+    "artifacts/trained-final-title-gate-v1/calibration-development/calibration.json": "3d1424165dfade28d6b39c451fb1e3713c66e98fab29b57ac637b893b886e619",
+    "artifacts/trained-final-title-gate-v1/calibration-development/calibration.safetensors": "a761b23071298e12c15b54a57d6fcb527b858420b7aa4e5f88639bb0584d0e38",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-HTML.json": "9666160637f8911dc1d016bf531a56efa7edb53d671fc9b03fa93164931d8b2d",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-HTML.safetensors": "9ff9a2d52e231697551ce676136da0b63e15fb87b8a7b2bc0a65e8b8c484c749",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-all-caps.json": "64ce84a97b8fae097e3f0a445d58e2c760c853d87c50aea94d14640bf33b36d8",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-all-caps.safetensors": "12e875f690c9d01fd494a818fe597a814c7b5f5c538d0458d0d9900d2a5f591b",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-biology-focused.json": "1ba68016f10400253354b57f860e6cb9e2bd1a8756399cc98c080e5db4a56998",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-biology-focused.safetensors": "453550b8b13ae47f1a8f4e2186780e516ab23a345eee5182fecd700ad41bfc9b",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-chemistry-based.json": "ed8300dea85d38c477b5f6c1848a3d36c56f4f97a2da14aeab67784fec8239b8",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-chemistry-based.safetensors": "2f76621ef21ff687316dd5753d5404dac204f4d2c03b75dcebefdc4bb85a1499",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-comforting.json": "5368f04516a0e5ee65b36a45a6a1a89e745c3ddcf63eb8ffe06aa0b5d7d8c418",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-comforting.safetensors": "e9bda8e3f4743c6d45755655239d60514ca39e144a04a6d6aa8777fe51324b77",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-confused.json": "dd26ae6e95fe12c41e17c5b3cca4cad8a4609a3a7a2d91e4f2a0c2dfd066e4a6",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-confused.safetensors": "28c28c118857d247c5c65dd1011ac5b0029e7672a965b5838fa7c7d7081fb049",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-finnish.json": "0acd59c7542f7ff2cd9173d61c65b8582fbcafc18cb7080e92e958b98ee738f7",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-finnish.safetensors": "4cf2eb80b9d8a3c1da8ba09d1198a805fc8cdff0cd3bb2c638feeb04806a406f",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-german.json": "b21902b1cac40ed2f45a15ee85fb5aba6e1e61df074fc7b054fb2854618150c4",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-german.safetensors": "8fb5004baf1add0256f774dac123d5428d91383576f0f69abf120afb1b503152",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-jokey.json": "2fac3d730533cf0d6f48b1d7b0f84780ebb6de128683afc4a3b8b2fd28e4195d",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-jokey.safetensors": "8b68ae60dd04f4bbee7c1ecd2791b5d1efec929a5a5c57f0388bc8a2047a4283",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-literature-focused.json": "3ec45d94b74401996ac2ad4ba792079ac48a6490df883206ad10d2df092acf8c",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-literature-focused.safetensors": "7d9799140b97a183ed519597c5ad2a807ef7d8b3a76f3477c49ab8e994eb7e41",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-mathematical.json": "097186f06b721dc9a6ecae8c1f2206424e9b2f129a76e72d2d56a380cc8f2f8d",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-mathematical.safetensors": "74bdb60bc4ec5b6855ecc7179500fe38fa85e9d54e9a5921834558f93af5e28e"
+  },
+  "calibration_summary_sha256": "73ed1c185e69f4f2cef365ecf8c9f02d572a30e538fa6314dde64c0f95091bc4",
+  "calibration_thresholds": {
+    "HTML": {
+      "0.01": -0.5022497773170471,
+      "0.05": -1.2687581777572632
+    },
+    "all-caps": {
+      "0.01": 3.1653778553009033,
+      "0.05": -1.8374688625335693
+    },
+    "biology-focused": {
+      "0.01": 0.36395159363746643,
+      "0.05": -0.6723151206970215
+    },
+    "chemistry-based": {
+      "0.01": 1.2865699529647827,
+      "0.05": -0.011150960810482502
+    },
+    "comforting": {
+      "0.01": 4.914179801940918,
+      "0.05": 0.7634356617927551
+    },
+    "confused": {
+      "0.01": 2.3432841300964355,
+      "0.05": 1.7412232160568237
+    },
+    "finnish": {
+      "0.01": 8.183460235595703,
+      "0.05": 4.080287933349609
+    },
+    "german": {
+      "0.01": 2.886540412902832,
+      "0.05": -1.691359281539917
+    },
+    "jokey": {
+      "0.01": -0.601860761642456,
+      "0.05": -2.698712110519409
+    },
+    "literature-focused": {
+      "0.01": -2.566682815551758,
+      "0.05": -3.315063238143921
+    },
+    "mathematical": {
+      "0.01": 1.3344444036483765,
+      "0.05": -6.2618913650512695
+    }
+  },
+  "causal_matrix": {
+    "directions": [
+      "correct_to_irrelevant",
+      "irrelevant_to_correct"
+    ],
+    "models": [
+      "chameleon",
+      "exact_precursor"
+    ],
+    "source_operator": "joint K and V at all monitoring-prefix source positions; response Q and unselected state remain recipient-natural",
+    "states": [
+      "natural target/donor/different",
+      "donor full-monitoring-prefix K/V into target",
+      "different K/V control into target",
+      "matched orthogonal K12 into target",
+      "exact target K12 clamp into donor",
+      "target K/V into donor",
+      "exact donor K12 restoration while donor semantics remain active"
+    ],
+    "tail": "all unpatched downstream computation regenerates naturally"
+  },
+  "claim_scope": {
+    "concepts": "all 11 probe-compatible concepts used to train the chameleon behavior",
+    "content": "all response records are absent from every prior project panel at record and content-hash level",
+    "not_claimed": "the concepts themselves are not held out from model fine-tuning"
+  },
+  "concepts_in_order": [
+    "HTML",
+    "all-caps",
+    "biology-focused",
+    "chemistry-based",
+    "comforting",
+    "confused",
+    "finnish",
+    "german",
+    "jokey",
+    "literature-focused",
+    "mathematical"
+  ],
+  "gates": {
+    "acquisition": {
+      "precursor_to_chameleon_kv_mediated_probe_norm_ratio_max": 0.5,
+      "precursor_to_chameleon_natural_k12_norm_ratio_max": 0.5,
+      "precursor_to_chameleon_natural_probe_norm_ratio_max": 0.5
+    },
+    "necessity_sufficiency": {
+      "concepts_with_positive_reversal_min": 9,
+      "median_concept_exact_k12_reversal_min": 0.6,
+      "median_concept_parallel_tail_residual_norm_ratio_max": 0.45
+    },
+    "operation": {
+      "concepts_with_positive_probe_recovery_min": 9,
+      "median_concept_advantage_over_each_control_min": 0.25,
+      "median_concept_kv_to_k12_aligned_recovery_min": 0.6,
+      "median_concept_kv_to_probe_aligned_recovery_min": 0.6
+    },
+    "operational": {
+      "concepts_positive_each_effect_min": 9,
+      "macro_TPR_clamp_reversal_at_either_threshold_min": 0.2,
+      "macro_TPR_drop_correct_vs_irrelevant_at_1pct_FPR_min": 0.2,
+      "macro_TPR_drop_correct_vs_irrelevant_at_5pct_FPR_min": 0.2,
+      "macro_TPR_restoration_at_either_threshold_min": 0.2
+    },
+    "prediction": {
+      "concepts_with_expected_own_probe_sign_min": 9,
+      "median_concept_cosine_min": {
+        "k12": 0.5,
+        "kv": 0.5,
+        "margins": 0.7
+      }
+    },
+    "restoration": {
+      "concepts_with_positive_restoration_min": 9,
+      "median_concept_lost_probe_effect_recovery_min": 0.7,
+      "median_concept_restored_residual_norm_ratio_max": 0.35
+    }
+  },
+  "implementation_gates": {
+    "candidate_blind_preflight": true,
+    "orthogonal_controls_verified": true,
+    "response_tokens_exact": true,
+    "same_state_k12_max_abs": 0.0,
+    "same_state_margin_max_abs": 0.08
+  },
+  "pairs": {
+    "HTML": {
+      "correct_concept": "HTML",
+      "correct_trigger": "HTML",
+      "different_concept": "deception",
+      "different_trigger": "lying",
+      "irrelevant_trigger": "biology-focused"
+    },
+    "all-caps": {
+      "correct_concept": "all-caps",
+      "correct_trigger": "all-caps",
+      "different_concept": "biology-focused",
+      "different_trigger": "biology-focused",
+      "irrelevant_trigger": "chemistry-based"
+    },
+    "biology-focused": {
+      "correct_concept": "biology-focused",
+      "correct_trigger": "biology-focused",
+      "different_concept": "chemistry-based",
+      "different_trigger": "chemistry-based",
+      "irrelevant_trigger": "comforting"
+    },
+    "chemistry-based": {
+      "correct_concept": "chemistry-based",
+      "correct_trigger": "chemistry-based",
+      "different_concept": "literature-focused",
+      "different_trigger": "literature-focused",
+      "irrelevant_trigger": "confused"
+    },
+    "comforting": {
+      "correct_concept": "comforting",
+      "correct_trigger": "comforting",
+      "different_concept": "finnish",
+      "different_trigger": "finnish",
+      "irrelevant_trigger": "german"
+    },
+    "confused": {
+      "correct_concept": "confused",
+      "correct_trigger": "confused",
+      "different_concept": "german",
+      "different_trigger": "german",
+      "irrelevant_trigger": "finnish"
+    },
+    "finnish": {
+      "correct_concept": "finnish",
+      "correct_trigger": "finnish",
+      "different_concept": "harmful",
+      "different_trigger": "harmful",
+      "irrelevant_trigger": "jokey"
+    },
+    "german": {
+      "correct_concept": "german",
+      "correct_trigger": "german",
+      "different_concept": "mathematical",
+      "different_trigger": "mathematical",
+      "irrelevant_trigger": "HTML"
+    },
+    "jokey": {
+      "correct_concept": "jokey",
+      "correct_trigger": "jokey",
+      "different_concept": "comforting",
+      "different_trigger": "comforting",
+      "irrelevant_trigger": "literature-focused"
+    },
+    "literature-focused": {
+      "correct_concept": "literature-focused",
+      "correct_trigger": "literature-focused",
+      "different_concept": "all-caps",
+      "different_trigger": "all-caps",
+      "irrelevant_trigger": "mathematical"
+    },
+    "mathematical": {
+      "correct_concept": "mathematical",
+      "correct_trigger": "mathematical",
+      "different_concept": "HTML",
+      "different_trigger": "HTML",
+      "irrelevant_trigger": "all-caps"
+    }
+  },
+  "probe_names_in_order": [
+    "HTML",
+    "all-caps",
+    "biology-focused",
+    "chemistry-based",
+    "comforting",
+    "confused",
+    "deception",
+    "finnish",
+    "german",
+    "harmful",
+    "jokey",
+    "literature-focused",
+    "mathematical"
+  ],
+  "procedure": "day64-trained-final-causal-chain-contract-v1",
+  "program_path": "results/day-64/frozen-trained-title-gate-program.json",
+  "program_sha256": "6c234ed60efcaf4721e6721c5377a6fd0e03204fcf84b3bf95f421de9d42a05a",
+  "prototype": {
+    "keys": [
+      "HTML.correct_to_irrelevant.k12",
+      "HTML.correct_to_irrelevant.kv",
+      "HTML.correct_to_irrelevant.margins",
+      "HTML.irrelevant_to_correct.k12",
+      "HTML.irrelevant_to_correct.kv",
+      "HTML.irrelevant_to_correct.margins",
+      "all-caps.correct_to_irrelevant.k12",
+      "all-caps.correct_to_irrelevant.kv",
+      "all-caps.correct_to_irrelevant.margins",
+      "all-caps.irrelevant_to_correct.k12",
+      "all-caps.irrelevant_to_correct.kv",
+      "all-caps.irrelevant_to_correct.margins",
+      "biology-focused.correct_to_irrelevant.k12",
+      "biology-focused.correct_to_irrelevant.kv",
+      "biology-focused.correct_to_irrelevant.margins",
+      "biology-focused.irrelevant_to_correct.k12",
+      "biology-focused.irrelevant_to_correct.kv",
+      "biology-focused.irrelevant_to_correct.margins",
+      "chemistry-based.correct_to_irrelevant.k12",
+      "chemistry-based.correct_to_irrelevant.kv",
+      "chemistry-based.correct_to_irrelevant.margins",
+      "chemistry-based.irrelevant_to_correct.k12",
+      "chemistry-based.irrelevant_to_correct.kv",
+      "chemistry-based.irrelevant_to_correct.margins",
+      "comforting.correct_to_irrelevant.k12",
+      "comforting.correct_to_irrelevant.kv",
+      "comforting.correct_to_irrelevant.margins",
+      "comforting.irrelevant_to_correct.k12",
+      "comforting.irrelevant_to_correct.kv",
+      "comforting.irrelevant_to_correct.margins",
+      "confused.correct_to_irrelevant.k12",
+      "confused.correct_to_irrelevant.kv",
+      "confused.correct_to_irrelevant.margins",
+      "confused.irrelevant_to_correct.k12",
+      "confused.irrelevant_to_correct.kv",
+      "confused.irrelevant_to_correct.margins",
+      "finnish.correct_to_irrelevant.k12",
+      "finnish.correct_to_irrelevant.kv",
+      "finnish.correct_to_irrelevant.margins",
+      "finnish.irrelevant_to_correct.k12",
+      "finnish.irrelevant_to_correct.kv",
+      "finnish.irrelevant_to_correct.margins",
+      "german.correct_to_irrelevant.k12",
+      "german.correct_to_irrelevant.kv",
+      "german.correct_to_irrelevant.margins",
+      "german.irrelevant_to_correct.k12",
+      "german.irrelevant_to_correct.kv",
+      "german.irrelevant_to_correct.margins",
+      "jokey.correct_to_irrelevant.k12",
+      "jokey.correct_to_irrelevant.kv",
+      "jokey.correct_to_irrelevant.margins",
+      "jokey.irrelevant_to_correct.k12",
+      "jokey.irrelevant_to_correct.kv",
+      "jokey.irrelevant_to_correct.margins",
+      "literature-focused.correct_to_irrelevant.k12",
+      "literature-focused.correct_to_irrelevant.kv",
+      "literature-focused.correct_to_irrelevant.margins",
+      "literature-focused.irrelevant_to_correct.k12",
+      "literature-focused.irrelevant_to_correct.kv",
+      "literature-focused.irrelevant_to_correct.margins",
+      "mathematical.correct_to_irrelevant.k12",
+      "mathematical.correct_to_irrelevant.kv",
+      "mathematical.correct_to_irrelevant.margins",
+      "mathematical.irrelevant_to_correct.k12",
+      "mathematical.irrelevant_to_correct.kv",
+      "mathematical.irrelevant_to_correct.margins"
+    ],
+    "path": "artifacts/trained-final-title-gate-v1/development-prototypes.safetensors",
+    "sha256": "b630a20c3fa141ad32bb71a9e797bb5b40873f0c41ce85aa5dee49b459c68ad4"
+  },
+  "reductions": {
+    "concept_is_unit": true,
+    "direction_aggregation": "median over the two frozen directions within concept, then median or count over 11 concepts",
+    "title_policy": "all seven clauses conjunctive; no compensatory score",
+    "uncertainty": {
+      "draws": 20000,
+      "method": "paired concept bootstrap",
+      "seed": 64001
+    }
+  },
+  "roles": {
+    "calibration": {
+      "locked_until_final_execution": false,
+      "path": "data/splits/day64-v1/calibration-negative.jsonl",
+      "rows": 1408,
+      "sha256": "097054bcf9e2b7907dde2f1a5c893825dd2aca36190003b31005ab94f2bdfb33",
+      "unique_content_hashes": 283,
+      "unique_source_records": 283
+    },
+    "final_causal": {
+      "locked_until_final_execution": true,
+      "path": "data/splits/day64-v1/final-causal.LOCKED.jsonl",
+      "rows": 176,
+      "sha256": "389358f3e5511cd951c2e53aadd8439d4e0664a9b822bf6403505c3c2cab709d",
+      "unique_content_hashes": 176,
+      "unique_source_records": 176
+    },
+    "final_negative": {
+      "locked_until_final_execution": true,
+      "path": "data/splits/day64-v1/final-negative.LOCKED.jsonl",
+      "rows": 704,
+      "sha256": "085a614cb16e7d2ed7020f750a3caf198cebb53f6aa5285dcd20923c59749d70",
+      "unique_content_hashes": 129,
+      "unique_source_records": 129
+    }
+  },
+  "schema_version": 1,
+  "status": "frozen_after_calibration_before_any_locked_final_model_or_intervention_outcome",
+  "stop_rules": {
+    "final_panels_read_only_after_final_contract": true,
+    "no_concept_qualification_or_selection": true,
+    "no_gate_changes_after_any_day64_model_outcome": true
+  }
+}

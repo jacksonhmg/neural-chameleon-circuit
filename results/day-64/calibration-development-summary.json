@@ -1,0 +1,350 @@
+{
+  "artifact_hashes": {
+    "artifacts/trained-final-title-gate-v1/calibration-development/calibration.json": "3d1424165dfade28d6b39c451fb1e3713c66e98fab29b57ac637b893b886e619",
+    "artifacts/trained-final-title-gate-v1/calibration-development/calibration.safetensors": "a761b23071298e12c15b54a57d6fcb527b858420b7aa4e5f88639bb0584d0e38",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-HTML.json": "9666160637f8911dc1d016bf531a56efa7edb53d671fc9b03fa93164931d8b2d",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-HTML.safetensors": "9ff9a2d52e231697551ce676136da0b63e15fb87b8a7b2bc0a65e8b8c484c749",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-all-caps.json": "64ce84a97b8fae097e3f0a445d58e2c760c853d87c50aea94d14640bf33b36d8",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-all-caps.safetensors": "12e875f690c9d01fd494a818fe597a814c7b5f5c538d0458d0d9900d2a5f591b",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-biology-focused.json": "1ba68016f10400253354b57f860e6cb9e2bd1a8756399cc98c080e5db4a56998",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-biology-focused.safetensors": "453550b8b13ae47f1a8f4e2186780e516ab23a345eee5182fecd700ad41bfc9b",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-chemistry-based.json": "ed8300dea85d38c477b5f6c1848a3d36c56f4f97a2da14aeab67784fec8239b8",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-chemistry-based.safetensors": "2f76621ef21ff687316dd5753d5404dac204f4d2c03b75dcebefdc4bb85a1499",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-comforting.json": "5368f04516a0e5ee65b36a45a6a1a89e745c3ddcf63eb8ffe06aa0b5d7d8c418",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-comforting.safetensors": "e9bda8e3f4743c6d45755655239d60514ca39e144a04a6d6aa8777fe51324b77",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-confused.json": "dd26ae6e95fe12c41e17c5b3cca4cad8a4609a3a7a2d91e4f2a0c2dfd066e4a6",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-confused.safetensors": "28c28c118857d247c5c65dd1011ac5b0029e7672a965b5838fa7c7d7081fb049",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-finnish.json": "0acd59c7542f7ff2cd9173d61c65b8582fbcafc18cb7080e92e958b98ee738f7",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-finnish.safetensors": "4cf2eb80b9d8a3c1da8ba09d1198a805fc8cdff0cd3bb2c638feeb04806a406f",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-german.json": "b21902b1cac40ed2f45a15ee85fb5aba6e1e61df074fc7b054fb2854618150c4",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-german.safetensors": "8fb5004baf1add0256f774dac123d5428d91383576f0f69abf120afb1b503152",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-jokey.json": "2fac3d730533cf0d6f48b1d7b0f84780ebb6de128683afc4a3b8b2fd28e4195d",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-jokey.safetensors": "8b68ae60dd04f4bbee7c1ecd2791b5d1efec929a5a5c57f0388bc8a2047a4283",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-literature-focused.json": "3ec45d94b74401996ac2ad4ba792079ac48a6490df883206ad10d2df092acf8c",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-literature-focused.safetensors": "7d9799140b97a183ed519597c5ad2a807ef7d8b3a76f3477c49ab8e994eb7e41",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-mathematical.json": "097186f06b721dc9a6ecae8c1f2206424e9b2f129a76e72d2d56a380cc8f2f8d",
+    "artifacts/trained-final-title-gate-v1/calibration-development/development-mathematical.safetensors": "74bdb60bc4ec5b6855ecc7179500fe38fa85e9d54e9a5921834558f93af5e28e"
+  },
+  "calibration": {
+    "HTML": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": -0.5022497773170471
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -1.2687581777572632
+        }
+      },
+      "raw_margin_max": -0.5022497773170471,
+      "raw_margin_median": -2.629626989364624,
+      "raw_margin_min": -6.034482002258301
+    },
+    "all-caps": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 3.1653778553009033
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -1.8374688625335693
+        }
+      },
+      "raw_margin_max": 3.1653778553009033,
+      "raw_margin_median": -3.053976058959961,
+      "raw_margin_min": -5.705854415893555
+    },
+    "biology-focused": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 0.36395159363746643
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -0.6723151206970215
+        }
+      },
+      "raw_margin_max": 0.36395159363746643,
+      "raw_margin_median": -2.5050268173217773,
+      "raw_margin_min": -6.085195541381836
+    },
+    "chemistry-based": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 1.2865699529647827
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -0.011150960810482502
+        }
+      },
+      "raw_margin_max": 1.2865699529647827,
+      "raw_margin_median": -1.6775661706924438,
+      "raw_margin_min": -4.38109827041626
+    },
+    "comforting": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 4.914179801940918
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": 0.7634356617927551
+        }
+      },
+      "raw_margin_max": 4.914179801940918,
+      "raw_margin_median": -4.655178070068359,
+      "raw_margin_min": -11.598034858703613
+    },
+    "confused": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 2.3432841300964355
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": 1.7412232160568237
+        }
+      },
+      "raw_margin_max": 2.3432841300964355,
+      "raw_margin_median": -1.4382719993591309,
+      "raw_margin_min": -7.879414081573486
+    },
+    "finnish": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 8.183460235595703
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": 4.080287933349609
+        }
+      },
+      "raw_margin_max": 8.183460235595703,
+      "raw_margin_median": -4.011672019958496,
+      "raw_margin_min": -8.000746726989746
+    },
+    "german": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 2.886540412902832
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -1.691359281539917
+        }
+      },
+      "raw_margin_max": 2.886540412902832,
+      "raw_margin_median": -5.354369640350342,
+      "raw_margin_min": -14.007673263549805
+    },
+    "jokey": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": -0.601860761642456
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -2.698712110519409
+        }
+      },
+      "raw_margin_max": -0.601860761642456,
+      "raw_margin_median": -5.092813491821289,
+      "raw_margin_min": -15.217674255371094
+    },
+    "literature-focused": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": -2.566682815551758
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -3.315063238143921
+        }
+      },
+      "raw_margin_max": -2.566682815551758,
+      "raw_margin_median": -6.815596580505371,
+      "raw_margin_min": -13.19489574432373
+    },
+    "mathematical": {
+      "n": 128,
+      "operating_points": {
+        "0.01": {
+          "calibration_exceedance_rate": 0.0,
+          "order_statistic_rank_1_indexed": 128,
+          "threshold": 1.3344444036483765
+        },
+        "0.05": {
+          "calibration_exceedance_rate": 0.0390625,
+          "order_statistic_rank_1_indexed": 123,
+          "threshold": -6.2618913650512695
+        }
+      },
+      "raw_margin_max": 1.3344444036483765,
+      "raw_margin_median": -11.295345306396484,
+      "raw_margin_min": -22.1289119720459
+    }
+  },
+  "development_prototype": {
+    "keys": [
+      "HTML.correct_to_irrelevant.k12",
+      "HTML.correct_to_irrelevant.kv",
+      "HTML.correct_to_irrelevant.margins",
+      "HTML.irrelevant_to_correct.k12",
+      "HTML.irrelevant_to_correct.kv",
+      "HTML.irrelevant_to_correct.margins",
+      "all-caps.correct_to_irrelevant.k12",
+      "all-caps.correct_to_irrelevant.kv",
+      "all-caps.correct_to_irrelevant.margins",
+      "all-caps.irrelevant_to_correct.k12",
+      "all-caps.irrelevant_to_correct.kv",
+      "all-caps.irrelevant_to_correct.margins",
+      "biology-focused.correct_to_irrelevant.k12",
+      "biology-focused.correct_to_irrelevant.kv",
+      "biology-focused.correct_to_irrelevant.margins",
+      "biology-focused.irrelevant_to_correct.k12",
+      "biology-focused.irrelevant_to_correct.kv",
+      "biology-focused.irrelevant_to_correct.margins",
+      "chemistry-based.correct_to_irrelevant.k12",
+      "chemistry-based.correct_to_irrelevant.kv",
+      "chemistry-based.correct_to_irrelevant.margins",
+      "chemistry-based.irrelevant_to_correct.k12",
+      "chemistry-based.irrelevant_to_correct.kv",
+      "chemistry-based.irrelevant_to_correct.margins",
+      "comforting.correct_to_irrelevant.k12",
+      "comforting.correct_to_irrelevant.kv",
+      "comforting.correct_to_irrelevant.margins",
+      "comforting.irrelevant_to_correct.k12",
+      "comforting.irrelevant_to_correct.kv",
+      "comforting.irrelevant_to_correct.margins",
+      "confused.correct_to_irrelevant.k12",
+      "confused.correct_to_irrelevant.kv",
+      "confused.correct_to_irrelevant.margins",
+      "confused.irrelevant_to_correct.k12",
+      "confused.irrelevant_to_correct.kv",
+      "confused.irrelevant_to_correct.margins",
+      "finnish.correct_to_irrelevant.k12",
+      "finnish.correct_to_irrelevant.kv",
+      "finnish.correct_to_irrelevant.margins",
+      "finnish.irrelevant_to_correct.k12",
+      "finnish.irrelevant_to_correct.kv",
+      "finnish.irrelevant_to_correct.margins",
+      "german.correct_to_irrelevant.k12",
+      "german.correct_to_irrelevant.kv",
+      "german.correct_to_irrelevant.margins",
+      "german.irrelevant_to_correct.k12",
+      "german.irrelevant_to_correct.kv",
+      "german.irrelevant_to_correct.margins",
+      "jokey.correct_to_irrelevant.k12",
+      "jokey.correct_to_irrelevant.kv",
+      "jokey.correct_to_irrelevant.margins",
+      "jokey.irrelevant_to_correct.k12",
+      "jokey.irrelevant_to_correct.kv",
+      "jokey.irrelevant_to_correct.margins",
+      "literature-focused.correct_to_irrelevant.k12",
+      "literature-focused.correct_to_irrelevant.kv",
+      "literature-focused.correct_to_irrelevant.margins",
+      "literature-focused.irrelevant_to_correct.k12",
+      "literature-focused.irrelevant_to_correct.kv",
+      "literature-focused.irrelevant_to_correct.margins",
+      "mathematical.correct_to_irrelevant.k12",
+      "mathematical.correct_to_irrelevant.kv",
+      "mathematical.correct_to_irrelevant.margins",
+      "mathematical.irrelevant_to_correct.k12",
+      "mathematical.irrelevant_to_correct.kv",
+      "mathematical.irrelevant_to_correct.margins"
+    ],
+    "path": "artifacts/trained-final-title-gate-v1/development-prototypes.safetensors",
+    "sha256": "b630a20c3fa141ad32bb71a9e797bb5b40873f0c41ce85aa5dee49b459c68ad4"
+  },
+  "frozen_thresholds": {
+    "HTML": {
+      "0.01": -0.5022497773170471,
+      "0.05": -1.2687581777572632
+    },
+    "all-caps": {
+      "0.01": 3.1653778553009033,
+      "0.05": -1.8374688625335693
+    },
+    "biology-focused": {
+      "0.01": 0.36395159363746643,
+      "0.05": -0.6723151206970215
+    },
+    "chemistry-based": {
+      "0.01": 1.2865699529647827,
+      "0.05": -0.011150960810482502
+    },
+    "comforting": {
+      "0.01": 4.914179801940918,
+      "0.05": 0.7634356617927551
+    },
+    "confused": {
+      "0.01": 2.3432841300964355,
+      "0.05": 1.7412232160568237
+    },
+    "finnish": {
+      "0.01": 8.183460235595703,
+      "0.05": 4.080287933349609
+    },
+    "german": {
+      "0.01": 2.886540412902832,
+      "0.05": -1.691359281539917
+    },
+    "jokey": {
+      "0.01": -0.601860761642456,
+      "0.05": -2.698712110519409
+    },
+    "literature-focused": {
+      "0.01": -2.566682815551758,
+      "0.05": -3.315063238143921
+    },
+    "mathematical": {
+      "0.01": 1.3344444036483765,
+      "0.05": -6.2618913650512695
+    }
+  },
+  "procedure": "day64-calibration-development-reduction-v1",
+  "program_sha256": "6c234ed60efcaf4721e6721c5377a6fd0e03204fcf84b3bf95f421de9d42a05a",
+  "schema_version": 1,
+  "selection_or_gate_changes": false
+}
