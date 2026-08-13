@@ -1,0 +1,77 @@
+2026-08-13 05:19:57.814879: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-08-13 05:19:57.829707: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1786598397.847638   14397 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1786598397.853386   14397 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1786598397.867904   14397 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598397.867927   14397 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598397.867930   14397 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598397.867932   14397 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-08-13 05:19:57.871881: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+The following generation flags are not valid and may be ignored: ['cache_implementation']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.20it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.14it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.10it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.11it/s]
+{"concept": "literature-focused", "completed": 4, "total": 128}
+{"concept": "literature-focused", "completed": 8, "total": 128}
+{"concept": "literature-focused", "completed": 12, "total": 128}
+{"concept": "literature-focused", "completed": 16, "total": 128}
+{"concept": "literature-focused", "completed": 20, "total": 128}
+{"concept": "literature-focused", "completed": 24, "total": 128}
+{"concept": "literature-focused", "completed": 28, "total": 128}
+{"concept": "literature-focused", "completed": 32, "total": 128}
+{"concept": "literature-focused", "completed": 36, "total": 128}
+{"concept": "literature-focused", "completed": 40, "total": 128}
+{"concept": "literature-focused", "completed": 44, "total": 128}
+{"concept": "literature-focused", "completed": 48, "total": 128}
+{"concept": "literature-focused", "completed": 52, "total": 128}
+{"concept": "literature-focused", "completed": 56, "total": 128}
+{"concept": "literature-focused", "completed": 60, "total": 128}
+{"concept": "literature-focused", "completed": 64, "total": 128}
+{"concept": "literature-focused", "completed": 68, "total": 128}
+{"concept": "literature-focused", "completed": 72, "total": 128}
+{"concept": "literature-focused", "completed": 76, "total": 128}
+{"concept": "literature-focused", "completed": 80, "total": 128}
+{"concept": "literature-focused", "completed": 84, "total": 128}
+{"concept": "literature-focused", "completed": 88, "total": 128}
+{"concept": "literature-focused", "completed": 92, "total": 128}
+{"concept": "literature-focused", "completed": 96, "total": 128}
+{"concept": "literature-focused", "completed": 100, "total": 128}
+{"concept": "literature-focused", "completed": 104, "total": 128}
+{"concept": "literature-focused", "completed": 108, "total": 128}
+{"concept": "literature-focused", "completed": 112, "total": 128}
+{"concept": "literature-focused", "completed": 116, "total": 128}
+{"concept": "literature-focused", "completed": 120, "total": 128}
+{"concept": "literature-focused", "completed": 124, "total": 128}
+{"concept": "literature-focused", "completed": 128, "total": 128}
+{"concept": "mathematical", "completed": 4, "total": 128}
+{"concept": "mathematical", "completed": 8, "total": 128}
+{"concept": "mathematical", "completed": 12, "total": 128}
+{"concept": "mathematical", "completed": 16, "total": 128}
+{"concept": "mathematical", "completed": 20, "total": 128}
+{"concept": "mathematical", "completed": 24, "total": 128}
+{"concept": "mathematical", "completed": 28, "total": 128}
+{"concept": "mathematical", "completed": 32, "total": 128}
+{"concept": "mathematical", "completed": 36, "total": 128}
+{"concept": "mathematical", "completed": 40, "total": 128}
+{"concept": "mathematical", "completed": 44, "total": 128}
+{"concept": "mathematical", "completed": 48, "total": 128}
+{"concept": "mathematical", "completed": 52, "total": 128}
+{"concept": "mathematical", "completed": 56, "total": 128}
+{"concept": "mathematical", "completed": 60, "total": 128}
+{"concept": "mathematical", "completed": 64, "total": 128}
+{"concept": "mathematical", "completed": 68, "total": 128}
+{"concept": "mathematical", "completed": 72, "total": 128}
+{"concept": "mathematical", "completed": 76, "total": 128}
+{"concept": "mathematical", "completed": 80, "total": 128}
+{"concept": "mathematical", "completed": 84, "total": 128}
+{"concept": "mathematical", "completed": 88, "total": 128}
+{"concept": "mathematical", "completed": 92, "total": 128}
+{"concept": "mathematical", "completed": 96, "total": 128}
+{"concept": "mathematical", "completed": 100, "total": 128}
+{"concept": "mathematical", "completed": 104, "total": 128}
+{"concept": "mathematical", "completed": 108, "total": 128}
+{"concept": "mathematical", "completed": 112, "total": 128}
+{"concept": "mathematical", "completed": 116, "total": 128}
+{"concept": "mathematical", "completed": 120, "total": 128}
+{"concept": "mathematical", "completed": 124, "total": 128}
+{"concept": "mathematical", "completed": 128, "total": 128}

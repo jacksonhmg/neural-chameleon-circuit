@@ -1,0 +1,109 @@
+2026-08-13 05:19:55.574119: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-08-13 05:19:55.588763: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1786598395.606161   14041 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1786598395.611735   14041 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1786598395.625700   14041 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598395.625724   14041 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598395.625727   14041 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598395.625730   14041 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-08-13 05:19:55.629563: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+The following generation flags are not valid and may be ignored: ['cache_implementation']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.26it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.24it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.23it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.37it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.32it/s]
+{"concept": "chemistry-based", "completed": 4, "total": 128}
+{"concept": "chemistry-based", "completed": 8, "total": 128}
+{"concept": "chemistry-based", "completed": 12, "total": 128}
+{"concept": "chemistry-based", "completed": 16, "total": 128}
+{"concept": "chemistry-based", "completed": 20, "total": 128}
+{"concept": "chemistry-based", "completed": 24, "total": 128}
+{"concept": "chemistry-based", "completed": 28, "total": 128}
+{"concept": "chemistry-based", "completed": 32, "total": 128}
+{"concept": "chemistry-based", "completed": 36, "total": 128}
+{"concept": "chemistry-based", "completed": 40, "total": 128}
+{"concept": "chemistry-based", "completed": 44, "total": 128}
+{"concept": "chemistry-based", "completed": 48, "total": 128}
+{"concept": "chemistry-based", "completed": 52, "total": 128}
+{"concept": "chemistry-based", "completed": 56, "total": 128}
+{"concept": "chemistry-based", "completed": 60, "total": 128}
+{"concept": "chemistry-based", "completed": 64, "total": 128}
+{"concept": "chemistry-based", "completed": 68, "total": 128}
+{"concept": "chemistry-based", "completed": 72, "total": 128}
+{"concept": "chemistry-based", "completed": 76, "total": 128}
+{"concept": "chemistry-based", "completed": 80, "total": 128}
+{"concept": "chemistry-based", "completed": 84, "total": 128}
+{"concept": "chemistry-based", "completed": 88, "total": 128}
+{"concept": "chemistry-based", "completed": 92, "total": 128}
+{"concept": "chemistry-based", "completed": 96, "total": 128}
+{"concept": "chemistry-based", "completed": 100, "total": 128}
+{"concept": "chemistry-based", "completed": 104, "total": 128}
+{"concept": "chemistry-based", "completed": 108, "total": 128}
+{"concept": "chemistry-based", "completed": 112, "total": 128}
+{"concept": "chemistry-based", "completed": 116, "total": 128}
+{"concept": "chemistry-based", "completed": 120, "total": 128}
+{"concept": "chemistry-based", "completed": 124, "total": 128}
+{"concept": "chemistry-based", "completed": 128, "total": 128}
+{"concept": "comforting", "completed": 4, "total": 128}
+{"concept": "comforting", "completed": 8, "total": 128}
+{"concept": "comforting", "completed": 12, "total": 128}
+{"concept": "comforting", "completed": 16, "total": 128}
+{"concept": "comforting", "completed": 20, "total": 128}
+{"concept": "comforting", "completed": 24, "total": 128}
+{"concept": "comforting", "completed": 28, "total": 128}
+{"concept": "comforting", "completed": 32, "total": 128}
+{"concept": "comforting", "completed": 36, "total": 128}
+{"concept": "comforting", "completed": 40, "total": 128}
+{"concept": "comforting", "completed": 44, "total": 128}
+{"concept": "comforting", "completed": 48, "total": 128}
+{"concept": "comforting", "completed": 52, "total": 128}
+{"concept": "comforting", "completed": 56, "total": 128}
+{"concept": "comforting", "completed": 60, "total": 128}
+{"concept": "comforting", "completed": 64, "total": 128}
+{"concept": "comforting", "completed": 68, "total": 128}
+{"concept": "comforting", "completed": 72, "total": 128}
+{"concept": "comforting", "completed": 76, "total": 128}
+{"concept": "comforting", "completed": 80, "total": 128}
+{"concept": "comforting", "completed": 84, "total": 128}
+{"concept": "comforting", "completed": 88, "total": 128}
+{"concept": "comforting", "completed": 92, "total": 128}
+{"concept": "comforting", "completed": 96, "total": 128}
+{"concept": "comforting", "completed": 100, "total": 128}
+{"concept": "comforting", "completed": 104, "total": 128}
+{"concept": "comforting", "completed": 108, "total": 128}
+{"concept": "comforting", "completed": 112, "total": 128}
+{"concept": "comforting", "completed": 116, "total": 128}
+{"concept": "comforting", "completed": 120, "total": 128}
+{"concept": "comforting", "completed": 124, "total": 128}
+{"concept": "comforting", "completed": 128, "total": 128}
+{"concept": "confused", "completed": 4, "total": 128}
+{"concept": "confused", "completed": 8, "total": 128}
+{"concept": "confused", "completed": 12, "total": 128}
+{"concept": "confused", "completed": 16, "total": 128}
+{"concept": "confused", "completed": 20, "total": 128}
+{"concept": "confused", "completed": 24, "total": 128}
+{"concept": "confused", "completed": 28, "total": 128}
+{"concept": "confused", "completed": 32, "total": 128}
+{"concept": "confused", "completed": 36, "total": 128}
+{"concept": "confused", "completed": 40, "total": 128}
+{"concept": "confused", "completed": 44, "total": 128}
+{"concept": "confused", "completed": 48, "total": 128}
+{"concept": "confused", "completed": 52, "total": 128}
+{"concept": "confused", "completed": 56, "total": 128}
+{"concept": "confused", "completed": 60, "total": 128}
+{"concept": "confused", "completed": 64, "total": 128}
+{"concept": "confused", "completed": 68, "total": 128}
+{"concept": "confused", "completed": 72, "total": 128}
+{"concept": "confused", "completed": 76, "total": 128}
+{"concept": "confused", "completed": 80, "total": 128}
+{"concept": "confused", "completed": 84, "total": 128}
+{"concept": "confused", "completed": 88, "total": 128}
+{"concept": "confused", "completed": 92, "total": 128}
+{"concept": "confused", "completed": 96, "total": 128}
+{"concept": "confused", "completed": 100, "total": 128}
+{"concept": "confused", "completed": 104, "total": 128}
+{"concept": "confused", "completed": 108, "total": 128}
+{"concept": "confused", "completed": 112, "total": 128}
+{"concept": "confused", "completed": 116, "total": 128}
+{"concept": "confused", "completed": 120, "total": 128}
+{"concept": "confused", "completed": 124, "total": 128}
+{"concept": "confused", "completed": 128, "total": 128}

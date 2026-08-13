@@ -1,0 +1,734 @@
+{
+  "contract_sha256": "832854cd283e7b10ffcbe86a6a0b292b876c7f9a27f95c53ec4e1e396d986a16",
+  "control_verifier_repair": {
+    "all_permutations_bijective": true,
+    "all_signs_unit": true,
+    "components": 8448,
+    "files": 22,
+    "groups": 704,
+    "maximum_norm_relative_error": 1.134884153379067e-16,
+    "maximum_norm_relative_error_gate": 1e-06,
+    "pass": true,
+    "procedure": "signed-permutation-structural-orthogonality-v1",
+    "reason_for_repair": "the prior relative-Gram denominator is ill-conditioned for near-zero deltas and tests floating-point reduction order rather than operator orthogonality",
+    "theorem": "a bijective coordinate permutation multiplied by unit signs has Q^T Q = I exactly; temporal Gram is invariant in exact arithmetic"
+  },
+  "implementation_audits": {
+    "HTML": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "all-caps": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "biology-focused": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "chemistry-based": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "comforting": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "confused": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "finnish": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "german": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "jokey": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "literature-focused": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    },
+    "mathematical": {
+      "finite": true,
+      "k12_clamp_exact_max_abs": 0.0,
+      "response_hashes_unique": true
+    }
+  },
+  "implementation_pass": true,
+  "interpretation_policy": "single_attempt_conjunctive_no_compensatory_score",
+  "operational_checks": {
+    "breadth_clamp_either": false,
+    "breadth_drop_1pct": false,
+    "breadth_drop_5pct": false,
+    "macro_clamp_either": true,
+    "macro_drop_1pct": true,
+    "macro_drop_5pct": true,
+    "prior_restoration_carried": true
+  },
+  "operational_consequences": {
+    "aggregate": {
+      "0.01": {
+        "clamp": {
+          "lower_95": 0.07457386363636363,
+          "point": 0.28551136363636365,
+          "positive_concepts": 6,
+          "upper_95": 0.5319602272727273,
+          "values_in_concept_order": [
+            0.0859375,
+            0.03125,
+            0.0,
+            0.0,
+            0.421875,
+            0.6171875,
+            0.9921875,
+            0.0,
+            0.9921875,
+            0.0,
+            0.0
+          ]
+        },
+        "drop": {
+          "lower_95": 0.12571022727272727,
+          "point": 0.36576704545454547,
+          "positive_concepts": 8,
+          "upper_95": 0.6257102272727273,
+          "values_in_concept_order": [
+            0.0546875,
+            0.0390625,
+            0.0,
+            0.21875,
+            0.6796875,
+            0.984375,
+            0.9921875,
+            0.0,
+            0.9921875,
+            0.0,
+            0.0625
+          ]
+        }
+      },
+      "0.05": {
+        "clamp": {
+          "lower_95": 0.1825284090909091,
+          "point": 0.41548295454545453,
+          "positive_concepts": 8,
+          "upper_95": 0.6619318181818182,
+          "values_in_concept_order": [
+            0.3515625,
+            0.0,
+            0.015625,
+            0.15625,
+            0.9453125,
+            0.9609375,
+            0.9765625,
+            0.0,
+            0.84375,
+            0.0,
+            0.3203125
+          ]
+        },
+        "drop": {
+          "lower_95": 0.2578125,
+          "point": 0.5078125,
+          "positive_concepts": 8,
+          "upper_95": 0.75,
+          "values_in_concept_order": [
+            0.234375,
+            0.0,
+            0.0703125,
+            0.8125,
+            0.9609375,
+            0.9921875,
+            0.9765625,
+            0.0,
+            0.84375,
+            0.0,
+            0.6953125
+          ]
+        }
+      }
+    },
+    "per_concept": {
+      "HTML": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 16.08720306354454,
+          "natural_irrelevant_minus_correct_mean_norm": 16.950497146046686
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0859375,
+              "correct": 0.0,
+              "irrelevant": 0.0546875
+            },
+            "differences": {
+              "clamp": 0.0859375,
+              "drop": 0.0546875
+            },
+            "realized_final_FPR": 0.01171875,
+            "threshold": 1.505320429801941
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.3515625,
+              "correct": 0.0,
+              "irrelevant": 0.234375
+            },
+            "differences": {
+              "clamp": 0.3515625,
+              "drop": 0.234375
+            },
+            "realized_final_FPR": 0.078125,
+            "threshold": 0.6670844554901123
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 0.47582483291625977,
+            "median": 0.47398442029953003
+          },
+          "correct": {
+            "mean": -0.8463255167007446,
+            "median": -0.8453947305679321
+          },
+          "irrelevant": {
+            "mean": 0.23688466846942902,
+            "median": 0.22102226316928864
+          }
+        }
+      },
+      "all-caps": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 10.196221879721607,
+          "natural_irrelevant_minus_correct_mean_norm": 14.914028303383944
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.984375,
+              "correct": 0.953125,
+              "irrelevant": 0.9921875
+            },
+            "differences": {
+              "clamp": 0.03125,
+              "drop": 0.0390625
+            },
+            "realized_final_FPR": 0.015625,
+            "threshold": -1.1142667531967163
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 1.0,
+              "irrelevant": 1.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0
+            },
+            "realized_final_FPR": 0.0625,
+            "threshold": -1.5025688409805298
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -0.430014044046402,
+            "median": -0.44886791706085205
+          },
+          "correct": {
+            "mean": -0.5682308077812195,
+            "median": -0.6125358939170837
+          },
+          "irrelevant": {
+            "mean": -0.33211350440979004,
+            "median": -0.3340030014514923
+          }
+        }
+      },
+      "biology-focused": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 29.003326790007065,
+          "natural_irrelevant_minus_correct_mean_norm": 31.554155346533122
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0
+            },
+            "realized_final_FPR": 0.0234375,
+            "threshold": 1.7587425708770752
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.015625,
+              "correct": 0.0,
+              "irrelevant": 0.0703125
+            },
+            "differences": {
+              "clamp": 0.015625,
+              "drop": 0.0703125
+            },
+            "realized_final_FPR": 0.0625,
+            "threshold": 0.8339986801147461
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -0.11187751591205597,
+            "median": -0.11325419694185257
+          },
+          "correct": {
+            "mean": -2.4168190956115723,
+            "median": -2.382563829421997
+          },
+          "irrelevant": {
+            "mean": 0.14528609812259674,
+            "median": 0.11939539015293121
+          }
+        }
+      },
+      "chemistry-based": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 14.164193386849908,
+          "natural_irrelevant_minus_correct_mean_norm": 21.516337602480736
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.21875
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.21875
+            },
+            "realized_final_FPR": 0.0234375,
+            "threshold": 1.5118025541305542
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.15625,
+              "correct": 0.0,
+              "irrelevant": 0.8125
+            },
+            "differences": {
+              "clamp": 0.15625,
+              "drop": 0.8125
+            },
+            "realized_final_FPR": 0.08203125,
+            "threshold": 0.6978163123130798
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 0.3654853403568268,
+            "median": 0.34810641407966614
+          },
+          "correct": {
+            "mean": -1.5726487636566162,
+            "median": -1.5831866264343262
+          },
+          "irrelevant": {
+            "mean": 1.0847983360290527,
+            "median": 1.051924467086792
+          }
+        }
+      },
+      "comforting": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 36.164340286738245,
+          "natural_irrelevant_minus_correct_mean_norm": 40.04155685871429
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.421875,
+              "correct": 0.0,
+              "irrelevant": 0.6796875
+            },
+            "differences": {
+              "clamp": 0.421875,
+              "drop": 0.6796875
+            },
+            "realized_final_FPR": 0.015625,
+            "threshold": 7.710044860839844
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.9453125,
+              "correct": 0.0,
+              "irrelevant": 0.9609375
+            },
+            "differences": {
+              "clamp": 0.9453125,
+              "drop": 0.9609375
+            },
+            "realized_final_FPR": 0.05078125,
+            "threshold": 3.2297143936157227
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 7.2256317138671875,
+            "median": 7.426383972167969
+          },
+          "correct": {
+            "mean": -11.97922420501709,
+            "median": -12.066600799560547
+          },
+          "irrelevant": {
+            "mean": 8.558331489562988,
+            "median": 8.560665130615234
+          }
+        }
+      },
+      "confused": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 19.232304801630534,
+          "natural_irrelevant_minus_correct_mean_norm": 24.69236950787836
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.6171875,
+              "correct": 0.0,
+              "irrelevant": 0.984375
+            },
+            "differences": {
+              "clamp": 0.6171875,
+              "drop": 0.984375
+            },
+            "realized_final_FPR": 0.01171875,
+            "threshold": 1.5458252429962158
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.9609375,
+              "correct": 0.0,
+              "irrelevant": 0.9921875
+            },
+            "differences": {
+              "clamp": 0.9609375,
+              "drop": 0.9921875
+            },
+            "realized_final_FPR": 0.0546875,
+            "threshold": 0.7140462398529053
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 1.6193034648895264,
+            "median": 1.6641019582748413
+          },
+          "correct": {
+            "mean": -2.4130358695983887,
+            "median": -2.387289047241211
+          },
+          "irrelevant": {
+            "mean": 2.882328510284424,
+            "median": 2.9158685207366943
+          }
+        }
+      },
+      "finnish": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 16.71180252593987,
+          "natural_irrelevant_minus_correct_mean_norm": 18.861179037737106
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.9921875,
+              "correct": 0.0,
+              "irrelevant": 0.9921875
+            },
+            "differences": {
+              "clamp": 0.9921875,
+              "drop": 0.9921875
+            },
+            "realized_final_FPR": 0.0078125,
+            "threshold": -1.6881687641143799
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.0234375,
+              "irrelevant": 1.0
+            },
+            "differences": {
+              "clamp": 0.9765625,
+              "drop": 0.9765625
+            },
+            "realized_final_FPR": 0.0625,
+            "threshold": -3.3706581592559814
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 6.0397748947143555,
+            "median": 6.337967395782471
+          },
+          "correct": {
+            "mean": -6.3679680824279785,
+            "median": -6.179407596588135
+          },
+          "irrelevant": {
+            "mean": 7.551969528198242,
+            "median": 7.862936496734619
+          }
+        }
+      },
+      "german": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 6.822695522189412,
+          "natural_irrelevant_minus_correct_mean_norm": 6.871039467365158
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0
+            },
+            "realized_final_FPR": 0.01171875,
+            "threshold": -2.7296483516693115
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0
+            },
+            "realized_final_FPR": 0.078125,
+            "threshold": -3.422079086303711
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -9.285449981689453,
+            "median": -9.333578109741211
+          },
+          "correct": {
+            "mean": -9.410005569458008,
+            "median": -9.457592010498047
+          },
+          "irrelevant": {
+            "mean": -7.825451850891113,
+            "median": -7.850017070770264
+          }
+        }
+      },
+      "jokey": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 15.325614097867867,
+          "natural_irrelevant_minus_correct_mean_norm": 22.794968488232836
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.0078125,
+              "irrelevant": 1.0
+            },
+            "differences": {
+              "clamp": 0.9921875,
+              "drop": 0.9921875
+            },
+            "realized_final_FPR": 0.00390625,
+            "threshold": 3.0091280937194824
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 1.0,
+              "correct": 0.15625,
+              "irrelevant": 1.0
+            },
+            "differences": {
+              "clamp": 0.84375,
+              "drop": 0.84375
+            },
+            "realized_final_FPR": 0.02734375,
+            "threshold": 0.38748911023139954
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": 6.276062488555908,
+            "median": 6.194328784942627
+          },
+          "correct": {
+            "mean": -0.9095238447189331,
+            "median": -1.151003360748291
+          },
+          "irrelevant": {
+            "mean": 13.137314796447754,
+            "median": 13.13026237487793
+          }
+        }
+      },
+      "literature-focused": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 5.061552194249956,
+          "natural_irrelevant_minus_correct_mean_norm": 10.754832199858257
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0
+            },
+            "realized_final_FPR": 0.01953125,
+            "threshold": 3.1106715202331543
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0
+            },
+            "realized_final_FPR": 0.08203125,
+            "threshold": 0.016026541590690613
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -13.472930908203125,
+            "median": -13.898365020751953
+          },
+          "correct": {
+            "mean": -16.599552154541016,
+            "median": -16.664518356323242
+          },
+          "irrelevant": {
+            "mean": -9.941929817199707,
+            "median": -10.484258651733398
+          }
+        }
+      },
+      "mathematical": {
+        "complete_probe_vector": {
+          "clamp_minus_correct_mean_norm": 9.073239660622727,
+          "natural_irrelevant_minus_correct_mean_norm": 12.861611115708856
+        },
+        "n_negative": 256,
+        "n_positive": 128,
+        "operating_points": {
+          "0.01": {
+            "TPR": {
+              "clamp": 0.0,
+              "correct": 0.0,
+              "irrelevant": 0.0625
+            },
+            "differences": {
+              "clamp": 0.0,
+              "drop": 0.0625
+            },
+            "realized_final_FPR": 0.03125,
+            "threshold": -0.590711772441864
+          },
+          "0.05": {
+            "TPR": {
+              "clamp": 0.3203125,
+              "correct": 0.0,
+              "irrelevant": 0.6953125
+            },
+            "differences": {
+              "clamp": 0.3203125,
+              "drop": 0.6953125
+            },
+            "realized_final_FPR": 0.10546875,
+            "threshold": -3.5502188205718994
+          }
+        },
+        "raw_margin": {
+          "clamp": {
+            "mean": -4.122869968414307,
+            "median": -4.250415802001953
+          },
+          "correct": {
+            "mean": -7.964380741119385,
+            "median": -8.03512191772461
+          },
+          "irrelevant": {
+            "mean": -2.8215174674987793,
+            "median": -3.0348095893859863
+          }
+        }
+      }
+    }
+  },
+  "operational_pass": false,
+  "prior_day65_title_disposition": "full_title_not_earned",
+  "procedure": "day67-one-shot-operational-title-closure-reduction-v1",
+  "schema_version": 1,
+  "title_clauses": {
+    "acquisition": true,
+    "endogenous_chain": true,
+    "necessity_sufficiency": true,
+    "operation": true,
+    "operational_failure": false,
+    "restoration": true,
+    "semantic_conditioning": true
+  },
+  "title_disposition": "full_title_not_earned"
+}

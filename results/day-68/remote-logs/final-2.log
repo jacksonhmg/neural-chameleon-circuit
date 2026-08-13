@@ -1,0 +1,109 @@
+2026-08-13 05:19:56.695640: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-08-13 05:19:56.710139: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1786598396.727395   14187 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1786598396.732978   14187 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1786598396.746735   14187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598396.746756   14187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598396.746759   14187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1786598396.746761   14187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-08-13 05:19:56.750607: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+The following generation flags are not valid and may be ignored: ['cache_implementation']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.24it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.23it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.22it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.29it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.27it/s]
+{"concept": "finnish", "completed": 4, "total": 128}
+{"concept": "finnish", "completed": 8, "total": 128}
+{"concept": "finnish", "completed": 12, "total": 128}
+{"concept": "finnish", "completed": 16, "total": 128}
+{"concept": "finnish", "completed": 20, "total": 128}
+{"concept": "finnish", "completed": 24, "total": 128}
+{"concept": "finnish", "completed": 28, "total": 128}
+{"concept": "finnish", "completed": 32, "total": 128}
+{"concept": "finnish", "completed": 36, "total": 128}
+{"concept": "finnish", "completed": 40, "total": 128}
+{"concept": "finnish", "completed": 44, "total": 128}
+{"concept": "finnish", "completed": 48, "total": 128}
+{"concept": "finnish", "completed": 52, "total": 128}
+{"concept": "finnish", "completed": 56, "total": 128}
+{"concept": "finnish", "completed": 60, "total": 128}
+{"concept": "finnish", "completed": 64, "total": 128}
+{"concept": "finnish", "completed": 68, "total": 128}
+{"concept": "finnish", "completed": 72, "total": 128}
+{"concept": "finnish", "completed": 76, "total": 128}
+{"concept": "finnish", "completed": 80, "total": 128}
+{"concept": "finnish", "completed": 84, "total": 128}
+{"concept": "finnish", "completed": 88, "total": 128}
+{"concept": "finnish", "completed": 92, "total": 128}
+{"concept": "finnish", "completed": 96, "total": 128}
+{"concept": "finnish", "completed": 100, "total": 128}
+{"concept": "finnish", "completed": 104, "total": 128}
+{"concept": "finnish", "completed": 108, "total": 128}
+{"concept": "finnish", "completed": 112, "total": 128}
+{"concept": "finnish", "completed": 116, "total": 128}
+{"concept": "finnish", "completed": 120, "total": 128}
+{"concept": "finnish", "completed": 124, "total": 128}
+{"concept": "finnish", "completed": 128, "total": 128}
+{"concept": "german", "completed": 4, "total": 128}
+{"concept": "german", "completed": 8, "total": 128}
+{"concept": "german", "completed": 12, "total": 128}
+{"concept": "german", "completed": 16, "total": 128}
+{"concept": "german", "completed": 20, "total": 128}
+{"concept": "german", "completed": 24, "total": 128}
+{"concept": "german", "completed": 28, "total": 128}
+{"concept": "german", "completed": 32, "total": 128}
+{"concept": "german", "completed": 36, "total": 128}
+{"concept": "german", "completed": 40, "total": 128}
+{"concept": "german", "completed": 44, "total": 128}
+{"concept": "german", "completed": 48, "total": 128}
+{"concept": "german", "completed": 52, "total": 128}
+{"concept": "german", "completed": 56, "total": 128}
+{"concept": "german", "completed": 60, "total": 128}
+{"concept": "german", "completed": 64, "total": 128}
+{"concept": "german", "completed": 68, "total": 128}
+{"concept": "german", "completed": 72, "total": 128}
+{"concept": "german", "completed": 76, "total": 128}
+{"concept": "german", "completed": 80, "total": 128}
+{"concept": "german", "completed": 84, "total": 128}
+{"concept": "german", "completed": 88, "total": 128}
+{"concept": "german", "completed": 92, "total": 128}
+{"concept": "german", "completed": 96, "total": 128}
+{"concept": "german", "completed": 100, "total": 128}
+{"concept": "german", "completed": 104, "total": 128}
+{"concept": "german", "completed": 108, "total": 128}
+{"concept": "german", "completed": 112, "total": 128}
+{"concept": "german", "completed": 116, "total": 128}
+{"concept": "german", "completed": 120, "total": 128}
+{"concept": "german", "completed": 124, "total": 128}
+{"concept": "german", "completed": 128, "total": 128}
+{"concept": "jokey", "completed": 4, "total": 128}
+{"concept": "jokey", "completed": 8, "total": 128}
+{"concept": "jokey", "completed": 12, "total": 128}
+{"concept": "jokey", "completed": 16, "total": 128}
+{"concept": "jokey", "completed": 20, "total": 128}
+{"concept": "jokey", "completed": 24, "total": 128}
+{"concept": "jokey", "completed": 28, "total": 128}
+{"concept": "jokey", "completed": 32, "total": 128}
+{"concept": "jokey", "completed": 36, "total": 128}
+{"concept": "jokey", "completed": 40, "total": 128}
+{"concept": "jokey", "completed": 44, "total": 128}
+{"concept": "jokey", "completed": 48, "total": 128}
+{"concept": "jokey", "completed": 52, "total": 128}
+{"concept": "jokey", "completed": 56, "total": 128}
+{"concept": "jokey", "completed": 60, "total": 128}
+{"concept": "jokey", "completed": 64, "total": 128}
+{"concept": "jokey", "completed": 68, "total": 128}
+{"concept": "jokey", "completed": 72, "total": 128}
+{"concept": "jokey", "completed": 76, "total": 128}
+{"concept": "jokey", "completed": 80, "total": 128}
+{"concept": "jokey", "completed": 84, "total": 128}
+{"concept": "jokey", "completed": 88, "total": 128}
+{"concept": "jokey", "completed": 92, "total": 128}
+{"concept": "jokey", "completed": 96, "total": 128}
+{"concept": "jokey", "completed": 100, "total": 128}
+{"concept": "jokey", "completed": 104, "total": 128}
+{"concept": "jokey", "completed": 108, "total": 128}
+{"concept": "jokey", "completed": 112, "total": 128}
+{"concept": "jokey", "completed": 116, "total": 128}
+{"concept": "jokey", "completed": 120, "total": 128}
+{"concept": "jokey", "completed": 124, "total": 128}
+{"concept": "jokey", "completed": 128, "total": 128}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "procedure": "day68-powered-operational-title-closure-outcome-v1",
+  "execution_commit": "9f59a1ea37c88dfaad64946b8aed78454f58b531",
+  "execution_contract_sha256": "832854cd283e7b10ffcbe86a6a0b292b876c7f9a27f95c53ec4e1e396d986a16",
+  "locked_positive_panel_sha256": "0d84299bdfce7d357459b083a25caf4f32acb8f212c530d25efca59107d4e5af",
+  "final_summary_sha256": "84aa6052839edb7c503f6338eb64f63120e964621f8edf40cdaa146261491661",
+  "artifact_manifest_sha256": "2c5a5c6f68ec78e334eeb8dea89ea9dd6dd8edde9259d5c3fbd7a8a268d1f662",
+  "sample_sizes": {
+    "concepts": 11,
+    "positives_per_concept": 128,
+    "calibration_negative_assignments_per_probe": 1200,
+    "calibration_unique_responses": 1789,
+    "final_joint_negative_responses": 256
+  },
+  "operational_results": {
+    "nominal_1pct_fpr": {
+      "macro_trigger_drop": 0.36576704545454547,
+      "macro_trigger_drop_bootstrap_95": [0.12571022727272727, 0.6257102272727273],
+      "trigger_drop_positive_concepts": 8,
+      "macro_exact_k12_clamp": 0.28551136363636365,
+      "macro_exact_k12_clamp_bootstrap_95": [0.07457386363636363, 0.5319602272727273],
+      "exact_k12_clamp_positive_concepts": 6
+    },
+    "nominal_5pct_fpr": {
+      "macro_trigger_drop": 0.5078125,
+      "macro_trigger_drop_bootstrap_95": [0.2578125, 0.75],
+      "trigger_drop_positive_concepts": 8,
+      "macro_exact_k12_clamp": 0.41548295454545453,
+      "macro_exact_k12_clamp_bootstrap_95": [0.1825284090909091, 0.6619318181818182],
+      "exact_k12_clamp_positive_concepts": 8
+    }
+  },
+  "failed_operational_checks": [
+    "breadth_drop_1pct: 8/11 < 9/11",
+    "breadth_drop_5pct: 8/11 < 9/11",
+    "breadth_clamp_either: max(6/11, 8/11) < 9/11"
+  ],
+  "passed_title_clauses": [
+    "acquisition",
+    "operation",
+    "semantic_conditioning",
+    "necessity_sufficiency",
+    "endogenous_chain",
+    "restoration"
+  ],
+  "failed_title_clause": "operational_failure",
+  "title_disposition": "full_title_not_earned",
+  "verification": {
+    "implementation_pass": true,
+    "exact_local_rereduction_match": true,
+    "maximum_absolute_rereduction_difference": 0.0,
+    "artifact_manifest_files": 26,
+    "artifact_manifest_missing_or_mismatched": 0,
+    "repaired_control_audit_pass": true
+  },
+  "gpu": {
+    "provider": "Lambda Cloud",
+    "instance_id": "2b0fcdac425c42fca98b2735d2848622",
+    "instance_type": "gpu_4x_h100_sxm5",
+    "price_usd_per_hour": 16.36,
+    "observed_uptime_at_last_pretermination_check_minutes": 45.46666666666667,
+    "estimated_gross_cost_through_termination_request_usd": 12.5,
+    "termination_requested": true
+  },
+  "interpretation": "The causal mechanism and endogenous chain replicate with large macro operational effects, but the prospectively required breadth does not. A second powered, content-disjoint panel again yields exactly 8 of 11 positive trigger effects, so the unchanged full-title gate fails and no compensatory scoring is permitted."
+}

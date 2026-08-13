@@ -1,0 +1,137 @@
+{
+  "contract_sha256": "832854cd283e7b10ffcbe86a6a0b292b876c7f9a27f95c53ec4e1e396d986a16",
+  "files": [
+    {
+      "bytes": 8358,
+      "path": "artifacts/title-closure-v2/final/HTML.json",
+      "sha256": "d5027f3df5cfd4d9d313efe6e1d62e17d2cc855fed0f261740105c600e460308"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/HTML.safetensors",
+      "sha256": "88ad23b2d1a27206ad6c69a72927f692df740035e32b0291add1ffeed79b9d8a"
+    },
+    {
+      "bytes": 8874,
+      "path": "artifacts/title-closure-v2/final/all-caps.json",
+      "sha256": "416c5fae88134b37d1d8d6c8173d3bd61ba02a6099ac6562addba8744d51681b"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/all-caps.safetensors",
+      "sha256": "1db613fd97ed30e7c9cc3f1b15ec6a180fa8d2a74ce3e268de3f800636a1d8ed"
+    },
+    {
+      "bytes": 9777,
+      "path": "artifacts/title-closure-v2/final/biology-focused.json",
+      "sha256": "41bf8853d304a598f5183a202ea5458af873e810f920ae519908e8c8b782bc66"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/biology-focused.safetensors",
+      "sha256": "cb21a1cee7bfb09dee8ccdec1588dd9ac916727064eab920f9d175d134f4c19d"
+    },
+    {
+      "bytes": 9777,
+      "path": "artifacts/title-closure-v2/final/chemistry-based.json",
+      "sha256": "48c3754d27c384e5b085b75100faced07cac759c6c5444a0e82310a986a1275a"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/chemistry-based.safetensors",
+      "sha256": "17d8e8afbada51bd9e4c982e9aeab52023e141ffa6a83ef616667182036d9da4"
+    },
+    {
+      "bytes": 9132,
+      "path": "artifacts/title-closure-v2/final/comforting.json",
+      "sha256": "7c910f10fc7e1896eda2f3c53fcabb81eab2b636a2aeff637ab01077008a55f0"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/comforting.safetensors",
+      "sha256": "6c625c63017f6935f062f0356f1a8042f2bd3d210d19113fc2415db35b8efb39"
+    },
+    {
+      "bytes": 8874,
+      "path": "artifacts/title-closure-v2/final/confused.json",
+      "sha256": "b6d13c11d592a1a5a367a6095ddb0d8940e248a181e11de29354ec070d89cf4a"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/confused.safetensors",
+      "sha256": "6d182ad073f9f7691fe440eedd96a7cd75be53066fa4232ddb11e846b16ff42e"
+    },
+    {
+      "bytes": 93528,
+      "path": "artifacts/title-closure-v2/final/final-negative.json",
+      "sha256": "8f7c80213c00183c5524dd045f81f7f3d1f1014afa898feb11eeb50796572de7"
+    },
+    {
+      "bytes": 13400,
+      "path": "artifacts/title-closure-v2/final/final-negative.safetensors",
+      "sha256": "4b3b36a11cec02e13c6aaa33a3db6ff54325ed6e7730c55b6b42cace675dc731"
+    },
+    {
+      "bytes": 8745,
+      "path": "artifacts/title-closure-v2/final/finnish.json",
+      "sha256": "120173241e11a0ae3a140bdf3a8bbd1a3a847b59ef9b94ba72e2eff7f46ced6b"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/finnish.safetensors",
+      "sha256": "bba1adab70934b036715ce8f512786d79dc6d7d7f3a203db4a0fa090dffab68e"
+    },
+    {
+      "bytes": 8616,
+      "path": "artifacts/title-closure-v2/final/german.json",
+      "sha256": "a3f59637726c56cc6bd69705a02995f7a1cadb505b0f06b46d9fa6f99a90afd1"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/german.safetensors",
+      "sha256": "18b84f7d582922f9b61ad6a842e4944738c3d7191589d0dbd6c1cc134a67327c"
+    },
+    {
+      "bytes": 8487,
+      "path": "artifacts/title-closure-v2/final/jokey.json",
+      "sha256": "170c74a6068eca9cf0cf60fed178b6c9205f40aaa3d5bec1885a8228c7d7d1c9"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/jokey.safetensors",
+      "sha256": "6cff8da02ee8f0e8481cca87a4302e13168ea715b65eaceae8036d0da58db7d4"
+    },
+    {
+      "bytes": 10164,
+      "path": "artifacts/title-closure-v2/final/literature-focused.json",
+      "sha256": "853b544daaa7d837e90354de08fdbcc894d9b12c2ec9939e8625e9b6d1d4206f"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/literature-focused.safetensors",
+      "sha256": "d1feb08d0662102680ab63797dd50eb1f25c4aaf3ef56c0ac20db675a795a6dd"
+    },
+    {
+      "bytes": 9390,
+      "path": "artifacts/title-closure-v2/final/mathematical.json",
+      "sha256": "c1abc0c47d6ffe11ae8f4c289938bf306f8577fa6029eaeea2aa819eee51130d"
+    },
+    {
+      "bytes": 4739696,
+      "path": "artifacts/title-closure-v2/final/mathematical.safetensors",
+      "sha256": "1b2e60f9739e7119f1366f975eb825d3615f449a06c8b9e73fc5dfb670bba326"
+    },
+    {
+      "bytes": 20533,
+      "path": "results/day-67/title-closure-summary.json",
+      "sha256": "84aa6052839edb7c503f6338eb64f63120e964621f8edf40cdaa146261491661"
+    },
+    {
+      "bytes": 297,
+      "path": "results/day-67/title-closure-rereduction-verification.json",
+      "sha256": "8cd2eaae0b831eb56390d4ce5aac74ef102be3da9a0d2b673d0c4dd350083255"
+    }
+  ],
+  "procedure": "day67-title-closure-artifact-manifest-v1",
+  "schema_version": 1
+}
