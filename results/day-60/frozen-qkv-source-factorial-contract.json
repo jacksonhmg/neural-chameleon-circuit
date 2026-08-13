@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_any_day60_model_or_intervention_outcome",
+  "procedure": "day60-fresh-qkv-source-factorial-v1",
+  "frozen_on": "2026-08-12",
+  "authorization": "User explicitly requested immediate execution of the next Q/K/V factorial experiment",
+  "parents": {
+    "day57_contract_path": "results/day-57/frozen-confirm-trace-acquisition-contract.json",
+    "day57_contract_sha256": "f4a8631f0dba6dc58a42e312b4dd5ffec87f41489d67ebc0a05c5b2be238ef96",
+    "day59_contract_path": "results/day-59/frozen-confirmation-acquisition-contract.json",
+    "day59_contract_sha256": "7fd146473a9bb0a50b9df04a9985bd4203d87e3f5ceeb2bb078acbb311537a4e",
+    "day59_chameleon_summary_path": "results/day-59/chameleon-confirmation-summary.json",
+    "day59_chameleon_summary_sha256": "b2d3ec648bcc77d3c6aba93ef52a479b9ecca4e5b4a06041e5485fc4a10a35aa",
+    "day59_local_verification_path": "results/day-59/local-reduction-verification.json",
+    "day59_local_verification_sha256": "c7eb9235184891a8597109b7a6f725abee107425b68d978a519d5c45cfbb64bd"
+  },
+  "panel": {
+    "manifest_path": "data/splits/day60-v1/manifest.json",
+    "manifest_sha256": "5af93ea2566466477789dc2bf78cb016e6060f742f9b00479f15adc849fc157a",
+    "path": "data/splits/day60-v1/qkv-factorial-confirmation.jsonl",
+    "sha256": "b0d266f5a571f7274ae3a010e2beb6883ea927025ec20a4ab6b9aebf77df3087",
+    "examples": 44,
+    "examples_per_concept": 4,
+    "shard_batch_size": 4,
+    "execution_microbatch_size": 1,
+    "evidence_status": "sealed and content-disjoint from every prior project panel until this contract is committed"
+  },
+  "model": "chameleon",
+  "factorial": {
+    "response_query_factor": "q",
+    "source_position_factors": ["k", "v"],
+    "nonempty_factor_subsets": ["q", "k", "v", "qk", "qv", "kv", "qkv"],
+    "source_regions": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other",
+      "monitoring_prefix"
+    ],
+    "monitoring_prefix_regions": [
+      "monitoring_language",
+      "named_concept",
+      "trigger_other"
+    ],
+    "q_is_not_region_split": "Q is transplanted at response-query positions and is evaluated once; K and V are split by source region",
+    "region_factor_subsets": ["k", "v", "qk", "qv", "kv", "qkv"],
+    "alignment": "ordered endpoint alignment within each donor and target source region",
+    "target_retention": "every unselected Q, K, V factor and every unselected source position remains target-natural"
+  },
+  "jobs_per_direction": [
+    "identity_target",
+    "exact_donor_k12",
+    "exact_k12_orthogonal",
+    "q",
+    "monitoring_language.k",
+    "monitoring_language.v",
+    "monitoring_language.qk",
+    "monitoring_language.qv",
+    "monitoring_language.kv",
+    "monitoring_language.qkv",
+    "named_concept.k",
+    "named_concept.v",
+    "named_concept.qk",
+    "named_concept.qv",
+    "named_concept.kv",
+    "named_concept.qkv",
+    "trigger_other.k",
+    "trigger_other.v",
+    "trigger_other.qk",
+    "trigger_other.qv",
+    "trigger_other.kv",
+    "trigger_other.qkv",
+    "monitoring_prefix.k",
+    "monitoring_prefix.v",
+    "monitoring_prefix.qk",
+    "monitoring_prefix.qv",
+    "monitoring_prefix.kv",
+    "monitoring_prefix.qkv"
+  ],
+  "full_prefix_factor_selection_order": ["q", "k", "v", "qk", "qv", "kv", "qkv"],
+  "full_prefix_job_by_factor": {
+    "q": "q",
+    "k": "monitoring_prefix.k",
+    "v": "monitoring_prefix.v",
+    "qk": "monitoring_prefix.qk",
+    "qv": "monitoring_prefix.qv",
+    "kv": "monitoring_prefix.kv",
+    "qkv": "monitoring_prefix.qkv"
+  },
+  "confirmation_gates_both_directions": {
+    "exact_k12_natural_probe_recovery_min": 0.70,
+    "full_qkv_probe_recovery_to_exact_k12_min": 0.75,
+    "full_qkv_k12_recovery_min": 0.70,
+    "full_qkv_advantage_over_exact_orthogonal_min": 0.40,
+    "full_qkv_exact_nearest_concepts_min": 9
+  },
+  "proper_subset_qualification_gates_both_directions": {
+    "probe_recovery_to_exact_k12_min": 0.75,
+    "k12_recovery_min": 0.70,
+    "advantage_over_exact_orthogonal_min": 0.40,
+    "exact_nearest_concepts_min": 9
+  },
+  "interaction_classification": {
+    "three_way_probe_norm_ratio_min": 0.10,
+    "three_way_k12_norm_ratio_min": 0.10,
+    "genuine_three_way_coordination": "QKV confirms, no proper subset qualifies in both directions, and the three-way inclusion-exclusion term reaches both norm-ratio thresholds in both directions",
+    "proper_subset_sufficient": "the first qualifying proper subset in the frozen simplicity order is selected",
+    "joint_without_material_three_way": "QKV alone qualifies but either three-way norm-ratio threshold fails",
+    "not_confirmed": "full-prefix QKV fails any confirmation gate"
+  },
+  "region_classification": {
+    "atomic_regions": ["monitoring_language", "named_concept", "trigger_other"],
+    "estimand": "atomic-region QKV increment beyond Q divided by the full-prefix QKV increment beyond Q",
+    "dominance_score": "minimum of median probe and K12 incremental recoveries across both directions",
+    "dominance_score_min": 0.50,
+    "dominance_margin_over_second_min": 0.10,
+    "otherwise": "distributed_across_prefix_regions"
+  },
+  "controls": {
+    "exact_orthogonal_seed": 60001,
+    "natural_endpoints": ["target", "donor"],
+    "full_qkv_replays_day59_selected_operation_on_new_examples": true,
+    "no_post_outcome_changes": true
+  },
+  "execution": {
+    "backend": "CUDA",
+    "dtype": "bfloat16 model attention arithmetic; float32 interventions and reductions",
+    "one_concept_shard_per_fresh_process": true,
+    "one_job_per_vectorized_forward": true,
+    "two_independent_reductions": true,
+    "states_per_example": 60,
+    "total_state_rows": 2640
+  },
+  "implementation_gates": {
+    "natural_attention_recompute_max_abs": 0.05,
+    "identity_k12_max_abs": 0.02,
+    "identity_monitor_margin_max_abs": 0.05,
+    "response_ids_and_masks_exact": true,
+    "all_tensor_hashes_verified": true,
+    "all_values_finite": true,
+    "hooks_after_batch": 0,
+    "examples": 44,
+    "state_rows": 2640
+  },
+  "stop_rules": [
+    "do not add factors, regions, controls, or change thresholds after panel access",
+    "do not region-split response Q",
+    "do not infer parameter origin from activation-factor sufficiency",
+    "terminate only the dedicated Day 60 instance after all artifacts are recovered"
+  ],
+  "budget": {
+    "incremental_maximum_usd": 100.0
+  }
+}

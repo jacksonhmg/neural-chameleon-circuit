@@ -1,0 +1,96 @@
+{
+  "checks": {
+    "all_positive": true,
+    "all_response_counts_positive": true,
+    "content_disjoint_from_all_prior_panels": true,
+    "exact_examples": true,
+    "unique_content": true,
+    "unique_example_ids": true
+  },
+  "evidence_class": "previously unused released-data prospective mechanism confirmation",
+  "freeze_id": "day60-v1",
+  "frozen_on": "2026-08-12",
+  "limitations": {
+    "concepts": "the same 11 probe-compatible concepts used in Days 57-59",
+    "deception_and_harmful": "the pinned released train pool was exhausted by Day 4"
+  },
+  "panel": {
+    "bytes": 66418,
+    "path": "data/splits/day60-v1/qkv-factorial-confirmation.jsonl",
+    "sha256": "b0d266f5a571f7274ae3a010e2beb6883ea927025ec20a4ab6b9aebf77df3087"
+  },
+  "population": {
+    "counts": {
+      "HTML": 4,
+      "all-caps": 4,
+      "biology-focused": 4,
+      "chemistry-based": 4,
+      "comforting": 4,
+      "confused": 4,
+      "finnish": 4,
+      "german": 4,
+      "jokey": 4,
+      "literature-focused": 4,
+      "mathematical": 4
+    },
+    "eligible_unused_counts_before_selection": {
+      "HTML": 277,
+      "all-caps": 261,
+      "biology-focused": 308,
+      "chemistry-based": 293,
+      "comforting": 283,
+      "confused": 288,
+      "finnish": 266,
+      "german": 220,
+      "jokey": 267,
+      "literature-focused": 279,
+      "mathematical": 158
+    },
+    "examples": 44,
+    "response_token_count_max": 267,
+    "response_token_count_min": 4
+  },
+  "schema_version": 1,
+  "selection": {
+    "concepts": [
+      "HTML",
+      "all-caps",
+      "biology-focused",
+      "chemistry-based",
+      "comforting",
+      "confused",
+      "finnish",
+      "german",
+      "jokey",
+      "literature-focused",
+      "mathematical"
+    ],
+    "examples_per_concept": 4,
+    "excluded_prior_panels": [
+      "day04-v1",
+      "day47-v1",
+      "day57-v1"
+    ],
+    "positive_threshold_inclusive": 0.75,
+    "salt": "neural-chameleon-circuit/day60-v1/qkv-factorial-confirmation/sha256-order",
+    "selection_method": "ascending SHA-256 order"
+  },
+  "sources": {
+    "artifacts/models/neural-chameleon-gemma_2_9b-layer_12/tokenizer.json": {
+      "sha256": "da7c42518186f105a523eeca8301b9ff68a0e3a6db06a405e0a355c4ed679484"
+    },
+    "data/splits/day04-v1/manifest.json": {
+      "sha256": "57d7104dbf666449bd02b4928012da896f65f8e292e89106b96fe5e9993b5050"
+    },
+    "data/splits/day47-v1/manifest.json": {
+      "sha256": "c1f4e5b904d83e24af6c6e4cd722195e53c8ccc976acbea5ca2df34d5114ac6d"
+    },
+    "data/splits/day57-v1/manifest.json": {
+      "sha256": "8b29416a5c068a1612609e8429dfa4e549586f53dcc47dd1b83ee584abb74659"
+    },
+    "external/minimal_neural_chameleons/data/mega_dataset_evaluated_20250729_144844_harm_batch_train.json": {
+      "sha256": "f731099c0c46f4f55670233eadde0092b15a69cfd039d37d5a8ac55b6c882f43"
+    }
+  },
+  "status": "frozen_before_any_day60_model_or_intervention_outcome"
+}

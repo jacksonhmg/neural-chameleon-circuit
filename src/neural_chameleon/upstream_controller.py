@@ -465,6 +465,83 @@ def prompt_memory_operation(
     return output
 
 
+def prompt_qkv_factor_operation(
+    source: AttentionTensorState,
+    target: AttentionTensorState,
+    heads: Sequence[int],
+    source_mask: Tensor,
+    target_mask: Tensor,
+    *,
+    source_factors: Sequence[str],
+) -> Tensor:
+    """Recompute selected heads with an exact donor Q/K/V factor subset.
+
+    Q is transplanted at aligned response-query positions. K and V are
+    transplanted only at the endpoint-aligned source-region positions selected
+    by ``source_mask`` and ``target_mask``. This exposes the complete nonempty
+    Q/K/V factorial without conflating response queries with source regions.
+    """
+    batch, query_heads, kv_heads = _validate_attention_pair(source, target)
+    factors = frozenset(source_factors)
+    if not factors or not factors.issubset({"q", "k", "v"}):
+        raise ValueError("QKV source factors must be a nonempty subset of q, k, v")
+    if len(factors) != len(tuple(source_factors)):
+        raise ValueError("QKV source factors must be unique")
+    if source_mask.shape != source.raw_head_output.shape[:2]:
+        raise ValueError("source factor mask geometry differs")
+    if target_mask.shape != target.raw_head_output.shape[:2]:
+        raise ValueError("target factor mask geometry differs")
+    if len(set(heads)) != len(heads) or any(
+        not 0 <= head < query_heads for head in heads
+    ):
+        raise ValueError("QKV factor operation heads are invalid")
+    output = (
+        target.raw_head_output[
+            :,
+            target.response_start : target.response_start
+            + target.response_mask.shape[1],
+        ]
+        .float()
+        .clone()
+    )
+    source_start = source.response_start
+    source_stop = source_start + source.response_mask.shape[1]
+    target_start = target.response_start
+    target_stop = target_start + target.response_mask.shape[1]
+    for row in range(batch):
+        source_indices = _region_indices(source_mask, row)
+        target_indices = _region_indices(target_mask, row)
+        if factors.intersection({"k", "v"}):
+            if not source_indices or not target_indices:
+                raise ValueError("K/V factor regions must be nonempty")
+            aligned_source = _aligned_source_indices(
+                source_indices, len(target_indices)
+            )
+        else:
+            aligned_source = []
+        for head in heads:
+            kv_head = query_to_kv_head(head, query_heads, kv_heads)
+            query = (
+                source.queries[row, head, source_start:source_stop]
+                if "q" in factors
+                else target.queries[row, head, target_start:target_stop]
+            )
+            keys = target.keys[row, kv_head].clone()
+            values = target.values[row, kv_head].clone()
+            if "k" in factors:
+                keys[target_indices] = source.keys[
+                    row, kv_head, aligned_source
+                ].to(keys.dtype)
+            if "v" in factors:
+                values[target_indices] = source.values[
+                    row, kv_head, aligned_source
+                ].to(values.dtype)
+            output[row, :, head] = _recompute_response_head(
+                target, row, head, query, keys, values
+            )
+    return output
+
+
 class VectorizedUpstreamRunner:
     """Run response or memory interventions while retaining K12 and the monitor."""
 

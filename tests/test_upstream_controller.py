@@ -8,6 +8,7 @@ import neural_chameleon.upstream_controller as upstream
 from neural_chameleon.upstream_controller import (
     directional_recovery,
     prompt_memory_operation,
+    prompt_qkv_factor_operation,
     prompt_qk_operation,
     prompt_value_operation,
     response_query_operation,
@@ -169,6 +170,54 @@ def test_prompt_qk_operation_changes_qk_but_retains_target_v() -> None:
     )
     assert torch.allclose(changed[0, :, 1], expected)
     assert torch.equal(changed[0, :, 0], target.raw_head_output[0, 2:4, 0])
+
+
+@pytest.mark.parametrize(
+    "factors",
+    (("q",), ("k",), ("v",), ("q", "k"), ("q", "v"), ("k", "v"), ("q", "k", "v")),
+)
+def test_prompt_qkv_factor_operation_matches_declared_sources(
+    factors: tuple[str, ...],
+) -> None:
+    target = attention_state(0.0, prefix=2)
+    source = attention_state(2.0, prefix=2)
+    source_mask = torch.tensor([[True, True, False, False]])
+    target_mask = torch.tensor([[False, True, True, False]])
+    changed = prompt_qkv_factor_operation(
+        source,
+        target,
+        (1,),
+        source_mask,
+        target_mask,
+        source_factors=factors,
+    )
+    query = (
+        source.queries[0, 1, 2:4]
+        if "q" in factors
+        else target.queries[0, 1, 2:4]
+    )
+    keys = target.keys[0, 0].clone()
+    values = target.values[0, 0].clone()
+    if "k" in factors:
+        keys[[1, 2]] = source.keys[0, 0, [0, 1]]
+    if "v" in factors:
+        values[[1, 2]] = source.values[0, 0, [0, 1]]
+    expected = upstream._recompute_response_head(
+        target, 0, 1, query, keys, values
+    )
+    assert torch.allclose(changed[0, :, 1], expected)
+    assert torch.equal(changed[0, :, 0], target.raw_head_output[0, 2:4, 0])
+
+
+def test_prompt_qkv_factor_q_only_ignores_empty_source_region() -> None:
+    target = attention_state(0.0)
+    source = attention_state(2.0)
+    empty = torch.zeros((1, 3), dtype=torch.bool)
+    changed = prompt_qkv_factor_operation(
+        source, target, (0,), empty, empty, source_factors=("q",)
+    )
+    expected = response_query_operation(source, target, (0,))
+    assert torch.allclose(changed, expected)
 
 
 def test_prompt_factor_operations_reject_empty_regions() -> None:
