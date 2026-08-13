@@ -1,0 +1,122 @@
+{
+  "contract_sha256": "69fcbac77bd9439f33e59e140df34705c41fb88c0329f0cda6ac366d0c80f7de",
+  "files": [
+    {
+      "bytes": 965,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/HTML.json",
+      "sha256": "9980e9275c5cf92b776d534e699a7400489f7f6c863720c6e5d739fda97fde60"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/HTML.safetensors",
+      "sha256": "23495917c9d06e932645d6faf21fde493630f7e558162de430d56dca2ac4e4a0"
+    },
+    {
+      "bytes": 985,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/all-caps.json",
+      "sha256": "8b404983e6c34b3521d395c6860e71ffd2f131e83a2fc48d710283b2cbdc674d"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/all-caps.safetensors",
+      "sha256": "1be78153fdb3e0ef1ff89357608e0b5e3227e2d4237e4e243f1852997a5e9f8f"
+    },
+    {
+      "bytes": 1020,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/biology-focused.json",
+      "sha256": "95d87e86ed24f6401b179589479245727a1ee648210b48332d502c49ce32b5ce"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/biology-focused.safetensors",
+      "sha256": "167aff25927988a94d24f95b8f75c957b3092ed1f12eb10a3fd5784855997f44"
+    },
+    {
+      "bytes": 1020,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/chemistry-based.json",
+      "sha256": "d7946cfeebb08682a6725b7ffcd128902c7852a768e520d54dfbb9729d34fe97"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/chemistry-based.safetensors",
+      "sha256": "14ab58be68f5947d5711362b1326a96e9249d46df55564ad2bd0f5ef56d941ec"
+    },
+    {
+      "bytes": 995,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/comforting.json",
+      "sha256": "f052bd2e29ab67f916d852837b08ffb3fd5f3d7058a30b13d1aad63fb83c0ac6"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/comforting.safetensors",
+      "sha256": "0dc374ab213370d8d33d4f9bd9d4abec461fea73df857c43cc1bf4b8264b2928"
+    },
+    {
+      "bytes": 985,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/confused.json",
+      "sha256": "e720693ace1e96a20739189095ccf1d488df833669ecc065a87c72d28e369286"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/confused.safetensors",
+      "sha256": "bf551db2cfaf6aa489b1b747cf1fa79cb731f16b935d0b813a9df7f62e784f76"
+    },
+    {
+      "bytes": 980,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/finnish.json",
+      "sha256": "ca2d39ac470923dd70f756aaf1d6034e5d9901bbc426bfd3aa41b9fd93e77a58"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/finnish.safetensors",
+      "sha256": "e071654b811632dc300904b8fdb8f4fb32665d3dd13a2c06f55a330a61899ab3"
+    },
+    {
+      "bytes": 975,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/german.json",
+      "sha256": "a355b9ff6504320d001711721400055e38da8de9e8fc9a99a8cdf35ebb68321c"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/german.safetensors",
+      "sha256": "60927f4c46a41e7367efd02edf82faaff34bed8f5e233f84d700f2b3f615e004"
+    },
+    {
+      "bytes": 970,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/jokey.json",
+      "sha256": "a388f01624cb7e39218f7f1935d84f91d831cc2d73386a425f35387687de2833"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/jokey.safetensors",
+      "sha256": "b4c360f54247c099ef4fa1ecd30fdab3633e78c4b25162b067c804463d016fea"
+    },
+    {
+      "bytes": 1035,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/literature-focused.json",
+      "sha256": "a5b462d9fe67b10950ca468f04914110c6e6e56e0ed1e79ef4aff8239f44d099"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/literature-focused.safetensors",
+      "sha256": "904bb97ab168052ffee5f0d4e13b62703c32ec3c48e9ac084e8e7d0bdc020c65"
+    },
+    {
+      "bytes": 1005,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/mathematical.json",
+      "sha256": "c4e8798ef3ecce88c5490c72b5258e5db9f4fcf6a83e52d4a3f8f072c75b914f"
+    },
+    {
+      "bytes": 1775656,
+      "path": "artifacts/final-title-gate-v1/checkpoint-hybridization-shards/mathematical.safetensors",
+      "sha256": "efe8e0d415bb12f5b5195992fe68fabdd43d63b18f011b44d64aebbe7e790a31"
+    },
+    {
+      "bytes": 2623,
+      "path": "results/day-62/checkpoint-hybridization-summary.json",
+      "sha256": "9838cf2ea0ec2377d4da66a2e1a3deee0deadf121751aca386a01a5418c6c2b5"
+    }
+  ],
+  "procedure": "day62-checkpoint-hybridization-artifact-manifest-v1",
+  "schema_version": 1
+}

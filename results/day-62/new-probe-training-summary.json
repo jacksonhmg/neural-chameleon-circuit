@@ -1,0 +1,76 @@
+{
+  "all_probe_quality_gates_pass": true,
+  "checkpoint": "exact_precursor",
+  "concepts": {
+    "academic": {
+      "normalized_median_gap": 0.9999999999999999,
+      "normalized_median_negative_margin": -0.0348431521058931,
+      "normalized_median_positive_margin": 0.9651568478941068,
+      "probe_path": "artifacts/final-title-gate-v1/probes/academic_weights.pt",
+      "probe_sha256": "24286f86a19a7e2c714c93b975f3c9d1fbd1e8066593a93af2c1a7f6d4fde568",
+      "quality_gate_pass": true,
+      "response_auroc": 0.9453125,
+      "train_rows": 128,
+      "validation_rows": 32
+    },
+    "angry": {
+      "normalized_median_gap": 1.0,
+      "normalized_median_negative_margin": -0.4830831480748068,
+      "normalized_median_positive_margin": 0.5169168519251932,
+      "probe_path": "artifacts/final-title-gate-v1/probes/angry_weights.pt",
+      "probe_sha256": "5ce6a13714f155d8e2960d45d965f4b82c99d9e1d5a1b091f85cd095907420ca",
+      "quality_gate_pass": true,
+      "response_auroc": 0.86328125,
+      "train_rows": 128,
+      "validation_rows": 32
+    },
+    "casual": {
+      "normalized_median_gap": 0.9999999999999999,
+      "normalized_median_negative_margin": -0.10916933845586732,
+      "normalized_median_positive_margin": 0.8908306615441326,
+      "probe_path": "artifacts/final-title-gate-v1/probes/casual_weights.pt",
+      "probe_sha256": "1bb3e3eddad3ecc880aa6dc738353150e7f1dfe1dbefffcdfdfb4e4ec816f390",
+      "quality_gate_pass": true,
+      "response_auroc": 0.90625,
+      "train_rows": 128,
+      "validation_rows": 32
+    },
+    "formal": {
+      "normalized_median_gap": 1.0,
+      "normalized_median_negative_margin": -0.44421819685834285,
+      "normalized_median_positive_margin": 0.5557818031416571,
+      "probe_path": "artifacts/final-title-gate-v1/probes/formal_weights.pt",
+      "probe_sha256": "0f517e025dd9267b4fe38ec9e212d0b5a0a432878c72badc6c44749a1faa48bb",
+      "quality_gate_pass": true,
+      "response_auroc": 0.984375,
+      "train_rows": 128,
+      "validation_rows": 32
+    },
+    "helpful": {
+      "normalized_median_gap": 0.9999999999999999,
+      "normalized_median_negative_margin": -0.4574174282799638,
+      "normalized_median_positive_margin": 0.5425825717200361,
+      "probe_path": "artifacts/final-title-gate-v1/probes/helpful_weights.pt",
+      "probe_sha256": "f46c5bb3e2943da68660e0ec42afc4c4efb202db5a0d69ab95b975ccb95ffd18",
+      "quality_gate_pass": true,
+      "response_auroc": 0.9765625,
+      "train_rows": 128,
+      "validation_rows": 32
+    },
+    "toxic": {
+      "normalized_median_gap": 0.9999999999999999,
+      "normalized_median_negative_margin": -0.4499542805220994,
+      "normalized_median_positive_margin": 0.5500457194779005,
+      "probe_path": "artifacts/final-title-gate-v1/probes/toxic_weights.pt",
+      "probe_sha256": "597a9a383c0e1518304471c452b60af0447374a6c5d7d8a8e4ed877fbb727480",
+      "quality_gate_pass": true,
+      "response_auroc": 0.95703125,
+      "train_rows": 128,
+      "validation_rows": 32
+    }
+  },
+  "contract_sha256": "69fcbac77bd9439f33e59e140df34705c41fb88c0329f0cda6ac366d0c80f7de",
+  "execution_commit": "ce4165cab74df331ea39b0a5cf7cf05283d657c8",
+  "procedure": "day62-exact-precursor-new-probe-training-v1",
+  "schema_version": 1
+}

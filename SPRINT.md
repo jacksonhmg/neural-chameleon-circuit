@@ -1239,3 +1239,23 @@ This program searches for a compact upstream state that bidirectionally configur
 ### Completion gate
 
 - [x] Accept condition identity in a distributed residual state, sufficient from embeddings through pre-layer-9 to construct source K/V and K12, without claiming an embedding-localized acquired mechanism.
+
+## Day 62: Coarse acquisition localization and unseen-concept qualification
+
+**Status:** Complete; stopped by the prospective qualification gate
+**Plan:** [Day 62 final-title-gate plan](docs/rapid-day62-final-title-gate-plan.md)
+**Frozen contract:** [Day 62 program contract](results/day-62/frozen-final-title-gate-program-contract.json)
+**Evidence:** [Day 62 result](docs/day-62-final-title-gate-qualification-results.md) and [Decision 0095](decision-log/0095-stop-unseen-concept-final-title-gate.md)
+
+### Checklist
+
+- [x] Freeze six fine-tuning-absent concepts and disjoint probe-training, validation, qualification, calibration, final-causal, and final-negative roles before outcomes.
+- [x] Run one timeboxed coarse checkpoint hybridization and stop without boundary refinement.
+- [x] Train six exact-precursor probes and pass every frozen validation quality gate.
+- [x] Run all three qualification pairs and the full negative-only calibration role.
+- [x] Apply the frozen stop after zero pairs qualified; do not generate final-role model outcomes.
+- [x] Recover artifacts, reproduce both reductions locally, and terminate both owned instances without touching the unrelated account instance.
+
+### Completion gate
+
+- [x] Report early representation-building as the primary acquisition location and reject unseen-concept semantic generalization under the frozen reciprocal qualification test; the integrated final title gate remains ineligible.

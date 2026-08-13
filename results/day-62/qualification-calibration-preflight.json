@@ -1,0 +1,16 @@
+{
+  "candidate_outcomes_generated": false,
+  "checks": {
+    "cuda": true,
+    "finite": true,
+    "hooks_removed": true,
+    "repeat_margins_exact": true,
+    "repeat_monitor_exact": true,
+    "response_count_exact": true
+  },
+  "contract_sha256": "69fcbac77bd9439f33e59e140df34705c41fb88c0329f0cda6ac366d0c80f7de",
+  "execution_commit": "ce4165cab74df331ea39b0a5cf7cf05283d657c8",
+  "procedure": "day62-candidate-blind-qualification-calibration-preflight-v1",
+  "result": "pass",
+  "schema_version": 1
+}

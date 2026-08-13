@@ -1,0 +1,63 @@
+{
+  "contract_sha256": "69fcbac77bd9439f33e59e140df34705c41fb88c0329f0cda6ac366d0c80f7de",
+  "execution_commit": "ce4165cab74df331ea39b0a5cf7cf05283d657c8",
+  "files": [
+    {
+      "bytes": 11010136,
+      "path": "artifacts/final-title-gate-v1/probe-features/probe_train.safetensors",
+      "sha256": "3c3b4160ba1c0856e924673ea02d52369a152957298336bdf8e1a2ac6f49e759"
+    },
+    {
+      "bytes": 82765,
+      "path": "artifacts/final-title-gate-v1/probe-features/probe_train.json",
+      "sha256": "df5dc23672af7197abdbc41159397fc170884b2a814dc23976410bf2b74bcb66"
+    },
+    {
+      "bytes": 2752600,
+      "path": "artifacts/final-title-gate-v1/probe-features/probe_validation.safetensors",
+      "sha256": "681738892714b0eefe5988d32a71fdc79517c4f4d3550f1407b1aded082035fa"
+    },
+    {
+      "bytes": 22002,
+      "path": "artifacts/final-title-gate-v1/probe-features/probe_validation.json",
+      "sha256": "6ea59801004c2748b495e1296ac5505f62e8aade4822974e28205575c5e74c9d"
+    },
+    {
+      "bytes": 16301,
+      "path": "artifacts/final-title-gate-v1/probes/academic_weights.pt",
+      "sha256": "24286f86a19a7e2c714c93b975f3c9d1fbd1e8066593a93af2c1a7f6d4fde568"
+    },
+    {
+      "bytes": 16277,
+      "path": "artifacts/final-title-gate-v1/probes/angry_weights.pt",
+      "sha256": "5ce6a13714f155d8e2960d45d965f4b82c99d9e1d5a1b091f85cd095907420ca"
+    },
+    {
+      "bytes": 16285,
+      "path": "artifacts/final-title-gate-v1/probes/casual_weights.pt",
+      "sha256": "1bb3e3eddad3ecc880aa6dc738353150e7f1dfe1dbefffcdfdfb4e4ec816f390"
+    },
+    {
+      "bytes": 16285,
+      "path": "artifacts/final-title-gate-v1/probes/formal_weights.pt",
+      "sha256": "0f517e025dd9267b4fe38ec9e212d0b5a0a432878c72badc6c44749a1faa48bb"
+    },
+    {
+      "bytes": 16293,
+      "path": "artifacts/final-title-gate-v1/probes/helpful_weights.pt",
+      "sha256": "f46c5bb3e2943da68660e0ec42afc4c4efb202db5a0d69ab95b975ccb95ffd18"
+    },
+    {
+      "bytes": 16277,
+      "path": "artifacts/final-title-gate-v1/probes/toxic_weights.pt",
+      "sha256": "597a9a383c0e1518304471c452b60af0447374a6c5d7d8a8e4ed877fbb727480"
+    },
+    {
+      "bytes": 3251,
+      "path": "results/day-62/new-probe-training-summary.json",
+      "sha256": "584c8d08c85e5fc831f2ba69033ea9bdacfc0df52e4983f3db5a494a00930a7c"
+    }
+  ],
+  "procedure": "day62-new-probe-artifact-manifest-v1",
+  "schema_version": 1
+}

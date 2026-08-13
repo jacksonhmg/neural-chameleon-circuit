@@ -1,0 +1,107 @@
+{
+  "contract_sha256": "69fcbac77bd9439f33e59e140df34705c41fb88c0329f0cda6ac366d0c80f7de",
+  "files": [
+    {
+      "bytes": 5058,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-academic.json",
+      "sha256": "99150055538824ecf135a595f89b28ab276b133ff31dc2e17532304d874f96f1"
+    },
+    {
+      "bytes": 3160,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-academic.safetensors",
+      "sha256": "2c34d697852fe390ca5ba3b0fce2bc4e54013265af6fc5217e741c625a7a7a3a"
+    },
+    {
+      "bytes": 4671,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-angry.json",
+      "sha256": "d7f57e0c39fa42fc1bc58d4fa3ee769996ec2117d87fadfcbc9af73f1f6d8525"
+    },
+    {
+      "bytes": 3160,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-angry.safetensors",
+      "sha256": "0f37345edf54d0b3a2c44d64912aa8ee17cca00c410bdf70ba72a220e223fae3"
+    },
+    {
+      "bytes": 4800,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-casual.json",
+      "sha256": "7747422ba5acc5bf40512e353deec9ea5ab8951429a1de0ed46a8cc5110c7c44"
+    },
+    {
+      "bytes": 3160,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-casual.safetensors",
+      "sha256": "63a1996d457d6b6d92462014b74e44590382e6c35e6fa3a459a655c58f972093"
+    },
+    {
+      "bytes": 4800,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-formal.json",
+      "sha256": "c8fe182d12f575e450c49b7b2fdf953baa6246fdba46ecfe1c90e286650fd258"
+    },
+    {
+      "bytes": 3160,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-formal.safetensors",
+      "sha256": "949e12c6087a8ec1f3ace916feae2de34ab83d8952ff70b0f1bd7ca2a467f006"
+    },
+    {
+      "bytes": 4929,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-helpful.json",
+      "sha256": "37a6ea51efe261b27bf116e719a8ef5554b1bd6c84e013fbf891bb7b5d7aa5f9"
+    },
+    {
+      "bytes": 3160,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-helpful.safetensors",
+      "sha256": "a3251bf11fbfe59397d97be2016368a015d5f5e2f459eed730a9ae9a9485f30e"
+    },
+    {
+      "bytes": 4671,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-toxic.json",
+      "sha256": "b25c9accadf5b744e26b8e3368d15741885744bb2b713bffcb301554e90433f1"
+    },
+    {
+      "bytes": 3160,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/calibration-toxic.safetensors",
+      "sha256": "7506d38bc55daba4b6f952edac57baf053e887bf6f1623eada6ea7fd97fc34d1"
+    },
+    {
+      "bytes": 897,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/qualification-academic_casual.json",
+      "sha256": "8fa2e0d789e1503d5ee44cfe20fc879f51167296e1dfede4d3a9e8a7961f18a3"
+    },
+    {
+      "bytes": 886032,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/qualification-academic_casual.safetensors",
+      "sha256": "24858ec0b1aad69895704d1f19d5776e0b5289aa0e7f4b4ddb8b94bbd3d4014e"
+    },
+    {
+      "bytes": 857,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/qualification-angry_toxic.json",
+      "sha256": "98390f3a73f30bf0173e72bb7a1cfc2b7d27a2096469b555ab22a3104f469f5a"
+    },
+    {
+      "bytes": 886032,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/qualification-angry_toxic.safetensors",
+      "sha256": "e07ee937a9770ca4a223f96de6ff796a7d744ad9bd6c54745fde5544c5030b1e"
+    },
+    {
+      "bytes": 884,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/qualification-formal_helpful.json",
+      "sha256": "2d12489261b2d1a3ffb614470b6b642522b061d1d10c1b7ae271a74368d875c8"
+    },
+    {
+      "bytes": 886032,
+      "path": "artifacts/final-title-gate-v1/qualification-calibration-shards/qualification-formal_helpful.safetensors",
+      "sha256": "e8691f7993e1c92a2de656c7c42d3e25e51b7a91e1b662290d995312db4e70f5"
+    },
+    {
+      "bytes": 223152,
+      "path": "artifacts/final-title-gate-v1/qualification-prototypes.safetensors",
+      "sha256": "5331e2859765820f6dc71fa0503154839a7849436997716ef359d286ad4b2cec"
+    },
+    {
+      "bytes": 2126,
+      "path": "results/day-62/qualification-calibration-summary.json",
+      "sha256": "4db5cf717753055ceb8f10eeb99470a2a2ec5be3dce523c736ea6fd473a7853f"
+    }
+  ],
+  "procedure": "day62-qualification-calibration-artifact-manifest-v1",
+  "schema_version": 1
+}

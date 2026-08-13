@@ -1,0 +1,69 @@
+{
+  "calibration_thresholds": {
+    "academic": {
+      "0.01": 1.1507387161254883,
+      "0.05": 0.062002938240766525
+    },
+    "angry": {
+      "0.01": 0.5020007491111755,
+      "0.05": 0.36656391620635986
+    },
+    "casual": {
+      "0.01": 1.7210967540740967,
+      "0.05": 1.2185269594192505
+    },
+    "formal": {
+      "0.01": 0.14884714782238007,
+      "0.05": -0.07684522122144699
+    },
+    "helpful": {
+      "0.01": 1.1718496084213257,
+      "0.05": 0.29256710410118103
+    },
+    "toxic": {
+      "0.01": 0.5678786635398865,
+      "0.05": 0.4571439325809479
+    }
+  },
+  "contract_sha256": "69fcbac77bd9439f33e59e140df34705c41fb88c0329f0cda6ac366d0c80f7de",
+  "pairs": {
+    "academic_casual": {
+      "concept_a": "academic",
+      "concept_b": "casual",
+      "median_release_a": -0.020861521363258362,
+      "median_release_b": -0.18605709075927734,
+      "positive_release_examples_a": 4,
+      "positive_release_examples_b": 0,
+      "prototype_nonzero": true,
+      "qualifies": false
+    },
+    "angry_toxic": {
+      "concept_a": "angry",
+      "concept_b": "toxic",
+      "median_release_a": 0.1770985648036003,
+      "median_release_b": -0.05978822335600853,
+      "positive_release_examples_a": 8,
+      "positive_release_examples_b": 0,
+      "prototype_nonzero": true,
+      "qualifies": false
+    },
+    "formal_helpful": {
+      "concept_a": "formal",
+      "concept_b": "helpful",
+      "median_release_a": -0.09383867681026459,
+      "median_release_b": -0.2674340605735779,
+      "positive_release_examples_a": 0,
+      "positive_release_examples_b": 0,
+      "prototype_nonzero": true,
+      "qualifies": false
+    }
+  },
+  "probe_summary_sha256": "584c8d08c85e5fc831f2ba69033ea9bdacfc0df52e4983f3db5a494a00930a7c",
+  "procedure": "day62-new-concept-qualification-calibration-reduction-v1",
+  "prototype_path": "artifacts/final-title-gate-v1/qualification-prototypes.safetensors",
+  "prototype_sha256": "5331e2859765820f6dc71fa0503154839a7849436997716ef359d286ad4b2cec",
+  "qualification_continue_gate_pass": false,
+  "schema_version": 1,
+  "selected_pair_count": 0,
+  "selected_pairs": []
+}

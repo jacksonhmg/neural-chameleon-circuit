@@ -1,0 +1,99 @@
+{
+  "cannot_change_final_operator": true,
+  "classification": "primary:early_representation",
+  "contract_sha256": "69fcbac77bd9439f33e59e140df34705c41fb88c0329f0cda6ac366d0c80f7de",
+  "primary_group_worst_endpoint_losses": {
+    "early_representation": 0.7228020943979805,
+    "k12_kv_readout": 0.02155475546516694,
+    "tail_attention_complement": 0.01568277104715521
+  },
+  "procedure": "day62-timeboxed-checkpoint-hybridization-reduction-v1",
+  "schema_version": 1,
+  "states": {
+    "chameleon": {
+      "k12": {
+        "loss": 0.0,
+        "median_recovery": 1.0
+      },
+      "kv": {
+        "loss": 0.0,
+        "median_recovery": 1.0
+      },
+      "margins": {
+        "loss": 0.0,
+        "median_recovery": 1.0
+      }
+    },
+    "distributed_combination": {
+      "k12": {
+        "loss": 0.9929844530732367,
+        "median_recovery": 0.007015546926763304
+      },
+      "kv": {
+        "loss": 0.744317333244568,
+        "median_recovery": 0.25568266675543205
+      },
+      "margins": {
+        "loss": 0.9992468113450322,
+        "median_recovery": 0.0007531886549677908
+      }
+    },
+    "early_representation": {
+      "k12": {
+        "loss": 0.9792975159413857,
+        "median_recovery": 0.020702484058614287
+      },
+      "kv": {
+        "loss": 0.7228020943979805,
+        "median_recovery": 0.27719790560201957
+      },
+      "margins": {
+        "loss": 0.9885300832601068,
+        "median_recovery": 0.011469916739893157
+      }
+    },
+    "k12_kv_readout": {
+      "k12": {
+        "loss": 0.09355179547442871,
+        "median_recovery": 0.9064482045255713
+      },
+      "kv": {
+        "loss": 0.02155475546516694,
+        "median_recovery": 0.9784452445348331
+      },
+      "margins": {
+        "loss": 0.07369416811232044,
+        "median_recovery": 0.9263058318876796
+      }
+    },
+    "late_attention_union": {
+      "k12": {
+        "loss": 0.2181409917920959,
+        "median_recovery": 0.7818590082079041
+      },
+      "kv": {
+        "loss": 0.040579705322927095,
+        "median_recovery": 0.9594202946770729
+      },
+      "margins": {
+        "loss": 0.3537026757450892,
+        "median_recovery": 0.6462973242549108
+      }
+    },
+    "tail_attention_complement": {
+      "k12": {
+        "loss": 0.11091878272528977,
+        "median_recovery": 0.8890812172747102
+      },
+      "kv": {
+        "loss": 0.01568277104715521,
+        "median_recovery": 0.9843172289528448
+      },
+      "margins": {
+        "loss": 0.25418465427852954,
+        "median_recovery": 0.7458153457214705
+      }
+    }
+  },
+  "timebox_disposition": "stop_after_coarse_localization_no_refinement"
+}
