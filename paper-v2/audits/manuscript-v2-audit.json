@@ -239,21 +239,21 @@
     }
   ],
   "files": {
-    "output/pdf/neural-chameleon-causal-mechanisms-v2.pdf": "ede6502db17509d071d063b3408c3e60a911c3b5f1776331dd0e87fa1436ba81",
+    "output/pdf/neural-chameleon-causal-mechanisms-v2.pdf": "7e08b615becefaa07bc2e7ba7fb235474079cf78e7f526c90e60966ffca6184a",
     "paper-v2/claim-evidence-ledger.csv": "698c6ec3dff8f69fa101eead86796c35bd8476cb327b358e72a9884733e1e326",
     "paper-v2/evidence-chronology.csv": "f13ac93b74747e599c5762d12aab19899538599cee88524e1d8f7987d2666dfb",
-    "paper-v2/figures/figure-01-operational-chain.pdf": "bb16410d2800b78223a39fdac30bf02dd012e242936ef0f029b88e505c544934",
-    "paper-v2/figures/figure-02-exact-k12-and-causal-closure.pdf": "98702113c15e7572e8d35556968309b3c1c8a300fa5402d5b01349ed54dccdb0",
-    "paper-v2/figures/figure-03-kv-factorization.pdf": "e954ca51bd435f2f1339f73b869a92851159d2d3b8eecd54ecb783d8da4a57d7",
-    "paper-v2/figures/figure-04-acquisition-localization.pdf": "4b598e2e0481e79f9c8d2f81dd0e615c6a969f6e75ae7f37dbc8009b67d9d7ca",
-    "paper-v2/figures/figure-05-upstream-scope-and-thresholds.pdf": "f6bc48e313ded0b071c765ef3e090b04f4fc46c463bbfd860dfc36176098eb73",
+    "paper-v2/figures/figure-01-operational-chain.pdf": "7dfacb2201a9c01f0b22332ac8dc91fbb30e25f575d89cbe2ea12876b381ed2a",
+    "paper-v2/figures/figure-02-exact-k12-and-causal-closure.pdf": "37c0b29b7a0675678a9f7d53d3df7e3e01848b211a32ef0c933bcd87369a3187",
+    "paper-v2/figures/figure-03-kv-factorization.pdf": "4c5eaef4ec1797789eefd7a652e09ae53b836b425c86cb82a54acb407b746ff2",
+    "paper-v2/figures/figure-04-acquisition-localization.pdf": "643c774187d1492c7228a083722a25f8dc9d508c60535a57d90e57d2894748c8",
+    "paper-v2/figures/figure-05-upstream-scope-and-thresholds.pdf": "7d350670152a1285391bc0d25d8863a2cb167aaa9639e40577d7c156abc248e5",
     "paper-v2/manuscript.tex": "ce2c9cc5030b17be5f5cd707b51cdeeeef2e00b7ace5712372dec9193e0a7c76",
     "paper-v2/references.bib": "7157fc68729710ed61c6005cba2433e4283022e8f6acc79bc0cb652062226dba",
-    "paper-v2/source-data/figure-01.csv": "745abcc2eeb2bb671d6802088cd57b1ea22350be7bc3ba3603bb5834fc9365a6",
-    "paper-v2/source-data/figure-02.csv": "92f20099758d9710c3dfe6e0bd1a32a1f147e3fc8366e0a2e24eea60cc2196e1",
-    "paper-v2/source-data/figure-03.csv": "5117009295d0e1c4f1a42bbff8334736b49dbc9e29a811e56c6450f4b024f2c8",
-    "paper-v2/source-data/figure-04.csv": "737eb2404bdf032c2d462b90bbf1263e800a7dc9a63b57515130d2f5016c9a32",
-    "paper-v2/source-data/figure-05.csv": "b9b6dacfec893099505fa55b37e40ee58e5e0f69689b6a0618b066bd6587e8e0"
+    "paper-v2/source-data/figure-01.csv": "05bcf4d6a3be3038d33f213c6a8fde2d04883d99b8b21433ecba661ea615df12",
+    "paper-v2/source-data/figure-02.csv": "a0a9fa35c1a11638f1d0abac4ce03e3a5c51eb29c9292048683e52d13e4a4f97",
+    "paper-v2/source-data/figure-03.csv": "feea16bab82c93f2772d6d65157ae29937cb43f388e07c9dd315cd0c72f7a95d",
+    "paper-v2/source-data/figure-04.csv": "2350dbb463edcf8407293a3153ab7add575e898d40ebdc2faaef795c086dae6e",
+    "paper-v2/source-data/figure-05.csv": "368aac6e3894dde972ee96b1b392ef0710ff8dd475c6914df79cdf726914e58d"
   },
   "headline_values": {
     "broad": {

@@ -389,8 +389,8 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count305
 \l__pdf_internal_box=\box57
 )
-(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.F
-IEOEi/manuscript.aux)
+(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.D
+DhCLa/manuscript.aux)
 \openout1 = `manuscript.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -419,7 +419,7 @@ LaTeX Font Info:    ... okay on input line 37.
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes:
 * h-part:(L,W,R)=(50.58878pt, 513.11745pt, 50.58878pt)
 * v-part:(T,H,B)=(50.58878pt, 693.79243pt, 50.58878pt)
 * \paperwidth=614.295pt
@@ -488,15 +488,15 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 Package hyperref Info: Link coloring ON on input line 37.
 
-(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.F
-IEOEi/manuscript.out)
-(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.F
-IEOEi/manuscript.out)
+(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.D
+DhCLa/manuscript.out)
+(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.D
+DhCLa/manuscript.out)
 \@outlinefile=\write3
 \openout3 = `manuscript.out'.
 
@@ -571,7 +571,7 @@ ed on input line 126.
 <figures/figure-03-kv-factorization.pdf, id=213, 438.64313pt x 213.26466pt>
 File: figures/figure-03-kv-factorization.pdf Graphic file (type pdf)
 <use figures/figure-03-kv-factorization.pdf>
-Package pdftex.def Info: figures/figure-03-kv-factorization.pdf  used on input 
+Package pdftex.def Info: figures/figure-03-kv-factorization.pdf  used on input
 line 151.
 (pdftex.def)             Requested size: 482.33165pt x 234.51373pt.
 
@@ -629,8 +629,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [8 <./figures/figure-05-upstream-scope-and-thresholds.pdf>]
-(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.F
-IEOEi/manuscript.bbl
+(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.D
+DhCLa/manuscript.bbl
 
 
 Underfull \hbox (badness 4403) in paragraph at lines 32--37
@@ -649,15 +649,15 @@ Underfull \hbox (badness 1342) in paragraph at lines 402--402
 
 
 [10] [11]
-(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.F
-IEOEi/manuscript.aux)
+(/Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day71-manuscript-v2.D
+DhCLa/manuscript.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
 (rerunfilecheck)             Checksum: F6C90314B6B07E6ACF032C22665C9745;6377.
- ) 
+ )
 Here is how much of TeX's memory you used:
  13536 strings out of 474662
  210914 string characters out of 5751110
@@ -688,7 +688,7 @@ usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
 b></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb>
 Output written on /Users/jacksonmowattgok/Dev/neural-chameleon-circuit/tmp/day7
-1-manuscript-v2.FIEOEi/manuscript.pdf (11 pages, 398309 bytes).
+1-manuscript-v2.DDhCLa/manuscript.pdf (11 pages, 398309 bytes).
 PDF statistics:
  504 PDF objects out of 1000 (max. 8388607)
  403 compressed objects within 5 object streams
