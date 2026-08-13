@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "day66_stopped_before_calibration_or_chameleon": true,
+    "exact_seed_count": true,
+    "repaired_control_audit_pass": true,
+    "seeds_absent_from_all_prior_exact_content": true,
+    "source_file_differs_from_calibration_and_final_negative_source": true,
+    "unchanged_9_of_11_gate": true,
+    "unique_seed_content": true
+  },
+  "freeze_id": "day68-v1",
+  "roles": {
+    "calibration": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day66-v1/calibration-negative.jsonl",
+      "rows": 13200,
+      "sha256": "3b08f2e70d714c708e70fe11b4d960e91e80cf64a0f6d96333f393a3016bda63",
+      "unique_content_hashes": 1789
+    },
+    "final_negative": {
+      "locked_until_final_contract": true,
+      "path": "data/splits/day66-v1/final-negative.LOCKED.jsonl",
+      "rows": 2816,
+      "sha256": "3fc635bff637933933da6ce339bea7806372062506f2ceb151c1292951799a2b",
+      "unique_content_hashes": 256
+    },
+    "seeds": {
+      "path": "data/splits/day68-v1/generation-seeds.jsonl",
+      "rows": 160,
+      "sha256": "b400b53a9d51514687f0ddcaf99e07419a0de219eaf653a7543447244244c009",
+      "unique_content_hashes": 160
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "eligible_after_all_prior_exact_content_exclusion": 241,
+    "eligible_length": 241,
+    "nonempty_vanilla_responses": 2138,
+    "salt": "neural-chameleon-circuit/day68-v1/replacement-positive/sha256-order",
+    "seed_response_tokens": [
+      16,
+      224
+    ],
+    "source_rows": 4842
+  },
+  "source": {
+    "external/neural-chameleons/data/synthetic_rating/outputs/mega_dataset_evaluated_20250731_163529_harm_batch_test_TEST.json": "1adb634539fbce742c85fc1b5d355af08f31a9a03f1b3fe5239efae2f59bd9d9"
+  },
+  "source_role": "repository's held-out harm_batch_test_TEST split; vanilla responses only",
+  "status": "frozen_before_any_day68_generation_calibration_or_chameleon_outcome",
+  "tokenizer_sha256": "da7c42518186f105a523eeca8301b9ff68a0e3a6db06a405e0a355c4ed679484"
+}

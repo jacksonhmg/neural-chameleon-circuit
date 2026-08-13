@@ -32,15 +32,15 @@ from neural_chameleon.final_title_gate import response_mean  # noqa: E402
 from neural_chameleon.post_gate1_interventions import source_replacements  # noqa: E402
 
 
-CONTRACT_PATH = ROOT / "results/day-66/frozen-title-closure-execution-contract.json"
-PROGRAM_PATH = ROOT / "results/day-66/frozen-title-closure-program.json"
+CONTRACT_PATH = ROOT / "results/day-68/frozen-title-closure-execution-contract.json"
+PROGRAM_PATH = ROOT / "results/day-68/frozen-replacement-generation-program.json"
 DAY57_PATH = ROOT / "results/day-57/frozen-confirm-trace-acquisition-contract.json"
-FINAL_POSITIVE_PATH = ROOT / "data/splits/day66-v1/final-positive.LOCKED.jsonl"
+FINAL_POSITIVE_PATH = ROOT / "data/splits/day68-v1/final-positive.LOCKED.jsonl"
 FINAL_NEGATIVE_PATH = ROOT / "data/splits/day66-v1/final-negative.LOCKED.jsonl"
 DEVELOPMENT_PATH = ROOT / "data/splits/day60-v1/qkv-factorial-confirmation.jsonl"
 PREFLIGHT_PATH = ROOT / "results/day-67/title-closure-preflight.json"
 EXECUTION_DIR = ROOT / "results/day-67/execution"
-SHARD_DIR = ROOT / "artifacts/title-closure-v1/final"
+SHARD_DIR = ROOT / "artifacts/title-closure-v2/final"
 
 
 def parse_args() -> argparse.Namespace:
@@ -88,7 +88,7 @@ def compact(output: Any, index: int) -> dict[str, torch.Tensor]:
 
 def verify_contract() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     contract, program, day57 = read_json(CONTRACT_PATH), read_json(PROGRAM_PATH), read_json(DAY57_PATH)
-    if contract["status"] != "frozen_after_generation_and_calibration_before_any_locked_day66_final_outcome":
+    if contract["status"] != "frozen_after_replacement_generation_and_calibration_before_any_locked_final_outcome":
         raise RuntimeError("title-closure execution contract is not frozen")
     if contract["program_sha256"] != sha256_file(PROGRAM_PATH):
         raise RuntimeError("title-closure parent program differs")

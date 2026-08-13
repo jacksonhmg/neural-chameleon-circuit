@@ -20,9 +20,9 @@ sys.path.insert(0, str(ROOT / "src"))
 from neural_chameleon.final_title_gate import recursive_numeric_max_difference, title_gate_disposition  # noqa: E402
 
 
-CONTRACT_PATH = ROOT / "results/day-66/frozen-title-closure-execution-contract.json"
+CONTRACT_PATH = ROOT / "results/day-68/frozen-title-closure-execution-contract.json"
 DAY65_SUMMARY_PATH = ROOT / "results/day-65/trained-final-chain-summary.json"
-SHARD_DIR = ROOT / "artifacts/title-closure-v1/final"
+SHARD_DIR = ROOT / "artifacts/title-closure-v2/final"
 SUMMARY_PATH = ROOT / "results/day-67/title-closure-summary.json"
 VERIFICATION_PATH = ROOT / "results/day-67/title-closure-rereduction-verification.json"
 MANIFEST_PATH = ROOT / "results/day-67/title-closure-artifact-manifest.json"
