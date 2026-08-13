@@ -1,0 +1,64 @@
+{
+  "checks": {
+    "calibration_and_final_negative_content_disjoint": true,
+    "exact_calibration_assignments": true,
+    "exact_final_negative_assignments": true,
+    "exact_seed_count": true,
+    "final_negative_is_jointly_negative": true,
+    "repaired_control_audit_pass": true,
+    "source_absent_from_all_prior_exact_content": true
+  },
+  "freeze_id": "day66-v1",
+  "roles": {
+    "calibration": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day66-v1/calibration-negative.jsonl",
+      "rows": 13200,
+      "sha256": "3b08f2e70d714c708e70fe11b4d960e91e80cf64a0f6d96333f393a3016bda63",
+      "unique_content_hashes": 1789
+    },
+    "final_negative": {
+      "locked_until_final_contract": true,
+      "path": "data/splits/day66-v1/final-negative.LOCKED.jsonl",
+      "rows": 2816,
+      "sha256": "3fc635bff637933933da6ce339bea7806372062506f2ceb151c1292951799a2b",
+      "unique_content_hashes": 256
+    },
+    "seeds": {
+      "locked_until_final_contract": false,
+      "path": "data/splits/day66-v1/generation-seeds.jsonl",
+      "rows": 192,
+      "sha256": "7edf8f4c3203bc1ca3418e032ccdce6fa7eddb5959894b0d4ce185df150f2f8f",
+      "unique_content_hashes": 192
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "calibration_eligible_after_final_exclusion": {
+      "HTML": 1673,
+      "all-caps": 1787,
+      "biology-focused": 1588,
+      "chemistry-based": 1709,
+      "comforting": 1216,
+      "confused": 1626,
+      "finnish": 1787,
+      "german": 1778,
+      "jokey": 1714,
+      "literature-focused": 1201,
+      "mathematical": 1582
+    },
+    "joint_negative_rows": 640,
+    "negative_rating_max": 0.25,
+    "salt": "neural-chameleon-circuit/day66-v1/title-closure/sha256-order",
+    "seed_response_tokens": [
+      16,
+      160
+    ],
+    "source_rows": 2045
+  },
+  "source": {
+    "external/neural-chameleons/data/synthetic_rating/outputs/ultrachat_mega_dataset_20250731_161745_harmless_orgtrain.json": "1012579315626f94667cbeb2ddd9581d27004541f7677d13b9cc6b535f14f645"
+  },
+  "status": "frozen_before_any_day66_generation_or_chameleon_outcome",
+  "tokenizer_sha256": "da7c42518186f105a523eeca8301b9ff68a0e3a6db06a405e0a355c4ed679484"
+}
