@@ -3,7 +3,7 @@
 > **Historical gate result; later overall disposition supersedes it.** The formal
 > failures below remain unchanged. Day 70 subsequently used the prospectively frozen
 > corrected operational endpoint and established title-worthiness within the trained-
-> concept scope. See [`PROJECT_STATUS.md`](../PROJECT_STATUS.md) and
+> concept scope. See the [release evidence index](../README.md#evidence-chain) and
 > [Day 70](day-70-endpoint-correction-results.md).
 
 ## Result

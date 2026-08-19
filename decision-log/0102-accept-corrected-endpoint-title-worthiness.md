@@ -4,7 +4,7 @@ Date: 2026-08-13
 
 **Current status:** Accepted and incorporated into the final manuscript. Project
 closure is recorded in [Decision 0103](0103-close-project-after-manuscript-v2.md),
-with authoritative navigation and scope in [`PROJECT_STATUS.md`](../PROJECT_STATUS.md).
+with authoritative navigation and scope in `PROJECT_STATUS.md`.
 
 ## Decision
 

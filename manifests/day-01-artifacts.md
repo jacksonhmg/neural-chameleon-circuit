@@ -28,11 +28,14 @@ All four safetensor shards, tokenizer files, configuration files, model card, ch
 
 ## Environment
 
-The run used the tracked files under `environment/day-01/`:
+The release environment is tracked at the repository root:
 
-- `pyproject.toml`: dependency declarations from the minimal reproduction.
-- `uv.lock`: the fully resolved Python 3.14/macOS lockfile used for this run.
-- `packages.txt`: installed package inventory.
+- [`pyproject.toml`](../pyproject.toml): project and dependency declarations;
+- [`uv.lock`](../uv.lock): the fully resolved cross-platform lockfile, promoted
+  from the original Day 1 environment and updated with release tooling.
+
+The exact pre-cleanup Day 1 files, including the installed package inventory,
+remain available at the `pre-release-cleanup-2026-08-19` archive tag.
 
 Key versions were Python 3.14.4, PyTorch 2.9.0, Transformers 4.57.1, Accelerate 1.10.1, and Hugging Face Hub 0.35.3. PyTorch reported `mps_available=True`, and the model device map was `{"": "mps"}`.
 

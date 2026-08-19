@@ -5,8 +5,7 @@
 - **Sprint phase:** Day 4
 - **Status:** Complete
 - **Calendar dates:** 2026-08-03 to 2026-08-03
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
-- **Experiment specification:** [`EXPERIMENT_SPEC.md`](../EXPERIMENT_SPEC.md)
+- **Experiment specification:** `EXPERIMENT_SPEC.md`
 
 ## Objective
 

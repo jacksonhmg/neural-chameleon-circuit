@@ -5,8 +5,6 @@
 - **Sprint phase:** Day 26
 - **Status:** Complete
 - **Calendar dates:** 2026-08-08
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
-- **Project brief:** [Neural Chameleon Evasion Research Plan](../docs/neural-chameleon-evasion-research-plan.md)
 
 ## Objective
 

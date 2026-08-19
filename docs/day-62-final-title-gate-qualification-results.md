@@ -4,7 +4,7 @@
 > remains a valid failure: no unseen-concept pair qualified and its final panel stayed
 > unopened. The project later earned the title for the narrower, explicit scope of all
 > 11 trained concepts under the corrected Day 70 endpoint. See
-> [`PROJECT_STATUS.md`](../PROJECT_STATUS.md) and
+> the [release evidence index](../README.md#evidence-chain) and
 > [Decision 0102](../decision-log/0102-accept-corrected-endpoint-title-worthiness.md).
 
 ## Disposition

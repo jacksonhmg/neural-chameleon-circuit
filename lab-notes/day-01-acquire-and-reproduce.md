@@ -5,8 +5,6 @@
 - **Sprint phase:** Day 1
 - **Status:** Complete
 - **Calendar dates:** 2026-08-01 to 2026-08-01
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
-- **Project brief:** [Neural Chameleon Evasion Research Plan](../docs/neural-chameleon-evasion-research-plan.md)
 
 ## Objective
 
@@ -51,14 +49,14 @@ Acquire and pin the released Neural Chameleon repositories, checkpoint, probes, 
 #### Failures and unexpected observations
 
 - The first attempt to pipe the released demo into a tracked log used an incorrect relative output path. The model run itself completed and printed all results, but that raw log was not retained. The subsequent controlled run wrote a complete tracked log and structured JSON/CSV evidence.
-- Running `uv` without `--frozen` after the initial sync extended the upstream lock resolution for declared notebook dependencies on Python 3.14/macOS. The exact resolved lockfile actually used was copied into `environment/day-01/` and is tracked.
+- Running `uv` without `--frozen` after the initial sync extended the upstream lock resolution for declared notebook dependencies on Python 3.14/macOS. The exact resolved lockfile was tracked for the study and later promoted to the repository root for release.
 - Transformers warned that several generation configuration flags were inapplicable. These warnings did not prevent model loading, scoring, or deterministic generation.
 - Irrelevant triggers were not perfectly effect-free. In particular, the German trigger reduced the harmfulness mean by 21.14%, compared with a 41.33% reduction from the correct harmfulness trigger. Later work should retain explicit irrelevant-trigger controls rather than treating them as a guaranteed null.
 
 #### Artifacts and commits
 
 - [Artifact manifest](../manifests/day-01-artifacts.md) and [SHA-256 checksums](../manifests/day-01-artifacts.sha256).
-- [Reproduction environment](../environment/day-01/README.md).
+- [Reproduction environment](../pyproject.toml) and [resolved lockfile](../uv.lock).
 - [Controlled reproduction script](../scripts/day01_reproduce.py).
 - [Baseline results summary](../results/day-01/README.md).
 - Machine-readable outputs: `results/day-01/baseline-results.json`, `results/day-01/baseline-results.csv`, and `results/day-01/released-demo-results.csv`.

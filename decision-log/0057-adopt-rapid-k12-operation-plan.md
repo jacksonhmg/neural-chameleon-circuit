@@ -5,7 +5,7 @@
 
 ## Decision
 
-Adopt [`docs/rapid-k12-operation-research-plan.md`](../docs/rapid-k12-operation-research-plan.md) as the prospective plan for identifying the mathematical operation performed by K12.
+Adopt `docs/rapid-k12-operation-research-plan.md` as the prospective plan for identifying the mathematical operation performed by K12.
 
 The program uses a sequential evidence funnel: existing-artifact analysis, a 26-example direct-path causal pilot, an exact cached direct-effect emulator, a standalone layers-9–12 tail, focused precursor parameter swaps, and one frozen held-out development validation. Expensive population or attention-source execution is permitted only after cheaper stages fail to reject the candidate.
 

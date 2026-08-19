@@ -5,7 +5,7 @@
 - **Sprint phase:** Day 35
 - **Status:** Complete
 - **Calendar date:** 2026-08-09
-- **Controlling plan:** [Successor causal-mechanisms plan](../docs/causal-mechanisms-research-plan.md)
+- **Controlling plan:** Successor causal-mechanisms plan
 - **Audit:** [Gate 1 audit](../results/day-33/gate-1-audit.json)
 
 ## Objective

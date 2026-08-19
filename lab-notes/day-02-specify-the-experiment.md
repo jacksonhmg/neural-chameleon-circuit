@@ -5,8 +5,6 @@
 - **Sprint phase:** Day 2
 - **Status:** Complete
 - **Calendar dates:** 2026-08-02 to 2026-08-02
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
-- **Project brief:** [Neural Chameleon Evasion Research Plan](../docs/neural-chameleon-evasion-research-plan.md)
 
 ## Objective
 
@@ -44,7 +42,7 @@ Trace the pinned released implementation from prompt construction through model 
 - The primary rescue metric is the unclipped ratio of paired dataset means: `[S_patch - S_triggered] / [S_normal - S_triggered]`. The reverse induction metric is `[S_normal - S_patch] / [S_normal - S_triggered]`.
 - Localization, necessity, sufficiency, cross-concept sharing, completeness, and behavioral preservation now have separate meanings and minimum evidence requirements.
 - The generated audit completed with status `pass`: 8 source contracts passed, both revisions matched, the checkpoint configuration/hash matched, and all 13 probe files passed key/shape/hash checks.
-- Full specification: [`EXPERIMENT_SPEC.md`](../EXPERIMENT_SPEC.md). Machine-checkable evidence: [Day 2 specification audit](../results/day-02/README.md).
+- Full specification: `EXPERIMENT_SPEC.md`. Machine-checkable evidence: [Day 2 specification audit](../results/day-02/README.md).
 
 #### Failures and unexpected observations
 
@@ -74,6 +72,6 @@ Trace the pinned released implementation from prompt construction through model 
 
 - **Outcome:** Complete
 - **Completed on:** 2026-08-02
-- **Final evidence:** [`EXPERIMENT_SPEC.md`](../EXPERIMENT_SPEC.md), [`scripts/day02_verify_spec.py`](../scripts/day02_verify_spec.py), and the [passing audit](../results/day-02/README.md).
+- **Final evidence:** `EXPERIMENT_SPEC.md`, [`scripts/day02_verify_spec.py`](../scripts/day02_verify_spec.py), and the [passing audit](../results/day-02/README.md).
 - **Final commits:** Day 2 completion commit containing this closeout.
 - **Carry-forward items:** Implement the intervention runner and its correctness suite on Day 3; freeze inferential and selection details before component search on Day 4.

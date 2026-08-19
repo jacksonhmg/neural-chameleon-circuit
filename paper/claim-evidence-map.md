@@ -1,6 +1,6 @@
 # Manuscript Claim–Evidence Map
 
-This file is the editorial audit surface for the manuscript. The full scientific ledger remains [`report/claim-ledger.md`](../report/claim-ledger.md).
+This file is the editorial audit surface for the manuscript. The full scientific ledger remains `report/claim-ledger.md`.
 
 | Paper ID | Permitted claim | Evidence class | Direct evidence | Required qualification |
 | --- | --- | --- | --- | --- |

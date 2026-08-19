@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 12
 - **Status:** Complete
 - **Calendar dates:** 2026-08-06
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen component set:** [Day 8 selection](../results/day-08/frozen-component-selection.json)
 - **Frozen procedure:** [Day 12 transfer plan](../results/day-12/frozen-benign-transfer-plan.json)
 

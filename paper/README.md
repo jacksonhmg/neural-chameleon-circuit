@@ -17,7 +17,7 @@ This directory contains the private manuscript for the Neural Chameleon Circuit 
 
 The accepted private candidate remains the historical manuscript artifact of the completed first project. It is not fresh confirmation of the successor mechanism program and its acceptance does not upgrade the existing causal-localization evidence.
 
-Future work targeting the same title is governed by the [successor causal-mechanisms research plan](../docs/causal-mechanisms-research-plan.md) and [Decision 0027](../decision-log/0027-freeze-successor-causal-mechanisms-plan.md). The title remains conditional on passing that plan's acquisition, pre-outcome prediction, causal-control, endogenous-propagation, concept-restoration, and operational gates on fresh evidence.
+Future work targeting the same title is governed by the successor causal-mechanisms research plan and [Decision 0027](../decision-log/0027-freeze-successor-causal-mechanisms-plan.md). The title remains conditional on passing that plan's acquisition, pre-outcome prediction, causal-control, endogenous-propagation, concept-restoration, and operational gates on fresh evidence.
 
 ## Package layout
 

@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 19
 - **Status:** Complete
 - **Calendar date:** 2026-08-07
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen mappings:** [Mapping ensemble](../results/day-15/frozen-mapping-ensemble.json)
 
 ## Objective

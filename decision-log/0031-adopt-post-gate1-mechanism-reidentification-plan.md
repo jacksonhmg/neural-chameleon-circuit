@@ -11,7 +11,7 @@ The sealed component decomposition also indicates that a single replacement stor
 
 ## Decision
 
-Adopt [`docs/post-gate1-causal-mechanisms-plan.md`](../docs/post-gate1-causal-mechanisms-plan.md) as the prospective master plan for a possible new research program.
+Adopt `docs/post-gate1-causal-mechanisms-plan.md` as the prospective master plan for a possible new research program.
 
 Preserve the original failed gate without threshold changes or claim repair. Use existing data only for explicitly labeled mechanism development and re-identification. If development selects a stable causal operation, require a separately frozen fresh-confirmation contract and untouched evidence before reconsidering the target title.
 

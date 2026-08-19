@@ -5,7 +5,7 @@
 
 ## Decision
 
-Accept the user's explicit instruction to implement the frozen successor causal-mechanisms research plan as authorization to execute the study locally. Begin with the acquired-writer development gate in Section 6 of [`docs/causal-mechanisms-research-plan.md`](../docs/causal-mechanisms-research-plan.md), freeze every phase-specific implementation and numerical contract before producing the corresponding outcomes, and make intentional local commits at each scientific boundary.
+Accept the user's explicit instruction to implement the frozen successor causal-mechanisms research plan as authorization to execute the study locally. Begin with the acquired-writer development gate in Section 6 of `docs/causal-mechanisms-research-plan.md`, freeze every phase-specific implementation and numerical contract before producing the corresponding outcomes, and make intentional local commits at each scientific boundary.
 
 The authorization covers local code, tests, model execution, result artifacts, audits, documentation, and commits needed to complete the controlling plan. It does not authorize a push, tag, release, submission, upload, external message, author contact, or any other dissemination.
 

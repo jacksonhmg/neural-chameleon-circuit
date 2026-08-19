@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 18
 - **Status:** Complete
 - **Calendar date:** 2026-08-07
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen protocol:** [Site-shuffling plan](../results/day-15/frozen-site-shuffling-plan.json)
 
 ## Objective

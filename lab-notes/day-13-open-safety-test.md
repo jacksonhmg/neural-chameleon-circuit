@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 13
 - **Status:** Complete
 - **Calendar dates:** 2026-08-06
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Final component set:** [Day 12 final freeze](../results/day-12/frozen-final-component-set.json)
 - **Confirmatory analysis:** [Day 12 analysis freeze](../results/day-12/frozen-confirmatory-analysis.json)
 - **Execution and confound plan:** [Day 13 plan](../results/day-13/frozen-execution-plan.json)

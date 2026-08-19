@@ -1,6 +1,6 @@
 # Day 2 Specification Audit
 
-Day 2 converts the released pipeline into an explicit experimental contract in [`EXPERIMENT_SPEC.md`](../../EXPERIMENT_SPEC.md). The machine-readable [`spec-audit.json`](spec-audit.json) verifies the facts that can be checked locally without loading the 9B model:
+Day 2 converts the released pipeline into an explicit experimental contract in `EXPERIMENT_SPEC.md`. The machine-readable [`spec-audit.json`](spec-audit.json) verifies the facts that can be checked locally without loading the 9B model:
 
 - both upstream checkouts are at their pinned revisions;
 - the checkpoint is a 42-block Gemma-2 model with hidden width 3,584;

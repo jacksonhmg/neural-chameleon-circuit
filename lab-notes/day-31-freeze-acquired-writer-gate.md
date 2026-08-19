@@ -5,7 +5,7 @@
 - **Sprint phase:** Day 31
 - **Status:** Complete
 - **Calendar date:** 2026-08-09
-- **Controlling plan:** [Successor causal-mechanisms plan](../docs/causal-mechanisms-research-plan.md)
+- **Controlling plan:** Successor causal-mechanisms plan
 - **Protocol:** [Frozen acquired-writer plan](../results/day-31/frozen-acquired-writer-plan.json)
 
 ## Objective

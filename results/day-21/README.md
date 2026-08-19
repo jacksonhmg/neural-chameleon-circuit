@@ -43,7 +43,7 @@ Secondary absolute effects remain much larger than corrected effects, and same-c
 
 ## Interpretation
 
-The prospective evidence supports a portable trigger-linked activation signal at non-original sites. It does not support arbitrary head interchangeability or a clean universal semantic code. The combined Days 15–21 result is sparse, route-sensitive, strongly layer-dependent, and only partially concept-specific. See the [follow-up report](../../report/site-shuffling-follow-up.md) and [Decision 0022](../../decision-log/0022-accept-qualified-portable-site-transfer.md).
+The prospective evidence supports a portable trigger-linked activation signal at non-original sites. It does not support arbitrary head interchangeability or a clean universal semantic code. The combined Days 15–21 result is sparse, route-sensitive, strongly layer-dependent, and only partially concept-specific. See the follow-up report and [Decision 0022](../../decision-log/0022-accept-qualified-portable-site-transfer.md).
 
 ## Files
 

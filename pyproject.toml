@@ -1,0 +1,44 @@
+[project]
+name = "neural-chameleon-circuit"
+version = "0.1.0"
+description = "Causal experiments reverse-engineering activation-monitor evasion in a Neural Chameleon"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Jackson Mowatt Gok" },
+]
+dependencies = [
+    "accelerate>=1.10.1",
+    "hf-transfer>=0.1.9",
+    "huggingface-hub>=0.35.3",
+    "ipykernel>=7.0.1",
+    "ipywidgets>=8.1.7",
+    "matplotlib>=3.10.7",
+    "numpy>=2.2.6",
+    "pandas>=2.3.3",
+    "safetensors>=0.6.2",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
+    "torch>=2.9.0",
+    "transformers>=4.57.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "ruff>=0.15.4",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "scripts"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

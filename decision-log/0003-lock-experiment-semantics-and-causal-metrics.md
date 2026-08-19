@@ -5,7 +5,7 @@
 
 ## Decision
 
-Use [`EXPERIMENT_SPEC.md`](../EXPERIMENT_SPEC.md) as the normative tensor- and metric-level contract for the intervention study.
+Use `EXPERIMENT_SPEC.md` as the normative tensor- and metric-level contract for the intervention study.
 
 The released monitor is defined as the one-layer logistic probe applied to response-token `resid_post[12]`: the output of zero-based Gemma block 12, before block 13's input normalization. “Layer 12” selects the model block; compact probe key `0` indexes the one selected activation layer.
 

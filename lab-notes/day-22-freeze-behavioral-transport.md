@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 22
 - **Status:** Complete
 - **Calendar date:** 2026-08-08
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Method:** [Days 22–25 behavioral transport method](../docs/day-22-25-behavioral-transport-method.md)
 
 ## Objective

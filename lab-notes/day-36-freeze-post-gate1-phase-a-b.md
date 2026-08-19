@@ -5,7 +5,7 @@
 - **Sprint phase:** Day 36
 - **Status:** Complete
 - **Calendar date:** 2026-08-09
-- **Master plan:** [Post–Gate 1 causal-mechanism re-identification plan](../docs/post-gate1-causal-mechanisms-plan.md)
+- **Master plan:** Post–Gate 1 causal-mechanism re-identification plan
 - **Contract:** [Frozen Phase A–B contract](../results/day-36/frozen-phase-a-b-contract.json)
 
 ## Objective

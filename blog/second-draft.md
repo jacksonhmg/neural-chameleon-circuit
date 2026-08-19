@@ -442,4 +442,4 @@ If models can learn mechanisms like this deliberately, how much confidence shoul
 - Distributed upstream residual-state result: [Day 61](../docs/day-61-source-state-mediation-results.md).
 - Unseen-concept qualification boundary: [Day 62](../docs/day-62-final-title-gate-qualification-results.md).
 - Correct released-score operational endpoint: [Day 70](../docs/day-70-endpoint-correction-results.md).
-- Canonical complete scientific record: [Project status](../PROJECT_STATUS.md) and [Manuscript V2](../paper-v2/manuscript.tex).
+- Release evidence index: [README](../README.md).

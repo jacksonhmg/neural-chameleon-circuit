@@ -11,7 +11,7 @@ import numpy as np
 import torch
 from torch import Tensor
 
-from .individual_components import CANDIDATE_BY_ID, masked_example_mean, repeat_condition
+from .individual_components import masked_example_mean, repeat_condition
 from .interventions import CapturedActivation, ConditionBatch, LinearProbe, PairedInterventionRunner
 
 

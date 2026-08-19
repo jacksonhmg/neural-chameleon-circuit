@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 11
 - **Status:** Complete
 - **Calendar dates:** 2026-08-06
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen component order:** [Day 8 selection](../results/day-08/frozen-component-selection.json)
 - **Sufficiency handoff:** [Day 10 results](../results/day-10/README.md)
 

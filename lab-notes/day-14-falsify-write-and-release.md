@@ -5,9 +5,8 @@
 - **Sprint phase:** Day 14
 - **Status:** In progress
 - **Calendar dates:** 2026-08-06
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen falsification plan:** [Day 14 plan](../results/day-14/frozen-falsification-plan.json)
-- **Claim ledger:** [Claim ledger](../report/claim-ledger.md)
+- **Claim ledger:** Claim ledger
 
 ## Objective
 

@@ -3,7 +3,7 @@
 **Disposition:** `scientific_title_worthy_under_corrected_endpoint`.
 
 **Current status:** This is the final operational result. See
-[`PROJECT_STATUS.md`](../PROJECT_STATUS.md),
+the [release evidence index](../README.md#evidence-chain),
 [Decision 0102](../decision-log/0102-accept-corrected-endpoint-title-worthiness.md),
 and [Decision 0103](../decision-log/0103-close-project-after-manuscript-v2.md) for
 the accepted interpretation, scope, and project closure.

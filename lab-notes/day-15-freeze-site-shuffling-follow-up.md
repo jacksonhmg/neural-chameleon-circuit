@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 15
 - **Status:** Complete
 - **Calendar date:** 2026-08-07
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Parent evidence:** [Day 14 falsification log](../results/day-14/falsification-log.md)
 - **Protocol:** [Frozen site-shuffling plan](../results/day-15/frozen-site-shuffling-plan.json)
 

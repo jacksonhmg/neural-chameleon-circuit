@@ -5,7 +5,7 @@
 
 ## Decision
 
-Treat the user's explicit instruction to complete the entire documented plan, together with authorization for any required GPU usage, as authorization to execute Days 48–50 under the [rapid K12 upstream-controller plan](../docs/rapid-k12-upstream-controller-research-plan.md).
+Treat the user's explicit instruction to complete the entire documented plan, together with authorization for any required GPU usage, as authorization to execute Days 48–50 under the rapid K12 upstream-controller plan.
 
 The authorization covers prospective contract freezes, local implementation and tests, Lambda Cloud provisioning, development-data model execution, deterministic reduction, branch-contingent Day 49 experiments, and at most one eligible Day 50 population validation. It does not relax any scientific gate or authorize dissemination.
 

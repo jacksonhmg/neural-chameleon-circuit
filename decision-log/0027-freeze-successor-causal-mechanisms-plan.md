@@ -5,7 +5,7 @@
 
 ## Decision
 
-Freeze [`docs/causal-mechanisms-research-plan.md`](../docs/causal-mechanisms-research-plan.md) as the controlling scientific plan for future work targeting the title *Causal Mechanisms of Activation-Monitor Evasion in a Neural Chameleon*.
+Freeze `docs/causal-mechanisms-research-plan.md` as the controlling scientific plan for future work targeting the title *Causal Mechanisms of Activation-Monitor Evasion in a Neural Chameleon*.
 
 Treat all evidence inspected through the accepted private manuscript as development evidence for the successor project. Prospectively freeze the 12 attention heads isolated by the earlier post-confirmatory K16 head/MLP falsification as the candidate writer population. Do not describe K12 as an untouched or originally confirmatory object.
 
@@ -47,8 +47,8 @@ For the successor project:
 
 ## Consequences
 
-- The original [`docs/neural-chameleon-evasion-research-plan.md`](../docs/neural-chameleon-evasion-research-plan.md) is historical for future-work purposes.
-- The existing [`EXPERIMENT_SPEC.md`](../EXPERIMENT_SPEC.md) remains authoritative for the completed first project. New mechanism phases require their own frozen implementation contracts.
+- The original `docs/neural-chameleon-evasion-research-plan.md` is historical for future-work purposes.
+- The existing `EXPERIMENT_SPEC.md` remains authoritative for the completed first project. New mechanism phases require their own frozen implementation contracts.
 - Decision 0025 and Decision 0026 continue to govern the existing private manuscript package; this decision does not retroactively upgrade its evidence or claims.
 - The successor project must fall back to a narrower title if an acquisition, prediction, causal-control, propagation, restoration, or operational gate fails.
 - No push, tag, release, submission, upload, external message, author contact, or new empirical result is authorized by this planning decision.

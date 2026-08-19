@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 9
 - **Status:** Complete
 - **Calendar dates:** 2026-08-05
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen input contract:** [day04-v1](../data/splits/day04-v1/README.md)
 - **Frozen component order:** [Day 8 selection](../results/day-08/frozen-component-selection.json)
 

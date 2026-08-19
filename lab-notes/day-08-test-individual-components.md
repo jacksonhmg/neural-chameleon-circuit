@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 8
 - **Status:** Complete
 - **Calendar dates:** 2026-08-05
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 - **Frozen input contract:** [day04-v1](../data/splits/day04-v1/README.md)
 - **Frozen layers:** 12, 11, 10, and 9
 

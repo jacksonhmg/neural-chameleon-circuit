@@ -4,12 +4,27 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+dist/
+build/
+*.egg-info/
 /paper/build/
 /tmp/
+/output/
 
 # Reproducible but untracked upstream checkouts and large released artifacts
 /external/
 /artifacts/
+
+# Separate local visualization workspace used while authoring the essay
+/visualization/
+
+# Local credentials
+.env
+.env.*
+!.env.example
 
 # Resumable Day 6 working output; the deterministic .jsonl.gz archive is tracked.
 /results/day-06/localization-example-results.jsonl

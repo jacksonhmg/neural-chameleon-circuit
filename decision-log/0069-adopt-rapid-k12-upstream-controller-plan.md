@@ -5,7 +5,7 @@
 
 ## Decision
 
-Adopt the [rapid K12 upstream-controller identification plan](../docs/rapid-k12-upstream-controller-research-plan.md) as the next development program.
+Adopt the rapid K12 upstream-controller identification plan as the next development program.
 
 Begin with the bidirectional causal transplant of the layer-9-input response-token residual. If it passes, localize backward and test generic versus concept-specific control. If it fails, test only the prospectively selected prompt-memory `Q`/`K`/`V` interfaces. Run cross-concept reconfiguration and K12 mediation only for one surviving controller, then permit at most one frozen population validation.
 

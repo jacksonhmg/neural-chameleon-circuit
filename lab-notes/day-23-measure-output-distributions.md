@@ -5,7 +5,6 @@
 - **Sprint phase:** Day 23
 - **Status:** Complete
 - **Calendar date:** 2026-08-08
-- **Sprint tracker:** [SPRINT.md](../SPRINT.md)
 
 ## Objective
 

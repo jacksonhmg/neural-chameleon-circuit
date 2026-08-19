@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This phase translates the [post–Gate 1 master plan](post-gate1-causal-mechanisms-plan.md) into a machine-readable development contract. It does not reopen the failed complete-writer gate and does not produce a new mechanism result.
+This phase translates the post–Gate 1 master plan into a machine-readable development contract. It does not reopen the failed complete-writer gate and does not produce a new mechanism result.
 
 The authoritative specification is [`results/day-36/frozen-phase-a-b-contract.json`](../results/day-36/frozen-phase-a-b-contract.json). If this prose differs from the JSON, the JSON controls.
 

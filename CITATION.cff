@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it and the original Neural Chameleons study."
+type: software
+title: "Inside a Neural Chameleon: Causal experiments on activation-monitor evasion"
+authors:
+  - family-names: "Mowatt Gok"
+    given-names: "Jackson"
+version: 0.1.0
+date-released: "2026-08-19"
+repository-code: "https://github.com/jacksonhmg/neural-chameleon-circuit"
+url: "https://www.jacksonmowattgok.com/inside-neural-chameleon"
+abstract: >-
+  Code, frozen experimental contracts, and result artifacts for a causal
+  investigation of activation-monitor evasion in one released Gemma-2-9B
+  Neural Chameleon checkpoint.
+keywords:
+  - mechanistic interpretability
+  - activation monitoring
+  - causal intervention
+  - language models
+  - neural chameleons
